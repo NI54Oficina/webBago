@@ -1613,7 +1613,7 @@ font-size: 22px;
 	position: relative;
 	overflow: hidden;
 	color: #000000;
-	text-align: center;
+	text-align: left;
 	}
 	
 	figure.snip1156 * {
@@ -1912,7 +1912,7 @@ font-size: 22px;
 	.volver p{
 		display:inline-block;
 		vertical-align: middle;
-		margin-top: 4%;
+		margin-top: 2%;
 		margin-left: 120px;
 		color: #B2B2B2;
 		font-size: 17px;
@@ -4573,6 +4573,7 @@ display:none;
 #targets{
 	width:50%;
 	display:inline-block;
+	text-align:left;
 }
 #targets img{
 	width:30%;
@@ -4697,6 +4698,8 @@ figure.snip1156:hover .salud-ambiental{
 	.snip1156.image h3{
 		display:none;
 		color:#b8b8b8;
+		font-size:16px;
+		margin-left:20px;
 	}
 	#logo-bago{
 		width:100%;
@@ -4760,6 +4763,8 @@ figure.snip1156:hover .salud-ambiental{
 	.snip1156.image h3{
 		display:initial;
 		color:#b8b8b8;
+		font-size:16px;
+		margin-left:20px;
 	}
 	#logo-bago{
 		width:21%;
