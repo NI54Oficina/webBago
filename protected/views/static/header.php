@@ -6,7 +6,6 @@
 
 	<!--<span class="glyphicon glyphicon-menu-hamburger"></span>!-->
 	<!-- ////////////////BARA DE NAVEGACIÓN //////////////////-->
-	<nav  id="overview"  class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 		
 		
 		<!-- +++++ PAÍSES +++++ -->
