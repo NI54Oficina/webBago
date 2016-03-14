@@ -10,7 +10,7 @@
 		
 		
 		<!-- +++++ PAÍSES +++++ -->
-		<div id="boxes" style="display:none;">
+		<div id="boxes" style="">
 			
 			<div class="box">
   
@@ -57,25 +57,24 @@
 		<!--+++++ LOGO BAGÓ +++++ -->
 		<img id="logo-bago" class="col-lg-2 col-md-2 col-sm-12 col-xs-12" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo-bago.png" />		
 		
-		<div style="float:right;">
+		<!--<div style="float:right;">
 		<a href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/1/lng/0"style="color:black;float:left;padding:10px;">Español</a>
 		<a href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/2/lng/2"style="color:black;float:left;padding:10px;">Portugues</a>
-		</div>
+		</div>-->
 		<!-- +++++ LISTA VERSIONES +++++ -->
-		<ul class=" col-lg-2 col-md-2 col-sm-2 col-xs-12" id="ul-nav-2" style="color:#0C6594;display:none;">
+		<ul class=" col-lg-2 col-md-2 col-sm-2 col-xs-12" id="ul-nav-2" style="color:#0C6594;float:right;">
 			
 
-				<li class="li-nav-2"><a href="" style="color: #337ab7;">Versión portugués</a></li>
-				<li class="li-nav-2"><div id="links"><a class="openlink" href="javascript:void(0);"  style="color: #337ab7;">Otros países</a></div></li>
-				<li class="li-nav-2"><a href="" style="color: #337ab7;">Versión inglés</a></li>
-				<li class="li-nav-2"><a href="" style="color: #337ab7;">Versión portugués</a></li>
-						<li class="li-nav-2"><a href=""><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/fronteras-50x50-01.png" /></a></li>
+				<li class="li-nav-2"><div id="links"><a class="openlink" href="javascript:void(0);"  style="float:left;padding:10px;color: #337ab7;">Otros países</a></div></li>
+				<li class="li-nav-2"><a href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/1/lng/0"style="float:left;padding:10px;color: #337ab7;">Versión español</a></li>
+				<li class="li-nav-2"><a href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/2/lng/2"style="float:left;padding:10px;color: #337ab7;">Versión portugués</a></li>
+				<li class="li-nav-2"><a href="" style="float:left;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/fronteras-50x50-01.png" /></a></li>
 		</ul> <!-- termina lista versiones -->
 	
 	
 	
 		<!-- +++++++++++ BOTONERA +++++++++++ -->
-		<ul class="ul-nav col-lg-11 col-md-11 col-sm-9 col-xs-9" style="display:none;">
+		<ul class="ul-nav col-lg-11 col-md-11 col-sm-9 col-xs-9" style="">
 			
 			
 			<!-- INSTITUCIONAL -->
