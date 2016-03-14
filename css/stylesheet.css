@@ -576,25 +576,12 @@ font-size: 22px;
 		width:100%;
 	}
 	
-	.div-años-aftosa-1{
-		margin-top:5%; 
-	
-	}
-	
-	.div-años-aftosa-2{
-		margin-top:5%; 
-	
-	}
-	
-	.div-años-aftosa-3{
-		margin-top:5%; 
+	.div-años-aftosa{
+		
 	
 	}
 	
 	
-	.div-años-aftosa-4{
-		margin-top:5%; 
-	}
 	
 	.img-plantas-2{
 		margin-left:4%;
@@ -4818,4 +4805,15 @@ figure.snip1156:hover .salud-ambiental{
 
 .h1-1-home{
 	text-transform:uppercase;
+}
+
+.aftosa-fechas-container{
+	width:100%;	
+	padding-top:100px;
+}
+.aftosa-fechas-container .div-años-aftosa:nth-child(1),.aftosa-fechas-container .div-años-aftosa:nth-child(3),.aftosa-fechas-container .div-años-aftosa:nth-child(6){
+	margin-top:-5%;
+}
+.aftosa-fechas-container .div-años-aftosa{
+	margin-bottom:50px;
 }
