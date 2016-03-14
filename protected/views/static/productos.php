@@ -195,7 +195,7 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 					?>
 					</div>
 		 
-		 <h3 style="margin-top:10%;font-family:'arialregular'; font-weight: bolder; color: #424242;"><?php echo $data->nombre; ?> </h3>
+		 <h3 style="margin-top:10%;font-family:'arialregular'; font-weight: bolder; color: #424242;text-align:left;"><?php echo $data->nombre; ?> </h3>
 		 
 		 <div style="margin-top:4%;text-align:left;">
 		 
