@@ -27,7 +27,7 @@
 	</div>
 	
 	
-	<div class="tabla-aftosa col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+	<div class="tabla-aftosa col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align:left;">
 		<div  class="tr" style="text-shadow:none;">
 			
 			<div  class="col-lg-12 col-md-12 col-sm-12 col-xs-12">

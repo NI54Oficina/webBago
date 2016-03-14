@@ -5,12 +5,12 @@
 	</section>
 	<?php include('widget.php'); ?>
 
-<div class="div-texto-aftosa col-lg-9 col-md-9 col-sm-11 col-xs-11" style="padding-left:19%;">
+<div class="div-texto-aftosa col-lg-9 col-md-9 col-sm-11 col-xs-11" style="padding-left:10%;    text-align: left;">
 	
 	<!-- TITULO SECCIÓN -->
 	
 <div class="hidden-sm hidden-xs">
-	<div class="tabla-aftosa col-lg-2 col-md-2 col-sm-2 col-xs-2 hidden-xs hidden-sm" style="margin-left:-115px;">
+	<div class="tabla-aftosa col-lg-2 col-md-2 col-sm-2 col-xs-2 hidden-xs hidden-sm">
 		<div  class="tr" style="text-shadow:none;">
 			<div>
 				<h2 style="margin-left: -100px;" class="h2-aftosa">Institucional <br /><br /><br /><br /><br /></h2>

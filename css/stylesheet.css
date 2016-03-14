@@ -1105,7 +1105,6 @@ font-size: 22px;
 		background-size: 100% auto;
 		background-position: center top;
 		z-index:-1;
-		margin-top: 10vh;
 	}
 	
 	.titulo-layout-aftosa{
@@ -1150,7 +1149,6 @@ font-size: 22px;
 		background-size: 100% auto;
 		background-position: center top;
 		z-index: -1;
-		margin-top: 12vh;
 	}
 	
 	.mision-ul{
@@ -1170,7 +1168,6 @@ font-size: 22px;
 		background-size: 100% auto;
 		background-position: center top;
 		z-index:-1;
-		margin-top: 10vh;
 	}
 	
 	.proveedores-li{
@@ -2352,7 +2349,6 @@ font-size: 22px;
 		background-size: 100% auto;
 		background-position: center top;
 		z-index: -1;
-		margin-top: 10vh;
 	}
 	
 	figure.snip1156:hover .d-a-2 h2{
@@ -3308,7 +3304,7 @@ html {
 }
 
 body {
-  background: #f5f5f5;
+  background: #ffffff;
   color: #666;
 }
 
