@@ -26,7 +26,7 @@
 	<div style="min-height:100vh;" align="center">
 	<!-- TEXTO -->
 	<div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 general-texto-home-header" >
-		<h1  class="h1-home-ev bienvenidos"><?php echo Textos::model()->GetText(1); ?></h1>
+
 		<img src="img/logo-blanco.png" alt="logo-bago"  class="logo-blanco" />
 		<div  class="border-video"></div>
 		<div class="content-home">
