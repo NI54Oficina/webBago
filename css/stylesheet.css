@@ -1779,6 +1779,10 @@ font-size: 22px;
 		margin-left: 0%;
 	}
 	
+	.h4-reproductivos{
+		color: #FF671B;
+	}
+	
 	.p-vad {
 		font-family: 'arialregular';
 		font-size: 15px;
@@ -4565,6 +4569,7 @@ display:none;
 #targets-inner{
 	width:100%;
 	display:inline-block;
+	text-align:left;
 }
 #targets-inner img{
 	width:20%;
@@ -4766,7 +4771,6 @@ figure.snip1156:hover .salud-ambiental{
 	.ul-nav li ul {
 		transition: 0.4s all ease-in-out;
 		display:none;
-		position:absolute;
 		min-width:200px;
 		margin-left:-50px;
 		text-align:center;
@@ -4781,7 +4785,6 @@ figure.snip1156:hover .salud-ambiental{
 	
 	.ul-nav li ul li {
 		background-color:white;
-		position:relative;
 		padding-top:7%;
 		padding-bottom: 5%;
 		transition: 0.4s all ease-in-out;
