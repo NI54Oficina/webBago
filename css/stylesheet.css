@@ -294,7 +294,6 @@ font-size: 22px;
 		font-size:13px;
 		color:#0C6594;
 		margin-top:1%;
-		margin-right:-5%;
 	}
 	
 	
@@ -4723,7 +4722,7 @@ figure.snip1156:hover .salud-ambiental{
 		transition: 0.4s all ease-in-out;
 		display:none;
 		width:100%;
-		position:initial;
+		position:absolute;
 		min-width:200px;
 		margin-left:-50px;
 		text-align:center;
@@ -4797,6 +4796,10 @@ figure.snip1156:hover .salud-ambiental{
 		display:block;
 		transition:0.4s all ease-in-out;
 		color:#656565;
+		margin: 0;
+		padding: 0;
+		min-width: 200px;
+		width: 200px;
 	}
 	
 	.ul-nav li ul li {
