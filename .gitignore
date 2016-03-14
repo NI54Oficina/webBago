@@ -41,3 +41,20 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+#others
+assets
+1080
+bower_components
+ckeditor
+cgi-bin
+img
+yii
+vademecums
+video
+datatables
+fonts
+recursos-home
+src
+themes
+templates
