@@ -72,7 +72,12 @@
 		</ul> <!-- termina lista versiones -->
 	
 	
-	
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarSecciones" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
 		<!-- +++++++++++ BOTONERA +++++++++++ -->
 		<ul class="ul-nav col-lg-11 col-md-11 col-sm-9 col-xs-9" style="">
 			

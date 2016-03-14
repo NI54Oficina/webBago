@@ -26750,3 +26750,245 @@ Stack trace:
 REQUEST_URI=/webBago/img/gota-nutricion.png
 HTTP_REFERER=http://localhost/webBago/vademecum/id11
 ---
+2016/03/14 15:30:18 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/img".' in C:\xampp\htdocs\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\webBago\protected\controllers\WebController.php(68): CController->renderPartial('//static/img', '')
+#1 [internal function]: WebController->actionGet('img', 'punto-nutricion...')
+#2 C:\xampp\htdocs\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\xampp\htdocs\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\xampp\htdocs\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get/data/im...')
+#14 C:\xampp\htdocs\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/img/punto-nutricion.png
+HTTP_REFERER=http://localhost/webBago/vademecum/id11
+---
+2016/03/14 15:30:18 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/img".' in C:\xampp\htdocs\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\webBago\protected\controllers\WebController.php(68): CController->renderPartial('//static/img', '')
+#1 [internal function]: WebController->actionGet('img', 'gota-nutricion....')
+#2 C:\xampp\htdocs\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\xampp\htdocs\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\xampp\htdocs\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get/data/im...')
+#14 C:\xampp\htdocs\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/img/gota-nutricion.png
+HTTP_REFERER=http://localhost/webBago/vademecum/id11
+---
+2016/03/14 15:30:23 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/vademecums".' in C:\xampp\htdocs\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\webBago\protected\controllers\WebController.php(68): CController->renderPartial('//static/vademe...', '')
+#1 [internal function]: WebController->actionGet('vademecums', '96.png')
+#2 C:\xampp\htdocs\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\xampp\htdocs\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\xampp\htdocs\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get/data/va...')
+#14 C:\xampp\htdocs\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/vademecums/96.png
+HTTP_REFERER=http://localhost/webBago/vademecum/id10
+---
+2016/03/14 15:30:23 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/vademecums".' in C:\xampp\htdocs\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\webBago\protected\controllers\WebController.php(68): CController->renderPartial('//static/vademe...', '')
+#1 [internal function]: WebController->actionGet('vademecums', '95.png')
+#2 C:\xampp\htdocs\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\xampp\htdocs\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\xampp\htdocs\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get/data/va...')
+#14 C:\xampp\htdocs\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/vademecums/95.png
+HTTP_REFERER=http://localhost/webBago/vademecum/id10
+---
+2016/03/14 15:39:56 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/vademecums".' in C:\xampp\htdocs\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\webBago\protected\controllers\WebController.php(68): CController->renderPartial('//static/vademe...', '')
+#1 [internal function]: WebController->actionGet('vademecums', '97.png')
+#2 C:\xampp\htdocs\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\xampp\htdocs\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\xampp\htdocs\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get/data/va...')
+#14 C:\xampp\htdocs\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/vademecums/97.png
+HTTP_REFERER=http://localhost/webBago/vademecum/id3
+---
+2016/03/14 15:41:41 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/vademecums".' in C:\xampp\htdocs\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\webBago\protected\controllers\WebController.php(68): CController->renderPartial('//static/vademe...', '')
+#1 [internal function]: WebController->actionGet('vademecums', '97.png')
+#2 C:\xampp\htdocs\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\xampp\htdocs\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\xampp\htdocs\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get/data/va...')
+#14 C:\xampp\htdocs\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/vademecums/97.png
+HTTP_REFERER=http://localhost/webBago/vademecum/id3
+---
+2016/03/14 15:42:20 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/vademecums".' in C:\xampp\htdocs\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\webBago\protected\controllers\WebController.php(68): CController->renderPartial('//static/vademe...', '')
+#1 [internal function]: WebController->actionGet('vademecums', '97.png')
+#2 C:\xampp\htdocs\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\xampp\htdocs\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\xampp\htdocs\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get/data/va...')
+#14 C:\xampp\htdocs\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/vademecums/97.png
+HTTP_REFERER=http://localhost/webBago/vademecum/id3
+---
+2016/03/14 15:42:31 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/vademecums".' in C:\xampp\htdocs\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\webBago\protected\controllers\WebController.php(68): CController->renderPartial('//static/vademe...', '')
+#1 [internal function]: WebController->actionGet('vademecums', '97.png')
+#2 C:\xampp\htdocs\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\xampp\htdocs\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\xampp\htdocs\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get/data/va...')
+#14 C:\xampp\htdocs\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/vademecums/97.png
+HTTP_REFERER=http://localhost/webBago/vademecum/id3
+---
+2016/03/14 15:45:21 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/vademecums".' in C:\xampp\htdocs\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\webBago\protected\controllers\WebController.php(68): CController->renderPartial('//static/vademe...', '')
+#1 [internal function]: WebController->actionGet('vademecums', '97.png')
+#2 C:\xampp\htdocs\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\xampp\htdocs\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\xampp\htdocs\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get/data/va...')
+#14 C:\xampp\htdocs\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/vademecums/97.png
+HTTP_REFERER=http://localhost/webBago/vademecum/id3
+---
+2016/03/14 15:45:46 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/vademecums".' in C:\xampp\htdocs\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\webBago\protected\controllers\WebController.php(68): CController->renderPartial('//static/vademe...', '')
+#1 [internal function]: WebController->actionGet('vademecums', '97.png')
+#2 C:\xampp\htdocs\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\xampp\htdocs\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\xampp\htdocs\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get/data/va...')
+#14 C:\xampp\htdocs\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/vademecums/97.png
+HTTP_REFERER=http://localhost/webBago/vademecum/id3
+---
+2016/03/14 15:46:27 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/vademecums".' in C:\xampp\htdocs\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\webBago\protected\controllers\WebController.php(68): CController->renderPartial('//static/vademe...', '')
+#1 [internal function]: WebController->actionGet('vademecums', '97.png')
+#2 C:\xampp\htdocs\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\xampp\htdocs\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\xampp\htdocs\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get/data/va...')
+#14 C:\xampp\htdocs\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/vademecums/97.png
+HTTP_REFERER=http://localhost/webBago/vademecum/id3
+---

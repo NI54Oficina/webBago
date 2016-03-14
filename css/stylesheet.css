@@ -4679,6 +4679,7 @@ figure.snip1156:hover .salud-ambiental{
 	}
 	.snip1156.image h3{
 		display:none;
+		color:#b8b8b8;
 	}
 	#logo-bago{
 		width:100%;
@@ -4741,6 +4742,7 @@ figure.snip1156:hover .salud-ambiental{
 	
 	.snip1156.image h3{
 		display:initial;
+		color:#b8b8b8;
 	}
 	#logo-bago{
 		width:21%;
