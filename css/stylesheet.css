@@ -85,6 +85,12 @@ p{
 font-size: 22px;
 }
 
+.div-img-aft {
+    webkit-box-shadow: inset 0px -1px 0px 15px rgba(255,255,255,1);
+    -moz-box-shadow: inset 0px -1px 0px 15px rgba(255,255,255,1);
+    box-shadow: inset 5px -1px 0px 3px rgba(255,255,255,1);
+}
+
 
 /****************** HOME  VIDEO *******************/
 .h1-home-ev{    
@@ -1017,7 +1023,7 @@ font-size: 22px;
 		font-size: 11px;
 		color: #0C6594;
 		margin-top: 1%;
-		width: 50%;
+		width: 40%;
 	}
 	
 	#logo-bago{
@@ -1122,7 +1128,6 @@ font-size: 22px;
 		background-size: 100% auto;
 		background-position: center top;
 		z-index:-1;
-		margin-top: 10vh;
 	}
 	
 	.titulo-layout-quienes{

@@ -21,7 +21,7 @@
 		</a>
 
 	</div>
-					
+
 	
 	<div class="col-lg-6 col-md-6 col-sm-11 col-xs-11 row img-plantas-2 hidden-lg hidden-md">
 		<a href="nuestras-plantas-menu.php">
@@ -46,7 +46,7 @@
 		<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 "></div>
 	
 		<div class="tabla-aftosa col-lg-10 col-md-10 col-sm-10 col-xs-10">
-			<div>
+			<div style="    text-align: left;">
 				<h2 class="hidden-md hidden-lg h2-aftosa-mobile"  style="">Institucional <br /><br /><br /></h2>
 					<p><strong>Nuestras dos plantas modelo de producción en Argentina y una planta en Brasil, equipadas con última tecnología, nos permiten ofrecer las más avanzadas soluciones para la salud animal.</strong></p>
 					<p><strong>Trabajamos para abastecer a los mercados con los más altos estándares de calidad. La excelencia de nuestros productos comienza con la selección y control de las mejores materias primas y se sostiene en una gestión de calidad integrada que garantiza 	la consistencia en cada serie. Las plantas son auditadas por las entidades regulatorias más exigentes del mundo. Todos nuestros procesos se desarrollan bajos las normas ISO 9001, 14.001 y de Buenas Prácticas de Manufacturación (GMP)</strong></p>

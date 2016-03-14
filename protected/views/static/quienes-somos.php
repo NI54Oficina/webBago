@@ -9,7 +9,7 @@
 	
 	<div class=" col-lg-10 col-md-10 col-sm-12 col-xs-12 div-texto-aftosa">
 	
-		<div class="tabla-aftosa col-lg-2 col-md-2 col-sm-2 col-xs-2 hidden-xs hidden-sm" style="margin-left:-169px;">
+		<div class="tabla-aftosa col-lg-2 col-md-2 col-sm-2 col-xs-2 hidden-xs hidden-sm">
 			
 			<!-- CONTENEDOR TÍTULO-->
 			<div  class="tr" style="text-shadow:none;">
@@ -35,7 +35,7 @@
 		
 		<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 "></div>
 		
-		<div class="tabla-aftosa col-lg-9 col-md-9 col-sm-11 col-xs-11 hidden-xs hidden-sm">
+		<div class="tabla-aftosa col-lg-9 col-md-9 col-sm-11 col-xs-11 hidden-xs hidden-sm" style="    text-align: left;">
 			
 			<!-- TÍTULO SECCIÓN -->
 			<div>
