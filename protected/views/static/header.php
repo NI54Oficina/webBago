@@ -10,7 +10,7 @@
 	<span  class=" glyphicon glyphicon-menu-hamburger navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarSecciones" aria-expanded="false" aria-controls="navbar" ></span>
 	<!-- ////////////////BARA DE NAVEGACIÓN //////////////////-->
 	<nav  id="navbarSecciones" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 collapse navbar-collapse" data-toggle="collapse">
-		
+		<div class="container-fluid">
 		
 		<!-- +++++ PAÍSES +++++ -->
 		<div id="boxes" style="">
@@ -72,19 +72,12 @@
 				<li class="li-nav-2"><a href="" style="float:left;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/fronteras-50x50-01.png" /></a></li>
 		</ul> <!-- termina lista versiones -->
 	
-	
-						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarSecciones" aria-expanded="false" aria-controls="navbar">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
 		<!-- +++++++++++ BOTONERA +++++++++++ -->
 		<ul class="ul-nav col-lg-11 col-md-11 col-sm-9 col-xs-9"  style="">
 			
 			
 			<!-- INSTITUCIONAL -->
-			<li class="li-nav dropdown"><a  href="" class="a-nav dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Institucional <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/flecha-menu.png" /> </a>
+			<li class="li-nav dropdown"><a  href="#" class="a-nav dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Institucional <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/flecha-menu.png" /> </a>
 				
 				<ul class="dropdown-menu dropdown-menu-right">
 						<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/flecha-submenu.png" />
@@ -104,9 +97,9 @@
 			
 			
 			<!-- INFO TÉCNICA -->
-			<li class="li-nav"><a class="a-nav" href="#">info técnica <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/flecha-menu.png" /></a>
+			<li class="li-nav  dropdown"><a href="#" class="a-nav dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">info técnica <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/flecha-menu.png" /></a>
 				
-				<ul>
+				<ul class="dropdown-menu dropdown-menu-right">
 							<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/flecha-submenu.png" />
 								<li><a href="">Planes sanitarios</a></li>
 								<li><a href="">Planillas de trabajo</a></li>
@@ -117,9 +110,9 @@
 			
 			
 			<!-- VADEMÉCUM -->
-			<li class="li-nav"><a class="a-nav" href="#">vademécum <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/flecha-menu.png" /></a>
+			<li class="li-nav  dropdown"><a href="#" class="a-nav dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">vademécum <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/flecha-menu.png" /></a>
 				
-				<ul>
+				<ul class="dropdown-menu dropdown-menu-right">
 					
 					<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/flecha-submenu.png" />
 						
@@ -152,7 +145,7 @@
 			<li class="li-nav"><a class="a-nav" href="">contacto</a></li>
 			
 		</ul> <!-- termina botonera -->
-
+		</div>
 	</nav> <!-- TERMINA BARRA NAVEGACIÓN-->
 	
 </header> <!-- TERMINA HEADER -->
