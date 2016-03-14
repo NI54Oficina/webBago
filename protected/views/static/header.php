@@ -2,7 +2,7 @@
 <!---------------------------------------------------------------------------------------------      HEADER     --------------------------------------------------------------------------------------------->
 
 
-<header class="main col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="width:100%;overflow-x:hidden;">
+<header class="main col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="width:100%;overflow-x:hidden;position:fixed;">
 
 	<!--<span class="glyphicon glyphicon-menu-hamburger"></span>!-->
 	<!-- ////////////////BARA DE NAVEGACIÓN //////////////////-->
