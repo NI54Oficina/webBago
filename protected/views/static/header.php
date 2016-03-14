@@ -2,12 +2,15 @@
 <!---------------------------------------------------------------------------------------------      HEADER     --------------------------------------------------------------------------------------------->
 
 
-<header class="main col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="width:100%;overflow-x:hidden;">
-
-	<!--<span class="glyphicon glyphicon-menu-hamburger"></span>!-->
-	<!-- ////////////////BARA DE NAVEGACIÓN //////////////////-->
-	<nav  id="overview"  class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+<header class="main col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="width:100%">
+		<!--+++++ LOGO BAGÓ MOBILE +++++ -->
+		<img id="logo-bago-mobile" class="col-lg-2 col-md-2 col-sm-12 col-xs-12" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo-bago.png" />		
 		
+		
+	<span  class=" glyphicon glyphicon-menu-hamburger navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarSecciones" aria-expanded="false" aria-controls="navbar" ></span>
+	<!-- ////////////////BARA DE NAVEGACIÓN //////////////////-->
+	<nav  id="navbarSecciones" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 collapse navbar-collapse" data-toggle="collapse">
+		<div class="container-fluid">
 		
 		<!-- +++++ PAÍSES +++++ -->
 		<div id="boxes" style="">
@@ -63,29 +66,20 @@
 		</div>-->
 		<!-- +++++ LISTA VERSIONES +++++ -->
 		<ul class=" col-lg-2 col-md-2 col-sm-2 col-xs-12" id="ul-nav-2" style="color:#0C6594;float:right;">
-			
-
 				<li class="li-nav-2"><div id="links"><a class="openlink" href="javascript:void(0);"  style="float:left;padding: 10px 0px;color: #337ab7;">Otros países</a></div></li>
 				<li class="li-nav-2"><a href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/1/lng/0"style="float:left;padding: 10px 0px;color: #337ab7;">Versión español</a></li>
 				<li class="li-nav-2"><a href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/2/lng/2"style="float:left;padding: 10px 0px;color: #337ab7;">Versión portugués</a></li>
 				<li class="li-nav-2"><a href="" style="float:left;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/fronteras-50x50-01.png" /></a></li>
 		</ul> <!-- termina lista versiones -->
 	
-	
-						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarSecciones" aria-expanded="false" aria-controls="navbar">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
 		<!-- +++++++++++ BOTONERA +++++++++++ -->
-		<ul class="ul-nav col-lg-11 col-md-11 col-sm-9 col-xs-9" style="">
+		<ul class="ul-nav col-lg-11 col-md-11 col-sm-9 col-xs-9"  style="">
 			
 			
 			<!-- INSTITUCIONAL -->
-			<li class="li-nav"><a class="a-nav" href="#">Institucional <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/flecha-menu.png" /> </a>
+			<li class="li-nav dropdown"><a  href="#" class="a-nav dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Institucional <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/flecha-menu.png" /> </a>
 				
-				<ul>
+				<ul class="dropdown-menu dropdown-menu-right">
 						<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/flecha-submenu.png" />
 							<li><a class="a-sub" href="">Quiénes somos</a></li>
 							<li><a class="a-sub" href="">Misión, Visión, Valores</a></li>
@@ -103,9 +97,9 @@
 			
 			
 			<!-- INFO TÉCNICA -->
-			<li class="li-nav"><a class="a-nav" href="#">info técnica <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/flecha-menu.png" /></a>
+			<li class="li-nav  dropdown"><a href="#" class="a-nav dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">info técnica <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/flecha-menu.png" /></a>
 				
-				<ul>
+				<ul class="dropdown-menu dropdown-menu-right">
 							<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/flecha-submenu.png" />
 								<li><a href="">Planes sanitarios</a></li>
 								<li><a href="">Planillas de trabajo</a></li>
@@ -116,9 +110,9 @@
 			
 			
 			<!-- VADEMÉCUM -->
-			<li class="li-nav"><a class="a-nav" href="#">vademécum <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/flecha-menu.png" /></a>
+			<li class="li-nav  dropdown"><a href="#" class="a-nav dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">vademécum <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/flecha-menu.png" /></a>
 				
-				<ul>
+				<ul class="dropdown-menu dropdown-menu-right">
 					
 					<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/flecha-submenu.png" />
 						
@@ -151,7 +145,7 @@
 			<li class="li-nav"><a class="a-nav" href="">contacto</a></li>
 			
 		</ul> <!-- termina botonera -->
-
+		</div>
 	</nav> <!-- TERMINA BARRA NAVEGACIÓN-->
 	
 </header> <!-- TERMINA HEADER -->

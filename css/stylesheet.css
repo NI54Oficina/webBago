@@ -85,6 +85,12 @@ p{
 font-size: 22px;
 }
 
+.div-img-aft {
+    webkit-box-shadow: inset 0px -1px 0px 15px rgba(255,255,255,1);
+    -moz-box-shadow: inset 0px -1px 0px 15px rgba(255,255,255,1);
+    box-shadow: inset 5px -1px 0px 3px rgba(255,255,255,1);
+}
+
 
 /****************** HOME  VIDEO *******************/
 .h1-home-ev{    
@@ -181,7 +187,6 @@ font-size: 22px;
 
 .logo-blanco{
     width: 24%;
-    
     margin-top: 0%;
 }
 
@@ -194,6 +199,15 @@ font-size: 22px;
     line-height: 42px;
 	display:inline-block;
 }
+.box {
+    width: 100%;
+    height: 27%;
+    vertical-align: top;
+    background: #42AAC9;
+    display: none;
+    z-index: 33333333;
+}
+
 
 @media screen and (min-width: 300px) {
 
@@ -294,7 +308,6 @@ font-size: 22px;
 		font-size:13px;
 		color:#0C6594;
 		margin-top:1%;
-		margin-right:-5%;
 	}
 	
 	
@@ -394,7 +407,7 @@ font-size: 22px;
 		display:inline-block;
 		vertical-align: middle;
 		margin-top: 1%;
-		margin-left: 54%;
+		margin-left: 120px;
 		color: #B2B2B2;
 		font-size: 17px;
 		font-family: 'arialregular';
@@ -1005,7 +1018,7 @@ font-size: 22px;
 		font-size: 11px;
 		color: #0C6594;
 		margin-top: 1%;
-		width: 50%;
+		width: 40%;
 	}
 	
 	#logo-bago{
@@ -1087,7 +1100,6 @@ font-size: 22px;
 		background-size: 100% auto;
 		background-position: center top;
 		z-index:-1;
-		margin-top: 10vh;
 	}
 	
 	.titulo-layout-aftosa{
@@ -1110,7 +1122,6 @@ font-size: 22px;
 		background-size: 100% auto;
 		background-position: center top;
 		z-index:-1;
-		margin-top: 10vh;
 	}
 	
 	.titulo-layout-quienes{
@@ -1133,7 +1144,6 @@ font-size: 22px;
 		background-size: 100% auto;
 		background-position: center top;
 		z-index: -1;
-		margin-top: 12vh;
 	}
 	
 	.mision-ul{
@@ -1153,7 +1163,6 @@ font-size: 22px;
 		background-size: 100% auto;
 		background-position: center top;
 		z-index:-1;
-		margin-top: 10vh;
 	}
 	
 	.proveedores-li{
@@ -2335,7 +2344,6 @@ font-size: 22px;
 		background-size: 100% auto;
 		background-position: center top;
 		z-index: -1;
-		margin-top: 10vh;
 	}
 	
 	figure.snip1156:hover .d-a-2 h2{
@@ -3291,7 +3299,7 @@ html {
 }
 
 body {
-  background: #f5f5f5;
+  background: #ffffff;
   color: #666;
 }
 
@@ -4710,7 +4718,7 @@ figure.snip1156:hover .salud-ambiental{
 		transition: 0.4s all ease-in-out;
 		display:none;
 		width:100%;
-		position:initial;
+		position:absolute;
 		min-width:200px;
 		margin-left:-50px;
 		text-align:center;
@@ -4738,6 +4746,25 @@ figure.snip1156:hover .salud-ambiental{
 		color:#656565;
 		box-shadow: 0px 0px 5px #828282;
 	}
+	
+	#logo-bago{
+		display:none;
+	}
+	
+	#logo-bago-mobile{
+		display:inline-block;
+		width: 40%;
+		padding-top: 2%;
+		padding-bottom: 2%;
+	}
+	
+.li-paises {
+    display: inline-block;
+    color: white;
+    width: 16%;
+    font-size: 13px;
+}
+
 }
 
 @media screen and (min-width: 769px) {
@@ -4784,6 +4811,10 @@ figure.snip1156:hover .salud-ambiental{
 		display:block;
 		transition:0.4s all ease-in-out;
 		color:#656565;
+		margin: 0;
+		padding: 0;
+		min-width: 200px;
+		width: 200px;
 	}
 	
 	.ul-nav li ul li {
@@ -4801,12 +4832,21 @@ figure.snip1156:hover .salud-ambiental{
 		text-transform:uppercase;
 	}
 	
+	#logo-bago{
+		display:inline-block;
+	}
+	
+	#logo-bago-mobile{
+		display:none;
+	}
+	
 }
 
 .h1-1-home{
 	text-transform:uppercase;
 }
 
+<<<<<<< HEAD
 .aftosa-fechas-container{
 	width:100%;	
 	padding-top:100px;
@@ -4817,3 +4857,5 @@ figure.snip1156:hover .salud-ambiental{
 .aftosa-fechas-container .div-años-aftosa{
 	margin-bottom:50px;
 }
+=======
+>>>>>>> origin/master
