@@ -4778,6 +4778,16 @@ figure.snip1156:hover .salud-ambiental{
     font-size: 13px;
 }
 
+	#ul-nav-2 {
+		border-bottom:1px solid #D3D3D3;
+	}
+	
+	.ul-nav {
+		float: left;
+		text-align: left;
+	    line-height: 50px;
+	}
+
 }
 
 @media screen and (min-width: 769px) {
@@ -4852,6 +4862,16 @@ figure.snip1156:hover .salud-ambiental{
 	#logo-bago-mobile{
 		display:none;
 	}
+	
+	#ul-nav-2 {
+		border-bottom:none;
+	}
+	
+	.ul-nav {
+		float:right;
+		line-height:20px;
+	}
+
 	
 }
 
