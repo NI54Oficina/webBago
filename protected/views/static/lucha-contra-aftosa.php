@@ -8,7 +8,10 @@
 
 	<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 	<div class="side-title">
+		<div style="display:inline-block;">
 		<h2  class="h2-aftosa">Institucional</h2>	
+		<div style="width:50%;height:1px;display:inline-block;border-top:1px solid black;"></div>
+		</div>
 	</div>
 	</div>
 
