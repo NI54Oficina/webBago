@@ -28381,3 +28381,39 @@ REQUEST_URI=/webBago/vademecum/id2
 in C:\xampp\htdocs\webBago\protected\views\static\vademecum.php (63)
 in C:\xampp\htdocs\webBago\protected\controllers\WebController.php (68)
 in C:\xampp\htdocs\webBago\index.php (13)
+2016/03/15 20:41:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "paises/bower_components/jquery-ui/ui/jquery-ui.js".' in C:\wamp\www\webBago\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('paises/bower_co...')
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/webBago/paises/bower_components/jquery-ui/ui/jquery-ui.js
+HTTP_REFERER=http://localhost/webBago/paises/id1
+---
+2016/03/15 20:41:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "paises/bower_components/jquery-ui/ui/minified/jquery-ui.min.js".' in C:\wamp\www\webBago\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('paises/bower_co...')
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/webBago/paises/bower_components/jquery-ui/ui/minified/jquery-ui.min.js
+HTTP_REFERER=http://localhost/webBago/paises/id1
+---
+2016/03/15 20:41:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "paises/bower_components/BigVideo/lib/bigvideo.js".' in C:\wamp\www\webBago\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('paises/bower_co...')
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/webBago/paises/bower_components/BigVideo/lib/bigvideo.js
+HTTP_REFERER=http://localhost/webBago/paises/id1
+---
+2016/03/15 20:41:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "paises/bower_components/video.js".' in C:\wamp\www\webBago\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('paises/bower_co...')
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/webBago/paises/bower_components/video.js
+HTTP_REFERER=http://localhost/webBago/paises/id1
+---
