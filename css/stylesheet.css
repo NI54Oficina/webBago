@@ -4874,6 +4874,8 @@ figure.snip1156:hover .salud-ambiental{
 		position: fixed;
 		min-height: 80vh;
 		transition: all 0.4s ease;
+		padding: 0;
+		margin:0;
 	}
 }
 
