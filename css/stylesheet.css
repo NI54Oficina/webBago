@@ -371,7 +371,7 @@ font-size: 22px;
 		border:none;
 		padding-left:5%;
 		font-size:15px;
-		margin-top:3.8%;
+	
 		height:400px;
 		
 	}
@@ -1077,7 +1077,7 @@ font-size: 22px;
 		border:none;
 		
 		font-size:13.5px;
-		margin-top:3.8%;
+	
 		height:400px;
 		
 		
@@ -5044,6 +5044,20 @@ figure.snip1156:hover .salud-ambiental{
 
 .side-title{
 	width:100%;text-align:right;
+	padding-right:2.5%;
+	
+}
+
+.side-title h2{
+	margin-top:10px;
+}
+
+.tabla-aftosa p{
+	line-height:25px;
+}
+
+.img-widget{
+	background-position:100% center;
 }
 
 @media screen and (max-width: 1024px) {
@@ -5065,8 +5079,15 @@ figure.snip1156:hover .salud-ambiental{
 	}
 	.side-title{
 		text-align:center;
+		padding-right:0;
 	}
 	.aftosa-fechas-container{
 		padding-top:10px;
+	}
+	.titulo-layout-aftosa{
+		font-size:20px;
+	}
+	.header-layout-aftosa{
+		padding-bottom:20px;
 	}
 }
