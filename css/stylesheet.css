@@ -4897,6 +4897,11 @@ figure.snip1156:hover .salud-ambiental{
 	
 	#ul-nav-principal{
 		height:auto;
+		text-align: right;
+		position: initial;
+		margin: 0;
+		padding: 0;
+		width: 75vw;
 	}
 	
 	.snip1156.image h3{
@@ -5007,6 +5012,8 @@ figure.snip1156:hover .salud-ambiental{
 		width:auto;
 		height:auto;
 		overflow:initial;
+		display: inline-block;
+		max-width: 75vw;
 `	}
 
 	#box-mobile{
