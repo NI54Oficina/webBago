@@ -6,13 +6,13 @@
 			</div>
 	
 
-	<div class="col-lg-3 col-md-3 col-sm-12 col-xs-11">
-	<div style="width:100%;text-align:right;">
+	<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+	<div class="side-title">
 		<h2  class="h2-aftosa">Institucional</h2>	
 	</div>
 	</div>
 
-<div class="div-texto-aftosa col-lg-5 col-md-5 col-sm-11 col-xs-11" style="text-align: left;">
+<div class="div-texto-aftosa col-lg-5 col-md-5 col-sm-12 col-xs-12" style="text-align: left;">
 	
 	<!-- TITULO SECCIÓN -->
 	
@@ -20,7 +20,7 @@
 
 	<div class="tabla-aftosa col-lg-12 col-md-12 col-sm-12 col-xs-12">
 	
-		<div  class="tr  col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-shadow:none;padding-top:0;">			
+		<div  class="tr  col-lg-12 col-md-12 col-sm-12 col-xs-12 inner-text" style="text-shadow:none;padding-top:0;">			
 				<p style="">Nuestra compañía es reconocida en el mundo por su principal aporte en el control de la Fiebre Aftosa y por su integración en el trabajo con organismos públicos e instituciones científicas internacionales.  <br />
 				Fruto de la inversión en tecnología y de nuestro compromiso por resolver las principales enfermedades que afectan el desarrollo de la producción pecuaria, en 1952 obtuvimos el primer registro para la comercialización y uso de la vacuna en la Argentina. En la década del 90, logramos desarrollar la primera vacuna anti aftosa de América Latina “pura”, libre de proteínas no estructurales, que resultó clave para el control de brotes y  garantizar el status sanitario en los países  de la región, fundamental para el ingreso de la producción en los mercados internacionales.
 

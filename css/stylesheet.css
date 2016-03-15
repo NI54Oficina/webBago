@@ -5016,3 +5016,32 @@ figure.snip1156:hover .salud-ambiental{
 .td-widget div{
 	width:100%;
 }
+
+.side-title{
+	width:100%;text-align:right;
+}
+
+@media screen and (max-width: 1024px) {
+	.aftosa-fechas-container .div-años-aftosa:nth-child(1),.aftosa-fechas-container .div-años-aftosa:nth-child(3),.aftosa-fechas-container .div-años-aftosa:nth-child(5){
+		margin-top:0;
+		padding-right:0;
+		padding-left:5%;
+	}
+	.aftosa-fechas-container .div-años-aftosa{
+		
+		padding-right:0%;
+		padding-left:0%;
+		width:90%;
+		padding-left:5%;
+	}
+	.inner-text{
+		width:90%;
+		padding-left:5%;
+	}
+	.side-title{
+		text-align:center;
+	}
+	.aftosa-fechas-container{
+		padding-top:10px;
+	}
+}
