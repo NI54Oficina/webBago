@@ -4780,6 +4780,14 @@ figure.snip1156:hover .salud-ambiental{
 		box-shadow: none;
 		background: white;
 		border: none;
+		transition: all 0.4s ease;
+	}
+	
+	.dropdown{
+		transition: all 0.4s ease;
+	}
+	.open{
+		transition: all 0.4s ease;
 	}
 	
 	.ul-nav li ul li {
@@ -4817,9 +4825,16 @@ figure.snip1156:hover .salud-ambiental{
 	}
 	
 	
-	#ul-nav-2-mobile li{
+	.li-nav-2{
 		width:auto;
 		display:inline-block;
+	}
+	
+	.li-paises-nav{
+		display: inline-block;
+		padding:0;
+		margin:0;
+		width:48%;
 	}
 	
 	.div-nav-2{
@@ -4852,6 +4867,14 @@ figure.snip1156:hover .salud-ambiental{
 		color:#b6b6b6;
 	}
 	
+	#ul-paises-nav{
+	    width: 100vw;
+		left: 0;
+		top: 20vh;
+		position: fixed;
+		min-height: 80vh;
+		transition: all 0.4s ease;
+	}
 }
 
 @media screen and (min-width: 769px) {
