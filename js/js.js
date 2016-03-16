@@ -135,7 +135,28 @@ $(function(){
     });
 	jQuery(window).load(function () {
 		SameHeight();
+		$("#vademecum-loading").hide();
+		$("#vademecum-loading").css('right','initial');
+		$.each($("#vademecum-loading .div-img-aft img"), function(index,value){
+		
+			var rightOffset = 100 + index *10;
+			
+			$("#vademecum-loading .div-img-aft").css('right', rightOffset + 'vw' );
+			
+		});
+		$("#vademecum-loading .div-img-aft").css('position','relative');
+		$("#vademecum-loading .div-img-aft").css('transition','all 0.8s ease');
+		$("#vademecum-loading").show();
+
+		setTimeout(function(){
+			
+			$("#vademecum-loading .div-img-aft").css('right', '0');
+		
+		},500);
+		//$("#vademecum-loading").fadeIn(1000);
 	});
+
+
 	
 	$( window ).resize(function() {
 		SameHeight();
