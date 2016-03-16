@@ -176,7 +176,7 @@
 			
 			
 			<!-- CONTACTO -->
-			<li class="li-nav"><a class="a-nav" href="">contacto</a></li>
+			<li class="li-nav"><a class="a-nav" href="<?php echo Yii::app()->request->baseUrl; ?>/home#contacto">contacto</a></li>
 			
 		</ul> <!-- termina botonera -->
 		
