@@ -53,7 +53,7 @@
 		<div  class="tr  col-lg-12 col-md-12 col-sm-12 col-xs-12 inner-text" style="text-shadow:none;padding-top:0;">			
            <!-- TITIULO SUBSECCIÓN -->
 			
-           <h2 class="h2-aftosa" style="margin-top: 10%;">Vanguardia en el desarrollo de soluciones</h2>
+           <h2 class="h2-aftosa">Vanguardia en el desarrollo de soluciones</h2>
            
 		   <!-- CONTENIDO -->
            <p style="margin-top:3%;">Nos proponemos estar <strong>a la vanguardia de las soluciones</strong> que se requieren en cada zona ganadera de los países donde estamos presentes. Para el abordaje de los problemas sanitarios de cada región, trabajamos en red con instituciones científicas y técnicas  públicas y privadas y nos nutrimos de nuestro servicio técnico, en contacto diario con el quehacer de los médicos veterinarios y productores. </p>
@@ -63,7 +63,7 @@
            		
 				<!-- TITULO CUADRO -->
 				<h2 class="h2-aftosa" style="color:#26CBD4; ">Primeros en América Latina</h2>
-                 <h5>Biogénesis Bagó fue  la primera empresa en la región  que desarrolló</h5>
+                 <h3 style="color: #595959;font-size: 16px;">Biogénesis Bagó fue  la primera empresa en la región  que desarrolló</h5>
            
 				<!-- ITEMS CUADRO -->
 				<p style="line-height:19px;"><img src="img/icono-bullet.png"  style="display:inline-block;" />Una línea de ectoparasiticidas </p>
@@ -79,7 +79,7 @@
            <h2 class="h2-aftosa">Un gran objetivo, la Frontera Productiva </h2>
            
            <p style="margin-top:3%;">En poco más de 30 años habrá un 35 % más de personas sobre la tierra y la producción de carne deberá aumentar un 70 %, según estimaciones de la FAO, la Organización de las Naciones Unidas para la Alimentación y la Agricultura. Los países 	de América Latina cuentan recursos naturales, profesionales y tecnologías suficientes para abastecer la gran demanda mundial de proteína animal, aunque para lograrlo los productores deberán intensificar sus sistemas y elevar los índices de  producción en carne y leche.
-		   < br/>
+		   <br />
 			En Biogénesis Bagó creemos que es posible. Por eso pusimos en marcha nuestro programa <strong>“Fronteras Productivas”</strong>, una herramienta de trabajo que,  con nuestro asesoramiento y la asistencia de un médico veterinario,  guía en la incorporación de mejoras claves en sanidad, nutrición, genética y manejo,  para que los establecimientos puedan expresar su mayor potencial, sin necesidad de hacer grandes inversiones.  <br />
 			Productores de la región  ya lograron llegar a su  frontera, alcanzado el  máximo rendimiento de sus modelos productivos.  Muchos otros están en camino. <strong>Para sumarse al desafío, www.fronterasproductivas.com</strong>
 			</p>
