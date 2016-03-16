@@ -5102,6 +5102,11 @@ figure.snip1156:hover .salud-ambiental{
 		font-family:'arialregular';
 	}
 	
+	.container-lista-360 img{
+		width: 96%;
+		padding-left: 2%;
+	}
+	
 @media screen and (max-width: 1024px) {
 	.aftosa-fechas-container .div-años-aftosa:nth-child(1),.aftosa-fechas-container .div-años-aftosa:nth-child(3),.aftosa-fechas-container .div-años-aftosa:nth-child(5){
 		margin-top:0;
