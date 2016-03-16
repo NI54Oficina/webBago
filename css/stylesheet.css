@@ -5069,6 +5069,34 @@ figure.snip1156:hover .salud-ambiental{
 	background-position:100% center;
 }
 
+.a-paises-principal{
+	color:white; 
+	font-family:'arialregular';
+}
+
+.a-paises-principal img{
+	display:block;
+	margin:auto;
+	width: auto;	
+	height:auto;
+}
+
+.a-paises-principal p{
+	text-align:center;
+	line-height: 25px;
+	font-weight:700;
+	font-size:15px;
+	letter-spacing:1px;
+}
+
+.banderas-paises-principal{
+	margin-bottom:5vh;
+}
+
+.a-paises-principal:hover{
+	color:white;
+}
+
 @media screen and (max-width: 1024px) {
 	.aftosa-fechas-container .div-años-aftosa:nth-child(1),.aftosa-fechas-container .div-años-aftosa:nth-child(3),.aftosa-fechas-container .div-años-aftosa:nth-child(5){
 		margin-top:0;
