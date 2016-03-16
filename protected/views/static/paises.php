@@ -19,9 +19,9 @@
 
     <script>
 	    $(function() {
-            var BV = new $.BigVideo();
-			BV.init();
-		BV.show('video/home.mp4',{ambient:true});
+            //var BV = new $.BigVideo();
+			//BV.init();
+		//BV.show('video/home.mp4',{ambient:true});
 	    });
     </script>
 	<div class="col-lg-1"></div>
