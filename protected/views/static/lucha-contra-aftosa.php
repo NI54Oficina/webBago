@@ -1,6 +1,6 @@
 <img id="logo-bago-mobile" class="hidden-lg hidden-md col-sm-12 col-xs-12" src="/webBago/img/logo-bago.png" style="opacity:0;">
 			<div class="header-layout-aftosa col-lg-12 col-md-12 col-sm-12 col-xs-12">
-				<div style="width:100%;position:absolute;"><h1 class="titulo-layout-aftosa" style="">Lucha contra aftosa</h1></div>
+				<div style="width:100%;position:absolute;"><h1 class="titulo-layout-aftosa" style=""><?php echo Textos::model()->GetText(10); ?></h1></div>
 				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/aftosa-header.png" style="width:100vw;" />	
 			</div>
 	
@@ -8,7 +8,7 @@
 	<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 	<div class="side-title">
 		<div style="display:inline-block;">
-		<h2  class="h2-aftosa">Institucional</h2>	
+		<h2  class="h2-aftosa"><?php echo Textos::model()->GetText(347); ?></h2>	
 		<div style="width:50%;height:1px;display:inline-block;border-top:1px solid black;"></div>
 		</div>
 	</div>
@@ -23,12 +23,12 @@
 	<div class="tabla-aftosa col-lg-12 col-md-12 col-sm-12 col-xs-12">
 	
 		<div  class="tr  col-lg-12 col-md-12 col-sm-12 col-xs-12 inner-text" style="text-shadow:none;padding-top:0;">			
-				<p style="">Nuestra compañía es reconocida en el mundo por su principal aporte en el control de la Fiebre Aftosa y por su integración en el trabajo con organismos públicos e instituciones científicas internacionales.  <br />
-				Fruto de la inversión en tecnología y de nuestro compromiso por resolver las principales enfermedades que afectan el desarrollo de la producción pecuaria, en 1952 obtuvimos el primer registro para la comercialización y uso de la vacuna en la Argentina. En la década del 90, logramos desarrollar la primera vacuna anti aftosa de América Latina “pura”, libre de proteínas no estructurales, que resultó clave para el control de brotes y  garantizar el status sanitario en los países  de la región, fundamental para el ingreso de la producción en los mercados internacionales.
+				<p style=""><?php echo Textos::model()->GetText(51); ?>  <br />
+				<?php echo Textos::model()->GetText(52); ?>
 
 				</p>
 				
-				<p style="">Hoy somos la  única compañía en Sudamérica en tener registrada su vacuna en todos los países de la  región, con planes de vacunación contra la enfermedad:  4 de cada 10 bovinos reciben la vacuna de Biogénesis Bagó.
+				<p style=""><?php echo Textos::model()->GetText(53); ?>
 				</p>
 		</div>
 	
@@ -49,14 +49,14 @@
 	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 aftosa-fechas-container">
 	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">	
 		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 div-años-aftosa">
-			<h3 class="h3-aftosa"><strong><span  class="span-aftosa">A</span>ÑO 1997</strong></h3>
-				<p class="p-aftosa" >En 1997, ante focos detectados en Taiwán, aportamos de forma inmediata la primera vacuna aprobada por las autoridades sanitarias de ese país.
+			<h3 class="h3-aftosa"><?php echo Textos::model()->GetText(404); ?></h3>
+				<p class="p-aftosa" ><?php echo Textos::model()->GetText(54); ?>
 				</p>
 		</div>
 	
 		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12  div-años-aftosa">
-			<h3 class="h3-aftosa"><strong><span  class="span-aftosa">A</span>ÑO 2000</strong></h3>
-				<p class="p-aftosa" >En  el año 2000, pusimos en funcionamiento el <strong>primer Banco Regional de Antígenos, vacunas anti Aftosa y Reserva Tecnológica</strong>.
+			<h3 class="h3-aftosa"><?php echo Textos::model()->GetText(405); ?></h3>
+				<p class="p-aftosa" ><?php echo Textos::model()->GetText(55); ?>
 
 				</p>
 		</div>
@@ -66,15 +66,14 @@
 	<!-- DIV AÑOS -->
 	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">	
 		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 div-años-aftosa">
-		    <h3 class="h3-aftosa"><strong><span  class="span-aftosa">A</span>ÑO 2006</strong></h3>
-				<p class="p-aftosa" >Desde 2006 el laboratorio es proveedor del <strong>Banco de Antígenos de Estados Unidos, México y Canadá</strong>. 
+		    <h3 class="h3-aftosa"><?php echo Textos::model()->GetText(406); ?></h3>
+				<p class="p-aftosa" ><?php echo Textos::model()->GetText(56); ?> 
 				</p>
 		</div>
 		
 		<div  class="col-lg-6 col-md-6 col-sm-12 col-xs-12 div-años-aftosa">
-			<h3 class="h3-aftosa"><strong><span  class="span-aftosa">A</span>ÑO 2010</strong></h3>
-				<p class="p-aftosa" >En  2010, obtuvimos la licencia para uso y comercialización, en caso de emergencia, de la <strong>vacuna anti Aftosa en Canadá</strong>.
-				</p>
+			<h3 class="h3-aftosa"><?php echo Textos::model()->GetText(407); ?></h3>
+				<p class="p-aftosa" ><?php echo Textos::model()->GetText(57); ?> 
 		</div>
 	
 	
@@ -82,14 +81,14 @@
 	<!-- DIV AÑOS -->
 	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">	
 		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 div-años-aftosa">
-			<h3 class="h3-aftosa"><strong><span  class="span-aftosa">A</span>ÑO 2011</strong></h3>
-				<p class="p-aftosa">En 2011, nos convertimos en la <strong>primera compañía a nivel mundial</strong> en obtener un permiso de importación, distribución y comercialización de nuestra vacuna ante una <strong>eventual emergencia sanitaria en Estados Unidos</strong>.
+			<h3 class="h3-aftosa"><?php echo Textos::model()->GetText(408); ?></h3>
+				<p class="p-aftosa"><?php echo Textos::model()->GetText(58); ?> 
 				</p>
 		</div>
 	
 		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12  div-años-aftosa">
-			<h3 class="h3-aftosa"><strong><span class="span-aftosa">A</span>ÑO 2013</strong></h3>
-				<p class="p-aftosa" >En 2013, Biogénesis Bagó y HILE Biotechnology inician el proyecto de trabajo en conjunto para la producción y comercialización de la <strong>vacuna anti Aftosa en la República Popular de China</strong>. La planta comenzará a operar en 2016 con una capacidad de producción de 400 millones de dosis por año. Somos la primera y única empresa de biotecnología del sector privado en el mundo que cumple con la calidad requerida por las autoridades sanitarias del gobierno chino, para dar respuesta al principal problema sanitario que afecta los rodeos del país asiático.
+			<h3 class="h3-aftosa"><?php echo Textos::model()->GetText(409); ?></h3>
+				<p class="p-aftosa" ><?php echo Textos::model()->GetText(59); ?>
 				</p>
 		</div>
 	</div>
