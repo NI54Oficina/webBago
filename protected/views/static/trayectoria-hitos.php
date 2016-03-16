@@ -21,12 +21,19 @@
 	
 	<div class="tabla-aftosa col-lg-12 col-md-12 col-sm-12 col-xs-12">
 	
-			<img style="margin-left:28vw;" src="img/linea-tiempo-1-01.png" />
+	<div class="container-anios-linea-tiempo">
+		<div>
+			<p class="anios-1934-2006">1934</p>
+		</div>
+		
+		<p class="nace-linea-tiempo">Nace</p> <p class="bago-linea-tiempo" style="color: #011E49;">laboratorios Bagó</p>
+	</div>
+			<!--<img style="" src="img/linea-tiempo-1-01.png" />-->
 		<section id="cd-timeline" class="cd-container">
 
 		<div class="cd-timeline-block">
 			<div class="cd-timeline-img cd-picture">
-				<p class="p-cd">1938</p>
+				<p class="p-cd" style="margin-top: 15px;">1938</p>
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
@@ -38,7 +45,7 @@
 
 		<div class="cd-timeline-block">
 			<div class="cd-timeline-img cd-movie">
-				<p class="p-cd">1943</p>
+				<p class="p-cd" style="margin-top: 15px;">1943</p>
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
@@ -49,7 +56,7 @@
 
 		<div class="cd-timeline-block">
 			<div class="cd-timeline-img cd-picture">
-				<p class="p-cd">1952</p>
+				<p class="p-cd" style="margin-top: 15px;">1952</p>
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
@@ -62,7 +69,7 @@
 
 		<div class="cd-timeline-block">
 			<div class="cd-timeline-img cd-location">
-				<p class="p-cd">1988</p>
+				<p class="p-cd" style="margin-top: 15px;">1988</p>
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
@@ -74,7 +81,7 @@
 
 		<div class="cd-timeline-block">
 			<div class="cd-timeline-img cd-location">
-				<p class="p-cd">1993</p>
+				<p class="p-cd" style="margin-top: 15px;">1993</p>
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
@@ -86,7 +93,7 @@
 
 		<div class="cd-timeline-block">
 			<div class="cd-timeline-img cd-movie">
-				<p class="p-cd">1994</p>
+				<p class="p-cd" style="margin-top: 15px;">1994</p>
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
@@ -97,7 +104,7 @@
 		
 		<div class="cd-timeline-block">
 			<div class="cd-timeline-img cd-location">
-				<p class="p-cd">1996</p>
+				<p class="p-cd" style="margin-top: 15px;">1996</p>
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
@@ -109,7 +116,7 @@
 		
 		<div class="cd-timeline-block">
 			<div class="cd-timeline-img cd-movie">
-				<p class="p-cd">1997</p>
+				<p class="p-cd" style="margin-top: 15px;">1997</p>
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
@@ -121,7 +128,7 @@
 		
 	<div class="cd-timeline-block">
 			<div class="cd-timeline-img cd-location">
-				<p class="p-cd">1998</p>
+				<p class="p-cd" style="margin-top: 15px;">1998</p>
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
@@ -133,7 +140,7 @@
 		
 	<div class="cd-timeline-block">
 			<div class="cd-timeline-img cd-location">
-				<p class="p-cd">2000</p>
+				<p class="p-cd" style="margin-top: 15px;">2000</p>
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
@@ -146,7 +153,7 @@
 		
 		<div class="cd-timeline-block">
 			<div class="cd-timeline-img cd-location">
-				<p class="p-cd">2002</p>
+				<p class="p-cd" style="margin-top: 15px;">2002</p>
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
@@ -158,7 +165,7 @@
 
 	<div class="cd-timeline-block">
 			<div class="cd-timeline-img cd-location">
-				<p class="p-cd">2003</p>
+				<p class="p-cd" style="margin-top: 15px;">2003</p>
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
@@ -172,12 +179,18 @@
 	
 
 	<!--Nace biogenesis bago -->
-	<img style="margin-left:28vw;" src="img/linea-tiempo-2-01.png" />
+	<div class="container-anios-linea-tiempo">
+		<div>
+			<p class="anios-1934-2006">2006</p>
+		</div>
+		
+		<p class="nace-linea-tiempo">Nace</p> <p class="bago-linea-tiempo" style="color: #011E49;">Biogénesis Bagó</p>
+	</div>
 		<section id="cd-timeline" class="cd-container">
 
 		<div class="cd-timeline-block">
 			<div class="cd-timeline-img cd-picture">
-				<p class="p-cd">2006</p>
+				<p class="p-cd" style="margin-top: 15px;">2006</p>
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
@@ -190,7 +203,7 @@
 
 		<div class="cd-timeline-block">
 			<div class="cd-timeline-img cd-movie">
-				<p class="p-cd">2008</p>
+				<p class="p-cd" style="margin-top: 15px;">2008</p>
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
@@ -201,7 +214,7 @@
 
 		<div class="cd-timeline-block">
 			<div class="cd-timeline-img cd-picture">
-				<p class="p-cd">2009</p>
+				<p class="p-cd" style="margin-top: 15px;">2009</p>
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
@@ -212,7 +225,7 @@
 
 		<div class="cd-timeline-block">
 			<div class="cd-timeline-img cd-location">
-				<p class="p-cd">2010</p>
+				<p class="p-cd" style="margin-top: 15px;">2010</p>
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
@@ -223,7 +236,7 @@
 
 		<div class="cd-timeline-block">
 			<div class="cd-timeline-img cd-location">
-				<p class="p-cd">2011</p>
+				<p class="p-cd" style="margin-top: 15px;">2011</p>
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
@@ -235,7 +248,7 @@
 
 		<div class="cd-timeline-block">
 			<div class="cd-timeline-img cd-movie">
-				<p class="p-cd">2012</p>
+				<p class="p-cd" style="margin-top: 15px;">2012</p>
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
@@ -246,7 +259,7 @@
 		
 		<div class="cd-timeline-block">
 			<div class="cd-timeline-img cd-location">
-				<p class="p-cd">2013</p>
+				<p class="p-cd" style="margin-top: 15px;">2013</p>
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
@@ -263,7 +276,7 @@
 		
 	</section> 
 		<img style="margin-left:28vw;" src="img/linea-tiempo-3-01.png" />
-		<h2  style="margin-left:16vw;color:#00173B;"><?php echo Textos::model()->GetText(379); ?></h2>
+		<h2  style="text-align:center;color:#00173B;"><?php echo Textos::model()->GetText(379); ?></h2>
 		
 		</div>
 	</div>

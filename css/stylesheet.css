@@ -5107,6 +5107,80 @@ figure.snip1156:hover .salud-ambiental{
 		padding-left: 2%;
 	}
 	
+	.container-anios-linea-tiempo{
+		margin: auto;
+		text-align: center;
+	}
+	
+	.container-anios-linea-tiempo div{
+		background: #011E49;
+		width: 100px;
+		height: 100px;
+		border-radius: 100px;
+		margin: auto;
+	}
+	
+	.container-anios-linea-tiempo div p{
+		text-align: center;
+		padding-top: 35px;
+		color: white;
+		font-weight: 700;
+		letter-spacing: 1px;
+		font-size: 25px;
+	}
+	
+	.nace-linea-tiempo{
+		display:inline-block;    
+		font-weight: 700;    
+		padding-top: 10px;
+	}
+	
+	.bago-linea-tiempo{
+		display:inline-block;
+		font-weight: 700;
+		color: #011E49;
+	}
+	
+	
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+.h2-cd {
+    color: #B2B2B2;
+    font-weight: 700;
+    font-family: 'arialregular';
+    font-size:18px;
+    margin-top: -4%;
+}
+	.cd-timeline-content .cd-date{
+		visibility:hidden;
+	}
+	
+}
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 736px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+.h2-cd {
+    color: #B2B2B2;
+    font-weight: 700;
+    font-family: 'arialregular';
+    font-size:18px;
+    margin-top: -4%;
+}
+
+	.cd-timeline-content .cd-date{
+		display:none;
+	}
+
+}
+
+
+
+
 @media screen and (max-width: 1024px) {
 	.aftosa-fechas-container .div-años-aftosa:nth-child(1),.aftosa-fechas-container .div-años-aftosa:nth-child(3),.aftosa-fechas-container .div-años-aftosa:nth-child(5){
 		margin-top:0;
