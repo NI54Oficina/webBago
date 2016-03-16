@@ -1328,8 +1328,7 @@
 
 
 		<!------------------------------------------------------------------ SECCION 7: CONTACTO ------------------------------------------------------------------>
-		<section class="special" data-scrollax-parent="true" style="min-height:100vh;width:100%;text-align:center;padding-bottom:30px;display:none;"   id="back-rrhh" >
-	
+		<section class="special" data-scrollax-parent="true" style="min-height:100vh;width:100%;text-align:center;padding-bottom:30px;"   id="back-rrhh" >
 			<div id="contenido" style="display:inline-block;text-align:center;">
 				
 				<!-- ////////// TITULO ////////////// -->
