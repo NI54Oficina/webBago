@@ -1,6 +1,7 @@
 <div>
 			<div class="header-layout-aftosa  col-lg-12 col-md-12 col-sm-12 col-xs-12">
-				<h1 class="titulo-layout-quienes">Rse- sustentabilidad</h1>
+				<h1 class="titulo-layout-quienes"><?php echo Textos::model()->GetText(16
+				); ?></h1>
 			</div>
 </div>
 	
@@ -11,7 +12,7 @@
 		<div class="tabla-aftosa col-lg-2 col-md-2 col-sm-2 col-xs-2 hidden-xs hidden-sm" style="margin-left:-180px;">
 		<div  class="tr" style="text-shadow:none;">
 			<div style="margin-left:-90px;">
-				<h2 class="h2-aftosa" style="padding-right:15%;">Institucional <br /><br /><br /><br /><br /></h2>
+				<h2 class="h2-aftosa" style="padding-right:15%;"><?php echo Textos::model()->GetText(347); ?> <br /><br /><br /><br /><br /></h2>
 			</div>
 			<div style="margin-left:-180px;">
 				<p class="fundaciones" >Fundaciones con  las que colaboramos:</p>
@@ -31,29 +32,28 @@
 		<div  class="tr" style="text-shadow:none;">
 			
 			<div  class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-				<h2 class="h2-aftosa hidden-md hidden-lg" style="">Institucional <br /><br /><br /></h2>
-					<h3 class="h3-rse">Responsabilidad Social Empresaria</h3>
-						<p>Somos una empresa que busca liderar la evolución de la  salud animal siempre integrada a las necesidades del ser humano. Nos  comprometemos con la realidad de las comunidades de los países donde actuamos y aportamos nuestros mejores recursos para desarrollar soluciones productivas sustentables. </p>
+				<h2 class="h2-aftosa hidden-md hidden-lg" style=""><?php echo Textos::model()->GetText(347); ?><br /><br /><br /></h2>
+					<h3 class="h3-rse"><?php echo Textos::model()->GetText(63); ?></h3>
+						<p><?php echo Textos::model()->GetText(64); ?> </p>
 				
 					
 				
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hidden-xs hidden-sm linea-rse" style="margin-top:7%;" > </div>
-				<h4  class="h3-rse" style="display:inline-block;">Gestión responsable y comprometida</h4>
+				<h4  class="h3-rse" style="display:inline-block;"><?php echo Textos::model()->GetText(65); ?></h4>
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hidden-xs hidden-sm linea-rse"> </div>
-				<p style="margin-top:3%;"><strong>Nuestro rol social en emergencias:</strong> Las emergencias sanitarias en los países ponen en riesgo no solo la vida de los animales sino también la sustentabilidad económica y productiva de  sus habitantes.  En 2001, Biogénesis Bagó focalizó sus esfuerzos para contribuir con todas las dosis de vacunas que fueron necesarias para controlar un brote de Fiebre Aftosa que puso en peligro el destino de la producción ganadera en la Argentina. Somos conscientes del valor social  que puede aportar nuestra compañía en momentos críticos. Asumimos la responsabilidad para contribuir al mantenimiento del status de la región, clave para el desarrollo socioeconómico de los países de América Latina. </p>
+				<p style="margin-top:3%;"><?php echo Textos::model()->GetText(66); ?> </p>
                 
-                <p style="margin-top:3%;"><strong>Cuidado del medio ambiente:</strong> Abordamos el proceso de producción con una mirada integral hacia el cuidado del  medio ambiente. La certificaciones de calidad de nuestras plantas y productos con normas ISO 9001, 14.001, BPM (Buenas Prácticas de Manufactura) optimizan toda la gestión. Además, tenemos un  consumo responsable de los recursos como por ejemplo reciclamos y reutilizamos el agua</p>
+                <p style="margin-top:3%;"><?php echo Textos::model()->GetText(67); ?></p>
 
 				
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hidden-xs hidden-sm linea-rse" style="margin-top:7%;" > </div>
-				<h4  class="h3-rse" style="display:inline-block;">Vínculos cercanos con la comunidad</h4>
+				<h4  class="h3-rse" style="display:inline-block;"><?php echo Textos::model()->GetText(68); ?></h4>
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hidden-xs hidden-sm linea-rse"> </div>
-				<p style="margin-top:3%;"><strong>Encuentros Biosolidarios:</strong> Desde 2002 organizamos encuentros solidarios en distintas localidades de Argentina, Uruguay y Paraguay con el fin de responder a necesidades concretas de instituciones relacionadas a la salud y a la educación. 
-Para esto buscamos un socio solidario, que nos proponga a quién y dónde ayudar. Una vez determinado el proyecto, lo ponemos en valor y se transforma en el objetivo del evento Biosolidario. Durante una cena show, financiada y organizada integralmente por Biogénesis Bagó, buscamos reunir el dinero necesario. Todo lo recaudado se destina a la necesidad de la institución, no en dinero, sino materializando la compra del insumo, equipamiento o realizando una obra determinada. En 24 eventos hemos recaudado más de usd 1.500.000 y cumplido con los objetivos establecidos junto a nuestros socios solidarios.  </p>
+				<p style="margin-top:3%;"><?php echo Textos::model()->GetText(69); ?></p>
 
 				
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hidden-xs hidden-sm linea-rse" style="margin-top:7%;" > </div>
-				<h4  class="h3-rse" style="display:inline-block;">Salud, educación y desarrollo humano</h4>
+				<h4  class="h3-rse" style="display:inline-block;"><?php echo Textos::model()->GetText(71); ?></h4>
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hidden-xs hidden-sm linea-rse"> </div>
 				<p style="margin-top:3%;">
                 

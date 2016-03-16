@@ -12,7 +12,7 @@
 	<div class="tabla-aftosa col-lg-2 col-md-2 col-sm-2 col-xs-2 hidden-xs hidden-sm" >
 		<div  class="tr">
 			<div>
-				<h2 class="h2-aftosa" style="text-shadow: none;">Institucional <br /><br /><br /><br /><br /></h2>
+				<h2 class="h2-aftosa" style="text-shadow: none;"><?php echo Textos::model()->GetText(347); ?> <br /><br /><br /><br /><br /></h2>
 			</div>
 
 		</div>

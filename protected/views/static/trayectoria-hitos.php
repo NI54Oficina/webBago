@@ -1,6 +1,6 @@
 <section>
 			<div class="header-layout-aftosa  col-lg-12 col-md-12 col-sm-12 col-xs-12">
-				<h1 class="titulo-layout-quienes">Trayectoria-Hitos</h1>
+				<h1 class="titulo-layout-quienes"><?php echo Textos::model()->GetText(12); ?></h1>
 			</div>
 	</section>
 	
