@@ -77,7 +77,7 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 <div  class="tabla-aftosa col-lg-11 col-md-11 col-sm-11 col-xs-11" style="margin-top:10%;margin-bottom:20vh;text-align:center;display:inline-block;float:initial;">
 
 
-<h1 class="vademecum"> <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/punto-<?php echo $normalizado; ?>.png" />Vademécum<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/punto-<?php echo $normalizado; ?>.png" /></h1>
+<h1 class="vademecum"> <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/punto-<?php echo $normalizado; ?>.png" /><?php echo Textos::model()->GetText(348); ?><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/punto-<?php echo $normalizado; ?>.png" /></h1>
 <p  style="text-align:center;border-bottom:1px solid #0082C8;width:3%;margin:auto;margin-top:0%;"></p>
 <h2 class="titulo-vad titulo-<?php echo $normalizado; ?>"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/gota-<?php echo $normalizado; ?>.png"  /><?php echo $seccion->nombre; ?></h2>
 
