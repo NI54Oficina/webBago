@@ -1,7 +1,12 @@
 <img id="logo-bago-mobile" class="hidden-lg hidden-md col-sm-12 col-xs-12" src="/webBago/img/logo-bago.png" style="opacity:0;">
 			<div class="header-layout-aftosa col-lg-12 col-md-12 col-sm-12 col-xs-12">
+<<<<<<< HEAD
 				<div style="width:100%;position:absolute;"><h1 class="titulo-layout-aftosa" style=""><?php echo Textos::model()->GetText(12); ?></h1></div>
 				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/aftosa-header.png" style="width:100vw;" />	
+=======
+				<div style="width:100%;position:absolute;"><h1 class="titulo-layout-aftosa" style="">Trayectoria - hitos</h1></div>
+				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/header-trayectoria.png" style="width:100vw;" />	
+>>>>>>> origin/master
 			</div>
 	
 

@@ -1,21 +1,17 @@
-<div>
-			<div class="header-layout-aftosa  col-lg-12 col-md-12 col-sm-12 col-xs-12">
-				<h1 class="titulo-layout-quienes"><?php echo Textos::model()->GetText(16
-				); ?></h1>
+<img id="logo-bago-mobile" class="hidden-lg hidden-md col-sm-12 col-xs-12" src="/webBago/img/logo-bago.png" style="opacity:0;">
+			<div class="header-layout-aftosa col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div style="width:100%;position:absolute;"><h1 class="titulo-layout-aftosa" style="">RSE</h1></div>
+				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/aftosa-header.png" style="width:100vw;" />	
 			</div>
-</div>
 	
-		
-	<?php include('widget.php'); ?>
-	<div class=" col-lg-8 col-md-8 col-sm-11 col-xs-11  div-texto-aftosa-2 row ">
 	
-		<div class="tabla-aftosa col-lg-2 col-md-2 col-sm-2 col-xs-2 hidden-xs hidden-sm" style="margin-left:-180px;">
-		<div  class="tr" style="text-shadow:none;">
-			<div style="margin-left:-90px;">
-				<h2 class="h2-aftosa" style="padding-right:15%;"><?php echo Textos::model()->GetText(347); ?> <br /><br /><br /><br /><br /></h2>
-			</div>
-			<div style="margin-left:-180px;">
-				<p class="fundaciones" >Fundaciones con  las que colaboramos:</p>
+	<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+	<div class="side-title">
+		<div style="display:inline-block;">
+		<h2  class="h2-aftosa">Institucional</h2>	
+		<div style="width:50%;height:1px;display:inline-block;border-top:1px solid black;"></div>
+		</div>
+		<p class="fundaciones" >Fundaciones con  las que colaboramos:</p>
 				<div><img style="width:90%;" src="img/rse-prosaia.png"  /></div>
 				<div><img style="width:97%;" src="img/rse-garrahan.png"  /></div>
 				<div><img style="width:100%;" src="img/rse-mundo-sano.png"  /></div>
@@ -23,15 +19,15 @@
 				<div><img style="width:;" src="img/rse-solidagro.png"  /></div>
 				<div><img style="width:;" src="img/rse-fernandez.png"  /></div>
 			</div>
-		</div>
-		
+	</div>
 	</div>
 	
 	
-	<div class="tabla-aftosa col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align:left;">
-		<div  class="tr" style="text-shadow:none;">
+<div class="div-texto-aftosa col-lg-5 col-md-5 col-sm-12 col-xs-12" style="text-align: left;">
+	
+	<div class="tabla-aftosa col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			
-			<div  class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<div  class="tr  col-lg-12 col-md-12 col-sm-12 col-xs-12 inner-text" style="text-shadow:none;padding-top:0;">			
 				<h2 class="h2-aftosa hidden-md hidden-lg" style=""><?php echo Textos::model()->GetText(347); ?><br /><br /><br /></h2>
 					<h3 class="h3-rse"><?php echo Textos::model()->GetText(63); ?></h3>
 						<p><?php echo Textos::model()->GetText(64); ?> </p>
@@ -200,19 +196,9 @@
 				<!--PC-->
 				
 				
-				<!--MOBILE-->
-				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hidden-md hidden-lg" style="margin-top:3%; font-size: 30px;">
-					<p style="margin-top:2%;" class="mision-li  col-lg-4 col-md-4 col-sm-12 col-xs-12"><a href=""><img   src="img/rse-prosaia.png"  /></a></p>
-					<p style="margin-top:2%;" class="mision-li  col-lg-4 col-md-4 col-sm-12 col-xs-12"><a href=""><img   src="img/rse-misiones-rurales.png"  /></a></p>
-					<p style="margin-top:2%;" class="mision-li col-lg-4 col-md-4  col-sm-12 col-xs-12"><a href=""><img   src="img/rse-garrahan.png"  /></a></p>
-					<p style="margin-top:2%;" class="mision-li  col-lg-4 col-md-4 col-sm-12 col-xs-12 "><a href=""><img  src="img/rse-solidagro.png"  /></a></p>
-					<p style="margin-top:2%;" class="mision-li  col-lg-4 col-md-4 col-sm-12 col-xs-12"><a href=""><img   src="img/rse-mundo-sano.png"  /></a></p>
-					<p style="margin-top:2%;" class="mision-li col-lg-4 col-md-4  col-sm-12 col-xs-12"><a href=""><img   src="img/rse-fernandez.png"  /></a></p>
-				</div>
-				
 			</div>
 		</div>
 	</div>
 	
 	
-	</div>
+<?php include('widget.php'); ?>
