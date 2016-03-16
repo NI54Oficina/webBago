@@ -7,11 +7,11 @@
 	
 <div class="div-texto-aftosa col-lg-7 col-md-7 col-sm-12 col-xs-12 col-lg-offset-1" style="text-align: left;">
 
-	<div class="tabla-aftosa col-lg-12 col-md-12 col-sm-12 col-xs-12">
+	<div class="tabla-aftosa col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-top:0;">
 	
 	<div  class="tr  col-lg-12 col-md-12 col-sm-12 col-xs-12 inner-text" style="text-shadow:none;padding-top:0;margin-bottom:3%;">	
 		
-		<h2 class="h2-aftosa" style="text-decoration:none; font-weight:700; font-size:25px; margin-bottom: 27px;margin-top: 0;width:100%">Tour Biogenesis 360 °</h2>
+		<h2 class="h2-aftosa" style="text-decoration:none; font-weight:700; font-size:25px; margin-bottom: 27px;margin-top: 0;width:100%;display:block;">Tour Biogenesis 360 °</h2>
 		
 		
 	
