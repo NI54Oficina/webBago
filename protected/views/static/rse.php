@@ -49,7 +49,7 @@
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hidden-xs hidden-sm linea-rse" style="margin-top:7%;" > </div>
 				<h4  class="h3-rse" style="display:inline-block;"><?php echo Textos::model()->GetText(68); ?></h4>
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hidden-xs hidden-sm linea-rse"> </div>
-				<p style="margin-top:3%;"><?php echo Textos::model()->GetText(69); ?></p>
+				<p style="margin-top:3%;"><?php echo Textos::model()->GetText(69); ?><?php echo Textos::model()->GetText(70); ?></p>
 
 				
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hidden-xs hidden-sm linea-rse" style="margin-top:7%;" > </div>
@@ -57,11 +57,11 @@
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hidden-xs hidden-sm linea-rse"> </div>
 				<p style="margin-top:3%;">
                 
-                <p><img src="img/icono-bullet.png"  style="display:inline-block;" /> Mantenemos una alianza de trabajo  con fundaciones referentes en salud humana y animal: <strong>Fundación Mundo Sano, Prosaia y el Hospital Fernández</strong></p>
+                <p><img src="img/icono-bullet.png"  style="display:inline-block;" /> <?php echo Textos::model()->GetText(72); ?></p>
                 
-                <p><img src="img/icono-bullet.png"  style="display:inline-block;" /> Acompañamos  el desarrollo de las comunidades y escuelas rurales apoyando la acción de <strong>Misiones Rurales</strong> en más de 600 establecimientos. A través de los Encuentros Biosolidarios y campañas específicas, en las que también se involucran nuestros colaboradores, nos vinculamos con otras entidades con necesidades concretas de equipamiento o  materiales. </strong></p>
+                <p><img src="img/icono-bullet.png"  style="display:inline-block;" /> <?php echo Textos::model()->GetText(73); ?></p>
                 
-                <p><img src="img/icono-bullet.png"  style="display:inline-block;" /> Trabajamos con las comunidades cercanas a nuestras  Plantas de producción en Argentina  para generar vínculos estables y duraderos. Desarrollamos especialmente actividades de apoyo en escuelas y comedores.</strong></p>
+                <p><img src="img/icono-bullet.png"  style="display:inline-block;" /> <?php echo Textos::model()->GetText(74); ?></p>
              
                 
                  </p>
