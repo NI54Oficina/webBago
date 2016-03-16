@@ -113,15 +113,15 @@
 			<li class="li-nav dropdown"><a  href="#" class="a-nav dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Institucional <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/flecha-menu.png" /> </a>
 				
 				<ul class="dropdown-menu dropdown-menu-right">
-						<img  id="flecha-submenu" "src="<?php echo Yii::app()->request->baseUrl; ?>/img/flecha-submenu.png" />
-							<li><a class="a-sub" href="">Quiénes somos</a></li>
-							<li><a class="a-sub" href="">Misión, Visión, Valores</a></li>
-							<li><a class="a-sub" href="">Lucha contra aftosa</a></li>
-							<li><a class="a-sub" href="">Trayectoria</a></li>
-							<li><a class="a-sub" href="">Nuestras plantas</a></li>
-							<li><a class="a-sub" href="">Rse</a></li>
-							<li><a class="a-sub" href="">Info para proveedores</a></li>
-							<li><a class="a-sub" href="">Prensa</a></li>
+						<img  id="flecha-submenu" src="<?php echo Yii::app()->request->baseUrl; ?>/img/flecha-submenu.png" />
+							<li><a class="a-sub"  href="<?php echo Yii::app()->getBaseUrl(true); ?>/quienes-somos">Quiénes somos</a></li>
+							<li><a class="a-sub"  href="<?php echo Yii::app()->getBaseUrl(true); ?>/mision-vision">Misión, Visión, Valores</a></li>
+							<li><a class="a-sub" 	href="<?php echo Yii::app()->getBaseUrl(true); ?>/lucha-contra-aftosa">Lucha contra aftosa</a></li>
+							<li><a class="a-sub"  href="<?php echo Yii::app()->getBaseUrl(true); ?>/trayectoria-hitos">Trayectoria</a></li>
+							<li><a class="a-sub"  href="<?php echo Yii::app()->getBaseUrl(true); ?>/nuestras-plantas">Nuestras plantas</a></li>
+							<li><a class="a-sub" 	href="<?php echo Yii::app()->getBaseUrl(true); ?>/rse">Rse</a></li>
+							<li><a class="a-sub" 	href="<?php echo Yii::app()->getBaseUrl(true); ?>/proveedores">Info para proveedores</a></li>
+							<li><a class="a-sub" 	href="<?php echo Yii::app()->getBaseUrl(true); ?>/prensa">Prensa</a></li>
 				</ul>
 				
 			</li>
