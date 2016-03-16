@@ -1,6 +1,6 @@
 <img id="logo-bago-mobile" class="hidden-lg hidden-md col-sm-12 col-xs-12" src="/webBago/img/logo-bago.png" style="opacity:0;">
 			<div class="header-layout-aftosa col-lg-12 col-md-12 col-sm-12 col-xs-12">
-				<div style="width:100%;position:absolute;"><h1 class="titulo-layout-aftosa" style="">Quiénes somos</h1></div>
+				<div style="width:100%;position:absolute;"><h1 class="titulo-layout-aftosa" style=""><?php echo Textos::model()->GetText(6); ?></h1></div>
 				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/quienes-somos-header.png" style="width:100vw;" />	
 			</div>
 	
@@ -11,7 +11,7 @@
 	<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 	<div class="side-title">
 		<div style="display:inline-block;">
-		<h2  class="h2-aftosa">Institucional</h2>	
+		<h2  class="h2-aftosa"><?php echo Textos::model()->GetText(347); ?></h2>	
 		<div style="width:50%;height:1px;display:inline-block;border-top:1px solid black;"></div>
 		</div>
 	</div>
@@ -33,18 +33,16 @@
 			<div class="tabla-aftosa col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			<!--   CONTENIDO -->
 		<div  class="tr  col-lg-12 col-md-12 col-sm-12 col-xs-12 inner-text" style="text-shadow:none;padding-top:0;">			
-			<p>Nos anima un <strong>espíritu innovador</strong>, comprometido con la constante <strong>evolución de la salud animal</strong>. Impulsamos tecnologías para la expresión del <strong>máximo potencial de los rodeos de carne y leche </strong>, con la mirada puesta en el acelerado crecimiento de la población y en los alimentos de calidad que el mundo necesita. <br />
-			Nos esforzamos por acercar los adelantos al productor, acompañando el camino de su propia evolución hacia la <strong>Frontera Productiva</strong>.  
+			<p><?php echo Textos::model()->GetText(27); ?> <?php echo Textos::model()->GetText(28); ?> <br/>
+			<?php echo Textos::model()->GetText(29); ?>  
 			</p>
 
-			<p style="margin-top:3%;">En <strong>Biogénesis Bagó </strong> investigamos, desarrollamos y comercializamos productos biotecnológicos y servicios veterinarios que brindan soluciones efectivas a las principales enfermedades que impactan en la sanidad y productividad de los rodeos en el mundo. <br />
-			Con una trayectoria en la industria veterinaria iniciada en 1934,  hoy nos posicionamos como una compañía líder en el mercado de grandes animales de América Latina. A nuestra  casa central ubicada en Argentina, se suman las  filiales en Brasil, Centroamérica, México, Bolivia y Uruguay y una fuerte presencia comercial en otros países de la región. <br />
-			En 2016 iniciamos una nueva etapa en la internacionalización de nuestras tecnologías, con la habilitación de una planta de producción en China, junto HILE Biotechnology, para la producción exclusiva de vacuna contra la Fiebre Aftosa. 
+			<p style="margin-top:3%;"><?php echo Textos::model()->GetText(30); ?><br />
+			<?php echo Textos::model()->GetText(31); ?> <br />
+			<?php echo Textos::model()->GetText(32); ?>
 			</p>
 				
-			<p style="margin-top:3%;">Actualmente Biogénesis Bagó se convirtió en la mayor empresa latinoamericana del sector para grandes animales y el mayor proveedor para las campañas regionales de Lucha, Control y Erradicación de la fiebre aftosa en el continente, fruto del esfuerzo e inversión en tecnología para la prevención. </br>
-			Sus productos son reconocidos a nivel mundial por su calidad y aporte estratégico en el control y erradicación de las enfermedades de mayor impacto en los principales estados productores de alimentos de origen animal.<br />
-			Actualmente, la compañía cuenta con oficinas en Brasil, Centroamérica, México, Bolivia y Uruguay, y su casa matriz se encuentra situada en Argentina.
+			<p style="margin-top:3%;"><?php echo Textos::model()->GetText(350); ?>
 			</p>
 			
 		</div>
@@ -53,10 +51,10 @@
 		<div  class="tr  col-lg-12 col-md-12 col-sm-12 col-xs-12 inner-text" style="text-shadow:none;padding-top:0;">			
            <!-- TITIULO SUBSECCIÓN -->
 			
-           <h2 class="h2-aftosa">Vanguardia en el desarrollo de soluciones</h2>
+           <h2 class="h2-aftosa"><?php echo Textos::model()->GetText(38); ?></h2>
            
 		   <!-- CONTENIDO -->
-           <p style="margin-top:3%;">Nos proponemos estar <strong>a la vanguardia de las soluciones</strong> que se requieren en cada zona ganadera de los países donde estamos presentes. Para el abordaje de los problemas sanitarios de cada región, trabajamos en red con instituciones científicas y técnicas  públicas y privadas y nos nutrimos de nuestro servicio técnico, en contacto diario con el quehacer de los médicos veterinarios y productores. </p>
+           <p style="margin-top:3%;"><?php echo Textos::model()->GetText(39); ?></p>
            
 		   <!-- CUADRO -->
            <div class="cuadro" style="border:#999 solid 1px; padding-left:5px; line-height:7px;margin-top: 5%; margin-bottom: 10%;"">
