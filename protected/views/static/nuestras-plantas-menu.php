@@ -3,15 +3,7 @@
 				<div style="width:100%;position:absolute;"><h1 class="titulo-layout-aftosa" style=""><?php echo Textos::model()->GetText(14); ?></h1></div>
 				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/header-plantas.png" style="width:100vw;" />	
 			</div>
-	
-	<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-	<div class="side-title">
-		<div style="display:inline-block;">
-		<h2  class="h2-aftosa">Institucional</h2>	
-		<div style="width:50%;height:1px;display:inline-block;border-top:1px solid black;"></div>
-		</div>
-	</div>
-	</div>
+
 
 	
 <div class="div-texto-aftosa col-lg-5 col-md-5 col-sm-12 col-xs-12" style="text-align: left;">
