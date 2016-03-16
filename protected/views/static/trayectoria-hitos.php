@@ -1,12 +1,24 @@
-<section>
-			<div class="header-layout-aftosa  col-lg-12 col-md-12 col-sm-12 col-xs-12">
-				<h1 class="titulo-layout-quienes"><?php echo Textos::model()->GetText(12); ?></h1>
+<img id="logo-bago-mobile" class="hidden-lg hidden-md col-sm-12 col-xs-12" src="/webBago/img/logo-bago.png" style="opacity:0;">
+			<div class="header-layout-aftosa col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div style="width:100%;position:absolute;"><h1 class="titulo-layout-aftosa" style="">Trayectoria - hitos</h1></div>
+				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/aftosa-header.png" style="width:100vw;" />	
 			</div>
-	</section>
 	
-		
-	<?php include('widget.php'); ?>
-	<div class=" col-lg-8 col-md-8 col-sm-12 col-xs-12  row " style="margin-left:6%;">
+
+	<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+	<div class="side-title">
+		<div style="display:inline-block;">
+		<h2  class="h2-aftosa">Institucional</h2>	
+		<div style="width:50%;height:1px;display:inline-block;border-top:1px solid black;"></div>
+		</div>
+	</div>
+	</div>
+	
+
+<div class="div-texto-aftosa col-lg-5 col-md-5 col-sm-12 col-xs-12" style="text-align: left;">
+	
+	<div class="tabla-aftosa col-lg-12 col-md-12 col-sm-12 col-xs-12">
+	
 			<img style="margin-left:28vw;" src="img/linea-tiempo-1-01.png" />
 		<section id="cd-timeline" class="cd-container">
 
@@ -250,7 +262,9 @@
 	</section> 
 		<img style="margin-left:28vw;" src="img/linea-tiempo-3-01.png" />
 		<h2  style="margin-left:16vw;color:#00173B;">Continúa impulsando la evolución de la salud animal</h2>
+		
+		</div>
 	</div>
 	
-	
+<?php include('widget.php'); ?>
 <script src="js/main.js"></script>

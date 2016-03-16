@@ -121,6 +121,7 @@
 							<li><a class="a-sub" href="">Nuestras plantas</a></li>
 							<li><a class="a-sub" href="">Rse</a></li>
 							<li><a class="a-sub" href="">Info para proveedores</a></li>
+							<li><a class="a-sub" href="">Prensa</a></li>
 				</ul>
 				
 			</li>
