@@ -2,7 +2,7 @@
 <!---------------------------------------------------------------------------------------------      HEADER     --------------------------------------------------------------------------------------------->
 
 
-<header class="main col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="width:100%">
+<header class="main col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="width:100%;padding-bottom: 10px;">
 		<!--+++++ LOGO BAGÓ MOBILE +++++ -->
 		<img id="logo-bago-mobile" class="col-lg-2 col-md-2 col-sm-12 col-xs-12" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo-bago.png" />		
 		
