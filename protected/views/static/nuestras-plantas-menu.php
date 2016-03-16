@@ -21,7 +21,7 @@
 	<div  class="tr  col-lg-12 col-md-12 col-sm-12 col-xs-12 inner-text" style="text-shadow:none;padding-top:0;margin-bottom:3%;">	
 	<h2 class="h2-aftosa" style="text-decoration:none; font-weight:700; font-size:25px;">Tour Biogenesis 360 °</h2>
 	
-		<div  class="tr  col-lg-12 col-md-12 col-sm-12 col-xs-12 inner-text" style="text-shadow:none;padding-top:0;">	
+		<div  class="tr  col-lg-12 col-md-12 col-sm-12 col-xs-12 inner-text" style="text-shadow:none;padding-top:0;margin-bottom:3%;">	
 			<a href="">
 				<img  class="col-lg-12 col-md-12 col-sm-12 col-xs-12" src="img/imagen-360-exterior.png"  />
 			</a>
