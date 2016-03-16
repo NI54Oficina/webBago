@@ -1,10 +1,10 @@
 <img id="logo-bago-mobile" class="hidden-lg hidden-md col-sm-12 col-xs-12" src="/webBago/img/logo-bago.png" style="opacity:0;">
 			<div class="header-layout-aftosa col-lg-12 col-md-12 col-sm-12 col-xs-12">
 				<div style="width:100%;position:absolute;"><h1 class="titulo-layout-aftosa" style=""><?php echo Textos::model()->GetText(14); ?></h1></div>
-				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/imagenes-arriba-03.png" style="width:100vw;" />	
+				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/header-plantas.png" style="width:100vw;" />	
 			</div>
 	
-	<div class="col-lg-10 col-md-10 col-sm-11 col-xs-11 row img-plantas">
+	<div class="col-lg-7 col-md-7 col-sm-11 col-xs-11 row img-plantas" style="text-align:right">
 		<a href="nuestras-plantas-menu.php">
 			<object width="700" height="500" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0">
 				<param name="SRC" value="1080/Exterior/exterior_1080_out.swf">
@@ -14,7 +14,9 @@
 			</object>
 		</a>
 	</div>
-
+	<?php include('widget.php'); ?>
+	
+	<div class="col-lg-8 col-md-8">
 	<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 	<div class="side-title">
 		<div style="display:inline-block;">
@@ -108,7 +110,7 @@
 		</div>
 
 </div>
+</div>
 
 
 
-<?php include('widget.php'); ?>

@@ -73,7 +73,7 @@ $auxId=0;
 ?>
 <style>body{background-color:white;}</style>
 <div style="width:100%;">
-<div  class="tabla-aftosa col-lg-11 col-md-11 col-sm-12 col-xs-12" style="margin-bottom:25vh;">
+<div  class="tabla-aftosa col-lg-11 col-md-11 col-sm-12 col-xs-12" style="margin-bottom:25vh;"> 
 
 <div style="margin-top:12%;" class="hidden-lg hidden-md">
 <h1 class="vademecum"> <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/punto-<?php echo $normalizado; ?>.png" /> <?php echo Textos::model()->GetText(348); ?> <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/punto-<?php echo $normalizado; ?>.png" /></h1>
@@ -96,8 +96,8 @@ $auxId=0;
 </div></a>
 
 
-<div  class=" col-lg-9 col-md-9 col-sm-12 col-xs-12" style="display:inline-block;text-align:center;">
-	<div style="width:90%;display:inline-block;">
+<div  class=" col-lg-9 col-md-9 col-sm-12 col-xs-12" style="display:inline-block;text-align:center;"  id="vademecum-loading">
+	<div style="width:90%;display:inline-block;overflow:hidden;">
 	<?php if(count($productos)==0){ ?>
 		<h5> <?php echo Textos::model()->GetText(349); ?></h5>
 	<?php } ?>
@@ -187,6 +187,7 @@ $auxId=0;
 		$(this).removeClass("hover");
 		}
 	);
+		$("#vademecum-loading").fadeIn();
 	</script>
 	
 </div>

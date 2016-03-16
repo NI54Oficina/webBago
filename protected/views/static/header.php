@@ -150,17 +150,17 @@
 					
 					<img id="flecha-submenu" src="<?php echo Yii::app()->request->baseUrl; ?>/img/flecha-submenu.png" />
 						
-						<li><a href="">Aftosa</a></li>
-						<li><a href="">Antibióticos</a></li>
-						<li><a href="">Antiparasitarios externos</a></li>
-						<li><a href="">Antiparasitarios internos</a></li>
-						<li><a href="">Biológicos</a></li>
-						<li><a href="">Endectocidas</a></li>
-						<li><a href="">Farmacéuticos</a></li>
-						<li><a href="">Nutrición</a></li>
-						<li><a href="">Reproductivos</a></li>
-						<li><a href="">Salud ambiental</a></li>	
-						<li><a href="">Vitaminas y minerales</a></li>
+						<li><a href="<?php echo Yii::app()->getBaseUrl(true); ?>/vademecum/id1">Aftosa</a></li>
+						<li><a href="<?php echo Yii::app()->getBaseUrl(true); ?>/vademecum/id6">Antibióticos</a></li>
+						<li><a href="<?php echo Yii::app()->getBaseUrl(true); ?>/vademecum/id4">Antiparasitarios externos</a></li>
+						<li><a href="<?php echo Yii::app()->getBaseUrl(true); ?>/vademecum/id3">Antiparasitarios internos</a></li>
+						<li><a href="<?php echo Yii::app()->getBaseUrl(true); ?>/vademecum/id2">Biológicos</a></li>
+						<li><a href="<?php echo Yii::app()->getBaseUrl(true); ?>/vademecum/id5">Endectocidas</a></li>
+						<li><a href="<?php echo Yii::app()->getBaseUrl(true); ?>/vademecum/id9">Farmacéuticos</a></li>
+						<li><a href="<?php echo Yii::app()->getBaseUrl(true); ?>/vademecum/id11">Nutrición</a></li>
+						<li><a href="<?php echo Yii::app()->getBaseUrl(true); ?>/vademecum/id7">Reproductivos</a></li>
+						<li><a href="<?php echo Yii::app()->getBaseUrl(true); ?>/vademecum/id10">Salud ambiental</a></li>	
+						<li><a href="<?php echo Yii::app()->getBaseUrl(true); ?>/vademecum/id8">Vitaminas y minerales</a></li>
 						
 				</ul>
 				
