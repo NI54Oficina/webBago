@@ -61,5 +61,18 @@
 	<!--CSS PROPIO-->
 		<link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/stylesheet.css"> <!-- general / interior pagina -->
 
-	
+		<script>
+		$(document).ready(function () {
+			console.log("asdas");
+			$("body").on("click",".a-sub",function(evt){
+				console.log("asdas");
+				if (evt.ctrlKey){
+					window.open($(this).attr("href"));
+				}else{
+					
+					window.location= $(this).attr("href");
+				}
+			});
+		});
+		</script>
 	<title>BAGÓ</title>
