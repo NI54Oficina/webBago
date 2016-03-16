@@ -48,7 +48,7 @@ return array(
 			'class'=>'ext.DbUrlManager.EDbUrlManager',
 			'connectionID'=>'db',
 			'rules'=>array(
-				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
+				'<pais>/<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				
 				'producto/<producto:[\w\/.-]+>'=>array(
 				  'producto/view',
@@ -64,7 +64,7 @@ return array(
 				
 				
 				
-				'seccion/<seccion:[\w\/.-]+>'=>array(
+				'<pais>/seccion/<seccion:[\w\/.-]+>'=>array(
 				  'seccion/view',
 				  'type'=>'db',
 				  
@@ -76,12 +76,12 @@ return array(
 				  ),
 				),
 				
-				'pais/<pais:[\w\/.-]+>'=>array(
-				  'pais/view',
+				'<pais>/pais/<p:[\w\/.-]+>'=>array(
+				  'p/view',
 				  'type'=>'db',
 				  
 				  'fields'=>array(
-					'pais'=>array(
+					'p'=>array(
 					  'table'=>'tbl_pais',
 					  'field'=>'url'
 					),
@@ -106,15 +106,15 @@ return array(
 				  'type'=>'db',
 				  
 				),
-				"/<data>"=>array(
+				"<pais>/<data>"=>array(
 					"web/get/"
 				),
-				"/<data>/<id>"=>array(
+				"<pais>/<data>/<id>"=>array(
 					"web/get/data/<data>/id/<id>"
 				),
 				
 				
-				"/"=>array(
+				"<pais>/"=>array(
 					"web/get/data/base"
 				),
 				

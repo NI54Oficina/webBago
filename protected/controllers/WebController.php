@@ -42,6 +42,7 @@ class WebController extends Controller
 	}
 
 	public function actionGet($data,$id=""){
+		
 		if($data!="base"){
 			//$this->layout="lay";
 		}
@@ -71,4 +72,11 @@ class WebController extends Controller
 			$this->renderPartial("//static/".$data,$model);
 		}
 	}
+	
+	protected function beforeAction($event)
+    {
+        $conf = new PaisChecker;
+        $conf->PaisCheck();
+        return true;
+    }
 }

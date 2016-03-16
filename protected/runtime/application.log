@@ -31118,3 +31118,1118 @@ Stack trace:
 REQUEST_URI=/webBago/vademecums/220.png
 HTTP_REFERER=http://localhost/webBago/vademecum/id2
 ---
+2016/03/16 20:08:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "quienes-somos/poyo".' in C:\wamp\www\webBago\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('quienes-somos/p...')
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/webBago/quienes-somos/poyo
+---
+2016/03/16 20:08:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "quienes-somos/poyo".' in C:\wamp\www\webBago\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('quienes-somos/p...')
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/webBago/quienes-somos/poyo
+---
+2016/03/16 20:17:26 [error] [exception.CException] exception 'CException' with message 'The URL pattern "<pais>/pais/<pais:[\w\/.-]+>" for route "pais/view" is not a valid regular expression.' in C:\wamp\www\webBago\yii\framework\web\CUrlManager.php:702
+Stack trace:
+#0 C:\wamp\www\webBago\protected\extensions\DbUrlManager\EDbUrlManager.php(216): CUrlRule->__construct(Array, '<pais>/pais/<pa...')
+#1 C:\wamp\www\webBago\protected\extensions\DbUrlManager\EDbUrlManager.php(175): EDbUrlRule->__construct(Array, '<pais>/pais/<pa...')
+#2 C:\wamp\www\webBago\yii\framework\web\CUrlManager.php(226): EDbUrlManager->createUrlRule(Array, '<pais>/pais/<pa...')
+#3 C:\wamp\www\webBago\yii\framework\web\CUrlManager.php(206): CUrlManager->processRules()
+#4 C:\wamp\www\webBago\yii\framework\base\CModule.php(394): CUrlManager->init()
+#5 C:\wamp\www\webBago\yii\framework\base\CApplication.php(530): CModule->getComponent('urlManager')
+#6 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(140): CApplication->getUrlManager()
+#7 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#8 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/webBago/ar/quienes-somos/
+---
+2016/03/16 20:17:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ar/quienes-somos/img/icono-bullet.png".' in C:\wamp\www\webBago\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('ar/quienes-somo...')
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/webBago/ar/quienes-somos/img/icono-bullet.png
+HTTP_REFERER=http://localhost/webBago/ar/quienes-somos/
+---
+2016/03/16 20:17:51 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/bower_components".' in C:\wamp\www\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\webBago\protected\controllers\WebController.php(68): CController->renderPartial('//static/bower_...', '')
+#1 [internal function]: WebController->actionGet('bower_component...', 'video.js')
+#2 C:\wamp\www\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\wamp\www\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get/data/bo...')
+#14 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/quienes-somos/bower_components/video.js
+HTTP_REFERER=http://localhost/webBago/quienes-somos/
+---
+2016/03/16 20:17:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "quienes-somos/bower_components/jquery-ui/ui/jquery-ui.js".' in C:\wamp\www\webBago\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('quienes-somos/b...')
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/webBago/quienes-somos/bower_components/jquery-ui/ui/jquery-ui.js
+HTTP_REFERER=http://localhost/webBago/quienes-somos/
+---
+2016/03/16 20:17:51 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/css".' in C:\wamp\www\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\webBago\protected\controllers\WebController.php(68): CController->renderPartial('//static/css', '')
+#1 [internal function]: WebController->actionGet('css', 'style.css')
+#2 C:\wamp\www\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\wamp\www\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get/data/cs...')
+#14 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/quienes-somos/css/style.css
+HTTP_REFERER=http://localhost/webBago/quienes-somos/
+---
+2016/03/16 20:17:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "quienes-somos/bower_components/BigVideo/css/bigvideo.css".' in C:\wamp\www\webBago\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('quienes-somos/b...')
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/webBago/quienes-somos/bower_components/BigVideo/css/bigvideo.css
+HTTP_REFERER=http://localhost/webBago/quienes-somos/
+---
+2016/03/16 20:17:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "quienes-somos/bower_components/modernizr/modernizr-2.5.3.min.js".' in C:\wamp\www\webBago\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('quienes-somos/b...')
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/webBago/quienes-somos/bower_components/modernizr/modernizr-2.5.3.min.js
+HTTP_REFERER=http://localhost/webBago/quienes-somos/
+---
+2016/03/16 20:17:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "quienes-somos/bower_components/jquery-ui/ui/minified/jquery-ui.min.js".' in C:\wamp\www\webBago\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('quienes-somos/b...')
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/webBago/quienes-somos/bower_components/jquery-ui/ui/minified/jquery-ui.min.js
+HTTP_REFERER=http://localhost/webBago/quienes-somos/
+---
+2016/03/16 20:17:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "quienes-somos/bower_components/BigVideo/lib/bigvideo.js".' in C:\wamp\www\webBago\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('quienes-somos/b...')
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/webBago/quienes-somos/bower_components/BigVideo/lib/bigvideo.js
+HTTP_REFERER=http://localhost/webBago/quienes-somos/
+---
+2016/03/16 20:17:51 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/js".' in C:\wamp\www\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\webBago\protected\controllers\WebController.php(68): CController->renderPartial('//static/js', '')
+#1 [internal function]: WebController->actionGet('js', 'jquery.rwdImage...')
+#2 C:\wamp\www\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\wamp\www\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get/data/js...')
+#14 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/quienes-somos/js/jquery.rwdImageMaps.js
+HTTP_REFERER=http://localhost/webBago/quienes-somos/
+---
+2016/03/16 20:17:52 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/js".' in C:\wamp\www\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\webBago\protected\controllers\WebController.php(68): CController->renderPartial('//static/js', '')
+#1 [internal function]: WebController->actionGet('js', 'jquery.rwdImage...')
+#2 C:\wamp\www\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\wamp\www\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get/data/js...')
+#14 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/quienes-somos/js/jquery.rwdImageMaps.min.js
+HTTP_REFERER=http://localhost/webBago/quienes-somos/
+---
+2016/03/16 20:17:52 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/js".' in C:\wamp\www\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\webBago\protected\controllers\WebController.php(68): CController->renderPartial('//static/js', '')
+#1 [internal function]: WebController->actionGet('js', 'jquery.tinycaro...')
+#2 C:\wamp\www\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\wamp\www\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get/data/js...')
+#14 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/quienes-somos/js/jquery.tinycarousel.min.js
+HTTP_REFERER=http://localhost/webBago/quienes-somos/
+---
+2016/03/16 20:17:52 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/js".' in C:\wamp\www\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\webBago\protected\controllers\WebController.php(68): CController->renderPartial('//static/js', '')
+#1 [internal function]: WebController->actionGet('js', 'jquery.tinycaro...')
+#2 C:\wamp\www\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\wamp\www\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get/data/js...')
+#14 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/quienes-somos/js/jquery.tinycarousel.js
+HTTP_REFERER=http://localhost/webBago/quienes-somos/
+---
+2016/03/16 20:17:52 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/js".' in C:\wamp\www\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\webBago\protected\controllers\WebController.php(68): CController->renderPartial('//static/js', '')
+#1 [internal function]: WebController->actionGet('js', 'jquery.boxloade...')
+#2 C:\wamp\www\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\wamp\www\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get/data/js...')
+#14 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/quienes-somos/js/jquery.boxloader.min.js
+HTTP_REFERER=http://localhost/webBago/quienes-somos/
+---
+2016/03/16 20:17:52 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/img".' in C:\wamp\www\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\webBago\protected\controllers\WebController.php(68): CController->renderPartial('//static/img', '')
+#1 [internal function]: WebController->actionGet('img', 'icono-fcbk.png')
+#2 C:\wamp\www\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\wamp\www\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get/data/im...')
+#14 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/quienes-somos/img/icono-fcbk.png
+HTTP_REFERER=http://localhost/webBago/quienes-somos/
+---
+2016/03/16 20:17:53 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/img".' in C:\wamp\www\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\webBago\protected\controllers\WebController.php(68): CController->renderPartial('//static/img', '')
+#1 [internal function]: WebController->actionGet('img', 'icono-ytb.png')
+#2 C:\wamp\www\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\wamp\www\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get/data/im...')
+#14 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/quienes-somos/img/icono-ytb.png
+HTTP_REFERER=http://localhost/webBago/quienes-somos/
+---
+2016/03/16 20:17:53 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/img".' in C:\wamp\www\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\webBago\protected\controllers\WebController.php(68): CController->renderPartial('//static/img', '')
+#1 [internal function]: WebController->actionGet('img', 'logo-blanco.png')
+#2 C:\wamp\www\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\wamp\www\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get/data/im...')
+#14 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/quienes-somos/img/logo-blanco.png
+HTTP_REFERER=http://localhost/webBago/quienes-somos/
+---
+2016/03/16 20:17:53 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/img".' in C:\wamp\www\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\webBago\protected\controllers\WebController.php(68): CController->renderPartial('//static/img', '')
+#1 [internal function]: WebController->actionGet('img', 'punto-home.png')
+#2 C:\wamp\www\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\wamp\www\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get/data/im...')
+#14 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/quienes-somos/img/punto-home.png
+HTTP_REFERER=http://localhost/webBago/quienes-somos/
+---
+2016/03/16 20:17:53 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/img".' in C:\wamp\www\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\webBago\protected\controllers\WebController.php(68): CController->renderPartial('//static/img', '')
+#1 [internal function]: WebController->actionGet('img', 'curva-arriba-ho...')
+#2 C:\wamp\www\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\wamp\www\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get/data/im...')
+#14 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/quienes-somos/img/curva-arriba-home.png
+HTTP_REFERER=http://localhost/webBago/quienes-somos/
+---
+2016/03/16 20:17:53 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/img".' in C:\wamp\www\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\webBago\protected\controllers\WebController.php(68): CController->renderPartial('//static/img', '')
+#1 [internal function]: WebController->actionGet('img', 'home-quienes.pn...')
+#2 C:\wamp\www\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\wamp\www\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get/data/im...')
+#14 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/quienes-somos/img/home-quienes.png
+HTTP_REFERER=http://localhost/webBago/quienes-somos/
+---
+2016/03/16 20:17:53 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/img".' in C:\wamp\www\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\webBago\protected\controllers\WebController.php(68): CController->renderPartial('//static/img', '')
+#1 [internal function]: WebController->actionGet('img', 'home-mision.png')
+#2 C:\wamp\www\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\wamp\www\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get/data/im...')
+#14 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/quienes-somos/img/home-mision.png
+HTTP_REFERER=http://localhost/webBago/quienes-somos/
+---
+2016/03/16 20:17:54 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/img".' in C:\wamp\www\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\webBago\protected\controllers\WebController.php(68): CController->renderPartial('//static/img', '')
+#1 [internal function]: WebController->actionGet('img', 'home-aftosa.png')
+#2 C:\wamp\www\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\wamp\www\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get/data/im...')
+#14 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/quienes-somos/img/home-aftosa.png
+HTTP_REFERER=http://localhost/webBago/quienes-somos/
+---
+2016/03/16 20:17:54 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/img".' in C:\wamp\www\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\webBago\protected\controllers\WebController.php(68): CController->renderPartial('//static/img', '')
+#1 [internal function]: WebController->actionGet('img', 'home-trayectori...')
+#2 C:\wamp\www\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\wamp\www\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get/data/im...')
+#14 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/quienes-somos/img/home-trayectoria.png
+HTTP_REFERER=http://localhost/webBago/quienes-somos/
+---
+2016/03/16 20:17:54 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/img".' in C:\wamp\www\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\webBago\protected\controllers\WebController.php(68): CController->renderPartial('//static/img', '')
+#1 [internal function]: WebController->actionGet('img', 'home-plantas.pn...')
+#2 C:\wamp\www\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\wamp\www\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get/data/im...')
+#14 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/quienes-somos/img/home-plantas.png
+HTTP_REFERER=http://localhost/webBago/quienes-somos/
+---
+2016/03/16 20:17:54 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/img".' in C:\wamp\www\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\webBago\protected\controllers\WebController.php(68): CController->renderPartial('//static/img', '')
+#1 [internal function]: WebController->actionGet('img', 'home-rse.png')
+#2 C:\wamp\www\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\wamp\www\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get/data/im...')
+#14 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/quienes-somos/img/home-rse.png
+HTTP_REFERER=http://localhost/webBago/quienes-somos/
+---
+2016/03/16 20:17:54 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/img".' in C:\wamp\www\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\webBago\protected\controllers\WebController.php(68): CController->renderPartial('//static/img', '')
+#1 [internal function]: WebController->actionGet('img', 'home-proveedore...')
+#2 C:\wamp\www\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\wamp\www\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get/data/im...')
+#14 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/quienes-somos/img/home-proveedores.png
+HTTP_REFERER=http://localhost/webBago/quienes-somos/
+---
+2016/03/16 20:17:54 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/img".' in C:\wamp\www\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\webBago\protected\controllers\WebController.php(68): CController->renderPartial('//static/img', '')
+#1 [internal function]: WebController->actionGet('img', 'home-prensa.png')
+#2 C:\wamp\www\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\wamp\www\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get/data/im...')
+#14 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/quienes-somos/img/home-prensa.png
+HTTP_REFERER=http://localhost/webBago/quienes-somos/
+---
+2016/03/16 20:17:54 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/img".' in C:\wamp\www\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\webBago\protected\controllers\WebController.php(68): CController->renderPartial('//static/img', '')
+#1 [internal function]: WebController->actionGet('img', 'curva-home-abaj...')
+#2 C:\wamp\www\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\wamp\www\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get/data/im...')
+#14 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/quienes-somos/img/curva-home-abajo.png
+HTTP_REFERER=http://localhost/webBago/quienes-somos/
+---
+2016/03/16 20:17:55 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/img".' in C:\wamp\www\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\webBago\protected\controllers\WebController.php(68): CController->renderPartial('//static/img', '')
+#1 [internal function]: WebController->actionGet('img', 'mapa-png.png')
+#2 C:\wamp\www\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\wamp\www\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get/data/im...')
+#14 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/quienes-somos/img/mapa-png.png
+HTTP_REFERER=http://localhost/webBago/quienes-somos/
+---
+2016/03/16 20:17:55 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/img".' in C:\wamp\www\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\webBago\protected\controllers\WebController.php(68): CController->renderPartial('//static/img', '')
+#1 [internal function]: WebController->actionGet('img', 'icn-casa-matriz...')
+#2 C:\wamp\www\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\wamp\www\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get/data/im...')
+#14 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/quienes-somos/img/icn-casa-matriz.png
+HTTP_REFERER=http://localhost/webBago/quienes-somos/
+---
+2016/03/16 20:17:55 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/img".' in C:\wamp\www\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\webBago\protected\controllers\WebController.php(68): CController->renderPartial('//static/img', '')
+#1 [internal function]: WebController->actionGet('img', 'icn-filiales.pn...')
+#2 C:\wamp\www\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\wamp\www\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get/data/im...')
+#14 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/quienes-somos/img/icn-filiales.png
+HTTP_REFERER=http://localhost/webBago/quienes-somos/
+---
+2016/03/16 20:17:55 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/img".' in C:\wamp\www\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\webBago\protected\controllers\WebController.php(68): CController->renderPartial('//static/img', '')
+#1 [internal function]: WebController->actionGet('img', 'icn-vacunas.png')
+#2 C:\wamp\www\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\wamp\www\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get/data/im...')
+#14 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/quienes-somos/img/icn-vacunas.png
+HTTP_REFERER=http://localhost/webBago/quienes-somos/
+---
+2016/03/16 20:17:55 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/img".' in C:\wamp\www\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\webBago\protected\controllers\WebController.php(68): CController->renderPartial('//static/img', '')
+#1 [internal function]: WebController->actionGet('img', 'icn-janh.png')
+#2 C:\wamp\www\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\wamp\www\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get/data/im...')
+#14 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/quienes-somos/img/icn-janh.png
+HTTP_REFERER=http://localhost/webBago/quienes-somos/
+---
+2016/03/16 20:17:55 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/img".' in C:\wamp\www\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\webBago\protected\controllers\WebController.php(68): CController->renderPartial('//static/img', '')
+#1 [internal function]: WebController->actionGet('img', 'banderitas-09.p...')
+#2 C:\wamp\www\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\wamp\www\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get/data/im...')
+#14 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/quienes-somos/img/banderitas-09.png
+HTTP_REFERER=http://localhost/webBago/quienes-somos/
+---
+2016/03/16 20:17:56 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/img".' in C:\wamp\www\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\webBago\protected\controllers\WebController.php(68): CController->renderPartial('//static/img', '')
+#1 [internal function]: WebController->actionGet('img', 'banderitas-03.p...')
+#2 C:\wamp\www\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\wamp\www\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get/data/im...')
+#14 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/quienes-somos/img/banderitas-03.png
+HTTP_REFERER=http://localhost/webBago/quienes-somos/
+---
+2016/03/16 20:17:56 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/img".' in C:\wamp\www\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\webBago\protected\controllers\WebController.php(68): CController->renderPartial('//static/img', '')
+#1 [internal function]: WebController->actionGet('img', 'banderitas-10.p...')
+#2 C:\wamp\www\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\wamp\www\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get/data/im...')
+#14 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/quienes-somos/img/banderitas-10.png
+HTTP_REFERER=http://localhost/webBago/quienes-somos/
+---
+2016/03/16 20:17:56 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/img".' in C:\wamp\www\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\webBago\protected\controllers\WebController.php(68): CController->renderPartial('//static/img', '')
+#1 [internal function]: WebController->actionGet('img', 'banderitas-17.p...')
+#2 C:\wamp\www\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\wamp\www\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get/data/im...')
+#14 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/quienes-somos/img/banderitas-17.png
+HTTP_REFERER=http://localhost/webBago/quienes-somos/
+---
+2016/03/16 20:17:56 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/img".' in C:\wamp\www\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\webBago\protected\controllers\WebController.php(68): CController->renderPartial('//static/img', '')
+#1 [internal function]: WebController->actionGet('img', 'banderitas-01.p...')
+#2 C:\wamp\www\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\wamp\www\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get/data/im...')
+#14 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/quienes-somos/img/banderitas-01.png
+HTTP_REFERER=http://localhost/webBago/quienes-somos/
+---
+2016/03/16 20:17:56 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/img".' in C:\wamp\www\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\webBago\protected\controllers\WebController.php(68): CController->renderPartial('//static/img', '')
+#1 [internal function]: WebController->actionGet('img', 'curva-celeste.p...')
+#2 C:\wamp\www\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\wamp\www\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get/data/im...')
+#14 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/quienes-somos/img/curva-celeste.png
+HTTP_REFERER=http://localhost/webBago/quienes-somos/
+---
+2016/03/16 20:17:56 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/img".' in C:\wamp\www\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\webBago\protected\controllers\WebController.php(68): CController->renderPartial('//static/img', '')
+#1 [internal function]: WebController->actionGet('img', 'icono-rrhh.png')
+#2 C:\wamp\www\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\wamp\www\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get/data/im...')
+#14 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/quienes-somos/img/icono-rrhh.png
+HTTP_REFERER=http://localhost/webBago/quienes-somos/
+---
+2016/03/16 20:17:56 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/img".' in C:\wamp\www\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\webBago\protected\controllers\WebController.php(68): CController->renderPartial('//static/img', '')
+#1 [internal function]: WebController->actionGet('img', 'linea-info-tecn...')
+#2 C:\wamp\www\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\wamp\www\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get/data/im...')
+#14 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/quienes-somos/img/linea-info-tecnica.png
+HTTP_REFERER=http://localhost/webBago/quienes-somos/
+---
+2016/03/16 20:17:57 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/img".' in C:\wamp\www\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\webBago\protected\controllers\WebController.php(68): CController->renderPartial('//static/img', '')
+#1 [internal function]: WebController->actionGet('img', 'descarga-archiv...')
+#2 C:\wamp\www\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\wamp\www\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get/data/im...')
+#14 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/quienes-somos/img/descarga-archivos.png
+HTTP_REFERER=http://localhost/webBago/quienes-somos/
+---
+2016/03/16 20:17:57 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/img".' in C:\wamp\www\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\webBago\protected\controllers\WebController.php(68): CController->renderPartial('//static/img', '')
+#1 [internal function]: WebController->actionGet('img', 'btn-mas.png')
+#2 C:\wamp\www\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\wamp\www\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get/data/im...')
+#14 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/quienes-somos/img/btn-mas.png
+HTTP_REFERER=http://localhost/webBago/quienes-somos/
+---
+2016/03/16 20:17:57 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/img".' in C:\wamp\www\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\webBago\protected\controllers\WebController.php(68): CController->renderPartial('//static/img', '')
+#1 [internal function]: WebController->actionGet('img', 'slide-info-tec....')
+#2 C:\wamp\www\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\wamp\www\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get/data/im...')
+#14 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/quienes-somos/img/slide-info-tec.png
+HTTP_REFERER=http://localhost/webBago/quienes-somos/
+---
+2016/03/16 20:17:57 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/img".' in C:\wamp\www\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\webBago\protected\controllers\WebController.php(68): CController->renderPartial('//static/img', '')
+#1 [internal function]: WebController->actionGet('img', 'curva-celeste-a...')
+#2 C:\wamp\www\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\wamp\www\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get/data/im...')
+#14 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/quienes-somos/img/curva-celeste-abajo.png
+HTTP_REFERER=http://localhost/webBago/quienes-somos/
+---
+2016/03/16 20:17:57 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/img".' in C:\wamp\www\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\webBago\protected\controllers\WebController.php(68): CController->renderPartial('//static/img', '')
+#1 [internal function]: WebController->actionGet('img', 'curva-home.png')
+#2 C:\wamp\www\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\wamp\www\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get/data/im...')
+#14 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/quienes-somos/img/curva-home.png
+HTTP_REFERER=http://localhost/webBago/quienes-somos/
+---
+2016/03/16 20:17:57 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/img".' in C:\wamp\www\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\webBago\protected\controllers\WebController.php(68): CController->renderPartial('//static/img', '')
+#1 [internal function]: WebController->actionGet('img', '30-478x620.png')
+#2 C:\wamp\www\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\wamp\www\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get/data/im...')
+#14 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/quienes-somos/img/30-478x620.png
+HTTP_REFERER=http://localhost/webBago/quienes-somos/
+---
+2016/03/16 20:17:57 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/img".' in C:\wamp\www\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\webBago\protected\controllers\WebController.php(68): CController->renderPartial('//static/img', '')
+#1 [internal function]: WebController->actionGet('img', 'fondo-obelisco....')
+#2 C:\wamp\www\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\wamp\www\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get/data/im...')
+#14 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/quienes-somos/img/fondo-obelisco.png
+HTTP_REFERER=http://localhost/webBago/quienes-somos/
+---
+2016/03/16 20:17:57 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/img".' in C:\wamp\www\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\webBago\protected\controllers\WebController.php(68): CController->renderPartial('//static/img', '')
+#1 [internal function]: WebController->actionGet('img', 'rrhh-01.png')
+#2 C:\wamp\www\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\wamp\www\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get/data/im...')
+#14 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/quienes-somos/img/rrhh-01.png
+HTTP_REFERER=http://localhost/webBago/quienes-somos/
+---
+2016/03/16 20:17:58 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/img".' in C:\wamp\www\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\webBago\protected\controllers\WebController.php(68): CController->renderPartial('//static/img', '')
+#1 [internal function]: WebController->actionGet('img', 'icono-bullet--....')
+#2 C:\wamp\www\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\wamp\www\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get/data/im...')
+#14 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/quienes-somos/img/icono-bullet--.png
+HTTP_REFERER=http://localhost/webBago/quienes-somos/
+---
+2016/03/16 20:17:58 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/img".' in C:\wamp\www\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\webBago\protected\controllers\WebController.php(68): CController->renderPartial('//static/img', '')
+#1 [internal function]: WebController->actionGet('img', 'icono-ubicacion...')
+#2 C:\wamp\www\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\wamp\www\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get/data/im...')
+#14 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/quienes-somos/img/icono-ubicacion.png
+HTTP_REFERER=http://localhost/webBago/quienes-somos/
+---
+2016/03/16 20:17:58 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/img".' in C:\wamp\www\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\webBago\protected\controllers\WebController.php(68): CController->renderPartial('//static/img', '')
+#1 [internal function]: WebController->actionGet('img', 'flecha-menu-arr...')
+#2 C:\wamp\www\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\wamp\www\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get/data/im...')
+#14 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/quienes-somos/img/flecha-menu-arriba.png
+HTTP_REFERER=http://localhost/webBago/quienes-somos/
+---
+2016/03/16 21:41:52 [error] [php] Trying to get property of non-object (C:\wamp\www\webBago\protected\views\static\vademecum.php:63)
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CController.php(869): WebController->renderFile()
+#1 C:\wamp\www\webBago\protected\controllers\WebController.php(68): WebController->renderPartial()
+#2 unknown(0): WebController->actionGet()
+#3 C:\wamp\www\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#4 C:\wamp\www\webBago\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#5 C:\wamp\www\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): WebController->runAction()
+#7 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#9 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): WebController->filterAccessControl()
+#10 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#11 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\wamp\www\webBago\yii\framework\web\CController.php(265): WebController->runActionWithFilters()
+#13 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): WebController->run()
+#14 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#15 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#16 C:\wamp\www\webBago\index.php(13): CWebApplication->run()
+REQUEST_URI=/webBago/ar/vademecum
+in C:\wamp\www\webBago\protected\views\static\vademecum.php (63)
+in C:\wamp\www\webBago\protected\controllers\WebController.php (68)
+in C:\wamp\www\webBago\index.php (13)
+2016/03/16 22:02:25 [error] [php] strrpos() expects parameter 3 to be long, string given (C:\wamp\www\webBago\protected\components\PaisChecker.php:14)
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CController.php(306): WebController->beforeAction()
+#1 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): WebController->runAction()
+#2 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#4 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): WebController->filterAccessControl()
+#5 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#6 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\webBago\yii\framework\web\CController.php(265): WebController->runActionWithFilters()
+#8 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): WebController->run()
+#9 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\wamp\www\webBago\index.php(13): CWebApplication->run()
+REQUEST_URI=/webBago/ar/vademecum/id1
+in C:\wamp\www\webBago\protected\components\PaisChecker.php (14)
+in C:\wamp\www\webBago\protected\controllers\WebController.php (79)
+in C:\wamp\www\webBago\index.php (13)

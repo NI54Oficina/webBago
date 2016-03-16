@@ -1,15 +1,17 @@
 <?php
-class PermissionChecker extends CApplicationComponent
+class PaisChecker extends CApplicationComponent
     {
 		
-        public function PermissionCheck()
+        public function PaisCheck()
         {
 			$webRoot="webBago";
 			$currentUrl=str_replace($webRoot,"",$_SERVER['REQUEST_URI']);
-			Yii::log("poyo", CLogger::LEVEL_ERROR, "poyo2");
+			//Yii::log("poyo", CLogger::LEVEL_ERROR, "poyo2");
+				
 			if($currentUrl[0]=="/"){
 				$currentUrl=substr ($currentUrl,2);
 			}
+			echo substr($currentUrl,0,strpos ($currentUrl,"/"));
             $permissions= Permission::model()->findAllByAttributes(
 			array('url'=>$currentUrl));
 			foreach($permissions as $permission){
