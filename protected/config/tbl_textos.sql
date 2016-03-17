@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 17-03-2016 a las 15:46:21
+-- Tiempo de generación: 17-03-2016 a las 15:50:05
 -- Versión del servidor: 10.1.9-MariaDB
 -- Versión de PHP: 5.5.30
 
@@ -141,7 +141,7 @@ INSERT INTO `tbl_textos` (`id`, `español`, `ingles`, `portugues`) VALUES
 (101, 'Alta calidad de vacuna contra la Aftosa para la producción china', 'High Quality Vaccine against Foot and Mouth Disease for Chinese Production', ''),
 (102, 'Jinhai Biotechnology es una empresa que surge del Joint Venture entre Biogénesis Bagó y  la compañía china Hile Biotechnology para la producción de vacuna contra la Fiebre Aftosa.', 'Jinhai Biotechnology is a Joint Venture company between Biogenesis Bagó and the Chinese company Hile Biotechnology for the production of the vaccine against Foot and Mouth Disease.', ''),
 (103, 'Con una superficie cubierta de casi 15000 m2 cubiertos, con tecnología de última generación, en la planta funcionan las áreas de producción,  los laboratorios de control de calidad, junto con los depósitos de materias primas y producto terminado. De acuerdo a lo requerido por la legislación china, la planta cuenta también con un sector segregado, con áreas de bioseguridad y acceso restringido, donde se realizan ensayos de control de calidad en animales.', 'With a surface area of almost 15 000 m2 and with next-generation technology, the plant is responsable for production, quality control laboratories, as well as the storage units for raw materials and the finished product.  According to Chinese legislation, the manufacturing plant also has an isolated area, with biosafety measures and restricted access, where quality controls are tested on animals.  ', ''),
-(104, 'REVISTA EL MOLINO', '', ''),
+(104, 'REVISTA EL MOLINO', 'MAGAZINE EL MOLINO', ''),
 (105, 'Información calificada sobre escenarios productivos, avances tecnológicos y protagonistas destacados en el desarrollo de América Latina.', '', ''),
 (106, '8/10/2015', '', ''),
 (107, 'Fronteras Productivas', '', ''),
