@@ -2759,9 +2759,10 @@ footer{
     padding-bottom: 2%;
 }
 
-#icn-ubicacion {
+.icn-ubicacion {
     width: 6%;
     display: inline-block;
+	margin-top: 0; 
 }
 
 #nom-ref {
@@ -2800,11 +2801,11 @@ footer{
 
 
 .border-celeste{
-	border-bottom:1px #8BCDE0 solid ;
+	border-bottom:3px #8BCDE0 solid ;
 }
 
 
-#icn-ubicacion{
+.icn-ubicacion{
 	width:6%;
 	display:inline-block;
 }
@@ -2901,7 +2902,7 @@ footer{
 
 .band-filiales{
 	margin-top:-2%;
-	width: 8%;
+	width: auto;
 }
 
  
@@ -2958,7 +2959,7 @@ color:white;
 #list-menu{
 	list-style:none;
 	margin-top:7%;
-	
+	margin-left:4%;
 }
 
 
@@ -5219,3 +5220,130 @@ figure.snip1156:hover .salud-ambiental{
 	position:relative;
 }
 
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+	.icn-ubicacion {
+		width: 3%;
+		display: inline-block;
+	}
+	
+}
+/* Portrait */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+	.b-l {
+		width: 73%;
+	}
+	
+	#ul-filiales-paises{
+		display:none;
+	}
+	
+	#info-mapa{
+		border:none;
+	}
+	
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+	
+	.border-celeste{
+		border:none;
+	}
+	
+	.icn-ubicacion {
+		width: 5%;
+		display: inline-block;
+	}
+	
+	#ul-filiales-paises{
+		display:none;
+	}
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 736px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+	.b-l{
+		width:90%;
+	}
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+	.b-l{
+		width:100%;
+	}
+	
+	#list-menu{
+		margin-left:0;
+	}
+}
+
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 736px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+	#titulo-mapa h1{
+		font-size: 38px;
+		margin: auto;
+		padding-bottom:10%;
+	}
+	
+	.border-celeste{
+		border:none;
+	}
+	
+	#ul-filiales-paises{
+		display:block;
+	}
+	#ul-filiales-paises{
+		padding-left:7%;
+		padding-top:5%;
+	}
+	
+	#ul-filiales-paises li{
+		display:inline-block;
+		padding-top:5%;
+	}
+	
+	
+	#ul-filiales-paises li a{
+		color:white;
+		font-weight:700;
+		letter-spacing:1px;
+	}
+	
+	#info-mapa{
+		border:none;
+	}
+}
+
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 2100px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+  
+  	#ul-filiales-paises{
+		display:none;
+	}
+}

@@ -89,12 +89,12 @@
 		<!--CURVA-->
 		<img style=" width: 100%;position:relative;margin-top:-2px;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-home-abajo.png" alt="" style="" />	
 
-		<section class="special" data-scrollax-parent="true" style="background:transparent;min-height:100vh;width:100%;overflow-x:hidden;display:none;">
+		<section class="special" data-scrollax-parent="true" style="background:transparent;min-height:100vh;width:100%;overflow-x:hidden;">
 		<!------------------------------------------------------------------ SECCION 2: FILIALES ------------------------------------------------------------------>			
 					
 					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-bottom:30px;">
     	
-						<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12" id="mapa-total">
+						<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12" id="mapa-total">
     	 
 							<!----- TITULO MAPA --->
 							<div id="titulo-mapa">
@@ -129,13 +129,13 @@
             
 			
 			<!---------- REFERENCIAS ------------------>
-				<div id="referencias" class="col-lg-3 col-md-3 col-sm-3 col-xs-5" style="cursor:default;position:relative;z-index:1;">
+				<div id="referencias" class="col-lg-4 col-md-4 col-sm-8 col-xs-8" style="cursor:default;position:relative;z-index:1; margin: auto;">
 					
 				
 					<!--- REFERENCIA -->			  
 						<div id="ref-unica">
 					
-							<img id="icn-ubicacion" src="<?php echo Yii::app()->request->baseUrl; ?>/img/icn-casa-matriz.png">
+							<img class="icn-ubicacion" src="<?php echo Yii::app()->request->baseUrl; ?>/img/icn-casa-matriz.png">
 					
 						<p id="nom-ref"> Casa Matriz </p>
 						
@@ -145,7 +145,7 @@
 					<!--- REFERENCIA -->
 					<div id="ref-unica">
 					
-							<img id="icn-ubicacion" src="<?php echo Yii::app()->request->baseUrl; ?>/img/icn-filiales.png">
+							<img class="icn-ubicacion" src="<?php echo Yii::app()->request->baseUrl; ?>/img/icn-filiales.png">
 					
 						<p id="nom-ref"> Filiales </p>
 						
@@ -156,11 +156,9 @@
 					<!--- REFERENCIA -->				
 					<div id="ref-unica">
 					
-							<img id="icn-ubicacion" src="<?php echo Yii::app()->request->baseUrl; ?>/img/icn-vacunas.png">
+							<img class="icn-ubicacion" src="<?php echo Yii::app()->request->baseUrl; ?>/img/icn-vacunas.png">
 					
-						<p style="margin-bottom:0;" id="nom-ref"> NAFMDVD </p>
-						<h6 style="margin:0; margin-left:14px;">  Banco de vacuna </h6>
-						<h6 style="display:inline-block; margin-top:3px; margin-left:14px;"> Antiaftosa de Norteamérica </h6>
+						<p style="margin-bottom:0;" id="nom-ref"> NAFMDVD </p> <p style="margin-left:7%;"> Banco de vacuna <br /> Antiaftosa de Norteamérica </p>
 						
 					</div> <!-- Termina cada referencia -->
 					
@@ -168,9 +166,9 @@
 					<!--- REFERENCIA -->				
 					<div id="ref-unica">
 					
-							<img style="margin-top:-38px;" id="icn-ubicacion" src="<?php echo Yii::app()->request->baseUrl; ?>/img/icn-janh.png">
+							<img class="icn-ubicacion" src="<?php echo Yii::app()->request->baseUrl; ?>/img/icn-janh.png">
 					
-						<p style="width:81%;" id="nom-ref"> Jinhai Biotechnology Co., Ltd. </p>
+						<p id="nom-ref"> Jinhai Biotechnology Co., Ltd. </p>
 						
 					</div> <!-- Termina cada referencia -->
 					
@@ -179,10 +177,17 @@
             
 			</div> <!-- Termina mapa-total -->
         
-        
-		
+				<ul id="ul-filiales-paises" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<li class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a href="javascript:void(0);" id="mex">MÉXICO</li></a>
+					<li class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a href="javascript:void(0);" id="centroam">CENTRO AMÉRICA</li></a>
+					<li class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a href="javascript:void(0);" id="br">BRASIL</li></a>
+					<li class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a href="javascript:void(0);" id="bol">BOLIVIA</li></a>
+					<li class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a href="javascript:void(0);" id="uru">URUGUAY</li></a>
+					<li class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a href="javascript:void(0);" id="arg">ARGENTINA</li></a>
+				</ul>
+			
 		<!--------------------------- INFORMACIÓN PAÍSES -------------------------------->
-			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" id="info-mapa">
+			<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" id="info-mapa">
 			
 			
 				<!--********** MÉXICO **********-->
@@ -404,7 +409,7 @@
 	
 	<img style="width: 100%;position:relative;margin-bottom:-1px;display:none;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-celeste.png" alt="" />	
 	
-	<section class="special" data-scrollax-parent="true" style="background: rgb(129, 206, 231); min-height:100vh;width:100%;overflow-x:hidden;position:relative;display:none;" >
+	<section class="special" data-scrollax-parent="true" style="background: rgb(129, 206, 231); min-height:100vh;width:100%;overflow-x:hidden;position:relative;" >
 
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"  id="info-tec" style="overflow:hidden;padding-bottom:30px;">
 
@@ -420,11 +425,11 @@
 				<!--////// MENÚ /////-->
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="menu">
 					
-					<ul id="list-menu">
+					<ul id="list-menu"  class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
-						<li class="col-lg-2 col-md-3 col-sm-4 col-xs-4"><a  id="opcion1" href="javascript:void(0)"> Trabajos técnicos </a></li>
-						<li class="col-lg-2 col-md-3 col-sm-4 col-xs-4"><a  id="opcion2" href="javascript:void(0)"> Planes Sanitarios </a></li>
-						<li class="col-lg-2 col-md-3 col-sm-4 col-xs-4" ><a id="opcion3" href="javascript:void(0)"> Planillas de trabajo </a></li>             
+						<li class="col-lg-2 col-md-2 col-sm-3 col-xs-3"><a  id="opcion1" href="javascript:void(0)"> Trabajos técnicos </a></li>
+						<li class="col-lg-2 col-md-2 col-sm-3 col-xs-3"><a  id="opcion2" href="javascript:void(0)"> Planes Sanitarios </a></li>
+						<li class="col-lg-2 col-md-2 col-sm-3 col-xs-3" ><a id="opcion3" href="javascript:void(0)"> Planillas de trabajo </a></li>             
 					
 					</ul> 
 					
