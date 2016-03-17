@@ -39,7 +39,7 @@
 			<div class="cd-timeline-content">
 				<h2 class="h2-cd"><?php echo Textos::model()->GetText(351); ?></h2>
 				<p class="p-cd2"><?php echo Textos::model()->GetText(352); ?></p>
-				<span class="cd-date"><img src="img/linea-tiempo-bullet.png"  /></span>
+				<span class="cd-date"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-tiempo-bullet.png"  /></span>
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
 
@@ -50,7 +50,7 @@
 
 			<div class="cd-timeline-content">
 				<h2 class="h2-cd"><?php echo Textos::model()->GetText(353); ?></h2>
-				<span class="cd-date"><img src="img/linea-tiempo-bullet.png"  /></span>
+				<span class="cd-date"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-tiempo-bullet.png"  /></span>
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
 
@@ -60,10 +60,10 @@
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
-			<img class="img-cd" src="img/linea-tiempo-1952.png"/>
+			<img class="img-cd" src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-tiempo-1952.png"/>
 				<h2 class="h2-cd"><?php echo Textos::model()->GetText(354); ?></h2>
 				<p class="p-cd2"><?php echo Textos::model()->GetText(355); ?></p>
-				<span class="cd-date"><img src="img/linea-tiempo-bullet.png"  /></span>
+				<span class="cd-date"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-tiempo-bullet.png"  /></span>
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
 
@@ -75,7 +75,7 @@
 			<div class="cd-timeline-content">
 				<h2  class="h2-cd"><?php echo Textos::model()->GetText(356); ?></h2>
 				<p class="p-cd2"><?php echo Textos::model()->GetText(357); ?></p>
-				<span class="cd-date"><img src="img/linea-tiempo-bullet.png"  /></span>
+				<span class="cd-date"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-tiempo-bullet.png"  /></span>
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
 
@@ -85,9 +85,9 @@
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
-			<img src="img/linea-tiempo-1993.png"/>
+			<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-tiempo-1993.png"/>
 				<h2 class="h2-cd"><?php echo Textos::model()->GetText(358); ?></h2>
-				<span class="cd-date"><img src="img/linea-tiempo-bullet.png"  /></span>
+				<span class="cd-date"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-tiempo-bullet.png"  /></span>
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
 
@@ -98,7 +98,7 @@
 
 			<div class="cd-timeline-content">
 				<h2  class="h2-cd"><?php echo Textos::model()->GetText(359); ?></h2>
-				<span class="cd-date"><img src="img/linea-tiempo-bullet.png"  /></span>
+				<span class="cd-date"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-tiempo-bullet.png"  /></span>
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
 		
@@ -108,9 +108,9 @@
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
-			<img src="img/linea-tiempo-1993.png"/>
+			<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-tiempo-1993.png"/>
 			<p class="p-cd2"><?php echo Textos::model()->GetText(360); ?></p>
-				<span class="cd-date"><img src="img/linea-tiempo-bullet.png"  /></span>
+				<span class="cd-date"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-tiempo-bullet.png"  /></span>
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
 		
@@ -122,7 +122,7 @@
 			<div class="cd-timeline-content">
 				<h2  class="h2-cd"><?php echo Textos::model()->GetText(361); ?></h2>
 				<h2  style="margin-top:2vh;" class="h2-cd"><?php echo Textos::model()->GetText(362); ?></h2>
-				<span class="cd-date"><img src="img/linea-tiempo-bullet.png"  /></span>
+				<span class="cd-date"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-tiempo-bullet.png"  /></span>
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
 		
@@ -133,7 +133,7 @@
 
 			<div class="cd-timeline-content">
 				<h2 class="h2-cd"><?php echo Textos::model()->GetText(363); ?></h2>
-				<span class="cd-date"><img src="img/linea-tiempo-bullet.png"  /></span>
+				<span class="cd-date"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-tiempo-bullet.png"  /></span>
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
 		
@@ -146,7 +146,7 @@
 			<div class="cd-timeline-content">
 				<h2  class="h2-cd"><?php echo Textos::model()->GetText(364); ?></h2>
 				<h2  style="margin-top:2vh;" class="h2-cd"><?php echo Textos::model()->GetText(365); ?></h2>
-				<span class="cd-date"><img src="img/linea-tiempo-bullet.png"  /></span>
+				<span class="cd-date"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-tiempo-bullet.png"  /></span>
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
 		
@@ -157,9 +157,9 @@
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
-			<img src="img/linea-tiempo-1993.png"/>
+			<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-tiempo-1993.png"/>
 			<h2  class="h2-cd"><?php echo Textos::model()->GetText(366); ?></p>
-				<span class="cd-date"><img src="img/linea-tiempo-bullet.png"  /></span>
+				<span class="cd-date"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-tiempo-bullet.png"  /></span>
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
 
@@ -170,7 +170,7 @@
 
 			<div class="cd-timeline-content">
 				<h2  class="h2-cd"><?php echo Textos::model()->GetText(367); ?></h2>
-				<span class="cd-date"><img src="img/linea-tiempo-bullet.png"  /></span>
+				<span class="cd-date"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-tiempo-bullet.png"  /></span>
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->		
 		
@@ -194,10 +194,10 @@
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
-				<img class="img-cd" src="img/linea-tiempo-1952.png"/>
+				<img class="img-cd" src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-tiempo-1952.png"/>
 				<h2 class="h2-cd"><?php echo Textos::model()->GetText(368); ?></h2>
 				<p class="p-cd2"><?php echo Textos::model()->GetText(369); ?></p>
-				<span class="cd-date"><img src="img/linea-tiempo-bullet.png"  /></span>
+				<span class="cd-date"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-tiempo-bullet.png"  /></span>
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
 
@@ -208,7 +208,7 @@
 
 			<div class="cd-timeline-content">
 				<h2 class="h2-cd"><?php echo Textos::model()->GetText(370); ?></h2>
-				<span class="cd-date"><img src="img/linea-tiempo-bullet.png"  /></span>
+				<span class="cd-date"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-tiempo-bullet.png"  /></span>
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
 
@@ -219,7 +219,7 @@
 
 			<div class="cd-timeline-content">
 				<h2 class="h2-cd"><?php echo Textos::model()->GetText(371); ?></h2>
-				<span class="cd-date"><img src="img/linea-tiempo-bullet.png"  /></span>
+				<span class="cd-date"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-tiempo-bullet.png"  /></span>
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
 
@@ -230,7 +230,7 @@
 
 			<div class="cd-timeline-content">
 				<h2  class="h2-cd"><?php echo Textos::model()->GetText(372); ?></h2>
-				<span class="cd-date"><img src="img/linea-tiempo-bullet.png"  /></span>
+				<span class="cd-date"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-tiempo-bullet.png"  /></span>
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
 
@@ -242,7 +242,7 @@
 			<div class="cd-timeline-content">
 				<h2 class="h2-cd"><?php echo Textos::model()->GetText(373); ?></h2>
 				<p class="p-cd2"><?php echo Textos::model()->GetText(374); ?></p>
-				<span class="cd-date"><img src="img/linea-tiempo-bullet.png"  /></span>
+				<span class="cd-date"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-tiempo-bullet.png"  /></span>
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
 
@@ -253,7 +253,7 @@
 
 			<div class="cd-timeline-content">
 				<h2  class="h2-cd"><?php echo Textos::model()->GetText(376); ?></h2>
-				<span class="cd-date"><img src="img/linea-tiempo-bullet.png"  /></span>
+				<span class="cd-date"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-tiempo-bullet.png"  /></span>
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
 		
@@ -263,19 +263,19 @@
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
-			<img src="img/linea-tiempo-1993.png"/>
+			<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-tiempo-1993.png"/>
 			<h2  class="h2-cd"><?php echo Textos::model()->GetText(375); ?></h2>
 			<h2  style="margin-top:2vh;" class="h2-cd"<?php echo Textos::model()->GetText(377); ?></h2>
 			<p class="p-cd2"><?php echo Textos::model()->GetText(378); ?></p>
 
-				<span class="cd-date"><img src="img/linea-tiempo-bullet.png"  /></span>
+				<span class="cd-date"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-tiempo-bullet.png"  /></span>
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
 		
 		
 		
 	</section> 
-		<img style="margin-left:28vw;" src="img/linea-tiempo-3-01.png" />
+		<img style="margin-left:28vw;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-tiempo-3-01.png" />
 		<h2  style="text-align:center;color:#00173B;"><?php echo Textos::model()->GetText(379); ?></h2>
 		
 		</div>

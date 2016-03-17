@@ -623,7 +623,7 @@ font-size: 22px;
 	
 	/*************************** ICONOS *****************************/
 	.icono-bullet{
-		width:3%;
+		width:auto;
 		float: left;
 	}
 	

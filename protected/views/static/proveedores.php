@@ -22,10 +22,10 @@
 
 			<!--PC-->
 				<ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="margin-top:3%;">
-					<li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 proveedores-li"><a style="font-size: 16px;" href=""><img src="img/icono-descarga.png"  /><?php echo Textos::model()->GetText(380); ?></a></li>
-					<li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 proveedores-li"><a style="font-size: 16px;" href=""><img src="img/icono-descarga.png"  /><?php echo Textos::model()->GetText(381); ?></a></li>
-					<li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 proveedores-li"><a style="font-size: 16px;" href=""><img src="img/icono-descarga.png"  /><?php echo Textos::model()->GetText(382); ?></a></li>
-					<li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 proveedores-li"><a style="font-size: 16px;" href=""><img src="img/icono-descarga.png"  /><?php echo Textos::model()->GetText(383); ?></a></li>
+					<li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 proveedores-li"><a style="font-size: 16px;" href=""><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-descarga.png"  /><?php echo Textos::model()->GetText(380); ?></a></li>
+					<li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 proveedores-li"><a style="font-size: 16px;" href=""><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-descarga.png"  /><?php echo Textos::model()->GetText(381); ?></a></li>
+					<li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 proveedores-li"><a style="font-size: 16px;" href=""><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-descarga.png"  /><?php echo Textos::model()->GetText(382); ?></a></li>
+					<li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 proveedores-li"><a style="font-size: 16px;" href=""><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-descarga.png"  /><?php echo Textos::model()->GetText(383); ?></a></li>
 				</ul>		
 	</div>
 	</div>

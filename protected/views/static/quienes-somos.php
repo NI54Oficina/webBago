@@ -64,10 +64,10 @@
                  <h3 style="color: #595959;font-size: 16px;">Biogénesis Bagó fue  la primera empresa en la región  que desarrolló</h5>
            
 				<!-- ITEMS CUADRO -->
-				<p style="line-height:19px;"><img src="img/icono-bullet.png"  style="display:inline-block;" />Una línea de ectoparasiticidas </p>
-				<p style="line-height:19px;"><img src="img/icono-bullet.png"  style="display:inline-block;" />La primer vacuna para la diarrea viral de los bovinos </p>
-				<p style="line-height:19px;"><img src="img/icono-bullet.png"  style="display:inline-block;" />Vacunas combinadas para prevenir síndromes respiratorios y reproductivos del ganado </p>
-				<p style="line-height:19px;"><img src="img/icono-bullet.png"  style="display:inline-block;" />Obtuvo el primer registro para la vacuna anti Aftosa en 1952 (Argentina). </p>
+				<p style="line-height:19px;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-bullet.png"  style="display:inline-block;" />Una línea de ectoparasiticidas </p>
+				<p style="line-height:19px;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-bullet.png"  style="display:inline-block;" />La primer vacuna para la diarrea viral de los bovinos </p>
+				<p style="line-height:19px;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-bullet.png"  style="display:inline-block;" />Vacunas combinadas para prevenir síndromes respiratorios y reproductivos del ganado </p>
+				<p style="line-height:19px;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-bullet.png"  style="display:inline-block;" />Obtuvo el primer registro para la vacuna anti Aftosa en 1952 (Argentina). </p>
            
            </div>
 		 </div> 

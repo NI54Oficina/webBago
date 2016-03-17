@@ -12,12 +12,12 @@
 		<div style="width:50%;height:1px;display:inline-block;border-top:1px solid black;"></div>
 		</div>
 		<p class="fundaciones" >Fundaciones con  las que colaboramos:</p>
-				<div><img style="width:90%;" src="img/rse-prosaia.png"  /></div>
-				<div><img style="width:97%;" src="img/rse-garrahan.png"  /></div>
-				<div><img style="width:100%;" src="img/rse-mundo-sano.png"  /></div>
-				<div><img style="width:92%;" src="img/rse-misiones-rurales.png"  /></div>
-				<div><img style="width:;" src="img/rse-solidagro.png"  /></div>
-				<div><img style="width:;" src="img/rse-fernandez.png"  /></div>
+				<div><img style="width:90%;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/rse-prosaia.png"  /></div>
+				<div><img style="width:97%;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/rse-garrahan.png"  /></div>
+				<div><img style="width:100%;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/rse-mundo-sano.png"  /></div>
+				<div><img style="width:92%;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/rse-misiones-rurales.png"  /></div>
+				<div><img style="width:;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/rse-solidagro.png"  /></div>
+				<div><img style="width:;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/rse-fernandez.png"  /></div>
 			</div>
 	</div>
 	</div>
@@ -53,11 +53,11 @@
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hidden-xs hidden-sm linea-rse"> </div>
 				<p style="margin-top:3%;">
                 
-                <p><img src="img/icono-bullet.png"  style="display:inline-block;" /> <?php echo Textos::model()->GetText(72); ?></p>
+                <p><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-bullet.png"  style="display:inline-block;" /> <?php echo Textos::model()->GetText(72); ?></p>
                 
-                <p><img src="img/icono-bullet.png"  style="display:inline-block;" /> <?php echo Textos::model()->GetText(73); ?></p>
+                <p><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-bullet.png"  style="display:inline-block;" /> <?php echo Textos::model()->GetText(73); ?></p>
                 
-                <p><img src="img/icono-bullet.png"  style="display:inline-block;" /> <?php echo Textos::model()->GetText(74); ?></p>
+                <p><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-bullet.png"  style="display:inline-block;" /> <?php echo Textos::model()->GetText(74); ?></p>
              
                 
                  </p>
