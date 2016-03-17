@@ -49,7 +49,7 @@ return array(
 			'connectionID'=>'db',
 			'rules'=>array(
 				
-				
+				"paises"=>array("web/get/data/paises"	),
 			
 				'<pais>/<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				
@@ -120,6 +120,9 @@ return array(
 				
 				
 				"<pais>/"=>array(
+					"web/get/data/home"
+				),
+				"/"=>array(
 					"web/get/data/home"
 				),
 				

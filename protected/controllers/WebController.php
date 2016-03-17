@@ -43,10 +43,6 @@ class WebController extends Controller
 
 	public function actionGet($data,$id=""){
 		
-		if($data!="base"){
-			//$this->layout="lay";
-		}
-		//echo $id;
 		$model="";
 		if($data=="vademecum"){
 			$id= substr($id,2);
