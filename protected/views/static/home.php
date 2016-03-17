@@ -12,34 +12,34 @@
 
 		<!--CURVA-->
 		
-		<img style="  width: 100%;margin-bottom:-1px;" src="img/curva-arriba-home.png" alt="" /><section class="special" data-scrollax-parent="true" style="background:white;min-height:100vh;width:100%;text-align:center;"><div class="" style="display:inline-block;background:white;width:98%;">
+		<img style="  width: 100%;margin-bottom:-1px;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-arriba-home.png" alt="" /><section class="special" data-scrollax-parent="true" style="background:white;min-height:100vh;width:100%;text-align:center;"><div class="" style="display:inline-block;background:white;width:98%;">
 					
 					<!-- CUATRO ICONOS -->
 						
 								<!-- 	QUIÉNES SOMOS -->
 								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional">
-									<img src="img/home-quienes.png" />
+									<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home-quienes.png" />
 									<h1 class="h1-1-home"><?php echo Textos::model()->GetText(6); ?></h1>
 									<p class="p-in-h"><?php echo Textos::model()->GetText(7); ?></p>
 								</div>
 								
 								<!--	MISIÓN, VISIÓN Y VALORES -->
 								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional" >
-									<img src="img/home-mision.png" />		
+									<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home-mision.png" />		
 									<h1 class="h1-1-home mis"><?php echo Textos::model()->GetText(8); ?></h1>			
 									<p class="p-in-h"><?php echo Textos::model()->GetText(9); ?></p>									
 								</div>
 								
 								<!--	LUCHA CONTRA AFTOSA -->
 								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional">
-									<img src="img/home-aftosa.png" />
+									<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home-aftosa.png" />
 									<h1 class="h1-1-home mis"><?php echo Textos::model()->GetText(10); ?></h1>
 									<p class="p-in-h"> <?php echo Textos::model()->GetText(11); ?></p>											
 								</div>
 								
 								<!--	TRAYECTORIA - HITOS -->
 								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional">
-									<img src="img/home-trayectoria.png" />
+									<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home-trayectoria.png" />
 									<h1 class="h1-1-home tray"><?php echo Textos::model()->GetText(12); ?></h1>		
 									<p class="p-in-h"><?php echo Textos::model()->GetText(13); ?></p>		
 								</div>
@@ -50,28 +50,28 @@
 						
 								<!--	NUESTRAS PLANTAS -->
 								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional">
-									<img src="img/home-plantas.png" />
+									<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home-plantas.png" />
 									<h1 class="h1-1-home"><?php echo Textos::model()->GetText(14); ?></h1>
 									<p class="p-in-h"><?php echo Textos::model()->GetText(15); ?></p>
 								</div>
 								
 								<!--	RSE - SUSTENTABILIDAD -->
 								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional" >
-									<img src="img/home-rse.png" />		
+									<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home-rse.png" />		
 									<h1 class="h1-1-home mis"><?php echo Textos::model()->GetText(16); ?></h1>			
 									<p class="p-in-h"><?php echo Textos::model()->GetText(17); ?></p>									
 								</div>
 								
 								<!-- 	INFO PARA PROVEEDORES -->
 								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional" >
-									<img src="img/home-proveedores.png" />		
+									<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home-proveedores.png" />		
 									<h1 class="h1-1-home mis"><?php echo Textos::model()->GetText(18); ?></h1>			
 									<p class="p-in-h"><?php echo Textos::model()->GetText(19); ?></p>									
 								</div>
 								
 								<!--	PRENSA -->
 								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional">
-									<img src="img/home-prensa.png" />		
+									<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home-prensa.png" />		
 									<h1 class="h1-1-home mis pren"><?php echo Textos::model()->GetText(20); ?></h1>			
 									<p class="p-in-h"><?php echo Textos::model()->GetText(21); ?></p>									
 								</div>
@@ -85,7 +85,7 @@
 		</div>
 		
 		<!--CURVA-->
-		<img style=" width: 100%;position:relative;margin-top:-2px;" src="img/curva-home-abajo.png" alt="" style="" />	
+		<img style=" width: 100%;position:relative;margin-top:-2px;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-home-abajo.png" alt="" style="" />	
 
 		<section class="special" data-scrollax-parent="true" style="background:transparent;min-height:100vh;width:100%;overflow-x:hidden;display:none;">
 		<!------------------------------------------------------------------ SECCION 2: FILIALES ------------------------------------------------------------------>			
@@ -103,7 +103,7 @@
  
 						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="mapa" style="position:relative;z-index:5;">
 						
-							<img src="img/mapa-png.png" usemap="#img-mapaMap" id="img-mapa" />
+							<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/mapa-png.png" usemap="#img-mapaMap" id="img-mapa" />
 						
 							<!------- MAPA ----------->
 							<map name="img-mapaMap">
@@ -133,7 +133,7 @@
 					<!--- REFERENCIA -->			  
 						<div id="ref-unica">
 					
-							<img id="icn-ubicacion" src="img/icn-casa-matriz.png">
+							<img id="icn-ubicacion" src="<?php echo Yii::app()->request->baseUrl; ?>/img/icn-casa-matriz.png">
 					
 						<p id="nom-ref"> Casa Matriz </p>
 						
@@ -143,7 +143,7 @@
 					<!--- REFERENCIA -->
 					<div id="ref-unica">
 					
-							<img id="icn-ubicacion" src="img/icn-filiales.png">
+							<img id="icn-ubicacion" src="<?php echo Yii::app()->request->baseUrl; ?>/img/icn-filiales.png">
 					
 						<p id="nom-ref"> Filiales </p>
 						
@@ -154,7 +154,7 @@
 					<!--- REFERENCIA -->				
 					<div id="ref-unica">
 					
-							<img id="icn-ubicacion" src="img/icn-vacunas.png">
+							<img id="icn-ubicacion" src="<?php echo Yii::app()->request->baseUrl; ?>/img/icn-vacunas.png">
 					
 						<p style="margin-bottom:0;" id="nom-ref"> NAFMDVD </p>
 						<h6 style="margin:0; margin-left:14px;">  Banco de vacuna </h6>
@@ -166,7 +166,7 @@
 					<!--- REFERENCIA -->				
 					<div id="ref-unica">
 					
-							<img style="margin-top:-38px;" id="icn-ubicacion" src="img/icn-janh.png">
+							<img style="margin-top:-38px;" id="icn-ubicacion" src="<?php echo Yii::app()->request->baseUrl; ?>/img/icn-janh.png">
 					
 						<p style="width:81%;" id="nom-ref"> Jinhai Biotechnology Co., Ltd. </p>
 						
@@ -186,7 +186,7 @@
 				<!--********** MÉXICO **********-->
 				<div id="infoMexico" class="info-mapa" style="">
 				
-					<h2 id="titulo-info-mapa"><img class="band-filiales" src="img/banderitas-09.png"/> México </h2>
+					<h2 id="titulo-info-mapa"><img class="band-filiales" src="<?php echo Yii::app()->request->baseUrl; ?>/img/banderitas-09.png"/> México </h2>
 			
 						<p id="sub-filiales"  class="h4-fil bio" >Biogénesis Bagó de México S.A. de C.V.</p>
 						<p  id="sub-filiales" class="h4-fil">Av. Periférico Sur 6677 Piso 5, Delegación Xochimilco, Colonia Ejidos de Tepepan, México DF.</p>
@@ -283,7 +283,7 @@
 				
 				<div class="info-mapa" id="infoBrasil">
 					
-					<h2 id="titulo-info-mapa"><img class="band-filiales" src="img/banderitas-03.png"/> Brasil </h2>
+					<h2 id="titulo-info-mapa"><img class="band-filiales" src="<?php echo Yii::app()->request->baseUrl; ?>/img/banderitas-03.png"/> Brasil </h2>
 	
 							<p id="sub-filiales"  class="h4-fil bio" >BIOGÉNESIS BAGÓ SAÚDE ANIMAL LTDA.</p>
 							<p  id="sub-filiales" class="h4-fil">Av. Manoel Ribas 985 Conj 58 5° Andar <br /> Bairro Mercês <br /> Curitiba. Paraná. Brasil </p>
@@ -303,7 +303,7 @@
 				
 				<div class="info-mapa" id="infoBolivia">
 			
-					<h2 id="titulo-info-mapa"><img class="band-filiales" src="img/banderitas-10.png"/> Bolivia </h2>
+					<h2 id="titulo-info-mapa"><img class="band-filiales" src="<?php echo Yii::app()->request->baseUrl; ?>/img/banderitas-10.png"/> Bolivia </h2>
 					
 						<p id="sub-filiales"  class="h4-fil bio" >Biogénesis Bagó Bolivia S.A.</p>
 	
@@ -339,7 +339,7 @@
 				
 				<div class="info-mapa" id="infoUruguay"> 
 					
-					<h2 id="titulo-info-mapa"><img class="band-filiales" src="img/banderitas-17.png"/> Uruguay</h2>
+					<h2 id="titulo-info-mapa"><img class="band-filiales" src="<?php echo Yii::app()->request->baseUrl; ?>/img/banderitas-17.png"/> Uruguay</h2>
 	
 						<p id="sub-filiales"  class="h4-fil bio" >Biogénesis Bagó Uruguay S.A.</p>	
 						
@@ -369,7 +369,7 @@
 			
 				<div class="info-mapa" id="infoArgentina">
 			
-					<h2 id="titulo-info-mapa"><img class="band-filiales" src="img/banderitas-01.png"/> Argentina </h2>
+					<h2 id="titulo-info-mapa"><img class="band-filiales" src="<?php echo Yii::app()->request->baseUrl; ?>/img/banderitas-01.png"/> Argentina </h2>
 	
 						<p id="sub-filiales"  class="h4-fil bio" >Casa Matriz Argentina</p>	
 						
@@ -400,7 +400,7 @@
 			</div>       
 	</section>
 	
-	<img style="width: 100%;position:relative;margin-bottom:-1px;display:none;" src="img/curva-celeste.png" alt="" />	
+	<img style="width: 100%;position:relative;margin-bottom:-1px;display:none;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-celeste.png" alt="" />	
 	
 	<section class="special" data-scrollax-parent="true" style="background: rgb(129, 206, 231); min-height:100vh;width:100%;overflow-x:hidden;position:relative;display:none;" >
 
@@ -409,7 +409,7 @@
 				<!--////// TITULO /////-->
 				<div id="titulo-info" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 				
-					<h2 id="titulo"><img class="icono-menu right" src="img/icono-rrhh.png">INFORMACIÓN TÉCNICA<img src="img/icono-rrhh.png" class="icono-menu left"></h2>
+					<h2 id="titulo"><img class="icono-menu right" src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-rrhh.png">INFORMACIÓN TÉCNICA<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-rrhh.png" class="icono-menu left"></h2>
 					<div class="border"></div>
 				
 				</div> <!--Termina titulo-info -->
@@ -427,7 +427,7 @@
 					</ul> 
 					
 					<!-- borde-->
-					<div> <img src="img/linea-info-tecnica.png" alt=""  class="b-l"/> </div>
+					<div> <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-info-tecnica.png" alt=""  class="b-l"/> </div>
 				
 				</div> <!--Termina menú --> 
 				
@@ -505,7 +505,7 @@
 							<div>
 							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6" id="descarga-margin">
                         
-								<img class="col-lg-5 col-md-5 col-sm-5 col-xs-3 img-d" src="img/descarga-archivos.png"/>
+								<img class="col-lg-5 col-md-5 col-sm-5 col-xs-3 img-d" src="<?php echo Yii::app()->request->baseUrl; ?>/img/descarga-archivos.png"/>
                             
 								<h3 class="col-lg-4 col-md-4 col-sm-4 col-xs-3" id="titulo-archivo"> TAMBO </h3>
                             
@@ -517,7 +517,7 @@
 							<!--***** DESCARGA ***** -->
 							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6" id="descarga-margin">
                         
-								<img class="col-lg-5 col-md-5 col-sm-5 col-xs-3 img-d" src="img/descarga-archivos.png"/>
+								<img class="col-lg-5 col-md-5 col-sm-5 col-xs-3 img-d" src="<?php echo Yii::app()->request->baseUrl; ?>/img/descarga-archivos.png"/>
                             
 								<h3 class="col-lg-4 col-md-4 col-sm-4 col-xs-3" id="titulo-archivo"> CRÍA </h3>
                             
@@ -529,7 +529,7 @@
 							<!--***** DESCARGA ***** -->					   
 							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6" id="descarga-margin">
                         
-								<img class="col-lg-5 col-md-5 col-sm-5 col-xs-3 img-d" src="img/descarga-archivos.png"/>
+								<img class="col-lg-5 col-md-5 col-sm-5 col-xs-3 img-d" src="<?php echo Yii::app()->request->baseUrl; ?>/img/descarga-archivos.png"/>
                             
 								<h3 class="col-lg-4 col-md-4 col-sm-4 col-xs-3" id="titulo-archivo"> RECRÍA </h3>
                             
@@ -542,7 +542,7 @@
 							<!--***** DESCARGA ***** -->
 							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6" id="descarga-margin">
                         
-								<img class="col-lg-5 col-md-5 col-sm-5 col-xs-3 img-d" src="img/descarga-archivos.png"/>
+								<img class="col-lg-5 col-md-5 col-sm-5 col-xs-3 img-d" src="<?php echo Yii::app()->request->baseUrl; ?>/img/descarga-archivos.png"/>
                             
 								<h3 class="col-lg-7 col-md-7 col-sm-7 col-xs-3" id="titulo-archivo"> FEED-LOT </h3>
                             
@@ -555,7 +555,7 @@
 							<!--***** DESCARGA ***** -->					   
 							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6" id="descarga-margin">
                         
-								<img class="col-lg-5 col-md-5 col-sm-5 col-xs-3 img-d" src="img/descarga-archivos.png"/>
+								<img class="col-lg-5 col-md-5 col-sm-5 col-xs-3 img-d" src="<?php echo Yii::app()->request->baseUrl; ?>/img/descarga-archivos.png"/>
                             
 								<h3 class="col-lg-7 col-md-7 col-sm-7 col-xs-3" id="titulo-archivo"> Ovino Central y Norte </h3>
                             
@@ -566,7 +566,7 @@
 							<!--***** DESCARGA ***** -->					   
 							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6" id="descarga-margin">
                         
-								<img class="col-lg-5 col-md-5 col-sm-5 col-xs-3 img-d" src="img/descarga-archivos.png"/>
+								<img class="col-lg-5 col-md-5 col-sm-5 col-xs-3 img-d" src="<?php echo Yii::app()->request->baseUrl; ?>/img/descarga-archivos.png"/>
                             
 								<h3 class="col-lg-7 col-md-7 col-sm-7 col-xs-3" id="titulo-archivo"> Ovino Central y Norte </h3>
                             
@@ -590,7 +590,7 @@
 							<!--***** DESCARGA ***** -->
 							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6" id="descarga-margin">
                         
-								<img class="col-lg-5 col-md-5 col-sm-5 col-xs-3 img-d" src="img/descarga-archivos.png"/>
+								<img class="col-lg-5 col-md-5 col-sm-5 col-xs-3 img-d" src="<?php echo Yii::app()->request->baseUrl; ?>/img/descarga-archivos.png"/>
                             
 								<h3 class="col-lg-4 col-md-4 col-sm-4 col-xs-3" id="titulo-archivo"> TAMBO </h3>
                             
@@ -602,7 +602,7 @@
 							<!--***** DESCARGA ***** -->
 							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6" id="descarga-margin">
                         
-								<img class="col-lg-5 col-md-5 col-sm-5 col-xs-3 img-d" src="img/descarga-archivos.png"/>
+								<img class="col-lg-5 col-md-5 col-sm-5 col-xs-3 img-d" src="<?php echo Yii::app()->request->baseUrl; ?>/img/descarga-archivos.png"/>
                             
 								<h3 class="col-lg-4 col-md-4 col-sm-4 col-xs-3" id="titulo-archivo"> CRÍA </h3>
                             
@@ -614,7 +614,7 @@
 							<!--***** DESCARGA ***** -->					   
 							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6" id="descarga-margin">
                         
-								<img class="col-lg-5 col-md-5 col-sm-5 col-xs-3 img-d" src="img/descarga-archivos.png"/>
+								<img class="col-lg-5 col-md-5 col-sm-5 col-xs-3 img-d" src="<?php echo Yii::app()->request->baseUrl; ?>/img/descarga-archivos.png"/>
                             
 								<h3 class="col-lg-4 col-md-4 col-sm-4 col-xs-3" id="titulo-archivo"> RECRÍA </h3>
                             
@@ -626,7 +626,7 @@
 							<!--***** DESCARGA ***** -->
 							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6" id="descarga-margin">
                         
-								<img class="col-lg-5 col-md-5 col-sm-5 col-xs-3 img-d" src="img/descarga-archivos.png"/>
+								<img class="col-lg-5 col-md-5 col-sm-5 col-xs-3 img-d" src="<?php echo Yii::app()->request->baseUrl; ?>/img/descarga-archivos.png"/>
                             
 								<h3 class="col-lg-7 col-md-7 col-sm-7 col-xs-3" id="titulo-archivo"> FEED-LOT </h3>
                             
@@ -639,7 +639,7 @@
 							<!--***** DESCARGA ***** -->					   
 							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6" id="descarga-margin">
                         
-								<img class="col-lg-5 col-md-5 col-sm-5 col-xs-3 img-d" src="img/descarga-archivos.png"/>
+								<img class="col-lg-5 col-md-5 col-sm-5 col-xs-3 img-d" src="<?php echo Yii::app()->request->baseUrl; ?>/img/descarga-archivos.png"/>
                             
 								<h3 class="col-lg-7 col-md-7 col-sm-7 col-xs-3" id="titulo-archivo"> Ovino Central y Norte </h3>
                             
@@ -660,14 +660,14 @@
 					
 						<div id="btn-mas" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 						
-							<img id="img-btn-mas" src="img/btn-mas.png"/>
+							<img id="img-btn-mas" src="<?php echo Yii::app()->request->baseUrl; ?>/img/btn-mas.png"/>
 							<p id="texto-btn-mas"> Trabajos técnicos </p>
 							
 							<div id="img-slide">
 							
-								<img src="img/slide-info-tec.png"/>
-								<img src="img/slide-info-tec.png"/>
-								<img src="img/slide-info-tec.png"/>
+								<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/slide-info-tec.png"/>
+								<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/slide-info-tec.png"/>
+								<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/slide-info-tec.png"/>
 							
 							</div> <!-- Termina imagen slide -->
 					
@@ -683,7 +683,7 @@
 		</section>
 
 		<!--CURVA-->	
-		<img style="width: 100%;position:relative;margin-top:-1px;display:none;" src="img/curva-celeste-abajo.png" alt="" />		
+		<img style="width: 100%;position:relative;margin-top:-1px;display:none;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-celeste-abajo.png" alt="" />		
 		<section class="special col-lg-12 col-md-12 col-sm-12 col-xs-12" data-scrollax-parent="true" style="min-height:100vh;width:100%;">
 				
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
@@ -692,7 +692,7 @@
 					
 					<!-- /////// TITULO  /////// -->
 					<div id="vade" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-							<img class="icono-menu" src="img/icono-rrhh.png"><h2 id="titulo-vad">VADEMÉCUM</h2><img src="img/icono-rrhh.png" class="icono-menu">
+							<img class="icono-menu" src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-rrhh.png"><h2 id="titulo-vad">VADEMÉCUM</h2><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-rrhh.png" class="icono-menu">
 							<div class="border-vad"></div>
 					</div> <!--Termina título vademécum-->
 					
@@ -926,7 +926,7 @@
 		<?php include('carrousel.php'); ?>
 		
 		<!--CURVA-->			
-		<img style="width: 100%;position:relative;margin-bottom:-2px;display:none;" src="img/curva-home.png" alt="" />
+		<img style="width: 100%;position:relative;margin-bottom:-2px;display:none;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-home.png" alt="" />
 	
 	
 		<!------------------------------------------------------------------ SECCION 5: REVISTA EL MOLINO ------------------------------------------------------------------>	
@@ -940,7 +940,7 @@
 					<div id="ver-revista" class="col-lg-12 col-md-12"  style="background:white; padding-bottom: 4%;">	
 						
 						<!-- IMAGEN REVISTA-->
-						<img class="col-lg-6 col-md-6"  id="img-rev" src="img/30-478x620.png"/>
+						<img class="col-lg-6 col-md-6"  id="img-rev" src="<?php echo Yii::app()->request->baseUrl; ?>/img/30-478x620.png"/>
 		
 						<!-- INFORMACIÓN REVISTA -->
 						<div id="info-revista" class="col-lg-6 col-md-6">
@@ -963,7 +963,7 @@
 	
 					</div> <!--Termina la vista de la revista-->
 					
-					<script src="js/jquery.boxloader.min.js"></script>	
+					<script src="<?php echo Yii::app()->getBaseUrl(true); ?>/js/jquery.boxloader.min.js"></script>	
 						<script type="text/javascript">
 							
 							$("#img-rev").boxLoader({
@@ -1290,14 +1290,14 @@
 			<!--*************  CONTENEDOR PRINCIPAL *********** -->
 		
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  "  id="header-rrhh" style="z-index:10;text-align:center;height:auto;">     	
-				<img src="img/fondo-obelisco.png" style="position:absolute;height:100vh;z-index:-2;display:inline-block;">
+				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/fondo-obelisco.png" style="position:absolute;height:100vh;z-index:-2;display:inline-block;">
 				<!-- ////////////// HEADER //////////// -->
 				<div id="titulo-info" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-rrhh-home" style="height:25vh;position:relative;z-index:10;">
 					
 					
 						
 						<!-- TITULO-->
-						<img class="icono-menu right" src="img/icono-rrhh.png"><h2 id="titulo-vad"><span class="border-vad-2">RRHH</span> </h2><img src="img/icono-rrhh.png" class="icono-menu left">
+						<img class="icono-menu right" src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-rrhh.png"><h2 id="titulo-vad"><span class="border-vad-2">RRHH</span> </h2><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-rrhh.png" class="icono-menu left">
 	
 							<!-- TEXTO HEADER-->
 							<h3 class="tr">TRABAJA CON NOSOTROS</h3>
@@ -1307,7 +1307,7 @@
 						
 				</div>  <!-- termina header -->
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height:0;">
-				<img id="curva-rrhh" src="img/rrhh-01.png" style="display:inline-block;width:100%;position:relative;z-index:3;">
+				<img id="curva-rrhh" src="<?php echo Yii::app()->request->baseUrl; ?>/img/rrhh-01.png" style="display:inline-block;width:100%;position:relative;z-index:3;">
 				</div>
 				
 				<div style="width:100%;display:inline-block;text-align:center;padding-bottom:10vh;margin-top:-2px;padding-top:40vh;position:relative;">
@@ -1321,7 +1321,7 @@
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height:15vh;background-color:white;"></div>
 			</div> <!-- termina contenedor principal -->
 			<!-- //////////////  IMG  DE ABAJO ////////////// -->
-				<!--<img id="rrhh-img"  src="img/rrhh-01.png" />!-->
+				<!--<img id="rrhh-img"  src="<?php echo Yii::app()->request->baseUrl; ?>/img/rrhh-01.png" />!-->
 				
 
 </section>
@@ -1333,9 +1333,9 @@
 				
 				<!-- ////////// TITULO ////////////// -->
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="display:inline-block;">
-					<h1 id="contacto" style="margin:0;"><img src="img/icono-bullet--.png"/> CONTACTO <img src="img/icono-bullet--.png" /></h1>
-					<!--<img style="width: 100%;position:relative;" class="hidden-lg hidden-md" src="img/curva-home-abajo.png" alt="" />!-->
-					<img style="width: 100%;position:relative;" class="" src="img/curva-home-abajo.png" alt="" />
+					<h1 id="contacto" style="margin:0;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-bullet--.png"/> CONTACTO <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-bullet--.png" /></h1>
+					<!--<img style="width: 100%;position:relative;" class="hidden-lg hidden-md" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-home-abajo.png" alt="" />!-->
+					<img style="width: 100%;position:relative;" class="" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-home-abajo.png" alt="" />
 				</div>
       
       
@@ -1344,7 +1344,7 @@
 					<!--********** DESCRIPCIÓN / UBICACIÓN **********  -->
 					<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12" id="descripcion" style="display:inline-block;float:initial;padding-bottom:20px;">
                         
-						<p class="ubicacion"><img class="ico-ubi" src="img/icono-ubicacion.png"/>UBICACIÓN</p>
+						<p class="ubicacion"><img class="ico-ubi" src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-ubicacion.png"/>UBICACIÓN</p>
                         
                         <p>Ruta Panamericana Km 38,5 Garín</p>
                        
