@@ -20,6 +20,10 @@ class PaisChecker extends CApplicationComponent
 			//echo "<div style='width:100%;height:20px;background-color:white;color:black;'>".$firstArg."</div>";
 			//echo "<div style='width:100%;height:20px;background-color:white;color:black;'>".$_SESSION["pais"]."</div>";
 			//echo "<div style='width:100%;height:20px;background-color:white;color:black;'>".isset($_SESSION["pais"])."</div>";
+			//$auxFeed= file_get_contents('http://api.hostip.info/get_html.php?'.$_SERVER.['REMOTE_ADDR']);
+			//echo $_SERVER['REMOTE_ADDR'];
+			//echo "<div style='width:100%;height:20px;background-color:white;color:black;'>".count($auxFeed)."</div>";
+			//echo count($auxFeed);
 			if(strlen($firstArg)==2){
 				$currentPais =Pais::model()->findByAttributes(array('short'=>$firstArg));
 				$_SESSION["pais"]= $currentPais->short;
@@ -36,6 +40,7 @@ class PaisChecker extends CApplicationComponent
 					$short= Pais::model()->findByPk($_SESSION["pais"])->short;
 					header("Location: http://".$_SERVER['SERVER_NAME']."/".$webRoot."/".$short."/".$currentUrl);
 				}else{
+					$_SESSION["redirectURL"]= $_SERVER['REQUEST_URI'];
 					header("Location: http://".$_SERVER['SERVER_NAME']."/".$webRoot."/paises");
 				}
 				

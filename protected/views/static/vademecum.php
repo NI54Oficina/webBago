@@ -60,7 +60,7 @@ function sanear_string($string)
 ?>
 <?php
 
-$productos =Producto::model()->findAllByAttributes(array('seccion'=>$data->id,"pais"=>$_SESSION["pais"]));;
+$productos =Producto::model()->findAllByAttributes(array('seccion'=>$data->id,"pais"=>1));;
 $auxLink= $data->nombre;
 $auxLink=  sanear_string($auxLink);
 $auxLink = str_replace(' ', '-', $auxLink); // Replaces all spaces with hyphens.
@@ -109,7 +109,7 @@ $auxId=0;
 		<a href="<?php echo Yii::app()->getBaseUrl(true); ?>/productos/id<?php echo $producto->id; ?>">
 		<figure class="snip1156 image">
 			<div>
-				<img style="width:45%;display:inline-block;margin:0; margin-top: 5%;" class="img-cat-aft " src="<?php echo Yii::app()->getBaseUrl(true); ?>/vademecums/<?php echo $producto->id; ?>.png" /> 
+				<img style="width:45%;display:inline-block;margin:0; margin-top: 5%;" class="img-cat-aft " src="<?php echo Yii::app()->getBaseUrl(true); ?>/vademecums/<?php echo $imagen->id; ?>.png" /> 
 				<div id="targets">
 					<?php
 					$target= $producto->target;

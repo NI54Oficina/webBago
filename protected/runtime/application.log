@@ -40330,3 +40330,727 @@ Stack trace:
 REQUEST_URI=/webBago/br/img/icono-bullet.png
 HTTP_REFERER=http://localhost/webBago/br/quienes-somos
 ---
+2016/03/17 16:16:18 [error] [php] Array to string conversion (C:\wamp\www\webBago\protected\components\PaisChecker.php:23)
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): WebController->runAction()
+#1 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): WebController->filterAccessControl()
+#4 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\webBago\yii\framework\web\CController.php(265): WebController->runActionWithFilters()
+#7 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): WebController->run()
+#8 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\wamp\www\webBago\index.php(13): CWebApplication->run()
+REQUEST_URI=/webBago/ar/lucha-contra-aftosa
+in C:\wamp\www\webBago\protected\components\PaisChecker.php (23)
+in C:\wamp\www\webBago\protected\controllers\WebController.php (75)
+in C:\wamp\www\webBago\index.php (13)
+2016/03/17 16:16:19 [error] [php] Array to string conversion (C:\wamp\www\webBago\protected\components\PaisChecker.php:23)
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): WebController->runAction()
+#1 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): WebController->filterAccessControl()
+#4 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\webBago\yii\framework\web\CController.php(265): WebController->runActionWithFilters()
+#7 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): WebController->run()
+#8 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\wamp\www\webBago\index.php(13): CWebApplication->run()
+REQUEST_URI=/webBago/ar/lucha-contra-aftosa
+in C:\wamp\www\webBago\protected\components\PaisChecker.php (23)
+in C:\wamp\www\webBago\protected\controllers\WebController.php (75)
+in C:\wamp\www\webBago\index.php (13)
+2016/03/17 16:36:42 [error] [php] Array to string conversion (C:\wamp\www\webBago\protected\components\PaisChecker.php:23)
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): WebController->runAction()
+#1 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): WebController->filterAccessControl()
+#4 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\webBago\yii\framework\web\CController.php(265): WebController->runActionWithFilters()
+#7 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): WebController->run()
+#8 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\wamp\www\webBago\index.php(13): CWebApplication->run()
+REQUEST_URI=/webBago/ar/lucha-contra-aftosa
+in C:\wamp\www\webBago\protected\components\PaisChecker.php (23)
+in C:\wamp\www\webBago\protected\controllers\WebController.php (75)
+in C:\wamp\www\webBago\index.php (13)
+2016/03/17 16:37:02 [error] [php] Array to string conversion (C:\wamp\www\webBago\protected\components\PaisChecker.php:23)
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): WebController->runAction()
+#1 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): WebController->filterAccessControl()
+#4 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\webBago\yii\framework\web\CController.php(265): WebController->runActionWithFilters()
+#7 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): WebController->run()
+#8 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\wamp\www\webBago\index.php(13): CWebApplication->run()
+REQUEST_URI=/webBago/ar/lucha-contra-aftosa
+in C:\wamp\www\webBago\protected\components\PaisChecker.php (23)
+in C:\wamp\www\webBago\protected\controllers\WebController.php (75)
+in C:\wamp\www\webBago\index.php (13)
+2016/03/17 16:37:36 [error] [php] Array to string conversion (C:\wamp\www\webBago\protected\components\PaisChecker.php:23)
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): WebController->runAction()
+#1 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): WebController->filterAccessControl()
+#4 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\webBago\yii\framework\web\CController.php(265): WebController->runActionWithFilters()
+#7 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): WebController->run()
+#8 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\wamp\www\webBago\index.php(13): CWebApplication->run()
+REQUEST_URI=/webBago/ar/lucha-contra-aftosa
+in C:\wamp\www\webBago\protected\components\PaisChecker.php (23)
+in C:\wamp\www\webBago\protected\controllers\WebController.php (75)
+in C:\wamp\www\webBago\index.php (13)
+2016/03/17 16:37:53 [error] [php] Array to string conversion (C:\wamp\www\webBago\protected\components\PaisChecker.php:23)
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): WebController->runAction()
+#1 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): WebController->filterAccessControl()
+#4 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\webBago\yii\framework\web\CController.php(265): WebController->runActionWithFilters()
+#7 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): WebController->run()
+#8 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\wamp\www\webBago\index.php(13): CWebApplication->run()
+REQUEST_URI=/webBago/ar/lucha-contra-aftosa
+in C:\wamp\www\webBago\protected\components\PaisChecker.php (23)
+in C:\wamp\www\webBago\protected\controllers\WebController.php (75)
+in C:\wamp\www\webBago\index.php (13)
+2016/03/17 16:38:04 [error] [php] Array to string conversion (C:\wamp\www\webBago\protected\components\PaisChecker.php:23)
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): WebController->runAction()
+#1 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): WebController->filterAccessControl()
+#4 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\webBago\yii\framework\web\CController.php(265): WebController->runActionWithFilters()
+#7 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): WebController->run()
+#8 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\wamp\www\webBago\index.php(13): CWebApplication->run()
+REQUEST_URI=/webBago/ar/lucha-contra-aftosa
+in C:\wamp\www\webBago\protected\components\PaisChecker.php (23)
+in C:\wamp\www\webBago\protected\controllers\WebController.php (75)
+in C:\wamp\www\webBago\index.php (13)
+2016/03/17 16:38:22 [error] [php] Array to string conversion (C:\wamp\www\webBago\protected\components\PaisChecker.php:23)
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): WebController->runAction()
+#1 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): WebController->filterAccessControl()
+#4 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\webBago\yii\framework\web\CController.php(265): WebController->runActionWithFilters()
+#7 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): WebController->run()
+#8 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\wamp\www\webBago\index.php(13): CWebApplication->run()
+REQUEST_URI=/webBago/ar/lucha-contra-aftosa
+in C:\wamp\www\webBago\protected\components\PaisChecker.php (23)
+in C:\wamp\www\webBago\protected\controllers\WebController.php (75)
+in C:\wamp\www\webBago\index.php (13)
+2016/03/17 16:38:55 [error] [php] Array to string conversion (C:\wamp\www\webBago\protected\components\PaisChecker.php:24)
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): WebController->runAction()
+#1 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): WebController->filterAccessControl()
+#4 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\webBago\yii\framework\web\CController.php(265): WebController->runActionWithFilters()
+#7 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): WebController->run()
+#8 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\wamp\www\webBago\index.php(13): CWebApplication->run()
+REQUEST_URI=/webBago/ar/lucha-contra-aftosa
+in C:\wamp\www\webBago\protected\components\PaisChecker.php (24)
+in C:\wamp\www\webBago\protected\controllers\WebController.php (75)
+in C:\wamp\www\webBago\index.php (13)
+2016/03/17 16:53:32 [error] [php] Array to string conversion (C:\wamp\www\webBago\protected\components\PaisChecker.php:24)
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): WebController->runAction()
+#1 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): WebController->filterAccessControl()
+#4 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\webBago\yii\framework\web\CController.php(265): WebController->runActionWithFilters()
+#7 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): WebController->run()
+#8 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\wamp\www\webBago\index.php(13): CWebApplication->run()
+REQUEST_URI=/webBago/ar/lucha-contra-aftosa
+in C:\wamp\www\webBago\protected\components\PaisChecker.php (24)
+in C:\wamp\www\webBago\protected\controllers\WebController.php (75)
+in C:\wamp\www\webBago\index.php (13)
+2016/03/17 17:08:46 [error] [php] Trying to get property of non-object (C:\wamp\www\webBago\protected\components\PaisChecker.php:40)
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): WebController->runAction()
+#1 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): WebController->filterAccessControl()
+#4 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\webBago\yii\framework\web\CController.php(265): WebController->runActionWithFilters()
+#7 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): WebController->run()
+#8 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\wamp\www\webBago\index.php(13): CWebApplication->run()
+REQUEST_URI=/webBago/vademecum/id1
+in C:\wamp\www\webBago\protected\components\PaisChecker.php (40)
+in C:\wamp\www\webBago\protected\controllers\WebController.php (75)
+in C:\wamp\www\webBago\index.php (13)
+2016/03/17 17:09:46 [error] [php] Trying to get property of non-object (C:\wamp\www\webBago\protected\components\PaisChecker.php:40)
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): WebController->runAction()
+#1 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): WebController->filterAccessControl()
+#4 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\webBago\yii\framework\web\CController.php(265): WebController->runActionWithFilters()
+#7 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): WebController->run()
+#8 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\wamp\www\webBago\index.php(13): CWebApplication->run()
+REQUEST_URI=/webBago/
+in C:\wamp\www\webBago\protected\components\PaisChecker.php (40)
+in C:\wamp\www\webBago\protected\controllers\WebController.php (75)
+in C:\wamp\www\webBago\index.php (13)
+2016/03/17 17:09:53 [error] [php] Trying to get property of non-object (C:\wamp\www\webBago\protected\components\PaisChecker.php:40)
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): WebController->runAction()
+#1 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): WebController->filterAccessControl()
+#4 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\webBago\yii\framework\web\CController.php(265): WebController->runActionWithFilters()
+#7 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): WebController->run()
+#8 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\wamp\www\webBago\index.php(13): CWebApplication->run()
+REQUEST_URI=/webBago/vademecum/id1
+in C:\wamp\www\webBago\protected\components\PaisChecker.php (40)
+in C:\wamp\www\webBago\protected\controllers\WebController.php (75)
+in C:\wamp\www\webBago\index.php (13)
+2016/03/17 17:15:29 [error] [php] Trying to get property of non-object (C:\wamp\www\webBago\protected\components\PaisChecker.php:40)
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): WebController->runAction()
+#1 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): WebController->filterAccessControl()
+#4 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\webBago\yii\framework\web\CController.php(265): WebController->runActionWithFilters()
+#7 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): WebController->run()
+#8 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\wamp\www\webBago\index.php(13): CWebApplication->run()
+REQUEST_URI=/webBago/
+in C:\wamp\www\webBago\protected\components\PaisChecker.php (40)
+in C:\wamp\www\webBago\protected\controllers\WebController.php (75)
+in C:\wamp\www\webBago\index.php (13)
+2016/03/17 17:20:35 [error] [php] Undefined variable: short (C:\wamp\www\webBago\yii\framework\web\CHttpRequest.php:399)
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(140): EDbUrlManager->parseUrl()
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CWebApplication->run()
+REQUEST_URI=/webBago/ar/
+in C:\wamp\www\webBago\index.php (13)
+2016/03/17 17:20:37 [error] [php] Undefined variable: short (C:\wamp\www\webBago\yii\framework\web\CHttpRequest.php:399)
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(140): EDbUrlManager->parseUrl()
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CWebApplication->run()
+REQUEST_URI=/webBago/ar/%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Trying%20to%20get%20property%20of%20non-object%20in%20%3Cb%3EC:/wamp/www/webBago/yii/framework/web/CHttpRequest.php%3C/b%3E%20on%20line%20%3Cb%3E394%3C/b%3E%3Cbr%20/%3E/webBago/css/main.css
+in C:\wamp\www\webBago\index.php (13)
+2016/03/17 17:20:37 [error] [php] Undefined variable: short (C:\wamp\www\webBago\yii\framework\web\CHttpRequest.php:399)
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(140): EDbUrlManager->parseUrl()
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CWebApplication->run()
+REQUEST_URI=/webBago/ar/%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Trying%20to%20get%20property%20of%20non-object%20in%20%3Cb%3EC:/wamp/www/webBago/yii/framework/web/CHttpRequest.php%3C/b%3E%20on%20line%20%3Cb%3E394%3C/b%3E%3Cbr%20/%3E/webBago/css/screen.css
+in C:\wamp\www\webBago\index.php (13)
+2016/03/17 17:20:37 [error] [php] Undefined variable: short (C:\wamp\www\webBago\yii\framework\web\CHttpRequest.php:399)
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(140): EDbUrlManager->parseUrl()
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CWebApplication->run()
+REQUEST_URI=/webBago/ar/%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Trying%20to%20get%20property%20of%20non-object%20in%20%3Cb%3EC:/wamp/www/webBago/yii/framework/web/CHttpRequest.php%3C/b%3E%20on%20line%20%3Cb%3E394%3C/b%3E%3Cbr%20/%3E/webBago/css/bootstrap-theme.css
+in C:\wamp\www\webBago\index.php (13)
+2016/03/17 17:20:37 [error] [php] Undefined variable: short (C:\wamp\www\webBago\yii\framework\web\CHttpRequest.php:399)
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(140): EDbUrlManager->parseUrl()
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CWebApplication->run()
+REQUEST_URI=/webBago/ar/%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Trying%20to%20get%20property%20of%20non-object%20in%20%3Cb%3EC:/wamp/www/webBago/yii/framework/web/CHttpRequest.php%3C/b%3E%20on%20line%20%3Cb%3E394%3C/b%3E%3Cbr%20/%3E/webBago/css/bootstrap.css
+in C:\wamp\www\webBago\index.php (13)
+2016/03/17 17:20:37 [error] [php] Undefined variable: short (C:\wamp\www\webBago\yii\framework\web\CHttpRequest.php:399)
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(140): EDbUrlManager->parseUrl()
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CWebApplication->run()
+REQUEST_URI=/webBago/ar/%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Trying%20to%20get%20property%20of%20non-object%20in%20%3Cb%3EC:/wamp/www/webBago/yii/framework/web/CHttpRequest.php%3C/b%3E%20on%20line%20%3Cb%3E394%3C/b%3E%3Cbr%20/%3E/webBago/css/form.css
+in C:\wamp\www\webBago\index.php (13)
+2016/03/17 17:20:37 [error] [php] Undefined variable: short (C:\wamp\www\webBago\yii\framework\web\CHttpRequest.php:399)
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(140): EDbUrlManager->parseUrl()
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CWebApplication->run()
+REQUEST_URI=/webBago/ar/%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Trying%20to%20get%20property%20of%20non-object%20in%20%3Cb%3EC:/wamp/www/webBago/yii/framework/web/CHttpRequest.php%3C/b%3E%20on%20line%20%3Cb%3E394%3C/b%3E%3Cbr%20/%3E/webBago/css/dropzone.css
+in C:\wamp\www\webBago\index.php (13)
+2016/03/17 17:20:38 [error] [php] Undefined variable: short (C:\wamp\www\webBago\yii\framework\web\CHttpRequest.php:399)
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(140): EDbUrlManager->parseUrl()
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CWebApplication->run()
+REQUEST_URI=/webBago/ar/%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Trying%20to%20get%20property%20of%20non-object%20in%20%3Cb%3EC:/wamp/www/webBago/yii/framework/web/CHttpRequest.php%3C/b%3E%20on%20line%20%3Cb%3E394%3C/b%3E%3Cbr%20/%3E/webBago/js/jquery-1.11.2.min.js
+in C:\wamp\www\webBago\index.php (13)
+2016/03/17 17:20:39 [error] [php] Undefined variable: short (C:\wamp\www\webBago\yii\framework\web\CHttpRequest.php:399)
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(140): EDbUrlManager->parseUrl()
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CWebApplication->run()
+REQUEST_URI=/webBago/ar/%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Trying%20to%20get%20property%20of%20non-object%20in%20%3Cb%3EC:/wamp/www/webBago/yii/framework/web/CHttpRequest.php%3C/b%3E%20on%20line%20%3Cb%3E394%3C/b%3E%3Cbr%20/%3E/webBago/js/jquery.validate.min.js
+in C:\wamp\www\webBago\index.php (13)
+2016/03/17 17:20:40 [error] [php] Undefined variable: short (C:\wamp\www\webBago\yii\framework\web\CHttpRequest.php:399)
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(140): EDbUrlManager->parseUrl()
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CWebApplication->run()
+REQUEST_URI=/webBago/ar/%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Trying%20to%20get%20property%20of%20non-object%20in%20%3Cb%3EC:/wamp/www/webBago/yii/framework/web/CHttpRequest.php%3C/b%3E%20on%20line%20%3Cb%3E394%3C/b%3E%3Cbr%20/%3E/webBago/js/bootstrap.js
+in C:\wamp\www\webBago\index.php (13)
+2016/03/17 17:20:42 [error] [php] Undefined variable: short (C:\wamp\www\webBago\yii\framework\web\CHttpRequest.php:399)
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(140): EDbUrlManager->parseUrl()
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CWebApplication->run()
+REQUEST_URI=/webBago/ar/%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Trying%20to%20get%20property%20of%20non-object%20in%20%3Cb%3EC:/wamp/www/webBago/yii/framework/web/CHttpRequest.php%3C/b%3E%20on%20line%20%3Cb%3E394%3C/b%3E%3Cbr%20/%3E/webBago/js/dropzone.js
+in C:\wamp\www\webBago\index.php (13)
+2016/03/17 17:20:43 [error] [php] Undefined variable: short (C:\wamp\www\webBago\yii\framework\web\CHttpRequest.php:399)
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(140): EDbUrlManager->parseUrl()
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CWebApplication->run()
+REQUEST_URI=/webBago/ar/%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Trying%20to%20get%20property%20of%20non-object%20in%20%3Cb%3EC:/wamp/www/webBago/yii/framework/web/CHttpRequest.php%3C/b%3E%20on%20line%20%3Cb%3E394%3C/b%3E%3Cbr%20/%3E/webBago/ckeditor/ckeditor.js
+in C:\wamp\www\webBago\index.php (13)
+2016/03/17 17:20:44 [error] [php] Undefined variable: short (C:\wamp\www\webBago\yii\framework\web\CHttpRequest.php:399)
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(140): EDbUrlManager->parseUrl()
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CWebApplication->run()
+REQUEST_URI=/webBago/ar/%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Trying%20to%20get%20property%20of%20non-object%20in%20%3Cb%3EC:/wamp/www/webBago/yii/framework/web/CHttpRequest.php%3C/b%3E%20on%20line%20%3Cb%3E394%3C/b%3E%3Cbr%20/%3E/webBago/css/print.css
+in C:\wamp\www\webBago\index.php (13)
+2016/03/17 17:20:50 [error] [php] Undefined variable: short (C:\wamp\www\webBago\yii\framework\web\CHttpRequest.php:399)
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(140): EDbUrlManager->parseUrl()
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CWebApplication->run()
+REQUEST_URI=/webBago/ar/%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Trying%20to%20get%20property%20of%20non-object%20in%20%3Cb%3EC:/wamp/www/webBago/yii/framework/web/CHttpRequest.php%3C/b%3E%20on%20line%20%3Cb%3E394%3C/b%3E%3Cbr%20/%3E/webBago/images/loading.gif
+in C:\wamp\www\webBago\index.php (13)
+2016/03/17 17:21:30 [error] [php] Undefined variable: short (C:\wamp\www\webBago\yii\framework\web\CHttpRequest.php:399)
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(140): EDbUrlManager->parseUrl()
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CWebApplication->run()
+REQUEST_URI=/webBago/ar/
+in C:\wamp\www\webBago\index.php (13)
+2016/03/17 17:21:32 [error] [php] Undefined variable: short (C:\wamp\www\webBago\yii\framework\web\CHttpRequest.php:399)
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(140): EDbUrlManager->parseUrl()
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CWebApplication->run()
+REQUEST_URI=/webBago/ar/%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Trying%20to%20get%20property%20of%20non-object%20in%20%3Cb%3EC:/wamp/www/webBago/yii/framework/web/CHttpRequest.php%3C/b%3E%20on%20line%20%3Cb%3E394%3C/b%3E%3Cbr%20/%3E/webBago/css/form.css
+in C:\wamp\www\webBago\index.php (13)
+2016/03/17 17:21:32 [error] [php] Undefined variable: short (C:\wamp\www\webBago\yii\framework\web\CHttpRequest.php:399)
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(140): EDbUrlManager->parseUrl()
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CWebApplication->run()
+REQUEST_URI=/webBago/ar/%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Trying%20to%20get%20property%20of%20non-object%20in%20%3Cb%3EC:/wamp/www/webBago/yii/framework/web/CHttpRequest.php%3C/b%3E%20on%20line%20%3Cb%3E394%3C/b%3E%3Cbr%20/%3E/webBago/css/dropzone.css
+in C:\wamp\www\webBago\index.php (13)
+2016/03/17 17:21:32 [error] [php] Undefined variable: short (C:\wamp\www\webBago\yii\framework\web\CHttpRequest.php:399)
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(140): EDbUrlManager->parseUrl()
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CWebApplication->run()
+REQUEST_URI=/webBago/ar/%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Trying%20to%20get%20property%20of%20non-object%20in%20%3Cb%3EC:/wamp/www/webBago/yii/framework/web/CHttpRequest.php%3C/b%3E%20on%20line%20%3Cb%3E394%3C/b%3E%3Cbr%20/%3E/webBago/css/bootstrap-theme.css
+in C:\wamp\www\webBago\index.php (13)
+2016/03/17 17:21:32 [error] [php] Undefined variable: short (C:\wamp\www\webBago\yii\framework\web\CHttpRequest.php:399)
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(140): EDbUrlManager->parseUrl()
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CWebApplication->run()
+REQUEST_URI=/webBago/ar/%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Trying%20to%20get%20property%20of%20non-object%20in%20%3Cb%3EC:/wamp/www/webBago/yii/framework/web/CHttpRequest.php%3C/b%3E%20on%20line%20%3Cb%3E394%3C/b%3E%3Cbr%20/%3E/webBago/css/main.css
+in C:\wamp\www\webBago\index.php (13)
+2016/03/17 17:21:32 [error] [php] Undefined variable: short (C:\wamp\www\webBago\yii\framework\web\CHttpRequest.php:399)
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(140): EDbUrlManager->parseUrl()
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CWebApplication->run()
+REQUEST_URI=/webBago/ar/%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Trying%20to%20get%20property%20of%20non-object%20in%20%3Cb%3EC:/wamp/www/webBago/yii/framework/web/CHttpRequest.php%3C/b%3E%20on%20line%20%3Cb%3E394%3C/b%3E%3Cbr%20/%3E/webBago/css/screen.css
+in C:\wamp\www\webBago\index.php (13)
+2016/03/17 17:21:32 [error] [php] Undefined variable: short (C:\wamp\www\webBago\yii\framework\web\CHttpRequest.php:399)
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(140): EDbUrlManager->parseUrl()
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CWebApplication->run()
+REQUEST_URI=/webBago/ar/%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Trying%20to%20get%20property%20of%20non-object%20in%20%3Cb%3EC:/wamp/www/webBago/yii/framework/web/CHttpRequest.php%3C/b%3E%20on%20line%20%3Cb%3E394%3C/b%3E%3Cbr%20/%3E/webBago/css/bootstrap.css
+in C:\wamp\www\webBago\index.php (13)
+2016/03/17 17:21:33 [error] [php] Undefined variable: short (C:\wamp\www\webBago\yii\framework\web\CHttpRequest.php:399)
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(140): EDbUrlManager->parseUrl()
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CWebApplication->run()
+REQUEST_URI=/webBago/ar/%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Trying%20to%20get%20property%20of%20non-object%20in%20%3Cb%3EC:/wamp/www/webBago/yii/framework/web/CHttpRequest.php%3C/b%3E%20on%20line%20%3Cb%3E394%3C/b%3E%3Cbr%20/%3E/webBago/js/jquery-1.11.2.min.js
+in C:\wamp\www\webBago\index.php (13)
+2016/03/17 17:21:34 [error] [php] Undefined variable: short (C:\wamp\www\webBago\yii\framework\web\CHttpRequest.php:399)
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(140): EDbUrlManager->parseUrl()
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CWebApplication->run()
+REQUEST_URI=/webBago/ar/%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Trying%20to%20get%20property%20of%20non-object%20in%20%3Cb%3EC:/wamp/www/webBago/yii/framework/web/CHttpRequest.php%3C/b%3E%20on%20line%20%3Cb%3E394%3C/b%3E%3Cbr%20/%3E/webBago/js/jquery.validate.min.js
+in C:\wamp\www\webBago\index.php (13)
+2016/03/17 17:21:36 [error] [php] Undefined variable: short (C:\wamp\www\webBago\yii\framework\web\CHttpRequest.php:399)
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(140): EDbUrlManager->parseUrl()
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CWebApplication->run()
+REQUEST_URI=/webBago/ar/%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Trying%20to%20get%20property%20of%20non-object%20in%20%3Cb%3EC:/wamp/www/webBago/yii/framework/web/CHttpRequest.php%3C/b%3E%20on%20line%20%3Cb%3E394%3C/b%3E%3Cbr%20/%3E/webBago/js/bootstrap.js
+in C:\wamp\www\webBago\index.php (13)
+2016/03/17 17:21:37 [error] [php] Undefined variable: short (C:\wamp\www\webBago\yii\framework\web\CHttpRequest.php:399)
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(140): EDbUrlManager->parseUrl()
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CWebApplication->run()
+REQUEST_URI=/webBago/ar/%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Trying%20to%20get%20property%20of%20non-object%20in%20%3Cb%3EC:/wamp/www/webBago/yii/framework/web/CHttpRequest.php%3C/b%3E%20on%20line%20%3Cb%3E394%3C/b%3E%3Cbr%20/%3E/webBago/js/dropzone.js
+in C:\wamp\www\webBago\index.php (13)
+2016/03/17 17:21:38 [error] [php] Undefined variable: short (C:\wamp\www\webBago\yii\framework\web\CHttpRequest.php:399)
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(140): EDbUrlManager->parseUrl()
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CWebApplication->run()
+REQUEST_URI=/webBago/ar/%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Trying%20to%20get%20property%20of%20non-object%20in%20%3Cb%3EC:/wamp/www/webBago/yii/framework/web/CHttpRequest.php%3C/b%3E%20on%20line%20%3Cb%3E394%3C/b%3E%3Cbr%20/%3E/webBago/ckeditor/ckeditor.js
+in C:\wamp\www\webBago\index.php (13)
+2016/03/17 17:21:39 [error] [php] Undefined variable: short (C:\wamp\www\webBago\yii\framework\web\CHttpRequest.php:399)
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(140): EDbUrlManager->parseUrl()
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CWebApplication->run()
+REQUEST_URI=/webBago/ar/%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Trying%20to%20get%20property%20of%20non-object%20in%20%3Cb%3EC:/wamp/www/webBago/yii/framework/web/CHttpRequest.php%3C/b%3E%20on%20line%20%3Cb%3E394%3C/b%3E%3Cbr%20/%3E/webBago/css/print.css
+in C:\wamp\www\webBago\index.php (13)
+2016/03/17 17:21:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ar/<br /><b>Notice</b>:  Trying to get property of non-object in <b>C:/wamp/www/webBago/yii/framework/web/CHttpRequest.php</b> on line <b>394</b><br />/webBago/images/loading.gif".' in C:\wamp\www\webBago\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('ar/<br /><b>Not...')
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/webBago/ar/%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Trying%20to%20get%20property%20of%20non-object%20in%20%3Cb%3EC:/wamp/www/webBago/yii/framework/web/CHttpRequest.php%3C/b%3E%20on%20line%20%3Cb%3E394%3C/b%3E%3Cbr%20/%3E/webBago/images/loading.gif
+HTTP_REFERER=http://localhost/webBago/ar/
+---
+2016/03/17 17:21:50 [error] [php] Trying to get property of non-object (C:\wamp\www\webBago\yii\framework\web\CHttpRequest.php:395)
+Stack trace:
+#0 C:\wamp\www\webBago\protected\views\static\head-index.php(1): include()
+#1 C:\wamp\www\webBago\protected\views\static\home.php(1): include()
+#2 C:\wamp\www\webBago\yii\framework\web\CBaseController.php(126): require()
+#3 C:\wamp\www\webBago\yii\framework\web\CBaseController.php(95): WebController->renderInternal()
+#4 C:\wamp\www\webBago\yii\framework\web\CController.php(869): WebController->renderFile()
+#5 C:\wamp\www\webBago\protected\controllers\WebController.php(68): WebController->renderPartial()
+#6 unknown(0): WebController->actionGet()
+#7 C:\wamp\www\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#8 C:\wamp\www\webBago\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#9 C:\wamp\www\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#10 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): WebController->runAction()
+#11 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#13 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): WebController->filterAccessControl()
+#14 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#15 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\wamp\www\webBago\yii\framework\web\CController.php(265): WebController->runActionWithFilters()
+#17 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): WebController->run()
+#18 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#19 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#20 C:\wamp\www\webBago\index.php(13): CWebApplication->run()
+REQUEST_URI=/webBago/ar/
+in C:\wamp\www\webBago\protected\views\static\head.php (15)
+in C:\wamp\www\webBago\protected\views\static\head-index.php (1)
+in C:\wamp\www\webBago\protected\views\static\home.php (1)
+2016/03/17 17:21:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ar/<br /><b>Notice</b>:  Undefined property: CmsCHttpRequest::$baseUrl in <b>C:/wamp/www/webBago/protected/views/layouts/main.php</b> on line <b>9</b><br />/css/screen.css".' in C:\wamp\www\webBago\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('ar/<br /><b>Not...')
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/webBago/ar/%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Undefined%20property:%20CmsCHttpRequest::$baseUrl%20in%20%3Cb%3EC:/wamp/www/webBago/protected/views/layouts/main.php%3C/b%3E%20on%20line%20%3Cb%3E9%3C/b%3E%3Cbr%20/%3E/css/screen.css
+HTTP_REFERER=http://localhost/webBago/ar/
+---
+2016/03/17 17:21:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ar/<br /><b>Notice</b>:  Undefined property: CmsCHttpRequest::$baseUrl in <b>C:/wamp/www/webBago/protected/views/layouts/main.php</b> on line <b>19</b><br />/css/bootstrap-theme.css".' in C:\wamp\www\webBago\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('ar/<br /><b>Not...')
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/webBago/ar/%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Undefined%20property:%20CmsCHttpRequest::$baseUrl%20in%20%3Cb%3EC:/wamp/www/webBago/protected/views/layouts/main.php%3C/b%3E%20on%20line%20%3Cb%3E19%3C/b%3E%3Cbr%20/%3E/css/bootstrap-theme.css
+HTTP_REFERER=http://localhost/webBago/ar/
+---
+2016/03/17 17:21:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ar/<br /><b>Notice</b>:  Undefined property: CmsCHttpRequest::$baseUrl in <b>C:/wamp/www/webBago/protected/views/layouts/main.php</b> on line <b>20</b><br />/css/bootstrap.css".' in C:\wamp\www\webBago\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('ar/<br /><b>Not...')
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/webBago/ar/%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Undefined%20property:%20CmsCHttpRequest::$baseUrl%20in%20%3Cb%3EC:/wamp/www/webBago/protected/views/layouts/main.php%3C/b%3E%20on%20line%20%3Cb%3E20%3C/b%3E%3Cbr%20/%3E/css/bootstrap.css
+HTTP_REFERER=http://localhost/webBago/ar/
+---
+2016/03/17 17:21:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ar/<br /><b>Notice</b>:  Undefined property: CmsCHttpRequest::$baseUrl in <b>C:/wamp/www/webBago/protected/views/layouts/main.php</b> on line <b>16</b><br />/css/form.css".' in C:\wamp\www\webBago\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('ar/<br /><b>Not...')
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/webBago/ar/%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Undefined%20property:%20CmsCHttpRequest::$baseUrl%20in%20%3Cb%3EC:/wamp/www/webBago/protected/views/layouts/main.php%3C/b%3E%20on%20line%20%3Cb%3E16%3C/b%3E%3Cbr%20/%3E/css/form.css
+HTTP_REFERER=http://localhost/webBago/ar/
+---
+2016/03/17 17:21:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ar/<br /><b>Notice</b>:  Undefined property: CmsCHttpRequest::$baseUrl in <b>C:/wamp/www/webBago/protected/views/layouts/main.php</b> on line <b>21</b><br />/css/dropzone.css".' in C:\wamp\www\webBago\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('ar/<br /><b>Not...')
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/webBago/ar/%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Undefined%20property:%20CmsCHttpRequest::$baseUrl%20in%20%3Cb%3EC:/wamp/www/webBago/protected/views/layouts/main.php%3C/b%3E%20on%20line%20%3Cb%3E21%3C/b%3E%3Cbr%20/%3E/css/dropzone.css
+HTTP_REFERER=http://localhost/webBago/ar/
+---
+2016/03/17 17:21:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ar/<br /><b>Notice</b>:  Undefined property: CmsCHttpRequest::$baseUrl in <b>C:/wamp/www/webBago/protected/views/layouts/main.php</b> on line <b>15</b><br />/css/main.css".' in C:\wamp\www\webBago\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('ar/<br /><b>Not...')
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/webBago/ar/%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Undefined%20property:%20CmsCHttpRequest::$baseUrl%20in%20%3Cb%3EC:/wamp/www/webBago/protected/views/layouts/main.php%3C/b%3E%20on%20line%20%3Cb%3E15%3C/b%3E%3Cbr%20/%3E/css/main.css
+HTTP_REFERER=http://localhost/webBago/ar/
+---
+2016/03/17 17:21:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ar/<br /><b>Notice</b>:  Undefined property: CmsCHttpRequest::$baseUrl in <b>C:/wamp/www/webBago/protected/views/layouts/main.php</b> on line <b>24</b><br />/js/jquery-1.11.2.min.js".' in C:\wamp\www\webBago\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('ar/<br /><b>Not...')
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/webBago/ar/%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Undefined%20property:%20CmsCHttpRequest::$baseUrl%20in%20%3Cb%3EC:/wamp/www/webBago/protected/views/layouts/main.php%3C/b%3E%20on%20line%20%3Cb%3E24%3C/b%3E%3Cbr%20/%3E/js/jquery-1.11.2.min.js
+HTTP_REFERER=http://localhost/webBago/ar/
+---
+2016/03/17 17:21:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ar/<br /><b>Notice</b>:  Undefined property: CmsCHttpRequest::$baseUrl in <b>C:/wamp/www/webBago/protected/views/layouts/main.php</b> on line <b>25</b><br />/js/jquery.validate.min.js".' in C:\wamp\www\webBago\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('ar/<br /><b>Not...')
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/webBago/ar/%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Undefined%20property:%20CmsCHttpRequest::$baseUrl%20in%20%3Cb%3EC:/wamp/www/webBago/protected/views/layouts/main.php%3C/b%3E%20on%20line%20%3Cb%3E25%3C/b%3E%3Cbr%20/%3E/js/jquery.validate.min.js
+HTTP_REFERER=http://localhost/webBago/ar/
+---
+2016/03/17 17:21:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ar/<br /><b>Notice</b>:  Undefined property: CmsCHttpRequest::$baseUrl in <b>C:/wamp/www/webBago/protected/views/layouts/main.php</b> on line <b>26</b><br />/js/bootstrap.js".' in C:\wamp\www\webBago\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('ar/<br /><b>Not...')
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/webBago/ar/%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Undefined%20property:%20CmsCHttpRequest::$baseUrl%20in%20%3Cb%3EC:/wamp/www/webBago/protected/views/layouts/main.php%3C/b%3E%20on%20line%20%3Cb%3E26%3C/b%3E%3Cbr%20/%3E/js/bootstrap.js
+HTTP_REFERER=http://localhost/webBago/ar/
+---
+2016/03/17 17:21:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ar/<br /><b>Notice</b>:  Undefined property: CmsCHttpRequest::$baseUrl in <b>C:/wamp/www/webBago/protected/views/layouts/main.php</b> on line <b>27</b><br />/js/dropzone.js".' in C:\wamp\www\webBago\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('ar/<br /><b>Not...')
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/webBago/ar/%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Undefined%20property:%20CmsCHttpRequest::$baseUrl%20in%20%3Cb%3EC:/wamp/www/webBago/protected/views/layouts/main.php%3C/b%3E%20on%20line%20%3Cb%3E27%3C/b%3E%3Cbr%20/%3E/js/dropzone.js
+HTTP_REFERER=http://localhost/webBago/ar/
+---
+2016/03/17 17:21:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ar/<br /><b>Notice</b>:  Undefined property: CmsCHttpRequest::$baseUrl in <b>C:/wamp/www/webBago/protected/views/layouts/main.php</b> on line <b>28</b><br />/ckeditor/ckeditor.js".' in C:\wamp\www\webBago\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('ar/<br /><b>Not...')
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/webBago/ar/%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Undefined%20property:%20CmsCHttpRequest::$baseUrl%20in%20%3Cb%3EC:/wamp/www/webBago/protected/views/layouts/main.php%3C/b%3E%20on%20line%20%3Cb%3E28%3C/b%3E%3Cbr%20/%3E/ckeditor/ckeditor.js
+HTTP_REFERER=http://localhost/webBago/ar/
+---
+2016/03/17 17:21:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ar/<br /><b>Notice</b>:  Undefined property: CmsCHttpRequest::$baseUrl in <b>C:/wamp/www/webBago/protected/views/layouts/main.php</b> on line <b>10</b><br />/css/print.css".' in C:\wamp\www\webBago\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('ar/<br /><b>Not...')
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/webBago/ar/%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Undefined%20property:%20CmsCHttpRequest::$baseUrl%20in%20%3Cb%3EC:/wamp/www/webBago/protected/views/layouts/main.php%3C/b%3E%20on%20line%20%3Cb%3E10%3C/b%3E%3Cbr%20/%3E/css/print.css
+HTTP_REFERER=http://localhost/webBago/ar/
+---
+2016/03/17 17:22:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ar/<br /><b>Notice</b>:  Undefined property: CmsCHttpRequest::$baseUrl in <b>C:/wamp/www/webBago/protected/views/layouts/main.php</b> on line <b>55</b><br />/images/loading.gif".' in C:\wamp\www\webBago\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('ar/<br /><b>Not...')
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/webBago/ar/%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Undefined%20property:%20CmsCHttpRequest::$baseUrl%20in%20%3Cb%3EC:/wamp/www/webBago/protected/views/layouts/main.php%3C/b%3E%20on%20line%20%3Cb%3E55%3C/b%3E%3Cbr%20/%3E/images/loading.gif
+HTTP_REFERER=http://localhost/webBago/ar/
+---
+2016/03/17 17:23:01 [error] [php] Trying to get property of non-object (C:\wamp\www\webBago\yii\framework\web\CHttpRequest.php:395)
+Stack trace:
+#0 C:\wamp\www\webBago\protected\views\static\head-index.php(1): include()
+#1 C:\wamp\www\webBago\protected\views\static\home.php(1): include()
+#2 C:\wamp\www\webBago\yii\framework\web\CBaseController.php(126): require()
+#3 C:\wamp\www\webBago\yii\framework\web\CBaseController.php(95): WebController->renderInternal()
+#4 C:\wamp\www\webBago\yii\framework\web\CController.php(869): WebController->renderFile()
+#5 C:\wamp\www\webBago\protected\controllers\WebController.php(68): WebController->renderPartial()
+#6 unknown(0): WebController->actionGet()
+#7 C:\wamp\www\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#8 C:\wamp\www\webBago\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#9 C:\wamp\www\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#10 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): WebController->runAction()
+#11 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#13 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): WebController->filterAccessControl()
+#14 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#15 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\wamp\www\webBago\yii\framework\web\CController.php(265): WebController->runActionWithFilters()
+#17 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): WebController->run()
+#18 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#19 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#20 C:\wamp\www\webBago\index.php(13): CWebApplication->run()
+REQUEST_URI=/webBago/ar/
+in C:\wamp\www\webBago\protected\views\static\head.php (15)
+in C:\wamp\www\webBago\protected\views\static\head-index.php (1)
+in C:\wamp\www\webBago\protected\views\static\home.php (1)
+2016/03/17 17:23:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ar/<br /><b>Notice</b>:  Undefined property: CmsCHttpRequest::$baseUrl in <b>C:/wamp/www/webBago/protected/views/layouts/main.php</b> on line <b>21</b><br />/css/dropzone.css".' in C:\wamp\www\webBago\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('ar/<br /><b>Not...')
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/webBago/ar/%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Undefined%20property:%20CmsCHttpRequest::$baseUrl%20in%20%3Cb%3EC:/wamp/www/webBago/protected/views/layouts/main.php%3C/b%3E%20on%20line%20%3Cb%3E21%3C/b%3E%3Cbr%20/%3E/css/dropzone.css
+HTTP_REFERER=http://localhost/webBago/ar/
+---
+2016/03/17 17:23:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ar/<br /><b>Notice</b>:  Undefined property: CmsCHttpRequest::$baseUrl in <b>C:/wamp/www/webBago/protected/views/layouts/main.php</b> on line <b>20</b><br />/css/bootstrap.css".' in C:\wamp\www\webBago\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('ar/<br /><b>Not...')
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/webBago/ar/%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Undefined%20property:%20CmsCHttpRequest::$baseUrl%20in%20%3Cb%3EC:/wamp/www/webBago/protected/views/layouts/main.php%3C/b%3E%20on%20line%20%3Cb%3E20%3C/b%3E%3Cbr%20/%3E/css/bootstrap.css
+HTTP_REFERER=http://localhost/webBago/ar/
+---
+2016/03/17 17:23:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ar/<br /><b>Notice</b>:  Undefined property: CmsCHttpRequest::$baseUrl in <b>C:/wamp/www/webBago/protected/views/layouts/main.php</b> on line <b>19</b><br />/css/bootstrap-theme.css".' in C:\wamp\www\webBago\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('ar/<br /><b>Not...')
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/webBago/ar/%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Undefined%20property:%20CmsCHttpRequest::$baseUrl%20in%20%3Cb%3EC:/wamp/www/webBago/protected/views/layouts/main.php%3C/b%3E%20on%20line%20%3Cb%3E19%3C/b%3E%3Cbr%20/%3E/css/bootstrap-theme.css
+HTTP_REFERER=http://localhost/webBago/ar/
+---
+2016/03/17 17:23:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ar/<br /><b>Notice</b>:  Undefined property: CmsCHttpRequest::$baseUrl in <b>C:/wamp/www/webBago/protected/views/layouts/main.php</b> on line <b>9</b><br />/css/screen.css".' in C:\wamp\www\webBago\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('ar/<br /><b>Not...')
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/webBago/ar/%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Undefined%20property:%20CmsCHttpRequest::$baseUrl%20in%20%3Cb%3EC:/wamp/www/webBago/protected/views/layouts/main.php%3C/b%3E%20on%20line%20%3Cb%3E9%3C/b%3E%3Cbr%20/%3E/css/screen.css
+HTTP_REFERER=http://localhost/webBago/ar/
+---
+2016/03/17 17:23:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ar/<br /><b>Notice</b>:  Undefined property: CmsCHttpRequest::$baseUrl in <b>C:/wamp/www/webBago/protected/views/layouts/main.php</b> on line <b>15</b><br />/css/main.css".' in C:\wamp\www\webBago\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('ar/<br /><b>Not...')
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/webBago/ar/%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Undefined%20property:%20CmsCHttpRequest::$baseUrl%20in%20%3Cb%3EC:/wamp/www/webBago/protected/views/layouts/main.php%3C/b%3E%20on%20line%20%3Cb%3E15%3C/b%3E%3Cbr%20/%3E/css/main.css
+HTTP_REFERER=http://localhost/webBago/ar/
+---
+2016/03/17 17:23:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ar/<br /><b>Notice</b>:  Undefined property: CmsCHttpRequest::$baseUrl in <b>C:/wamp/www/webBago/protected/views/layouts/main.php</b> on line <b>16</b><br />/css/form.css".' in C:\wamp\www\webBago\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('ar/<br /><b>Not...')
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/webBago/ar/%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Undefined%20property:%20CmsCHttpRequest::$baseUrl%20in%20%3Cb%3EC:/wamp/www/webBago/protected/views/layouts/main.php%3C/b%3E%20on%20line%20%3Cb%3E16%3C/b%3E%3Cbr%20/%3E/css/form.css
+HTTP_REFERER=http://localhost/webBago/ar/
+---
+2016/03/17 17:23:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ar/<br /><b>Notice</b>:  Undefined property: CmsCHttpRequest::$baseUrl in <b>C:/wamp/www/webBago/protected/views/layouts/main.php</b> on line <b>24</b><br />/js/jquery-1.11.2.min.js".' in C:\wamp\www\webBago\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('ar/<br /><b>Not...')
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/webBago/ar/%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Undefined%20property:%20CmsCHttpRequest::$baseUrl%20in%20%3Cb%3EC:/wamp/www/webBago/protected/views/layouts/main.php%3C/b%3E%20on%20line%20%3Cb%3E24%3C/b%3E%3Cbr%20/%3E/js/jquery-1.11.2.min.js
+HTTP_REFERER=http://localhost/webBago/ar/
+---
+2016/03/17 17:23:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ar/<br /><b>Notice</b>:  Undefined property: CmsCHttpRequest::$baseUrl in <b>C:/wamp/www/webBago/protected/views/layouts/main.php</b> on line <b>25</b><br />/js/jquery.validate.min.js".' in C:\wamp\www\webBago\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('ar/<br /><b>Not...')
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/webBago/ar/%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Undefined%20property:%20CmsCHttpRequest::$baseUrl%20in%20%3Cb%3EC:/wamp/www/webBago/protected/views/layouts/main.php%3C/b%3E%20on%20line%20%3Cb%3E25%3C/b%3E%3Cbr%20/%3E/js/jquery.validate.min.js
+HTTP_REFERER=http://localhost/webBago/ar/
+---
+2016/03/17 17:23:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ar/<br /><b>Notice</b>:  Undefined property: CmsCHttpRequest::$baseUrl in <b>C:/wamp/www/webBago/protected/views/layouts/main.php</b> on line <b>26</b><br />/js/bootstrap.js".' in C:\wamp\www\webBago\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('ar/<br /><b>Not...')
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/webBago/ar/%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Undefined%20property:%20CmsCHttpRequest::$baseUrl%20in%20%3Cb%3EC:/wamp/www/webBago/protected/views/layouts/main.php%3C/b%3E%20on%20line%20%3Cb%3E26%3C/b%3E%3Cbr%20/%3E/js/bootstrap.js
+HTTP_REFERER=http://localhost/webBago/ar/
+---
+2016/03/17 17:23:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ar/<br /><b>Notice</b>:  Undefined property: CmsCHttpRequest::$baseUrl in <b>C:/wamp/www/webBago/protected/views/layouts/main.php</b> on line <b>27</b><br />/js/dropzone.js".' in C:\wamp\www\webBago\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('ar/<br /><b>Not...')
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/webBago/ar/%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Undefined%20property:%20CmsCHttpRequest::$baseUrl%20in%20%3Cb%3EC:/wamp/www/webBago/protected/views/layouts/main.php%3C/b%3E%20on%20line%20%3Cb%3E27%3C/b%3E%3Cbr%20/%3E/js/dropzone.js
+HTTP_REFERER=http://localhost/webBago/ar/
+---
+2016/03/17 17:23:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ar/<br /><b>Notice</b>:  Undefined property: CmsCHttpRequest::$baseUrl in <b>C:/wamp/www/webBago/protected/views/layouts/main.php</b> on line <b>28</b><br />/ckeditor/ckeditor.js".' in C:\wamp\www\webBago\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('ar/<br /><b>Not...')
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/webBago/ar/%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Undefined%20property:%20CmsCHttpRequest::$baseUrl%20in%20%3Cb%3EC:/wamp/www/webBago/protected/views/layouts/main.php%3C/b%3E%20on%20line%20%3Cb%3E28%3C/b%3E%3Cbr%20/%3E/ckeditor/ckeditor.js
+HTTP_REFERER=http://localhost/webBago/ar/
+---
+2016/03/17 17:23:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ar/<br /><b>Notice</b>:  Undefined property: CmsCHttpRequest::$baseUrl in <b>C:/wamp/www/webBago/protected/views/layouts/main.php</b> on line <b>55</b><br />/images/loading.gif".' in C:\wamp\www\webBago\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('ar/<br /><b>Not...')
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/webBago/ar/%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Undefined%20property:%20CmsCHttpRequest::$baseUrl%20in%20%3Cb%3EC:/wamp/www/webBago/protected/views/layouts/main.php%3C/b%3E%20on%20line%20%3Cb%3E55%3C/b%3E%3Cbr%20/%3E/images/loading.gif
+HTTP_REFERER=http://localhost/webBago/ar/
+---
+2016/03/17 17:23:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ar/<br /><b>Notice</b>:  Undefined property: CmsCHttpRequest::$baseUrl in <b>C:/wamp/www/webBago/protected/views/layouts/main.php</b> on line <b>10</b><br />/css/print.css".' in C:\wamp\www\webBago\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('ar/<br /><b>Not...')
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/webBago/ar/%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Undefined%20property:%20CmsCHttpRequest::$baseUrl%20in%20%3Cb%3EC:/wamp/www/webBago/protected/views/layouts/main.php%3C/b%3E%20on%20line%20%3Cb%3E10%3C/b%3E%3Cbr%20/%3E/css/print.css
+HTTP_REFERER=http://localhost/webBago/ar/
+---
