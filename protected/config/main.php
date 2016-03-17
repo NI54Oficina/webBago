@@ -48,7 +48,12 @@ return array(
 			'class'=>'ext.DbUrlManager.EDbUrlManager',
 			'connectionID'=>'db',
 			'rules'=>array(
+				
+				
+			
 				'<pais>/<controller:\w+>/<id:\d+>'=>'<controller>/view',
+				
+				
 				
 				'producto/<producto:[\w\/.-]+>'=>array(
 				  'producto/view',
@@ -115,7 +120,7 @@ return array(
 				
 				
 				"<pais>/"=>array(
-					"web/get/data/base"
+					"web/get/data/home"
 				),
 				
 								
