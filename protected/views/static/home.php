@@ -1292,7 +1292,7 @@
 		
 		<!------------------------------------------------------------------ SECCION 6: RRHH ------------------------------------------------------------------>
 		
-		<section class="special col-lg-12 col-md-12 col-sm-12 col-xs-12" data-scrollax-parent="true" style="min-height:100vh;width:100%;background-color: white;overflow:hidden;height:auto;display:none;"  id="back-rrhh">
+		<section class="special col-lg-12 col-md-12 col-sm-12 col-xs-12" data-scrollax-parent="true" style="min-height:100vh;width:100%;background-color: white;overflow:hidden;height:auto;"  id="back-rrhh">
 	
 			<!--*************  CONTENEDOR PRINCIPAL *********** -->
 		
@@ -1372,7 +1372,7 @@
 						<div id="form1" class="col-lg-12 col-md-12 col-xs-12" style="float:initial;display:inline-block;text-align:center;">
 						
 							<!-- ******** NOMBRE ******** -->
-							<div class="col-lg-6  col-md-6 col-sm-6 col-xs-12">
+							<div class="col-lg-6  col-md-6  col-xs-12">
 								<div class="input-contacto">
 								<label for="exampleInputName2">NOMBRE</label>
 									<input class="form-inline" name="nombre" type="text" value="">
