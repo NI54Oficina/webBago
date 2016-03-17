@@ -32233,3 +32233,91 @@ REQUEST_URI=/webBago/ar/vademecum/id1
 in C:\wamp\www\webBago\protected\components\PaisChecker.php (14)
 in C:\wamp\www\webBago\protected\controllers\WebController.php (79)
 in C:\wamp\www\webBago\index.php (13)
+2016/03/17 13:56:01 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/id1".' in C:\xampp\htdocs\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\webBago\protected\controllers\WebController.php(69): CController->renderPartial('//static/id1', '')
+#1 [internal function]: WebController->actionGet('id1', '')
+#2 C:\xampp\htdocs\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\xampp\htdocs\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\xampp\htdocs\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get')
+#14 C:\xampp\htdocs\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/vademecum/id1
+HTTP_REFERER=http://localhost/webBago/header.php
+---
+2016/03/17 13:56:09 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/id9".' in C:\xampp\htdocs\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\webBago\protected\controllers\WebController.php(69): CController->renderPartial('//static/id9', '')
+#1 [internal function]: WebController->actionGet('id9', '')
+#2 C:\xampp\htdocs\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\xampp\htdocs\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\xampp\htdocs\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get')
+#14 C:\xampp\htdocs\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/vademecum/id9
+HTTP_REFERER=http://localhost/webBago/header.php
+---
+2016/03/17 13:56:12 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/id11".' in C:\xampp\htdocs\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\webBago\protected\controllers\WebController.php(69): CController->renderPartial('//static/id11', '')
+#1 [internal function]: WebController->actionGet('id11', '')
+#2 C:\xampp\htdocs\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\xampp\htdocs\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\xampp\htdocs\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get')
+#14 C:\xampp\htdocs\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/vademecum/id11
+HTTP_REFERER=http://localhost/webBago/header.php
+---
+2016/03/17 13:56:23 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/id6".' in C:\xampp\htdocs\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\webBago\protected\controllers\WebController.php(69): CController->renderPartial('//static/id6', '')
+#1 [internal function]: WebController->actionGet('id6', '')
+#2 C:\xampp\htdocs\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\xampp\htdocs\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\xampp\htdocs\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get')
+#14 C:\xampp\htdocs\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/vademecum/id6
+HTTP_REFERER=http://localhost/webBago/header.php
+---
