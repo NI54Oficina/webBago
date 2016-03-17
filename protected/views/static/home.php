@@ -710,7 +710,7 @@
 						<!-- ******* AFTOSA ******** -->
 						<div id="botonera-af" class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
 			
-								<a href="<?php echo Yii::app()->request->baseUrl; ?>/vademecum/id1">
+								<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id1">
 				
 									<div class="botonVademecum-Af"style=""> 
 		
@@ -728,7 +728,7 @@
 						<!-- ******* ANTIBIÓTICOS ******** -->		
 						<div id="botonera-ant" class="col-lg-3 col-md-3 col-sm-3 col-xs-6"> 
 							
-							<a href="<?php echo Yii::app()->request->baseUrl; ?>/vademecum/id6">
+							<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id6">
 							
 								<div class="botonVademecum-Ant"style=""> 
 			
@@ -746,7 +746,7 @@
 						<!-- ******* ANTIPARASITÁRIOS EXTERNOS ******** -->	
 						<div id="botonera-int" class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
 							
-							<a href="<?php echo Yii::app()->request->baseUrl; ?>/vademecum/id4">
+							<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id4">
 							
 								<div class="botonVademecum-Int"style=""> 
 			
@@ -764,7 +764,7 @@
 						<!-- ******* ANTIPARASITÁRIOS INTERNOS ******** -->	
 						<div id="botonera-ext" class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
 							
-							<a href="<?php echo Yii::app()->request->baseUrl; ?>/vademecum/id3">
+							<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id3">
 							
 								<div class="botonVademecum-Ext"style=""> 
 			
@@ -782,7 +782,7 @@
 						<!-- ******* BIOLÓGICOS ******** -->	
 						<div id="botonera-bio" class="col-lg-3 col-md-3 col-sm-3 col-xs-6"> 
 						
-							<a href="<?php echo Yii::app()->request->baseUrl; ?>/vademecum/id2">
+							<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id2">
 								
 								<div class="botonVademecum-Bio"style=""> 
 			
@@ -800,7 +800,7 @@
 						<!-- ******* ENDECTOCIDAS ******** -->	
 						<div id="botonera-ende" class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
 							
-							<a href="<?php echo Yii::app()->request->baseUrl; ?>/vademecum/id5">
+							<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id5">
 								
 								<div class="botonVademecum-Ende"style=""> 
 			
@@ -818,7 +818,7 @@
 						<!-- ******* FARMACÉUTICOS ******** -->	
 						<div id="botonera-farma" class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
 							
-							<a href="<?php echo Yii::app()->request->baseUrl; ?>/vademecum/id9">
+							<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id9">
 								
 								<div class="botonVademecum-Farma"style=""> 
 			
@@ -836,7 +836,7 @@
 						<!-- ******* NUTRICIÓN ******** -->	
 						<div id="botonera-nutri" class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
 						
-							<a href="<?php echo Yii::app()->request->baseUrl; ?>/vademecum/id11">
+							<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id11">
 								
 								<div class="botonVademecum-Nutri"style=""> 
 			
@@ -854,7 +854,7 @@
 						<!-- ******* REPRODUCTIVOS ******** -->	
 						<div id="botonera-repro" class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
 							
-							<a href="<?php echo Yii::app()->request->baseUrl; ?>/vademecum/id7">
+							<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id7">
 								
 								<div class="botonVademecum-Repro"style=""> 
 			
@@ -872,7 +872,7 @@
 						<!-- ******* SALUD AMBIENTAL ******** -->	
 						<div id="botonera-amb" class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
 							
-							<a href="<?php echo Yii::app()->request->baseUrl; ?>/vademecum/id10">
+							<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id10">
 							
 								<div class="botonVademecum-Sal-Amb"style=""> 
 				
@@ -890,7 +890,7 @@
 						<!-- ******* VITAMINAS Y MINERALES ******** -->	
 						<div id="botonera-vit-min" class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
 						
-							<a href="<?php echo Yii::app()->request->baseUrl; ?>/vademecum/id8">
+							<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id8">
 							
 								<div class="botonVademecum-Vit-Min"style=""> 
 			

@@ -44741,3 +44741,20 @@ Stack trace:
 REQUEST_URI=/webBago/ar/js/main.js
 HTTP_REFERER=http://localhost/webBago/ar/trayectoria-hitos
 ---
+2016/03/17 22:02:15 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\webBago\protected\components\PaisChecker.php:41)
+Stack trace:
+#0 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilterChain.php(133): WebController->runAction()
+#1 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\webBago\yii\framework\web\filters\CInlineFilter.php(58): WebController->filterAccessControl()
+#4 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(265): WebController->runActionWithFilters()
+#7 C:\xampp\htdocs\webBago\yii\framework\web\CWebApplication.php(282): WebController->run()
+#8 C:\xampp\htdocs\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\webBago\index.php(13): CWebApplication->run()
+REQUEST_URI=/webBago/vademecum/id3
+in C:\xampp\htdocs\webBago\protected\components\PaisChecker.php (41)
+in C:\xampp\htdocs\webBago\protected\controllers\WebController.php (75)
+in C:\xampp\htdocs\webBago\index.php (13)
