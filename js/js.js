@@ -1,7 +1,9 @@
 $(function() {
     var boxClone;
-
+	var showingBox=false;
     $(".openlink").click(function() {
+		if(!showingBox){
+			showingBox=true;
         //Clone Dialogbox
         boxClone = $("#boxes").find(".box:eq(0)").clone(true, true);
 
@@ -15,12 +17,15 @@ $(function() {
         }
         $(boxClone).css('top', (boxOffset.top + 20));
         $(boxClone).css('left', (boxOffset.left + 20));
+		
         $(boxClone).appendTo($("#boxes"));
         $(boxClone).show(500);
+		}
     });
 
     //Close Dialogbox
     $(".closelink").click(function() {
+		showingBox=false;
         $(this).closest(".box").remove();
     });
 
