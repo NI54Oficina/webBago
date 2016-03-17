@@ -4136,7 +4136,7 @@ text-decoration:none;}
 	font-size:13px;
 	text-align:left;
 	
-	width:50%;
+	width:100%;
 	position:relative;
 	padding-bottom:1%;
 	margin-top:2%;
@@ -5271,6 +5271,10 @@ figure.snip1156:hover .salud-ambiental{
 		margin-left: 6%;
 	}
 	
+	.desc-rev{
+		width: 100%;
+	}
+	
 }
 
 /* Landscape */
@@ -5295,6 +5299,10 @@ figure.snip1156:hover .salud-ambiental{
 
 	.border-tit {
 		border-bottom: none;
+	}
+	
+	.desc-rev{
+		width: 100%;
 	}
 	
 }
@@ -5353,7 +5361,7 @@ figure.snip1156:hover .salud-ambiental{
 	}
 	
 	.info-rev p{
-		 display: none;
+		display: none;
 	}
 	
 }
