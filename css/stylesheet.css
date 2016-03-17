@@ -4040,7 +4040,7 @@ text-decoration:none;}
 }
 
 #slider1 .viewport {
-    min-height: 205px;
+    min-height: 265px;
     overflow: hidden;
     position: relative;
 }
@@ -4048,8 +4048,8 @@ text-decoration:none;}
 #slider1 .buttons {
     display: block;
     position: absolute;
-    top: 35%;
-    left: 9px;
+    top: 45%;
+    left: 0px;
     width: 48px;
     height: 48px;
     color: #359FBD;
@@ -4062,7 +4062,7 @@ text-decoration:none;}
 #slider1 .next {
     right: 0;
     left: auto;
-    top: 35%;
+    top: 45%;
 }
 
 #slider1 .disable {
@@ -4076,7 +4076,7 @@ text-decoration:none;}
     margin: 0;
     width: 240px;
     left: 0;
-	top: -8px;
+	top: 50px;
 }
 
 #slider1 .overview li {
