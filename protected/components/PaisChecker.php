@@ -48,5 +48,21 @@ class PaisChecker extends CApplicationComponent
 			}
             
         }
+		
+		public function getBaseUrl(){
+			$baseUrl="http://" . $_SERVER['SERVER_NAME']. $_SERVER['PHP_SELF'];
+			$baseUrl= str_replace("index.php","",$baseUrl);
+			return $baseUrl.$_SESSION["short"];
+			/*if($this->_baseUrl===null){
+				$this->_baseUrl=rtrim(dirname($this->getScriptUrl()),'\\/');
+			}
+			$short="ar/";
+			if($absolute){
+				return $this->getHostInfo().$short . $this->_baseUrl;
+			}else{
+				return $short.$this->_baseUrl;
+			}*/
+			//return $absolute ? $this->getHostInfo() . $this->_baseUrl : $this->_baseUrl;
+		}
     }
 ?>

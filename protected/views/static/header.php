@@ -114,7 +114,7 @@
 				
 				<ul class="dropdown-menu dropdown-menu-right">
 						<img  id="flecha-submenu" src="<?php echo Yii::app()->request->baseUrl; ?>/img/flecha-submenu.png" />
-							<li><a class="a-sub"  href="<?php echo Yii::app()->getBaseUrl(true); ?>/quienes-somos"><?php echo Textos::model()->GetText(6); ?></a></li>
+							<li><a class="a-sub"  href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/quienes-somos"><?php echo Textos::model()->GetText(6); ?></a></li>
 							<li><a class="a-sub"  href="<?php echo Yii::app()->getBaseUrl(true); ?>/mision-vision"><?php echo Textos::model()->GetText(8); ?></a></li>
 							<li><a class="a-sub" 	href="<?php echo Yii::app()->getBaseUrl(true); ?>/lucha-contra-aftosa"><?php echo Textos::model()->GetText(10); ?></a></li>
 							<li><a class="a-sub"  href="<?php echo Yii::app()->getBaseUrl(true); ?>/trayectoria-hitos"><?php echo Textos::model()->GetText(429); ?></a></li>

@@ -43,6 +43,10 @@ return array(
             'class' => 'CmsCHttpRequest',
         ),
 		
+		'paisChecker' => array(
+            'class' => 'ext.components.PaisChecker',
+        ),
+		
 		'urlManager'=>array(
 			'urlFormat'=>'path',
 			'class'=>'ext.DbUrlManager.EDbUrlManager',

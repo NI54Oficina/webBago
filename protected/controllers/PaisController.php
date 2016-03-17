@@ -176,6 +176,7 @@ class PaisController extends Controller
 		//echo $lang[$lng];
 		$_SESSION["lng"]= $lng;
 		$_SESSION["pais"]= $id;
+		$_SESSION["short"]= Pais::model()->findByPk($id)->short;
 		
 		header("Location: ".$_SERVER['HTTP_REFERER']);
 		die();
