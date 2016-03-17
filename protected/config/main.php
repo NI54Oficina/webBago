@@ -59,6 +59,8 @@ return array(
 				
 				
 				
+				
+				
 				'producto/<producto:[\w\/.-]+>'=>array(
 				  'producto/view',
 				  'type'=>'db',
@@ -96,6 +98,7 @@ return array(
 					),
 				  ),
 				),
+				
 				
 				
 				

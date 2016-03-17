@@ -174,15 +174,19 @@ class PaisController extends Controller
 		//echo Pais::model()->findByPk($id)->nombre;;
 		//echo "<br>";
 		//echo $lang[$lng];
-		$_SESSION["lng"]= $lng;
-		$_SESSION["pais"]= $id;
-		$_SESSION["short"]= Pais::model()->findByPk($id)->short;
+		Yii::app()->session['lng'] = $lng;
+		Yii::app()->session['pais'] = $id;
+		Yii::app()->session['short'] = Pais::model()->findByPk($id)->short;
 		if(isset($_SESSION["redirectURL"])){
 			header("Location: http://".$_SERVER['SERVER_NAME']."/".$_SESSION["webRoot"]."/".$_SESSION["redirectURL"]);
 			$_SESSION["redirectURL"]=null;
 			exit();
 		}else{
-			header("Location: ".$_SERVER['HTTP_REFERER']);
+			if (strpos($_SERVER['HTTP_REFERER'], '/paises') !== false) {
+				header("Location: http://".$_SERVER['SERVER_NAME']."/".$_SESSION["webRoot"]."/");
+			}else{
+				header("Location: ".$_SERVER['HTTP_REFERER']);
+			}
 			die();
 		}
 	}
