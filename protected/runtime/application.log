@@ -40154,3 +40154,179 @@ REQUEST_URI=/webBago/
 in C:\wamp\www\webBago\protected\components\PaisChecker.php (36)
 in C:\wamp\www\webBago\protected\controllers\WebController.php (75)
 in C:\wamp\www\webBago\index.php (13)
+2016/03/17 15:52:54 [error] [exception.CException] exception 'CException' with message 'Property "Pais.short" is not defined.' in C:\xampp\htdocs\webBago\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\webBago\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('short')
+#1 C:\xampp\htdocs\webBago\protected\components\PaisChecker.php(36): CActiveRecord->__get('short')
+#2 C:\xampp\htdocs\webBago\protected\controllers\WebController.php(75): PaisChecker->PaisCheck()
+#3 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(306): WebController->beforeAction(Object(CInlineAction))
+#4 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\xampp\htdocs\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#12 C:\xampp\htdocs\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get')
+#13 C:\xampp\htdocs\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\webBago\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/webBago/vademecum/id1
+---
+2016/03/17 15:55:38 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\webBago\protected\components\PaisChecker.php:36)
+Stack trace:
+#0 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilterChain.php(133): WebController->runAction()
+#1 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\webBago\yii\framework\web\filters\CInlineFilter.php(58): WebController->filterAccessControl()
+#4 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(265): WebController->runActionWithFilters()
+#7 C:\xampp\htdocs\webBago\yii\framework\web\CWebApplication.php(282): WebController->run()
+#8 C:\xampp\htdocs\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\webBago\index.php(13): CWebApplication->run()
+REQUEST_URI=/webBago/quienes-somos
+in C:\xampp\htdocs\webBago\protected\components\PaisChecker.php (36)
+in C:\xampp\htdocs\webBago\protected\controllers\WebController.php (75)
+in C:\xampp\htdocs\webBago\index.php (13)
+2016/03/17 15:55:53 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\webBago\protected\components\PaisChecker.php:36)
+Stack trace:
+#0 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilterChain.php(133): WebController->runAction()
+#1 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\webBago\yii\framework\web\filters\CInlineFilter.php(58): WebController->filterAccessControl()
+#4 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(265): WebController->runActionWithFilters()
+#7 C:\xampp\htdocs\webBago\yii\framework\web\CWebApplication.php(282): WebController->run()
+#8 C:\xampp\htdocs\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\webBago\index.php(13): CWebApplication->run()
+REQUEST_URI=/webBago/quienes-somos
+in C:\xampp\htdocs\webBago\protected\components\PaisChecker.php (36)
+in C:\xampp\htdocs\webBago\protected\controllers\WebController.php (75)
+in C:\xampp\htdocs\webBago\index.php (13)
+2016/03/17 15:56:12 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/img".' in C:\xampp\htdocs\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\webBago\protected\controllers\WebController.php(65): CController->renderPartial('//static/img', '')
+#1 [internal function]: WebController->actionGet('img', 'icono-bullet.pn...')
+#2 C:\xampp\htdocs\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\xampp\htdocs\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\xampp\htdocs\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get/data/im...')
+#14 C:\xampp\htdocs\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/ar/img/icono-bullet.png
+HTTP_REFERER=http://localhost/webBago/ar/quienes-somos
+---
+2016/03/17 15:56:16 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\webBago\protected\components\PaisChecker.php:36)
+Stack trace:
+#0 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilterChain.php(133): WebController->runAction()
+#1 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\webBago\yii\framework\web\filters\CInlineFilter.php(58): WebController->filterAccessControl()
+#4 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(265): WebController->runActionWithFilters()
+#7 C:\xampp\htdocs\webBago\yii\framework\web\CWebApplication.php(282): WebController->run()
+#8 C:\xampp\htdocs\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\webBago\index.php(13): CWebApplication->run()
+REQUEST_URI=/webBago/quienes-somos
+in C:\xampp\htdocs\webBago\protected\components\PaisChecker.php (36)
+in C:\xampp\htdocs\webBago\protected\controllers\WebController.php (75)
+in C:\xampp\htdocs\webBago\index.php (13)
+2016/03/17 15:56:20 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/img".' in C:\xampp\htdocs\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\webBago\protected\controllers\WebController.php(65): CController->renderPartial('//static/img', '')
+#1 [internal function]: WebController->actionGet('img', 'icono-bullet.pn...')
+#2 C:\xampp\htdocs\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\xampp\htdocs\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\xampp\htdocs\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get/data/im...')
+#14 C:\xampp\htdocs\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/ar/img/icono-bullet.png
+HTTP_REFERER=http://localhost/webBago/ar/quienes-somos
+---
+2016/03/17 15:56:45 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/img".' in C:\xampp\htdocs\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\webBago\protected\controllers\WebController.php(65): CController->renderPartial('//static/img', '')
+#1 [internal function]: WebController->actionGet('img', 'icono-bullet.pn...')
+#2 C:\xampp\htdocs\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\xampp\htdocs\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\xampp\htdocs\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get/data/im...')
+#14 C:\xampp\htdocs\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/br/img/icono-bullet.png
+HTTP_REFERER=http://localhost/webBago/br/quienes-somos
+---
+2016/03/17 15:57:35 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\webBago\protected\components\PaisChecker.php:36)
+Stack trace:
+#0 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilterChain.php(133): WebController->runAction()
+#1 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\webBago\yii\framework\web\filters\CInlineFilter.php(58): WebController->filterAccessControl()
+#4 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(265): WebController->runActionWithFilters()
+#7 C:\xampp\htdocs\webBago\yii\framework\web\CWebApplication.php(282): WebController->run()
+#8 C:\xampp\htdocs\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\webBago\index.php(13): CWebApplication->run()
+REQUEST_URI=/webBago/quienes-somos
+in C:\xampp\htdocs\webBago\protected\components\PaisChecker.php (36)
+in C:\xampp\htdocs\webBago\protected\controllers\WebController.php (75)
+in C:\xampp\htdocs\webBago\index.php (13)
+2016/03/17 15:57:37 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/img".' in C:\xampp\htdocs\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\webBago\protected\controllers\WebController.php(65): CController->renderPartial('//static/img', '')
+#1 [internal function]: WebController->actionGet('img', 'icono-bullet.pn...')
+#2 C:\xampp\htdocs\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\xampp\htdocs\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\xampp\htdocs\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get/data/im...')
+#14 C:\xampp\htdocs\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/br/img/icono-bullet.png
+HTTP_REFERER=http://localhost/webBago/br/quienes-somos
+---

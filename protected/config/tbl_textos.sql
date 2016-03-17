@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 17-03-2016 a las 15:50:05
+-- Tiempo de generación: 17-03-2016 a las 15:59:07
 -- Versión del servidor: 10.1.9-MariaDB
 -- Versión de PHP: 5.5.30
 
@@ -28,16 +28,16 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `tbl_textos` (
   `id` int(11) NOT NULL,
-  `español` text NOT NULL,
-  `ingles` text NOT NULL,
-  `portugues` text NOT NULL
+  `es` text NOT NULL COMMENT 'español',
+  `en` text NOT NULL COMMENT 'ingles',
+  `pt` text NOT NULL COMMENT 'portugues'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tbl_textos`
 --
 
-INSERT INTO `tbl_textos` (`id`, `español`, `ingles`, `portugues`) VALUES
+INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (1, 'Bienvenidos a', 'Welcome to', 'Bienvenidos a'),
 (2, 'La evolución de la', 'The evolution of', 'A evolução da'),
 (3, 'Salud animal', 'Animal Health', 'Saúde animal'),
@@ -195,7 +195,7 @@ INSERT INTO `tbl_textos` (`id`, `español`, `ingles`, `portugues`) VALUES
 (155, 'El grupo experimental estaba compuesto de 187 animales distribuidos al azar, teniendo en cuenta la fecha de parto, producción de leche, promedio del CCS de la última lactancia y fecha probable de parto en dos grupos experimentales: J5V (n=96)-grupo de vacas vacunadas que recibieron 3 dosis de vacuna contra la Escherichia coli (ROTATEC J5®); J5Vcont (n=91): grupo de vacas control que no recibieron ninguna dosis de vacuna contra Escherichia coli (ROTATEC J5®).', '', ''),
 (156, 'Los animales fueron inmunizados con vacuna comercial (ROTATEC J5® BIOGÉNESIS BAGÓ S.A., Paraná, Brasil) según el siguiente protocolo: Grupo J5V –tres aplicaciones por vía SC en una dosis de 3 ml, aplicada con jeringa dosificadora en el tercio medio del cuello – se administraron dos dosis de vacuna en el pre parto, la primera 60 días antes de la fecha prevista de parto y la segunda 30 días después de la primera, y una tercera dosis administrada en la primera semana post parto. Todos los animales fueron mantenidos en las mismas condiciones en cuanto a instalaciones, nutrición y ambiente durante el periodo del ensayo.', '', ''),
 (157, 'El tratamiento con antibiótico específico para vacas secas, a base de cloxacilina benzatínica, fue realizado en todas las vacas 60 días antes de la fecha probable de parto, en el día de secado. Para la realización del mismo, después del ordeño completo de las vacas,  se realizó la desinfección y antisepsia de los pezones con hipoclorito de sodio (pre dipping); se secaron los pezones con toallas de papel después de 30 segundos; se desinfectó el esfínter del pezón con algodón embebido con alcohol al 70% y se procedió a la infusión del medicamento, utilizando jeringa de cánula corta. Después de la aplicación del pomo, fue realizada una nueva antisepsia con iodo (post dipping). Las vacas que presentaron periodo de seca mayor a los 60 días o abortaron durante el periodo experimental fueron excluidas del estudio.', '', '');
-INSERT INTO `tbl_textos` (`id`, `español`, `ingles`, `portugues`) VALUES
+INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (158, 'Al momento del secado, siete días después del parto y al detectar casos clínicos de mastitis se recolectaron muestras de leche para diagnostico microbiológico individual  con el objetivo de la identificación de patógenos causantes de mastitis. Las muestras de leche fueron obtenidas inmediatamente antes del ordeñe, después del descarte de los primeros chorros de leche, desinfección de los pezones con una solución de hipoclorito de sodio y secado con toallas de papel descartable. Al momento de la colecta, se realizó antisepsia del esfínter del pezón con algodón embebido en alcohol al 70%. Se muestrearon los cuatro cuartos formando una muestra única, pool, recolectada en frascos estériles previamente identificados. El material recolectado fue congelado y enviado en recipientes térmicos al laboratorio para aislamiento y caracterización de los microorganismos. Volúmenes de 10 ml de cada muestra fueron sembradas con asas calibradas y descartables en cada cuadrante de una placa de agar-sangre conteniendo 5% de sangre de carnero desfibrinada e  incubándose a 35 ° C por 24 hs, de acuerdo con las recomendaciones de Harmon et al (1990).', '', ''),
 (159, 'Después del periodo de incubación, se realizó la primera lectura de las placas, observándose crecimiento microbiano, aspecto, coloración y número de colonias presentes. Se continuó la incubación de las placas por otras 24 hs a 35 °C, para realizar la segunda lectura a las 48 hrs de la siembra. De aquellas muestras de leche que presentaban  crecimiento de microorganismos, se seleccionó una colonia representativa, que fue sembrada en agar BHI (Brain Heart Infusión-agar con infusión de cerebro y corazón) e incubada a 35°C por 24 hs. Después de este periodo, los aislamientos fueron examinados al microscopio en frotis teñidos por la técnica de Gram y evaluados en cuanto a su  producción de catalasa para luego ser sometidos a las pruebas de identificación (Brito & Brito 1999).', '', ''),
 (160, 'Las muestras de pool de leche y las individuales destinadas a CCS, fueron recolectadas mensualmente a partir de los 10 días de lactancia, según el protocolo del National Mastitis Council (NMC 1999). Estas fueron retiradas directamente de los medidores de leche acoplados al equipo de ordeño y acondicionados en frascos que contienen dos pastillas del conservante Bronopol (2-bromo-2-nitropropano-1,3-diol), permitiendo su conservación a temperatura ambiente. Las muestras fueron homogenizadas por agitación suave, hasta la completa disolución de los comprimidos y enviadas al laboratorio. El análisis del CCS fueron realizadas por método electrónico (equipamiento Bentley CombSystem® 2300).', '', ''),
@@ -307,7 +307,7 @@ INSERT INTO `tbl_textos` (`id`, `español`, `ingles`, `portugues`) VALUES
 (266, 'MATERIALES Y METODOS', '', ''),
 (267, 'El experimento fue realizado en 200 vacas raza Nelore, pertenecientes a la Estancia Irara, localizada en el municipio de Uberlandia – MG.', '', ''),
 (268, 'Las madres pasaron por un examen ginecológico  (palpación rectal), con el objetivo de analizar las condiciones fisiológicas del útero y de los ovarios e identificar los animales que estaban en el séptimo mes de gestación. Los animales diagnosticados en ese mes de gestación recibieron la caravana del Sistema Brasilero de identificación Bovina y Bubalina (SISBOV) en la oreja derecha, lo que facilitó el control de las madres y fueron divididas en dos grupos de 100 animales. Solo el primer grupo fue vacunado, funcionando como grupo testigo, para que los resultados puedan ser comparados luego de la prueba. Las madres del primer grupo recibieron 3 ml de vacuna  contra la diarrea neonatal, portadora de cepas inactivadas de Escherichia coli y de rotavirus, vía subcutánea, 60 días antes del parto y un refuerzo (booster) 30 días antes del parto. Con el refuerzo, se pretende aumentar la sensibilidad del sistema inmunológico, ampliando la protección del recién nacido durante sus primeros tres meses de vida, período en que la inmunidad pasiva está en franca actividad en el organismo del ternero.', '', '');
-INSERT INTO `tbl_textos` (`id`, `español`, `ingles`, `portugues`) VALUES
+INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (269, 'Los dos lotes de madres pasaron su maternidad en el mismo lote hasta el nacimiento de los terneros, cuando tuvieron sus ombligos cortados (con 5 cm de largo en relación a la línea media ventral del animal) y desinfectados con solución de yodo (10%). Ellos recibieron también caravanas SISBOV en la oreja derecha y tatuaje con número de la madre en la oreja izquierda para facilitar las anotaciones referentes a la aparición y tratamiento de diarrea neonatal hasta los 90 días de edad. Después de esa etapa los dos grupos de animales fueron llevados a lotes donde permanecieron hasta el final del experimento. Los terneros fueron observados diariamente y los que presentaban el cuadro clínico característicos de diarrea recibieron el tratamiento con antibiótico (sulfadoxina)  de larga acción hasta su eventual cura.', '', ''),
 (270, 'Los datos registrados hasta los 90 días de edad, referentes a la prevalencia de diarrea neonatal, mortalidad de terneros, dosis de antibióticos para tratamiento, horas de trabajo para la vacunación, medicación de  los animales enfermos y manutención  de vacas que perdieron sus terneros debido a la diarrea fueron analizados e interpretados. Se procuró con eso, calcular costos con la prevención y tratamiento de diarrea neonatal en el  sistema de producción de cría, con madres inmunizadas y no inmunizadas en el peri parto, pero no fue posible hacer análisis estadístico de los costos porque no existe repetición de los mismos.', '', ''),
 (271, 'Tabla 1. Porcentaje de diarrea neonatal y mortalidad en el sistema de producción de terneros de carne, con madres inmunizadas contra Escherichia coli y rotavirus y no inmunizadas en el peri-parto. Uberlandia  - MG, 2005.', '', ''),

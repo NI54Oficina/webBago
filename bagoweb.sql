@@ -1,20 +1,20 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.1
+-- version 4.5.1
 -- http://www.phpmyadmin.net
 --
--- Servidor: localhost
--- Tiempo de generación: 14-03-2016 a las 13:16:48
--- Versión del servidor: 5.5.24
--- Versión de PHP: 5.4.45
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 17-03-2016 a las 15:58:45
+-- Versión del servidor: 10.1.9-MariaDB
+-- Versión de PHP: 5.5.30
 
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
 -- Base de datos: `bagoweb`
@@ -26,12 +26,11 @@ SET time_zone = "+00:00";
 -- Estructura de tabla para la tabla `authassignment`
 --
 
-CREATE TABLE IF NOT EXISTS `authassignment` (
+CREATE TABLE `authassignment` (
   `itemname` varchar(64) NOT NULL,
   `userid` varchar(64) NOT NULL,
   `bizrule` text,
-  `data` text,
-  PRIMARY KEY (`itemname`,`userid`)
+  `data` text
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -52,13 +51,12 @@ INSERT INTO `authassignment` (`itemname`, `userid`, `bizrule`, `data`) VALUES
 -- Estructura de tabla para la tabla `authitem`
 --
 
-CREATE TABLE IF NOT EXISTS `authitem` (
+CREATE TABLE `authitem` (
   `name` varchar(64) NOT NULL,
   `type` int(11) NOT NULL,
   `description` text,
   `bizrule` text,
-  `data` text,
-  PRIMARY KEY (`name`)
+  `data` text
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -103,11 +101,9 @@ INSERT INTO `authitem` (`name`, `type`, `description`, `bizrule`, `data`) VALUES
 -- Estructura de tabla para la tabla `authitemchild`
 --
 
-CREATE TABLE IF NOT EXISTS `authitemchild` (
+CREATE TABLE `authitemchild` (
   `parent` varchar(64) NOT NULL,
-  `child` varchar(64) NOT NULL,
-  PRIMARY KEY (`parent`,`child`),
-  KEY `child` (`child`)
+  `child` varchar(64) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -116,43 +112,43 @@ CREATE TABLE IF NOT EXISTS `authitemchild` (
 
 INSERT INTO `authitemchild` (`parent`, `child`) VALUES
 ('admin', 'adminAccess'),
-('poyo', 'adminAccess'),
 ('admin', 'adminImagenes'),
-('poyo', 'adminImagenes'),
 ('admin', 'adminProducto'),
-('poyo', 'adminProducto'),
 ('admin', 'adminSeccion'),
-('poyo', 'adminSeccion'),
 ('admin', 'createEstablecimiento'),
-('poyo', 'createEstablecimiento'),
 ('admin', 'createPost'),
-('author', 'createPost'),
-('poyo', 'createPost'),
-('poyoyo', 'createPost'),
 ('admin', 'createProducto'),
-('poyo', 'createProducto'),
 ('admin', 'createRole'),
-('poyo', 'createRole'),
 ('admin', 'createUser'),
-('poyo', 'createUser'),
-('poyoyo', 'createUser'),
 ('admin', 'deletePost'),
-('poyo', 'deletePost'),
 ('admin', 'deleteProducto'),
-('poyo', 'deleteProducto'),
 ('admin', 'deleteUsers'),
-('poyo', 'deleteUsers'),
 ('admin', 'editPost'),
-('poyo', 'editPost'),
 ('admin', 'editUsers'),
-('poyo', 'editUsers'),
-('poyoyo', 'editUsers'),
 ('admin', 'updateEstablecimiento'),
-('poyo', 'updateEstablecimiento'),
 ('admin', 'updateProducto'),
-('poyo', 'updateProducto'),
 ('admin', 'vademecum'),
-('poyo', 'vademecum');
+('author', 'createPost'),
+('poyo', 'adminAccess'),
+('poyo', 'adminImagenes'),
+('poyo', 'adminProducto'),
+('poyo', 'adminSeccion'),
+('poyo', 'createEstablecimiento'),
+('poyo', 'createPost'),
+('poyo', 'createProducto'),
+('poyo', 'createRole'),
+('poyo', 'createUser'),
+('poyo', 'deletePost'),
+('poyo', 'deleteProducto'),
+('poyo', 'deleteUsers'),
+('poyo', 'editPost'),
+('poyo', 'editUsers'),
+('poyo', 'updateEstablecimiento'),
+('poyo', 'updateProducto'),
+('poyo', 'vademecum'),
+('poyoyo', 'createPost'),
+('poyoyo', 'createUser'),
+('poyoyo', 'editUsers');
 
 -- --------------------------------------------------------
 
@@ -160,15 +156,14 @@ INSERT INTO `authitemchild` (`parent`, `child`) VALUES
 -- Estructura de tabla para la tabla `tbl_establecimiento`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_establecimiento` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `tbl_establecimiento` (
+  `id` int(11) NOT NULL,
   `nombre` varchar(200) NOT NULL,
   `latitud` varchar(100) NOT NULL,
   `longitud` varchar(100) NOT NULL,
   `descripcion` text NOT NULL,
-  `pais` int(10) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+  `pais` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -176,11 +171,10 @@ CREATE TABLE IF NOT EXISTS `tbl_establecimiento` (
 -- Estructura de tabla para la tabla `tbl_imagen_ref`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_imagen_ref` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `producto_id` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=632 ;
+CREATE TABLE `tbl_imagen_ref` (
+  `id` int(11) NOT NULL,
+  `producto_id` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tbl_imagen_ref`
@@ -768,11 +762,10 @@ INSERT INTO `tbl_imagen_ref` (`id`, `producto_id`) VALUES
 -- Estructura de tabla para la tabla `tbl_miscelaneo`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_miscelaneo` (
+CREATE TABLE `tbl_miscelaneo` (
   `id` int(11) NOT NULL,
   `key` varchar(100) NOT NULL,
-  `value` text NOT NULL,
-  PRIMARY KEY (`id`)
+  `value` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -781,15 +774,14 @@ CREATE TABLE IF NOT EXISTS `tbl_miscelaneo` (
 -- Estructura de tabla para la tabla `tbl_page`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_page` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `tbl_page` (
+  `id` int(11) NOT NULL,
   `titulo` varchar(255) NOT NULL,
   `url` int(255) NOT NULL,
   `texto` text NOT NULL,
   `lastUpdate` date NOT NULL,
-  `fecha` date NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+  `fecha` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -797,26 +789,27 @@ CREATE TABLE IF NOT EXISTS `tbl_page` (
 -- Estructura de tabla para la tabla `tbl_pais`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_pais` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `tbl_pais` (
+  `id` int(11) NOT NULL,
   `nombre` varchar(130) NOT NULL,
   `icon` int(11) NOT NULL,
   `url` varchar(100) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
+  `short` varchar(2) NOT NULL,
+  `lng` varchar(5) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tbl_pais`
 --
 
-INSERT INTO `tbl_pais` (`id`, `nombre`, `icon`, `url`) VALUES
-(1, 'Argentina', 0, 'argentina'),
-(2, 'Brasil', 0, 'brasil'),
-(5, 'Bolivia', 0, 'Bolivia'),
-(6, 'México', 0, 'Mxico'),
-(7, 'Uruguay', 0, 'Uruguay'),
-(8, 'General', 0, 'General'),
-(9, 'USA', 0, 'USA');
+INSERT INTO `tbl_pais` (`id`, `nombre`, `icon`, `url`, `short`, `lng`) VALUES
+(1, 'Argentina', 0, 'argentina', 'ar', 'es'),
+(2, 'Brasil', 0, 'brasil', 'br', 'pt'),
+(5, 'Bolivia', 0, 'Bolivia', 'bo', 'es'),
+(6, 'México', 0, 'Mxico', 'mx', 'es'),
+(7, 'Uruguay', 0, 'Uruguay', 'uy', 'es'),
+(8, 'General', 0, 'General', '##', 'es'),
+(9, 'USA', 0, 'USA', 'us', 'en');
 
 -- --------------------------------------------------------
 
@@ -824,12 +817,11 @@ INSERT INTO `tbl_pais` (`id`, `nombre`, `icon`, `url`) VALUES
 -- Estructura de tabla para la tabla `tbl_permission`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_permission` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `tbl_permission` (
+  `id` int(11) NOT NULL,
   `operation` varchar(150) NOT NULL,
-  `url` varchar(150) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=52 ;
+  `url` varchar(150) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tbl_permission`
@@ -885,13 +877,12 @@ INSERT INTO `tbl_permission` (`id`, `operation`, `url`) VALUES
 -- Estructura de tabla para la tabla `tbl_ppartes_regionalizacion`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_ppartes_regionalizacion` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `tbl_ppartes_regionalizacion` (
+  `id` int(11) NOT NULL,
   `idParte` int(11) NOT NULL,
   `pais` int(11) NOT NULL,
-  `nombre` varchar(140) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=31 ;
+  `nombre` varchar(140) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tbl_ppartes_regionalizacion`
@@ -933,8 +924,8 @@ INSERT INTO `tbl_ppartes_regionalizacion` (`id`, `idParte`, `pais`, `nombre`) VA
 -- Estructura de tabla para la tabla `tbl_producto`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_producto` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `tbl_producto` (
+  `id` int(11) NOT NULL,
   `nombre` varchar(150) NOT NULL,
   `seccion` int(11) NOT NULL,
   `target` varchar(10) NOT NULL,
@@ -945,11 +936,8 @@ CREATE TABLE IF NOT EXISTS `tbl_producto` (
   `fullTags` text NOT NULL,
   `codeContent` int(1) NOT NULL,
   `pais` varchar(100) NOT NULL,
-  `user_id` int(11) NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `id` (`id`),
-  KEY `seccion` (`seccion`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=405 ;
+  `user_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tbl_producto`
@@ -1108,10 +1096,10 @@ INSERT INTO `tbl_producto` (`id`, `nombre`, `seccion`, `target`, `link`, `descri
 (212, 'BIOESTROGEN®', 7, '1010011101', '', '', '2016-03-09 07:55:33', 'bioestrogen, bovino, ovino, equino, porcino, canino, felino, afecciones tocoginecológicas, partos distócicos, retenciones placentarias, abortos, metritis, piómetras, tratamiento de pseudopreñez,  tratamiento del anestro', 'bioestrogen,bovino,ovino,equino,porcino,canino,felino,afecciones tocoginecológicas,partos distócicos,retenciones placentarias,abortos,metritis,piómetras,tratamiento de pseudopreñez,tratamiento del anestro,Reproductivos,Uruguay', 0, '7', 0),
 (213, 'CAMISAS CRONIPRES® MONODOSIS', 6, '0000000001', '', '', '2016-03-09 01:39:32', 'camisas, cronipres monodosis, bovino, control del ciclo estral, inseminación artificial a tiempo fijo, inseminación artificial sistemática, acortamiento del período parto-concepción, acortamiento del ciclo estral de la estación reproductiva, transplantes de embriones, tratamientos reproductivos', 'camisas,cronipres monodosis,bovino,control del ciclo estral,inseminación artificial a tiempo fijo,inseminación artificial sistemática,acortamiento del período parto-concepción,acortamiento del ciclo estral de la estación reproductiva,transplantes de embriones,tratamientos reproductivos,Antibióticos,Uruguay', 0, '7', 0),
 (214, 'BIOGÓN® PLUS', 7, '1010011101', 'BIOGN-PLUS', '', '2016-03-03 09:44:39', 'biogon, plus, bovino, ovino, equino, porcino, felino, canino, Inducción de celos, sincronización de celos, induccion de ovulación, induccion de superovulación', 'biogon,plus,bovino,ovino,equino,porcino,felino,canino,Inducción de celos,sincronización de celos,induccion de ovulación,induccion de superovulación,Reproductivos,Uruguay', 0, '7', 0),
-(215, 'ENZAPROST DC', 7, '0010000001', 'ENZAPROST-DC', '', '2016-03-03 09:49:34', 'enzaprost dc, bovino, porcino, Sincronización de celos, inducción de celos, sincronización del ciclo estral, inducción al parto, desórdenes funcionales de los ovarios, celos silenciosos por anestro post-servicio, post-parto, ciclos irregulares, ciclos anovulatorios, cuerpo lúteo persistente, quistes lúteos, endometritis, piómetras. abortos terapéuticos ', 'enzaprost dc,bovino,porcino,Sincronización de celos,inducción de celos,sincronización del ciclo estral,inducción al parto,desórdenes funcionales de los ovarios,celos silenciosos por anestro post-servicio,post-parto,ciclos irregulares,ciclos anovulatorios,cuerpo lúteo persistente,quistes lúteos,endometritis,piómetras. abortos terapéuticos,Reproductivos,Uruguay', 0, '7', 0);
-INSERT INTO `tbl_producto` (`id`, `nombre`, `seccion`, `target`, `link`, `descripcion`, `fecha`, `tags`, `fullTags`, `codeContent`, `pais`, `user_id`) VALUES
+(215, 'ENZAPROST DC', 7, '0010000001', 'ENZAPROST-DC', '', '2016-03-03 09:49:34', 'enzaprost dc, bovino, porcino, Sincronización de celos, inducción de celos, sincronización del ciclo estral, inducción al parto, desórdenes funcionales de los ovarios, celos silenciosos por anestro post-servicio, post-parto, ciclos irregulares, ciclos anovulatorios, cuerpo lúteo persistente, quistes lúteos, endometritis, piómetras. abortos terapéuticos ', 'enzaprost dc,bovino,porcino,Sincronización de celos,inducción de celos,sincronización del ciclo estral,inducción al parto,desórdenes funcionales de los ovarios,celos silenciosos por anestro post-servicio,post-parto,ciclos irregulares,ciclos anovulatorios,cuerpo lúteo persistente,quistes lúteos,endometritis,piómetras. abortos terapéuticos,Reproductivos,Uruguay', 0, '7', 0),
 (216, 'GONAXAL®', 7, '1000000001', 'GONAXAL', '', '2016-03-03 09:55:51', 'gonaxal, bovino, equino, trastornos reproductivos, inseminación Artificial, mejoramiento de los parámetros de concepción, aciclia, ovulación retardada, atresia folicular,  desarrollo folicular, consecuente ovulación, quistes ováricos, sincronización del celo, Celos prolongados, celos permanentes', 'gonaxal,bovino,equino,trastornos reproductivos,inseminación Artificial,mejoramiento de los parámetros de concepción,aciclia,ovulación retardada,atresia folicular,desarrollo folicular,consecuente ovulación,quistes ováricos,sincronización del celo,Celos prolongados,celos permanentes,Reproductivos,Uruguay', 0, '7', 0),
-(217, 'BAGÓ AD3E', 8, '1010000101', 'BAG-AD3E', '', '2016-03-03 09:59:21', 'ad3e, bovino, ovino, equino, porcino, raquitismo, osteomalacia, hipocalcemia, tratamientos antiinfecciosos, tratamiento antiparasitarios, fuente vitaminica', 'ad3e,bovino,ovino,equino,porcino,raquitismo,osteomalacia,hipocalcemia,tratamientos antiinfecciosos,tratamiento antiparasitarios,fuente vitaminica,Vitamínicos y Minerales,Uruguay', 0, '7', 0),
+(217, 'BAGÓ AD3E', 8, '1010000101', 'BAG-AD3E', '', '2016-03-03 09:59:21', 'ad3e, bovino, ovino, equino, porcino, raquitismo, osteomalacia, hipocalcemia, tratamientos antiinfecciosos, tratamiento antiparasitarios, fuente vitaminica', 'ad3e,bovino,ovino,equino,porcino,raquitismo,osteomalacia,hipocalcemia,tratamientos antiinfecciosos,tratamiento antiparasitarios,fuente vitaminica,Vitamínicos y Minerales,Uruguay', 0, '7', 0);
+INSERT INTO `tbl_producto` (`id`, `nombre`, `seccion`, `target`, `link`, `descripcion`, `fecha`, `tags`, `fullTags`, `codeContent`, `pais`, `user_id`) VALUES
 (218, 'ESTREPTOCARBOCAFTIAZOL®', 9, '1110011101', '', '', '2016-03-09 01:43:58', 'ESTREPTOCARBOCAFTIAZOL, bovino, ovino, equino, caprino, porcino, felino, canino, diarreas polimicrobianas, colibacilosis, enteritis, gastroenteritis, infecciones alimentarias', 'ESTREPTOCARBOCAFTIAZOL,bovino,ovino,equino,caprino,porcino,felino,canino,diarreas polimicrobianas,colibacilosis,enteritis,gastroenteritis,infecciones alimentarias,Farmacéuticos,Uruguay', 0, '7', 0),
 (219, 'BIOAFTOGEN', 1, '0000000001', '', '', '2016-03-03 12:37:44', 'bioaftogen, bovino, fiebre aftosa', 'bioaftogen,bovino,fiebre aftosa,Aftosa,Bolivia', 0, '5', 0),
 (220, 'BIOLEPTOGEN', 2, '0010000001', '', '', '2016-03-09 09:06:10', 'bioleptogen, bovino, porcino, leptospirosis', 'bioleptogen,bovino,porcino,leptospirosis,Biológicos,Bolivia', 0, '5', 0),
@@ -1266,13 +1254,13 @@ INSERT INTO `tbl_producto` (`id`, `nombre`, `seccion`, `target`, `link`, `descri
 (369, 'CIPERSIN®', 3, '0000000101', 'CIPERSIN', '', '2016-03-09 12:10:41', 'CIPERSIN®,CIPERSIN,Tickicide for cattle; insecticide,melophaguicide,sheep,Emulsiiable liquid,', 'CIPERSIN®,CIPERSIN,Tickicide for cattle; insecticide,melophaguicide,sheep,Emulsiiable liquid,Antiparasitarios Externos,USA', 0, '9', 0),
 (370, 'GALMETRIN® PLUS POLVO', 3, '1110000101', 'GALMETRIN-PLUS-POLVO', '', '2016-03-09 12:12:57', 'External, larvicide,Anti-myiasis, powder,cattle, Sheep, swine, goats,GALMETRIN® PLUS POLVO,GALMETRIN,PLUS,POLVO', 'External,larvicide,Anti-myiasis,powder,cattle,Sheep,swine,goats,GALMETRIN® PLUS POLVO,GALMETRIN,PLUS,POLVO,Antiparasitarios Externos,USA', 0, '9', 0),
 (371, 'GALMETRIN® PLUS POMADA', 3, '1110000101', 'GALMETRIN-PLUS-POMADA', '', '2016-03-09 12:14:47', 'GALMETRIN® PLUS POMADA,GALMETRIN,PLUS,POMADA,External,larvicide,anti-myiasis,pomade,cattle,sheep, goats, horses, swine.', 'GALMETRIN® PLUS POMADA,GALMETRIN,PLUS,POMADA,External,larvicide,anti-myiasis,pomade,cattle,sheep,goats,horses,swine.,Antiparasitarios Externos,USA', 0, '9', 0),
-(372, 'GALMETRIN® PLUS SOLUCIÓN', 3, '1110000101', 'GALMETRIN-PLUS-SOLUCIN', '', '2016-03-09 12:16:42', 'GALMETRIN® PLUS SOLUCIÓN,GALMETRIN,PLUS,SOLUCIÓN,External,larvicide,anti-myiasis,solution,cattle, sheep, goats, horses ,swine.', 'GALMETRIN® PLUS SOLUCIÓN,GALMETRIN,PLUS,SOLUCIÓN,External,larvicide,anti-myiasis,solution,cattle,sheep,goats,horses,swine.,Antiparasitarios Externos,USA', 0, '9', 0);
-INSERT INTO `tbl_producto` (`id`, `nombre`, `seccion`, `target`, `link`, `descripcion`, `fecha`, `tags`, `fullTags`, `codeContent`, `pais`, `user_id`) VALUES
+(372, 'GALMETRIN® PLUS SOLUCIÓN', 3, '1110000101', 'GALMETRIN-PLUS-SOLUCIN', '', '2016-03-09 12:16:42', 'GALMETRIN® PLUS SOLUCIÓN,GALMETRIN,PLUS,SOLUCIÓN,External,larvicide,anti-myiasis,solution,cattle, sheep, goats, horses ,swine.', 'GALMETRIN® PLUS SOLUCIÓN,GALMETRIN,PLUS,SOLUCIÓN,External,larvicide,anti-myiasis,solution,cattle,sheep,goats,horses,swine.,Antiparasitarios Externos,USA', 0, '9', 0),
 (373, 'GALMETRIN® PLUS SPRAY', 3, '1110010101', 'GALMETRIN-PLUS-SPRAY', '', '2016-03-09 12:20:25', 'External,antiparasitic,spray,larvicide, repellant, contains,antibiotics,cattle, swine, sheep, goats,canines,GALMETRIN® PLUS SPRAY,GALMETRIN,PLUS,SPRAY', 'External,antiparasitic,spray,larvicide,repellant,contains,antibiotics,cattle,swine,sheep,goats,canines,GALMETRIN® PLUS SPRAY,GALMETRIN,PLUS,SPRAY,Antiparasitarios Externos,USA', 0, '9', 0),
 (374, 'GARRAMIX®', 3, '0000000001', 'GARRAMIX', '', '2016-03-09 12:22:50', 'GARRAMIX®, GARRAMIX,Ectoparasiticide,Tickicide, parasiticide, dip,cattle.', 'GARRAMIX®,GARRAMIX,Ectoparasiticide,Tickicide,parasiticide,dip,cattle.,Antiparasitarios Externos,USA', 0, '9', 0),
 (375, 'BAGOMECTINA®', 5, '0010000101', 'BAGOMECTINA', '', '2016-03-09 12:29:27', 'BAGOMECTINA®,BAGOMECTINA,Ecto, endo,parasiticide, cattle, sheep,swine, control gastrointestinal, lung parasites, mange, lice, ura, myiasis, 1%, Ivermectin,injectable,solution.', 'BAGOMECTINA®,BAGOMECTINA,Ecto,endo,parasiticide,cattle,sheep,swine,control gastrointestinal,lung parasites,mange,lice,ura,myiasis,1%,Ivermectin,injectable,solution.,Endectocidas,USA', 0, '9', 0),
 (376, 'BOVIFORT®', 5, '0010000101', 'BOVIFORT', '', '2016-03-09 12:33:25', 'BOVIFORT®,BOVIFORT,Ecto, endo, parasiticide,cattle, sheep, swine, Parasiticide', 'BOVIFORT®,BOVIFORT,Ecto,endo,parasiticide,cattle,sheep,swine,Parasiticide,Endectocidas,USA', 0, '9', 0),
-(377, 'BAGOMECTINA® AD3E FORTE', 5, '0000000101', 'BAGOMECTINA-AD3E-FORTE', '', '2016-03-09 12:40:44', 'Ecto,endoparasiticide,Tickicide,cattle,Parasiticide,sheep,Injectable,oil, emulsion,Ivermectin,1%,vitamins.', 'Ecto,endoparasiticide,Tickicide,cattle,Parasiticide,sheep,Injectable,oil,emulsion,Ivermectin,1%,vitamins.,Endectocidas,USA', 0, '9', 0),
+(377, 'BAGOMECTINA® AD3E FORTE', 5, '0000000101', 'BAGOMECTINA-AD3E-FORTE', '', '2016-03-09 12:40:44', 'Ecto,endoparasiticide,Tickicide,cattle,Parasiticide,sheep,Injectable,oil, emulsion,Ivermectin,1%,vitamins.', 'Ecto,endoparasiticide,Tickicide,cattle,Parasiticide,sheep,Injectable,oil,emulsion,Ivermectin,1%,vitamins.,Endectocidas,USA', 0, '9', 0);
+INSERT INTO `tbl_producto` (`id`, `nombre`, `seccion`, `target`, `link`, `descripcion`, `fecha`, `tags`, `fullTags`, `codeContent`, `pais`, `user_id`) VALUES
 (378, 'IVERGEN® PLATINUM 3,15 ', 5, '0000000001', 'IVERGEN-PLATINUM-315-', '', '2016-03-09 14:08:15', 'IVERGEN® PLATINUM 3.15 ,IVERGEN, PLATINUM, 3.15 ,Injectable, parasiticide, endectocide,ivermectin, cattle.', 'IVERGEN® PLATINUM 3.15,IVERGEN,PLATINUM,3.15,Injectable,parasiticide,endectocide,ivermectin,cattle.,Endectocidas,USA', 0, '9', 0),
 (379, 'BAGOMECTINA® 3,15 LA  AD3E', 5, '0000000101', 'BAGOMECTINA-315-LA-AD3E', '', '2016-03-09 14:12:35', 'BAGOMECTINA® 3.15 LA  AD3E, BAGOMECTINA, AD3E, Ecto , endoparasiticide,ivermectin, cattle ,sheep.', 'BAGOMECTINA® 3.15 LA  AD3E,BAGOMECTINA,AD3E,Ecto,endoparasiticide,ivermectin,cattle,sheep.,Endectocidas,USA', 0, '9', 0),
 (380, 'FLOK®', 5, '0000000101', 'FLOK', '', '2016-03-09 14:19:02', 'FLOK®,FLOK,External ,internal ,anti parasitic, ,treat gastrointestinal ,pulmonary, parasites, myiasis ,ticks ,cattle ,sheep. Inyectable, solution ,Doramectin ,1.1% ', 'FLOK®,FLOK,External,internal,anti parasitic,,treat gastrointestinal,pulmonary,parasites,myiasis,ticks,cattle,sheep. Inyectable,solution,Doramectin,1.1%,Endectocidas,USA', 0, '9', 0),
@@ -1307,15 +1295,12 @@ INSERT INTO `tbl_producto` (`id`, `nombre`, `seccion`, `target`, `link`, `descri
 -- Estructura de tabla para la tabla `tbl_producto_contenido`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_producto_contenido` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `tbl_producto_contenido` (
+  `id` int(11) NOT NULL,
   `producto_id` int(11) NOT NULL,
   `parte` int(11) NOT NULL,
-  `text` text NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `producto_id` (`producto_id`),
-  KEY `parte` (`parte`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5487 ;
+  `text` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tbl_producto_contenido`
@@ -3434,11 +3419,10 @@ INSERT INTO `tbl_producto_contenido` (`id`, `producto_id`, `parte`, `text`) VALU
 -- Estructura de tabla para la tabla `tbl_producto_partes`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_producto_partes` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(150) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=20 ;
+CREATE TABLE `tbl_producto_partes` (
+  `id` int(11) NOT NULL,
+  `nombre` varchar(150) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tbl_producto_partes`
@@ -3471,13 +3455,12 @@ INSERT INTO `tbl_producto_partes` (`id`, `nombre`) VALUES
 -- Estructura de tabla para la tabla `tbl_seccion`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_seccion` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `tbl_seccion` (
+  `id` int(11) NOT NULL,
   `nombre` varchar(150) NOT NULL,
   `url` varchar(100) NOT NULL,
-  `icon` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=15 ;
+  `icon` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tbl_seccion`
@@ -3505,13 +3488,12 @@ INSERT INTO `tbl_seccion` (`id`, `nombre`, `url`, `icon`) VALUES
 -- Estructura de tabla para la tabla `tbl_seccion_regionalizacion`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_seccion_regionalizacion` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `tbl_seccion_regionalizacion` (
+  `id` int(11) NOT NULL,
   `idCategoria` int(11) NOT NULL,
   `pais` int(11) NOT NULL,
-  `nombre` varchar(140) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=25 ;
+  `nombre` varchar(140) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tbl_seccion_regionalizacion`
@@ -3544,13 +3526,12 @@ INSERT INTO `tbl_seccion_regionalizacion` (`id`, `idCategoria`, `pais`, `nombre`
 -- Estructura de tabla para la tabla `tbl_tag`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_tag` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `tbl_tag` (
+  `id` int(11) NOT NULL,
   `name` varchar(150) NOT NULL,
   `count` int(11) NOT NULL,
-  `user_id` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1011 ;
+  `user_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tbl_tag`
@@ -4574,14 +4555,11 @@ INSERT INTO `tbl_tag` (`id`, `name`, `count`, `user_id`) VALUES
 -- Estructura de tabla para la tabla `tbl_tag_producto`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_tag_producto` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `tbl_tag_producto` (
+  `id` int(11) NOT NULL,
   `tag_id` int(11) NOT NULL,
-  `producto_id` int(11) NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `tag_id` (`tag_id`),
-  KEY `producto_id` (`producto_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=101309 ;
+  `producto_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tbl_tag_producto`
@@ -9983,49 +9961,48 @@ INSERT INTO `tbl_tag_producto` (`id`, `tag_id`, `producto_id`) VALUES
 -- Estructura de tabla para la tabla `tbl_textos`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_textos` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `español` text NOT NULL,
-  `ingles` text NOT NULL,
-  `portugues` text NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=348 ;
+CREATE TABLE `tbl_textos` (
+  `id` int(11) NOT NULL,
+  `es` text NOT NULL COMMENT 'español',
+  `en` text NOT NULL COMMENT 'ingles',
+  `pt` text NOT NULL COMMENT 'portugues'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tbl_textos`
 --
 
-INSERT INTO `tbl_textos` (`id`, `español`, `ingles`, `portugues`) VALUES
+INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (1, 'Bienvenidos a', 'Welcome to', 'Bienvenidos a'),
 (2, 'La evolución de la', 'The evolution of', 'A evolução da'),
 (3, 'Salud animal', 'Animal Health', 'Saúde animal'),
 (4, 'BIOGÉNESIS BAGÓ reconocida', '\n', ''),
 (5, '“mejor empresa latinoamericana veterinaria 2014”', '', ''),
 (6, 'Quiénes somos', 'Who we are', 'Quem Somos'),
-(7, 'Biogénesis Bagó es una empresa líder en la investigación y desarrollo de biotecnologías para la constante evolución de la salud animal.', 'We are encouraged by an innovative spirit, committed to the constant evolution of animal health.', 'A Biogénesis Bagó é uma empresa regional de biotecnologia que pesquisa, desenvolve e comercializa produtos e servios veterinários, projetados para garantir a saúde e melhorar a produtividade dos rebanhos de carne e leite.'),
-(8, 'Misión , Visión y Valores', '', 'Visão, Missão e Valores'),
-(9, 'Nuestros principales compromisos para ayudar a producir las crecientes demandas de alimentos de calidad que el mundo necesita.', '', 'Fornecer soluções sustentáveis, conhecimento e qualidade da cadeia alimentar bovina.'),
-(10, 'Lucha contra la  Aftosa', '', 'Luta Contra a Febre Aftosa'),
-(11, 'Por la calidad de nuestra vacuna, somos un referente mundial en la lucha contra la Fiebre Aftosa. Aportamos más de 2000 millones de dosis para campañas oficiales.', '', 'A Biogénesis-Bagó está comprometida na luta contra a febre aftosa. Na década de 50 foi a primeira empresa da Argentina a ser certificada para produção e comercialização de vacina contra a febre aftosa.'),
-(12, 'Trayectoria - hitos', '', 'Trajetória - Marcos'),
-(13, 'Un recorrido que demuestra el espíritu innovador y la permanente evolución de la compañía en la búsqueda de soluciones para una producción más eficiente.', '', ''),
-(14, 'Nuestras plantas', '', 'Nossas plantas'),
-(15, 'Avanzada tecnología y  altos estándares de calidad respaldan  todo el proceso de producción en nuestras plantas modelos instaladas en Argentina.', '', 'Todos os produtos da Biogénesis Bagó são fabricados em unidades de produção separadas e equipadas especialmente comtecnologia altamente avançada:'),
-(16, 'RSE - Sustentabilidad', '', 'Sustentabilidade Responsabilidade Social Corporativa'),
-(17, 'Aportamos nuestros mejores recursos para desarrollar soluciones y relaciones sustentables, junto a las comunidades de los países donde actuamos.', '', ''),
-(18, 'INFO para Proveedores', '', 'Prestadores'),
-(19, 'Información útil AFIP / Ingresos Brutos', '', ''),
-(20, 'Prensa', '', 'Imprensa'),
-(21, 'Compartimos nuestras novedades e informes para favorecer la comunicación, clave para la difusión de las nuevas tecnologías que impulsan a la producción.', '', ''),
-(22, 'Proveedores', '', 'Prestadores'),
-(23, 'Información útil AFIP / Ingresos Brutos', '', ''),
-(24, 'Revista El Molino', '', ''),
-(25, 'Información calificada sobre escenarios productivos, avances tecnológicos y protagonistas destacados en el desarrollo de América Latina.', '', ''),
-(26, 'Quiénes somos', '', 'Quem Somos'),
-(27, 'Nos anima un espíritu innovador, comprometido con la constante evolución de la salud animal. ', '', 'Com o tempo, está crescendo em toda a região para se tornar a maior empresa Latino-americana do setor para grandes animais e referência mundial na produção de biológicos, fruto do esforço e investimento em tecnologia para a prevenção das principais enfermidades infecciosas dos rebanhos e adaptadas às necessidades de cada país'),
+(7, 'Biogénesis Bagó es una empresa líder en la investigación y desarrollo de biotecnologías para la constante evolución de la salud animal.', 'Biogénesis Bagó is a leading company in research and development of biotechnology to further help the constant evolution in animal health.', 'A Biogénesis Bagó é uma empresa regional de biotecnologia que pesquisa, desenvolve e comercializa produtos e servios veterinários, projetados para garantir a saúde e melhorar a produtividade dos rebanhos de carne e leite.'),
+(8, 'Misión , Visión y Valores', 'Mission, Vision and Values', 'Visão, Missão e Valores'),
+(9, 'Nuestros principales compromisos para ayudar a producir las crecientes demandas de alimentos de calidad que el mundo necesita.', 'Our main commitment is to help produce high quality food to comply with the growing demands of the world today.  ', 'Fornecer soluções sustentáveis, conhecimento e qualidade da cadeia alimentar bovina.'),
+(10, 'Lucha contra la  Aftosa', 'Fight against Foot and Mouth Disease:  ', 'Luta Contra a Febre Aftosa'),
+(11, 'Por la calidad de nuestra vacuna, somos un referente mundial en la lucha contra la Fiebre Aftosa. Aportamos más de 2000 millones de dosis para campañas oficiales.', 'Due to the quality of our vaccine, we are a world renowned referent in the fight against Foot and Mouth Disease.  We supply over 2000 million doses for official campaigns.  ', 'A Biogénesis-Bagó está comprometida na luta contra a febre aftosa. Na década de 50 foi a primeira empresa da Argentina a ser certificada para produção e comercialização de vacina contra a febre aftosa.'),
+(12, 'Trayectoria - hitos', 'Milestone Trajectory', 'Trajetória - Marcos'),
+(13, 'Un recorrido que demuestra el espíritu innovador y la permanente evolución de la compañía en la búsqueda de soluciones para una producción más eficiente.', 'A path that shows the innovative spirit and the permanent evolution of the company whilst searching for solutions to a more efficient production.  ', ''),
+(14, 'Nuestras plantas', 'Our plantOur Manufacturing Plants', 'Nossas plantas'),
+(15, 'Avanzada tecnología y  altos estándares de calidad respaldan  todo el proceso de producción en nuestras plantas modelos instaladas en Argentina.', 'Advanced technology and high quality standards support the entire production process in our model manufacturing plants in Argentina', 'Todos os produtos da Biogénesis Bagó são fabricados em unidades de produção separadas e equipadas especialmente comtecnologia altamente avançada:'),
+(16, 'RSE - Sustentabilidad', 'RSE Sustainability: ', 'Sustentabilidade Responsabilidade Social Corporativa'),
+(17, 'Aportamos nuestros mejores recursos para desarrollar soluciones y relaciones sustentables, junto a las comunidades de los países donde actuamos.', 'We supply our best resources to develop solutions and sustainable relationships together with the communities in the countries in which we are present.', ''),
+(18, 'INFO para Proveedores', 'Suppliers', 'Prestadores'),
+(19, 'Información útil AFIP / Ingresos Brutos', 'Useful information AFIP / Gross Income', ''),
+(20, 'Prensa', 'Press Room', 'Imprensa'),
+(21, 'Compartimos nuestras novedades e informes para favorecer la comunicación, clave para la difusión de las nuevas tecnologías que impulsan a la producción.', 'News.  Reports.  Calendar of events.  Multimedia.', ''),
+(22, 'Proveedores', 'Providers', 'Prestadores'),
+(23, 'Información útil AFIP / Ingresos Brutos', 'Useful information AFIP / Gross Income', ''),
+(24, 'Revista El Molino', 'Magazine El Molino:  ', ''),
+(25, 'Información calificada sobre escenarios productivos, avances tecnológicos y protagonistas destacados en el desarrollo de América Latina.', 'Qualified information regarding production scenarios, technological advances and distinguished figures in the development of Latin America', ''),
+(26, 'Quiénes somos', 'Who we are?', 'Quem Somos'),
+(27, 'Nos anima un <strong>espíritu innovador</strong>, comprometido con la constante <strong>evolución de la salud animal</strong>. ', ' We are encouraged by an innovative spirit, committed to the constant <strong> evolution of animal health</strong>.', 'Com o tempo, está crescendo em toda a região para se tornar a maior empresa Latino-americana do setor para grandes animais e referência mundial na produção de biológicos, fruto do esforço e investimento em tecnologia para a prevenção das principais enfermidades infecciosas dos rebanhos e adaptadas às necessidades de cada país'),
 (28, 'Impulsamos tecnologías para la expresión del máximo potencial de los rodeos de carne y leche, con la mirada puesta en el acelerado crecimiento de la población y en los alimentos de calidad que el mundo necesita.', 'Since there is an accelerated population growth and the world needs quality food, we urge the use of technology to maximise the potential of beef and dairy herds. ', 'Focada em soluções de saúde animal adaptadas e específicas para a região, desenvolvendo produtos e serviços veterinários com a mais alta tecnologia e cuidado na excelência do seu processo produtivo.\r'),
-(29, 'Nos esforzamos por acercar los adelantos al productor, acompañando el camino de su propia evolución hacia la Frontera Productiva.', 'We make an effort to bring these advances to the producer, helping them evolve towards the Production Frontier', 'Atualmente, a empresa conta com escritórios no Brasil, América Central, México, Uruguai e sua matriz na Argentina.'),
-(30, 'En Biogénesis Bagó investigamos, desarrollamos y comercializamos productos biotecnológicos y servicios veterinarios que brindan soluciones efectivas a las principales enfermedades que impactan en la sanidad y productividad de los rodeos en el mundo.', 'In Biogénesis Bagó we investigate, develop and commercialise biotechnological products and veterinary services that provide effective solutions to key diseases that impact animal health and herd productivity around the world.', ''),
+(29, 'Nos esforzamos por acercar los adelantos al productor, acompañando el camino de su propia evolución hacia la <strong>Frontera Productiva</strong>. ', 'We make an effort to bring these advances to the producer, helping them evolve towards the Production Frontier', 'Atualmente, a empresa conta com escritórios no Brasil, América Central, México, Uruguai e sua matriz na Argentina.'),
+(30, 'En <strong>Biogénesis Bagó </strong> investigamos, desarrollamos y comercializamos productos biotecnológicos y servicios veterinarios que brindan soluciones efectivas a las principales enfermedades que impactan en la sanidad y productividad de los rodeos en el mundo.', 'In Biogénesis Bagó we investigate, develop and commercialise biotechnological products and veterinary services that provide effective solutions to key diseases that impact animal health and herd productivity around the world.', ''),
 (31, 'Con una trayectoria en la industria veterinaria iniciada en 1934,  hoy nos posicionamos como una compañía líder en el mercado de grandes animales de América Latina. A nuestra  casa central ubicada en Argentina, se suman las  filiales en Brasil, Centroamérica, México, Bolivia y Uruguay y una fuerte presencia comercial en otros países de la región.', 'With a trajectory in the veterinary industry since 1934, today we are positioned as the leading company in the large animal industry of Latin America.  In addition to our headquarters in Argentina, we have branches in Brazil, Central America, Mexico, Bolivia and Uruguay, as well as a strong commercial presence in other countries.', ''),
 (32, 'En 2016 iniciamos una nueva etapa en la internacionalización de nuestras tecnologías, con la habilitación de una planta de producción en China, junto HILE Biotechnology, para la producción exclusiva de vacuna contra la Fiebre Aftosa. ', 'In 2016, we started a new era with the internationalisation of our technology, a new manufacturing plant in China in conjunction with HILE Biotechnology for the exclusive production of the vaccine against Foot and Mouth Disease.', ''),
 (33, 'Planes sanitarios seguros y efectivos', 'Safe and Effective Sanitation Plans', ''),
@@ -10034,7 +10011,7 @@ INSERT INTO `tbl_textos` (`id`, `español`, `ingles`, `portugues`) VALUES
 (36, 'El laboratorio es referente mundial en la lucha contra la Fiebre Aftosa y principal productor de vacunas. Aportó  más de 2000 millones de dosis para abastecer las campañas oficiales de siete países con planes de vacunación. Desde 2006 es proveedor del Banco de Antígenos de Estados Unidos, México y Canadá.', 'The laboratory is world renowned in the fight against Foot and Mouth Disease and as the main producer of vaccines.  It supplied more than 2 billion doses for official campaigns in seven countries with vaccination plans.  Since 2006 it is a supplier for the Antigen Bank in United States, Mexico and Canada.', ''),
 (37, 'Nos distingue el sistema de gestión de calidad en todos los procesos productivos. Esto nos permite garantizar la respuesta de nuestros tratamientos y vacunas y la eficiencia productiva necesaria para abastecer a los mercados.', 'Quality management of all of our production processes distinguishes us and enables us to guarantee the response of our treatments, vaccines and production efficiency necessary to supply the markets demands.', ''),
 (38, 'Vanguardia en el desarrollo de soluciones', 'Avant-guard in the Development of Solutions', ''),
-(39, 'Nos proponemos estar a la vanguardia de las soluciones que se requieren en cada zona ganadera de los países donde estamos presentes. Para el abordaje de los problemas sanitarios de cada región, trabajamos en red con instituciones científicas y técnicas  públicas y privadas y nos nutrimos de nuestro servicio técnico, en contacto diario con el quehacer de los médicos veterinarios y productores.', 'We challenge ourselves to be avant-guard with solutions that are necessary in each region with livestock in the countries in which we are present.  When facing sanitation problems in each region, we work with a network of public and private scientific and technical institutions and we rely on our technical department that is in daily contact with our veterinarians and producers.', ''),
+(39, 'Nos proponemos estar <strong>a la vanguardia de las soluciones</strong> que se requieren en cada zona ganadera de los países donde estamos presentes. Para el abordaje de los problemas sanitarios de cada región, trabajamos en red con instituciones científicas y técnicas  públicas y privadas y nos nutrimos de nuestro servicio técnico, en contacto diario con el quehacer de los médicos veterinarios y productores. ', 'We challenge ourselves to be avant-guard with solutions that are necessary in each region with livestock in the countries in which we are present.  When facing sanitation problems in each region, we work with a network of public and private scientific and technical institutions and we rely on our technical department that is in daily contact with our veterinarians and producers.', ''),
 (40, 'Primeros en América Latina', 'First in Latin America', ''),
 (41, 'Biogénesis Bagó fue  la primera empresa en la región  que desarrolló', 'Biogénesis Bagó was the first company in the region to develop:', ''),
 (42, '•	Una línea de ectoparasiticidas ', '•	A line of ectoparasiticides', ''),
@@ -10050,56 +10027,56 @@ INSERT INTO `tbl_textos` (`id`, `español`, `ingles`, `portugues`) VALUES
 (52, 'Fruto de la inversión en tecnología y de nuestro compromiso por resolver las principales enfermedades que afectan el desarrollo de la producción pecuaria, en 1952 obtuvimos el primer registro para la comercialización y uso de la vacuna en la Argentina. En la década del 90, logramos desarrollar la primera vacuna anti aftosa de América Latina “pura”, libre de proteínas no estructurales, que resultó clave para el control de brotes y  garantizar el status sanitario en los países  de la región, fundamental para el ingreso de la producción en los mercados internacionales.', 'Due to our technological investment and our commitment to help resolve the main diseases that affect livestock production development, in 1952 we obtained the first registration to commercialise and use the vaccine in Argentina.  In the 90s, we developed the first “pure” vaccine against Foot and Mouth Disease in Latin America, free of non-structural proteins, which proved to be vital for controlling outbreaks and guaranteeing sanitation status in countries of the region, fundamentally to be able to enter products into international markets.', ''),
 (53, '•	Hoy somos la  única compañía en Sudamérica en tener registrada su vacuna en todos los países de la  región, con planes de vacunación contra la enfermedad:  4 de cada 10 bovinos reciben la vacuna de Biogénesis Bagó', '•	Today we are the only company in South America to have a registered vaccine in all countries of the region with sanitation plans against the disease: 4 out of 10 cattle receive the Biogénesis Bagó vaccine. ', ''),
 (54, '•	En 1997, ante focos detectados en Taiwán, aportamos de forma inmediata la primera vacuna aprobada por las autoridades sanitarias de ese país.', '•	In 1997, when faced with outbreaks in Taiwan, we immediately supplied the first vaccine approved by the countries health authorities.  ', ''),
-(55, '•	En  el año 2000, pusimos en funcionamiento el primer Banco Regional de Antígenos, vacunas anti Aftosa y Reserva Tecnológica.', '•	In 2000, we started the first Regional Bank of Antigens and Vaccines against Foot and Mouth Disease and Technological Reserve.', ''),
-(56, '•	Desde 2006 el laboratorio es proveedor del Banco de Antígenos de Estados Unidos, México y Canadá ', '•	Since 2006 the laboratory has been the supplier for the Antigen Bank of United States, Mexico and Canada. ', ''),
-(57, '•	En  2010, obtuvimos la licencia para uso y comercialización, en caso de emergencia, de la vacuna anti Aftosa en Canadá ', '•	In 2010 we obtained a license for the use and commercialisation, in case of emergency, of the vaccine against Foot and Mouth Disease in Canada.', ''),
-(58, '•	En 2011, nos convertimos en la primera compañía a nivel mundial en obtener un permiso de importación, distribución y comercialización de nuestra vacuna ante una eventual emergencia sanitaria en Estados Unidos.', '•	In 2011 we became the first company worldwide to obtain permission for import, distribution and commercialisation of our vaccine during a possible sanitation emergency in the United States. ', ''),
-(59, '•	En 2013, Biogénesis Bagó y HILE Biotechnology inician el proyecto de trabajo en conjunto para la producción y comercialización de la vacuna anti Aftosa en la República Popular de China. La planta comenzará a operar en 2016 con una capacidad de producción de 400 millones de dosis por año. Somos la primera y única empresa de biotecnología del sector privado en el mundo que cumple con la calidad requerida por las autoridades sanitarias del gobierno chino, para dar respuesta al principal problema sanitario que afecta los rodeos del país asiático.', '•	In 2013 Biogénesis Bagó and HILE Biotechnology started a project for the production and commercialisation of the vaccine against Foot and Mouth Disease in the Republic of China.  The manufacturing plant will begin to function in 2016 with a production capability of 400 million doses per year.  We are the first and only biotechnology company in the private sector of the world that complies with quality requirements of health authorities of the Chinese government and that will be able to respond to the main health issues affecting livestock in China. ', ''),
+(55, '•	En  el año 2000, pusimos en funcionamiento el <strong>primer Banco Regional de Antígenos, vacunas anti Aftosa y Reserva Tecnológica</strong>.', '•	In 2000, we started the <strong>first Regional Bank of Antigens and Vaccines against Foot and Mouth Disease and Technological Reserve</strong>.', ''),
+(56, '•	Desde 2006 el laboratorio es proveedor del <strong>Banco de Antígenos de Estados Unidos, México y Canadá</strong>. ', '•	Since 2006 the laboratory has been the supplier for the <strong> Antigen Bank of United States, Mexico and Canada</strong>. ', ''),
+(57, '•	En  2010, obtuvimos la licencia para uso y comercialización, en caso de emergencia, de la <strong>vacuna anti Aftosa en Canadá</strong>.', '•	In 2010 we obtained a license for the use and commercialisation, in case of emergency, of the <strong>vaccine against Foot and Mouth Disease in Canada</strong>.', ''),
+(58, '•	En 2011, nos convertimos en la <strong>primera compañía a nivel mundial</strong> en obtener un permiso de importación, distribución y comercialización de nuestra vacuna ante una <strong>eventual emergencia sanitaria en Estados Unidos</strong>.', '•	In 2011 we became the <strong>first company worldwide</strong> to obtain permission for import, distribution and commercialisation of our vaccine during a<strong>possible sanitation emergency in the United States</strong>. ', ''),
+(59, '•	En 2013, Biogénesis Bagó y HILE Biotechnology inician el proyecto de trabajo en conjunto para la producción y comercialización de la <strong>vacuna anti Aftosa en la República Popular de China</strong>. La planta comenzará a operar en 2016 con una capacidad de producción de 400 millones de dosis por año. Somos la primera y única empresa de biotecnología del sector privado en el mundo que cumple con la calidad requerida por las autoridades sanitarias del gobierno chino, para dar respuesta al principal problema sanitario que afecta los rodeos del país asiático.', '•	In 2013 Biogénesis Bagó and HILE Biotechnology started a project for the production and commercialisation of the <strong>vaccine against Foot and Mouth Disease in the Republic of China</strong>.  The manufacturing plant will begin to function in 2016 with a production capability of 400 million doses per year.  We are the first and only biotechnology company in the private sector of the world that complies with quality requirements of health authorities of the Chinese government and that will be able to respond to the main health issues affecting livestock in China. ', ''),
 (60, 'Nuestros colaboradores son quienes marcan la diferencia, quienes agregan valor al negocio, haciendo de nuestra compañía una de las empresas líderes dentro del mercado de la sanidad animal.', '', ''),
 (61, 'Trabajamos día a día respetando nuestros valores: Innovación, Cercanía, Flexibilidad, Responsabilidad, Progreso, Trabajo en Equipo, Integridad y Excelencia. Si te sentís con ganas y preparado para sumarte a un equipo dinámico y pujante, te invitamos a que formes parte de Biogénesis Bagó.', '', ''),
 (62, 'Envíanos tu CV', '', ''),
-(63, 'Responsabilidad Social Empresaria', '', ''),
-(64, 'Somos una empresa que busca liderar la evolución de la  salud animal siempre integrada a las necesidades del ser humano. Nos  comprometemos con la realidad de las comunidades de los países donde actuamos y aportamos nuestros mejores recursos para desarrollar soluciones productivas sustentables.', '', ''),
-(65, 'Gestión responsable y comprometida', '', ''),
-(66, 'Nuestro rol social en emergencias: Las emergencias sanitarias en los países ponen en riesgo no solo la vida de los animales sino también la sustentabilidad económica y productiva de  sus habitantes.  En 2001, Biogénesis Bagó focalizó sus esfuerzos para contribuir con todas las dosis de vacunas que fueron necesarias para controlar un brote de Fiebre Aftosa que puso en peligro el destino de la producción ganadera en la Argentina. Somos conscientes del valor social  que puede aportar nuestra compañía en momentos críticos. Asumimos la responsabilidad para contribuir al mantenimiento del status de la región, clave para el desarrollo socioeconómico de los países de América Latina.', '', ''),
-(67, 'Cuidado del medio ambiente: Abordamos el proceso de producción con una mirada integral hacia el cuidado del  medio ambiente. La certificaciones de calidad de nuestras plantas y productos con normas ISO 9001, 14.001, BPM (Buenas Prácticas de Manufactura) optimizan toda la gestión. Además, tenemos un  consumo responsable de los recursos como por ejemplo reciclamos y reutilizamos el agua,', '', ''),
-(68, 'Vínculos cercanos con la comunidad', '', ''),
-(69, 'Encuentros Biosolidarios: Desde 2002 organizamos encuentros solidarios en distintas localidades de Argentina, Uruguay y Paraguay con el fin de responder a necesidades concretas de instituciones relacionadas a la salud y a la educación.', '', ''),
-(70, 'Para esto buscamos un socio solidario, que nos proponga a quién y dónde ayudar. Una vez determinado el proyecto, lo ponemos en valor y se transforma en el objetivo del evento Biosolidario. Durante una cena show, financiada y organizada integralmente por Biogénesis Bagó, buscamos reunir el dinero necesario. Todo lo recaudado se destina a la necesidad de la institución, no en dinero, sino materializando la compra del insumo, equipamiento o realizando una obra determinada. En 24 eventos hemos recaudado más de usd 1.500.000 y cumplido con los objetivos establecidos junto a nuestros socios solidarios.', '', ''),
-(71, 'Salud, educación y desarrollo humano', '', ''),
-(72, '-	Mantenemos una alianza de trabajo  con fundaciones referentes en salud humana y animal: Fundación Mundo Sano, Prosaia y el Hospital Fernández', '', ''),
-(73, '-	Acompañamos  el desarrollo de las comunidades y escuelas rurales apoyando la acción de Misiones Rurales en más de 600 establecimientos. A través de los Encuentros Biosolidarios y campañas específicas, en las que también se involucran nuestros colaboradores, nos vinculamos con otras entidades con necesidades concretas de equipamiento o  materiales.', '', ''),
-(74, '-	Trabajamos con las comunidades cercanas a nuestras  Plantas de producción en Argentina  para generar vínculos estables y duraderos. Desarrollamos especialmente actividades de apoyo en escuelas y comedores.', '', ''),
-(75, 'Nuestras plantas: Avanzada tecnología y  altos estándares de calidad respaldan  todo el proceso de producción en nuestras plantas instaladas en Argentina, Brasil y  China.', '', ''),
-(76, 'Nuestras plantas', '', ''),
-(77, 'Nuestras  dos plantas modelo de producción en Argentina y una planta en Brasil, equipadas con última tecnología, nos permiten ofrecer las más avanzadas soluciones para la salud animal.', '', ''),
-(78, ' Trabajamos para abastecer a los mercados con los más altos estándares de calidad. La excelencia de nuestros productos comienza con la selección y control de las mejores materias primas y se sostiene en una gestión de calidad integrada que  garantiza la consistencia en cada serie. Las plantas son auditadas por las entidades regulatorias más exigentes del mundo. Todos nuestros procesos se desarrollan bajos las normas ISO 9001, 14.001 y de Buenas Prácticas de Manufacturación (GMP)', '', ''),
-(79, 'Planta Garín, Buenos Aires, Argentina: ', '', ''),
-(80, 'Vacunas más consistentes y efectivas', '', ''),
-(81, 'Construimos una planta modelo, única por su tecnología y capacidad de producción. Con introducción de equipamiento de última generación, evolucionamos en nuevos sistemas de  producción, concentración y purificación de antígenos que, combinados con adyuvantes específicos, nos permiten formular las vacunas más potentes y eficaces.', '', ''),
-(82, 'Además de los métodos convencionales desarrollamos y patentamos una nueva tecnología de cultivo celular y de producción viral, para asegurar mayor calidad y  cantidad de antígenos en cada una de nuestras vacunas.', '', ''),
-(83, '•	Unidad de producción de Vacuna contra la Fiebre Aftosa:  200 millones de dosis anuales, bajo las más altas  normas de bioseguridad, nivel 4 (NBS 4 OIE)', '', ''),
-(84, '•	Unidad de producción de Biológicos ViBa: 100 millones de dosis anuales de vacuna combinada, destinadas a la prevención de enfermedades virales y bacterianas, bajo niveles de Bioseguridad 2 y 2+.', '', ''),
-(85, '•	Unidad de producción de Vacuna Antirrábica para bovinos, caninos y felinos:  30 millones de dosis anuales,  elaboradas bajo niveles de bioseguridad 3 y  normas específicas de la OIE.', '', ''),
-(86, 'Planta Monte Grande- Buenos Aires, Argentina', '', ''),
-(87, 'Soluciones para los principales problemas de la producción ganadera', '', ''),
-(88, 'Aquí elaboramos nuestra línea de productos farmacéuticos para ofrecer planes sanitarios completos y eficaces, adaptados a las necesidades de la producción ganadera.', '', ''),
-(89, 'La planta cuenta con 6 unidades de producción,  con una capacidad anual de 3 millones de unidades al año:', '', ''),
-(90, '•	Línea de Inyectables', '', ''),
-(91, '• Línea de orales', '', ''),
-(92, '• Antibióticos (? – lactámicos)', '', ''),
-(93, '• Hormonales: Inyectables', '', ''),
-(94, '• Hormonales: sólido', '', ''),
-(95, '• Ectoparasiticidas', '', ''),
-(96, 'Planta Arraçoiaba da Serra , Sao Paulo, Brasil', '', ''),
-(97, 'Mas control sobre ectoparasitosis ', '', ''),
-(98, 'Para brindar soluciones tecnológicas que cubran las necesidades específicas de la ganadería en Brasil, instalamos una planta dedicada a la producción de ectoparaciticidas.', '', ''),
-(99, 'Nuestras instalaciones cumplen con los máximos estándares de calidad y con las normas de BPM (Buenas Prácticas de Manufactura) exigidas por el Ministerio de Agricultura, Pecuaria y Abastecimiento de Brasil.', '', ''),
-(100, ' Planta Jinhai Biotechnology, provincia de Shaanxi, China', '', ''),
-(101, 'Alta calidad de vacuna contra la Aftosa para la producción china', '', ''),
-(102, 'Jinhai Biotechnology es una empresa que surge del Joint Venture entre Biogénesis Bagó y  la compañía china Hile Biotechnology para la producción de vacuna contra la Fiebre Aftosa.', '', ''),
-(103, 'Con una superficie cubierta de casi 15000 m2 cubiertos, con tecnología de última generación, en la planta funcionan las áreas de producción,  los laboratorios de control de calidad, junto con los depósitos de materias primas y producto terminado. De acuerdo a lo requerido por la legislación china, la planta cuenta también con un sector segregado, con áreas de bioseguridad y acceso restringido, donde se realizan ensayos de control de calidad en animales.', '', ''),
-(104, 'REVISTA EL MOLINO', '', ''),
+(63, 'Responsabilidad Social Empresaria', 'Corporate Social Responsibility', ''),
+(64, 'Somos una empresa que busca liderar la evolución de la  salud animal siempre integrada a las necesidades del ser humano. Nos  comprometemos con la realidad de las comunidades de los países donde actuamos y aportamos nuestros mejores recursos para desarrollar soluciones productivas sustentables.', 'We are a company that strives to lead the evolution of animal health, always taking into account peoples needs.  We are committed to the reality of the communities within the countries we work and offer our best resources to develop productive and sustainable solutions.  ', ''),
+(65, 'Gestión responsable y comprometida', 'Committed and Responsible Management', ''),
+(66, '<strong>Nuestro rol social en emergencias:</strong> Las emergencias sanitarias en los países ponen en riesgo no solo la vida de los animales sino también la sustentabilidad económica y productiva de  sus habitantes.  En 2001, Biogénesis Bagó focalizó sus esfuerzos para contribuir con todas las dosis de vacunas que fueron necesarias para controlar un brote de Fiebre Aftosa que puso en peligro el destino de la producción ganadera en la Argentina. Somos conscientes del valor social  que puede aportar nuestra compañía en momentos críticos. Asumimos la responsabilidad para contribuir al mantenimiento del status de la región, clave para el desarrollo socioeconómico de los países de América Latina.', '<strong>Our social role in emergencies:</strong> When countries have sanitary emergencies not only are animals lives at risk, but also the economic and productive sustainability of its inhabitants.  In 2001, Biogénesis Bagó focused its efforts to contribute the necessary doses of vaccines to control an outbreak of Foot and Mouth Disease that endangered all of the livestock production in Argentina.  We are aware of our social value during critical moments in a country.  We asume responsibility to help maintain the regions status, which is key for the socioeconomic development in Latin-American countries. ', ''),
+(67, '<strong>Cuidado del medio ambiente:</strong> Abordamos el proceso de producción con una mirada integral hacia el cuidado del  medio ambiente. La certificaciones de calidad de nuestras plantas y productos con normas ISO 9001, 14.001, BPM (Buenas Prácticas de Manufactura) optimizan toda la gestión. Además, tenemos un  consumo responsable de los recursos como por ejemplo reciclamos y reutilizamos el agua,', '<strong>Taking Care of the Environment:</strong> We face the production process from an environment friendly point of view.  The quality of our manufacturing plants and products are certified by ISO norms 9001, 14.001 and GMP (Good Manufacturing Practices), which optimise the entire management.  Furthermore, we have a responsible consumption of resources, for example we recycle and reuse water.  ', ''),
+(68, 'Vínculos cercanos con la comunidad', 'Close Ties with the Community', ''),
+(69, '<strong>Encuentros Biosolidarios: </strong>Desde 2002 organizamos encuentros solidarios en distintas localidades de Argentina, Uruguay y Paraguay con el fin de responder a necesidades concretas de instituciones relacionadas a la salud y a la educación.', '<strong>Solidarity Meetings:</strong> Since 2002 we have been organising solidarity events in different locations in Argentina, Uruguay and Paraguay in the interest of concrete needs of institutions related to health and education.  ', ''),
+(70, 'Para esto buscamos un socio solidario, que nos proponga a quién y dónde ayudar. Una vez determinado el proyecto, lo ponemos en valor y se transforma en el objetivo del evento Biosolidario. Durante una cena show, financiada y organizada integralmente por Biogénesis Bagó, buscamos reunir el dinero necesario. Todo lo recaudado se destina a la necesidad de la institución, no en dinero, sino materializando la compra del insumo, equipamiento o realizando una obra determinada. En 24 eventos hemos recaudado más de usd 1.500.000 y cumplido con los objetivos establecidos junto a nuestros socios solidarios.', 'To accomplish this we have a solidarity director who proposes who and when to help.  Once the project is determined, we value it and transform it into the objective in the solidarity event.  During the dinner and show, financed and organised exclusively by Biogénesis Bagó, we try to raise the necessary funds.  All donations are destined to the institution in need, not in cash, but materialising it into raw resources, equipment or fulfilling a specific job. <strong> In 24 events we have raised more than USD$1.500.000 and complied with the established objectives together with our solidarity directors. </strong>', ''),
+(71, 'Salud, educación y desarrollo humano', 'Health, Education and Human Development', ''),
+(72, 'Mantenemos una alianza de trabajo  con fundaciones referentes en salud humana y animal: <strong>Fundación Mundo Sano, Prosaia y el Hospital Fernández</strong>', '-	We maintain a work alliance with distinguished foundations in human and animal health:<strong> Mundo Sano Foundation, Prosaic Foundation and Fernandez Hospital.</strong>', ''),
+(73, 'Acompañamos  el desarrollo de las comunidades y escuelas rurales apoyando la acción de <strong>Misiones Rurales</strong> en más de 600 establecimientos. A través de los Encuentros Biosolidarios y campañas específicas, en las que también se involucran nuestros colaboradores, nos vinculamos con otras entidades con necesidades concretas de equipamiento o  materiales. </strong>', '-	By supporting<strong> Misiones Rurales (Rural Missions) </strong> in more than 600 establishments we have helped communities and rural schools develop.  Through solidarity events and specific campaigns, in which our collaborators are also involved, we connect with other entities with concrete needs, such as equipment or materials.  ', ''),
+(74, 'Trabajamos con las comunidades cercanas a nuestras Plantas de producción en Argentina  para generar vínculos estables y duraderos. Desarrollamos especialmente actividades de apoyo en escuelas y comedores.', '-	We work with communities close to our manufacturing plants in Argentina to create a stable and long-lasting relationship.  We especially develop auxiliary activities in schools and dining rooms.  ', ''),
+(75, 'Nuestras plantas: Avanzada tecnología y  altos estándares de calidad respaldan  todo el proceso de producción en nuestras plantas instaladas en Argentina, Brasil y  China.', 'Our manufacturing plants: Advanced technology and high quality standards support the entire production process in our manufacturing plants in Argentina, Brazil and China.', ''),
+(76, 'Nuestras plantas', 'Our Manufacturing Plants ', ''),
+(77, 'Nuestras  dos plantas modelo de producción en Argentina y una planta en Brasil, equipadas con última tecnología, nos permiten ofrecer las más avanzadas soluciones para la salud animal.', 'Our two model manufacturing plants in Argentina and one in Brazil, equipped with the latest technology, allow us to offer the most advanced solutions for animal health.', ''),
+(78, ' Trabajamos para abastecer a los mercados con los más altos estándares de calidad. La excelencia de nuestros productos comienza con la selección y control de las mejores materias primas y se sostiene en una gestión de calidad integrada que  garantiza la consistencia en cada serie. Las plantas son auditadas por las entidades regulatorias más exigentes del mundo. Todos nuestros procesos se desarrollan bajos las normas ISO 9001, 14.001 y de Buenas Prácticas de Manufacturación (GMP)', 'We aim to provide the markets with the highest standards in quality.  The excellence of our products begins with the selection and control of the best raw material and is held up by an integrated quality managing system that guarantees consistency in each series.  The manufacturing plants are audited by the most demanding regulatory entities in the world.  All our procedures are developed under the norms ISO 9001, 14.001 and under Good Manufacturing Practices (GMP).', ''),
+(79, 'Planta Garín, Buenos Aires, Argentina: ', 'Garin Manufacturing Plant, Buenos Aires, Argentina: ', ''),
+(80, 'Vacunas más consistentes y efectivas', 'More consistent and effective vaccines', ''),
+(81, 'Construimos una planta modelo, única por su tecnología y capacidad de producción. Con introducción de equipamiento de última generación, evolucionamos en nuevos sistemas de  producción, concentración y purificación de antígenos que, combinados con adyuvantes específicos, nos permiten formular las vacunas más potentes y eficaces.', 'We built a model manufacturing plant, unique because of its technology and production capability.  With the addition of next-generation equipment, we have been able to evolve in our new production systems, concentration and purification of antigens which, combined with specific adjuvants, allow us to formulate more potent and efficient vaccines.  ', ''),
+(82, 'Además de los métodos convencionales desarrollamos y patentamos una nueva tecnología de cultivo celular y de producción viral, para asegurar mayor calidad y  cantidad de antígenos en cada una de nuestras vacunas.', 'Furthermore, apart from conventional methods, we have developed and patented new technology in cell cultures and viral production, in order to ensure better quality and more quantity of antigens in each of our vaccines.  ', ''),
+(83, '•	<strong>Unidad de producción de Vacuna contra la Fiebre Aftosa: </strong>200 millones de dosis anuales, bajo las más altas  normas de bioseguridad, nivel 4 (NBS 4 OIE).', '•	<strong>Vaccine against Foot and Mouth Disease Production Unit:</strong> 200 million annual doses, under the highest biosafety norms, level 4 (NBS OIE).', ''),
+(84, '•	<strong>Unidad de producción de Biológicos ViBa:</strong> 100 millones de dosis anuales de vacuna combinada, destinadas a la prevención de enfermedades virales y bacterianas, bajo niveles de Bioseguridad 2 y 2+. ', '•	<strong>Biological ViBa Production Unit:</strong> 100 million annual doses of the combined vaccine, destined to prevent viral and bacterial diseases, under biosafety levels 2 and 2+.  ', ''),
+(85, '•	<strong>Unidad de producción de Vacuna Antirrábica para bovinos, caninos y felinos:  </strong> 30 millones de dosis anuales,  elaboradas bajo niveles de bioseguridad 3 y  normas específicas de la OIE.', '•	<strong>Dogs and Cats Rabies Vaccine Production Unit:</strong> 30 million annual doses, elaborated under biosafety level 3 and specific OIE norms.', ''),
+(86, 'Planta Monte Grande- Buenos Aires, Argentina', 'Monte Grande Manufacturing Plant, Buenos Aires, Argentina:', ''),
+(87, 'Soluciones para los principales problemas de la producción ganadera', 'Solutions for main problems in livestock production', ''),
+(88, 'Aquí elaboramos nuestra línea de productos farmacéuticos para ofrecer planes sanitarios completos y eficaces, adaptados a las necesidades de la producción ganadera.', 'Here we elaborate our line of pharmaceutical products so as to offer complete and efficient sanitation plans, which are adapted to the needs of livestock production.', ''),
+(89, 'La planta cuenta con  <strong>6 unidades de producción</strong>, con una capacidad anual  <strong>de 3 millones de unidades al año:</strong>', 'The plant has <strong>6 production units</strong>, with an  <strong>annual capacity of 3 million units </strong>:', ''),
+(90, '•	Línea de Inyectables', '• Inyectable Line', ''),
+(91, '• Línea de orales', '• Oral Line', ''),
+(92, '• Antibióticos (? – lactámicos)', '• Antibiotics', ''),
+(93, '• Hormonales: Inyectables', '• Hormones: Inyectables', ''),
+(94, '• Hormonales: sólido', '• Hormones: Solids', ''),
+(95, '• Ectoparasiticidas', '• Ectoparasiticides', ''),
+(96, 'Planta Arraçoiaba da Serra , Sao Paulo, Brasil', 'Arraçoiaba da Serra Manufacturing Plant, Sao Paulo, Brazil', ''),
+(97, 'Mas control sobre ectoparasitosis ', 'More control of ectoparasites', ''),
+(98, 'Para brindar soluciones tecnológicas que cubran las necesidades específicas de la ganadería en Brasil, instalamos una planta dedicada a la producción de ectoparaciticidas.', 'In order to offer technological solutions to cover the specific needs of livestock in Brazil, we built a plant specialised in the production of ectoparasiticides.  ', ''),
+(99, 'Nuestras instalaciones cumplen con los máximos estándares de calidad y con las normas de BPM (Buenas Prácticas de Manufactura) exigidas por el Ministerio de Agricultura, Pecuaria y Abastecimiento de Brasil.', 'Our installations comply with the highest standards of quality and the norms of Good Manufacturing Practices (GMP) demanded by the Ministry of Agriculture, Fishery and Supply in Brazil.  ', ''),
+(100, ' Planta Jinhai Biotechnology, provincia de Shaanxi, China', 'Jinhai Biotechnology Manufacturing Plant, Shaanxi Province, China', ''),
+(101, 'Alta calidad de vacuna contra la Aftosa para la producción china', 'High Quality Vaccine against Foot and Mouth Disease for Chinese Production', ''),
+(102, 'Jinhai Biotechnology es una empresa que surge del Joint Venture entre Biogénesis Bagó y  la compañía china Hile Biotechnology para la producción de vacuna contra la Fiebre Aftosa.', 'Jinhai Biotechnology is a Joint Venture company between Biogenesis Bagó and the Chinese company Hile Biotechnology for the production of the vaccine against Foot and Mouth Disease.', ''),
+(103, 'Con una superficie cubierta de casi 15000 m2 cubiertos, con tecnología de última generación, en la planta funcionan las áreas de producción,  los laboratorios de control de calidad, junto con los depósitos de materias primas y producto terminado. De acuerdo a lo requerido por la legislación china, la planta cuenta también con un sector segregado, con áreas de bioseguridad y acceso restringido, donde se realizan ensayos de control de calidad en animales.', 'With a surface area of almost 15 000 m2 and with next-generation technology, the plant is responsable for production, quality control laboratories, as well as the storage units for raw materials and the finished product.  According to Chinese legislation, the manufacturing plant also has an isolated area, with biosafety measures and restricted access, where quality controls are tested on animals.  ', ''),
+(104, 'REVISTA EL MOLINO', 'MAGAZINE EL MOLINO', ''),
 (105, 'Información calificada sobre escenarios productivos, avances tecnológicos y protagonistas destacados en el desarrollo de América Latina.', '', ''),
 (106, '8/10/2015', '', ''),
 (107, 'Fronteras Productivas', '', ''),
@@ -10108,17 +10085,17 @@ INSERT INTO `tbl_textos` (`id`, `español`, `ingles`, `portugues`) VALUES
 (110, 'TRABAJA CON NOSOTROS', '', ''),
 (111, 'Envianos tu cv', '', ''),
 (112, 'Apostamos al compromiso y la pasión de nuestros empleados como pilares indispensables para un sólido crecimiento de toda la compañía.', '', ''),
-(113, 'CONTACTO', '', ''),
-(114, 'Nombre', '', ''),
-(115, 'Apellido', '', ''),
-(116, 'e-Mail', '', ''),
-(117, 'Teléfono', '', ''),
-(118, 'Empresa', '', ''),
-(119, 'Cargo', '', ''),
-(120, 'Dirección', '', ''),
+(113, 'CONTACTO', 'CONTACT', ''),
+(114, 'Nombre', 'Name', ''),
+(115, 'Apellido', 'Surname', ''),
+(116, 'e-Mail', 'e-mail', ''),
+(117, 'Teléfono', 'Phone', ''),
+(118, 'Empresa', 'Company', ''),
+(119, 'Cargo', 'Position', ''),
+(120, 'Dirección', 'Adress', ''),
 (121, 'Departamento', '', ''),
-(122, 'Mensaje', '', ''),
-(123, 'Enviar', '', ''),
+(122, 'Mensaje', 'Message', ''),
+(123, 'Enviar', 'Send', ''),
 (124, '', '', ''),
 (125, 'USO DE VACUNAS BIOABORTOGEN H Y BIOLEPTOGEN REDUCE LA PERDIDA DE PREÑEZ ENTRE 30 Y 60 DIAS EN VAQUILLONAS DE CARNE', '', ''),
 (126, 'T.L. Conti1,2; L.A. Souto3 ; Sales, J.N.S. 4 ; Baruselli, P.S. 5; Ferreira, R.M. 1,5', '', ''),
@@ -10152,7 +10129,8 @@ INSERT INTO `tbl_textos` (`id`, `español`, `ingles`, `portugues`) VALUES
 (154, 'El estudio fue realizado entre marzo y julio del 2007, en un tambo comercial del municipio de Pitangui, Minas Gerais, compuesto por 450 vacas cruza holando x gir lechero, en lactancia, con una producción media de 25 kg de leche/día. Las vacas fueron ordeñadas dos veces por día con un intervalo de 12 horas, el equipamiento es tipo espina de pescado con 24 conjuntos (2x12=24) con retiradores automáticos de pezoneras. El tambo tiene un programa intensivo de control de mastitis por medio de los siguientes procedimientos: rutina de ordeñe higiénica, tratamiento de las vacas secas, mantenimiento de la limpieza del ambiente donde permanecen los animales, adecuada limpieza y mantenimiento del equipo de ordeñe y tratamiento inmediato de los casos clínicos de mastitis. También existe el control intensivo de patógenos contagiosos-Staphylococcus aureus y Streptococcus agalactiae- de baja prevalencia en el establecimiento. Los animales infectados con esos patógenos, identificados por medio de cultivos microbiológicos realizados después del parto, son descartados del rodeo. Resultados de cultivos microbiológicos de tanque de frío y cultivos individuales realizados antes del inicio del estudio demostraban que las IIM eran causadas predominantemente por patógenos ambientales.', '', ''),
 (155, 'El grupo experimental estaba compuesto de 187 animales distribuidos al azar, teniendo en cuenta la fecha de parto, producción de leche, promedio del CCS de la última lactancia y fecha probable de parto en dos grupos experimentales: J5V (n=96)-grupo de vacas vacunadas que recibieron 3 dosis de vacuna contra la Escherichia coli (ROTATEC J5®); J5Vcont (n=91): grupo de vacas control que no recibieron ninguna dosis de vacuna contra Escherichia coli (ROTATEC J5®).', '', ''),
 (156, 'Los animales fueron inmunizados con vacuna comercial (ROTATEC J5® BIOGÉNESIS BAGÓ S.A., Paraná, Brasil) según el siguiente protocolo: Grupo J5V –tres aplicaciones por vía SC en una dosis de 3 ml, aplicada con jeringa dosificadora en el tercio medio del cuello – se administraron dos dosis de vacuna en el pre parto, la primera 60 días antes de la fecha prevista de parto y la segunda 30 días después de la primera, y una tercera dosis administrada en la primera semana post parto. Todos los animales fueron mantenidos en las mismas condiciones en cuanto a instalaciones, nutrición y ambiente durante el periodo del ensayo.', '', ''),
-(157, 'El tratamiento con antibiótico específico para vacas secas, a base de cloxacilina benzatínica, fue realizado en todas las vacas 60 días antes de la fecha probable de parto, en el día de secado. Para la realización del mismo, después del ordeño completo de las vacas,  se realizó la desinfección y antisepsia de los pezones con hipoclorito de sodio (pre dipping); se secaron los pezones con toallas de papel después de 30 segundos; se desinfectó el esfínter del pezón con algodón embebido con alcohol al 70% y se procedió a la infusión del medicamento, utilizando jeringa de cánula corta. Después de la aplicación del pomo, fue realizada una nueva antisepsia con iodo (post dipping). Las vacas que presentaron periodo de seca mayor a los 60 días o abortaron durante el periodo experimental fueron excluidas del estudio.', '', ''),
+(157, 'El tratamiento con antibiótico específico para vacas secas, a base de cloxacilina benzatínica, fue realizado en todas las vacas 60 días antes de la fecha probable de parto, en el día de secado. Para la realización del mismo, después del ordeño completo de las vacas,  se realizó la desinfección y antisepsia de los pezones con hipoclorito de sodio (pre dipping); se secaron los pezones con toallas de papel después de 30 segundos; se desinfectó el esfínter del pezón con algodón embebido con alcohol al 70% y se procedió a la infusión del medicamento, utilizando jeringa de cánula corta. Después de la aplicación del pomo, fue realizada una nueva antisepsia con iodo (post dipping). Las vacas que presentaron periodo de seca mayor a los 60 días o abortaron durante el periodo experimental fueron excluidas del estudio.', '', '');
+INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (158, 'Al momento del secado, siete días después del parto y al detectar casos clínicos de mastitis se recolectaron muestras de leche para diagnostico microbiológico individual  con el objetivo de la identificación de patógenos causantes de mastitis. Las muestras de leche fueron obtenidas inmediatamente antes del ordeñe, después del descarte de los primeros chorros de leche, desinfección de los pezones con una solución de hipoclorito de sodio y secado con toallas de papel descartable. Al momento de la colecta, se realizó antisepsia del esfínter del pezón con algodón embebido en alcohol al 70%. Se muestrearon los cuatro cuartos formando una muestra única, pool, recolectada en frascos estériles previamente identificados. El material recolectado fue congelado y enviado en recipientes térmicos al laboratorio para aislamiento y caracterización de los microorganismos. Volúmenes de 10 ml de cada muestra fueron sembradas con asas calibradas y descartables en cada cuadrante de una placa de agar-sangre conteniendo 5% de sangre de carnero desfibrinada e  incubándose a 35 ° C por 24 hs, de acuerdo con las recomendaciones de Harmon et al (1990).', '', ''),
 (159, 'Después del periodo de incubación, se realizó la primera lectura de las placas, observándose crecimiento microbiano, aspecto, coloración y número de colonias presentes. Se continuó la incubación de las placas por otras 24 hs a 35 °C, para realizar la segunda lectura a las 48 hrs de la siembra. De aquellas muestras de leche que presentaban  crecimiento de microorganismos, se seleccionó una colonia representativa, que fue sembrada en agar BHI (Brain Heart Infusión-agar con infusión de cerebro y corazón) e incubada a 35°C por 24 hs. Después de este periodo, los aislamientos fueron examinados al microscopio en frotis teñidos por la técnica de Gram y evaluados en cuanto a su  producción de catalasa para luego ser sometidos a las pruebas de identificación (Brito & Brito 1999).', '', ''),
 (160, 'Las muestras de pool de leche y las individuales destinadas a CCS, fueron recolectadas mensualmente a partir de los 10 días de lactancia, según el protocolo del National Mastitis Council (NMC 1999). Estas fueron retiradas directamente de los medidores de leche acoplados al equipo de ordeño y acondicionados en frascos que contienen dos pastillas del conservante Bronopol (2-bromo-2-nitropropano-1,3-diol), permitiendo su conservación a temperatura ambiente. Las muestras fueron homogenizadas por agitación suave, hasta la completa disolución de los comprimidos y enviadas al laboratorio. El análisis del CCS fueron realizadas por método electrónico (equipamiento Bentley CombSystem® 2300).', '', ''),
@@ -10163,8 +10141,7 @@ INSERT INTO `tbl_textos` (`id`, `español`, `ingles`, `portugues`) VALUES
 (165, 'Resultados y discusión', '', ''),
 (166, 'El cuadro 1 presenta la prevalencia de infecciones intramamarias (IIM) en el secado y post parto en vacas vacunadas y no vacunadas. Hubo reducción (p< 0,05) en la prevalencia de Escherichia coli en el post parto en el grupo de vacas vacunadas (J5V) comparadas con las no vacunadas (J5VCont). No hubo diferencia significativa entre los grupos con relación a otros patógenos (p>0,05). Atribuible este resultado al efecto del tratamiento con antibiótico realizado el día del secado, es decir, la terapia de vaca seca y la ocurrencia de cura espontánea, principalmente relacionada a coliformes y generalmente presente durante el periodo de vaca seca. Este resultado pone en evidencia la importancia de esta terapia en la resolución de infecciones preexistentes y en la prevención de nuevas infecciones en el periodo de vaca seca, especialmente, aquellas causadas por otros agentes que no son coliformes. En ambos grupos, cuando se observan de manera aislada, se nota una reducción significativa (p<0,05) en el porcentaje de animales infectados en el post parto, con aumento en el porcentaje de animales con resultados negativos al cultivo microbiológico (Cuadro 1). A pesar de no haber sido percibidas diferencias estadísticamente significativas entre los grupos, se observó un aumento del 100% de animales negativos al cultivo microbiológico en las vacas vacunadas (J5V), siendo este aumento del 50% en animales no vacunados (J5Vcont). Todas las vacas recibieron antibiótico específico para vacas secas el día del secado, esto es 60 días antes del parto. No obstante,  se constató  la ocurrencia de mejores resultados, considerándose un  aumento en el número de animales negativos en el grupo de vacas vacunadas (J5V). Este dato indica alguna contribución de la inmunización con E. coli J5 en la eliminación de infecciones adquiridas durante el periodo de secado, en especial aquellas causadas por coliformes, ya que la protección ofrecida por la vacunación con E. coli J5 es atribuida al aumento en la concentración de anticuerpos que poseen reacción cruzada contra otras especies de bacterias Gram negativas (Hogan et al. 1992c).', '', ''),
 (167, 'Ver cuadro 1 que habría que hacer imagen en el doc 3 Escherichia coli j5 en la inmunizacion...doc', '', ''),
-(168, 'J5V=vacas vacunadas; J5Vcont=vacas control; ¹ SEC = Seca, ² POS = post parto; ??? Frecuencia seguida de letra minúscula distintas, en la misma columna, indican diferencias estadísticas entre grupo, por el Test Exacto de Fisher (p?0,05); ??? Frecuencias seguidas de letras mayúsculas distintas, en la misma línea, indican diferencias estadísticamente significativas entre secado y post parto, en el mismo grupo y para el mismo microorganismo, por el Test de McNemar (p<0,05); * En esta categoría están incluidos los patógenos Bacillus sp., Streptococcus sp., Pseudomonas sp. y Levaduras.', '', '');
-INSERT INTO `tbl_textos` (`id`, `español`, `ingles`, `portugues`) VALUES
+(168, 'J5V=vacas vacunadas; J5Vcont=vacas control; ¹ SEC = Seca, ² POS = post parto; ??? Frecuencia seguida de letra minúscula distintas, en la misma columna, indican diferencias estadísticas entre grupo, por el Test Exacto de Fisher (p?0,05); ??? Frecuencias seguidas de letras mayúsculas distintas, en la misma línea, indican diferencias estadísticamente significativas entre secado y post parto, en el mismo grupo y para el mismo microorganismo, por el Test de McNemar (p<0,05); * En esta categoría están incluidos los patógenos Bacillus sp., Streptococcus sp., Pseudomonas sp. y Levaduras.', '', ''),
 (169, 'A pesar de que la terapia de vaca seca no presenta eficacia comprobada contra bacterias Gram negativas, ésta es capaz de aumentar la tasa de cura en animales infectados por otros tipos de patógenos y prevenir la aparición de nuevas infecciones durante el periodo de secado (Bradley & Green 2001). Este dato se torna evidente cuando se observan los resultados del presente estudio en que ambos grupos fueron tratados con antibióticos específicos para vacas secas el día del secado, presentaron reducción de la prevalencia de infecciones causadas por otro tipo de microorganismos: de 54,17% en el secado al 25,00% en el post parto en vacas vacunadas y de 40,45%  en el secado al 31,87% en el post parto en las vacas no vacunadas.', '', ''),
 (170, 'Durante el periodo de secado, en especial después del periodo de involución completa de la glándula mamaria, ésta es parcialmente resistente a las infecciones debido a los altos niveles de lactoferrina presente en la secreción mamaria (Bradley & Green 2004). Esta proteína posee capacidad bacteriostática, principalmente, por tornar no disponibles los niveles de hierro presentes en la glándula mamaria (Green et al. 2002, Kutila et al. 2003, Chaneton et al. 2008). Estudios realizados por Diarra et al. (2002) indican una potente actividad bactericida de la lactoferrina por medio de un aumento en la permeabilidad de la membrana celular bacteriana y lesión de la pared celular externa, particularmente en las bacterias Gram negativas, pudiendo aumentar el efecto de algunos antimicrobianos. Este dato puede justificar los resultados aquí presentados, en los que se observa una disminución de los porcentajes en la aparición de vacas infectadas en el grupo de vacas no vacunadas (J5Vcont), aunque menos pronunciado en comparación con las vacunadas (J5V), pudiéndose atribuir el aumento de la tasa de cura espontánea de los animales presente en el periodo seco por la acción de la lactoferrina, así como otros factores inmunológicos inherentes a los animales en esta etapa fisiológica (Burvenich et al. 2007), asociada a la terapia de vaca seca. Así se verifica que el periodo seco es ideal para conseguir una completa sinergia entre la terapia antimicrobiana y la función inmune para la eliminación de patógenos de la glándula mamaria, sin incurrir en los altos costos de los tratamientos típicos para las vacas en lactación.', '', ''),
 (171, 'La acción de la lactoferrina en las secreciones mamarias es aún mayor contra bacterias Gram negativas (-), en especial E coli, como fue demostrado por Chaneton et al. (2008) que observaron que la inhibición del crecimiento de E. coli depende de las concentraciones de lactoferrina en la glándula mamaria. También Todhunter et al (1990) verificaron que esta inhibición puede ser optimizada por la presencia de inmunoglobulinas, ya que la combinación de inmunoglobulinas y lactoferrinas resulta en reducciones significativas en el crecimiento de E. coli, comparadas con la acción aislada de lactoferrina, indicando que los anticuerpos presentes en la secreción mamaria que interactúan con la lactoferrina son más efectivos contra E coli. Así, de acuerdo a los resultados aquí expuestos y en base a los estudios de Chaneton et al. (2008) y Todhunter et al. (1990), la reducción observada en la prevalencia de IIM después del parto, resulta de la asociación entre las altas concentraciones de lactoferrina e inmunoglobulinas en la glándula mamaria durante el periodo de secado junto con su capacidad bacteriostática, así como su capacidad para aumentar la eficiencia de los antibióticos en las vacas secas. La interacción entre estos factores puede llevar a un aumento en la tasa de curación de los animales, limitando el establecimiento de IIM en ese periodo.', '', ''),
@@ -10264,7 +10241,8 @@ INSERT INTO `tbl_textos` (`id`, `español`, `ingles`, `portugues`) VALUES
 (265, 'Para obtener éxito practico y económico en el control de la diarrea neonatal, se torna pertinente y necesario un acompañamiento gerencial de la actividad pecuaria. Medidas profilácticas como la desinfección e higienización de los centros de manejo y un excelente manejo de las vacas pre parto, realizando vacunaciones pre parto y la profilaxia umbilical, se reduce la infección en terneros (Arantes, 1989).', '', ''),
 (266, 'MATERIALES Y METODOS', '', ''),
 (267, 'El experimento fue realizado en 200 vacas raza Nelore, pertenecientes a la Estancia Irara, localizada en el municipio de Uberlandia – MG.', '', ''),
-(268, 'Las madres pasaron por un examen ginecológico  (palpación rectal), con el objetivo de analizar las condiciones fisiológicas del útero y de los ovarios e identificar los animales que estaban en el séptimo mes de gestación. Los animales diagnosticados en ese mes de gestación recibieron la caravana del Sistema Brasilero de identificación Bovina y Bubalina (SISBOV) en la oreja derecha, lo que facilitó el control de las madres y fueron divididas en dos grupos de 100 animales. Solo el primer grupo fue vacunado, funcionando como grupo testigo, para que los resultados puedan ser comparados luego de la prueba. Las madres del primer grupo recibieron 3 ml de vacuna  contra la diarrea neonatal, portadora de cepas inactivadas de Escherichia coli y de rotavirus, vía subcutánea, 60 días antes del parto y un refuerzo (booster) 30 días antes del parto. Con el refuerzo, se pretende aumentar la sensibilidad del sistema inmunológico, ampliando la protección del recién nacido durante sus primeros tres meses de vida, período en que la inmunidad pasiva está en franca actividad en el organismo del ternero.', '', ''),
+(268, 'Las madres pasaron por un examen ginecológico  (palpación rectal), con el objetivo de analizar las condiciones fisiológicas del útero y de los ovarios e identificar los animales que estaban en el séptimo mes de gestación. Los animales diagnosticados en ese mes de gestación recibieron la caravana del Sistema Brasilero de identificación Bovina y Bubalina (SISBOV) en la oreja derecha, lo que facilitó el control de las madres y fueron divididas en dos grupos de 100 animales. Solo el primer grupo fue vacunado, funcionando como grupo testigo, para que los resultados puedan ser comparados luego de la prueba. Las madres del primer grupo recibieron 3 ml de vacuna  contra la diarrea neonatal, portadora de cepas inactivadas de Escherichia coli y de rotavirus, vía subcutánea, 60 días antes del parto y un refuerzo (booster) 30 días antes del parto. Con el refuerzo, se pretende aumentar la sensibilidad del sistema inmunológico, ampliando la protección del recién nacido durante sus primeros tres meses de vida, período en que la inmunidad pasiva está en franca actividad en el organismo del ternero.', '', '');
+INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (269, 'Los dos lotes de madres pasaron su maternidad en el mismo lote hasta el nacimiento de los terneros, cuando tuvieron sus ombligos cortados (con 5 cm de largo en relación a la línea media ventral del animal) y desinfectados con solución de yodo (10%). Ellos recibieron también caravanas SISBOV en la oreja derecha y tatuaje con número de la madre en la oreja izquierda para facilitar las anotaciones referentes a la aparición y tratamiento de diarrea neonatal hasta los 90 días de edad. Después de esa etapa los dos grupos de animales fueron llevados a lotes donde permanecieron hasta el final del experimento. Los terneros fueron observados diariamente y los que presentaban el cuadro clínico característicos de diarrea recibieron el tratamiento con antibiótico (sulfadoxina)  de larga acción hasta su eventual cura.', '', ''),
 (270, 'Los datos registrados hasta los 90 días de edad, referentes a la prevalencia de diarrea neonatal, mortalidad de terneros, dosis de antibióticos para tratamiento, horas de trabajo para la vacunación, medicación de  los animales enfermos y manutención  de vacas que perdieron sus terneros debido a la diarrea fueron analizados e interpretados. Se procuró con eso, calcular costos con la prevención y tratamiento de diarrea neonatal en el  sistema de producción de cría, con madres inmunizadas y no inmunizadas en el peri parto, pero no fue posible hacer análisis estadístico de los costos porque no existe repetición de los mismos.', '', ''),
 (271, 'Tabla 1. Porcentaje de diarrea neonatal y mortalidad en el sistema de producción de terneros de carne, con madres inmunizadas contra Escherichia coli y rotavirus y no inmunizadas en el peri-parto. Uberlandia  - MG, 2005.', '', ''),
@@ -10290,8 +10268,7 @@ INSERT INTO `tbl_textos` (`id`, `español`, `ingles`, `portugues`) VALUES
 (291, 'Por sobrepasar el límite de 20 citaciones, estarán disponibles en el sitio www.ahoraveterinária.com.br', '', ''),
 (292, '', '', ''),
 (293, 'Cuidado con la mastitis en vacas de cría', '', ''),
-(294, 'Terneros pueden pesar hasta 14 kg menos al destete, porque las madres producen menos leche.', '', '');
-INSERT INTO `tbl_textos` (`id`, `español`, `ingles`, `portugues`) VALUES
+(294, 'Terneros pueden pesar hasta 14 kg menos al destete, porque las madres producen menos leche.', '', ''),
 (295, 'Usted ya oyó hablar de mastitis en vacas de cría?. Probablemente no. La enfermedad, caracterizada por la inflamación de las glándulas mamarias, es muy común en la producción lechera. Un estudio conducido por el médico veterinario Paulo Francisco Domingues, profesor de la Facultad de Medicina Veterinaria y Zootecnia de la Unesp de Botucatu, SP, sorprendió al mostrar que el problema no está solo en las salas de ordeñe. Vacas Nelore también están sujetas a la mastitis y su desempeño se ve perjudicado por esta enfermedad, “Ellas producen menos leche y, consecuentemente, destetan terneros con bajo peso”, afirma Domingues, que llego a esa conclusión juntando, junto con su grupo de estudios, las muestras de leche de vacas de cría mantenidas con pasto.', '', ''),
 (296, '“Nuestro objetivo fue saber de vacas de raza Nelore eran afectadas por mastitis sub clínicas”. La recoleccion de muestras fue hecha en dos periodos distintos: 30 días después del parto y en el destete. En el primero, se recogio leche de 117 vacas, de las cuales 29,1% presentaron disgnostico positivo para mastitis sub clinica (sin sintomas aparentes).', '', ''),
 (297, 'La segunda recoleccion de muestras conto con 108 vacas y registro prevalencia menor de la enfermedad (20,1%). Lo mas interesante esta por venir. Los terneros hijos de vacas disgnosticadas con mastitis sub clinica luego del parto pesaron al destete, 14,4 kg menos que terneros de vacas sanas.', '', ''),
@@ -10344,7 +10321,103 @@ INSERT INTO `tbl_textos` (`id`, `español`, `ingles`, `portugues`) VALUES
 (344, 'HOGAN, J.S.; WEISS, W.P.; TODHUNTER, D.A.; SMITH, K.L.; SCHOENBERGER, P.S.;  Effects of an Escherichia coli J5 vaccine on mild clinical coliform mastitis. Journal of Dairy Science, v.78, p. 285-290, 1995', '', ''),
 (345, 'HOGAN, J.S.; SMITH, K.L. Coliform mastitis. Veterinary Research, v.34. p. 507-509, 2003', '', ''),
 (346, 'TYLER, J.W.; CULLOR, J.S.; OSBURN, B.I.; BUSHNELL, R.B; Relationship between serologic recognition of Escherichia coli O111:B4 (J5) and clinical coliform mastitis in cattle. American Journal of Veterinary Research, v. 49, p.1950-1954, 1998.', '', ''),
-(347, 'Institucional', 'Institucional', 'Institucional');
+(347, 'Institucional', 'Institutional', 'Institucional'),
+(348, 'Vademécum', 'Vademécum', 'Vademécum'),
+(349, 'No hay productos de este tipo en tu región.', 'No products available in your region', ''),
+(350, 'Actualmente Biogénesis Bagó se convirtió en la mayor empresa latinoamericana del sector para grandes animales y el mayor proveedor para las campañas regionales de Lucha, Control y Erradicación de la fiebre aftosa en el continente, fruto del esfuerzo e inversión en tecnología para la prevención. </br>\n			Sus productos son reconocidos a nivel mundial por su calidad y aporte estratégico en el control y erradicación de las enfermedades de mayor impacto en los principales estados productores de alimentos de origen animal.<br />\n			Actualmente, la compañía cuenta con oficinas en Brasil, Centroamérica, México, Bolivia y Uruguay, y su casa matriz se encuentra situada en Argentina.', '', ''),
+(351, 'Nace Laboratorio San Jorge', 'Incorporation of San Jorge Laboratories', ''),
+(352, 'Chemotécnica registra 1er producto veterinario: ectoparasiticidas a base de Arsenicales', 'Chemotécnica registers the first veterinary product: an arsenic-base ectoparasiticide\n\n', ''),
+(353, 'Nace Chemotécnica Sintyal', 'Incorporation of Chemotécnica Sintyal', ''),
+(354, '1er registro de VACUNA ANTIAFTOSA en Argentina', '1st Registration of FMD vaccine in Argentina', ''),
+(355, 'Introduce la vacuna en la región, contribuyendo a <strong>erradicar la enfermedad </strong>y a exportar al mundo la producción pecuaria americana.', 'It introduces the vaccine in the region contributing to <strong> eradicate the disease </strong> and to export American livestock production all around the world', ''),
+(356, 'Lanzamiento Rotatec, la 1º vacuna para prevenir la diarrea viral bovina.', 'Launching of Rotatec, the first vaccine to prevent viral diarrhea in cattle', ''),
+(357, 'En la década del 80, junto a reconocidas entidades científicas de Latinoamérica, comienza a desarrollar las primeras vacunas específicas para las enfermedades que más afecta a la producción pecuaria', 'During the 80’s, together with well-known Latin American scientific entities, the first specific vaccines for diseases that affect livestock production were developed', ''),
+(358, 'Lanza la 1º Ivermectina genérica, a nivel global', 'Launching of the first generic Ivermectin at global level', ''),
+(359, 'Nace Biogénesis Sintyal (Fusión chemotécnica Sintyal + Biogénesis)', 'Incorporation of Biogénesis Sintyal (merger of Chemotécnica Sintyal and Biogénesis)', ''),
+(360, 'Certifica su planta de producción vacuna anti Aftosa bajo normas de <strong>Bioseguridad 4 OIE</strong>', 'Certification of its production plant FMD vaccine produced under <strong> Biosafety level 4 OIE </strong>', ''),
+(361, '1º exportación de la Vacuna Antiaftosa a Sudamérica y Taiwán', 'First export of FMD vaccine to South America and Taiwan', ''),
+(362, 'Inaugura filial en Uruguay', 'Opening of Uruguay subsidiary', ''),
+(363, 'Inaugura filial en Brasil', 'Opening of Brazil subsidiary', ''),
+(364, 'Certificación ISO 9001', 'ISO 9001 Certification', ''),
+(365, '1º Banco argentino y regional de antígenos y vacuna contra la Aftosa', '1st Argentine and Regional FMD antigen and vaccine bank', ''),
+(366, 'Patenta Bovifort en USA y UE', 'Registration of Bovifort Patent in the USA and the EU', ''),
+(367, 'Nuevo centro de distribución y depósitos en Planta Garín', 'New storage and distribution center at Garin Plant', ''),
+(368, 'Certificación GMP (Plantas Garín y Monte Grande)', 'GMP Certification (Garín and Monte Grande Plants)', ''),
+(369, 'Adjudicación como proveedores del Banco Norteamericano de Antígenos y Vacunas contra la Fiebre Aftosa de EEUU, México y Canadá', 'Award of international tender to supply FMD antigens and vaccines to the North American Foot and Mouth Disease Vaccine Bank (NAFMDVB) which member countries are Mexico, Canada and the USA.', ''),
+(370, 'Inaugura filial en México', 'Opening of Mexico subsidiary', ''),
+(371, 'Registro de Vacuna Antiaftosa en Brasil', 'FMD vaccine registration in Brazil', ''),
+(372, 'Inaugura la Planta de vacunas virales y bacterianas M.V  Leandor Elordi ', 'Opening of the viral and bacterial vaccines plant, M.V. Leandro Elordi', ''),
+(373, '1º compañía extranjera en USA autorizada para proveer su Vacuna Antiaftosa ante emergencia sanitaria', '1st foreign company authorized to supply FMD vaccine in the event of sanitary emergencies', ''),
+(374, 'Certificación ISO 14001', 'Opening of the Central American subsidiary', ''),
+(375, '2.000 millones de dosis de Vacuna Antiaftosa aplicadas en la Región', '2.000 million doses of FMD vaccine were applied in the region', ''),
+(376, 'Inaugura filial en Centroamérica', 'Opening of the Central American subsidiary', ''),
+(377, 'Es elegida como único proyecto de Cooperación Bilateral entre Argentina y China para instalar una planta de Vacunas Antiaftosa en China', 'It is selected as the only bilateral cooperation project between Argentina and China to set up a FMD vaccine plant in China\r\n\r\n', ''),
+(378, 'Apertura filial en Bolivia', 'Opening of Bolivia subsidiary\r\n', ''),
+(379, 'Continúa impulsando la evolución de la salud animal', 'Ongoing promotion of animal health evolution', ''),
+(380, 'Constancia de Inscripción AFIP (CUIT)', '', ''),
+(381, 'Impuesto sobre los Ingresos Brutos Convenio Multilateral (cm01-cm02)', '', ''),
+(382, 'Constancia de Inscripción IIBB', '', ''),
+(383, 'Convenio Multilateral (form cm05)', '', ''),
+(385, 'Misión', 'Mission', ''),
+(386, 'Innovar utilizando herramientas biotecnológicas para la mejora continua de la salud animal y colaborar así con la generación de alimentos para satisfacer la demanda de próximas generaciones.', '', ''),
+(387, 'Visión', 'Vision', ''),
+(388, 'Liderar la evolución de la salud animal integrada a las necesidades del ser humano.', '', ''),
+(389, 'Valores', 'Values', ''),
+(390, 'Innovación', 'Innovation', ''),
+(391, 'Cercanía', '', ''),
+(392, 'Flexibilidad', '', ''),
+(393, 'Progreso', '', ''),
+(394, 'Trabajo en equipo', '', ''),
+(395, 'Integridad', '', ''),
+(396, 'Excelencia', '', ''),
+(397, 'Responsabilidad', '', ''),
+(404, '<strong><span  class="span-aftosa">A</span>ÑO 1997</strong>', '<strong><span  class="span-aftosa">Y</span>EAR 1997</strong>', ''),
+(405, '<strong><span  class="span-aftosa">A</span>ÑO 2000</strong>', '<strong><span  class="span-aftosa">Y</span>EAR 2000</strong>', ''),
+(406, '<strong><span  class="span-aftosa">A</span>ÑO 2006</strong>', '<strong><span  class="span-aftosa">Y</span>EAR 2006</strong>', ''),
+(407, '<strong><span  class="span-aftosa">A</span>ÑO 2010/strong>', '<strong><span  class="span-aftosa">Y</span>EAR 2010</strong>', ''),
+(408, '<strong><span  class="span-aftosa">A</span>ÑO 2011</strong>', '<strong><span  class="span-aftosa">Y</span>EAR 2011</strong>', ''),
+(409, '<strong><span  class="span-aftosa">A</span>ÑO 2013</strong>', '<strong><span  class="span-aftosa">Y</span>EAR 2013</strong>', ''),
+(410, 'Argentina', '', ''),
+(411, 'Bolivia', '', ''),
+(412, 'Brasil', 'Brazil', ''),
+(413, 'Costa Rica', '', ''),
+(414, 'Ecuador', '', ''),
+(415, 'El Salvador', '', ''),
+(416, 'Guatemala', '', ''),
+(417, 'Honduras', '', ''),
+(418, 'México', '', ''),
+(419, 'Nicaragua', '', ''),
+(420, 'Panamá', '', ''),
+(421, 'Paraguay', '', ''),
+(422, 'Perú', '', ''),
+(423, 'Rep. Dominicana', '', ''),
+(424, 'Uruguay', '', ''),
+(425, 'Venezuela', '', ''),
+(426, 'Otros países', 'Other countries', ''),
+(427, 'Versión español', 'Spanish version', ''),
+(428, 'Versión portugués', 'Portuguese version', ''),
+(429, 'Trayectoria', 'Trajectory', ''),
+(430, 'Info para proveedores', 'Supliers', ''),
+(431, 'Rse', 'Rse', ''),
+(432, 'Filiales y rep. comerciales', '', ''),
+(433, 'info técnica', '', ''),
+(434, 'Planes sanitarios', '', ''),
+(435, 'Planillas de trabajo', '', ''),
+(436, 'Trabajos técnicos', '', ''),
+(437, 'Aftosa', 'Foot and Mouth Disease', ''),
+(438, 'Antibióticos', 'Antibiotics', ''),
+(439, 'Antiparasitarios externos', 'External parasiticides', ''),
+(440, 'Antiparasitarios internos', 'Internal parasiticides', ''),
+(441, 'Biólogicos', 'Biological', ''),
+(442, 'Endectocidas', 'Endectocides', ''),
+(443, 'Farmacéuticos', 'Pharmaceutical', ''),
+(444, 'Nutrición', 'Nutrition', ''),
+(445, 'Reproductivos', 'Reproductive', ''),
+(446, 'Salud ambiental', 'Environmental health', ''),
+(447, 'Vitaminas y minerales', 'Vitamins & minerals', ''),
+(449, 'rrhh', 'rrhh', ''),
+(450, 'contacto', 'contact', ''),
+(451, 'revista el molino', 'magazine el molino', '');
 
 -- --------------------------------------------------------
 
@@ -10352,13 +10425,12 @@ INSERT INTO `tbl_textos` (`id`, `español`, `ingles`, `portugues`) VALUES
 -- Estructura de tabla para la tabla `tbl_user`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_user` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `tbl_user` (
+  `id` int(11) NOT NULL,
   `username` varchar(128) NOT NULL,
   `password` varchar(128) NOT NULL,
-  `email` varchar(128) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
+  `email` varchar(128) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tbl_user`
@@ -10379,11 +10451,10 @@ INSERT INTO `tbl_user` (`id`, `username`, `password`, `email`) VALUES
 -- Estructura de tabla para la tabla `tbl_user_role`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_user_role` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(140) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+CREATE TABLE `tbl_user_role` (
+  `id` int(11) NOT NULL,
+  `nombre` varchar(140) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tbl_user_role`
@@ -10394,6 +10465,221 @@ INSERT INTO `tbl_user_role` (`id`, `nombre`) VALUES
 (2, 'asdas'),
 (4, 'admin');
 
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `authassignment`
+--
+ALTER TABLE `authassignment`
+  ADD PRIMARY KEY (`itemname`,`userid`);
+
+--
+-- Indices de la tabla `authitem`
+--
+ALTER TABLE `authitem`
+  ADD PRIMARY KEY (`name`);
+
+--
+-- Indices de la tabla `authitemchild`
+--
+ALTER TABLE `authitemchild`
+  ADD PRIMARY KEY (`parent`,`child`),
+  ADD KEY `child` (`child`);
+
+--
+-- Indices de la tabla `tbl_establecimiento`
+--
+ALTER TABLE `tbl_establecimiento`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `tbl_imagen_ref`
+--
+ALTER TABLE `tbl_imagen_ref`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `tbl_miscelaneo`
+--
+ALTER TABLE `tbl_miscelaneo`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `tbl_page`
+--
+ALTER TABLE `tbl_page`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `tbl_pais`
+--
+ALTER TABLE `tbl_pais`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `tbl_permission`
+--
+ALTER TABLE `tbl_permission`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `tbl_ppartes_regionalizacion`
+--
+ALTER TABLE `tbl_ppartes_regionalizacion`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `tbl_producto`
+--
+ALTER TABLE `tbl_producto`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id` (`id`),
+  ADD KEY `seccion` (`seccion`);
+
+--
+-- Indices de la tabla `tbl_producto_contenido`
+--
+ALTER TABLE `tbl_producto_contenido`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `producto_id` (`producto_id`),
+  ADD KEY `parte` (`parte`);
+
+--
+-- Indices de la tabla `tbl_producto_partes`
+--
+ALTER TABLE `tbl_producto_partes`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `tbl_seccion`
+--
+ALTER TABLE `tbl_seccion`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `tbl_seccion_regionalizacion`
+--
+ALTER TABLE `tbl_seccion_regionalizacion`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `tbl_tag`
+--
+ALTER TABLE `tbl_tag`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `tbl_tag_producto`
+--
+ALTER TABLE `tbl_tag_producto`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `tag_id` (`tag_id`),
+  ADD KEY `producto_id` (`producto_id`);
+
+--
+-- Indices de la tabla `tbl_textos`
+--
+ALTER TABLE `tbl_textos`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `tbl_user`
+--
+ALTER TABLE `tbl_user`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `tbl_user_role`
+--
+ALTER TABLE `tbl_user_role`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `tbl_establecimiento`
+--
+ALTER TABLE `tbl_establecimiento`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT de la tabla `tbl_imagen_ref`
+--
+ALTER TABLE `tbl_imagen_ref`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=632;
+--
+-- AUTO_INCREMENT de la tabla `tbl_page`
+--
+ALTER TABLE `tbl_page`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT de la tabla `tbl_pais`
+--
+ALTER TABLE `tbl_pais`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+--
+-- AUTO_INCREMENT de la tabla `tbl_permission`
+--
+ALTER TABLE `tbl_permission`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
+--
+-- AUTO_INCREMENT de la tabla `tbl_ppartes_regionalizacion`
+--
+ALTER TABLE `tbl_ppartes_regionalizacion`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+--
+-- AUTO_INCREMENT de la tabla `tbl_producto`
+--
+ALTER TABLE `tbl_producto`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=405;
+--
+-- AUTO_INCREMENT de la tabla `tbl_producto_contenido`
+--
+ALTER TABLE `tbl_producto_contenido`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5487;
+--
+-- AUTO_INCREMENT de la tabla `tbl_producto_partes`
+--
+ALTER TABLE `tbl_producto_partes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+--
+-- AUTO_INCREMENT de la tabla `tbl_seccion`
+--
+ALTER TABLE `tbl_seccion`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+--
+-- AUTO_INCREMENT de la tabla `tbl_seccion_regionalizacion`
+--
+ALTER TABLE `tbl_seccion_regionalizacion`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+--
+-- AUTO_INCREMENT de la tabla `tbl_tag`
+--
+ALTER TABLE `tbl_tag`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1011;
+--
+-- AUTO_INCREMENT de la tabla `tbl_tag_producto`
+--
+ALTER TABLE `tbl_tag_producto`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=101309;
+--
+-- AUTO_INCREMENT de la tabla `tbl_textos`
+--
+ALTER TABLE `tbl_textos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=452;
+--
+-- AUTO_INCREMENT de la tabla `tbl_user`
+--
+ALTER TABLE `tbl_user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+--
+-- AUTO_INCREMENT de la tabla `tbl_user_role`
+--
+ALTER TABLE `tbl_user_role`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- Restricciones para tablas volcadas
 --
