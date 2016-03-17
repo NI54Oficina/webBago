@@ -64,7 +64,7 @@ class WebController extends Controller
 			}
 		}
 		//echo Pais::model()->findByPk($_SESSION['pais'])->nombre;
-		if($data!="base"&&$data!="paises"){
+		if($data!="home"&&$data!="paises"){
 		$this->renderPartial("//static/layout");
 		$this->renderPartial("//static/".$data,$model);
 		$this->renderPartial("//static/footer");
