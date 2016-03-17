@@ -182,7 +182,11 @@ class PaisController extends Controller
 			$_SESSION["redirectURL"]=null;
 			exit();
 		}else{
-			header("Location: ".$_SERVER['HTTP_REFERER']);
+			if (strpos($_SERVER['HTTP_REFERER'], '/paises') !== false) {
+				header("Location: http://".$_SERVER['SERVER_NAME']."/".$_SESSION["webRoot"]."/");
+			}else{
+				header("Location: ".$_SERVER['HTTP_REFERER']);
+			}
 			die();
 		}
 	}
