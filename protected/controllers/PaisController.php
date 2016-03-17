@@ -169,12 +169,12 @@ class PaisController extends Controller
 	}
 	
 	public function actionTraduccion($id,$lng){
-		$lang= ["español","ingles","portugues"];
+		
 		
 		//echo Pais::model()->findByPk($id)->nombre;;
 		//echo "<br>";
 		//echo $lang[$lng];
-		$_SESSION["lng"]= $lang[$lng];
+		$_SESSION["lng"]= $lng;
 		$_SESSION["pais"]= $id;
 		
 		header("Location: ".$_SERVER['HTTP_REFERER']);

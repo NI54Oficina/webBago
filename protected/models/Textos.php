@@ -99,8 +99,8 @@ class Textos extends CActiveRecord
 	
 	public function GetText($id){
 		if(!isset($_SESSION["lng"])||$_SESSION["lng"]==""){
-			$_SESSION["lng"]="español";
-			$_SESSION["pais"]=1;
+			//$_SESSION["lng"]="español";
+			//$_SESSION["pais"]=1;
 		}
 		$model=$this->findByPk($id);
 		$auxTran= $model[$_SESSION["lng"]];

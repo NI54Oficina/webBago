@@ -27,10 +27,10 @@ class Pais extends CActiveRecord
 		return array(
 			array('nombre', 'required'),
 			array('nombre', 'length', 'max'=>130),
-			array('url,icon', 'safe'),
+			array('url,icon,short', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, nombre', 'safe', 'on'=>'search'),
+			array('id, nombre,short', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -53,6 +53,7 @@ class Pais extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'nombre' => 'Nombre',
+			'short' => 'Shortcode',
 		);
 	}
 
@@ -76,6 +77,7 @@ class Pais extends CActiveRecord
 
 		$criteria->compare('id',$this->id);
 		$criteria->compare('nombre',$this->nombre,true);
+		$criteria->compare('short',$this->short,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
