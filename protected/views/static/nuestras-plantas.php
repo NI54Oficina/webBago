@@ -9,7 +9,7 @@
 			<object width="700" height="500" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0">
 				<param name="SRC" value="1080/Exterior/exterior_1080_out.swf">
 				<embed src="<?php echo Yii::app()->request->baseUrl; ?>/1080/Exterior/exterior_1080_out.swf" width="900" height="500" style="width: 63vw; height: 60vh;">
-							<a href="" style="z-index: 21;margin-left: -14%;position: relative;">
+							<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/nuestras-plantas-menu" style="z-index: 21;margin-left: -14%;position: relative;">
 								<img style="margin-top: -10%;margin-left: 80%;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/mas.png" alt="" /></a>
 			</object>
 		</a>

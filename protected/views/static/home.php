@@ -690,7 +690,7 @@
 		</section>
 
 		<!--CURVA-->	
-		<img style="width: 100%;position:relative;margin-top:-1px;display:none;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-celeste-abajo.png" alt="" />		
+		<img style="width: 100%;position:relative;margin-top:-1px;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-celeste-abajo.png" alt="" />		
 		<section class="special col-lg-12 col-md-12 col-sm-12 col-xs-12" data-scrollax-parent="true" style="min-height:100vh;width:100%;">
 				
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >

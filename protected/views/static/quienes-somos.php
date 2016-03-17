@@ -57,17 +57,17 @@
            <p style="margin-top:3%;"><?php echo Textos::model()->GetText(39); ?></p>
            
 		   <!-- CUADRO -->
-           <div class="cuadro" style="border:#999 solid 1px; padding-left:5px; line-height:7px;margin-top: 5%; margin-bottom: 10%;"">
+           <div class="cuadro" style="border:#999 solid 1px; padding-left:5px; line-height:7px;margin-top: 5%; margin-bottom: 10%;padding-bottom: 5%;"">
            		
 				<!-- TITULO CUADRO -->
 				<h2 class="h2-aftosa" style="color:#26CBD4; ">Primeros en América Latina</h2>
-                 <h3 style="color: #595959;font-size: 16px;">Biogénesis Bagó fue  la primera empresa en la región  que desarrolló</h5>
+                 <h3 style="color: #595959; font-size: 14px; line-height: 25px; font-weight: 700;">Biogénesis Bagó fue  la primera empresa en la región  que desarrolló</h5>
            
 				<!-- ITEMS CUADRO -->
-				<p style="line-height:19px;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-bullet.png"  style="display:inline-block;" />Una línea de ectoparasiticidas </p>
-				<p style="line-height:19px;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-bullet.png"  style="display:inline-block;" />La primer vacuna para la diarrea viral de los bovinos </p>
-				<p style="line-height:19px;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-bullet.png"  style="display:inline-block;" />Vacunas combinadas para prevenir síndromes respiratorios y reproductivos del ganado </p>
-				<p style="line-height:19px;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-bullet.png"  style="display:inline-block;" />Obtuvo el primer registro para la vacuna anti Aftosa en 1952 (Argentina). </p>
+				<p style="line-height: 40px;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-bullet.png"  style="display:inline-block;" />Una línea de ectoparasiticidas </p>
+				<p style="line-height: 40px;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-bullet.png"  style="display:inline-block;" />La primer vacuna para la diarrea viral de los bovinos </p>
+				<p style="line-height: 40px;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-bullet.png"  style="display:inline-block;" />Vacunas combinadas para prevenir síndromes respiratorios y reproductivos del ganado </p>
+				<p style="line-height: 40px;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-bullet.png"  style="display:inline-block;" />Obtuvo el primer registro para la vacuna anti Aftosa en 1952 (Argentina). </p>
            
            </div>
 		 </div> 
