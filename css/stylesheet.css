@@ -5364,6 +5364,8 @@ figure.snip1156:hover .salud-ambiental{
 		display: none;
 	}
 	
+	
+	
 }
 
 
@@ -5410,6 +5412,10 @@ figure.snip1156:hover .salud-ambiental{
 		width:72%;
 	}
 	
+	.logo-blanco {
+		width: 60%;
+		margin-top: 0%;
+	}
 
 
 }
