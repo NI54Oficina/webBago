@@ -27,7 +27,8 @@ class PaisChecker extends CApplicationComponent
 			//echo count($auxFeed);
 			if(strlen($firstArg)==2){
 				$currentPais =Pais::model()->findByAttributes(array('short'=>$firstArg));
-				$_SESSION["pais"]= $currentPais->short;
+				$_SESSION["short"]= $currentPais->short;
+				$_SESSION["pais"]= $currentPais->id;
 				$_SESSION["lng"]= $currentPais->lng;
 				//echo "<div style='width:100%;height:20px;background-color:white;color:black;'>"."entra"."</div>";
 				//redirect selección paises, guardar en sesión pagina actual

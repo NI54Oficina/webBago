@@ -57,6 +57,8 @@ return array(
 			
 				'<pais>/<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				
+				'pais/traduccion/id/<id>/lng/<lng>'=>"pais/traduccion/id/<id>/lng/<lng>",
+				
 				
 				
 				'producto/<producto:[\w\/.-]+>'=>array(
@@ -96,6 +98,7 @@ return array(
 					),
 				  ),
 				),
+				
 				
 				
 				
