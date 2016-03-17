@@ -4,7 +4,8 @@ class PaisChecker extends CApplicationComponent
 		
         public function PaisCheck()
         {
-			$webRoot="webBago";
+			$_SESSION["webRoot"]="webBago";
+			$webRoot=$_SESSION["webRoot"];
 			$currentUrl=str_replace($webRoot,"",$_SERVER['REQUEST_URI']);
 			//Yii::log("poyo", CLogger::LEVEL_ERROR, "poyo2");
 				
@@ -40,7 +41,13 @@ class PaisChecker extends CApplicationComponent
 					$short= Pais::model()->findByPk($_SESSION["pais"])->short;
 					header("Location: http://".$_SERVER['SERVER_NAME']."/".$webRoot."/".$short."/".$currentUrl);
 				}else{
-					$_SESSION["redirectURL"]= $_SERVER['REQUEST_URI'];
+					if(!isset($_SESSION["redirectURL"])){
+						echo "entra session";
+						$_SESSION["redirectURL"]= $currentUrl;
+					}else{
+						
+					}
+					
 					header("Location: http://".$_SERVER['SERVER_NAME']."/".$webRoot."/paises");
 				}
 				
@@ -50,9 +57,13 @@ class PaisChecker extends CApplicationComponent
         }
 		
 		public function getBaseUrl(){
+			$short="";
+			if(isset($_SESSION["short"])){
+				$short=$_SESSION["short"];
+			}
 			$baseUrl="http://" . $_SERVER['SERVER_NAME']. $_SERVER['PHP_SELF'];
 			$baseUrl= str_replace("index.php","",$baseUrl);
-			return $baseUrl.$_SESSION["short"];
+			return $baseUrl.$short;
 			/*if($this->_baseUrl===null){
 				$this->_baseUrl=rtrim(dirname($this->getScriptUrl()),'\\/');
 			}
