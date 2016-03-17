@@ -62,18 +62,18 @@
 		<img id="logo-bago" class="col-lg-2 col-md-2 col-sm-12 col-xs-12" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo-bago.png" />		
 		
 		<!--<div style="float:right;">
-		<a href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/1/lng/0"style="color:black;float:left;padding:10px;">Español</a>
-		<a href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/2/lng/2"style="color:black;float:left;padding:10px;">Portugues</a>
+		<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/pais/traduccion/id/1/lng/0"style="color:black;float:left;padding:10px;">Español</a>
+		<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/pais/traduccion/id/2/lng/2"style="color:black;float:left;padding:10px;">Portugues</a>
 		</div>-->
 		
 		<!-- +++++ LISTA VERSIONES MOBILE+++++ -->
 		<ul class=" col-lg-2 col-md-2 col-sm-2 col-xs-12" id="ul-nav-2-mobile" style="color:#0C6594;float:right;">
-				<li class="li-nav-2"><a href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/1/lng/0"style="float:left;padding: 10px 0px;color: #337ab7;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-arg.png" /></a></li>
-				<li class="li-nav-2"><a href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/2/lng/2"style="float:left;padding: 10px 0px;color: #337ab7;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-br.png" /></a></li>
+				<li class="li-nav-2"><a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/pais/traduccion/id/1/lng/0"style="float:left;padding: 10px 0px;color: #337ab7;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-arg.png" /></a></li>
+				<li class="li-nav-2"><a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/pais/traduccion/id/2/lng/2"style="float:left;padding: 10px 0px;color: #337ab7;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-br.png" /></a></li>
 				<li class="li-nav-2 dropdown" data-toggle="collapse"><a  href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"  style="float:left;padding: 10px 0px;color: #337ab7;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-mex.png"  /></a>
 				
 					<ul class="dropdown-menu dropdown-menu-right lista-menu collapse" id="ul-paises-nav">
-								<li class="li-paises-nav" ><a href="" class="a-otros-paises-mobile"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-arg.png" /><?php echo Textos::model()->GetText(410); ?></a></li>
+								<li class="li-paises-nav" ><a  href="" class="a-otros-paises-mobile"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-arg.png" /><?php echo Textos::model()->GetText(410); ?></a></li>
 								<li class="li-paises-nav" ><a href="" class="a-otros-paises-mobile"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-bol.png" /><?php echo Textos::model()->GetText(411); ?></a></li>
 								<li class="li-paises-nav" ><a href="" class="a-otros-paises-mobile"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-br.png" /><?php echo Textos::model()->GetText(412); ?></a></li>
 								<li class="li-paises-nav" ><a href="" class="a-otros-paises-mobile"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-cost.png" /><?php echo Textos::model()->GetText(413); ?></a></li>
@@ -99,9 +99,9 @@
 		<!-- +++++ LISTA VERSIONES +++++ -->
 		<ul class=" col-lg-2 col-md-2 col-sm-2 col-xs-12" id="ul-nav-2" style="color:#0C6594;float:right;">
 				<li class="li-nav-2"><div id="links"><a class="openlink" href="javascript:void(0);"  style="float:left;padding: 10px 0px;color: #337ab7;"><?php echo Textos::model()->GetText(426); ?></a></div></li>
-				<li class="li-nav-2"><a href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/1/lng/0"style="float:left;padding: 10px 0px;color: #337ab7;"><?php echo Textos::model()->GetText(427); ?></a></li>
-				<li class="li-nav-2"><a href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/2/lng/2"style="float:left;padding: 10px 0px;color: #337ab7;"><?php echo Textos::model()->GetText(428); ?></a></li>
-				<li class="li-nav-2"><a href="" style="float:left;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/fronteras-50x50-01.png" /></a></li>
+				<li class="li-nav-2"><a class="link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/pais/traduccion/id/1/lng/0"style="float:left;padding: 10px 0px;color: #337ab7;"><?php echo Textos::model()->GetText(427); ?></a></li>
+				<li class="li-nav-2"><a class="link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/pais/traduccion/id/2/lng/2"style="float:left;padding: 10px 0px;color: #337ab7;"><?php echo Textos::model()->GetText(428); ?></a></li>
+				<li class="li-nav-2"><a class="link-menu" href="" style="float:left;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/fronteras-50x50-01.png" /></a></li>
 		</ul> <!-- termina lista versiones -->
 	
 		<!-- +++++++++++ BOTONERA +++++++++++ -->
@@ -114,20 +114,20 @@
 				
 				<ul class="dropdown-menu dropdown-menu-right">
 						<img  id="flecha-submenu" src="<?php echo Yii::app()->request->baseUrl; ?>/img/flecha-submenu.png" />
-							<li><a class="a-sub"  href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/quienes-somos"><?php echo Textos::model()->GetText(6); ?></a></li>
-							<li><a class="a-sub"  href="<?php echo Yii::app()->getBaseUrl(true); ?>/mision-vision"><?php echo Textos::model()->GetText(8); ?></a></li>
-							<li><a class="a-sub" 	href="<?php echo Yii::app()->getBaseUrl(true); ?>/lucha-contra-aftosa"><?php echo Textos::model()->GetText(10); ?></a></li>
-							<li><a class="a-sub"  href="<?php echo Yii::app()->getBaseUrl(true); ?>/trayectoria-hitos"><?php echo Textos::model()->GetText(429); ?></a></li>
-							<li><a class="a-sub"  href="<?php echo Yii::app()->getBaseUrl(true); ?>/nuestras-plantas"><?php echo Textos::model()->GetText(14); ?></a></li>
-							<li><a class="a-sub" 	href="<?php echo Yii::app()->getBaseUrl(true); ?>/rse"><?php echo Textos::model()->GetText(431); ?></a></li>
-							<li><a class="a-sub" 	href="<?php echo Yii::app()->getBaseUrl(true); ?>/proveedores"><?php echo Textos::model()->GetText(430); ?></a></li>
-							<li><a class="a-sub" 	href="<?php echo Yii::app()->getBaseUrl(true); ?>/prensa"><?php echo Textos::model()->GetText(20); ?></a></li>
+							<li><a class="a-sub link-menu"  href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/quienes-somos"><?php echo Textos::model()->GetText(6); ?></a></li>
+							<li><a class="a-sub link-menu"  href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/mision-vision"><?php echo Textos::model()->GetText(8); ?></a></li>
+							<li><a class="a-sub link-menu" 	href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/lucha-contra-aftosa"><?php echo Textos::model()->GetText(10); ?></a></li>
+							<li><a class="a-sub link-menu"  href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/trayectoria-hitos"><?php echo Textos::model()->GetText(429); ?></a></li>
+							<li><a class="a-sub link-menu"  href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/nuestras-plantas"><?php echo Textos::model()->GetText(14); ?></a></li>
+							<li><a class="a-sub link-menu" 	href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/rse"><?php echo Textos::model()->GetText(431); ?></a></li>
+							<li><a class="a-sub link-menu" 	href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/proveedores"><?php echo Textos::model()->GetText(430); ?></a></li>
+							<li><a class="a-sub link-menu" 	href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/prensa"><?php echo Textos::model()->GetText(20); ?></a></li>
 				</ul>
 				
 			</li>
 			
 			<!-- FILIALES -->
-			<li class="li-nav"><a class="a-nav" href=""><?php echo Textos::model()->GetText(432); ?></a></li>
+			<li class="li-nav"><a class="a-nav link-menu" href=""><?php echo Textos::model()->GetText(432); ?></a></li>
 			
 			
 			<!-- INFO TÉCNICA -->
@@ -135,9 +135,9 @@
 				
 				<ul class="dropdown-menu dropdown-menu-right">
 							<img id="flecha-submenu" src="<?php echo Yii::app()->request->baseUrl; ?>/img/flecha-submenu.png" />
-								<li><a href=""><?php echo Textos::model()->GetText(434); ?></a></li>
-								<li><a href=""><?php echo Textos::model()->GetText(435); ?></a></li>
-								<li><a href=""><?php echo Textos::model()->GetText(436); ?></a></li>
+								<li><a class="link-menu" href=""><?php echo Textos::model()->GetText(434); ?></a></li>
+								<li><a class="link-menu" href=""><?php echo Textos::model()->GetText(435); ?></a></li>
+								<li><a class="link-menu" href=""><?php echo Textos::model()->GetText(436); ?></a></li>
 					</ul>
 					
 			</li>
@@ -150,17 +150,17 @@
 					
 					<img id="flecha-submenu" src="<?php echo Yii::app()->request->baseUrl; ?>/img/flecha-submenu.png" />
 						
-						<li><a href="<?php echo Yii::app()->getBaseUrl(true); ?>/vademecum/id1"><?php echo Textos::model()->GetText(437); ?></a></li>
-						<li><a href="<?php echo Yii::app()->getBaseUrl(true); ?>/vademecum/id6"><?php echo Textos::model()->GetText(438); ?></a></li>
-						<li><a href="<?php echo Yii::app()->getBaseUrl(true); ?>/vademecum/id4"><?php echo Textos::model()->GetText(439); ?></a></li>
-						<li><a href="<?php echo Yii::app()->getBaseUrl(true); ?>/vademecum/id3"><?php echo Textos::model()->GetText(440); ?></a></li>
-						<li><a href="<?php echo Yii::app()->getBaseUrl(true); ?>/vademecum/id2"><?php echo Textos::model()->GetText(441); ?></a></li>
-						<li><a href="<?php echo Yii::app()->getBaseUrl(true); ?>/vademecum/id5"><?php echo Textos::model()->GetText(442); ?></a></li>
-						<li><a href="<?php echo Yii::app()->getBaseUrl(true); ?>/vademecum/id9"><?php echo Textos::model()->GetText(443); ?></a></li>
-						<li><a href="<?php echo Yii::app()->getBaseUrl(true); ?>/vademecum/id11"><?php echo Textos::model()->GetText(444); ?></a></li>
-						<li><a href="<?php echo Yii::app()->getBaseUrl(true); ?>/vademecum/id7"><?php echo Textos::model()->GetText(445); ?></a></li>
-						<li><a href="<?php echo Yii::app()->getBaseUrl(true); ?>/vademecum/id10"><?php echo Textos::model()->GetText(446); ?></a></li>	
-						<li><a href="<?php echo Yii::app()->getBaseUrl(true); ?>/vademecum/id8"><?php echo Textos::model()->GetText(447); ?></a></li>
+						<li><a class="link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id1"><?php echo Textos::model()->GetText(437); ?></a></li>
+						<li><a class="link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id6"><?php echo Textos::model()->GetText(438); ?></a></li>
+						<li><a class="link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id4"><?php echo Textos::model()->GetText(439); ?></a></li>
+						<li><a class="link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id3"><?php echo Textos::model()->GetText(440); ?></a></li>
+						<li><a class="link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id2"><?php echo Textos::model()->GetText(441); ?></a></li>
+						<li><a class="link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id5"><?php echo Textos::model()->GetText(442); ?></a></li>
+						<li><a class="link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id9"><?php echo Textos::model()->GetText(443); ?></a></li>
+						<li><a class="link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id11"><?php echo Textos::model()->GetText(444); ?></a></li>
+						<li><a class="link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id7"><?php echo Textos::model()->GetText(445); ?></a></li>
+						<li><a class="link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id10"><?php echo Textos::model()->GetText(446); ?></a></li>	
+						<li><a class="link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id8"><?php echo Textos::model()->GetText(447); ?></a></li>
 						
 				</ul>
 				
@@ -168,15 +168,15 @@
 			
 			
 			<!-- REVISTA EL MOLINO  -->
-			<li class="li-nav"><a class="a-nav" href=""><?php echo Textos::model()->GetText(451); ?></a></li>
+			<li class="li-nav"><a class="a-nav link-menu" href=""><?php echo Textos::model()->GetText(451); ?></a></li>
 		
 		
 			<!-- RRHH -->
-			<li class="li-nav"><a class="a-nav" href=""><?php echo Textos::model()->GetText(449); ?></a></li>
+			<li class="li-nav"><a class="a-nav link-menu" href=""><?php echo Textos::model()->GetText(449); ?></a></li>
 			
 			
 			<!-- CONTACTO -->
-			<li class="li-nav"><a class="a-nav" href="<?php echo Yii::app()->request->baseUrl; ?>/home"><?php echo Textos::model()->GetText(450); ?></a></li>
+			<li class="li-nav"><a class="a-nav link-menu" href="<?php echo Yii::app()->request->baseUrl; ?>/home"><?php echo Textos::model()->GetText(450); ?></a></li>
 			
 		</ul> <!-- termina botonera -->
 		
