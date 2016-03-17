@@ -2759,9 +2759,10 @@ footer{
     padding-bottom: 2%;
 }
 
-#icn-ubicacion {
+.icn-ubicacion {
     width: 6%;
     display: inline-block;
+	margin-top: 0; 
 }
 
 #nom-ref {
@@ -2800,11 +2801,11 @@ footer{
 
 
 .border-celeste{
-	border-bottom:1px #8BCDE0 solid ;
+	border-bottom:3px #8BCDE0 solid ;
 }
 
 
-#icn-ubicacion{
+.icn-ubicacion{
 	width:6%;
 	display:inline-block;
 }
@@ -2901,7 +2902,7 @@ footer{
 
 .band-filiales{
 	margin-top:-2%;
-	width: 8%;
+	width: auto;
 }
 
  
@@ -2958,7 +2959,7 @@ color:white;
 #list-menu{
 	list-style:none;
 	margin-top:7%;
-	
+	margin-left:4%;
 }
 
 
@@ -4192,7 +4193,7 @@ text-decoration:none;}
 	border-radius: 5px 5px 5px 5px;
 	-moz-border-radius: 5px 5px 5px 5px;
 	-webkit-border-radius: 5px 5px 5px 5px;
-    height: 3.5vw;
+    height: 50px;
     width: 36%;
     margin-top: 60px;
 	transition: all 0.6s ease;
@@ -4234,6 +4235,7 @@ p{
     background-size: cover;
 	transition: all 0.5s ease;	
 	z-index: 2;
+	width:36%;
 }
 
 
@@ -4253,6 +4255,7 @@ p{
     background-size: cover;
 	transition: all 0.5s ease;	
 	z-index: 2;
+	width:36%;
 }
 
 
@@ -4271,6 +4274,7 @@ p{
     background-size: cover;
 	transition: all 0.5s ease;	
 	z-index: 2;
+	width:36%;
 }
 
 
@@ -4290,6 +4294,7 @@ p{
     background-size: cover;
 	transition: all 0.5s ease;	
 	z-index: 2;
+	width:36%;
 }
 
 
@@ -4310,6 +4315,7 @@ p{
     background-size: cover;
 	transition: all 0.5s ease;	
 	z-index: 2;
+	width:36%;
 }
 
 
@@ -4330,6 +4336,7 @@ p{
     background-size: cover;
 	transition: all 0.5s ease;	
 	z-index: 2;
+	width:36%;
 }
 
 
@@ -4350,6 +4357,7 @@ p{
     background-size: cover;
 	transition: all 0.5s ease;	
 	z-index: 2;
+	width:36%;
 }
 
 
@@ -4370,6 +4378,7 @@ p{
     background-size: cover;
 	transition: all 0.5s ease;	
 	z-index: 2;
+	width:36%;
 }
 
 
@@ -4390,6 +4399,7 @@ p{
     background-size: cover;
 	transition: all 0.5s ease;	
 	z-index: 2;
+	width:36%;
 }
 
 
@@ -4410,6 +4420,7 @@ p{
     background-size: cover;
 	transition: all 0.5s ease;	
 	z-index: 2;
+	width:36%;
 }
 
 
@@ -4430,6 +4441,7 @@ p{
     background-size: cover;
 	transition: all 0.5s ease;	
 	z-index: 2;
+	width:36%;
 }
 
 
@@ -4450,6 +4462,7 @@ p{
     background-size: cover;
 	transition: all 0.5s ease;	
 	z-index: 2;
+	width:36%;
 }
 
 
@@ -4459,6 +4472,7 @@ p{
     height: 188px;
     background-size: cover;
 	transition: all 0.5s ease;
+
 }
 
 
@@ -4470,6 +4484,7 @@ p{
     background-size: cover;
 	transition: all 0.5s ease;	
 	z-index: 2;
+	width:36%;
 }
 
 
@@ -4490,6 +4505,7 @@ p{
     background-size: cover;
 	transition: all 0.5s ease;	
 	z-index: 2;
+	width:36%;
 }
 
 
@@ -4510,6 +4526,7 @@ p{
     background-size: cover;
 	transition: all 0.5s ease;	
 	z-index: 2;
+	width:36%;
 }
 
 
@@ -4530,6 +4547,7 @@ p{
     background-size: cover;
 	transition: all 0.5s ease;	
 	z-index: 2;
+	width:36%;
 }
 
 
@@ -4543,7 +4561,7 @@ p{
 
 .rev-30,.rev-29,.rev-28,.rev-27,.rev-26,.rev-25,.rev-24,.rev-23,.rev-22,.rev-21,.rev-20,.rev-19,.rev-18,.rev-17,.rev-16,.rev-15,.rev-30:hover,.rev-29:hover,.rev-28:hover,.rev-27:hover,.rev-26:hover,.rev-25:hover,.rev-24:hover,.rev-23:hover,.rev-22:hover,.rev-21:hover,.rev-20:hover,.rev-19:hover,.rev-18:hover,.rev-17:hover,.rev-16:hover,.rev-15:hover{
 	height:100%;
-	width:30%;
+	width:36%;
 	display:inline-block;
 	background-size: auto 100%;
 	overflow:hidden;
@@ -5219,3 +5237,186 @@ figure.snip1156:hover .salud-ambiental{
 	position:relative;
 }
 
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+	.icn-ubicacion {
+		width: 3%;
+		display: inline-block;
+	}
+	
+}
+/* Portrait */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+	.b-l {
+		width: 73%;
+	}
+	
+	#ul-filiales-paises{
+		display:none;
+	}
+	
+	#info-mapa{
+		border:none;
+	}
+	
+	#img-rev {
+		width: auto;
+		box-shadow: 2px 2px 20px;
+		margin-left: 6%;
+	}
+	
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+	
+	.border-celeste{
+		border:none;
+	}
+	
+	.icn-ubicacion {
+		width: 5%;
+		display: inline-block;
+	}
+	
+	#ul-filiales-paises{
+		display:none;
+	}
+
+	.border-tit {
+		border-bottom: none;
+	}
+	
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 736px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+	.b-l{
+		width:90%;
+	}
+	
+	#img-rev {
+		width: 60%;
+		box-shadow: 2px 2px 20px;
+		margin-left: 5%;
+	}
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+	.b-l{
+		width:100%;
+	}
+	
+	#list-menu{
+		margin-left:0;
+	}
+
+	#img-rev {
+		width: 90%;
+		box-shadow: 2px 2px 20px;
+		margin-top: 2%;
+	}
+	
+	.border-tit {
+		border-bottom: none;
+	}
+	
+	
+	.rev-30,.rev-29,.rev-28,.rev-27,.rev-26,.rev-25,.rev-24,.rev-23,.rev-22,.rev-21,.rev-20,.rev-19,.rev-18,.rev-17,.rev-16,.rev-15,.rev-30:hover,.rev-29:hover,.rev-28:hover,.rev-27:hover,.rev-26:hover,.rev-25:hover,.rev-24:hover,.rev-23:hover,.rev-22:hover,.rev-21:hover,.rev-20:hover,.rev-19:hover,.rev-18:hover,.rev-17:hover,.rev-16:hover,.rev-15:hover{
+	height:100%;
+	width:100%;
+	display:inline-block;
+	background-size: auto 100%;
+	overflow:hidden;
+	background-position: center;
+	
+	}
+	
+	.info-rev p{
+		 display: none;
+	}
+	
+}
+
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 736px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+	#titulo-mapa h1{
+		font-size: 38px;
+		margin: auto;
+		padding-bottom:10%;
+	}
+	
+	.border-celeste{
+		border:none;
+	}
+	
+	#ul-filiales-paises{
+		display:block;
+	}
+	#ul-filiales-paises{
+		padding-left:7%;
+		padding-top:5%;
+	}
+	
+	#ul-filiales-paises li{
+		display:inline-block;
+		padding-top:5%;
+	}
+	
+	
+	#ul-filiales-paises li a{
+		color:white;
+		font-weight:700;
+		letter-spacing:1px;
+	}
+	
+	#info-mapa{
+		border:none;
+	}
+	
+	#btn-rev {
+		width:72%;
+	}
+	
+
+
+}
+
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 2100px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+  
+  	#ul-filiales-paises{
+		display:none;
+	}
+}
+
+#info-revista h1 {
+    margin:0;
+	margin-bottom:3%;
+}

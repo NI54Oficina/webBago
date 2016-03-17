@@ -69,8 +69,13 @@ $(function(){
   
 })(window, jQuery);
 
-					
-					$(function() {
+				$("#noticias-trabajos").css('display','block'); 
+				$("#seccion-mas").css('display','block'); 
+				$("#noticias-planes").css('display','none'); 
+				$("#noticias-planillas").css('display','none'); 
+				$("#opcion1").css('background','none');
+				$("#opcion1").css('color','white');			
+				$(function() {
 				$("#noticias-trabajos").css('display','block'); 
 				$("#seccion-mas").css('display','block'); 
 				$("#noticias-planes").css('display','none'); 
@@ -174,4 +179,73 @@ $(function(){
 		$("[hid=1]").css("height",hidHeight+"px");
 	}
 
-
+   $(document).ready(function(){
+				
+					$("#mex").click(function() {
+					
+						$("#infoMexico").fadeIn(800);
+						$("#infoCenAm").css('display','none');
+						$("#infoBrasil").css('display','none');
+						$("#infoBolivia").css('display','none');
+						$("#infoUruguay").css('display','none');
+						$("#infoArgentina").css('display','none');
+					
+					});
+					
+					$("#centroam").click(function() {
+					
+						$("#infoCenAm").fadeIn(800);
+						$("#infoMexico").css('display','none');
+						$("#infoBrasil").css('display','none');
+						$("#infoBolivia").css('display','none');
+						$("#infoUruguay").css('display','none');
+						$("#infoArgentina").css('display','none');
+					
+					});
+					
+					$("#br").click(function() {
+					
+						$("#infoBrasil").fadeIn(800);
+						$("#infoMexico").css('display','none');
+						$("#infoCenAm").css('display','none');
+						$("#infoBolivia").css('display','none');
+						$("#infoUruguay").css('display','none');
+						$("#infoArgentina").css('display','none');
+					
+					});
+					
+					$("#bol").click(function() {
+					
+						$("#infoBolivia").fadeIn(800);
+						$("#infoMexico").css('display','none');
+						$("#infoCenAm").css('display','none');
+						$("#infoBrasil").css('display','none');
+						$("#infoUruguay").css('display','none');
+						$("#infoArgentina").css('display','none');
+					
+					});
+					
+					
+					$("#uru").click(function() {
+					
+						$("#infoUruguay").fadeIn(800);
+						$("#infoMexico").css('display','none');
+						$("#infoCenAm").css('display','none');
+						$("#infoBrasil").css('display','none');
+						$("#infoBolivia").css('display','none');
+						$("#infoArgentina").css('display','none');
+					
+					});
+					
+					$("#arg").click(function() {
+					
+						$("#infoArgentina").fadeIn(800);
+						$("#infoMexico").css('display','none');
+						$("#infoCenAm").css('display','none');
+						$("#infoBrasil").css('display','none');
+						$("#infoBolivia").css('display','none');
+						$("#infoUruguay").css('display','none');
+					
+					});					
+					
+				});

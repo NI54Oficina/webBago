@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 17-03-2016 a las 15:59:07
+-- Tiempo de generación: 17-03-2016 a las 17:23:58
 -- Versión del servidor: 10.1.9-MariaDB
 -- Versión de PHP: 5.5.30
 
@@ -53,13 +53,13 @@ INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (13, 'Un recorrido que demuestra el espíritu innovador y la permanente evolución de la compañía en la búsqueda de soluciones para una producción más eficiente.', 'A path that shows the innovative spirit and the permanent evolution of the company whilst searching for solutions to a more efficient production.  ', ''),
 (14, 'Nuestras plantas', 'Our plantOur Manufacturing Plants', 'Nossas plantas'),
 (15, 'Avanzada tecnología y  altos estándares de calidad respaldan  todo el proceso de producción en nuestras plantas modelos instaladas en Argentina.', 'Advanced technology and high quality standards support the entire production process in our model manufacturing plants in Argentina', 'Todos os produtos da Biogénesis Bagó são fabricados em unidades de produção separadas e equipadas especialmente comtecnologia altamente avançada:'),
-(16, 'RSE - Sustentabilidad', 'RSE Sustainability: ', 'Sustentabilidade Responsabilidade Social Corporativa'),
+(16, 'RSE - Sustentabilidad', 'RSE-Sustainability', 'Sustentabilidade Responsabilidade Social Corporativa'),
 (17, 'Aportamos nuestros mejores recursos para desarrollar soluciones y relaciones sustentables, junto a las comunidades de los países donde actuamos.', 'We supply our best resources to develop solutions and sustainable relationships together with the communities in the countries in which we are present.', ''),
 (18, 'INFO para Proveedores', 'Suppliers', 'Prestadores'),
 (19, 'Información útil AFIP / Ingresos Brutos', 'Useful information AFIP / Gross Income', ''),
 (20, 'Prensa', 'Press Room', 'Imprensa'),
 (21, 'Compartimos nuestras novedades e informes para favorecer la comunicación, clave para la difusión de las nuevas tecnologías que impulsan a la producción.', 'News.  Reports.  Calendar of events.  Multimedia.', ''),
-(22, 'Proveedores', 'Providers', 'Prestadores'),
+(22, 'Proveedores', 'Supliers', 'Prestadores'),
 (23, 'Información útil AFIP / Ingresos Brutos', 'Useful information AFIP / Gross Income', ''),
 (24, 'Revista El Molino', 'Magazine El Molino:  ', ''),
 (25, 'Información calificada sobre escenarios productivos, avances tecnológicos y protagonistas destacados en el desarrollo de América Latina.', 'Qualified information regarding production scenarios, technological advances and distinguished figures in the development of Latin America', ''),
@@ -462,7 +462,7 @@ INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (427, 'Versión español', 'Spanish version', ''),
 (428, 'Versión portugués', 'Portuguese version', ''),
 (429, 'Trayectoria', 'Trajectory', ''),
-(430, 'Info para proveedores', 'Supliers', ''),
+(430, 'Info para proveedores', 'Supliers', 'Prestadores'),
 (431, 'Rse', 'Rse', ''),
 (432, 'Filiales y rep. comerciales', '', ''),
 (433, 'info técnica', '', ''),
@@ -482,7 +482,9 @@ INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (447, 'Vitaminas y minerales', 'Vitamins & minerals', ''),
 (449, 'rrhh', 'rrhh', ''),
 (450, 'contacto', 'contact', ''),
-(451, 'revista el molino', 'magazine el molino', '');
+(451, 'revista el molino', 'magazine el molino', ''),
+(452, 'Compartir en', 'Share', ''),
+(453, 'Registrado en ', '', '');
 
 --
 -- Índices para tablas volcadas
@@ -502,7 +504,7 @@ ALTER TABLE `tbl_textos`
 -- AUTO_INCREMENT de la tabla `tbl_textos`
 --
 ALTER TABLE `tbl_textos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=452;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=454;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
