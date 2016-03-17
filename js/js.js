@@ -69,8 +69,13 @@ $(function(){
   
 })(window, jQuery);
 
-					
-					$(function() {
+				$("#noticias-trabajos").css('display','block'); 
+				$("#seccion-mas").css('display','block'); 
+				$("#noticias-planes").css('display','none'); 
+				$("#noticias-planillas").css('display','none'); 
+				$("#opcion1").css('background','none');
+				$("#opcion1").css('color','white');			
+				$(function() {
 				$("#noticias-trabajos").css('display','block'); 
 				$("#seccion-mas").css('display','block'); 
 				$("#noticias-planes").css('display','none'); 

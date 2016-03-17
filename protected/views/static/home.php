@@ -407,7 +407,7 @@
 			</div>       
 	</section>
 	
-	<img style="width: 100%;position:relative;margin-bottom:-1px;display:none;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-celeste.png" alt="" />	
+	<img style="width: 100%;position:relative;margin-bottom:-1px;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-celeste.png" alt="" />	
 	
 	<section class="special" data-scrollax-parent="true" style="background: rgb(129, 206, 231); min-height:100vh;width:100%;overflow-x:hidden;position:relative;" >
 
@@ -933,11 +933,11 @@
 		<?php include('carrousel.php'); ?>
 		
 		<!--CURVA-->			
-		<img style="width: 100%;position:relative;margin-bottom:-2px;display:none;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-home.png" alt="" />
+		<img style="width: 100%;position:relative;margin-bottom:-2px;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-home.png" alt="" />
 	
 	
 		<!------------------------------------------------------------------ SECCION 5: REVISTA EL MOLINO ------------------------------------------------------------------>	
-		<section class="special col-lg-12 col-md-12 col-sm-12 col-xs-12" data-scrollax-parent="true" style="min-height:100vh;background: rgba(0, 0, 0, 0.62);width:100%;overflow-x:hidden;padding-bottom:30px;display:none;">
+		<section class="special col-lg-12 col-md-12 col-sm-12 col-xs-12" data-scrollax-parent="true" style="min-height:100vh;background: rgba(0, 0, 0, 0.62);width:100%;overflow-x:hidden;padding-bottom:30px;">
 
 			
 	
