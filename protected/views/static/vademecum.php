@@ -60,7 +60,7 @@ function sanear_string($string)
 ?>
 <?php
 
-$productos =Producto::model()->findAllByAttributes(array('seccion'=>$data->id,"pais"=>1));;
+$productos =Producto::model()->findAllByAttributes(array('seccion'=>$data->id,"pais"=>$_SESSION["pais"]));;
 $auxLink= $data->nombre;
 $auxLink=  sanear_string($auxLink);
 $auxLink = str_replace(' ', '-', $auxLink); // Replaces all spaces with hyphens.
