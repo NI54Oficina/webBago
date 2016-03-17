@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
+-- version 4.3.11
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 17-03-2016 a las 17:23:58
--- Versión del servidor: 10.1.9-MariaDB
--- Versión de PHP: 5.5.30
+-- Tiempo de generación: 17-03-2016 a las 22:27:28
+-- Versión del servidor: 5.6.24
+-- Versión de PHP: 5.6.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -14,7 +14,7 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40101 SET NAMES utf8 */;
 
 --
 -- Base de datos: `bagoweb`
@@ -26,12 +26,12 @@ SET time_zone = "+00:00";
 -- Estructura de tabla para la tabla `tbl_textos`
 --
 
-CREATE TABLE `tbl_textos` (
+CREATE TABLE IF NOT EXISTS `tbl_textos` (
   `id` int(11) NOT NULL,
   `es` text NOT NULL COMMENT 'español',
   `en` text NOT NULL COMMENT 'ingles',
   `pt` text NOT NULL COMMENT 'portugues'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=454 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tbl_textos`
@@ -439,7 +439,7 @@ INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (404, '<strong><span  class="span-aftosa">A</span>ÑO 1997</strong>', '<strong><span  class="span-aftosa">Y</span>EAR 1997</strong>', ''),
 (405, '<strong><span  class="span-aftosa">A</span>ÑO 2000</strong>', '<strong><span  class="span-aftosa">Y</span>EAR 2000</strong>', ''),
 (406, '<strong><span  class="span-aftosa">A</span>ÑO 2006</strong>', '<strong><span  class="span-aftosa">Y</span>EAR 2006</strong>', ''),
-(407, '<strong><span  class="span-aftosa">A</span>ÑO 2010/strong>', '<strong><span  class="span-aftosa">Y</span>EAR 2010</strong>', ''),
+(407, '<strong><span  class="span-aftosa">A</span>ÑO 2010</strong>', '<strong><span  class="span-aftosa">Y</span>EAR 2010</strong>', ''),
 (408, '<strong><span  class="span-aftosa">A</span>ÑO 2011</strong>', '<strong><span  class="span-aftosa">Y</span>EAR 2011</strong>', ''),
 (409, '<strong><span  class="span-aftosa">A</span>ÑO 2013</strong>', '<strong><span  class="span-aftosa">Y</span>EAR 2013</strong>', ''),
 (410, 'Argentina', '', ''),
@@ -504,7 +504,7 @@ ALTER TABLE `tbl_textos`
 -- AUTO_INCREMENT de la tabla `tbl_textos`
 --
 ALTER TABLE `tbl_textos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=454;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=454;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
