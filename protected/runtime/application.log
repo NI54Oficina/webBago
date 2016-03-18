@@ -46805,3 +46805,43 @@ Stack trace:
 REQUEST_URI=/webBago/ar/vademecum/id8
 in C:\wamp\www\webBago\protected\controllers\WebController.php (56)
 in C:\wamp\www\webBago\index.php (13)
+2016/03/18 18:42:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "br/gii/model/index".' in C:\wamp\www\webBago\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('br/gii/model/in...')
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/webBago/br/gii/model/index
+---
+2016/03/18 18:43:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "br/gii/model/index".' in C:\wamp\www\webBago\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('br/gii/model/in...')
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/webBago/br/gii/model/index
+---
+2016/03/18 18:45:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "br/gii/model/index".' in C:\wamp\www\webBago\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('br/gii/model/in...')
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/webBago/br/gii/model/index
+---
+2016/03/18 18:45:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "br/gii/model/index".' in C:\wamp\www\webBago\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('br/gii/model/in...')
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/webBago/br/gii/model/index
+---
+2016/03/18 18:45:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "br/gii/model/index".' in C:\wamp\www\webBago\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('br/gii/model/in...')
+#1 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/webBago/br/gii/model/index
+---
