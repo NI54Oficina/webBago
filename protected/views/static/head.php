@@ -4,6 +4,15 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="description" content="Biogénesis Bagó es una empresa de biotecnología que investiga, elabora y comercializa productos y servicios veterinarios, destinados a asegurar la salud y mejorar la productividad de los rodeos de carne y leche">
+	<meta name="keywords" content="Biogénesis Bagó, biotecnologia">
+	<meta name="author" content="Biogénesis Bagó">
+
+
+<!--	<meta property="og:title" content="Biogénesis Bagó Facebook Pagina Oficial " /> 
+	<meta property="og:url" content="https://www.facebook.com/BiogenesisBago/" >
+
+}-->
 	<!--JQUERY-->
 
 	<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"/></script>!-->
