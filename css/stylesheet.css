@@ -5683,6 +5683,10 @@ figure.snip1156:hover .salud-ambiental{
 	.img-fundaciones-6{
 		width:75%;
 	}
+	
+	.h2-cd {
+		margin-top:10%;
+	}
 }
 
 #info-revista h1 {
@@ -5713,3 +5717,4 @@ figure.snip1156:hover .salud-ambiental{
     border: 2px solid white;
 	transition: all 0.5s ease;
 }
+
