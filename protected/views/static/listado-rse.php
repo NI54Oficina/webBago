@@ -2,7 +2,7 @@
 
 
 
-$notas =Notas::model()->findAllByAttributes(array('seccion'=>"rse"));
+$notas =Notas::model()->findAllByAttributes(array('seccion'=>"rse"),"YEAR(fecha)=2016");
 ?>
 <div style="width:100%;height:100px;background-color:red;padding-top:500px;">
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align:left;">
