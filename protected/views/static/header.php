@@ -150,17 +150,17 @@
 					
 					<img id="flecha-submenu" src="<?php echo Yii::app()->request->baseUrl; ?>/img/flecha-submenu.png" />
 						
-						<li><a class="link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id1"><?php echo Textos::model()->GetText(437); ?></a></li>
-						<li><a class="link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id6"><?php echo Textos::model()->GetText(438); ?></a></li>
-						<li><a class="link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id4"><?php echo Textos::model()->GetText(439); ?></a></li>
-						<li><a class="link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id3"><?php echo Textos::model()->GetText(440); ?></a></li>
-						<li><a class="link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id2"><?php echo Textos::model()->GetText(441); ?></a></li>
-						<li><a class="link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id5"><?php echo Textos::model()->GetText(442); ?></a></li>
-						<li><a class="link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id9"><?php echo Textos::model()->GetText(443); ?></a></li>
-						<li><a class="link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id11"><?php echo Textos::model()->GetText(444); ?></a></li>
-						<li><a class="link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id7"><?php echo Textos::model()->GetText(445); ?></a></li>
-						<li><a class="link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id10"><?php echo Textos::model()->GetText(446); ?></a></li>	
-						<li><a class="link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id8"><?php echo Textos::model()->GetText(447); ?></a></li>
+						<li><a class="link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id1"><?php echo Yii::app()->paisChecker->getSeccion(1); ?></a></li>
+						<li><a class="link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id6"><?php echo Yii::app()->paisChecker->getSeccion(6); ?></a></li>
+						<li><a class="link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id4"><?php echo Yii::app()->paisChecker->getSeccion(4); ?></a></li>
+						<li><a class="link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id3"><?php echo Yii::app()->paisChecker->getSeccion(3); ?></a></li>
+						<li><a class="link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id2"><?php echo Yii::app()->paisChecker->getSeccion(2); ?></a></li>
+						<li><a class="link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id5"><?php echo Yii::app()->paisChecker->getSeccion(5); ?></a></li>
+						<li><a class="link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id9"><?php echo Yii::app()->paisChecker->getSeccion(9); ?></a></li>
+						<li><a class="link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id11"><?php echo Yii::app()->paisChecker->getSeccion(11); ?></a></li>
+						<li><a class="link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id7"><?php echo Yii::app()->paisChecker->getSeccion(7); ?></a></li>
+						<li><a class="link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id10"><?php echo Yii::app()->paisChecker->getSeccion(10); ?></a></li>	
+						<li><a class="link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id8"><?php echo Yii::app()->paisChecker->getSeccion(8); ?></a></li>
 						
 				</ul>
 				
