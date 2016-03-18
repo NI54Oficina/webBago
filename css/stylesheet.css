@@ -1337,7 +1337,7 @@ font-size: 22px;
 	}
 	.animate li{
 	-webkit-transition: all 0.3s ease-out;
-			transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
 	height: 0;
 	opacity: 0;
 	overflow: hidden;
@@ -1367,7 +1367,7 @@ font-size: 22px;
 	position: absolute;
 	background: #66CCED;
 	-webkit-transition: 0.3s cubic-bezier(0.45, 0.01, 0.27, 1.4);
-			transition: 0.3s cubic-bezier(0.45, 0.01, 0.27, 1.4);
+	transition: 0.3s cubic-bezier(0.45, 0.01, 0.27, 1.4);
 	}
 	.toggleIcon::before {
 	width: 2px;
