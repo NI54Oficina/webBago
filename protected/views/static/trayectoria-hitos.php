@@ -16,7 +16,7 @@
 	</div>
 	</div>
 	
-
+	<script src="js/main.js"></script>
 <div class="div-texto-aftosa col-lg-5 col-md-5 col-sm-12 col-xs-12" style="text-align: left;">
 	
 	<div class="tabla-aftosa col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -37,6 +37,7 @@
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
+				<img class="img-cd" src="<?php echo Yii::app()->request->baseUrl; ?>/img/estrella.png"/>
 				<h2 class="h2-cd"><?php echo Textos::model()->GetText(351); ?></h2>
 				<p class="p-cd2"><?php echo Textos::model()->GetText(352); ?></p>
 				<span class="cd-date"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-tiempo-bullet.png"  /></span>
@@ -280,6 +281,5 @@
 		
 		</div>
 	</div>
-	
+
 <?php include('widget.php'); ?>
-<script src="js/main.js"></script>
