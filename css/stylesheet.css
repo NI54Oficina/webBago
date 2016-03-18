@@ -2313,7 +2313,7 @@ font-size: 22px;
 		display:block;
 		color:#656565;
 		text-transform:uppercase;
-		font-size: 12px;
+		font-size: 11.5px;
 	}
 	
 	
@@ -5005,6 +5005,7 @@ figure.snip1156:hover .salud-ambiental{
 	.ul-nav li:hover > ul{
 	    background: none;
 		left:-5px;
+		top:14px;
 	}
 	
 	#ul-nav-2-mobile{
