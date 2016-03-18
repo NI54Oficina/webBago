@@ -61,7 +61,7 @@
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
-			<img class="img-cd" src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-tiempo-1952.png"/>
+			<img class="img-cd" src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-tiempo-1952.png" style=" width: 60px;"/>
 				<h2 class="h2-cd"><?php echo Textos::model()->GetText(354); ?></h2>
 				<img class="img-cd" src="<?php echo Yii::app()->request->baseUrl; ?>/img/estrella.png" style="width: 35px;margin-top:15%;"/>
 				<p class="p-cd2"><?php echo Textos::model()->GetText(355); ?></p>
@@ -295,7 +295,7 @@
 		
 		
 	</section> 
-		<img style="margin-left:165px;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-tiempo-3-01.png" />
+		<img style="margin-left:145px;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-tiempo-3-01.png" />
 		<h2  style="text-align:center;color:#00173B;"><?php echo Textos::model()->GetText(379); ?></h2>
 		
 		</div>
