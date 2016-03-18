@@ -58,7 +58,7 @@ class WebController extends Controller
 				$model=$auxSeccion;
 			}
 			
-		}
+		}else
 		if($data=="productos"){
 			//tendria que buscar por id y no por nombre
 			$id= substr($id,2);
@@ -66,6 +66,8 @@ class WebController extends Controller
 			if($auxSeccion!=null){
 				$model=$auxSeccion;
 			}
+		}else{
+			$model=$id;
 		}
 		//echo Pais::model()->findByPk($_SESSION['pais'])->nombre;
 		if($data!="home"&&$data!="paises"){
