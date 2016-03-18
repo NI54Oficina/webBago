@@ -5706,3 +5706,9 @@ figure.snip1156:hover .salud-ambiental{
 .input-group-btn{
 	display:inline-block;
 }
+
+#form1 #enviar:hover{
+	background: transparent;
+    border: 2px solid white;
+	transition: all 0.5s ease;
+}
