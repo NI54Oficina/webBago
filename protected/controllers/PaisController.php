@@ -185,7 +185,14 @@ class PaisController extends Controller
 			if (strpos($_SERVER['HTTP_REFERER'], '/paises') !== false) {
 				header("Location: http://".$_SERVER['SERVER_NAME']."/".$_SESSION["webRoot"]."/");
 			}else{
-				header("Location: ".$_SERVER['HTTP_REFERER']);
+				$urlToGo="Location: ".$_SERVER['HTTP_REFERER'];
+				$paises=Pais::model()->findAll();
+				foreach($paises as $pais){
+					$urlToGo= str_replace("/".$pais->short."/","/lng/",$urlToGo);
+				}
+				$urlToGo= str_replace("/lng/","/".Yii::app()->session['short']."/",$urlToGo);
+				//echo $urlToGo;
+				header($urlToGo);
 			}
 			die();
 		}
