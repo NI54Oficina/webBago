@@ -906,16 +906,17 @@
 		
 		
 					<!-- ///////  BUSCADOR /////// -->	
-						<div id="buscar" style="display:none;">
+						<div id="buscar" style="">
 							<div id="botonera-buscar" class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
 								<div class="input-group">
 									<span>
+										<form action="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/search" method="post">
 										<input class="input-vad" type="text" placeholder="">
-									</span>
-							
+									</span>	
 									<span class="input-group-btn">
-										<button class="btn btn-default" id="btn-buscar" type="button"> </button>
+										<button class="btn btn-default" id="btn-buscar" type=""> </button>
 									</span>
+									</form>
 								</div><!-- /input-group -->
 							</div><!-- /.col-lg-6 -->
 						</div><!-- /.row -->
@@ -1297,7 +1298,7 @@
 			<!--*************  CONTENEDOR PRINCIPAL *********** -->
 		
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  "  id="header-rrhh" style="z-index:10;text-align:center;height:auto;">     	
-				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/fondo-obelisco.png" style="position:absolute;height:100vh;z-index:-2;display:inline-block;">
+				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/rrhh-02.png" style="position:absolute;z-index:-2;display:inline-block;width:100%;">
 				<!-- ////////////// HEADER //////////// -->
 				<div id="titulo-info" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-rrhh-home" style="height:25vh;position:relative;z-index:10;">
 					
@@ -1314,7 +1315,7 @@
 						
 				</div>  <!-- termina header -->
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height:0;">
-				<img id="curva-rrhh" src="<?php echo Yii::app()->request->baseUrl; ?>/img/rrhh-01.png" style="display:inline-block;width:100%;position:relative;z-index:3;">
+				<img class="curva-rrhh" src="<?php echo Yii::app()->request->baseUrl; ?>/img/rrhh-01.png">
 				</div>
 				
 				<div style="width:100%;display:inline-block;text-align:center;padding-bottom:10vh;margin-top:-2px;padding-top:40vh;position:relative;">
