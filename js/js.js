@@ -169,12 +169,18 @@ $(function(){
 
 	
 	$( window ).resize(function() {
-		SameHeight();
+		ResetHeight();
+		setTimeout(function(){
+		SameHeight()},1000);
 	});
+	
+	function ResetHeight(){
+		$("[hid=1]").css("height","auto");
+	}
 	
 	function SameHeight(){
 		var hidHeight=0;
-		$("[hid=1]").css("height","auto");
+		ResetHeight();
 		$("[hid=1]").each(function(){
 			if($(this).height()>hidHeight){
 				hidHeight= $(this).height();

@@ -85,7 +85,7 @@ $auxId=0;
 <p  style="text-align:center;border-bottom:1px solid #0082C8;width:3%;margin:auto;margin-top:0%;margin-left:50%"></p>
 </div>
 
-<h2 class="titulo-vad titulo-<?php echo $normalizado; ?>"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/gota-<?php echo $normalizado; ?>.png"  /><?php echo $data->nombre; ?></h2>
+<h2 class="titulo-vad titulo-<?php echo $normalizado; ?>"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/gota-<?php echo $normalizado; ?>.png"  /><?php echo Yii::app()->paisChecker->getSeccion($data->id); ?></h2>
 
 <a href="<?php echo Yii::app()->getBaseUrl(true); ?>"><div class=" col-lg-3 col-md-3 col-sm-12 col-xs-12 volver hidden-sm hidden-xs">
 <p>Volver</p>
@@ -106,7 +106,7 @@ $auxId=0;
 	$imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"id DESC"));
 	?>
 	<div class=" col-lg-4 col-md-4 col-sm-6 col-xs-12 div-img-aft same-height" hid="1" style="background-color:#f5f5f5;">
-		<a href="<?php echo Yii::app()->getBaseUrl(true); ?>/productos/id<?php echo $producto->id; ?>">
+		<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/productos/id<?php echo $producto->id; ?>">
 		<figure class="snip1156 image">
 			<div>
 				<img style="width:45%;display:inline-block;margin:0; margin-top: 5%;" class="img-cat-aft " src="<?php echo Yii::app()->getBaseUrl(true); ?>/vademecums/<?php echo $imagen->id; ?>.png" /> 

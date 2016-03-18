@@ -46652,3 +46652,156 @@ REQUEST_URI=/webBago/br/img/mas-paises.png
 HTTP_REFERER=http://localhost/webBago/br/quienes-somos
 ---
 >>>>>>> origin/master
+2016/03/18 16:04:40 [error] [php] include(SeccionReginalizacion.php): failed to open stream: No such file or directory (C:\wamp\www\webBago\yii\framework\YiiBase.php:432)
+Stack trace:
+#0 C:\wamp\www\webBago\protected\controllers\WebController.php(52): spl_autoload_call()
+#1 unknown(0): WebController->actionGet()
+#2 C:\wamp\www\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#3 C:\wamp\www\webBago\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 C:\wamp\www\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): WebController->runAction()
+#6 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): WebController->filterAccessControl()
+#9 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\webBago\yii\framework\web\CController.php(265): WebController->runActionWithFilters()
+#12 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): WebController->run()
+#13 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\wamp\www\webBago\index.php(13): CWebApplication->run()
+REQUEST_URI=/webBago/br/vademecum/id8
+in C:\wamp\www\webBago\protected\controllers\WebController.php (52)
+in C:\wamp\www\webBago\index.php (13)
+2016/03/18 16:05:40 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/img".' in C:\wamp\www\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\webBago\protected\controllers\WebController.php(71): CController->renderPartial('//static/img', '')
+#1 [internal function]: WebController->actionGet('img', 'punto-vitaminic...')
+#2 C:\wamp\www\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\wamp\www\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get/data/im...')
+#14 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/br/img/punto-vitaminicos-e-minerais.png
+HTTP_REFERER=http://localhost/webBago/br/vademecum/id8
+---
+2016/03/18 16:05:42 [error] [exception.CException] exception 'CException' with message 'WebController cannot find the requested view "//static/img".' in C:\wamp\www\webBago\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\webBago\protected\controllers\WebController.php(71): CController->renderPartial('//static/img', '')
+#1 [internal function]: WebController->actionGet('img', 'gota-vitaminico...')
+#2 C:\wamp\www\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#3 C:\wamp\www\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#13 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get/data/im...')
+#14 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/webBago/br/img/gota-vitaminicos-e-minerais.png
+HTTP_REFERER=http://localhost/webBago/br/vademecum/id8
+---
+2016/03/18 16:13:06 [error] [exception.CException] exception 'CException' with message 'Property "Seccion.traduccion" is not defined.' in C:\wamp\www\webBago\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\db\ar\CActiveRecord.php(161): CComponent->__set('traduccion', 'Vitam\xC3\xADnicos e ...')
+#1 C:\wamp\www\webBago\protected\controllers\WebController.php(54): CActiveRecord->__set('traduccion', 'Vitam\xC3\xADnicos e ...')
+#2 [internal function]: WebController->actionGet('vademecum', 'id8')
+#3 C:\wamp\www\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#4 C:\wamp\www\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#5 C:\wamp\www\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\wamp\www\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#14 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get/data/va...')
+#15 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#16 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/webBago/br/vademecum/id8
+HTTP_REFERER=http://localhost/webBago/br/search
+---
+2016/03/18 16:13:50 [error] [exception.CException] exception 'CException' with message 'Property "Seccion.traduccion" is not defined.' in C:\wamp\www\webBago\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\db\ar\CActiveRecord.php(161): CComponent->__set('traduccion', 'Vitam\xC3\xADnicos e ...')
+#1 C:\wamp\www\webBago\protected\controllers\WebController.php(54): CActiveRecord->__set('traduccion', 'Vitam\xC3\xADnicos e ...')
+#2 [internal function]: WebController->actionGet('vademecum', 'id8')
+#3 C:\wamp\www\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#4 C:\wamp\www\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#5 C:\wamp\www\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\wamp\www\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#14 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get/data/va...')
+#15 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#16 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/webBago/br/vademecum/id8
+HTTP_REFERER=http://localhost/webBago/br/search
+---
+2016/03/18 16:14:52 [error] [exception.CException] exception 'CException' with message 'Property "Seccion.traduccion" is not defined.' in C:\wamp\www\webBago\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\db\ar\CActiveRecord.php(161): CComponent->__set('traduccion', 'Vitam\xC3\xADnicos e ...')
+#1 C:\wamp\www\webBago\yii\framework\base\CModel.php(607): CActiveRecord->__set('traduccion', 'Vitam\xC3\xADnicos e ...')
+#2 C:\wamp\www\webBago\protected\controllers\WebController.php(54): CModel->offsetSet('traduccion', 'Vitam\xC3\xADnicos e ...')
+#3 [internal function]: WebController->actionGet('vademecum', 'id8')
+#4 C:\wamp\www\webBago\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(WebController), Array)
+#5 C:\wamp\www\webBago\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(WebController), Object(ReflectionMethod), Array)
+#6 C:\wamp\www\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\wamp\www\webBago\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): CController->run('get')
+#15 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/get/data/va...')
+#16 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#17 C:\wamp\www\webBago\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/webBago/br/vademecum/id8
+HTTP_REFERER=http://localhost/webBago/br/search
+---
+2016/03/18 16:17:43 [error] [php] Undefined variable: nombre (C:\wamp\www\webBago\protected\controllers\WebController.php:56)
+Stack trace:
+#0 C:\wamp\www\webBago\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 C:\wamp\www\webBago\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(133): WebController->runAction()
+#3 C:\wamp\www\webBago\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\wamp\www\webBago\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#5 C:\wamp\www\webBago\yii\framework\web\filters\CInlineFilter.php(58): WebController->filterAccessControl()
+#6 C:\wamp\www\webBago\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 C:\wamp\www\webBago\yii\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\wamp\www\webBago\yii\framework\web\CController.php(265): WebController->runActionWithFilters()
+#9 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(282): WebController->run()
+#10 C:\wamp\www\webBago\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\wamp\www\webBago\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#12 C:\wamp\www\webBago\index.php(13): CWebApplication->run()
+REQUEST_URI=/webBago/ar/vademecum/id8
+in C:\wamp\www\webBago\protected\controllers\WebController.php (56)
+in C:\wamp\www\webBago\index.php (13)

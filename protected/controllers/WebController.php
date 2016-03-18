@@ -47,9 +47,17 @@ class WebController extends Controller
 		if($data=="vademecum"){
 			$id= substr($id,2);
 			$auxSeccion =Seccion::model()->findByAttributes(array('id'=>$id));;
+			
 			if($auxSeccion!=null){
+				//$traduccion= SeccionRegionalizacion::model()->findByAttributes(array("idCategoria"=>$id,"pais"=>Yii::app()->session['pais']));
+				/*if($traduccion!=null){
+					$auxSeccion->url=$traduccion->nombre;;
+				}else{
+					$auxSeccion->url= $auxSeccion->nombre;
+				}*/
 				$model=$auxSeccion;
 			}
+			
 		}
 		if($data=="productos"){
 			//tendria que buscar por id y no por nombre

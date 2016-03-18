@@ -63,15 +63,15 @@ function sanear_string($string)
 
 
 
-echo "<div style='width:100%;min-height:100px;background-color:red; color:black;position:fixed;z-index:1000000;'>";
+//echo "<div style='width:100%;min-height:100px;background-color:red; color:black;position:fixed;z-index:1000000;'>";
 //echo count($productos);
-echo Yii::app()->session['pais'];
+//echo Yii::app()->session['pais'];
 
 if(isset($_POST["arg"])){
-	echo $_POST["arg"];
+	//echo $_POST["arg"];
 	$productos=Producto::model()->taggedWith($_POST["arg"])->findAll();
 }
-echo "</div>";
+//echo "</div>";
 $nombre="Búsqueda";
 //$data->nombre="Busqueda";
 
