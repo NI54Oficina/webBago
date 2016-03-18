@@ -22,16 +22,25 @@
 	<div class="tabla-aftosa col-lg-10 col-md-10 col-sm-12 col-xs-12" style="text-align: left;">
 
 		<div  class="tr  col-lg-12 col-md-12 col-sm-12 col-xs-12 inner-text" style="text-shadow:none;padding-top:0;">		
+<?php
 
+
+
+$notas =Notas::model()->findAllByAttributes(array('seccion'=>"rse"));
+?>
+<?php
+echo count($notas);
+foreach($notas as $nota){
+?>
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 animate">
 					<div class="btn">
 						<div class="toggleIcon"></div>
 							<div class="ttl">2016</div>
 					</div>
 						<ul>
-							<li class="ripple" data-ripple-color="#38BFBF"><a hfref=""><p>22 de Noviembre de 2012  <div class="linea-rse-not"></div></p><h1 class="h1-noticias-rse">Encuentro Biosolidario Tandil x Tandil </h1></a></li>
+							<li class="ripple" data-ripple-color="#38BFBF"><a hfref=""><p><?php echo $nota->fecha; ?>  <div class="linea-rse-not"></div></p><h1 class="h1-noticias-rse">Encuentro Biosolidario Tandil x Tandil </h1></a></li>
 						</ul>
-					</div>
+				</div>
 
 					
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 animate">
@@ -40,7 +49,7 @@
 							<div class="ttl">2015</div>
 					</div>
 						<ul>
-							<li class="ripple" data-ripple-color="#38BFBF"><a hfref=""><p>22 de Noviembre de 2012  <div class="linea-rse-not"></div></p><h1 class="h1-noticias-rse">Encuentro Biosolidario Tandil x Tandil </h1></a></li>
+							<li class="ripple" data-ripple-color="#38BFBF"><a hfref=""><p><?php echo $nota->fecha; ?> <div class="linea-rse-not"></div></p><h1 class="h1-noticias-rse">Encuentro Biosolidario Tandil x Tandil </h1></a></li>
 						</ul>
 					</div>
 					
@@ -154,7 +163,9 @@
 						</ul>
 					</div>
 					
-
+<?php
+}
+?>
 				
 			</div>
 
