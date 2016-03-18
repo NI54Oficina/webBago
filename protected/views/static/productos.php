@@ -59,7 +59,6 @@ function sanear_string($string)
 }
 ?>
 <?php 
-
 $seccion= Seccion::model()->findByPk($data->seccion);
 $auxLink= $seccion->nombre;
 $auxLink=  sanear_string($auxLink);
@@ -94,7 +93,7 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 		<img src="<?php echo Yii::app()->getBaseUrl(true); ?>/vademecums/<?php echo $imagen->id; ?>.png" align="center" />
 	
 	
-		<!--<p style="text-align:center;">Compartir en</p>
+		<p style="text-align:center;">Compartir en</p>
 		<p  style="text-align:center;border-bottom:1px solid #0082C8;width:15%;margin:auto;margin-top:-2%;"></p>
 		
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin: auto; text-align: center; margin-top: 7%;">
@@ -107,9 +106,9 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 			</a>
 		</div>
 		
-		<img class="col-lg-8 col-md-8 col-sm-12 col-xs-12" style=" width: 50%;  margin-top: 4%;float:initial;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-compartir.png"/>!-->
+		<!--<img class="col-lg-8 col-md-8 col-sm-12 col-xs-12" style=" width: 50%;  margin-top: 4%;float:initial;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-compartir.png"/>
 		
-		<!--<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin: auto; text-align: center; margin-top: 7%;margin-left:25%;">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin: auto; text-align: center; margin-top: 7%;margin-left:25%;">
 			
 			<a href="">
 				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 descargar">
@@ -122,7 +121,7 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 			</a>
 		</div>!-->
 		
-		<!--<p style="text-align:center;margin-top:85%;">Registrado en</p>
+		<p style="text-align:center;margin-top:85%;">Registrado en</p>
 		<p  style="text-align:center;border-bottom:1px solid #0082C8;width:15%;margin:auto;margin-top:-2%;"></p>
 		
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin: auto; text-align: center; margin-top: 8%;">
@@ -134,7 +133,7 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 			<div style="margin-left: -8%;">
 			<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/brasil.png" style="width: 11%; margin-right: 2%; vertical-align: middle;" /> <p style="display:inline-block;vertical-align: middle; margin-top: 3%;">Brasil</p>		
 			</div>
-			</div>!-->
+			</div>
 	</div>
 
 	<div  class=" col-lg-6 col-md-6 col-sm-12 col-xs-12" style="overflow:hidden;">
