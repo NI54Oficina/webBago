@@ -18,8 +18,8 @@
     </script>
 	<div >
 	<div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 redes-home-video">
-		<a href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/1/lng/0"style="color:white;float:left;padding:10px;opacity:0.8;">Español</a>
-		<a href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/2/lng/2"style="color:white;float:left;padding:10px;opacity:0.8;">Portugues</a>
+		<!--<a href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/1/lng/0"style="color:white;float:left;padding:10px;opacity:0.8;">Español</a>
+		<a href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/2/lng/2"style="color:white;float:left;padding:10px;opacity:0.8;">Portugues</a>!-->
 		<?php include('redes-sociales-home-header.php'); ?> 
 	
 	</div>
