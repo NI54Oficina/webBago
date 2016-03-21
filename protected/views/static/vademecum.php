@@ -75,7 +75,7 @@ $auxId=0;
 <div style="width:100%;">
 <div  class="tabla-aftosa col-lg-11 col-md-11 col-sm-12 col-xs-12" style="margin-bottom:25vh;"> 
 
-<div style="margin-top:12%;" class="hidden-lg hidden-md">
+<div style="margin-top:15vh;" class="hidden-lg hidden-md">
 <h1 class="vademecum"> <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/punto-<?php echo $normalizado; ?>.png" /> <?php echo Textos::model()->GetText(348); ?> <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/punto-<?php echo $normalizado; ?>.png" /></h1>
 <p  style="text-align:center;border-bottom:1px solid #0082C8;width:3%;margin:auto;margin-top:0%;margin-left:50%"></p>
 </div>
@@ -92,7 +92,7 @@ $auxId=0;
 </div></a>
 
 <a href="<?php echo Yii::app()->getBaseUrl(true); ?>"><div class=" col-lg-3 col-md-3 col-sm-12 col-xs-12 volver-mobile hidden-lg hidden-md">
-<p>Volver</p>
+<p id="volver-p">Volver</p>
 </div></a>
 
 

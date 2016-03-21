@@ -5362,8 +5362,11 @@ figure.snip1156:hover .salud-ambiental{
 		color: grey;
 		font-family: 'arialregular';	
 	}
-	
-}
+
+	#volver-p {
+		margin-left: 15%;
+		padding-top: 1%;
+	}
 
 /* Landscape */
 @media only screen 
@@ -6075,7 +6078,7 @@ figure.snip1156:hover .salud-ambiental{
 
 .imagen-pais {
 	display:inline-block;
-	width: 11%; 
+	width: auto; 
 	margin-right: 2%;
 	vertical-align: middle;
 }
