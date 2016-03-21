@@ -7,7 +7,9 @@ class PaisChecker extends CApplicationComponent
 			$_SESSION["webRoot"]="webBago/";
 			$webRoot=$_SESSION["webRoot"];
 			$currentUrl=str_replace($webRoot,"",$_SERVER['REQUEST_URI']);
-			//Yii::log("poyo", CLogger::LEVEL_ERROR, "poyo2");
+			
+			echo $currentUrl;
+			exit();
 				
 			if($currentUrl[0]=="/"){
 				$currentUrl=substr ($currentUrl,2);
@@ -18,26 +20,15 @@ class PaisChecker extends CApplicationComponent
 			}else{
 			$firstArg= substr($currentUrl,0,$endFirstArg);
 			}
-			//echo "<div style='width:100%;height:20px;background-color:white;color:black;'>".$firstArg."</div>";
-			//echo "<div style='width:100%;height:20px;background-color:white;color:black;'>".$_SESSION["pais"]."</div>";
-			//echo "<div style='width:100%;height:20px;background-color:white;color:black;'>".isset($_SESSION["pais"])."</div>";
-			//$auxFeed= file_get_contents('http://api.hostip.info/get_html.php?'.$_SERVER.['REMOTE_ADDR']);
-			//echo $_SERVER['REMOTE_ADDR'];
-			//echo "<div style='width:100%;height:20px;background-color:white;color:black;'>".count($auxFeed)."</div>";
-			//echo count($auxFeed);
+			
 			if(strlen($firstArg)==2){
 				$currentPais =Pais::model()->findByAttributes(array('short'=>$firstArg));
 				$_SESSION["short"]= $currentPais->short;
 				$_SESSION["pais"]= $currentPais->id;
 				$_SESSION["lng"]= $currentPais->lng;
-				//echo "<div style='width:100%;height:20px;background-color:white;color:black;'>"."entra"."</div>";
-				//redirect selección paises, guardar en sesión pagina actual
-				//header("Location: http://".$_SERVER['SERVER_NAME']."/".$webRoot."/paises");
 				
 			}else if($firstArg!="paises"){
-				//si es un país valido, asegurarse que sea igual al país en sessión, en caso contrario setear el pais en session correctamente
-				//echo "<div style='width:100%;height:20px;background-color:white;color:black;'>"."entra2"."</div>";
-				//echo $_SESSION["pais"];
+				
 				if( isset($_SESSION["pais"])){
 					$short= Pais::model()->findByPk($_SESSION["pais"])->short;
 					header("Location: http://".$_SERVER['SERVER_NAME']."/".$webRoot.$short."/".$currentUrl);
