@@ -121,17 +121,23 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 			</a>
 		</div>!-->
 		
-		<p style="text-align:center;margin-top:85%;">Registrado en</p>
-		<p  style="text-align:center;border-bottom:1px solid #0082C8;width:15%;margin:auto;margin-top:-2%;"></p>
+		<p style="text-align:center;margin-top:10px;">Registrado en</p>
+		<p style="text-align:center;border-bottom:1px solid #0082C8;width:15%;margin:auto;margin-top:-2%;"></p>
 		
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin: auto; text-align: center; margin-top: 8%;">
 
 			<div>
-			<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/argentina.png" style="display:inline-block; width: 11%; margin-right: 2%; vertical-align: middle;" /> <p style="display:inline-block;vertical-align: middle; margin-top: 3%;">Argentina</p>
+			<img class="imagen-pais" src="<?php echo Yii::app()->request->baseUrl; ?>/img/argentina.png" /> 
+
+			<p class="nombre-pais">Argentina</p>
 			</div>
+
 			<p class="col-lg-7 col-md-7 col-sm-12 col-xs-12" style="border-bottom:1px solid #CCCCCC; margin-left: 31%; margin-top: 4%;"></p>
-			<div style="margin-left: -8%;">
-			<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/brasil.png" style="width: 11%; margin-right: 2%; vertical-align: middle;" /> <p style="display:inline-block;vertical-align: middle; margin-top: 3%;">Brasil</p>		
+			<div style="">
+
+			<img class="imagen-pais" src="<?php echo Yii::app()->request->baseUrl; ?>/img/brasil.png" /> 
+
+			<p class="nombre-pais">Brasil</p>		
 			</div>
 			</div>
 	</div>

@@ -3357,6 +3357,8 @@ section .text {
   section .text {
     width: 90%;
   }
+
+
 }
 a.iprodev {
 	line-height: normal;
@@ -4701,6 +4703,9 @@ figure.snip1156:hover .salud-ambiental{
 		/*position: absolute;
 		min-height:100vh;*/
 	}
+
+	
+
 	.snip1156.image h3{
 		display:none;
 		color:#b8b8b8;
@@ -5729,5 +5734,18 @@ figure.snip1156:hover .salud-ambiental{
 
  /****  NUEVAS CONFIGURACIONES Y ALINEACIONES DE DISEÑO  *******/
 
+.nombre-pais {display:inline-block;
+			vertical-align: middle;
+	 		margin-top: 3%;}
+
+.imagen-pais {display:inline-block;
+			 width: 11%; 
+			margin-right: 2%;
+			 vertical-align: middle;}
+
+@media only screen and (max-width:768px) {
+
+.nombre-pais {display:none;}
 
 
+}
