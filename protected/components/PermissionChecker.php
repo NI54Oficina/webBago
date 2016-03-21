@@ -4,7 +4,7 @@ class PermissionChecker extends CApplicationComponent
 		
         public function PermissionCheck()
         {
-			$webRoot="webBago";
+			$webRoot="webBago/";
 			$currentUrl=str_replace($webRoot,"",$_SERVER['REQUEST_URI']);
 			Yii::log("poyo", CLogger::LEVEL_ERROR, "poyo2");
 			if($currentUrl[0]=="/"){
@@ -15,7 +15,7 @@ class PermissionChecker extends CApplicationComponent
 			foreach($permissions as $permission){
 				if(!Yii::app()->user->checkAccess($permission->operation)){
 					
-					header("Location: http://".$_SERVER['SERVER_NAME']."/".$webRoot."/site/error");
+					header("Location: http://".$_SERVER['SERVER_NAME']."/".$webRoot."site/error");
 					exit();
 				}
 			}

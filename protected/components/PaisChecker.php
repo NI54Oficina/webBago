@@ -4,7 +4,7 @@ class PaisChecker extends CApplicationComponent
 		
         public function PaisCheck()
         {
-			$_SESSION["webRoot"]="webBago";
+			$_SESSION["webRoot"]="webBago/";
 			$webRoot=$_SESSION["webRoot"];
 			$currentUrl=str_replace($webRoot,"",$_SERVER['REQUEST_URI']);
 			//Yii::log("poyo", CLogger::LEVEL_ERROR, "poyo2");
@@ -40,7 +40,7 @@ class PaisChecker extends CApplicationComponent
 				//echo $_SESSION["pais"];
 				if( isset($_SESSION["pais"])){
 					$short= Pais::model()->findByPk($_SESSION["pais"])->short;
-					header("Location: http://".$_SERVER['SERVER_NAME']."/".$webRoot."/".$short."/".$currentUrl);
+					header("Location: http://".$_SERVER['SERVER_NAME']."/".$webRoot.$short."/".$currentUrl);
 				}else{
 					if(!isset($_SESSION["redirectURL"])){
 						echo "entra session";
@@ -49,7 +49,7 @@ class PaisChecker extends CApplicationComponent
 						
 					}
 					
-					header("Location: http://".$_SERVER['SERVER_NAME']."/".$webRoot."/paises");
+					header("Location: http://".$_SERVER['SERVER_NAME']."/".$webRoot."paises");
 				}
 				
 				exit();
