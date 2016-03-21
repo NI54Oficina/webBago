@@ -109,7 +109,7 @@ $auxId=0;
 		<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/productos/id<?php echo $producto->id; ?>">
 		<figure class="snip1156 image">
 			<div>
-				<img style="width:45%;display:inline-block;margin:0; margin-top: 5%;" class="img-cat-aft " src="<?php echo Yii::app()->getBaseUrl(true); ?>/vademecums/<?php echo $imagen->id; ?>.png" /> 
+				<img style="width:45%;display:inline-block;margin:10%; float: left; margin-top: 5%;" class="img-cat-aft " src="<?php echo Yii::app()->getBaseUrl(true); ?>/vademecums/<?php echo $imagen->id; ?>.png" /> 
 				<div id="targets">
 					<?php
 					$target= $producto->target;

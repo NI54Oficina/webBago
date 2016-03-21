@@ -33,7 +33,6 @@ html{
 body{
 	background-color: #fff;
 	font-family:'arialregular';
-	min-height:100vh;
 }
 
 ul{
@@ -4571,20 +4570,28 @@ display:none;
 
 #targets{
 	width:50%;
-	display:inline-block;
-	text-align:left;
+	display:table-row;
+	text-align:right;
+	line-height: 10%;
+	position: relative;
+	margin:50%;
 }
+#targets h3 { float: left;
+			  margin:50%; }
+
 #targets img{
-	width:30%;
+	width:35px;
+	margin: 50%;
+	display: table-row;
 }
 
 #targets-inner{
-	width:100%;
+	width:30%;
 	display:inline-block;
 	text-align:left;
 }
 #targets-inner img{
-	width:20%;
+	width:20px;
 	max-width:58px;
 }
 
@@ -5719,4 +5726,8 @@ figure.snip1156:hover .salud-ambiental{
     border: 2px solid white;
 	transition: all 0.5s ease;
 }
+
+ /****  NUEVAS CONFIGURACIONES Y ALINEACIONES DE DISEÑO  *******/
+
+
 
