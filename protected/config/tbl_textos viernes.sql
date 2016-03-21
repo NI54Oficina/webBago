@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 18-03-2016 a las 18:10:29
+-- Tiempo de generación: 21-03-2016 a las 14:25:16
 -- Versión del servidor: 10.1.9-MariaDB
 -- Versión de PHP: 5.5.30
 
@@ -99,7 +99,7 @@ INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (59, '•	En 2013, Biogénesis Bagó y HILE Biotechnology inician el proyecto de trabajo en conjunto para la producción y comercialización de la <strong>vacuna anti Aftosa en la República Popular de China</strong>. La planta comenzará a operar en 2016 con una capacidad de producción de 400 millones de dosis por año. Somos la primera y única empresa de biotecnología del sector privado en el mundo que cumple con la calidad requerida por las autoridades sanitarias del gobierno chino, para dar respuesta al principal problema sanitario que afecta los rodeos del país asiático.', '•	In 2013 Biogénesis Bagó and HILE Biotechnology started a project for the production and commercialisation of the <strong>vaccine against Foot and Mouth Disease in the Republic of China</strong>.  The manufacturing plant will begin to function in 2016 with a production capability of 400 million doses per year.  We are the first and only biotechnology company in the private sector of the world that complies with quality requirements of health authorities of the Chinese government and that will be able to respond to the main health issues affecting livestock in China. ', '•	Em 2013, a Biogénesis Bagó e HLE Biotechnology iniciaram o projeto de  trabalho em conjunto para a produção e comercialização da vacina anti   Aftosa na República Popular da China. A planta industrial começará   operar em 2016 com uma capacidade produtiva de 400 milhões de   doses por ano. Somos a primeira e única empresa de biotecnologia do   setor privado no mundo que cumpre com os padrões de qualidade   requerida pelas autoridades sanitárias do governo chinês, para dar   resposta ao principal problema sanitário que atinge os rebanhos   asiáticos.'),
 (60, 'Nuestros colaboradores son quienes marcan la diferencia, quienes agregan valor al negocio, haciendo de nuestra compañía una de las empresas líderes dentro del mercado de la sanidad animal.', '', ''),
 (61, 'Trabajamos día a día respetando nuestros valores: Innovación, Cercanía, Flexibilidad, Responsabilidad, Progreso, Trabajo en Equipo, Integridad y Excelencia. Si te sentís con ganas y preparado para sumarte a un equipo dinámico y pujante, te invitamos a que formes parte de Biogénesis Bagó.', '', ''),
-(62, 'Envíanos tu CV', '', ''),
+(62, 'Envíanos tu CV', '', 'ENVIE SEU CV'),
 (63, 'Responsabilidad Social Empresaria', 'Corporate Social Responsibility', 'Responsabilidade Social Empresarial'),
 (64, 'Somos una empresa que busca liderar la evolución de la  salud animal siempre integrada a las necesidades del ser humano. Nos  comprometemos con la realidad de las comunidades de los países donde actuamos y aportamos nuestros mejores recursos para desarrollar soluciones productivas sustentables.', 'We are a company that strives to lead the evolution of animal health, always taking into account peoples needs.  We are committed to the reality of the communities within the countries we work and offer our best resources to develop productive and sustainable solutions.  ', 'Somos uma empresa que lidera a busca da evolução da saúde animal, sempre  integrada às necessidades do ser humano. Temos comprometimento com a   realidade das comunidades dos países em que atuamos e levamos nossos   melhores recursos para desenvolver soluções produtivas e sustentáveis.'),
 (65, 'Gestión responsable y comprometida', 'Committed and Responsible Management', 'Gestão Responsável e Comprometida'),
@@ -153,7 +153,7 @@ INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (113, 'CONTACTO', 'CONTACT', ''),
 (114, 'Nombre', 'Name', ''),
 (115, 'Apellido', 'Surname', ''),
-(116, 'e-Mail', 'e-mail', ''),
+(116, 'e-mail', 'e-mail', ''),
 (117, 'Teléfono', 'Phone', ''),
 (118, 'Empresa', 'Company', ''),
 (119, 'Cargo', 'Position', ''),
@@ -437,12 +437,12 @@ INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (395, 'Integridad', 'Integrity', 'Integridade'),
 (396, 'Excelencia', 'Excellence', 'Melhoria contínua'),
 (397, 'Responsabilidad', 'Responsability', 'Responsabilidade'),
-(404, '<strong><span  class="span-aftosa">A</span>ÑO 1997</strong>', '<strong><span  class="span-aftosa">Y</span>EAR 1997</strong>', ''),
-(405, '<strong><span  class="span-aftosa">A</span>ÑO 2000</strong>', '<strong><span  class="span-aftosa">Y</span>EAR 2000</strong>', ''),
-(406, '<strong><span  class="span-aftosa">A</span>ÑO 2006</strong>', '<strong><span  class="span-aftosa">Y</span>EAR 2006</strong>', ''),
-(407, '<strong><span  class="span-aftosa">A</span>ÑO 2010/strong>', '<strong><span  class="span-aftosa">Y</span>EAR 2010</strong>', ''),
-(408, '<strong><span  class="span-aftosa">A</span>ÑO 2011</strong>', '<strong><span  class="span-aftosa">Y</span>EAR 2011</strong>', ''),
-(409, '<strong><span  class="span-aftosa">A</span>ÑO 2013</strong>', '<strong><span  class="span-aftosa">Y</span>EAR 2013</strong>', ''),
+(404, '<strong><span  class="span-aftosa">A</span>ÑO 1997</strong>', '<strong><span  class="span-aftosa">Y</span>EAR 1997</strong>', '<strong><span  class="span-aftosa">A</span>NO 1997</strong>'),
+(405, '<strong><span  class="span-aftosa">A</span>ÑO 2000</strong>', '<strong><span  class="span-aftosa">Y</span>EAR 2000</strong>', '<strong><span  class="span-aftosa">A</span>ANO 2000</strong>'),
+(406, '<strong><span  class="span-aftosa">A</span>ÑO 2006</strong>', '<strong><span  class="span-aftosa">Y</span>EAR 2006</strong>', '<strong><span  class="span-aftosa">A</span>ANO 2006</strong>'),
+(407, '<strong><span  class="span-aftosa">A</span>ÑO 2010/strong>', '<strong><span  class="span-aftosa">Y</span>EAR 2010</strong>', '<strong><span  class="span-aftosa">A</span>NO 2010</strong>'),
+(408, '<strong><span  class="span-aftosa">A</span>ÑO 2011</strong>', '<strong><span  class="span-aftosa">Y</span>EAR 2011</strong>', '<strong><span  class="span-aftosa">A</span>NO 2011</strong>'),
+(409, '<strong><span  class="span-aftosa">A</span>ÑO 2013</strong>', '<strong><span  class="span-aftosa">Y</span>EAR 2013</strong>', '<strong><span  class="span-aftosa">A</span>NO 2013</strong>'),
 (410, 'Argentina', '', ''),
 (411, 'Bolivia', '', ''),
 (412, 'Brasil', 'Brazil', ''),
