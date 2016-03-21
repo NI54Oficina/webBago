@@ -25,7 +25,7 @@ class PaisChecker extends CApplicationComponent
 			//echo $_SERVER['REMOTE_ADDR'];
 			//echo "<div style='width:100%;height:20px;background-color:white;color:black;'>".count($auxFeed)."</div>";
 			//echo count($auxFeed);
-			if(strlen($firstArg)==2){
+			/*if(strlen($firstArg)==2){
 				$currentPais =Pais::model()->findByAttributes(array('short'=>$firstArg));
 				$_SESSION["short"]= $currentPais->short;
 				$_SESSION["pais"]= $currentPais->id;
@@ -53,7 +53,7 @@ class PaisChecker extends CApplicationComponent
 				}
 				
 				exit();
-			}
+			}*/
             
         }
 		

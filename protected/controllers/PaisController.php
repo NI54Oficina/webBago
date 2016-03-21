@@ -183,7 +183,7 @@ class PaisController extends Controller
 			exit();
 		}else{
 			if (strpos($_SERVER['HTTP_REFERER'], '/paises') !== false) {
-				header("Location: http://".$_SERVER['SERVER_NAME']."/".$_SESSION["webRoot"]."/");
+				header("Location: http://".$_SERVER['SERVER_NAME']."/".$_SESSION["webRoot"]);
 			}else{
 				$urlToGo="Location: ".$_SERVER['HTTP_REFERER'];
 				$paises=Pais::model()->findAll();
