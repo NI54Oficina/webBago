@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 21-03-2016 a las 13:31:00
+-- Tiempo de generación: 18-03-2016 a las 16:03:28
 -- Versión del servidor: 10.1.9-MariaDB
 -- Versión de PHP: 5.5.30
 
@@ -120,9 +120,9 @@ INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (80, 'Vacunas más consistentes y efectivas', 'More consistent and effective vaccines', ''),
 (81, 'Construimos una planta modelo, única por su tecnología y capacidad de producción. Con introducción de equipamiento de última generación, evolucionamos en nuevos sistemas de  producción, concentración y purificación de antígenos que, combinados con adyuvantes específicos, nos permiten formular las vacunas más potentes y eficaces.', 'We built a model manufacturing plant, unique because of its technology and production capability.  With the addition of next-generation equipment, we have been able to evolve in our new production systems, concentration and purification of antigens which, combined with specific adjuvants, allow us to formulate more potent and efficient vaccines.  ', ''),
 (82, 'Además de los métodos convencionales desarrollamos y patentamos una nueva tecnología de cultivo celular y de producción viral, para asegurar mayor calidad y  cantidad de antígenos en cada una de nuestras vacunas.', 'Furthermore, apart from conventional methods, we have developed and patented new technology in cell cultures and viral production, in order to ensure better quality and more quantity of antigens in each of our vaccines.  ', ''),
-(83, '<strong>Unidad de producción de Vacuna contra la Fiebre Aftosa: </strong>200 millones de dosis anuales, bajo las más altas  normas de bioseguridad, nivel 4 (NBS 4 OIE).', '<strong>Vaccine against Foot and Mouth Disease Production Unit:</strong> 200 million annual doses, under the highest biosafety norms, level 4 (NBS OIE).', ''),
-(84, '<strong>Unidad de producción de Biológicos ViBa:</strong> 100 millones de dosis anuales de vacuna combinada, destinadas a la prevención de enfermedades virales y bacterianas, bajo niveles de Bioseguridad 2 y 2+. ', '<strong>Biological ViBa Production Unit:</strong> 100 million annual doses of the combined vaccine, destined to prevent viral and bacterial diseases, under biosafety levels 2 and 2+.  ', ''),
-(85, '<strong>Unidad de producción de Vacuna Antirrábica para bovinos, caninos y felinos:  </strong> 30 millones de dosis anuales,  elaboradas bajo niveles de bioseguridad 3 y  normas específicas de la OIE.', '<strong>Dogs and Cats Rabies Vaccine Production Unit:</strong> 30 million annual doses, elaborated under biosafety level 3 and specific OIE norms.', ''),
+(83, '•	<strong>Unidad de producción de Vacuna contra la Fiebre Aftosa: </strong>200 millones de dosis anuales, bajo las más altas  normas de bioseguridad, nivel 4 (NBS 4 OIE).', '•	<strong>Vaccine against Foot and Mouth Disease Production Unit:</strong> 200 million annual doses, under the highest biosafety norms, level 4 (NBS OIE).', ''),
+(84, '•	<strong>Unidad de producción de Biológicos ViBa:</strong> 100 millones de dosis anuales de vacuna combinada, destinadas a la prevención de enfermedades virales y bacterianas, bajo niveles de Bioseguridad 2 y 2+. ', '•	<strong>Biological ViBa Production Unit:</strong> 100 million annual doses of the combined vaccine, destined to prevent viral and bacterial diseases, under biosafety levels 2 and 2+.  ', ''),
+(85, '•	<strong>Unidad de producción de Vacuna Antirrábica para bovinos, caninos y felinos:  </strong> 30 millones de dosis anuales,  elaboradas bajo niveles de bioseguridad 3 y  normas específicas de la OIE.', '•	<strong>Dogs and Cats Rabies Vaccine Production Unit:</strong> 30 million annual doses, elaborated under biosafety level 3 and specific OIE norms.', ''),
 (86, 'Planta Monte Grande- Buenos Aires, Argentina', 'Monte Grande Manufacturing Plant, Buenos Aires, Argentina:', ''),
 (87, 'Soluciones para los principales problemas de la producción ganadera', 'Solutions for main problems in livestock production', ''),
 (88, 'Aquí elaboramos nuestra línea de productos farmacéuticos para ofrecer planes sanitarios completos y eficaces, adaptados a las necesidades de la producción ganadera.', 'Here we elaborate our line of pharmaceutical products so as to offer complete and efficient sanitation plans, which are adapted to the needs of livestock production.', ''),
@@ -463,7 +463,7 @@ INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (428, 'Versión portugués', 'Portuguese version', ''),
 (429, 'Trayectoria', 'Trajectory', 'Trajetória'),
 (430, 'Info para proveedores', 'Supliers', 'Prestadores'),
-(431, 'Rse', 'Rse', 'Rse'),
+(431, 'Rse', 'Rse', ''),
 (432, 'Filiales y rep. comerciales', 'Affiliates and Sales Reps', 'Controladas e Rep. Comercial '),
 (433, 'info técnica', '', 'info técnica'),
 (434, 'Planes sanitarios', '', 'Planos sanitários produtivos'),
