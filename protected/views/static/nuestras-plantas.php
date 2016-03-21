@@ -21,14 +21,20 @@
 
 	
 <div class="div-texto-aftosa col-lg-5 col-md-5 col-sm-12 col-xs-12" style="text-align: left;">
-		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-		<a href="nuestras-plantas-menu.php" style="display:inline-block;float:right;width:100%;" id="videoPlanta">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align:right;" id="nuestrasPlantasTopVideo">
+		<a href="nuestras-plantas-menu.php" style="display:inline-block;float:right;width:150%;" id="videoPlanta">
 			<object id="videoPlantaVideo" width="100%" height="500" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" >
 				<param name="SRC" value="1080/Exterior/exterior_1080_out.swf">
-				<embed src="<?php echo Yii::app()->request->baseUrl; ?>/1080/Exterior/exterior_1080_out.swf" width="900" height="500" style="width: 63vw; height: 60vh;">
+				<embed src="<?php echo Yii::app()->request->baseUrl; ?>/1080/Exterior/exterior_1080_out.swf" width="900" height="500" style="width: 100%;">
 							<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/nuestras-plantas-menu" style="z-index: 21;margin-left: -14%;position: relative;">
 								<img style="margin-top: -10%;margin-left: 80%;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/mas.png" alt="" /></a>
 			</object>
+			<!--<object id="videoPlantaVideo"  type="application/x-shockwave-flash" 
+			  data="<?php echo Yii::app()->request->baseUrl; ?>/1080/Exterior/exterior_1080_out.swf" 
+			  width="0" height="0">
+			  <param name="movie" value="<?php echo Yii::app()->request->baseUrl; ?>/1080/Exterior/exterior_1080_out.swf" />
+			  <param name="quality" value="high"/>
+			</object>!-->
 		</a>
 		</div>
 	<div class="tabla-aftosa col-lg-12 col-md-12 col-sm-12 col-xs-12">
