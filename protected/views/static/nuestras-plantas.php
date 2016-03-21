@@ -4,19 +4,12 @@
 				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/nuestras-plantas.png" style="width:100vw;" />	
 			</div>
 	
-	<div class="col-lg-7 col-md-7 col-sm-11 col-xs-11 row img-plantas" style="text-align:right">
-		<a href="nuestras-plantas-menu.php">
-			<object width="700" height="500" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0">
-				<param name="SRC" value="1080/Exterior/exterior_1080_out.swf">
-				<embed src="<?php echo Yii::app()->request->baseUrl; ?>/1080/Exterior/exterior_1080_out.swf" width="900" height="500" style="width: 63vw; height: 60vh;">
-							<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/nuestras-plantas-menu" style="z-index: 21;margin-left: -14%;position: relative;">
-								<img style="margin-top: -10%;margin-left: 80%;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/mas.png" alt="" /></a>
-			</object>
-		</a>
-	</div>
-	<?php include('widget.php'); ?>
+	<!--<div class="col-lg-7 col-md-7 col-sm-11 col-xs-11 row img-plantas" style="text-align:right">
+		
+	</div>!-->
 	
-	<div class="col-lg-8 col-md-8">
+	
+	
 	<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 	<div class="side-title">
 		<div style="display:inline-block;">
@@ -28,7 +21,16 @@
 
 	
 <div class="div-texto-aftosa col-lg-5 col-md-5 col-sm-12 col-xs-12" style="text-align: left;">
-
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		<a href="nuestras-plantas-menu.php" style="display:inline-block;float:right;width:100%;" id="videoPlanta">
+			<object id="videoPlantaVideo" width="100%" height="500" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" >
+				<param name="SRC" value="1080/Exterior/exterior_1080_out.swf">
+				<embed src="<?php echo Yii::app()->request->baseUrl; ?>/1080/Exterior/exterior_1080_out.swf" width="900" height="500" style="width: 63vw; height: 60vh;">
+							<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/nuestras-plantas-menu" style="z-index: 21;margin-left: -14%;position: relative;">
+								<img style="margin-top: -10%;margin-left: 80%;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/mas.png" alt="" /></a>
+			</object>
+		</a>
+		</div>
 	<div class="tabla-aftosa col-lg-12 col-md-12 col-sm-12 col-xs-12">
 		<div  class="tr  col-lg-12 col-md-12 col-sm-12 col-xs-12 inner-text" style="text-shadow:none;padding-top:0;">		
 					<p><strong><?php echo Textos::model()->GetText(77); ?></strong></p>
@@ -110,7 +112,14 @@
 		</div>
 
 </div>
-</div>
+<script>
+document.getElementById("videoPlantaVideo").addEventListener("load", padTitle());
+function padTitle(){
+	console.log($("#videoPlanta").outerHeight());
+	$(".side-title").css("padding-top",$("#videoPlanta").height());
+}
+</script>
+<?php include('widget.php'); ?>
 
 
 

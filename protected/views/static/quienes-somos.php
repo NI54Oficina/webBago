@@ -17,15 +17,6 @@
 	</div>
 	</div>	
 
-			<!-- SUBTÍTULO 
-			<div  class="tr" style="text-shadow:none;">
-			
-				<div>
-					<img src="img/comillas.png"  style="padding-top: 30%;"/>
-					<h2 class="h2-aftosa" style="text-decoration:none;margin-right:14px;">La mayor empresa latinoamericana del sector para grandes animales <br /><br /><br /><br /><br /></h2>
-				</div>
-
-			</div>-->
 		
 		<div class="div-texto-aftosa col-lg-5 col-md-5 col-sm-12 col-xs-12" style="text-align: left;">
 				
