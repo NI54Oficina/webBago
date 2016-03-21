@@ -184,7 +184,7 @@ class PaisController extends Controller
 		echo Yii::app()->session['short'];
 		echo "<br>";
 		
-		/*if(isset($_SESSION["redirectURL"])){
+		if(isset($_SESSION["redirectURL"])){
 			header("Location: http://".$_SERVER['SERVER_NAME']."/".$_SESSION["webRoot"].$_SESSION["redirectURL"]);
 			$_SESSION["redirectURL"]=null;
 			exit();
@@ -202,7 +202,7 @@ class PaisController extends Controller
 				header($urlToGo);
 			}
 			die();
-		}*/
+		}
 	}
 
 	/**

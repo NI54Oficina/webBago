@@ -6,19 +6,21 @@ class PaisChecker extends CApplicationComponent
         {
 			$_SESSION["webRoot"]="webBago/";
 			$webRoot=$_SESSION["webRoot"];
-			$currentUrl=str_replace($webRoot,"",$_SERVER['REQUEST_URI']);
+			$initUrl=$_SERVER['REQUEST_URI'];
 			
-			echo $currentUrl;
-			exit();
-				
+			$initUrl=substr($initUrl,1);
+		
+			$currentUrl=str_replace($webRoot,"",$initUrl);
+			
 			if($currentUrl[0]=="/"){
-				$currentUrl=substr ($currentUrl,2);
+				$currentUrl=substr ($currentUrl,4);
 			}
+		
 			$endFirstArg= strpos ($currentUrl,"/");
 			if(!$endFirstArg){
-			 $firstArg=$currentUrl;	
+				$firstArg=$currentUrl;	
 			}else{
-			$firstArg= substr($currentUrl,0,$endFirstArg);
+				$firstArg= substr($currentUrl,0,$endFirstArg);
 			}
 			
 			if(strlen($firstArg)==2){
@@ -31,11 +33,11 @@ class PaisChecker extends CApplicationComponent
 				
 				if( isset($_SESSION["pais"])){
 					$short= Pais::model()->findByPk($_SESSION["pais"])->short;
-					header("Location: http://".$_SERVER['SERVER_NAME']."/".$webRoot.$short."/".$currentUrl);
+					//header("Location: http://".$_SERVER['SERVER_NAME']."/".$webRoot.$short."/".$currentUrl);
 				}else{
 					if(!isset($_SESSION["redirectURL"])){
 						echo "entra session";
-						$_SESSION["redirectURL"]= $currentUrl;
+						//$_SESSION["redirectURL"]= $currentUrl;
 					}else{
 						
 					}
