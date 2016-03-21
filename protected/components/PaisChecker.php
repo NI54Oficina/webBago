@@ -11,16 +11,19 @@ class PaisChecker extends CApplicationComponent
 			$initUrl=substr($initUrl,1);
 		
 			$currentUrl=str_replace($webRoot,"",$initUrl);
+			$firstArg="";
+			if(strlen($currentUrl)>1){
 			
-			if($currentUrl[0]=="/"){
-				$currentUrl=substr ($currentUrl,4);
-			}
-		
-			$endFirstArg= strpos ($currentUrl,"/");
-			if(!$endFirstArg){
-				$firstArg=$currentUrl;	
-			}else{
-				$firstArg= substr($currentUrl,0,$endFirstArg);
+				if($currentUrl[0]=="/"){
+					$currentUrl=substr ($currentUrl,4);
+				}
+			
+				$endFirstArg= strpos ($currentUrl,"/");
+				if(!$endFirstArg){
+					$firstArg=$currentUrl;	
+				}else{
+					$firstArg= substr($currentUrl,0,$endFirstArg);
+				}
 			}
 			
 			if(strlen($firstArg)==2){
@@ -33,18 +36,18 @@ class PaisChecker extends CApplicationComponent
 				
 				if( isset($_SESSION["pais"])){
 					$short= Pais::model()->findByPk($_SESSION["pais"])->short;
-					//header("Location: http://".$_SERVER['SERVER_NAME']."/".$webRoot.$short."/".$currentUrl);
+					header("Location: http://".$_SERVER['SERVER_NAME']."/".$webRoot.$short."/".$currentUrl);
 				}else{
 					if(!isset($_SESSION["redirectURL"])){
 						echo "entra session";
-						//$_SESSION["redirectURL"]= $currentUrl;
+						$_SESSION["redirectURL"]= $currentUrl;
 					}else{
 						
 					}
-					//header("Location: http://".$_SERVER['SERVER_NAME']."/".$webRoot."paises");
+					header("Location: http://".$_SERVER['SERVER_NAME']."/".$webRoot."paises");
 				}
 				
-				//exit();
+				exit();
 			}
             
         }
