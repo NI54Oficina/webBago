@@ -48,11 +48,10 @@ class PaisChecker extends CApplicationComponent
 					}else{
 						
 					}
-					
 					//header("Location: http://".$_SERVER['SERVER_NAME']."/".$webRoot."paises");
 				}
 				
-				exit();
+				//exit();
 			}
             
         }
