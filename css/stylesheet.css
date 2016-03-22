@@ -6120,6 +6120,11 @@ figure.snip1156:hover .salud-ambiental{
 .paises-registrados {margin:10% !important;}
 } 				  
 
+#infodcha div.error{color:red;position:absolute;}
+
+#enviando,#enviado,#errorEnvio{display:none;position:absolute;}
+
+
 
 .btn-mapa:focus{
 	outline:none;
@@ -6131,6 +6136,7 @@ figure.snip1156:hover .salud-ambiental{
 	border:none;
 }
 
+<<<<<<< HEAD
 .tic-mision{
 	margin-bottom:25px;
 }
@@ -6138,3 +6144,5 @@ figure.snip1156:hover .salud-ambiental{
 .tic-mision img{
     padding-right: 7px;
 }
+=======
+>>>>>>> origin/master

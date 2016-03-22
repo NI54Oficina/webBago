@@ -1362,7 +1362,9 @@
 				
 					<!-- ////////// INFORMACIÓN ////////////// -->        
 					<div id="infodcha" class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="display:inline-block;float:initial;text-align:center;" >        
-					
+						<div id="enviando">Eviando</div>
+						<div id="enviado">Enviado</div>
+						<div id="errorEnvio">Error envio</div>
 						<form id="form1" class="col-lg-12 col-md-12 col-xs-12" style="float:initial;display:inline-block;text-align:center;">
 							
 							<!-- ******** NOMBRE ******** -->
@@ -1454,16 +1456,60 @@
 							</div>  <!--termina form btn enviar-->
 	
 						</form> <!--termina info dcha-->
+						<style>
 						
+						</style>
 						<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.validate.min.js"></script>
 						<script>
 						 $("#form1").validate({
-						  submitHandler: function(form) {
+							submitHandler: function(form) {
+								
 							$.post( "<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/web/contacto", $( "#form1" ).serialize() ).done(function(data){
-								console.log("send");
+								console.log("exito!");
+								$("#enviando").fadeOut(100);
+								$("#enviado").fadeIn(100);
+								$("#errorEnvio").hide();
+							}).fail(function(){
+								$("#enviando").fadeOut(100);
+								$("#enviado").hide();
+								$("#errorEnvio").fadeIn();
 							});
-						  }
+							$("#form1").fadeOut(500);
+							$("#enviando").fadeIn(500);
+							$("#enviado").hide();
+							$("#errorEnvio").hide();
+							
+						  },
+							errorElement: 'div',
+							messages: {
+								nombre: {
+									required: "Debe completar su nombre.",
+								},
+								email: {
+									required: "Debe proporcionar un mail de contacto válido.",
+								},
+								mensaje: {
+									required: "Debe ingresar un mensaje.",
+								},
+							},
+							
 						 });
+						 
+						$(document).ready(function () {
+
+							$('#contactform').validate({
+								errorElement: 'span',
+								rules: {
+									first: {
+										required: true,
+										minlength: [2],
+									}
+								},
+								
+								
+							});
+
+						});
 						</script>
 					</div> <!--termina info-->
 			
