@@ -39,7 +39,7 @@ class PaisChecker extends CApplicationComponent
 					header("Location: http://".$_SERVER['SERVER_NAME']."/".$webRoot.$short."/".$currentUrl);
 				}else{
 					if(!isset($_SESSION["redirectURL"])){
-						echo "entra session";
+						//echo "entra session";
 						$_SESSION["redirectURL"]= $currentUrl;
 					}else{
 						

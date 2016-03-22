@@ -6045,7 +6045,8 @@ figure.snip1156:hover .salud-ambiental{
 	margin-bottom:3%;
 }
 
-.btn-buscador-vademecum{
+
+#btn-buscador-vademecum{
 		background-color: #E8E6E6;
 		border: none;
 		width: 50px;
@@ -6057,7 +6058,6 @@ figure.snip1156:hover .salud-ambiental{
 		display:inline-block;
 		vertical-align: top;
 }
-
 
 .input-group-btn{
 	display:inline-block;

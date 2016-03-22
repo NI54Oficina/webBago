@@ -58,4 +58,4 @@ recursos-home
 src
 themes
 templates
-*.log
+protected/runtime
