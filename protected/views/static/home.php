@@ -1310,7 +1310,7 @@
 							<!-- TEXTO HEADER-->
 							<h3 class="tr">TRABAJA CON NOSOTROS</h3>
 							<h4 class="tr-2">Queremos que seas parte de este gran equipo</h4>
-							<a href="" style="display:inline-block;"><div class="send-rrhh" style="color:white;">Envianos tu CV</div></a>
+							<a href="" style="display:inline-block;"><div class="send-rrhh" style="color:white;border-radius: 5px;">Envianos tu CV</div></a>
 
 						
 				</div>  <!-- termina header -->

@@ -335,6 +335,7 @@ font-size: 22px;
 		padding-bottom:1%;
 		font-family:'arialregular';
 		letter-spacing:0.5px;
+		font-size:12px;
 	}
 	
 	footer{
@@ -1042,6 +1043,7 @@ font-size: 22px;
 		color:white;
 		padding-top:1%;
 		padding-bottom:1%;
+		font-size:12px;
 	}
 	
 	
@@ -1104,7 +1106,7 @@ font-size: 22px;
 	.titulo-layout-aftosa{
 		color:white;
 		margin-top:20%;
-		text-shadow:0px 0px 10px #494949;
+		text-shadow: 0px 0px 7px #000000;
 		font-size:56px;
 		text-align:center;
 		font-family:'arialregular';
@@ -6114,3 +6116,14 @@ figure.snip1156:hover .salud-ambiental{
 
 .paises-registrados {margin:10% !important;}
 } 				  
+
+
+.btn-mapa:focus{
+	outline:none;
+	border:none;
+}
+
+.btn-mapa:active{
+	outline:none;
+	border:none;
+}
