@@ -1730,11 +1730,12 @@ font-size: 22px;
 	.buscador {
 		background-color: #E8E6E6;
 		border: none;
-		width: 235px;
+		width: 220px;
 		height: 40px;
 		margin-bottom: 15%;
 		padding-left: 4%;
 		display:inline-block;
+		float: left;
 	}
 	
 	.p-widget {
@@ -1748,6 +1749,7 @@ font-size: 22px;
 	}
 	
 	
+
 	.fundaciones{
 		color:#66CBED;
 		font-family:'arialregular';
@@ -6055,10 +6057,11 @@ figure.snip1156:hover .salud-ambiental{
 		height: 40px;
 		background-image: url(../img/lupa-01.png);
 		background-repeat: no-repeat;
-		background-position: center right;
+		background-position:  right;
 		background-size: 100% 100%;
 		display:inline-block;
 		vertical-align: top;
+		margin-left: 5px;
 }
 
 
