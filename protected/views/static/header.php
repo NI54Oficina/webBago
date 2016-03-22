@@ -2,7 +2,9 @@
 <!---------------------------------------------------------------------------------------------      HEADER     --------------------------------------------------------------------------------------------->
 
 
-<header class="main col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="width:100%;padding-bottom: 10px;">
+<header class="main col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="width:100%;padding-bottom: 10px;background: -webkit-linear-gradient(left, rgba(255,255,255,1) 17%,rgba(255,255,255,1) 18%,rgba(255,255,255,0.89) 48%,rgba(255,255,255,0.7) 100%);
+    background: linear-gradient(to right, rgba(255,255,255,1) 17%,rgba(255,255,255,1) 18%,rgba(255,255,255,0.89) 48%,rgba(255,255,255,0.7) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#b3ffffff',GradientType=1 );">
 		<!--+++++ LOGO BAGÓ MOBILE +++++ -->
 		<img id="logo-bago-mobile" class="col-lg-2 col-md-2 col-sm-12 col-xs-12" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo-bago.png" />		
 		
