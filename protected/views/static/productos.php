@@ -95,9 +95,10 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 	
 	
 		<p style="text-align:center;">Compartir en</p>
-		<p  style="text-align:center;border-bottom:1px solid #0082C8;width:15%;margin:auto;"></p>
-		
-		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin: auto; text-align: center; margin-top: 7%;">
+ 		<p  style="text-align:center;border-bottom:1px solid #0082C8;width:15%;margin:auto;margin-top:-2%;"></p>
+ 		<p  style="text-align:center;border-bottom:1px solid #0082C8;width:15%;margin:auto;"></p>
+  		
+  		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin: auto; text-align: center; margin-top: 7%;">
 			
 			<a href="" class="col-lg-3 col-md-3 col-sm-6 col-xs-6 facebook" style="float:initial;display:inline-block;">
 				
