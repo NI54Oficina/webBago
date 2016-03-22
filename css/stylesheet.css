@@ -2431,10 +2431,14 @@ font-size: 22px;
 
 #noticias h5{
 padding: 10px 10px;
+padding-left:0;
+font-size:12px;
 }
 #noticias p{
 padding: 0px 10px;
 margin:0;
+padding-left:0;
+font-size:12.5px;
 }
 
 #list-menu li a{
@@ -2559,7 +2563,7 @@ p{
     color: #fff;
     width: 30%;
     margin-top: 4%;
-    font-size: 20px;
+    font-size: 17px;
     letter-spacing: 1px;
 	font-family:'arialregular';
 	transition: all 0.5s ease;
@@ -3060,7 +3064,7 @@ color:white;
 #leer-mas{
 	font-family: 'arialregular';
 	font-weight:bold;
-	font-size:16px;
+	font-size:13.5px;
 }
 
 
@@ -3090,7 +3094,7 @@ color:white;
 
 .b-l{
 	margin-left: 3%;
-    margin-top: 2%;
+    margin-top: 0;
     margin-bottom: 1%;
     width: 61%;
 }
@@ -3593,7 +3597,7 @@ text-decoration:none;}
 
 
 .input-vad{
-	width: 13vw;
+	width: 11vw;
     background: rgba(255,255,255,0.2);
     display: inline-block;
     height: 3.5vh;
@@ -3985,7 +3989,7 @@ text-decoration:none;}
 
 #btn-buscar{
 	background-image:url(../img/lupa-2-01.png);
-	width:44px;	
+	width:38px;	
 	height:48px;
 	border:none;
 	background-color:transparent;
@@ -4092,7 +4096,7 @@ text-decoration:none;}
 	text-align:left;
 	padding-bottom:1%;
 	margin-top:2%;
-    
+    font-size:12px;
 }
 
 
@@ -4117,14 +4121,14 @@ text-decoration:none;}
 	text-align:left;
 	padding-bottom:1%;
 	font-family: 'arialregular';
-	font-size: 16px;
+	font-size: 14px;
     font-weight: 700;
 }
 
 
 .desc-rev{
 	color:#fff;
-	font-size:13px;
+	font-size:12px;
 	text-align:left;
 	
 	width:100%;
@@ -4148,7 +4152,7 @@ text-decoration:none;}
 
 #info-revista p{
     margin-left: 0%;
-    font-size: 17px;
+    font-size: 14px;
 }
 
 #info-revista h1{
@@ -4566,6 +4570,7 @@ p{
 	overflow:hidden;
 	padding:0;
 	margin:0;
+	padding-top:15px;
 }
 
 .mirrored{
