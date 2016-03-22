@@ -1370,13 +1370,13 @@
 					<!-- ////////// INFORMACIÓN ////////////// -->        
 					<div id="infodcha" class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="display:inline-block;float:initial;text-align:center;" >        
 					
-						<div id="form1" class="col-lg-12 col-md-12 col-xs-12" style="float:initial;display:inline-block;text-align:center;">
-						
+						<form id="form1" class="col-lg-12 col-md-12 col-xs-12" style="float:initial;display:inline-block;text-align:center;">
+							
 							<!-- ******** NOMBRE ******** -->
 							<div class="col-lg-6  col-md-6  col-xs-12">
 								<div class="input-contacto">
 								<label for="exampleInputName2">NOMBRE</label>
-									<input class="form-inline" name="nombre" type="text" value="">
+									<input class="form-inline required" name="nombre" type="text" value="">
 								</div>
 							</div>
 				
@@ -1385,7 +1385,7 @@
 							<div class="col-lg-6  col-md-6 col-xs-12">
 								<div class="input-contacto">
 									<label for="exampleInputName2">APELLIDO</label>
-									<input class="form-inline" name="email" type="email" value="">
+									<input class="form-inline" name="apellido" type="text" value="">
 								</div>
 							</div>
 						
@@ -1394,7 +1394,7 @@
 							<div class="col-lg-6  col-md-6 col-xs-12">
 								<div class="input-contacto">
 								<label for="exampleInputName2">EMAIL</label>
-									<input class="form-inline" name="empresa" type="text" value="">
+									<input class="form-inline required" name="email" type="email" value="">
 									</div>
 							</div>
 						
@@ -1403,7 +1403,7 @@
 							<div class="col-lg-6  col-md-6 col-xs-12">
 								<div class="input-contacto">
 								<label for="exampleInputName2">TELÉFONO</label>
-									<input class="form-inline" name="direccion" type="text" value="">
+									<input class="form-inline" name="telefono" type="text" value="">
 									</div>
 							</div>
 					
@@ -1412,7 +1412,7 @@
 							<div class="col-lg-6  col-md-6 col-xs-12">
 							<div class="input-contacto">
 								<label for="exampleInputName2">EMPRESA</label>
-									<input class="form-inline" name="apellido" type="text" value="">
+									<input class="form-inline" name="empresa" type="text" value="">
 									</div>
 							</div>
 			
@@ -1421,7 +1421,7 @@
 							<div class="col-lg-6  col-md-6 col-xs-12">
 							<div class="input-contacto">
 								<label for="exampleInputName2">CARGO</label>
-									<input class="form-inline" name="telefono" type="text" value="">
+									<input class="form-inline" name="cargo" type="text" value="">
 									</div>
 							</div>
 			
@@ -1430,7 +1430,7 @@
 							<div class="col-lg-6  col-md-6 col-xs-12">
 								<div class="input-contacto">
 									<label for="exampleInputName2">DIRECCIÓN</label>
-									<input class="form-inline" name="cargo" type="text" value="">
+									<input class="form-inline" name="direccion" type="text" value="">
 								</div>
 							</div>
 					
@@ -1448,7 +1448,7 @@
 							<div class="col-md-12 col-md-12 col-sm-12 col-xs-12">
 								<div class="textarea-contacto">
 								<label id="textarea-label" for="exampleInputName2">MENSAJE</label> 
-									<textarea rows="4" id="textarea"></textarea>
+									<textarea rows="4" id="textarea" name="mensaje" class="required"></textarea>
 									</div>
 							</div>  <!--termina form textarea-->
 					
@@ -1460,8 +1460,18 @@
 									</div>
 							</div>  <!--termina form btn enviar-->
 	
-						</div> <!--termina info dcha-->
-			
+						</form> <!--termina info dcha-->
+						
+						<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.validate.min.js"></script>
+						<script>
+						 $("#form1").validate({
+						  submitHandler: function(form) {
+							$.post( "<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/web/contacto", $( "#form1" ).serialize() ).done(function(data){
+								console.log("send");
+							});
+						  }
+						 });
+						</script>
 					</div> <!--termina info-->
 			
 			

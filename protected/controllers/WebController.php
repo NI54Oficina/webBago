@@ -16,7 +16,7 @@ class WebController extends Controller
 		return array(
 			'accessControl', // perform access control for CRUD operations
 			'postOnly + delete', // we only allow deletion via POST request
-			'postOnly + contacto', // we only allow deletion via POST request
+			'postOnly + contacto', // we only allow deletion via POST requesty
 		);
 	}
 
@@ -29,7 +29,7 @@ class WebController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view',"get"),
+				'actions'=>array('index','view',"get","contacto"),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -78,6 +78,32 @@ class WebController extends Controller
 		}else{
 			$this->renderPartial("//static/".$data,$model);
 		}
+	}
+	
+	public function actionContacto(){
+		/*foreach($_POST as $key => $value){
+			echo $key;
+			echo "<br>";
+			echo $value;
+			echo "<br><br>";
+		}*/
+		
+		Yii::import('application.extensions.phpmailer.JPhpMailer');
+		$mail = new JPhpMailer;
+		$mail->SetFrom('test@testni54.com', "Contacto de ". $_POST["nombre"]." ".$_POST["apellido"]);
+		$mail->AddReplyTo($_POST["email"], $_POST["nombre"]." ".$_POST["apellido"]);
+		$mail->Subject = 'Contacto desde la web de Biogenesis Bago';
+		$mail->AltBody = 'Para ver este mensaje, utilice un cliente web con capacidad de renderear html.';
+		$mensaje="";
+		foreach($_POST as $key=>$value){
+			$mensaje.="<strong>".$key.":</strong> ".$value."<br>";
+		}
+		$mail->MsgHTML($mensaje);
+		$mail->AddAddress('fran@ni54.com', 'Fran');
+		$mail->Send();
+		echo "enviado";
+
+		
 	}
 	
 	protected function beforeAction($event)

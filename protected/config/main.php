@@ -1,5 +1,7 @@
 <?php
 
+
+
 // uncomment the following to define a path alias
 // Yii::setPathOfAlias('local','path/to/local-folder');
 
@@ -99,7 +101,7 @@ return array(
 				  ),
 				),
 				
-				
+				'<pais>/<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
 				
 				
 				'admin/'=>array(
@@ -133,7 +135,7 @@ return array(
 					"web/get/data/home"
 				),
 				
-								
+				
 			
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
