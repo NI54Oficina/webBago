@@ -6114,3 +6114,6 @@ figure.snip1156:hover .salud-ambiental{
 
 .paises-registrados {margin:10% !important;}
 } 				  
+#infodcha div.error{color:red;position:absolute;}
+
+#enviando,#enviado,#errorEnvio{display:none;position:absolute;}
