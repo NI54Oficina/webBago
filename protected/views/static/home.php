@@ -895,7 +895,7 @@
 								<div class="botonVademecum-Vit-Min"style=""> 
 			
 									<div class="outerLine-Vit-Min"style="">
-										<p id="nom-btn">VITAMINAS Y <BR/> MINERALES</p>
+										<p id="nom-btn" style="margin-top: 38%;">VITAMINAS Y <BR/> MINERALES</p>
 									</div>
 			
 								</div>
@@ -1485,7 +1485,7 @@
 						
 						<?php include('redes-sociales-home-mobile.php');?>
 					
-					</div>
+			</div>
 
 				
 				<!-- /////////////// REDES SOCIALES  ///////////////  -->
