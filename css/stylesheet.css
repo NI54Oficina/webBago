@@ -1730,11 +1730,12 @@ font-size: 22px;
 	.buscador {
 		background-color: #E8E6E6;
 		border: none;
-		width: 235px;
+		width: 220px;
 		height: 40px;
 		margin-bottom: 15%;
 		padding-left: 4%;
 		display:inline-block;
+		float: left;
 	}
 	
 	.p-widget {
@@ -1748,6 +1749,7 @@ font-size: 22px;
 	}
 	
 	
+
 	.fundaciones{
 		color:#66CBED;
 		font-family:'arialregular';
@@ -3144,7 +3146,7 @@ color:white;
 }
 
 /** Style institucional **/
-
+/** de aca para abajo **/
 
 /*--------------------------------------------------------------------------------- CSS  INSTITUCIONAL ------------------------------------------------------*/
 
@@ -4014,7 +4016,7 @@ text-decoration:none;}
     font-weight: normal;
     font-style: normal;
 } 
-
+/** de aca para abajo 2 **/
 
 /************ ESTILOS ***********/
 #slider1 {
@@ -5256,6 +5258,7 @@ figure.snip1156:hover .salud-ambiental{
 	
 	
 }
+
 /* Portrait */
 @media only screen 
   and (min-device-width: 768px) 
@@ -5368,6 +5371,8 @@ figure.snip1156:hover .salud-ambiental{
 		margin-left: 15%;
 		padding-top: 1%;
 	}
+}
+
 
 /* Landscape */
 @media only screen 
@@ -5533,7 +5538,7 @@ figure.snip1156:hover .salud-ambiental{
     display: inherit;
     border: none;
     height: 35px;
-}
+	}
 
 	
 	#container-error{
@@ -6053,10 +6058,11 @@ figure.snip1156:hover .salud-ambiental{
 		height: 40px;
 		background-image: url(../img/lupa-01.png);
 		background-repeat: no-repeat;
-		background-position: center right;
+		background-position:  right;
 		background-size: 100% 100%;
 		display:inline-block;
 		vertical-align: top;
+		margin-left: 5px;
 }
 
 .input-group-btn{
@@ -6072,9 +6078,7 @@ figure.snip1156:hover .salud-ambiental{
  /****  NUEVAS CONFIGURACIONES Y ALINEACIONES DE DISEÑO  *******/
 
 .nombre-pais {
-	display:inline-block;
-	vertical-align: left;
-	margin-top: 3%;
+
 }
 
 .imagen-pais {
@@ -6089,13 +6093,22 @@ figure.snip1156:hover .salud-ambiental{
  					overflow:hidden; 
  				  }
 
-@media only screen and (max-width:768px) {
+.paises-registrados { margin: 30%;  
+		margin-top: 8%;
+		text-align: center;
+			}
 
-.nombre-pais { display:none !important;} 
+@media only screen and (max-width:768px) 
 
-.imagen-pais { width: 20%; 
-			   text-align: left; align}
+{
+.nombre-pais { display:none !important;
+              } 
+.imagen-pais { width: 30%; 
+			   text-align: left; }
 
+#targets-inner img { display: none; } 
 
+/* ¨.TARGET-INNER SON IMAGENES BORRADAS DE VAQUITAS PORQUE FALTA MODIFICARLES LA UBICACION*/
 
+.paises-registrados {margin:10% !important;}
 } 				  
