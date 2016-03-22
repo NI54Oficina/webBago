@@ -128,7 +128,7 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 		
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 paises-registrados" style="margin: 30%;  margin-top: 8%;" align="left">
 
-			<div style="height:50px; float: left ;width: 150px; border-bottom: 1px solid gray">
+			<div style="height:50px; float: left ;width: 150px; ">
               
               <div align="left" ><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/argentina.png" class="imagen-pais" align="left" />
 				<p class="nombre-pais">Argentina</p>
@@ -137,6 +137,7 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 
 			</div>
 
+			<p class="col-lg-7 col-md-7 col-sm-12 col-xs-12" style="border-bottom:1px solid #CCCCCC;  margin-top: 4%;"></p>
 			
 
 			<div  >
