@@ -27,13 +27,15 @@
 	<!-- TEXTO -->
 	<div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 general-texto-home-header" >
 		<h1  class="h1-home-ev bienvenidos"><?php echo Textos::model()->GetText(1); ?></h1>
-		<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo-blanco.png" alt="logo-bago"  class="logo-blanco" />
+		<img style="margin-top: 5%; margin-right: 1%"src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo-blanco.png" alt="logo-bago"  class="logo-blanco" />
 		<div  class="border-video"></div>
+
 		<div class="content-home">
 			<h1 class="h1-home-ev row" style="text-transform: uppercase;"><?php echo Textos::model()->GetText(2); ?></h1>
 			<h1 class="h1-home-ev salud-animal row" style="text-transform: uppercase;"><?php echo Textos::model()->GetText(3); ?></h1>
 		</div>
 	</div>
+	
 	</div>
 	<!-- TEXTO  PRIMERA SECCION-->
 	<div class="general-texto-home-header div-inst">
