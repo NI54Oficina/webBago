@@ -1342,15 +1342,15 @@ font-size: 22px;
 	opacity: 0;
 	overflow: hidden;
 	padding: 0 1em;
-	border-bottom:1px solid #E0E0E0;
+	border:1px solid #E0E0E0;
 	}
 	.after li{
 	height: auto;
 	opacity: 1;
-	padding: 1em 1em;
-	width: 110%;
-	margin-left: -10%;
-	padding-right: 11%;
+	padding: 0.5em 1em;
+	width: 100%;
+	margin-left: 0;
+	padding-right: 0;
 	
 	}
 	.toggleIcon {
@@ -1439,14 +1439,14 @@ font-size: 22px;
 	
 	.btn{
 		overflow: hidden;
-		background: #E0E0E0;
+		background: #F1F1F1;
 		padding-bottom: 0.5em;
 		padding-top: 0.5em;
 		width:100%;
 	}
 	.ttl{
 	color: #002E75;
-	margin: 0 0 0 2em;
+	margin: 0;
 	font-weight: bold;
 	letter-spacing: 5px;
 	padding: 1px 0 0 0;
@@ -1515,21 +1515,19 @@ font-size: 22px;
 		font-family:'arialregular';
 		font-weight:700;
 		letter-spacing:0.5px;
+		margin-left:0;
 	}
 	
 	.linea-rse-not{
 		border:1px solid #67C6DB; 
-		width:9%;
+		width:94%;
 		margin-top:0;
 	}
 	
 	.ripple:hover{
-		background:#E0DDDD;
+		background:#F7F7F7;
 	}
 	
-	.ripple:hover .linea-rse-not{
-		border:1px solid #002C6B;
-	}
 	
 	.ripple p{
 		color:#696969;
@@ -5762,22 +5760,22 @@ figure.snip1156:hover .salud-ambiental{
 	opacity: 0;
 	overflow: hidden;
 	padding: 0 1em;
-	border-bottom:1px solid #E0E0E0;
+	border:1px solid #E0E0E0;
 	}
 	.after li{
 	height: auto;
 	opacity: 1;
-	padding: 1em 1em;
-	width: 110%;
-	margin-left: -10%;
-	padding-right: 11%;
+	padding: 0.5em 1em;
+	width: 100%;
+	margin-left: 0;
+	padding-right: 0;
 	
 	}
 	.toggleIcon {
 	width: 1em;
 	height: 1em;
 	left:90%;
-	top: 1em;
+	top: 0.8em;
 	bottom: 0;
 	position: absolute;
 	color:#66CCED;
@@ -5866,11 +5864,12 @@ figure.snip1156:hover .salud-ambiental{
 	}
 	.ttl{
 	color: #002E75;
-	margin: 0 0 0 2em;
+	margin: 0;
 	font-weight: bold;
 	letter-spacing: 5px;
 	padding: 1px 0 0 0;
 	float:left;
+	font-size:15px;
 	}
 	
 	.animate{
@@ -5885,6 +5884,7 @@ figure.snip1156:hover .salud-ambiental{
     font-family: 'arialregular';
     font-weight: 700;
     letter-spacing: 0.5px;
+	margin-left:0;
 }
 
 .linea-rse-not {
