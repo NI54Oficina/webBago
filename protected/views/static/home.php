@@ -670,13 +670,6 @@
 							<img id="img-btn-mas" src="<?php echo Yii::app()->request->baseUrl; ?>/img/btn-mas.png"/>
 							<p id="texto-btn-mas"> Trabajos técnicos </p>
 							
-							<div id="img-slide">
-							
-								<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/slide-info-tec.png"/>
-								<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/slide-info-tec.png"/>
-								<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/slide-info-tec.png"/>
-							
-							</div> <!-- Termina imagen slide -->
 					
 						</div> <!-- Termina btn-mas -->
 					
@@ -1336,7 +1329,7 @@
 
 
 		<!------------------------------------------------------------------ SECCION 7: CONTACTO ------------------------------------------------------------------>
-		<section class="special" data-scrollax-parent="true" style="min-height:100vh;width:100%;text-align:center;padding-bottom:30px;"   id="back-rrhh" >
+		<section class="special" data-scrollax-parent="true" style="min-height:100vh;width:100%;text-align:center;padding-bottom:30px;background-image:url(<?php echo Yii::app()->request->baseUrl; ?>/img/fondo-contacto.png);"   id="back-rrhh" >
 			<div id="contenido" style="display:inline-block;text-align:center;">
 				
 				<!-- ////////// TITULO ////////////// -->

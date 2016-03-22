@@ -33,14 +33,14 @@
 				<!--PC-->
 				<div style="color:#8C8C8C">
 				<ul class="col-lg-12 col-md-12 col-sm-12 col-s-12" style="margin-top:3%;">
-					<li class="mision-li  col-lg-4 col-md-4 col-sm-12 col-xs-12" style="margin-bottom:2vh;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/mision-tic.png"  /><?php echo Textos::model()->GetText(390); ?></li>
-					<li class="mision-li  col-lg-4 col-md-12 col-sm-12 col-xs-12" style="margin-bottom:2vh;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/mision-tic.png"  /><?php echo Textos::model()->GetText(391); ?></li>
-					<li class="mision-li col-lg-4 col-md-12 col-sm-12 col-xs-12" style="margin-bottom:2vh;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/mision-tic.png"  /><?php echo Textos::model()->GetText(392); ?></li>
-					<li class="mision-li  col-lg-4 col-md-12 col-sm-12 col-xs-12" style="margin-bottom:2vh;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/mision-tic.png"  /><?php echo Textos::model()->GetText(393); ?></li>
-					<li class="mision-li  col-lg-4 col-md-12 col-sm-12 col-xs-12" style="margin-bottom:2vh;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/mision-tic.png"  /><?php echo Textos::model()->GetText(394); ?></li>
-					<li class="mision-li col-lg-4 col-md-12 col-sm-12 col-xs-12" style="margin-bottom:2vh;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/mision-tic.png"  /><?php echo Textos::model()->GetText(395); ?></li>
-					<li class="mision-li  col-lg-4 col-md-12 col-sm-12 col-xs-12" style="margin-bottom:2vh;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/mision-tic.png"  /><?php echo Textos::model()->GetText(396); ?></li>
-					<li class="mision-li  col-lg-4-col-md-12 col-sm-12 col-xs-12" style="margin-bottom:2vh;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/mision-tic.png"  /><?php echo Textos::model()->GetText(397); ?></li>
+					<li class="mision-li tic-mision col-lg-5 col-md-12 col-sm-12 col-xs-12" ><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/mision-tic.png"  /><?php echo Textos::model()->GetText(390); ?></li>
+					<li class="mision-li tic-mision col-lg-5 col-md-12 col-sm-12 col-xs-12" ><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/mision-tic.png"  /><?php echo Textos::model()->GetText(391); ?></li>
+					<li class="mision-li tic-mision col-lg-5 col-md-12 col-sm-12 col-xs-12" ><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/mision-tic.png"  /><?php echo Textos::model()->GetText(392); ?></li>
+					<li class="mision-li tic-mision col-lg-5 col-md-12 col-sm-12 col-xs-12" ><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/mision-tic.png"  /><?php echo Textos::model()->GetText(393); ?></li>
+					<li class="mision-li tic-mision col-lg-5 col-md-12 col-sm-12 col-xs-12" ><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/mision-tic.png"  /><?php echo Textos::model()->GetText(394); ?></li>
+					<li class="mision-li tic-mision col-lg-5 col-md-12 col-sm-12 col-xs-12" ><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/mision-tic.png"  /><?php echo Textos::model()->GetText(395); ?></li>
+					<li class="mision-li tic-mision col-lg-5 col-md-12 col-sm-12 col-xs-12" ><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/mision-tic.png"  /><?php echo Textos::model()->GetText(396); ?></li>
+					<li class="mision-li tic-mision col-lg-5 col-md-12 col-sm-12 col-xs-12" ><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/mision-tic.png"  /><?php echo Textos::model()->GetText(397); ?></li>
 				</ul>
 				</div>
 

@@ -490,7 +490,6 @@ font-size: 22px;
 	}
 	
 	.mision-li{
-		display:inline-block;
 		font-size:15px;
 	}
 	
@@ -1152,7 +1151,6 @@ font-size: 22px;
 	}
 	
 	.mision-li {
-		display: inline-block;
 		font-size: 12px;
 	}
 	
@@ -2321,7 +2319,6 @@ font-size: 22px;
 	
 	
 	.mision-li{
-		display:inline-block;
 		font-size:13px;	
 	}
 	
@@ -2512,6 +2509,7 @@ p{
 .ico-ubi{
 	padding:1%;
 	width:4%;
+	vertical-align: text-bottom;
 }
 
 
@@ -6131,4 +6129,12 @@ figure.snip1156:hover .salud-ambiental{
 .btn-mapa:active{
 	outline:none;
 	border:none;
+}
+
+.tic-mision{
+	margin-bottom:25px;
+}
+
+.tic-mision img{
+    padding-right: 7px;
 }
