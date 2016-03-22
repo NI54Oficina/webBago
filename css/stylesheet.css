@@ -3144,7 +3144,7 @@ color:white;
 }
 
 /** Style institucional **/
-
+/** de aca para abajo **/
 
 /*--------------------------------------------------------------------------------- CSS  INSTITUCIONAL ------------------------------------------------------*/
 
@@ -4014,7 +4014,7 @@ text-decoration:none;}
     font-weight: normal;
     font-style: normal;
 } 
-
+/** de aca para abajo 2 **/
 
 /************ ESTILOS ***********/
 #slider1 {
@@ -5256,6 +5256,7 @@ figure.snip1156:hover .salud-ambiental{
 	
 	
 }
+
 /* Portrait */
 @media only screen 
   and (min-device-width: 768px) 
@@ -5368,6 +5369,8 @@ figure.snip1156:hover .salud-ambiental{
 		margin-left: 15%;
 		padding-top: 1%;
 	}
+}
+
 
 /* Landscape */
 @media only screen 
@@ -5533,7 +5536,7 @@ figure.snip1156:hover .salud-ambiental{
     display: inherit;
     border: none;
     height: 35px;
-}
+	}
 
 	
 	#container-error{
@@ -6096,13 +6099,18 @@ figure.snip1156:hover .salud-ambiental{
 
 {
 
-.nombre-pais { display:none !important;} 
 
+.nombre-pais { display:none !important;
+              } 
 .imagen-pais { width: 30%; 
-			   text-align: left; align}
+			   text-align: left; }
 
-.targets-inner img { display: none; }
+.targets-inner img { display: none; } 
+
+/* ¨.TARGET-INNER SON IMAGENES BORRADAS DE VAQUITAS PORQUE FALTA MODIFICARLES LA UBICACION*/
 
 .test {margin: 0px;}
 
+
+  
 } 				  
