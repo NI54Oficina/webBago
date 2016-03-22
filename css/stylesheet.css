@@ -177,11 +177,12 @@ font-size: 22px;
 }
 
 .border-video{
-    width: 9%;
+	width: 9%;
     border: 1px solid white;
-    margin-left: 46vw;
-    margin-top: 1%;
-    margin-bottom: 6%;
+    margin: auto;
+    margin-top: 35px;
+    margin-bottom: 50px;
+    text-align: center;
 }
 
 .logo-blanco{
@@ -676,7 +677,7 @@ font-size: 22px;
 	}
 	
 	.tr-widget:hover .icono-mision{
-		background-image:url(../img/icono-mision-act.png);
+		background-image:url(../img/icono-mision-act-01.png);
 		background-repeat:no-repeat;
 		height:50px;
 		-webkit-transition: all 0.3s ease;
