@@ -177,7 +177,7 @@
             
 			</div> <!-- Termina mapa-total -->
         
-				<ul id="ul-filiales-paises" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<ul id="ul-filiales-paises" class="col-sm-12 col-xs-12">
 					<li class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a href="javascript:void(0);" id="mex">MÉXICO</li></a>
 					<li class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a href="javascript:void(0);" id="centroam">CENTRO AMÉRICA</li></a>
 					<li class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a href="javascript:void(0);" id="br">BRASIL</li></a>
