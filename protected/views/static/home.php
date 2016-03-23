@@ -444,10 +444,10 @@
         
 		
 					<!-- ///////////////// TRABAJOS TÉCNICOS /////////////////  -->
-					<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12" id="noticias-trabajos">
+					<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12" id="noticias-trabajos">
             	
 						<!-- ***** NOTICIA ***** -->
-						<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12" id="texto">
+						<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12" id="texto">
                 
 							<h4 id="fecha-info-tec"> 2015 </h4>
                     
@@ -464,7 +464,7 @@
 				 
 				 
 						<!-- ***** NOTICIA ***** -->
-						<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12" id="texto">
+						<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12" id="texto">
                 
 							<h4 id="fecha-info-tec"> 2015 </h4>
                     
@@ -481,7 +481,7 @@
 				 
 				 
 						<!-- ***** NOTICIA ***** -->			 
-						<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12" id="texto">
+						<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12" id="texto">
                 
 							<h4 id="fecha-info-tec"> 2015 </h4>
                     
@@ -663,7 +663,7 @@
 			
 			
 					<!-------- SECCION MÁS DE TRABAJOS TÉCNICOS -->
-					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" id="seccion-mas">
+					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" id="seccion-mas">
 					
 						<div id="btn-mas" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 						

@@ -73,14 +73,12 @@
 
 .cd-timeline-block {
 	position: relative;
-	margin: 2em 0;
 	transition: 0.3s all ease-in-out;
 }
 
 
 .cd-timeline-block:hover {
 	position: relative;
-	margin: 2em 0;
 	transition: all 0.5s ease;
 } 
 
@@ -104,7 +102,7 @@
 
 @media only screen and (min-width: 1170px) {
   .cd-timeline-block {
-	margin: 4em 0;
+	margin:2em 0;
   }
   
   
@@ -497,7 +495,7 @@
 }
 
 .cd-timeline-block .p-cd2{
-
+	font-size:11px;
 	transition: 0.3s all ease-in-out;
 }
 .img-cd{
@@ -506,6 +504,7 @@
 }
 
 .cd-timeline-block.p-cd{
+	font-size:11px;
 	transition: 0.3s all ease-in-out;
 }
 
@@ -533,13 +532,11 @@
 .cd-timeline-block:hover .p-cd2{
 	color:#66CCED;
 	transition: 0.3s all ease-in-out;
-    margin-top: 20px;
 }
 
 .cd-timeline-block:hover .p-cd{
 	color:white;
 	transition: 0.3s all ease-in-out;
-    margin-top: 20px;
 }
 
 

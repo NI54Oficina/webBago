@@ -3037,7 +3037,7 @@ color:white;
 
 #texto{
 	font-family: 'arialregular';
-    margin-right: 5%;
+    margin-right: 0;
     
     text-align: left;
 }
@@ -3108,7 +3108,7 @@ color:white;
 	margin-left: 3%;
     margin-top: 0;
     margin-bottom: 1%;
-    width: 61%;
+    width: 72%;
 }
 
 . #border-menu{
@@ -5421,6 +5421,10 @@ figure.snip1156:hover .salud-ambiental{
 		margin-left: 15%;
 		padding-top: 1%;
 	}
+	
+	 #evolucion-logo{
+		margin-left: 235px;
+	}
 }
 
 
@@ -5564,6 +5568,9 @@ figure.snip1156:hover .salud-ambiental{
 		font-family: 'arialregular';	
 	}
 	
+	 #evolucion-logo{
+		margin-left: 80px;
+	}
 }
 
 /* Landscape */
@@ -5634,6 +5641,10 @@ figure.snip1156:hover .salud-ambiental{
 	
 	.ul-nav li a {
 		font-size:12px;
+	}
+	
+	 #evolucion-logo{
+		margin-left: 80px;
 	}
 	
 }
@@ -5986,12 +5997,20 @@ figure.snip1156:hover .salud-ambiental{
 	.ul-nav li a {
 		font-size:12px;
 	}
+	
+	 #evolucion-logo{
+		margin-left: 18px;
+	}
 }
 
 @media screen 
   and (min-device-width: 1200px) 
   and (max-device-width: 2100px) 
   and (-webkit-min-device-pixel-ratio: 1) { 
+  
+  #evolucion-logo{
+	margin-left: 145px;
+  }
   
   	#ul-filiales-paises{
 		display:none;
