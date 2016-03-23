@@ -3266,7 +3266,7 @@ color:white;
 	text-align:center;
 	padding-top:30px;
 	padding-bottom:30px;
-	height:400px;overflow:hidden;
+	height:auto;overflow:hidden;
 }
 .item-institucional img{
 	display:inline-block;

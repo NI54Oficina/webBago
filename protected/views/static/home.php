@@ -19,28 +19,28 @@
 					<!-- CUATRO ICONOS -->
 						
 								<!-- 	QUIÉNES SOMOS -->
-								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional">
+								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional" hid="1">
 									<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home-quienes.png" />
 									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/quienes-somos"><h1 class="h1-1-home"><?php echo Textos::model()->GetText(6); ?></h1></a>
 									<p class="p-in-h"><?php echo Textos::model()->GetText(7); ?></p>
 								</div>
 								
 								<!--	MISIÓN, VISIÓN Y VALORES -->
-								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional" >
+								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional" hid="1">
 									<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home-mision.png" />		
 									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/mision-vision"><h1 class="h1-1-home mis"><?php echo Textos::model()->GetText(8); ?></h1></a>			
 									<p class="p-in-h"><?php echo Textos::model()->GetText(9); ?></p>									
 								</div>
 								
 								<!--	LUCHA CONTRA AFTOSA -->
-								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional">
+								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional" hid="1">
 									<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home-aftosa.png" />
 									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/lucha-contra-aftosa"><h1 class="h1-1-home mis"><?php echo Textos::model()->GetText(10); ?></h1></a>
 									<p class="p-in-h"> <?php echo Textos::model()->GetText(11); ?></p>											
 								</div>
 								
 								<!--	TRAYECTORIA - HITOS -->
-								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional">
+								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional" hid="1">
 									<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home-trayectoria.png" />
 									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/trayectoria-hitos"><h1 class="h1-1-home tray"><?php echo Textos::model()->GetText(12); ?></h1></a>		
 									<p class="p-in-h"><?php echo Textos::model()->GetText(13); ?></p>		
@@ -51,28 +51,28 @@
 						
 						
 								<!--	NUESTRAS PLANTAS -->
-								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional">
+								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional" hid="1">
 									<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home-plantas.png" />
 									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/nuestras-plantas"><h1 class="h1-1-home"><?php echo Textos::model()->GetText(14); ?></h1></a>
 									<p class="p-in-h"><?php echo Textos::model()->GetText(15); ?></p>
 								</div>
 								
 								<!--	RSE - SUSTENTABILIDAD -->
-								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional" >
+								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional" hid="1">
 									<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home-rse.png" />		
 									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/rse"><h1 class="h1-1-home mis"><?php echo Textos::model()->GetText(16); ?></h1></a>			
 									<p class="p-in-h"><?php echo Textos::model()->GetText(17); ?></p>									
 								</div>
 								
 								<!-- 	INFO PARA PROVEEDORES -->
-								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional" >
+								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional" hid="1">
 									<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home-proveedores.png" />		
 									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/proveedores"><h1 class="h1-1-home mis"><?php echo Textos::model()->GetText(18); ?></h1></a>			
 									<p class="p-in-h"><?php echo Textos::model()->GetText(19); ?></p>									
 								</div>
 								
 								<!--	PRENSA -->
-								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional">
+								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional" hid="1">
 									<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home-prensa.png" />		
 									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/prensa"><h1 class="h1-1-home mis pren"><?php echo Textos::model()->GetText(20); ?></h1></a>			
 									<p class="p-in-h"><?php echo Textos::model()->GetText(21); ?></p>									

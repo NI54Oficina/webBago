@@ -182,8 +182,8 @@ $(function(){
 		var hidHeight=0;
 		ResetHeight();
 		$("[hid=1]").each(function(){
-			if($(this).height()>hidHeight){
-				hidHeight= $(this).height();
+			if($(this).innerHeight()>hidHeight){
+				hidHeight= $(this).innerHeight();
 			}
 			
 		});
