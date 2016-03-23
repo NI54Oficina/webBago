@@ -66,7 +66,7 @@
 				<p style="line-height: 20px;margin-bottom: 20px;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-bullet.png"  style="display:inline-block;vertical-align: text-top;" /><?php echo Textos::model()->GetText(44); ?></p>
 				<p style="line-height: 20px;margin-bottom: 20px;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-bullet.png"  style="display:inline-block;vertical-align: text-top;" />
 
-				<?php echo Textos::model()->GetText(45); ?> 
+					<?php echo Textos::model()->GetText(45); ?> 
 				</p>
 
 				</div>
