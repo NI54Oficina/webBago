@@ -57,7 +57,7 @@ return array(
 			
 				'<pais>/<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				
-				
+				"gii/<data1>/<data2>"=>array("gii/<data1>/<data2>"),
 				
 				
 				
@@ -101,9 +101,9 @@ return array(
 				
 				"<pais>/vademecum/<id>"=>array("web/get/data/vademecum/id/<id>"),
 				"<pais>/productos/<id>"=>array("web/get/data/productos/id/<id>"),
+				"<pais>/gii/default/login"=>array("gii/default/login"),
 				
 				'<pais>/<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
-				
 				
 				'admin/'=>array(
 				  'site/admin',

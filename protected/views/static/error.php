@@ -1,8 +1,18 @@
+<?php
+if($code=500){
+	$code=404;
+}
+$auxError= ErrorMsg::model()->findByAttributes(array("codigo"=>$code,"idoma"=>$_SESSION["lng"]));
+if($auxError){
+	$message= $auxError->texto;
+}
+
+?>
 <div id="container-error" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
 	<div id="container-type-error" class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 		
-		<div id="container-error-title"><div class="point-error"></div><h1>ERROR</h1><div class="point-error"></div></div>
+		<div id="container-error-title"><div class="point-error"></div><h1>ERROR <?php echo $code; ?></h1><div class="point-error"></div></div>
 
 		<div id="error-number">
 	
@@ -16,13 +26,13 @@
 	
 	<div id="container-text-error" class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 	
-		<h2>url que estaba buscando</h2>
+		<h2><?php echo 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'];?></h2>
 		
 		<div id="error-border"></div>
 		
 		<div id="error-description">
 		
-			<p>Descripción del error</p>
+			<p><?php echo CHtml::encode($message); ?></p>
 		
 		</div>
 	
