@@ -33,7 +33,7 @@
 			<?php echo Textos::model()->GetText(32); ?>
 			</p>
 				
-			<p style="margin-top:3%;"><?php echo Textos::model()->GetText(350); ?>
+			<p style="margin-top:1%;"><?php echo Textos::model()->GetText(350); ?>
 			</p>
 			
 		</div>
@@ -45,11 +45,11 @@
            <h2 class="h2-aftosa"><?php echo Textos::model()->GetText(38); ?></h2>
            
 		   <!-- CONTENIDO -->
-           <p style="margin-top:3%;"><?php echo Textos::model()->GetText(39); ?></p>
+           <p style="margin-top:1%;"><?php echo Textos::model()->GetText(39); ?></p>
            
 		   <!-- CUADRO -->
 
-           <div class="cuadro" style="; padding-left:5px; line-height:7px;margin-top: 5%; padding-bottom: 5%;">
+           <div class="cuadro" style="; padding-left:3px; line-height:7px;margin-top: 5%; padding-bottom: 3%;">
            		
 				<!-- TITULO CUADRO -->
 
@@ -82,7 +82,7 @@
            <h2 class="h2-aftosa">
            Un gran objetivo, la Frontera Productiva </h2>
            
-           <p style="margin-top:3%;">
+           <p style="margin-top:1%;">
            En poco más de 30 años habrá un 35 % más de personas sobre la tierra y la producción de carne deberá aumentar un 70 %, según estimaciones de la FAO, la Organización de las Naciones Unidas para la Alimentación y la Agricultura. Los países 	de América Latina cuentan recursos naturales, profesionales y tecnologías suficientes para abastecer la gran demanda mundial de proteína animal, aunque para lograrlo los productores deberán intensificar sus sistemas y elevar los índices de  producción en carne y leche.
 		   <br/>
 			En Biogénesis Bagó creemos que es posible. Por eso pusimos en marcha nuestro programa <strong>“Fronteras Productivas”</strong>, una herramienta de trabajo que,  con nuestro asesoramiento y la asistencia de un médico veterinario,  guía en la incorporación de mejoras claves en sanidad, nutrición, genética y manejo,  para que los establecimientos puedan expresar su mayor potencial, sin necesidad de hacer grandes inversiones.  <br />

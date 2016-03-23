@@ -42,8 +42,8 @@
 					<p><strong><?php echo Textos::model()->GetText(77); ?></strong></p>
 					<p><strong><?php echo Textos::model()->GetText(78); ?></strong></p>
 				
-					<h2 style="margin-top:10%;color:#00255B;"><?php echo Textos::model()->GetText(79); ?> </h2>
-					<h3 class="h3-plantas"><?php echo Textos::model()->GetText(80); ?></h3>
+					<h2 style="margin-top:10%;color:#00255B; font-size: 20px;"><?php echo Textos::model()->GetText(79); ?> </h2>
+					<h3  style="color:#00255B" class="h3-plantas"><?php echo Textos::model()->GetText(80); ?></h3>
 					<p><?php echo Textos::model()->GetText(81); ?> <br />
 					<?php echo Textos::model()->GetText(82); ?>
 					</p>
@@ -66,9 +66,9 @@
 					</ul>
 
 					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-						<h2 style="margin-top:10%;color:#00255B"><?php echo Textos::model()->GetText(86); ?></h2>
+						<h2 style="margin-top:10%;color:#00255B; font-size: 20px;"><?php echo Textos::model()->GetText(86); ?></h2>
 				
-							<h3 class="h3-plantas"><?php echo Textos::model()->GetText(87); ?></h3>
+							<h3 style="color:#00255B" class="h3-plantas"><?php echo Textos::model()->GetText(87); ?></h3>
 				
 								<p><?php echo Textos::model()->GetText(88); ?></p>
 				
@@ -77,8 +77,8 @@
 							<ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-top:3%;">
 					
 								<!--<li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 li-plantas"><img src="img/icono-bullet.png"  class="icono-bullet"/>c</li>-->
-					
-								<li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 li-plantas" style="margin-top:5%;"><img class="icono-bullet" src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-bullet.png"  /><?php echo Textos::model()->GetText(196); ?>91</li>
+								<li class="col-lg-12 col-md-12 col-sm-12 col-xs-12  li-plantas" style="margin-top:5%;"><img class="icono-bullet" src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-bullet.png"  /><?php echo Textos::model()->GetText(90); ?></li>
+                                <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12  li-plantas" style="margin-top:5%;"><img class="icono-bullet" src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-bullet.png"  /><?php echo Textos::model()->GetText(91); ?></li>
 					
 								<li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 li-plantas" style="margin-top:5%;"><img class="icono-bullet" src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-bullet.png"  /><?php echo Textos::model()->GetText(92); ?></li>
 					
@@ -93,20 +93,20 @@
 					</div>
                     
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-						<h2 style="margin-top:10%;color:#00255B;"><?php echo Textos::model()->GetText(196); ?></h2>
+						
+				            <h2 style="margin-top:10%;color:#00255B; font-size: 20px;"><?php echo Textos::model()->GetText(96); ?> </h2>
+							<h3 style="color:#00255B" class="h3-plantas"><?php echo Textos::model()->GetText(97); ?> </h3>
 				
-							<h3 class="h3-plantas"><?php echo Textos::model()->GetText(95); ?> </h3>
-				
-								<p><?php echo Textos::model()->GetText(98); ?><BR />
+								<p style="font-size: 15px;"><?php echo Textos::model()->GetText(98); ?><BR />
 									<?php echo Textos::model()->GetText(99); ?> 
 								</p>
                  
 					</div>
                     
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-						<h2 style="margin-top:10%;color:#00255B;"><?php echo Textos::model()->GetText(100); ?></h2>
+						<h2 style="margin-top:10%;color:#00255B; font-size: 20px;"><?php echo Textos::model()->GetText(100); ?></h2>
 				
-							<h3 class="h3-plantas"><?php echo Textos::model()->GetText(101); ?></h3>
+							<h3 style="color:#00255B" class="h3-plantas"><?php echo Textos::model()->GetText(101); ?></h3>
 				
 								<p><?php echo Textos::model()->GetText(102); ?>
 								<?php echo Textos::model()->GetText(103); ?>

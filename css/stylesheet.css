@@ -132,12 +132,13 @@ font-size: 22px;
 .h3-plantas{
 	font-size: 17px;
     margin-left: 0%;
+    color: #8C8C8C;
 }
 
 .li-plantas{
 	font-family:'arialregular';
 	color:#8C8C8C;
-	font-size:15.5px;
+	font-size:15px;
 	line-height:30px;
 }
 
@@ -624,6 +625,7 @@ font-size: 22px;
 	.icono-bullet{
 		width:auto;
 		float: left;
+		padding-top: 3px;
 	}
 	
 	/*************************** VADEMECUM*************************/
@@ -5128,6 +5130,7 @@ figure.snip1156:hover .salud-ambiental{
 		display:inline-block;
 		font-size:20px;
 		font-family:'arialregular';
+		margin-top: 40px;
 	}
 
 .h2-aftosa-celeste	{
