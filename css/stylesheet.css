@@ -637,7 +637,7 @@ font-size: 22px;
 	.icono-bullet{
 		width:auto;
 		float: left;
-		padding-top: 3px;
+		padding-top: 5px;
 	}
 	
 	/*************************** VADEMECUM*************************/
@@ -645,7 +645,6 @@ font-size: 22px;
 	.vademecum{
 		color:#7F7F7F;
 		text-align:center;
-		
 		margin: 0;
 		
 	}
@@ -676,7 +675,7 @@ font-size: 22px;
 		-moz-transition: all 0.3s ease;
 		-o-transition: all 0.3s ease;
 		-ms-transition: all 0.3s ease;
-			transition: all 0.3s ease;
+		transition: all 0.3s ease;
 	}
 	
 	.icono-mision{
@@ -687,7 +686,7 @@ font-size: 22px;
 		-moz-transition: all 0.3s ease;
 		-o-transition: all 0.3s ease;
 		-ms-transition: all 0.3s ease;
-			transition: all 0.3s ease;
+		transition: all 0.3s ease;
 	}
 	
 	.tr-widget:hover .icono-mision{
@@ -698,7 +697,7 @@ font-size: 22px;
 		-moz-transition: all 0.3s ease;
 		-o-transition: all 0.3s ease;
 		-ms-transition: all 0.3s ease;
-			transition: all 0.3s ease;
+		transition: all 0.3s ease;
 	}
 	
 	
@@ -710,7 +709,7 @@ font-size: 22px;
 		-moz-transition: all 0.3s ease;
 		-o-transition: all 0.3s ease;
 		-ms-transition: all 0.3s ease;
-			transition: all 0.3s ease;
+		transition: all 0.3s ease;
 	}
 	
 	.tr-widget:hover .icono-trayectoria{
@@ -721,7 +720,7 @@ font-size: 22px;
 		-moz-transition: all 0.3s ease;
 		-o-transition: all 0.3s ease;
 		-ms-transition: all 0.3s ease;
-				transition: all 0.3s ease;
+		transition: all 0.3s ease;
 	}
 	
 	
@@ -733,7 +732,7 @@ font-size: 22px;
 		-moz-transition: all 0.3s ease;
 		-o-transition: all 0.3s ease;
 		-ms-transition: all 0.3s ease;
-			transition: all 0.3s ease;
+		transition: all 0.3s ease;
 	}
 	
 	.tr-widget:hover .icono-aftosa{
@@ -744,7 +743,7 @@ font-size: 22px;
 		-moz-transition: all 0.3s ease;
 		-o-transition: all 0.3s ease;
 		-ms-transition: all 0.3s ease;
-			transition: all 0.3s ease;
+		transition: all 0.3s ease;
 	}
 	
 	
@@ -757,7 +756,7 @@ font-size: 22px;
 		-moz-transition: all 0.3s ease;
 		-o-transition: all 0.3s ease;
 		-ms-transition: all 0.3s ease;
-			transition: all 0.3s ease;
+		transition: all 0.3s ease;
 	}
 	
 	.tr-widget:hover .icono-plantas{
@@ -768,7 +767,7 @@ font-size: 22px;
 		-moz-transition: all 0.3s ease;
 		-o-transition: all 0.3s ease;
 		-ms-transition: all 0.3s ease;
-			transition: all 0.3s ease;
+		transition: all 0.3s ease;
 	}
 	
 	
@@ -781,7 +780,7 @@ font-size: 22px;
 		-moz-transition: all 0.3s ease;
 		-o-transition: all 0.3s ease;
 		-ms-transition: all 0.3s ease;
-			transition: all 0.3s ease;
+		transition: all 0.3s ease;
 	}
 	
 	.tr-widget:hover .icono-rse{
@@ -792,7 +791,7 @@ font-size: 22px;
 		-moz-transition: all 0.3s ease;
 		-o-transition: all 0.3s ease;
 		-ms-transition: all 0.3s ease;
-			transition: all 0.3s ease;
+		transition: all 0.3s ease;
 	}
 	
 	
@@ -805,7 +804,7 @@ font-size: 22px;
 		-moz-transition: all 0.3s ease;
 		-o-transition: all 0.3s ease;
 		-ms-transition: all 0.3s ease;
-			transition: all 0.3s ease;
+		transition: all 0.3s ease;
 	}
 	
 	.tr-widget:hover .icono-proveedores{
@@ -816,7 +815,7 @@ font-size: 22px;
 		-moz-transition: all 0.3s ease;
 		-o-transition: all 0.3s ease;
 		-ms-transition: all 0.3s ease;
-			transition: all 0.3s ease;
+		transition: all 0.3s ease;
 	}
 	
 	
@@ -829,7 +828,7 @@ font-size: 22px;
 		-moz-transition: all 0.3s ease;
 		-o-transition: all 0.3s ease;
 		-ms-transition: all 0.3s ease;
-			transition: all 0.3s ease;
+		transition: all 0.3s ease;
 	}
 	
 	.tr-widget:hover .icono-prensa{
@@ -840,7 +839,7 @@ font-size: 22px;
 		-moz-transition: all 0.3s ease;
 		-o-transition: all 0.3s ease;
 		-ms-transition: all 0.3s ease;
-			transition: all 0.3s ease;
+		transition: all 0.3s ease;
 	}
 	
 	figure.snip1156:hover .sal{
