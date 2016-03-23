@@ -637,7 +637,7 @@ font-size: 22px;
 	.icono-bullet{
 		width:auto;
 		float: left;
-		padding-top: 3px;
+		padding-top: 5px;
 	}
 	
 	/*************************** VADEMECUM*************************/
@@ -645,7 +645,6 @@ font-size: 22px;
 	.vademecum{
 		color:#7F7F7F;
 		text-align:center;
-		
 		margin: 0;
 		
 	}
@@ -676,7 +675,7 @@ font-size: 22px;
 		-moz-transition: all 0.3s ease;
 		-o-transition: all 0.3s ease;
 		-ms-transition: all 0.3s ease;
-			transition: all 0.3s ease;
+		transition: all 0.3s ease;
 	}
 	
 	.icono-mision{
@@ -687,7 +686,7 @@ font-size: 22px;
 		-moz-transition: all 0.3s ease;
 		-o-transition: all 0.3s ease;
 		-ms-transition: all 0.3s ease;
-			transition: all 0.3s ease;
+		transition: all 0.3s ease;
 	}
 	
 	.tr-widget:hover .icono-mision{
@@ -698,7 +697,7 @@ font-size: 22px;
 		-moz-transition: all 0.3s ease;
 		-o-transition: all 0.3s ease;
 		-ms-transition: all 0.3s ease;
-			transition: all 0.3s ease;
+		transition: all 0.3s ease;
 	}
 	
 	
@@ -710,7 +709,7 @@ font-size: 22px;
 		-moz-transition: all 0.3s ease;
 		-o-transition: all 0.3s ease;
 		-ms-transition: all 0.3s ease;
-			transition: all 0.3s ease;
+		transition: all 0.3s ease;
 	}
 	
 	.tr-widget:hover .icono-trayectoria{
@@ -721,7 +720,7 @@ font-size: 22px;
 		-moz-transition: all 0.3s ease;
 		-o-transition: all 0.3s ease;
 		-ms-transition: all 0.3s ease;
-				transition: all 0.3s ease;
+		transition: all 0.3s ease;
 	}
 	
 	
@@ -733,7 +732,7 @@ font-size: 22px;
 		-moz-transition: all 0.3s ease;
 		-o-transition: all 0.3s ease;
 		-ms-transition: all 0.3s ease;
-			transition: all 0.3s ease;
+		transition: all 0.3s ease;
 	}
 	
 	.tr-widget:hover .icono-aftosa{
@@ -744,7 +743,7 @@ font-size: 22px;
 		-moz-transition: all 0.3s ease;
 		-o-transition: all 0.3s ease;
 		-ms-transition: all 0.3s ease;
-			transition: all 0.3s ease;
+		transition: all 0.3s ease;
 	}
 	
 	
@@ -757,7 +756,7 @@ font-size: 22px;
 		-moz-transition: all 0.3s ease;
 		-o-transition: all 0.3s ease;
 		-ms-transition: all 0.3s ease;
-			transition: all 0.3s ease;
+		transition: all 0.3s ease;
 	}
 	
 	.tr-widget:hover .icono-plantas{
@@ -768,7 +767,7 @@ font-size: 22px;
 		-moz-transition: all 0.3s ease;
 		-o-transition: all 0.3s ease;
 		-ms-transition: all 0.3s ease;
-			transition: all 0.3s ease;
+		transition: all 0.3s ease;
 	}
 	
 	
@@ -781,7 +780,7 @@ font-size: 22px;
 		-moz-transition: all 0.3s ease;
 		-o-transition: all 0.3s ease;
 		-ms-transition: all 0.3s ease;
-			transition: all 0.3s ease;
+		transition: all 0.3s ease;
 	}
 	
 	.tr-widget:hover .icono-rse{
@@ -792,7 +791,7 @@ font-size: 22px;
 		-moz-transition: all 0.3s ease;
 		-o-transition: all 0.3s ease;
 		-ms-transition: all 0.3s ease;
-			transition: all 0.3s ease;
+		transition: all 0.3s ease;
 	}
 	
 	
@@ -805,7 +804,7 @@ font-size: 22px;
 		-moz-transition: all 0.3s ease;
 		-o-transition: all 0.3s ease;
 		-ms-transition: all 0.3s ease;
-			transition: all 0.3s ease;
+		transition: all 0.3s ease;
 	}
 	
 	.tr-widget:hover .icono-proveedores{
@@ -816,7 +815,7 @@ font-size: 22px;
 		-moz-transition: all 0.3s ease;
 		-o-transition: all 0.3s ease;
 		-ms-transition: all 0.3s ease;
-			transition: all 0.3s ease;
+		transition: all 0.3s ease;
 	}
 	
 	
@@ -829,7 +828,7 @@ font-size: 22px;
 		-moz-transition: all 0.3s ease;
 		-o-transition: all 0.3s ease;
 		-ms-transition: all 0.3s ease;
-			transition: all 0.3s ease;
+		transition: all 0.3s ease;
 	}
 	
 	.tr-widget:hover .icono-prensa{
@@ -840,7 +839,7 @@ font-size: 22px;
 		-moz-transition: all 0.3s ease;
 		-o-transition: all 0.3s ease;
 		-ms-transition: all 0.3s ease;
-			transition: all 0.3s ease;
+		transition: all 0.3s ease;
 	}
 	
 	figure.snip1156:hover .sal{
@@ -1087,12 +1086,8 @@ font-size: 22px;
 	
 	#table{
 		border:none;
-		
 		font-size:13.5px;
-	
-		height:400px;
-		
-		
+		height:400px;	
 	}
 	
 	#table td{
@@ -1106,7 +1101,6 @@ font-size: 22px;
 	
 	/*AFTOSA*/
 	.header-layout-aftosa{
-		/*background-image:url('../img/aftosa-header.png');*/
 		background-repeat: no-repeat;
 		width:100%;
 		
@@ -1222,7 +1216,6 @@ font-size: 22px;
 	************** CONTRA AFTOSA ***************
 	***************************************************/
 	.div-texto-aftosa{
-
 		float:left;
 		color:#656565;
 		padding-left:1%;
@@ -1269,8 +1262,6 @@ font-size: 22px;
 		color:#8C8C8C;
 		margin: 0;
 	}
-	
-	
 	
 	.div-años-aftosa-1{
 		margin-top:5%; 
@@ -1341,88 +1332,97 @@ font-size: 22px;
 	
 	
 	.btn{
-	position: relative;
+		position: relative;
 	}
 	
 	
 	.animate{
-	position: relative;
-	margin: 0;
+		position: relative;
+		margin: 0;
 	}
-	.animate li{
-	-webkit-transition: all 0.3s ease-out;
-	transition: all 0.3s ease-out;
-	height: 0;
-	opacity: 0;
-	overflow: hidden;
-	padding: 0 1em;
-	border:1px solid #E0E0E0;
-	}
-	.after li{
-	height: auto;
-	opacity: 1;
-	padding: 0.5em 1em;
-	width: 100%;
-	margin-left: 0;
-	padding-right: 0;
 	
+	.animate li{
+		-webkit-transition: all 0.3s ease-out;
+		transition: all 0.3s ease-out;
+		height: 0;
+		opacity: 0;
+		overflow: hidden;
+		padding: 0 1em;
+		border:1px solid #E0E0E0;
 	}
+	
+	.after li{
+		height: auto;
+		opacity: 1;
+		padding: 0.5em 1em;
+		width: 100%;
+		margin-left: 0;
+		padding-right: 0;
+	}
+	
 	.toggleIcon {
-	width: 1em;
-	height: 1em;
-	left:90%;
-	top: 1em;
-	bottom: 0;
-	position: absolute;
-	color:#66CCED;
+		width: 1em;
+		height: 1em;
+		left:90%;
+		top: 1em;
+		bottom: 0;
+		position: absolute;
+		color:#66CCED;
 	}
+	
 	.toggleIcon::before, .toggleIcon::after {
-	content: '';
-	position: absolute;
-	background: #66CCED;
-	-webkit-transition: 0.3s cubic-bezier(0.45, 0.01, 0.27, 1.4);
-	transition: 0.3s cubic-bezier(0.45, 0.01, 0.27, 1.4);
+		content: '';
+		position: absolute;
+		background: #66CCED;
+		-webkit-transition: 0.3s cubic-bezier(0.45, 0.01, 0.27, 1.4);
+		transition: 0.3s cubic-bezier(0.45, 0.01, 0.27, 1.4);
 	}
+	
+	
 	.toggleIcon::before {
-	width: 2px;
-	height: 100%;
-	left: calc(101% - 2px);
-	margin-left: 1px;
+		width: 2px;
+		height: 100%;
+		left: calc(101% - 2px);
+		margin-left: 1px;
 	}
+	
 	.toggleIcon::after {
-	width: 100%;
-	height: 2px;
-	top: calc(50% - 1px);
+		width: 100%;
+		height: 2px;
+		top: calc(50% - 1px);
 	}
+	
 	.after .toggleIcon::before {
-	opacity: 0;
-	-webkit-transform: rotate(45deg);
+		opacity: 0;
+		-webkit-transform: rotate(45deg);
 		-ms-transform: rotate(45deg);
-			transform: rotate(45deg);
-	text-shadow: 0 0 3px #333;
+		transform: rotate(45deg);
+		text-shadow: 0 0 3px #333;
 	}
+	
 	.after .toggleIcon::after {
-	-webkit-transform: none;
+		-webkit-transform: none;
 		-ms-transform: none;
-			transform: none;
-	-webkit-transform: rotate(180deg);
+		transform: none;
+		-webkit-transform: rotate(180deg);
 		-ms-transform: rotate(180deg);
-			transform: rotate(180deg);
+		transform: rotate(180deg);
 	}
+	
 	/* ripple */
 	.ripple{
-	overflow: hidden;
-	position: relative;
+		overflow: hidden;
+		position: relative;
 	}
 	
 	.ripple-effect{
-	position: absolute;
-	border-radius: 50%;
-	width: 50px;
-	height: 50px;
-	background: white;
-	-webkit-animation: ripple-animation 2s;
-	animation: ripple-animation 2s;
+		position: absolute;
+		border-radius: 50%;
+		width: 50px;
+		height: 50px;
+		background: white;
+		-webkit-animation: ripple-animation 2s;
+		animation: ripple-animation 2s;
 	}
 	
 	
@@ -1458,50 +1458,44 @@ font-size: 22px;
 		padding-top: 0.5em;
 		width:100%;
 	}
+	
 	.ttl{
-	color: #002E75;
-	margin: 0;
-	font-weight: bold;
-	letter-spacing: 5px;
-	padding: 1px 0 0 0;
-	float:left;
+		color: #002E75;
+		margin: 0;
+		font-weight: bold;
+		letter-spacing: 5px;
+		padding: 1px 0 0 0;
+		float:left;
 	}
 	
 	.animate{
-	overflow: hidden;
-	width: 100%;
-	margin:2% auto;
+		overflow: hidden;
+		width: 100%;
+		margin:2% auto;
 	}
 	
-	
-	
-	#boxes{
-	
-	}
 	#boxes p{
-	text-align:center;
-	display:block;
-	color:#ccc;
+		text-align:center;
+		display:block;
+		color:#ccc;
 	}
+	
 	#boxes a.closelink{
-	text-decoration:none;
-	width:40px;
-	padding:3px;
-	font-size:14px;
-	margin-left:90%;
+		text-decoration:none;
+		width:40px;
+		padding:3px;
+		font-size:14px;
+		margin-left:90%;
 	}
-	#boxes a.closelink:hover{
-	}
+	
 	
 	.box{
-	
-	width:100%;
-	height:27%;
-	vertical-align:top;
-	background:#42AAC9;
-	display:none;
-	z-index:33333333;
-	
+		width:100%;
+		height:27%;
+		vertical-align:top;
+		background:#42AAC9;
+		display:none;
+		z-index:33333333;
 	}
 	
 	
@@ -1564,19 +1558,18 @@ font-size: 22px;
 	
 	.div-img-aft{
 	    webkit-box-shadow: inset 0px -1px 0px 15px rgba(255,255,255,1);
-    -moz-box-shadow: inset 0px -1px 0px 15px rgba(255,255,255,1);
-    box-shadow: inset 5px -1px 0px 3px rgba(255,255,255,1);
-		
+		-moz-box-shadow: inset 0px -1px 0px 15px rgba(255,255,255,1);
+		box-shadow: inset 5px -1px 0px 3px rgba(255,255,255,1);
 	}
 	
 	.p-img-vad{
 		background:#f7f8f8;
 		position:relative;
-	-webkit-transition: all 1s ease;
+		-webkit-transition: all 1s ease;
 		-moz-transition: all 1s ease;
 		-o-transition: all 1s ease;
 		-ms-transition: all 1s ease;
-			transition: all 1s ease;
+		transition: all 1s ease;
 		font-family:'arialregular';
 		font-weight:700;
 		font-size:1.3vw;
@@ -1610,100 +1603,114 @@ font-size: 22px;
 	
 	
 	figure.snip1156 {
-	color: #fff;
-	position: relative;
-	overflow: hidden;
-	color: #000000;
-	text-align: left;
+		color: #fff;
+		position: relative;
+		overflow: hidden;
+		color: #000000;
+		text-align: left;
 	}
 	
 	figure.snip1156 * {
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-	-webkit-transition: all 0.6s ease;
-	transition: all 0.6s ease;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+		-webkit-transition: all 0.6s ease;
+		transition: all 0.6s ease;
 	}
+	
 	figure.snip1156 img {
-	opacity: 1;
-	width: 100%;
-	-webkit-transition: opacity 0.35s;
-	transition: opacity 0.35s;
+		opacity: 1;
+		width: 100%;
+		-webkit-transition: opacity 0.35s;
+		transition: opacity 0.35s;
 	}
+	
 	figure.snip1156 figcaption {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
 	}
+	
 	figure.snip1156 figcaption > div {
-	height: 50%;
-	overflow: hidden;
-	width: 100%;
-	position: relative;
+		height: 50%;
+		overflow: hidden;
+		width: 100%;
+		position: relative;
 	}
+	
+	
 	figure.snip1156 h2,
 	figure.snip1156 p {
-	margin: 0;
-	opacity: 0;
-	position: absolute;
-	width: 100%;
-	left: 0;
+		margin: 0;
+		opacity: 0;
+		position: absolute;
+		width: 100%;
+		left: 0;
 	}
+	
 	figure.snip1156 h2 {
-	display: inline-block;
-	font-weight: 400;
-	text-transform: uppercase;
-	bottom: 0;
-	-webkit-transform: translate3d(0%, 150%, 0);
-	transform: translate3d(0%, 150%, 0);
-	font-family:'arialregular';
-	font-size:19px;
+		display: inline-block;
+		font-weight: 400;
+		text-transform: uppercase;
+		bottom: 0;
+		-webkit-transform: translate3d(0%, 150%, 0);
+		transform: translate3d(0%, 150%, 0);
+		font-family:'arialregular';
+		font-size:19px;
 	}
+	
 	figure.snip1156 h2 span {
-	font-weight: 400;
+		font-weight: 400;
 	}
+	
 	figure.snip1156 p {
-	padding: 0 50px;
-	font-size: 0.8em;
-	font-weight: 500;
-	-webkit-transform: translate3d(0%, -150%, 0);
-	transform: translate3d(0%, -150%, 0);
+		padding: 0 50px;
+		font-size: 0.8em;
+		font-weight: 500;
+		-webkit-transform: translate3d(0%, -150%, 0);
+		transform: translate3d(0%, -150%, 0);
 	}
+	
+	
 	figure.snip1156 a {
-	left: 0;
-	right: 0;
-	top: 0;
-	bottom: 0;
-	position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		position: absolute;
 	}
+	
 	figure.snip1156:hover img,
 	figure.snip1156.hover img {
-	opacity: 0.4;
+		opacity: 0.4;
 	}
+	
 	figure.snip1156:hover figcaption h2,
 	figure.snip1156.hover figcaption h2,
 	figure.snip1156:hover figcaption p,
 	figure.snip1156.hover figcaption p {
-	-webkit-transform: translate3d(0%, 0%, 0);
-	transform: translate3d(0%, 0%, 0);
+		-webkit-transform: translate3d(0%, 0%, 0);
+		transform: translate3d(0%, 0%, 0);
 	}
+	
 	figure.snip1156:hover figcaption h2,
 	figure.snip1156.hover figcaption h2 {
-	opacity: 0.9;
+		opacity: 0.9;
 	}
+	
 	figure.snip1156:hover figcaption p,
 	figure.snip1156.hover figcaption p {
-	opacity: 0.6;
+		opacity: 0.6;
 	}
 	
 	.div-aft{
 		margin-left:5%;
-	-webkit-transition: all 1s ease;
+		-webkit-transition: all 1s ease;
 		-moz-transition: all 1s ease;
 		-o-transition: all 1s ease;
 		-ms-transition: all 1s ease;
-			transition: all 1s ease;
+		transition: all 1s ease;
 	}
 	
 	
@@ -1711,11 +1718,11 @@ font-size: 22px;
 		width: 104%;
 		margin-right:1%;
 		display:inline-block;
-	-webkit-transition: all 1s ease;
+		-webkit-transition: all 1s ease;
 		-moz-transition: all 1s ease;
 		-o-transition: all 1s ease;
 		-ms-transition: all 1s ease;
-			transition: all 1s ease;
+		transition: all 1s ease;
 	}
 	
 	figure.snip1156:hover .d-a{
@@ -2106,8 +2113,6 @@ font-size: 22px;
 	}
 	
 	
-	
-	
 	figure.snip1156:hover .ext{
 		border: 2px solid #0D553F;
 	}
@@ -2440,15 +2445,16 @@ font-size: 22px;
 }
 
 #noticias h5{
-padding: 10px 10px;
-padding-left:0;
-font-size:12px;
+	padding: 10px 10px;
+	padding-left:0;
+	font-size:12px;
 }
+
 #noticias p{
-padding: 0px 10px;
-margin:0;
-padding-left:0;
-font-size:12.5px;
+	padding: 0px 10px;
+	margin:0;
+	padding-left:0;
+	font-size:12.5px;
 }
 
 #list-menu li a{
@@ -2707,7 +2713,6 @@ footer{
 	margin-top: 4%;
 	display:inline-block;
 	text-align:center;
-	
 	display:inline-block;
 	margin:0;
 	width:100%;
@@ -2894,7 +2899,6 @@ footer{
 
 .info-mapa{
 	display:none;
-	
     padding-left: 6%;
 }
 
@@ -2940,8 +2944,8 @@ p{
 
 /************ ESTILOS ***********/
 #info-tec{
-background: rgb(129, 206, 231);
-color:white;
+	background: rgb(129, 206, 231);
+	color:white;
 }
 
 .right{
@@ -2974,9 +2978,7 @@ color:white;
 	font-weight:bold;
 	display:inline-block;
 	font-family: 'arialregular';
-	
 	text-align:center;
-	
 	transition: all 0.4s ease
 }
 
@@ -3185,19 +3187,11 @@ color:white;
 .h1-1-home{
 	font-size: 16px;
     color: #00173B;
-   /* margin-left: -10%;*/
 	margin-top: 15%;
 	font-family:'arialregular';
 	font-weight:700;
 }
 
-.mis{
-    /*margin-left: -21%;*/
-}
-
-.tray{ 
-	/*margin-left: -16%;*/
-}
 
 .p-inst-home{
     color: white;
@@ -3215,7 +3209,6 @@ color:white;
 }
 
 .p-in-h{
-/*	margin-left: -27%;*/
 	width: 80%; 
 	text-align: center;
 	font-size:13px;
@@ -3262,12 +3255,14 @@ color:white;
     from { opacity: 0; }
     to   { opacity: 1; }
 }
+
 .item-institucional {
 	text-align:center;
 	padding-top:30px;
 	padding-bottom:30px;
 	height:auto;overflow:hidden;
 }
+
 .item-institucional img{
 	display:inline-block;
 	text-align:center;
