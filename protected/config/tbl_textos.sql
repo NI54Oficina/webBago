@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 21-03-2016 a las 16:09:13
+-- Tiempo de generación: 23-03-2016 a las 14:19:31
 -- Versión del servidor: 10.1.9-MariaDB
 -- Versión de PHP: 5.5.30
 
@@ -438,9 +438,9 @@ INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (396, 'Excelencia', 'Excellence', 'Melhoria contínua'),
 (397, 'Responsabilidad', 'Responsability', 'Responsabilidade'),
 (404, '<strong><span  class="span-aftosa">A</span>ÑO 1997</strong>', '<strong><span  class="span-aftosa">Y</span>EAR 1997</strong>', '<strong><span  class="span-aftosa">A</span>NO 1997</strong>'),
-(405, '<strong><span  class="span-aftosa">A</span>ÑO 2000</strong>', '<strong><span  class="span-aftosa">Y</span>EAR 2000</strong>', '<strong><span  class="span-aftosa">A</span>ANO 2000</strong>'),
-(406, '<strong><span  class="span-aftosa">A</span>ÑO 2006</strong>', '<strong><span  class="span-aftosa">Y</span>EAR 2006</strong>', '<strong><span  class="span-aftosa">A</span>ANO 2006</strong>'),
-(407, '<strong><span  class="span-aftosa">A</span>ÑO 2010/strong>', '<strong><span  class="span-aftosa">Y</span>EAR 2010</strong>', '<strong><span  class="span-aftosa">A</span>NO 2010</strong>'),
+(405, '<strong><span  class="span-aftosa">A</span>ÑO 2000</strong>', '<strong><span  class="span-aftosa">Y</span>EAR 2000</strong>', '<strong><span  class="span-aftosa">A</span>NO 2000</strong>'),
+(406, '<strong><span  class="span-aftosa">A</span>ÑO 2006</strong>', '<strong><span  class="span-aftosa">Y</span>EAR 2006</strong>', '<strong><span  class="span-aftosa">A</span>NO 2006</strong>'),
+(407, '<strong><span  class="span-aftosa">A</span>ÑO 2010</strong>', '<strong><span  class="span-aftosa">Y</span>EAR 2010</strong>', '<strong><span  class="span-aftosa">A</span>NO 2010</strong>'),
 (408, '<strong><span  class="span-aftosa">A</span>ÑO 2011</strong>', '<strong><span  class="span-aftosa">Y</span>EAR 2011</strong>', '<strong><span  class="span-aftosa">A</span>NO 2011</strong>'),
 (409, '<strong><span  class="span-aftosa">A</span>ÑO 2013</strong>', '<strong><span  class="span-aftosa">Y</span>EAR 2013</strong>', '<strong><span  class="span-aftosa">A</span>NO 2013</strong>'),
 (410, 'Argentina', '', ''),
