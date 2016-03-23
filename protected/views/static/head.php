@@ -8,7 +8,8 @@
 	<meta name="keywords" content="Biogénesis Bagó, biotecnologia">
 	<meta name="author" content="Biogénesis Bagó">
 
-
+	<!--FAV ICON-->
+	<link href="<?php echo Yii::app()->request->baseUrl; ?>/img/favicon.ico" rel="shortcut icon" />
 <!--	<meta property="og:title" content="Biogénesis Bagó Facebook Pagina Oficial " /> 
 	<meta property="og:url" content="https://www.facebook.com/BiogenesisBago/" >
 
