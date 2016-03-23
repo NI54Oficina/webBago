@@ -5812,83 +5812,90 @@ figure.snip1156:hover .salud-ambiental{
 	
 	
 	.animate{
-	position: relative;
-	margin: 0;
+		position: relative;
+		margin: 0;
 	}
-	.animate li{
-	-webkit-transition: all 0.3s ease-out;
-			transition: all 0.3s ease-out;
-	height: 0;
-	opacity: 0;
-	overflow: hidden;
-	padding: 0 1em;
-	border:1px solid #E0E0E0;
-	}
-	.after li{
-	height: auto;
-	opacity: 1;
-	padding: 0.5em 1em;
-	width: 100%;
-	margin-left: 0;
-	padding-right: 0;
 	
+	.animate li{
+		-webkit-transition: all 0.3s ease-out;
+		transition: all 0.3s ease-out;
+		height: 0;
+		opacity: 0;
+		overflow: hidden;
+		padding: 0 1em;
+		border:1px solid #E0E0E0;
 	}
+	
+	.after li{
+		height: auto;
+		opacity: 1;
+		padding: 0.5em 1em;
+		width: 100%;
+		margin-left: 0;
+		padding-right: 0;
+	}
+	
 	.toggleIcon {
-	width: 1em;
-	height: 1em;
-	left:90%;
-	top: 0.8em;
-	bottom: 0;
-	position: absolute;
-	color:#66CCED;
+		width: 1em;
+		height: 1em;
+		left:90%;
+		top: 0.8em;
+		bottom: 0;
+		position: absolute;
+		color:#66CCED;
 	}
+	
 	.toggleIcon::before, .toggleIcon::after {
-	content: '';
-	position: absolute;
-	background: #66CCED;
-	-webkit-transition: 0.3s cubic-bezier(0.45, 0.01, 0.27, 1.4);
-			transition: 0.3s cubic-bezier(0.45, 0.01, 0.27, 1.4);
+		content: '';
+		position: absolute;
+		background: #66CCED;
+		-webkit-transition: 0.3s cubic-bezier(0.45, 0.01, 0.27, 1.4);
+		transition: 0.3s cubic-bezier(0.45, 0.01, 0.27, 1.4);
 	}
+	
 	.toggleIcon::before {
-	width: 2px;
-	height: 100%;
-	left: calc(101% - 2px);
-	margin-left: 1px;
+		width: 2px;
+		height: 100%;
+		left: calc(101% - 2px);
+		margin-left: 1px;
 	}
+	
 	.toggleIcon::after {
-	width: 100%;
-	height: 2px;
-	top: calc(50% - 1px);
+		width: 100%;
+		height: 2px;
+		top: calc(50% - 1px);
 	}
+	
 	.after .toggleIcon::before {
-	opacity: 0;
-	-webkit-transform: rotate(45deg);
+		opacity: 0;
+		-webkit-transform: rotate(45deg);
 		-ms-transform: rotate(45deg);
-			transform: rotate(45deg);
-	text-shadow: 0 0 3px #333;
+		transform: rotate(45deg);
+		text-shadow: 0 0 3px #333;
 	}
+	
 	.after .toggleIcon::after {
-	-webkit-transform: none;
+		-webkit-transform: none;
 		-ms-transform: none;
-			transform: none;
-	-webkit-transform: rotate(180deg);
+		transform: none;
+		-webkit-transform: rotate(180deg);
 		-ms-transform: rotate(180deg);
-			transform: rotate(180deg);
+		transform: rotate(180deg);
 	}
 	/* ripple */
 	.ripple{
-	overflow: hidden;
-	position: relative;
+		overflow: hidden;
+		position: relative;
 	}
 	
 	.ripple-effect{
-	position: absolute;
-	border-radius: 50%;
-	width: 50px;
-	height: 50px;
-	background: white;
-	-webkit-animation: ripple-animation 2s;
-	animation: ripple-animation 2s;
+		position: absolute;
+		border-radius: 50%;
+		width: 50px;
+		height: 50px;
+		background: white;
+		-webkit-animation: ripple-animation 2s;
+		animation: ripple-animation 2s;
 	}
 	
 	
@@ -5925,28 +5932,28 @@ figure.snip1156:hover .salud-ambiental{
 		width:100%;
 	}
 	.ttl{
-	color: #002E75;
-	margin: 0;
-	font-weight: bold;
-	letter-spacing: 5px;
-	padding: 1px 0 0 0;
-	float:left;
-	font-size:15px;
+		color: #002E75;
+		margin: 0;
+		font-weight: bold;
+		letter-spacing: 5px;
+		padding: 1px 0 0 0;
+		float:left;
+		font-size:15px;
 	}
 	
 	.animate{
-	overflow: hidden;
-	width: 100%;
-	margin:2% auto;
+		overflow: hidden;
+		width: 100%;
+		margin:2% auto;
 	}
 	
 	.h1-noticias-rse {
-    color: #002A68;
-    font-size: 15px;
-    font-family: 'arialregular';
-    font-weight: 700;
-    letter-spacing: 0.5px;
-	margin-left:0;
+		color: #002A68;
+		font-size: 15px;
+		font-family: 'arialregular';
+		font-weight: 700;
+		letter-spacing: 0.5px;
+		margin-left:0;
 }
 
 .linea-rse-not {
@@ -6001,9 +6008,9 @@ figure.snip1156:hover .salud-ambiental{
   and (max-device-width: 2100px) 
   and (-webkit-min-device-pixel-ratio: 1) { 
   
-  #evolucion-logo{
-	margin-left: 145px;
-  }
+	#evolucion-logo{
+		margin-left: 145px;
+	}
   
   	#ul-filiales-paises{
 		display:none;
@@ -6128,17 +6135,17 @@ figure.snip1156:hover .salud-ambiental{
 
 
 #btn-buscador-vademecum{
-		background-color: #E8E6E6;
-		border: none;
-		width: 50px;
-		height: 40px;
-		background-image: url(../img/lupa-01.png);
-		background-repeat: no-repeat;
-		background-position:  right;
-		background-size: 100% 100%;
-		display:inline-block;
-		vertical-align: top;
-		margin-left: 5px;
+	background-color: #E8E6E6;
+	border: none;
+	width: 50px;
+	height: 40px;
+	background-image: url(../img/lupa-01.png);
+	background-repeat: no-repeat;
+	background-position:  right;
+	background-size: 100% 100%;
+	display:inline-block;
+	vertical-align: top;
+	margin-left: 5px;
 }
 
 .input-group-btn{
@@ -6222,10 +6229,7 @@ figure.snip1156:hover .salud-ambiental{
 	border:none;
 }
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/master
 .tic-mision{
 	margin-bottom:25px;
 }
@@ -6233,7 +6237,4 @@ figure.snip1156:hover .salud-ambiental{
 .tic-mision img{
     padding-right: 7px;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/master
