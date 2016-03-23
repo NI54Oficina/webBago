@@ -8,7 +8,7 @@
 		?>
 		<div class="tr-widget col-lg-12 col-md-12 col-sm-12 col-xs-12"><div class="td-widget col-lg-2 col-md-2 col-sm-2 col-xs-2" ><img class="img-widget" src="<?php echo Yii::app()->request->baseUrl; ?>/img/<?php 
 		if($value==$idSeccion){
-			echo "widget-".$normalizado.".png";
+			echo "gotas-menu-chico-".$normalizado.".png";
 		}else{
 			echo 'widget-vademecum.png';
 		}
