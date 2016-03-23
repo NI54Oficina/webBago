@@ -205,8 +205,6 @@
 						
 						<p>(52) (55) 5555 8223 / 5555 8216 <br/>(Llamada sin costo desde el interior del país) 01-800-999-2240</p>
 				
-				
-				
 						<h3 id="titulo-dist" class="dist">Distribuidoras: </h3>
 			
 							<h4> <span id="sub-filiales" class="bold-fil"> México </h4>
