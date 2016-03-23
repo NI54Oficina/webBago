@@ -25,7 +25,6 @@
 		<div>
 			<p class="anios-1934-2006">1934</p>
 		</div>
-		
 		<p class="nace-linea-tiempo">Nace</p> <p class="bago-linea-tiempo" style="color: #011E49;">laboratorios Bagó</p>
 	</div>
 			<!--<img style="" src="img/linea-tiempo-1-01.png" />-->
@@ -126,7 +125,7 @@
 			<div class="cd-timeline-content">
 				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/signo-exclamacion.png" style="width: 22px;padding-bottom: 10px;"/>
 				<h2  class="h2-cd"><?php echo Textos::model()->GetText(361); ?></h2>
-				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/casa.png" style="width: 22px;"/>
+				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/casa.png" style="width:22px;"/>
 				<h2  style="margin-top:2vh;" class="h2-cd"><?php echo Textos::model()->GetText(362); ?></h2>
 				<span class="cd-date"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-tiempo-bullet.png"  /></span>
 			</div> <!-- cd-timeline-content -->
@@ -138,7 +137,7 @@
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
-				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/casa.png" style="width: 22px;padding-bottom: 10px;"/>
+				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/casa.png" style="width:22px;padding-bottom: 10px;"/>
 				<h2 class="h2-cd"><?php echo Textos::model()->GetText(363); ?></h2>
 				<span class="cd-date"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-tiempo-bullet.png"  /></span>
 			</div> <!-- cd-timeline-content -->
@@ -151,7 +150,7 @@
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
-				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/casa.png" style="width: 22px;padding-bottom: 10px;"/>
+				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/casa.png" style="width:22px;padding-bottom: 10px;"/>
 				<h2  class="h2-cd"><?php echo Textos::model()->GetText(364); ?></h2>
 				<img class="img-cd" src="<?php echo Yii::app()->request->baseUrl; ?>/img/estrella.png" style="width: 22px;margin-top:15%;padding-bottom: 10px;"/>
 				<h2  style="margin-top:2vh;" class="h2-cd"><?php echo Textos::model()->GetText(365); ?></h2>
@@ -194,7 +193,7 @@
 			<p class="anios-1934-2006">2006</p>
 		</div>
 		
-		<p class="nace-linea-tiempo">Nace</p> <p class="bago-linea-tiempo" style="color: #011E49;">Biogénesis Bagó</p>
+		<p class="nace-linea-tiempo">Nace</p> <p class="bago-linea-tiempo" style="color:#011E49;">Biogénesis Bagó</p>
 
 	</div>
 		<img class="img-cd" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo-antiguo-biogenesis.png"  style="width:150px;display: block; margin: 0; text-align: center; margin-left: 175px; margin-top: 4%;"/>
@@ -207,9 +206,9 @@
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
-				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/medalla.png"  style="width: 22px;padding-bottom: 10px;"/>
+				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/medalla.png"  style="width:22px;padding-bottom: 10px;"/>
 				<h2 class="h2-cd"><?php echo Textos::model()->GetText(368); ?></h2>
-				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/signo-exclamacion.png" style="width: 22px;padding-bottom: 10px;"/>
+				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/signo-exclamacion.png" style="width:22px;padding-bottom: 10px;"/>
 				<p class="p-cd2"><?php echo Textos::model()->GetText(369); ?></p>
 				<span class="cd-date"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-tiempo-bullet.png"  /></span>
 			</div> <!-- cd-timeline-content -->
@@ -233,7 +232,7 @@
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
-				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/estrella.png" style="width: 22px;padding-bottom: 10px;"/>
+				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/estrella.png" style="width:22px;padding-bottom:10px;"/>
 				<h2 class="h2-cd"><?php echo Textos::model()->GetText(371); ?></h2>
 				<span class="cd-date"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-tiempo-bullet.png"  /></span>
 			</div> <!-- cd-timeline-content -->
@@ -257,9 +256,9 @@
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
-				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/estrella.png" style="width: 22px;padding-bottom: 10px;"/>
+				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/estrella.png" style="width:22px;padding-bottom: 10px;"/>
 				<h2 class="h2-cd"><?php echo Textos::model()->GetText(373); ?></h2>
-				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/medalla.png" style="width: 22px;padding-bottom: 10px;"/>
+				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/medalla.png" style="width:22px;padding-bottom: 10px;"/>
 				<p class="p-cd2"><?php echo Textos::model()->GetText(374); ?></p>
 				<span class="cd-date"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-tiempo-bullet.png"  /></span>
 			</div> <!-- cd-timeline-content -->

@@ -22,21 +22,19 @@
 				
 				
 			<div class="tabla-aftosa col-lg-12 col-md-12 col-sm-12 col-xs-12">
-			<!--   CONTENIDO -->
-		<div  class="tr  col-lg-12 col-md-12 col-sm-12 col-xs-12 inner-text" style="text-shadow:none;padding-top:0;">			
-			<p><?php echo Textos::model()->GetText(27); ?> <?php echo Textos::model()->GetText(28); ?> <br/>
-			<?php echo Textos::model()->GetText(29); ?>  
-			</p>
+			<!-- CONTENIDO -->
+			<div  class="tr  col-lg-12 col-md-12 col-sm-12 col-xs-12 inner-text" style="text-shadow:none;padding-top:0;">			
+				<p><?php echo Textos::model()->GetText(27); ?> <?php echo Textos::model()->GetText(28); ?> <br/>
+			<?php echo Textos::model()->GetText(29); ?>  </p>
 
-			<p style="margin-top:3%;"><?php echo Textos::model()->GetText(30); ?><br />
-			<?php echo Textos::model()->GetText(31); ?> <br />
-			<?php echo Textos::model()->GetText(32); ?>
-			</p>
-				
-			<p style="margin-top:1%;"><?php echo Textos::model()->GetText(350); ?>
-			</p>
+				<p style="margin-top:3%;"><?php echo Textos::model()->GetText(30); ?><br />
+				<?php echo Textos::model()->GetText(31); ?> <br />
+				<?php echo Textos::model()->GetText(32); ?>
+				</p>
+		
+				<p style="margin-top:1%;"><?php echo Textos::model()->GetText(350); ?></p>
 			
-		</div>
+			</div>
 		
 		
 		<div  class="tr  col-lg-12 col-md-12 col-sm-12 col-xs-12 inner-text" style="text-shadow:none;padding-top:0;">			
@@ -49,7 +47,7 @@
            
 		   <!-- CUADRO -->
 
-           <div class="cuadro" style="; padding-left:3px; line-height:7px;margin-top: 5%; padding-bottom: 3%;">
+           <div class="cuadro" style="padding-left:3px; line-height:7px;margin-top: 5%; padding-bottom: 3%;">
            		
 				<!-- TITULO CUADRO -->
 
@@ -76,7 +74,7 @@
            </div>
 		 </div> 
 		 
-		<div  class="tr  col-lg-12 col-md-12 col-sm-12 col-xs-12 inner-text" style="text-shadow:none;padding-top:0;  color:#656565;">		
+		<div  class="tr  col-lg-12 col-md-12 col-sm-12 col-xs-12 inner-text" style="text-shadow:none;padding-top:0;color:#656565;">		
 
             <!-- TÍTIULO SUBSECCIÓN -->          
            <h2 class="h2-aftosa">

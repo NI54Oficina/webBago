@@ -5369,7 +5369,7 @@ figure.snip1156:hover .salud-ambiental{
 		text-align: center;
 		display:inline-block;
 		margin: 0;
-		padding: 0 4vw;
+		padding: 0 3vw;
 		text-shadow: 0px -1px 6px rgba(0, 0, 0, 0.49);
 	}
 	
@@ -5621,7 +5621,7 @@ figure.snip1156:hover .salud-ambiental{
 		text-align: center;
 		display:inline-block;
 		margin: 0;
-		padding: 0 4vw;
+		padding: 0 3vw;
 		text-shadow: 0px -1px 6px rgba(0, 0, 0, 0.49);
 	}
 	
@@ -5736,7 +5736,7 @@ figure.snip1156:hover .salud-ambiental{
 		text-align: center;
 		display:inline-block;
 		margin: 0;
-		padding: 0 4vw;
+		padding: 0 3vw;
 		text-shadow: 0px -1px 6px rgba(0, 0, 0, 0.49);
 	}
 	
@@ -6075,7 +6075,7 @@ figure.snip1156:hover .salud-ambiental{
 		text-align: center;
 		display:inline-block;
 		margin: 0;
-		padding: 0 4vw;
+		padding: 0 3vw;
 		text-shadow: 0px -1px 6px rgba(0, 0, 0, 0.49);
 	}
 	
@@ -6171,34 +6171,51 @@ figure.snip1156:hover .salud-ambiental{
 	vertical-align: left;
 }
 
-.imagen-producto { display:inline-block; 
- 					text-align:center;
- 					overflow:hidden; 
- 				  }
+.imagen-producto { 
+	display:inline-block; 
+ 	text-align:center;
+ 	overflow:hidden; 
+ }
 
-.paises-registrados { margin: 30%;  
-		margin-top: 8%;
-		text-align: center;
-			}
+.paises-registrados { 
+	margin: 30%;  
+	margin-top: 8%;
+	text-align: center;
+}
 
-@media only screen and (max-width:768px) 
+@media only screen and (max-width:768px) {
 
-{
-.nombre-pais { display:none !important;
-              } 
-.imagen-pais { width: 30%; 
-			   text-align: left; }
+	.nombre-pais {
+		display:none !important;
+    }
+	
+	.imagen-pais { 
+		width: 30%; 
+		text-align: left; 
+	}
 
-#targets-inner img { display: none; } 
+	#targets-inner img { 
+		display: none; 
+	} 
 
 /* ¨.TARGET-INNER SON IMAGENES BORRADAS DE VAQUITAS PORQUE FALTA MODIFICARLES LA UBICACION*/
 
-.paises-registrados {margin:10% !important;}
+	.paises-registrados {
+		margin:10% !important;
+	}
+	
 } 				  
 
-#infodcha div.error{color:red;position:absolute;}
 
-#enviando,#enviado,#errorEnvio{display:none;position:absolute;}
+#infodcha div.error{
+	color:red;
+	position:absolute;
+}
+
+#enviando,#enviado,#errorEnvio{
+	display:none;
+	position:absolute;
+}
 
 
 
@@ -6212,7 +6229,6 @@ figure.snip1156:hover .salud-ambiental{
 	border:none;
 }
 
-<<<<<<< HEAD
 .tic-mision{
 	margin-bottom:25px;
 }
@@ -6220,5 +6236,4 @@ figure.snip1156:hover .salud-ambiental{
 .tic-mision img{
     padding-right: 7px;
 }
-=======
->>>>>>> origin/master
+
