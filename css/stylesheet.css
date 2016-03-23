@@ -3308,67 +3308,56 @@ body {
   color: #666;
 }
 
-/*section {
-  position: relative;
-  display: block;
-  width: 100%;
-  height: 70vh;
-  overflow: hidden;
-  color: #BBB;
-}
-*/
-section h2 {
-}
 
 section .cover {
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
 }
 
 section .cover img {
-  position: absolute;
-  display: block;
-  min-width: 100%;
-  min-height: 100%;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+	position: absolute;
+	display: block;
+	min-width: 100%;
+	min-height: 100%;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
 }
 
 section .cover div {
-  position: absolute;
-  display: block;
-  min-width: 100%;
-  min-height: 100%;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+	position: absolute;
+	display: block;
+	min-width: 100%;
+	min-height: 100%;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
 }
 
 section .content {
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
 
 }
 
 section .text {
-  width: 100%;
+	width: 100%;
 }
 
 .centralize {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translateZ(0px) translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translateZ(0px) translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
 }
 
 @media screen and (max-width: 1000px) {
@@ -3393,7 +3382,7 @@ a.iprodev {
 	border-radius: 50px;
 	transition: all .1s ease-in-out;
 	text-transform: uppercase;
-  z-index: 100;
+	z-index: 100;
 }
 
 a.iprodev:hover {
@@ -3425,9 +3414,7 @@ a.iprodev:hover {
 
 /************ ESTILOS ***********/
 #header-rrhh{
-	/*background-image:url(../img/rrhh-01.png),url(../img/fondo-obelisco.png);*/
 	background-color:white;
-	
 	background-repeat:no-repeat;
 	background-position: bottom center;
 	background-size: auto 100%,100%  auto ;
@@ -3437,13 +3424,9 @@ a.iprodev:hover {
 
 }
 
-#header-rrhh:hover{
-	/*background-image:url(../img/rrhh-01.png),url(../img/fondo-obelisco.png);*/
-
-	
+#header-rrhh:hover{	
 	background-repeat:no-repeat;
 	background-size: auto 100%;
-	
 	width:100%;
 	transition: all 9s linear;
     z-index: -1;
@@ -3461,7 +3444,7 @@ a.iprodev:hover {
     line-height: 35px;
     letter-spacing: 1.5px;
 }
-}
+
 
 .d-rrhh-home{
 	z-index: 99999999;
@@ -3540,8 +3523,10 @@ section{
 }
 
 
-#botones a:hover{color:#fff;
-text-decoration:none;}
+#botones a:hover{
+	color:#fff;
+	text-decoration:none;
+}
 
 
 #botones a:link{
@@ -3648,7 +3633,9 @@ text-decoration:none;}
 .outerLine-Af{
 	width:105%;height:105%;
 	background:url(../img/vad-af-aro-hover.png);
-	background-size:95% 95%; background-position:center;background-repeat:no-repeat;
+	background-size:95% 95%; 
+	background-position:center;
+	background-repeat:no-repeat;
 	transition: all 0.5s ease;
 }
 
@@ -3894,7 +3881,9 @@ text-decoration:none;}
 	width:105%;
 	height:105%;
 	background:url(../img/vad-repro-aro-hover.png);
-	background-size:95% 95%; background-position:center;background-repeat:no-repeat;
+	background-size:95% 95%; 
+	background-position:center;
+	background-repeat:no-repeat;
 	transition: all 0.5s ease;
 }
 
@@ -4141,7 +4130,6 @@ text-decoration:none;}
 	color:#fff;
 	font-size:12px;
 	text-align:left;
-	
 	width:100%;
 	position:relative;
 	padding-bottom:1%;
@@ -4597,8 +4585,11 @@ display:none;
 	position: relative;
 	margin:50%;
 }
-#targets h3 { float: left;
-			  margin:50%; }
+
+#targets h3 { 
+	float: left;
+	margin:50%; 
+}
 
 #targets img{
 	width:35px;
@@ -4612,6 +4603,7 @@ display:none;
 	text-align:center;
 	float:top;
 }
+
 #targets-inner img{
 	width:20px;
 	max-width:58px;
@@ -4661,7 +4653,7 @@ figure.snip1156:hover .antibioticos{
 }
 
 .titulo-reproductivos{
-color:#FF671B !important;
+	color:#FF671B !important;
 }
 
 
@@ -4675,7 +4667,7 @@ figure.snip1156:hover .reproductivos{
 
 
 .titulo-vitaminicos-y-minerales{
-color:#003B5D !important;
+	color:#003B5D !important;
 }
 
 
@@ -4688,7 +4680,7 @@ figure.snip1156:hover .vitaminicos-y-minerales{
 }
 
 .titulo-farmaceuticos{
-color:#6D3A5D !important;
+	color:#6D3A5D !important;
 }
 
 
@@ -4701,7 +4693,7 @@ figure.snip1156:hover .farmaceuticos{
 }
 
 .titulo-salud-ambiental{
-color:#26CBD4 !important;
+	color:#26CBD4 !important;
 }
 
 
@@ -4720,11 +4712,7 @@ figure.snip1156:hover .salud-ambiental{
 @media screen and (min-width: 300px) {
 	.header-inner{
 		position:initial;
-		/*position: absolute;
-		min-height:100vh;*/
 	}
-
-	
 
 	.snip1156.image h3{
 		display:none;
@@ -4732,10 +4720,12 @@ figure.snip1156:hover .salud-ambiental{
 		font-size:16px;
 		margin-left:20px;
 	}
+	
 	#logo-bago{
 		width:100%;
 		max-width:300px;
 	}
+	
 	.li-nav{
 		list-style:none;
 		width:100%;
@@ -4745,12 +4735,15 @@ figure.snip1156:hover .salud-ambiental{
 		transition: 0.4s all ease-in-out;
 		color:#969696;
 	}
+	
+	
 	.li-nav-2{
 		display:inline-block;
 		width:100%;
 		font-weight:700;
 		padding-right:4%;
 	}
+	
 	.ul-nav li ul {
 		transition: 0.4s all ease-in-out;
 		display:none;
@@ -4796,12 +4789,12 @@ figure.snip1156:hover .salud-ambiental{
 		padding-bottom: 2%;
 	}
 	
-.li-paises {
-    display: inline-block;
-    color: white;
-    width: 16%;
-    font-size: 13px;
-}
+	.li-paises {
+		display: inline-block;
+		color: white;
+		width: 16%;
+		font-size: 13px;
+	}
 
 	#ul-nav-2 {
 		border-bottom:1px solid #D3D3D3;
@@ -4952,6 +4945,7 @@ figure.snip1156:hover .salud-ambiental{
 		width:21%;
 		max-width:300px;
 	}
+	
 	.li-nav{
 		list-style:none;
 		display:inline-block;
@@ -4961,12 +4955,14 @@ figure.snip1156:hover .salud-ambiental{
 		transition: 0.4s all ease-in-out;
 		color:#969696;
 	}
+	
 	.li-nav-2{
 		display:inline-block;
 		width:auto;
 		font-weight:700;
 		padding-right:4%;
 	}
+	
 	.ul-nav li ul {
 		transition: 0.4s all ease-in-out;
 		display:none;
@@ -4994,6 +4990,7 @@ figure.snip1156:hover .salud-ambiental{
 		color:#656565;
 		box-shadow: 0px 0px 5px #828282;
 	}
+	
 	.ul-nav li a {
 		text-decoration:none;
 		display:block;
@@ -5213,13 +5210,14 @@ figure.snip1156:hover .salud-ambiental{
   and (min-device-width: 768px) 
   and (max-device-width: 1024px) 
   and (-webkit-min-device-pixel-ratio: 1) {
-.h2-cd {
-    color: #B2B2B2;
-    font-weight: 700;
-    font-family: 'arialregular';
-    font-size:18px;
-    margin-top: 0;
-}
+	.h2-cd {
+		color: #B2B2B2;
+		font-weight: 700;
+		font-family: 'arialregular';
+		font-size:18px;
+		margin-top: 0;
+	}
+	
 	.cd-timeline-content .cd-date{
 		visibility:hidden;
 	}
@@ -5230,13 +5228,13 @@ figure.snip1156:hover .salud-ambiental{
   and (min-device-width: 320px) 
   and (max-device-width: 736px)
   and (-webkit-min-device-pixel-ratio: 2) {
-.h2-cd {
-    color: #B2B2B2;
-    font-weight: 700;
-    font-family: 'arialregular';
-    font-size:18px;
-    margin-top: 0;
-}
+	.h2-cd {
+		color: #B2B2B2;
+		font-weight: 700;
+		font-family: 'arialregular';
+		font-size:18px;
+		margin-top: 0;
+	}
 
 	.cd-timeline-content .cd-date{
 		display:none;
@@ -5585,11 +5583,11 @@ figure.snip1156:hover .salud-ambiental{
 	}
 
 	#form1 input {
-    width: 100%;
-    background: rgba(255,255,255,0.2);
-    display: inherit;
-    border: none;
-    height: 35px;
+		width: 100%;
+		background: rgba(255,255,255,0.2);
+		display: inherit;
+		border: none;
+		height: 35px;
 	}
 
 	
