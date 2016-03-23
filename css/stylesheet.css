@@ -2445,15 +2445,16 @@ font-size: 22px;
 }
 
 #noticias h5{
-padding: 10px 10px;
-padding-left:0;
-font-size:12px;
+	padding: 10px 10px;
+	padding-left:0;
+	font-size:12px;
 }
+
 #noticias p{
-padding: 0px 10px;
-margin:0;
-padding-left:0;
-font-size:12.5px;
+	padding: 0px 10px;
+	margin:0;
+	padding-left:0;
+	font-size:12.5px;
 }
 
 #list-menu li a{
@@ -2712,7 +2713,6 @@ footer{
 	margin-top: 4%;
 	display:inline-block;
 	text-align:center;
-	
 	display:inline-block;
 	margin:0;
 	width:100%;
@@ -2899,7 +2899,6 @@ footer{
 
 .info-mapa{
 	display:none;
-	
     padding-left: 6%;
 }
 
@@ -2945,8 +2944,8 @@ p{
 
 /************ ESTILOS ***********/
 #info-tec{
-background: rgb(129, 206, 231);
-color:white;
+	background: rgb(129, 206, 231);
+	color:white;
 }
 
 .right{
@@ -2979,9 +2978,7 @@ color:white;
 	font-weight:bold;
 	display:inline-block;
 	font-family: 'arialregular';
-	
 	text-align:center;
-	
 	transition: all 0.4s ease
 }
 
@@ -3190,19 +3187,11 @@ color:white;
 .h1-1-home{
 	font-size: 16px;
     color: #00173B;
-   /* margin-left: -10%;*/
 	margin-top: 15%;
 	font-family:'arialregular';
 	font-weight:700;
 }
 
-.mis{
-    /*margin-left: -21%;*/
-}
-
-.tray{ 
-	/*margin-left: -16%;*/
-}
 
 .p-inst-home{
     color: white;
@@ -3220,7 +3209,6 @@ color:white;
 }
 
 .p-in-h{
-/*	margin-left: -27%;*/
 	width: 80%; 
 	text-align: center;
 	font-size:13px;
@@ -3267,12 +3255,14 @@ color:white;
     from { opacity: 0; }
     to   { opacity: 1; }
 }
+
 .item-institucional {
 	text-align:center;
 	padding-top:30px;
 	padding-bottom:30px;
 	height:400px;overflow:hidden;
 }
+
 .item-institucional img{
 	display:inline-block;
 	text-align:center;
