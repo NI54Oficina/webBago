@@ -939,26 +939,30 @@
 					
 					<!-- /////////// REVISTA EN TOTAL ///////// -->
 					<div id="ver-revista" class="col-lg-12 col-md-12"  style="background:white; padding-bottom: 4%;">	
-						<?php $revistas= Revista::model()->findAll(array('order'=>'fecha')); ?>
-						
+						<?php $revistas= Revista::model()->findAll(array('order'=>'fecha DESC')); ?>
+						<?php $primeraRevista=array_shift($revistas); ?>
 						<!-- IMAGEN REVISTA-->
-						<img class="col-lg-6 col-md-6"  id="img-rev" src="<?php echo Yii::app()->request->baseUrl; ?>/img/30-478x620.png"/>
+						<img class="col-lg-6 col-md-6"  id="img-rev" src="<?php echo Yii::app()->request->baseUrl; ?>/uploads/molino/img/destacada-30.png"/>
 		
 						<!-- INFORMACIÓN REVISTA -->
 						<div id="info-revista" class="col-lg-6 col-md-6">
+						
+							<?php $meses = array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"); ?>
 	
-							<h1 ><span class="border-tit">R</span>EVISTA EL MOLINO<?php echo array_shift($revistas)->titulo; ?></h1>
+							<h1 ><span class="border-tit">R</span>evista El Molino</h1>
 		
 							<p id="p-1"> Información calificada sobre escenarios productivos, avances tecnológicos y protagonistas destacados en el desarrollo de América Latina.</p>
 		
-							<p id="p-2">08 de Octubre de 2015</p>
+							<p id="p-2"><?php 
+												$timeStamp=strtotime($primeraRevista->fecha);												
+												echo date('d',$timeStamp)." de ".$meses[date('n',$timeStamp)-1]. " de ".date('Y',$timeStamp) ; ?></p>
 		
-							<h2 id="h2-1">Fronteras Productivas </h2>
+							<h2 id="h2-1"><?php echo  $primeraRevista->titulo; ?></h2>
 		
-							<p id="p-3">Conozca las últimas novedades y tendencias en nuestro especial "Fronteras Productivas"</p>
+							<p id="p-3"><?php echo  $primeraRevista->bajada; ?></p>
 		
 							<div class="btn-">
-								<a href="#"><button type="button" id="btn-rev">Leer revista</button></a>
+								<a href="<?php echo Yii::app()->request->baseUrl; ?>/uploads/molino/pdf/revista-<?php echo $primeraRevista->numero; ?>.pdf" target="_blank"><button type="button" id="btn-rev">Leer revista</button></a>
 							</div> <!--Termina btn-->
 		
 						</div> <!--Temrina info revista -->
@@ -1000,23 +1004,35 @@
 						
 							<!-- LISTA REVISTAS -->
 							<ul class="overview">
-								
+								<?php foreach($revistas as $revista){ ?> 
 								<!-- ITEM REVISTA-->
-								<li>
+								<li id="revista-<?php echo $revista->id; ?>">
 								
 									<!-- img -->
 									<div class="rev-30"> </div> 
 								
 									<!-- texto -->
 									<section class="info-rev">
-										<p class="fech-rev"><span class="border-2">22 de D</span>iciembre de 2015</p>
-										<h3 class="tit-rev">MOLINO 30: Dieta y alimentación. Nos vamos para arriba </h3>
-										<p class="desc-rev">Un plan recomendado por especialistas para evitar o dismunuir pérdidas cuando las lluvias intensas llegan al campo. Guías y ...</p>
+										<?php $fechaRevista=$revista->fecha; ?>
+										<p class="fech-rev"><span class="border-2">
+												<?php 
+												$timeStamp=strtotime($revista->fecha);												
+												echo date('d',$timeStamp)." de ".$meses[date('n',$timeStamp)-1]. " de ".date('Y',$timeStamp) ; ?>
+												</p>
+										<h3 class="tit-rev"><?php echo $revista->titulo; ?></h3>
+										<p class="desc-rev"><?php echo $revista->bajada; ?></p>
 									</section>
-									
+									<style>
+									#revista-<?php echo $revista->id; ?> .rev-30{
+										background-image:url(<?php echo Yii::app()->request->baseUrl; ?>/uploads/molino/img/portada-<?php echo $revista->numero; ?>-desaturada.png);
+									}
+									#revista-<?php echo $revista->id; ?> .rev-30:hover{
+										background-image:url(<?php echo Yii::app()->request->baseUrl; ?>/uploads/molino/img/portada-<?php echo $revista->numero; ?>.png);
+									}
+									</style>
 								</li><!-- termina item -->
 							
-								
+								<?php } ?>
 							</ul> <!-- termina listado revista -->
 							
 						</div> <!-- termina contenedor revista -->
@@ -1305,5 +1321,6 @@
 
 	<!-- FOOT -->
 	<?php include ('foot.php'); ?>
+
 
 </html>
