@@ -1257,9 +1257,7 @@ font-size: 22px;
 		margin: 0;
 	}
 	
-	.tr{
-		width:100%;
-	}
+	
 	
 	.div-años-aftosa-1{
 		margin-top:5%; 
@@ -5125,13 +5123,38 @@ figure.snip1156:hover .salud-ambiental{
 	color:white;
 }
 
-	.h2-aftosa{
+.h2-aftosa{
 		color:#00173B;
 		display:inline-block;
 		font-size:20px;
 		font-family:'arialregular';
 	}
-	
+
+.h2-aftosa-celeste	{
+		color:white;
+		display:inline-block;
+		font-size:20px;
+		font-family:'arialregular';
+		background-color: #26CBD4;
+		width: 100%;
+		height: 100%;
+		padding-top: 10px;
+		padding-left: 20px;
+		padding-bottom: 10px;
+}
+
+
+#contenedor-cuadro {
+	border:1px solid #999;
+	padding-left: 20px;
+	padding-right: 20px;
+	line-height: 40px;
+	padding-bottom: 20px;
+
+
+}
+
+
 	.container-lista-360 img{
 		width: 96%;
 		padding-left: 2%;

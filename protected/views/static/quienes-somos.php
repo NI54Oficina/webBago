@@ -48,29 +48,46 @@
            <p style="margin-top:3%;"><?php echo Textos::model()->GetText(39); ?></p>
            
 		   <!-- CUADRO -->
-           <div class="cuadro" style="border:#999 solid 1px; padding-left:5px; line-height:7px;margin-top: 5%; margin-bottom: 10%;padding-bottom: 5%;"">
+
+           <div class="cuadro" style="; padding-left:5px; line-height:7px;margin-top: 5%; padding-bottom: 5%;">
            		
 				<!-- TITULO CUADRO -->
-				<h2 class="h2-aftosa" style="color:#26CBD4; ">Primeros en América Latina</h2>
-                 <h3 style="color: #595959; font-size: 14px; line-height: 25px; font-weight: 700;">Biogénesis Bagó fue  la primera empresa en la región  que desarrolló</h5>
+
+				<h2 class="h2-aftosa-celeste" > Primeros en América Latina</h2>
+
+				<div id="contenedor-cuadro">
+                 <h3 style="color: #595959; font-size: 15px; line-height: 25px; font-weight: 700;">
+                 Biogénesis Bagó fue  la primera empresa en la región  que desarrolló
+
+                 
+                 </h3>
            
 				<!-- ITEMS CUADRO -->
-				<p style="line-height: 40px;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-bullet.png"  style="display:inline-block;" />Una línea de ectoparasiticidas </p>
-				<p style="line-height: 40px;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-bullet.png"  style="display:inline-block;" />La primer vacuna para la diarrea viral de los bovinos </p>
-				<p style="line-height: 40px;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-bullet.png"  style="display:inline-block;" />Vacunas combinadas para prevenir síndromes respiratorios y reproductivos del ganado </p>
-				<p style="line-height: 40px;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-bullet.png"  style="display:inline-block;" />Obtuvo el primer registro para la vacuna anti Aftosa en 1952 (Argentina). </p>
+				<p style="line-height: 20px; margin-bottom: 20px;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-bullet.png"  style="display:inline-block;" /> Una línea de ectoparasiticidas </p>
+				<p style="line-height: 20px;margin-bottom: 20px;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-bullet.png"  style="display:inline-block;" />La primer vacuna para la diarrea viral de los bovinos </p>
+				<p style="line-height: 20px;margin-bottom: 20px;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-bullet.png"  style="display:inline-block;" />Vacunas combinadas para prevenir síndromes respiratorios y reproductivos del ganado </p>
+				<p style="line-height: 20px;margin-bottom: 20px;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-bullet.png"  style="display:inline-block;" />
+
+				Obtuvo el primer registro para la vacuna anti Aftosa en 1952 (Argentina). 
+				</p>
+
+				</div>
            
            </div>
 		 </div> 
 		 
-		<div  class="tr  col-lg-12 col-md-12 col-sm-12 col-xs-12 inner-text" style="text-shadow:none;padding-top:0;">		
+		<div  class="tr  col-lg-12 col-md-12 col-sm-12 col-xs-12 inner-text" style="text-shadow:none;padding-top:0;  color:#656565;">		
+
             <!-- TÍTIULO SUBSECCIÓN -->          
-           <h2 class="h2-aftosa">Un gran objetivo, la Frontera Productiva </h2>
+           <h2 class="h2-aftosa">
+           Un gran objetivo, la Frontera Productiva </h2>
            
-           <p style="margin-top:3%;">En poco más de 30 años habrá un 35 % más de personas sobre la tierra y la producción de carne deberá aumentar un 70 %, según estimaciones de la FAO, la Organización de las Naciones Unidas para la Alimentación y la Agricultura. Los países 	de América Latina cuentan recursos naturales, profesionales y tecnologías suficientes para abastecer la gran demanda mundial de proteína animal, aunque para lograrlo los productores deberán intensificar sus sistemas y elevar los índices de  producción en carne y leche.
-		   <br />
+           <p style="margin-top:3%;">
+           En poco más de 30 años habrá un 35 % más de personas sobre la tierra y la producción de carne deberá aumentar un 70 %, según estimaciones de la FAO, la Organización de las Naciones Unidas para la Alimentación y la Agricultura. Los países 	de América Latina cuentan recursos naturales, profesionales y tecnologías suficientes para abastecer la gran demanda mundial de proteína animal, aunque para lograrlo los productores deberán intensificar sus sistemas y elevar los índices de  producción en carne y leche.
+		   <br/>
 			En Biogénesis Bagó creemos que es posible. Por eso pusimos en marcha nuestro programa <strong>“Fronteras Productivas”</strong>, una herramienta de trabajo que,  con nuestro asesoramiento y la asistencia de un médico veterinario,  guía en la incorporación de mejoras claves en sanidad, nutrición, genética y manejo,  para que los establecimientos puedan expresar su mayor potencial, sin necesidad de hacer grandes inversiones.  <br />
 			Productores de la región  ya lograron llegar a su  frontera, alcanzado el  máximo rendimiento de sus modelos productivos.  Muchos otros están en camino. <strong>Para sumarse al desafío, www.fronterasproductivas.com</strong>
+
 			</p>
 		</div>
 		</div>
