@@ -2949,7 +2949,7 @@ color:white;
 
 #list-menu{
 	list-style:none;
-	margin-top:7%;
+	margin-top:4%;
 	margin-left:4%;
 }
 
@@ -3082,6 +3082,7 @@ color:white;
 	font-family: 'arialregular';
 	font-size:17px;
 	padding-top:2%;
+	margin-top: 10px !important;
 }
 
 
