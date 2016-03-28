@@ -1771,11 +1771,13 @@ font-size: 22px;
 	
 
 	.fundaciones{
-		color:#66CBED;
+		color:rgba(189,189,189,1);
 		font-family:'arialregular';
 		font-weight:700;
 		letter-spacing:1px;	
 		margin-left:6%;
+		font-size: 13px;
+		margin-top:48%;
 	}
 	
 	
@@ -6208,7 +6210,7 @@ figure.snip1156:hover .salud-ambiental{
 
 	.h2-titulo { margin-bottom: 0%; height: 20px; }
 
-	.img-fundaciones-1 {margin-top:0% !important;}
+	
 } 				  
 
 
@@ -6258,4 +6260,3 @@ figure.snip1156:hover .salud-ambiental{
 	margin-bottom:5px;
 }
 
-.img-fundaciones-1 {margin-top:40%; }
