@@ -116,60 +116,31 @@ $auxId=0;
 				<div id="targets">
 					<?php
 					$target= $producto->target;
-					$targetImages['<img src="'.Yii::app()->getBaseUrl(true).'/images/caballo.png">',
+					$targetImages=array('<img src="'.Yii::app()->getBaseUrl(true).'/images/caballo.png">',
 								'<img src="'.Yii::app()->getBaseUrl(true).'/images/cabra.png">',
-								
-								]
-					if($target[0]!=0){
-						echo '<img src="'.Yii::app()->getBaseUrl(true).'/images/caballo.png">';
-					}else{
-						//echo '<img src="images/caballo.png" style="opacity:0.2;">';
+								'<img src="'.Yii::app()->getBaseUrl(true).'/images/chancho.png">',
+								'<img src="'.Yii::app()->getBaseUrl(true).'/images/conejo.png">',
+								'<img src="'.Yii::app()->getBaseUrl(true).'/images/gallina.png">',
+								'<img src="'.Yii::app()->getBaseUrl(true).'/images/perro.png">',
+								'<img src="'.Yii::app()->getBaseUrl(true).'/images/gato.png">',
+								'<img src="'.Yii::app()->getBaseUrl(true).'/images/oveja.png">',
+								'<img src="'.Yii::app()->getBaseUrl(true).'/images/pez.png">',
+								'<img src="'.Yii::app()->getBaseUrl(true).'/images/vaca.png">',
+								);
+							$auxTarget=0;
+							$auxDiv=0;
+					foreach(str_split($target) as $t){
+						if($t==1){
+							$auxDiv++;
+							echo $targetImages[$auxTarget];
+						}
+						if($auxDiv>=2){
+							//echo "</div><div id='targets'>";
+							$auxDiv=0;
+						}
+						$auxTarget++;
 					}
-					if($target[1]!=0){
-						echo '<img src="'.Yii::app()->getBaseUrl(true).'/images/cabra.png">';
-					}else{
-						//echo '<img src="images/cabra.png" style="opacity:0.2;">';
-					}
-					if($target[2]!=0){
-						echo '<img src="'.Yii::app()->getBaseUrl(true).'/images/chancho.png">';
-					}else{
-						//echo '<img src="images/chancho.png" style="opacity:0.2;">';
-					}
-					if($target[3]!=0){
-						echo '<img src="'.Yii::app()->getBaseUrl(true).'/images/conejo.png">';
-					}else{
-						//echo '<img src="images/conejo.png" style="opacity:0.2;">';
-					}
-					if($target[4]!=0){
-						echo '<img src="'.Yii::app()->getBaseUrl(true).'/images/gallina.png">';
-					}else{
-						//echo '<img src="images/gallina.png" style="opacity:0.2;">';
-					}
-					if($target[5]!=0){
-						echo '<img src="'.Yii::app()->getBaseUrl(true).'/images/perro.png">';
-					}else{
-						//echo '<img src="images/perro.png" style="opacity:0.2;">';
-					}
-					if($target[6]!=0){
-						echo '<img src="'.Yii::app()->getBaseUrl(true).'/images/gato.png">';
-					}else{
-						//echo '<img src="images/gato.png" style="opacity:0.2;">';
-					}
-					if($target[7]!=0){
-						echo '<img src="'.Yii::app()->getBaseUrl(true).'/images/oveja.png">';
-					}else{
-						//echo '<img src="images/oveja.png" style="opacity:0.2;">';
-					}
-					if($target[8]!=0){
-						echo '<img src="'.Yii::app()->getBaseUrl(true).'/images/pez.png">';
-					}else{
-						//echo '<img src="images/pez.png" style="opacity:0.2;">';
-					}
-					if($target[9]!=0){
-						echo '<img src="'.Yii::app()->getBaseUrl(true).'/images/vaca.png">';
-					}else{
-						//echo '<img src="images/vaca.png" style="opacity:0.2;">';
-					}
+					
 					
 					?>
 					</div>
