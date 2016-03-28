@@ -29,11 +29,11 @@
 			
 			<div  class="tr  col-lg-12 col-md-12 col-sm-12 col-xs-12 inner-text" style="text-shadow:none;padding-top:0;margin: 0;">			
 				<h2 class="h2-aftosa hidden-md hidden-lg h2-titulo" ><?php echo Textos::model()->GetText(347); ?><br /></h2>
-					<h3 class="h3-rse" ><?php echo Textos::model()->GetText(63); ?></h3>
+					<h3 class="h3-rse" style="margin-bottom: 0%"><?php echo Textos::model()->GetText(63); ?></h3>
 						<p style="margin-top:2% ;margin-bottom:3.5%;"><?php echo Textos::model()->GetText(64); ?> </p>
 				
 					
-				<h4  class="h3-rse" style="display:inline-block;"><?php echo Textos::model()->GetText(65); ?></h4>
+				<h4  class="h3-rse" style="display:inline-block; margin-bottom: 0%;"><?php echo Textos::model()->GetText(65); ?></h4>
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hidden-xs hidden-sm linea-rse" style="margin-top:2%;" > </div>
 
 				<h4  class="h2-rse" style="display:inline-block;"><?php echo Textos::model()->GetText(455); ?></h4>
@@ -47,7 +47,7 @@
 
                 <p style="margin-top:2% ;margin-bottom:3.5%;"><?php echo Textos::model()->GetText(67); ?></p>
 
-				<h4  class="h3-rse" style="display:inline-block;"><?php echo Textos::model()->GetText(68); ?></h4>
+				<h4  class="h3-rse" style="display:inline-block; margin-bottom: 0%;"><?php echo Textos::model()->GetText(68); ?></h4>
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hidden-xs hidden-sm linea-rse" style="margin-top:2%;" > </div>
 				<h4  class="h2-rse" style="display:inline-block;"><?php echo Textos::model()->GetText(457); ?></h4>
 				
