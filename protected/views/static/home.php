@@ -137,7 +137,7 @@
 					
 							<img class="icn-ubicacion" src="<?php echo Yii::app()->request->baseUrl; ?>/img/icn-casa-matriz.png">
 					
-						<p id="nom-ref"> Casa Matriz </p>
+						<p id="nom-ref"> <?php echo Textos::model()->GetText(459); ?> </p>
 						
 					</div> <!-- Termina cada referencia -->
 					
@@ -147,7 +147,7 @@
 					
 							<img class="icn-ubicacion" src="<?php echo Yii::app()->request->baseUrl; ?>/img/icn-filiales.png">
 					
-						<p id="nom-ref"> Filiales </p>
+						<p id="nom-ref"> <?php echo Textos::model()->GetText(460); ?> </p>
 						
 					</div> <!-- Termina cada referencia -->
 					
@@ -158,7 +158,7 @@
 					
 							<img class="icn-ubicacion" src="<?php echo Yii::app()->request->baseUrl; ?>/img/icn-vacunas.png">
 					
-						<p style="margin-bottom:0;" id="nom-ref"> NAFMDVD </p> <p style="margin-left:7%;"> Banco de vacuna <br /> Antiaftosa de Norteamérica </p>
+						<p style="margin-bottom:0;" id="nom-ref"> NAFMDVD </p> <p style="margin-left:7%;"> <?php echo Textos::model()->GetText(461); ?> <br /> <?php echo Textos::model()->GetText(462); ?> </p>
 						
 					</div> <!-- Termina cada referencia -->
 					
@@ -178,12 +178,12 @@
 			</div> <!-- Termina mapa-total -->
         
 				<ul id="ul-filiales-paises" class="col-sm-12 col-xs-12">
-					<li class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a href="javascript:void(0);" id="mex">MÉXICO</li></a>
-					<li class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a href="javascript:void(0);" id="centroam">CENTRO AMÉRICA</li></a>
-					<li class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a href="javascript:void(0);" id="br">BRASIL</li></a>
-					<li class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a href="javascript:void(0);" id="bol">BOLIVIA</li></a>
-					<li class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a href="javascript:void(0);" id="uru">URUGUAY</li></a>
-					<li class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a href="javascript:void(0);" id="arg">ARGENTINA</li></a>
+					<li class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a href="javascript:void(0);" id="mex"><?php echo Textos::model()->GetText(418); ?> </li></a>
+					<li class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a href="javascript:void(0);" id="centroam"> <?php echo Textos::model()->GetText(463); ?> </li></a>
+					<li class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a href="javascript:void(0);" id="br"> <?php echo Textos::model()->GetText(412); ?> </li></a>
+					<li class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a href="javascript:void(0);" id="bol"> <?php echo Textos::model()->GetText(411); ?> </li></a>
+					<li class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a href="javascript:void(0);" id="uru"> <?php echo Textos::model()->GetText(424); ?> </li></a>
+					<li class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a href="javascript:void(0);" id="arg"><?php echo Textos::model()->GetText(410); ?> </li></a>
 				</ul>
 			
 		<!--------------------------- INFORMACIÓN PAÍSES -------------------------------->
@@ -193,36 +193,37 @@
 				<!--********** MÉXICO **********-->
 				<div id="infoMexico" class="info-mapa" style="">
 				
-					<h2 id="titulo-info-mapa"><img class="band-filiales" src="<?php echo Yii::app()->request->baseUrl; ?>/img/banderitas-09.png"/> México </h2>
+					<h2 id="titulo-info-mapa"><img class="band-filiales" src="<?php echo Yii::app()->request->baseUrl; ?>/img/banderitas-09.png"/> <?php echo Textos::model()->GetText(418); ?>  </h2>
 			
-						<p id="sub-filiales"  class="h4-fil bio" >Biogénesis Bagó de México S.A. de C.V.</p>
-						<p  id="sub-filiales" class="h4-fil">Av. Periférico Sur 6677 Piso 5, Delegación Xochimilco, Colonia Ejidos de Tepepan, México DF.</p>
+						<p id="sub-filiales"  class="h4-fil bio" > <?php echo Textos::model()->GetText(464); ?>  </p>
+						<p  id="sub-filiales" class="h4-fil">
+						<?php echo Textos::model()->GetText(465); ?> </p>
 					
 						<!-- LINEA SEPARADORA-->
 						<div id="separador"></div>
 					
-						<h3  id="titulo-cont">  TEL </h3> 
+						<h3  id="titulo-cont"> <?php echo Textos::model()->GetText(466); ?> </h3> 
 						
-						<p>(52) (55) 5555 8223 / 5555 8216 <br/>(Llamada sin costo desde el interior del país) 01-800-999-2240</p>
+						<p> <?php echo Textos::model()->GetText(467); ?></p>
 				
-						<h3 id="titulo-dist" class="dist">Distribuidoras: </h3>
+						<h3 id="titulo-dist" class="dist"><?php echo Textos::model()->GetText(468); ?> </h3>
 			
-							<h4> <span id="sub-filiales" class="bold-fil"> México </h4>
+							<h4> <span id="sub-filiales" class="bold-fil"> <?php echo Textos::model()->GetText(418); ?>  </h4>
 							
-							<p id="sub-filiales"  class="bold-fil mar"> ELANCO: Eli Lilly y Cía de México S.A. de C.V. </p>
-							<p class="mar">Calzada de Tlalpan #2024, Colonia Campestre Churubusco, C.P. 04200, México, D.F. </p>
+							<p id="sub-filiales"  class="bold-fil mar"> <?php echo Textos::model()->GetText(469); ?>  </p>
+							<p class="mar"> <?php echo Textos::model()->GetText(470); ?> </p>
 					
 						<!-- LINEA SEPARADORA-->					
 						<div id="separador"></div>
 					
-						<h3  id="titulo-cont">  TEL </h3> 
+						<h3  id="titulo-cont">  <?php echo Textos::model()->GetText(466); ?> </h3> 
 				
 						<p>+52 (33) 3819-5552</p>
 						
 						<!-- LINEA SEPARADORA-->					
 						<div id="separador"></div>
 				
-						<h3  id="titulo-cont">  CONTACTO </h3> 
+						<h3  id="titulo-cont"> <?php echo Textos::model()->GetText(113); ?></h3> 
 						<p>ALONDRA PARTIDA</p>
 					
 						<!-- LINEA SEPARADORA-->					
@@ -239,18 +240,18 @@
 				
 				<div class="info-mapa" id="infoCenAm"> 
 					
-					<h2 id="titulo-info-mapa">Centro América</h2>
+					<h2 id="titulo-info-mapa"><?php echo Textos::model()->GetText(463); ?></h2>
 					
-						<p id="sub-filiales"  class="h4-fil bio" >Filial Centro América</p>
+						<p id="sub-filiales"  class="h4-fil bio" ><?php echo Textos::model()->GetText(471); ?></p>
 						
-						<p id="sub-filiales"  class="h4-fil bio" >Filial Biogénesis Bagó de Panamá S.A.</p>
+						<p id="sub-filiales"  class="h4-fil bio" ><?php echo Textos::model()->GetText(472); ?></p>
 	
-						<p>Beatriz M. de Cabal y 51. Ciudad de Panamá</p>
+						<p><?php echo Textos::model()->GetText(473); ?></p>
 			
 						<!-- LINEA SEPARADORA-->	
 						<div id="separador"></div>
 			
-						<h3  id="titulo-cont">  TEL </h3> 
+						<h3  id="titulo-cont">   <?php echo Textos::model()->GetText(466); ?> </h3> 
 						<p>507-4337600/ 212 5513</p>
 
 			
@@ -258,7 +259,7 @@
 						<!-- LINEA SEPARADORA-->						
 						<div id="separador"></div>
 			
-						<h3  id="titulo-cont"> CONTACTO</h3> 			
+						<h3  id="titulo-cont"><?php echo Textos::model()->GetText(113); ?></h3> 			
 						<p>Rocío Ortega</p>
 			
 						
@@ -271,13 +272,13 @@
 			
 			
 			
-						<h3 id="titulo-dist" class="dist">Distribuidoras: </h3>
+						<h3 id="titulo-dist" class="dist"><?php echo Textos::model()->GetText(468); ?>  </h3>
 							
-							<h4> <span id="sub-filiales" class="bold-fil"> Panamá </h4>
+							<h4> <span id="sub-filiales" class="bold-fil"> <?php echo Textos::model()->GetText(420); ?> </h4>
 							
-							<p id="sub-filiales"  class="bold-fil mar">  Importaciones El Universo. </p>
+							<p id="sub-filiales"  class="bold-fil mar"> <?php echo Textos::model()->GetText(474); ?> </p>
 							
-							<p class="mar">Calle Ppal Llano Bonito, Juan Díaz - Edificio Imp. El Universo. Apartado Postal 0838-02057 Zona 12, Panamá. </p>	
+							<p class="mar"> <?php echo Textos::model()->GetText(475); ?>  </p>	
 			
 				</div> <!-- Termina info-Centro América-->
 		
@@ -288,7 +289,7 @@
 				
 				<div class="info-mapa" id="infoBrasil">
 					
-					<h2 id="titulo-info-mapa"><img class="band-filiales" src="<?php echo Yii::app()->request->baseUrl; ?>/img/banderitas-03.png"/> Brasil </h2>
+					<h2 id="titulo-info-mapa"><img class="band-filiales" src="<?php echo Yii::app()->request->baseUrl; ?>/img/banderitas-03.png"/> <?php echo Textos::model()->GetText(412); ?>  </h2>
 	
 							<p id="sub-filiales"  class="h4-fil bio" >BIOGÉNESIS BAGÓ SAÚDE ANIMAL LTDA.</p>
 							<p  id="sub-filiales" class="h4-fil">Av. Manoel Ribas 985 Conj 58 5° Andar <br /> Bairro Mercês <br /> Curitiba. Paraná. Brasil </p>
@@ -308,7 +309,7 @@
 				
 				<div class="info-mapa" id="infoBolivia">
 			
-					<h2 id="titulo-info-mapa"><img class="band-filiales" src="<?php echo Yii::app()->request->baseUrl; ?>/img/banderitas-10.png"/> Bolivia </h2>
+					<h2 id="titulo-info-mapa"><img class="band-filiales" src="<?php echo Yii::app()->request->baseUrl; ?>/img/banderitas-10.png"/> <?php echo Textos::model()->GetText(411); ?>  </h2>
 					
 						<p id="sub-filiales"  class="h4-fil bio" >Biogénesis Bagó Bolivia S.A.</p>
 	
@@ -318,14 +319,14 @@
 						<!-- LINEA SEPARADORA-->							
 						<div id="separador"></div>
 						
-						<h3  id="titulo-cont">  TEL </h3> 
+						<h3  id="titulo-cont">  <?php echo Textos::model()->GetText(466); ?></h3> 
 						<p>591 33453017 – 33419806</p>
 			
 						
 						<!-- LINEA SEPARADORA-->						
 						<div id="separador"></div>
 			
-						<h3  id="titulo-cont"> CONTACTO</h3> 			
+						<h3  id="titulo-cont">  <?php echo Textos::model()->GetText(113); ?></h3> 			
 						<p>Maritza Cespedes</p>
 						
 			
@@ -344,7 +345,7 @@
 				
 				<div class="info-mapa" id="infoUruguay"> 
 					
-					<h2 id="titulo-info-mapa"><img class="band-filiales" src="<?php echo Yii::app()->request->baseUrl; ?>/img/banderitas-17.png"/> Uruguay</h2>
+					<h2 id="titulo-info-mapa"><img class="band-filiales" src="<?php echo Yii::app()->request->baseUrl; ?>/img/banderitas-17.png"/> <?php echo Textos::model()->GetText(424); ?> </h2>
 	
 						<p id="sub-filiales"  class="h4-fil bio" >Biogénesis Bagó Uruguay S.A.</p>	
 						
@@ -355,7 +356,7 @@
 						<div id="separador"></div>
 			
 						
-						<h3  id="titulo-cont">  TEL </h3> 
+						<h3  id="titulo-cont">   <?php echo Textos::model()->GetText(466); ?></h3> 
 						<p>(59) (82) 924 - 9878 / 0800 8263</p>			
 			
 			
@@ -386,7 +387,7 @@
 						<div id="separador"></div>
 			
 						
-						<h3  id="titulo-cont">  TEL </h3> 
+						<h3  id="titulo-cont">  <?php echo Textos::model()->GetText(466); ?></h3> 
 						<p>03327-448300 | 0800-555-5678</p>			
 			
 						
@@ -419,8 +420,11 @@
 				
 				</div> <!--Termina titulo-info -->
         
-		
+
+
+				<!-- NO EN BASE DE DATOS -->
 				<!--////// MENÚ /////-->
+
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="menu">
 					
 					<ul id="list-menu"  class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -706,7 +710,7 @@
 									<div class="botonVademecum-Af"style=""> 
 		
 											<div class="outerLine-Af"style="">
-											<p id="nom-btn">AFTOSA</p>
+											<p style="text-transform: uppercase;" id="nom-btn"><?php echo Textos::model()->GetText(437); ?> </p>
 									</div>
 		
 									</div>
@@ -724,7 +728,7 @@
 								<div class="botonVademecum-Ant"style=""> 
 			
 									<div class="outerLine-Ant"style="">
-										<p id="nom-btn">ANTIBIÓTICOS</p>
+										<p style="text-transform: uppercase;" id="nom-btn"> <?php echo Textos::model()->GetText(438); ?> </p>
 									</div>
 			
 								</div>
@@ -742,7 +746,7 @@
 								<div class="botonVademecum-Int"style=""> 
 			
 									<div class="outerLine-Int"style="">
-										<p id="nom-btn">ANTIPARASITÁRIOS INTERNOS</p>
+										<p style="text-transform: uppercase;" id="nom-btn"><?php echo Textos::model()->GetText(440); ?> </p>
 									</div>
 			
 								</div>
@@ -760,7 +764,7 @@
 								<div class="botonVademecum-Ext"style=""> 
 			
 									<div class="outerLine-Ext"style="">
-										<p id="nom-btn">ANTIPARASITÁRIOS EXTERNOS</p>
+										<p style="text-transform: uppercase;" id="nom-btn"><?php echo Textos::model()->GetText(439); ?> </p>
 									</div>
 			
 								</div>
@@ -778,7 +782,7 @@
 								<div class="botonVademecum-Bio"style=""> 
 			
 									<div class="outerLine-Bio"style="">
-										<p id="nom-btn">BIOLÓGICOS</p>
+										<p style="text-transform: uppercase;" id="nom-btn"><?php echo Textos::model()->GetText(441); ?> </p>
 									</div>
 			
 								</div>
@@ -796,7 +800,7 @@
 								<div class="botonVademecum-Ende"style=""> 
 			
 									<div class="outerLine-Ende"style="">
-										<p id="nom-btn">ENDECTOCIDAS</p>
+										<p style="text-transform: uppercase;" id="nom-btn"><?php echo Textos::model()->GetText(442); ?> </p>
 									</div>
 			
 								</div>
@@ -814,7 +818,7 @@
 								<div class="botonVademecum-Farma"style=""> 
 			
 									<div class="outerLine-Farma"style="">
-										<p id="nom-btn">FARMACÉUTICOS</p>
+										<p style="text-transform: uppercase;" id="nom-btn"><?php echo Textos::model()->GetText(443); ?></p>
 									</div>
 			
 								</div>
@@ -832,7 +836,7 @@
 								<div class="botonVademecum-Nutri"style=""> 
 			
 									<div class="outerLine-Nutri"style="">
-										<p id="nom-btn">NUTRICIÓN</p>
+										<p style="text-transform: uppercase;" id="nom-btn"><?php echo Textos::model()->GetText(444); ?></p>
 									</div>
 			
 								</div>
@@ -850,7 +854,7 @@
 								<div class="botonVademecum-Repro"style=""> 
 			
 									<div class="outerLine-Repro"style="">
-										<p id="nom-btn">REPRODUCTIVOS</p>
+										<p style="text-transform: uppercase;" id="nom-btn"><?php echo Textos::model()->GetText(445); ?></p>
 									</div>
 			
 								</div>
@@ -868,7 +872,7 @@
 								<div class="botonVademecum-Sal-Amb"style=""> 
 				
 									<div class="outerLine-Sal-Amb"style="">
-										<p id="nom-btn">SALUD AMBIENTAL</p>
+										<p style="text-transform: uppercase;" id="nom-btn"><?php echo Textos::model()->GetText(446); ?></p>
 									</div>
 				
 								</div>
@@ -886,7 +890,7 @@
 								<div class="botonVademecum-Vit-Min"style=""> 
 			
 									<div class="outerLine-Vit-Min"style="">
-										<p id="nom-btn" style="margin-top: 38%;">VITAMINAS Y <BR/> MINERALES</p>
+										<p style="text-transform: uppercase;" id="nom-btn" style="margin-top: 38%;"> <?php echo Textos::model()->GetText(476); ?><BR/> <?php echo Textos::model()->GetText(477); ?></p>
 									</div>
 			
 								</div>
@@ -1065,9 +1069,9 @@
 						<img class="icono-menu right" src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-rrhh.png"><h2 id="titulo-vad"><span class="border-vad-2">RRHH</span> </h2><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-rrhh.png" class="icono-menu left">
 	
 							<!-- TEXTO HEADER-->
-							<h3 class="tr">TRABAJA CON NOSOTROS</h3>
-							<h4 class="tr-2">Queremos que seas parte de este gran equipo</h4>
-							<a href="" style="display:inline-block;"><div class="send-rrhh" style="color:white;border-radius: 5px;">Envianos tu CV</div></a>
+							<h3 class="tr"><?php echo Textos::model()->GetText(110); ?></h3>
+							<h4 class="tr-2"><?php echo Textos::model()->GetText(478); ?></h4>
+							<a href="" style="display:inline-block;"><div class="send-rrhh" style="color:white;border-radius: 5px;"><?php echo Textos::model()->GetText(111); ?></div></a>
 
 						
 				</div>  <!-- termina header -->
@@ -1079,7 +1083,7 @@
 				<!-- TEXTO-->
 				<div id="whiteFiller"style="background-color:white;position:absolute;width:100%;height:400px;z-index:2;top:226px;"></div>
 				<div style="width:100%;position:relative;z-index:4">
-				<p class="p-rrhh-home" style="width:50%;display:inline-block;margin:0;padding:0;" >Apostamos al compromiso y la pasión de nuestros empleados como pilares indispensables para un sólido crecimiento de toda la compañía.</p>
+				<p class="p-rrhh-home" style="width:50%;display:inline-block;margin:0;padding:0;" ><?php echo Textos::model()->GetText(112); ?></p>
 				</div>
 				
 				</div>
@@ -1098,7 +1102,7 @@
 				
 				<!-- ////////// TITULO ////////////// -->
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="display:inline-block;">
-					<h1 id="contacto" style="margin:0;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-bullet--.png"/> CONTACTO <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-bullet--.png" /></h1>
+					<h1 id="contacto" style="margin:0;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-bullet--.png"/> <?php echo Textos::model()->GetText(113); ?><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-bullet--.png" /></h1>
 					<!--<img style="width: 100%;position:relative;" class="hidden-lg hidden-md" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-home-abajo.png" alt="" />!-->
 					<img style="width: 100%;position:relative;" class="" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-home-abajo.png" alt="" />
 				</div>
@@ -1109,7 +1113,7 @@
 					<!--********** DESCRIPCIÓN / UBICACIÓN **********  -->
 					<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12" id="descripcion" style="display:inline-block;float:initial;padding-bottom:20px;overflow:hidden;" hid="2">
                         
-						<p class="ubicacion"><img class="ico-ubi" src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-ubicacion.png"/>UBICACIÓN</p>
+						<p style="text-transform: uppercase;" class="ubicacion"><img class="ico-ubi" src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-ubicacion.png"/><?php echo Textos::model()->GetText(479); ?></p>
                         
                         <p>Ruta Panamericana Km 38,5 Garín</p>
                        
@@ -1126,15 +1130,15 @@
 				
 					<!-- ////////// INFORMACIÓN ////////////// -->        
 					<div id="infodcha" class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="display:inline-block;float:initial;text-align:center;" hid="2">        
-						<div id="enviando">Eviando</div>
-						<div id="enviado">Enviado</div>
-						<div id="errorEnvio">Error envio</div>
+						<div id="enviando"><?php echo Textos::model()->GetText(481); ?></div>
+						<div id="enviado"><?php echo Textos::model()->GetText(480); ?></div>
+						<div id="errorEnvio"><?php echo Textos::model()->GetText(482); ?></div>
 						<form id="form1" class="col-lg-12 col-md-12 col-xs-12" style="float:initial;display:inline-block;text-align:center;">
 							
 							<!-- ******** NOMBRE ******** -->
 							<div class="col-lg-6  col-md-6  col-xs-12">
 								<div class="input-contacto">
-								<label for="exampleInputName2">NOMBRE</label>
+								<label for="exampleInputName2"><p style="text-transform: uppercase;"><?php echo Textos::model()->GetText(114); ?></p></label>
 									<input class="form-inline required" name="nombre" type="text" value="">
 								</div>
 							</div>
@@ -1143,7 +1147,7 @@
 							<!-- ******** APELLIDO ******** -->
 							<div class="col-lg-6  col-md-6 col-xs-12">
 								<div class="input-contacto">
-									<label for="exampleInputName2">APELLIDO</label>
+									<label for="exampleInputName2"><p style="text-transform: uppercase;"><?php echo Textos::model()->GetText(115); ?></p></label>
 									<input class="form-inline" name="apellido" type="text" value="">
 								</div>
 							</div>
@@ -1161,7 +1165,7 @@
 							<!-- ******** TELÉFONO ******** -->
 							<div class="col-lg-6  col-md-6 col-xs-12">
 								<div class="input-contacto">
-								<label for="exampleInputName2">TELÉFONO</label>
+								<label for="exampleInputName2"><p style="text-transform: uppercase;"><?php echo Textos::model()->GetText(117); ?></p></label>
 									<input class="form-inline" name="telefono" type="text" value="">
 									</div>
 							</div>
@@ -1170,7 +1174,7 @@
 							<!-- ******** EMPRESA ******** -->
 							<div class="col-lg-6  col-md-6 col-xs-12">
 							<div class="input-contacto">
-								<label for="exampleInputName2">EMPRESA</label>
+								<label for="exampleInputName2"><p style="text-transform: uppercase;"><?php echo Textos::model()->GetText(118); ?></p></label>
 									<input class="form-inline" name="empresa" type="text" value="">
 									</div>
 							</div>
@@ -1179,7 +1183,7 @@
 							<!-- ******** CARGO ******** -->
 							<div class="col-lg-6  col-md-6 col-xs-12">
 							<div class="input-contacto">
-								<label for="exampleInputName2">CARGO</label>
+								<label for="exampleInputName2"><p style="text-transform: uppercase;"><?php echo Textos::model()->GetText(119); ?></p></label>
 									<input class="form-inline" name="cargo" type="text" value="">
 									</div>
 							</div>
@@ -1188,7 +1192,7 @@
 							<!-- ******** DIRECCIÓN ******** -->
 							<div class="col-lg-6  col-md-6 col-xs-12">
 								<div class="input-contacto">
-									<label for="exampleInputName2">DIRECCIÓN</label>
+									<label for="exampleInputName2"><p style="text-transform: uppercase;"><?php echo Textos::model()->GetText(120); ?></p></label>
 									<input class="form-inline" name="direccion" type="text" value="">
 								</div>
 							</div>
@@ -1197,7 +1201,7 @@
 							<!-- ******** DEPARTAMENTO ******** -->
 							<div class="col-lg-6  col-md-6 col-xs-12">
 							<div class="input-contacto">
-									<label for="exampleInputName2">DEPARTAMENTO</label>
+									<label for="exampleInputName2"><p style="text-transform: uppercase;"><?php echo Textos::model()->GetText(121); ?></p></label>
 										<input class="form-inline" name="departamento" type="text" value="">
 										</div>
 							</div>
@@ -1206,7 +1210,7 @@
 							<!-- ******** MENSAJE ******** -->
 							<div class="col-md-12 col-md-12 col-sm-12 col-xs-12">
 								<div class="textarea-contacto">
-								<label id="textarea-label" for="exampleInputName2">MENSAJE</label> 
+								<label id="textarea-label" for="exampleInputName2"><p style="text-transform: uppercase;"><?php echo Textos::model()->GetText(122); ?></p></label> 
 									<textarea rows="4" id="textarea" name="mensaje" class="required"></textarea>
 									</div>
 							</div>  <!--termina form textarea-->

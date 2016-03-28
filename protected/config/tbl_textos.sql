@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 28-03-2016 a las 15:33:24
+-- Tiempo de generación: 28-03-2016 a las 18:58:29
 -- Versión del servidor: 10.1.9-MariaDB
 -- Versión de PHP: 5.5.30
 
@@ -86,7 +86,7 @@ INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (46, 'Un gran objetivo, la Frontera Productiva ', 'A Great Objective, the Production Frontier', 'Um grande Objetivo, a Fronteira Produtiva'),
 (47, 'En poco más de 30 años habrá un 35 % más de personas sobre la tierra y la producción de carne deberá aumentar un 70 %, según estimaciones de la FAO, la Organización de las Naciones Unidas para la Alimentación y la Agricultura. Los países de América Latina cuentan recursos naturales, profesionales y tecnologías suficientes para abastecer la gran demanda mundial de proteína animal, aunque para lograrlo los productores deberán intensificar sus sistemas y elevar los índices de  producción en carne y leche.', 'In a little over 30 years there will be 35% more people on Earth and meat production should increase 70%, according to FAO (Food and Agriculture Organisation) predictions.  Latin American countries have sufficient raw materials, professionals and technology to supply the large demand of animal protein worldwide, however to accomplish such a task producers must intensify their systems and increase beef and dairy production rates.', 'Em aproximadamente 30 anos haverá 35% a mais de pessoas sobre o planeta e a produção de carne deverá aumentar em 7%, segundo estimativas da FAO, a Organização das Nações Unidas para Alimentação e Agricultura. Os países da América Latina tem recursos naturais, profissionais e tecnológicos suficiente para abastecer grande parte da demanda mundial de proteína animal, para conseguir isto os produtores deverão intensificar seus sistemas e elevar os índices de produção de carne e leite'),
 (48, 'En Biogénesis Bagó creemos que es posible. Por eso pusimos en marcha nuestro programa “Fronteras Productivas”, una herramienta de trabajo que,  con nuestro asesoramiento y la asistencia de un médico veterinario,  guía en la incorporación de mejoras claves en sanidad, nutrición, genética y manejo,  para que los establecimientos puedan expresar su mayor potencial, sin necesidad de hacer grandes inversiones. ', 'In Biogénesis Bagó we believe this is possible.  For this reason, we started our programme “Production Frontiers”, a work tool that, with our counselling and assistance from a veterinarian, will guide one to incorporate key improvements in health, nutrition, genetics and management, thus allowing establishments to express their maximum potential without having to make large investments.', 'Na Biogénesis Bagó, acreditamos que isto é possível. Por isso nosso programa   “Fronteiras Produtivas”, é uma ferramenta de trabalho que, com nosso   assessoramento e assistência de um médico veterinário, levará ao   melhoramento da sanidade animal, nutrição, genética e manejo, para que os   estabelecimentos possam atingir seu potencial máximo, sem ter a necessidade   de fazer grandes investimentos.'),
-(49, 'Productores de la región  ya lograron llegar a su  frontera, alcanzado el  máximo rendimiento de sus modelos productivos.  Muchos otros están en camino. Para sumarse al desafío, <a href="http://www.fronterasproductivas.com">www.fronterasproductivas.com</a>', 'Producers from the region have already reached their frontier, achieving maximum performance of their production models.  Many others are on their way.  To join the challenge go to <a href="http://www.fronterasproductivas.com">www.fronterasproductivas.com</a>', 'Produtores da região já conseguiram atingir a fronteira produtiva, alcançando o   máximo rendimento de seus modelos produtivos. Muitos outros já estão à   caminho. Para entra no desafio, <a href="http://www.fronterasproductivas.com">www.fronterasproductivas.com</a>'),
+(49, 'Productores de la región  ya lograron llegar a su  frontera, alcanzado el  máximo rendimiento de sus modelos productivos.  Muchos otros están en camino. Para sumarse al desafío, <a href="http://www.fronterasproductivas.com">www.fronterasproductivas.com</a>.', 'Producers from the region have already reached their frontier, achieving maximum performance of their production models.  Many others are on their way.  To join the challenge go to <a href="http://www.fronterasproductivas.com">www.fronterasproductivas.com</a>', 'Produtores da região já conseguiram atingir a fronteira produtiva, alcançando o   máximo rendimento de seus modelos produtivos. Muitos outros já estão à   caminho. Para entra no desafio, <a href="http://www.fronterasproductivas.com">www.fronterasproductivas.com</a>'),
 (50, 'Control de la Fiebre Aftosa', 'Control of Foot and Mouth Disease', 'Controle da Febre Aftosa'),
 (51, 'Nuestra compañía es reconocida en el mundo por su principal aporte en el control de la Fiebre Aftosa y por su integración en el trabajo con organismos públicos e instituciones científicas internacionales. ', 'Our company is world renowned for its major contribution to control Foot and Mouth Disease and its collaboration with public organisations and international scientific institutions.', 'Nossa empresa é reconhecida no mundo pela sua principal contribuição no   controle da Febre Aftosa e por sua integração no trabalho com órgãos públicos   e instituições científicas internacionais.'),
 (52, 'Fruto de la inversión en tecnología y de nuestro compromiso por resolver las principales enfermedades que afectan el desarrollo de la producción pecuaria, en 1952 obtuvimos el primer registro para la comercialización y uso de la vacuna en la Argentina. En la década del 90, logramos desarrollar la primera vacuna anti aftosa de América Latina “pura”, libre de proteínas no estructurales, que resultó clave para el control de brotes y  garantizar el status sanitario en los países  de la región, fundamental para el ingreso de la producción en los mercados internacionales.', 'Due to our technological investment and our commitment to help resolve the main diseases that affect livestock production development, in 1952 we obtained the first registration to commercialise and use the vaccine in Argentina.  In the 90s, we developed the first “pure” vaccine against Foot and Mouth Disease in Latin America, free of non-structural proteins, which proved to be vital for controlling outbreaks and guaranteeing sanitation status in countries of the region, fundamentally to be able to enter products into international markets.', 'Resultado do investimento em tecnologia, e do compromisso em resolver os   problemas causados pelas principais doenças que afetam o desenvolvimento   da produção pecuária, em 1952 obtivemos o primeiro registro para   comercialização e uso da vacina na Argentina. Na década de 90, conseguimos   desenvolver a primeira vacina antiaftosa da América Latina “pura”, livre de   proteínas não estruturais, que resultou na chave para o controle de focos e   garantir o status sanitário nos países da região, fundamental para atuar no   mercado internacional.'),
@@ -490,7 +490,31 @@ INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (455, '<strong>Nuestro rol social en emergencias</strong> ', '<strong>Our social role in emergencies</strong> ', '<strong>Nosso rol social para emergências </strong>'),
 (456, '<strong>Cuidado del medio ambiente</strong> ', '<strong>Taking Care of the Environment</strong>', '<strong>Cuidado com o meio ambiente</strong> '),
 (457, '<strong>Encuentros Biosolidarios </strong>', '<strong>Solidarity Meetings</strong>', '<strong> Encontros Biosolidários</strong>'),
-(458, 'Fundaciones con las que colaboramos:', '', '');
+(458, 'Fundaciones con las que colaboramos', '', ''),
+(459, 'Casa Matriz', '', ''),
+(460, 'Filiales', '', ''),
+(461, 'Banco de vacunas', '', ''),
+(462, 'Antiaftosa de Norteamérica ', '', ''),
+(463, 'Centro América', '', ''),
+(464, 'Biogénesis Bagó de México S.A. de C.V.', '', ''),
+(465, 'Av. Periférico Sur 6677 Piso 5, Delegación Xochimilco, Colonia Ejidos de Tepepan, México DF.', '', ''),
+(466, 'TEL', '', ''),
+(467, '(52) (55) 5555 8223 / 5555 8216 <br/>(Llamada sin costo desde el interior del país) 01-800-999-2240 ', '', ''),
+(468, 'Distribuidoras:', '', ''),
+(469, 'ELANCO: Eli Lilly y Cía de México S.A. de C.V.', '', ''),
+(470, 'Calzada de Tlalpan #2024, Colonia Campestre Churubusco, C.P. 04200, México, D.F.', '', ''),
+(471, 'Filial Centro América', '', ''),
+(472, 'Filial Biogénesis Bagó de Panamá S.A.', '', ''),
+(473, 'Beatriz M. de Cabal y 51. Ciudad de Panamá', '', ''),
+(474, ' Importaciones El Universo.', '', ''),
+(475, 'Calle Ppal Llano Bonito, Juan Díaz - Edificio Imp. El Universo. Apartado Postal 0838-02057 Zona 12, Panamá.', '', ''),
+(476, 'Vitaminas y', '', ''),
+(477, 'minerales', '', ''),
+(478, 'Queremos que seas parte de este gran equipo', '', ''),
+(479, 'Ubicación', '', ''),
+(480, 'Enviado', '', ''),
+(481, 'Enviando', '', ''),
+(482, 'Error de Envio', '', '');
 
 --
 -- Índices para tablas volcadas
@@ -510,7 +534,7 @@ ALTER TABLE `tbl_textos`
 -- AUTO_INCREMENT de la tabla `tbl_textos`
 --
 ALTER TABLE `tbl_textos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=459;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=483;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
