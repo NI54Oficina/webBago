@@ -16,7 +16,7 @@
 	</div>
 	
 	
-<div class="div-texto-aftosa col-lg-5 col-md-5 col-sm-12 col-xs-12" style="text-align: left;">
+<div class="div-texto-aftosa col-lg-6 col-md-6 col-sm-12 col-xs-12" style="text-align: left;">
 		
 	<div class="tabla-aftosa col-lg-10 col-md-10 col-sm-12 col-xs-12" style="text-align: left;">
 
