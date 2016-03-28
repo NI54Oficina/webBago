@@ -20,7 +20,7 @@
 	</div>
 
 	
-<div class="div-texto-aftosa col-lg-5 col-md-5 col-sm-12 col-xs-12" style="text-align: left;">
+<div class="div-texto-aftosa col-lg-6 col-md-6 col-sm-12 col-xs-12" style="text-align: left;">
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align:right;" id="nuestrasPlantasTopVideo">
 		<a href="nuestras-plantas-menu.php" style="display:inline-block;float:right;width:150%;" id="videoPlanta">
 			<object id="videoPlantaVideo" width="100%" height="500" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" >
