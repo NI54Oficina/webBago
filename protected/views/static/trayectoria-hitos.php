@@ -200,9 +200,10 @@
 		<p class="nace-linea-tiempo">Nace</p> <p class="bago-linea-tiempo" style="color:#011E49;">Biogénesis Bagó</p>
 
 	</div>
-		<img class="img-cd" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo-antiguo-biogenesis.png"  style="width:150px;display: block; margin: 0; text-align: center; margin-left: 175px; margin-top: 4%;"/>
-		
-		<section id="cd-timeline" class="cd-container">
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		<img class="img-cd" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo-antiguo-biogenesis.png"  style="width:150px;display: block; margin:auto;"/>
+	</div>
+		<section id="cd-timeline" class="cd-container" style="margin-top: 7em;">
 
 		<div class="cd-timeline-block">
 			<div class="cd-timeline-img cd-picture">
