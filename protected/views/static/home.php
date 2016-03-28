@@ -1,5 +1,6 @@
 <?php include('head-index.php'); ?>
 
+<?php $meses = array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"); ?>
 
 <body id="skrollable" style="width:100%;overflow-x:hidden;">
 
@@ -447,57 +448,29 @@
 		
 					<!-- ///////////////// TRABAJOS TÉCNICOS /////////////////  -->
 					<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12" id="noticias-trabajos">
-            	
+						<?php 	$notas =Notas::model()->findAllByAttributes(array('seccion'=>"tecnica"));
+						if(count($notas)>0){  ?>
+						
+						<?php foreach($notas as $nota){ ?>
 						<!-- ***** NOTICIA ***** -->
-						<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12" id="texto">
-                
-							<h4 id="fecha-info-tec"> 2015 </h4>
+						<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12" id="texto" >
+							<div hid="3">
+							<h4 id="fecha-info-tec"> <?php $timeStamp=strtotime($nota->fecha); echo date('Y',$timeStamp) ; ?> </h4>
                     
-							<h2 id="titulo-info-tec"> Octubre </h2>
+							<h2 id="titulo-info-tec" > <?php echo $meses[date('n',$timeStamp)-1]; ?> </h2>
                     
-							<h5 id="protocolo-info-tec"> Uso de vacunas bioabortogen h y bioleptogen reduce la perdida de preñez entre 30 y 60 dias en vaquillonas de carne</h5>
+							<h5 id="protocolo-info-tec" > <?php echo $nota->titulo; ?></h5>
                     
-							<p id="resumen-noticias"> El objetivo del estudio fue validar el efecto del uso de las vacunas reproductivas Bioabortogen H® y Bioleptogen® (protección contra IBR, BVD... </p>
-                    
-							<h3><a href="#" id="leer-mas"> Leer más </a></h3>
+							<p id="resumen-noticias"> <?php echo $nota->bajada; ?> </p>
+							</div>
+							<h3><a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/nota-tecnica/<?php echo $nota->id; ?>" id="leer-mas"> Leer más </a></h3>
                 
 						</div> <!-- Termina noticia -->      
-                 
-				 
-				 
-						<!-- ***** NOTICIA ***** -->
-						<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12" id="texto">
-                
-							<h4 id="fecha-info-tec"> 2015 </h4>
-                    
-							<h2 id="titulo-info-tec"> Julio </h2>
-                    
-							<h5 id="protocolo-info-tec"> Vacunación estratégica contra Diarrea Viral Bovina (BVD), Rinotraqueitis infecciosa Bovina (IBR) y Leptospirosis mejora la tasa de preñez en protocolos de IATF en vacas raza Nelore  </h5>
-                    
-							<p id="resumen-noticias"> El impacto negativo de algunas enfermedades como BVD, IBR y... </p>
-                    
-							<h3 style="margin-top: 17%;"><a href="#" id="leer-mas"> Leer más </a></h3>
-                
-						</div> <!-- Termina noticia --> 
-                 
-				 
-				 
-						<!-- ***** NOTICIA ***** -->			 
-						<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12" id="texto">
-                
-							<h4 id="fecha-info-tec"> 2015 </h4>
-                    
-							<h2 id="titulo-info-tec"> Octubre </h2>
-                    
-							<h5 id="protocolo-info-tec"> Utilización de vacuna Escherichia coli J5 en la inmunización de vacas lecheras contra mastitis causada por E. coli¹   </h5>
-                    
-							<p id="resumen-noticias"> Se evaluó la utilización de una  vacuna de Escherichia coli J5, en la inmunización de vacas lecheras, para la prevención y control de la mastitis causada... </p>
-                    
-							<h3><a href="#" id="leer-mas"> Leer más </a></h3>
-                
-						</div> <!-- Termina noticia --> 
-                 
-                 
+						
+						<?php 
+							} 
+						
+						} ?>
    
 					</div> <!-- Termina texto-completo -->  
             
@@ -944,12 +917,12 @@
 						<?php $revistas= Revista::model()->findAll(array('order'=>'fecha DESC')); ?>
 						<?php $primeraRevista=array_shift($revistas); ?>
 						<!-- IMAGEN REVISTA-->
-						<img class="col-lg-6 col-md-6"  id="img-rev" src="<?php echo Yii::app()->request->baseUrl; ?>/uploads/molino/img/destacada-30.png"/>
+						<img class="col-lg-6 col-md-6"  id="img-rev" src="<?php echo Yii::app()->request->baseUrl; ?>/uploads/molino/img/destacada-<?php echo $primeraRevista->numero; ?>.png"/>
 		
 						<!-- INFORMACIÓN REVISTA -->
 						<div id="info-revista" class="col-lg-6 col-md-6">
 						
-							<?php $meses = array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"); ?>
+							
 	
 							<h1 ><span class="border-tit">R</span>evista El Molino</h1>
 		

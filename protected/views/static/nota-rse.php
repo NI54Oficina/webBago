@@ -11,13 +11,7 @@
 		<h2  class="h2-aftosa">Institucional</h2>	
 		<div style="width:50%;height:1px;display:inline-block;border-top:1px solid black;"></div>
 		</div>
-		<!--<p class="fundaciones" >Fundaciones con  las que colaboramos:</p>
-				<div><img class="img-fundaciones-1" src="<?php echo Yii::app()->request->baseUrl; ?>/img/rse-prosaia.png"  /></div>
-				<div><img class="img-fundaciones-2" src="<?php echo Yii::app()->request->baseUrl; ?>/img/rse-garrahan.png"  /></div>
-				<div><img class="img-fundaciones-3" src="<?php echo Yii::app()->request->baseUrl; ?>/img/rse-mundo-sano.png"  /></div>
-				<div><img class="img-fundaciones-4" src="<?php echo Yii::app()->request->baseUrl; ?>/img/rse-misiones-rurales.png"  /></div>
-				<div><img class="img-fundaciones-5" src="<?php echo Yii::app()->request->baseUrl; ?>/img/rse-solidagro.png"  /></div>
-				<div><img class="img-fundaciones-6" src="<?php echo Yii::app()->request->baseUrl; ?>/img/rse-fernandez.png"  /></div>-->
+		
 			</div>
 	</div>
 	</div>

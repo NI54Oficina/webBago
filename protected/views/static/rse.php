@@ -87,7 +87,7 @@
 					foreach($notas as $nota){
 					?>
 						<ul style="padding:0;">
-							<li><a hfref=""><p><?php echo $nota->fecha; ?><a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/nota-prensa/1" style="float: right;padding-right: 7%;" style="float: right;padding-right: 7%;">Leer  más</a><div class="linea-rse-not"></div></p><h1 class="h1-noticias-rse"><?php echo $nota->titulo; ?> </h1></a></li>
+							<li><a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/nota-rse/<?php echo $nota->id; ?>"><p><?php echo $nota->fecha; ?><a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/nota-rse/<?php echo $nota->id; ?>" style="float: right;padding-right: 7%;" style="float: right;padding-right: 7%;">Leer  más</a><div class="linea-rse-not"></div></p><h1 class="h1-noticias-rse"><?php echo $nota->titulo; ?> </h1></a></li>
 						</ul>
 					<?php } ?>
 				</div>
