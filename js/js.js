@@ -175,19 +175,28 @@ $(function(){
 	});
 	
 	function ResetHeight(){
-		$("[hid=1]").css("height","auto");
+		var id=1;
+		while($( "[hid="+id+"]" ).length){
+			$("[hid="+id+"]").css("height","auto");
+			id++;
+		}
 	}
 	
 	function SameHeight(){
-		var hidHeight=0;
-		ResetHeight();
-		$("[hid=1]").each(function(){
-			if($(this).innerHeight()>hidHeight){
-				hidHeight= $(this).innerHeight();
-			}
-			
-		});
-		$("[hid=1]").css("height",hidHeight+"px");
+		
+		var auxId=1;
+		while($( "[hid="+auxId+"]" ).length){
+			var hidHeight=0;
+			ResetHeight();
+			$("[hid="+auxId+"]").each(function(){
+				if($(this).innerHeight()>hidHeight){
+					hidHeight= $(this).innerHeight();
+				}
+				
+			});
+			$("[hid="+auxId+"]").css("height",hidHeight+"px");
+			auxId++;
+		}
 	}
 
    $(document).ready(function(){

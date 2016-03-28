@@ -1107,7 +1107,7 @@
 			
     
 					<!--********** DESCRIPCIÓN / UBICACIÓN **********  -->
-					<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12" id="descripcion" style="display:inline-block;float:initial;padding-bottom:20px;">
+					<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12" id="descripcion" style="display:inline-block;float:initial;padding-bottom:20px;overflow:hidden;" hid="2">
                         
 						<p class="ubicacion"><img class="ico-ubi" src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-ubicacion.png"/>UBICACIÓN</p>
                         
@@ -1125,7 +1125,7 @@
                   
 				
 					<!-- ////////// INFORMACIÓN ////////////// -->        
-					<div id="infodcha" class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="display:inline-block;float:initial;text-align:center;" >        
+					<div id="infodcha" class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="display:inline-block;float:initial;text-align:center;" hid="2">        
 						<div id="enviando">Eviando</div>
 						<div id="enviado">Enviado</div>
 						<div id="errorEnvio">Error envio</div>
