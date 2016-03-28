@@ -6238,3 +6238,17 @@ figure.snip1156:hover .salud-ambiental{
     padding-right: 7px;
 }
 
+.container-prensa ul{
+	margin:0;
+	
+}
+
+.container-prensa .animate li{
+	margin:0;
+	border:none;
+}
+
+.container-prensa .after li{
+	border:1px solid #E0E0E0;
+	margin-bottom:5px;
+}
