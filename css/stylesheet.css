@@ -4155,7 +4155,8 @@ section{
 
 #info-revista p{
     margin-left: 0%;
-    font-size: 14px;
+    font-size: 13px;
+    width: 57%;
 }
 
 #info-revista h1{
