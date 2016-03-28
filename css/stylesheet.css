@@ -6260,42 +6260,6 @@ figure.snip1156:hover .salud-ambiental{
 }
 
 
-/** Fix menu ipad**/
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (orientation: portrait) 
-  and (-webkit-min-device-pixel-ratio: 1) {
-	.navbar-collapse.collapse{
-		display:none !important;
-		visibility:hidden !important;
-		z-index:0;
-	}
-	.navbar-collapse.collapse.in{
-		display:block !important;
-		visibility:visible !important;
-		z-index:0;
-	}
-	.navbar-nav .m-l{
-		margin-left:0;
-	}
-	.navbar-nav > li > .dropdown-menu{
-		width:100vw;
-		position:initial;
-		background-color:transparent;
-	}
-	.navbar-nav{
-		float:initial;
-	}
-	.navbar-toggle{
-		display:inline-block;
-		position:relative;
-		z-index:100000;
-	}
- }
-/** fin fix ipad menu**/
-
-
 .container-infotec-noticias{
 	margin-top:0;
 	padding-bottom:0;    
@@ -6364,3 +6328,38 @@ figure.snip1156:hover .salud-ambiental{
     padding-bottom: 1%;
 }
 
+
+/** Fix menu ipad**/
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+	.navbar-collapse.collapse{
+		display:none !important;
+		visibility:hidden !important;
+		z-index:0;
+	}
+	.navbar-collapse.collapse.in{
+		display:block !important;
+		visibility:visible !important;
+		z-index:0;
+	}
+	.navbar-nav .m-l{
+		margin-left:0;
+	}
+	.navbar-nav > li > .dropdown-menu{
+		width:100vw;
+		position:initial;
+		background-color:transparent;
+	}
+	.navbar-nav{
+		float:initial;
+	}
+	.navbar-toggle{
+		display:inline-block;
+		position:relative;
+		z-index:100000;
+	}
+ }
+/** fin fix ipad menu**/

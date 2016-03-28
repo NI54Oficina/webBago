@@ -27,7 +27,7 @@
 					<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 " style="margin-top:0;height: 414px;border: 1px solid #66cced;box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.45);margin-right: 1%;width: 270px;margin-bottom:1%;" >
 						
 						<div style="margin-top:0;padding:10px;" hid="1">
-							<div style="    margin: auto;text-align:left ">
+							<div style="margin: auto;text-align:center; ">
 								<img style=" width: 64%;" src="<?php echo Yii::app()->request->baseUrl; ?>/uploads/molino/img/portada-<?php echo $nota->numero; ?>.png">
 							</div>
 							<p  style="font-size: 12px; margin: 0;"><?php 
