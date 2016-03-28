@@ -8,10 +8,10 @@
 	<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 	<div class="side-title">
 		<div style="display:inline-block;">
-		<h2  class="h2-aftosa">Institucional</h2>	
+		<h2  class="h2-aftosa"><?php echo Textos::model()->GetText(347); ?></h2>	
 		<div style="width:50%;height:1px;display:inline-block;border-top:1px solid black;"></div>
 		</div>
-		<p class="fundaciones" >Fundaciones con  las que colaboramos:</p>
+		<p class="fundaciones" ><?php echo Textos::model()->GetText(458); ?></p>
 				<div><img class="img-fundaciones-1" src="<?php echo Yii::app()->request->baseUrl; ?>/img/rse-prosaia.png"  /></div>
 				<div><img class="img-fundaciones-2" src="<?php echo Yii::app()->request->baseUrl; ?>/img/rse-garrahan.png"  /></div>
 				<div><img class="img-fundaciones-3" src="<?php echo Yii::app()->request->baseUrl; ?>/img/rse-mundo-sano.png"  /></div>
@@ -28,9 +28,9 @@
 	<div class="tabla-aftosa col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			
 			<div  class="tr  col-lg-12 col-md-12 col-sm-12 col-xs-12 inner-text" style="text-shadow:none;padding-top:0;margin: 0;">			
-				<h2 class="h2-aftosa hidden-md hidden-lg" style=""><?php echo Textos::model()->GetText(347); ?><br /><br /><br /></h2>
+				<h2 class="h2-aftosa hidden-md hidden-lg h2-titulo" ><?php echo Textos::model()->GetText(347); ?><br /></h2>
 					<h3 class="h3-rse" ><?php echo Textos::model()->GetText(63); ?></h3>
-						<p><?php echo Textos::model()->GetText(64); ?> </p>
+						<p style="margin-top:2% ;margin-bottom:3.5%;"><?php echo Textos::model()->GetText(64); ?> </p>
 				
 					
 				<h4  class="h3-rse" style="display:inline-block;"><?php echo Textos::model()->GetText(65); ?></h4>
@@ -45,14 +45,14 @@
 				<h4  class="h2-rse" style="display:inline-block;"><?php echo Textos::model()->GetText(456); ?></h4>
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hidden-xs hidden-sm linea-rse"> </div>
 
-                <p style="margin-top:3%;"><?php echo Textos::model()->GetText(67); ?></p>
+                <p style="margin-top:2% ;margin-bottom:3.5%;"><?php echo Textos::model()->GetText(67); ?></p>
 
 				<h4  class="h3-rse" style="display:inline-block;"><?php echo Textos::model()->GetText(68); ?></h4>
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hidden-xs hidden-sm linea-rse" style="margin-top:2%;" > </div>
 				<h4  class="h2-rse" style="display:inline-block;"><?php echo Textos::model()->GetText(457); ?></h4>
 				
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hidden-xs hidden-sm linea-rse"> </div>
-				<p style="margin-top:3%;"><?php echo Textos::model()->GetText(69); ?><?php echo Textos::model()->GetText(70); ?></p>
+				<p style="margin-top:2%;"><?php echo Textos::model()->GetText(69); ?><?php echo Textos::model()->GetText(70); ?></p>
 
 				
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hidden-xs hidden-sm linea-rse" style="margin-top:2%;" > </div>
@@ -60,7 +60,7 @@
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hidden-xs hidden-sm linea-rse"> </div>
 				<p style="margin-top:0%;">
                 
-                <p style="margin-top: 3%;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-bullet.png"  style="display:inline-block;" /> <?php echo Textos::model()->GetText(72); ?></p>
+                <p style="margin-top:2% ;margin-bottom:3.5%;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-bullet.png"  style="display:inline-block;" /> <?php echo Textos::model()->GetText(72); ?></p>
                 
                 <p><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-bullet.png"  style="display:inline-block;" /> <?php echo Textos::model()->GetText(73); ?></p>
                 
