@@ -116,6 +116,10 @@ $auxId=0;
 				<div id="targets">
 					<?php
 					$target= $producto->target;
+					$targetImages['<img src="'.Yii::app()->getBaseUrl(true).'/images/caballo.png">',
+								'<img src="'.Yii::app()->getBaseUrl(true).'/images/cabra.png">',
+								
+								]
 					if($target[0]!=0){
 						echo '<img src="'.Yii::app()->getBaseUrl(true).'/images/caballo.png">';
 					}else{
