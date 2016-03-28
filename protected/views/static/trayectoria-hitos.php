@@ -74,7 +74,7 @@
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
-				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/rotatec.png" style="width: 100px;"/>
+				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/rotatec.png" style="width: 100px;margin-bottom:10px;"/>
 				<h2  class="h2-cd"><?php echo Textos::model()->GetText(356); ?></h2>
 				<p class="p-cd2"><?php echo Textos::model()->GetText(357); ?></p>
 				<span class="cd-date"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-tiempo-bullet.png"  /></span>
@@ -123,10 +123,14 @@
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
-				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/signo-exclamacion.png" style="width: 22px;padding-bottom: 10px;"/>
-				<h2  class="h2-cd"><?php echo Textos::model()->GetText(361); ?></h2>
-				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/casa.png" style="width:22px;"/>
-				<h2  style="margin-top:2vh;" class="h2-cd"><?php echo Textos::model()->GetText(362); ?></h2>
+				<div>
+					<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/signo-exclamacion.png" style="width: 22px;padding-bottom: 10px;"/>
+					<h2  class="h2-cd"><?php echo Textos::model()->GetText(361); ?></h2>
+				</div>
+				<div style="padding-top:40px;">
+					<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/casa.png" style="width:22px;"/>
+					<h2  style="margin-top:1vh;" class="h2-cd"><?php echo Textos::model()->GetText(362); ?></h2>
+				</div>
 				<span class="cd-date"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-tiempo-bullet.png"  /></span>
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
@@ -153,7 +157,7 @@
 				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/casa.png" style="width:22px;padding-bottom: 10px;"/>
 				<h2  class="h2-cd"><?php echo Textos::model()->GetText(364); ?></h2>
 				<img class="img-cd" src="<?php echo Yii::app()->request->baseUrl; ?>/img/estrella.png" style="width: 22px;margin-top:15%;padding-bottom: 10px;"/>
-				<h2  style="margin-top:2vh;" class="h2-cd"><?php echo Textos::model()->GetText(365); ?></h2>
+				<h2  class="h2-cd"><?php echo Textos::model()->GetText(365); ?></h2>
 				<span class="cd-date"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-tiempo-bullet.png"  /></span>
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
@@ -206,10 +210,14 @@
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
-				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/medalla.png"  style="width:22px;padding-bottom: 10px;"/>
-				<h2 class="h2-cd"><?php echo Textos::model()->GetText(368); ?></h2>
-				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/signo-exclamacion.png" style="width:22px;padding-bottom: 10px;"/>
-				<p class="p-cd2"><?php echo Textos::model()->GetText(369); ?></p>
+				<div>
+					<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/medalla.png"  style="width:22px;padding-bottom: 10px;"/>
+					<h2 class="h2-cd"><?php echo Textos::model()->GetText(368); ?></h2>
+				</div>
+				<div style="padding-top:40px;">
+					<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/signo-exclamacion.png" style="width:22px;padding-bottom: 10px;"/>
+					<p class="p-cd2"><?php echo Textos::model()->GetText(369); ?></p>
+				</div>
 				<span class="cd-date"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-tiempo-bullet.png"  /></span>
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
@@ -256,10 +264,14 @@
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
-				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/estrella.png" style="width:22px;padding-bottom: 10px;"/>
-				<h2 class="h2-cd"><?php echo Textos::model()->GetText(373); ?></h2>
-				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/medalla.png" style="width:22px;padding-bottom: 10px;"/>
-				<p class="p-cd2"><?php echo Textos::model()->GetText(374); ?></p>
+				<div>
+					<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/estrella.png" style="width:22px;padding-bottom: 10px;"/>
+					<h2 class="h2-cd"><?php echo Textos::model()->GetText(373); ?></h2>
+				</div>
+				<div style="padding-top: 40px;">
+					<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/medalla.png" style="width:22px;padding-bottom: 10px;"/>
+					<p class="p-cd2"><?php echo Textos::model()->GetText(374); ?></p>
+				</div>
 				<span class="cd-date"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-tiempo-bullet.png"  /></span>
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
@@ -282,11 +294,16 @@
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
+			<div>
 			<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/bandera.png"/>
 			<h2  class="h2-cd"><?php echo Textos::model()->GetText(375); ?></h2>
-			<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/casa.png" style="width: 22px;padding-bottom: 10px;"/>
-			<h2  style="margin-top:2vh;" class="h2-cd"><?php echo Textos::model()->GetText(377); ?></h2>
+			</div>
+			
+			<div>
+			<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/casa.png" style="width: 22px;padding-top: 40px;"/>
+			<h2  style="margin-top:1vh;" class="h2-cd"><?php echo Textos::model()->GetText(377); ?></h2>
 			<p class="p-cd2"><?php echo Textos::model()->GetText(378); ?></p>
+			</div>
 
 				<span class="cd-date"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-tiempo-bullet.png"  /></span>
 			</div> <!-- cd-timeline-content -->
@@ -295,8 +312,11 @@
 		
 		
 	</section> 
-		<img style="width: 230px;" id="evolucion-logo" src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-evolucion-logo.png" />
-		<h2  style="text-align:center;color:#00173B;"><?php echo Textos::model()->GetText(379); ?></h2>
+	
+	<div class="col-lg-12" style=" margin: auto; text-align: center;">
+		<img style="width: 230px;padding-bottom:20px;" id="evolucion-logo" src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-evolucion-logo.png" />
+	</div>
+		<h2  style="text-align:center;color:#00173B;font-size:23px;"><?php echo Textos::model()->GetText(379); ?></h2>
 		
 		</div>
 	</div>

@@ -242,7 +242,7 @@
 .cd-timeline-content {
   position: relative;
   margin-left: 60px;
-  background: white;
+  background:transparent;
   border-radius: 0.25em;
   padding: 1em;
 }
@@ -306,7 +306,7 @@
   .cd-timeline-content .cd-date {
     position: absolute;
     width: 100%;
-    left: 22vw;
+    left: 25vw;
     top: 6px;
     font-size: 16px;
     font-size: 1rem;
@@ -328,7 +328,7 @@
   }
   .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-date {
     left: auto;
-    right: 22vw;
+    right: 25vw;
     text-align: right;
 	transition: all 0.5s ease;
   }
@@ -497,10 +497,11 @@
 .cd-timeline-block .p-cd2{
 	font-size:11px;
 	transition: 0.3s all ease-in-out;
+    line-height: 18px;
 }
 .img-cd{
 	transition: all 0.5s ease;
-	margin-top:-30%;
+	margin-top:-25px;
 }
 
 .cd-timeline-block.p-cd{
@@ -511,6 +512,8 @@
 
 .cd-timeline-block .h2-cd{
 	transition: 0.3s all ease-in-out;
+    line-height: 22px;
+    margin: 0;
 ;
 }
 

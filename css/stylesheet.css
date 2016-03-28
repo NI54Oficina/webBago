@@ -196,7 +196,7 @@ font-size: 22px;
     font-size: 22px;
     letter-spacing: 1px;
     text-align: center;
-    margin-top: 4%;
+    margin-top: 7%;
     line-height: 42px;
 	display:inline-block;
 }
@@ -648,7 +648,7 @@ font-size: 22px;
 		color:#7F7F7F;
 		text-align:center;
 		margin: 0;
-		
+		font-size:18px
 	}
 	
 	
@@ -1526,6 +1526,7 @@ font-size: 22px;
 		font-weight:700;
 		letter-spacing:0.5px;
 		margin-left:0;
+		width:93%;
 	}
 	
 	.linea-rse-not{
@@ -1922,7 +1923,7 @@ font-size: 22px;
 	.volver p{
 		display:inline-block;
 		vertical-align: middle;
-		margin-top: 2%;
+		margin-top: 3%;
 		margin-left: 120px;
 		color: #B2B2B2;
 		font-size: 17px;
@@ -3008,12 +3009,12 @@ p{
 
 
 #opcion2{
-	margin-left:-3%;
+	margin-left:5px;
 }
 
 
 #opcion3{
-	margin-left:-3%;
+	margin-left:5px;
 }
 
 
@@ -3606,7 +3607,6 @@ section{
 	font-family:'arialregular';
 	color:white;
 	letter-spacing:2px;
-	text-transform:uppercase;
 }
 
 .input-vad:focus{
@@ -3971,8 +3971,8 @@ section{
     display: inline-block;
     text-align: center;
     padding-top: 6%;
-    width: 21%;
-    margin-left: 1%;
+    width: 15%;
+    margin-left: 7%;
 }
 
 
@@ -5420,7 +5420,6 @@ figure.snip1156:hover .salud-ambiental{
 	}
 	
 	 #evolucion-logo{
-		margin-left: 235px;
 	}
 }
 
@@ -5566,7 +5565,6 @@ figure.snip1156:hover .salud-ambiental{
 	}
 	
 	 #evolucion-logo{
-		margin-left: 80px;
 	}
 }
 
@@ -5641,7 +5639,6 @@ figure.snip1156:hover .salud-ambiental{
 	}
 	
 	 #evolucion-logo{
-		margin-left: 80px;
 	}
 	
 }
@@ -5958,6 +5955,7 @@ figure.snip1156:hover .salud-ambiental{
 		font-weight: 700;
 		letter-spacing: 0.5px;
 		margin-left:0;
+		width:93%;
 }
 
 .linea-rse-not {
@@ -6003,7 +6001,6 @@ figure.snip1156:hover .salud-ambiental{
 	}
 	
 	 #evolucion-logo{
-		margin-left: 18px;
 	}
 }
 
@@ -6013,7 +6010,7 @@ figure.snip1156:hover .salud-ambiental{
   and (-webkit-min-device-pixel-ratio: 1) { 
   
 	#evolucion-logo{
-		margin-left: 145px;
+
 	}
   
   	#ul-filiales-paises{
@@ -6053,7 +6050,7 @@ figure.snip1156:hover .salud-ambiental{
 	}
 	
 	.h2-cd {
-		margin-top:10%;
+		margin-top:0;
 	}
 	
 	#container-error{
