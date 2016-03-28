@@ -6259,3 +6259,71 @@ figure.snip1156:hover .salud-ambiental{
 	margin-bottom:5px;
 }
 
+
+.container-infotec-noticias{
+	margin-top:0;
+	padding-bottom:0;    
+	box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.58); 
+	margin-right: 1%;	
+}
+
+.line-infotec-noticias{
+	border-top: 1px solid #444444; 
+	width: 40px;
+	margin-top: -10px;
+}
+
+.leer-infotec-noticias{
+	color: white; 
+	font-family: 'arialregular'; 
+	letter-spacing: 0.5px; 
+	font-weight: 700; 
+	padding-left: 20px;
+}
+
+#titulo-infotec-noticias{
+	color: #66CCED;
+	line-height: 21px; 
+}
+
+.h1-infotec-noticias{
+	color: white;
+	font-family: 'arialregular';
+	margin: 0;
+	padding-top: 5%; 
+	text-align: center; 
+	font-size: 25px;
+	display:inline-block;
+}
+
+.dot-infotec-noticias{
+	width: 10px;
+	height: 10px;
+	background: white;
+	margin-top: 5vh;
+	display: inline-block;
+	vertical-align: super;
+	border-radius: 30px;
+}
+
+.border-infotec-noticias{
+	border-top: 1px solid white;
+    width: 50px;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.line2-infotec-noticias{
+    border-top: 1px solid #6D6D6D;
+    width: 35px;
+    margin-left: 7px;
+}
+
+.pinside-infotec-noticias{
+    color: #6F6F6F;
+    font-size: 13px;
+    border-top: 1px solid #636363;
+    border-bottom: 1px solid grey;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
