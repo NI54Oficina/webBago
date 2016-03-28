@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 28-03-2016 a las 18:58:29
+-- Tiempo de generación: 28-03-2016 a las 19:02:17
 -- Versión del servidor: 10.1.9-MariaDB
 -- Versión de PHP: 5.5.30
 
@@ -508,8 +508,8 @@ INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (473, 'Beatriz M. de Cabal y 51. Ciudad de Panamá', '', ''),
 (474, ' Importaciones El Universo.', '', ''),
 (475, 'Calle Ppal Llano Bonito, Juan Díaz - Edificio Imp. El Universo. Apartado Postal 0838-02057 Zona 12, Panamá.', '', ''),
-(476, 'Vitaminas y', '', ''),
-(477, 'minerales', '', ''),
+(476, 'Vitaminas y', 'Vitamins and', ''),
+(477, 'minerales', 'minerals', ''),
 (478, 'Queremos que seas parte de este gran equipo', '', ''),
 (479, 'Ubicación', '', ''),
 (480, 'Enviado', '', ''),
