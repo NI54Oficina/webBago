@@ -25,9 +25,9 @@
 	
 <div class="div-texto-aftosa col-lg-6 col-md-6 col-sm-12 col-xs-12" style="text-align: left;">
 	
-	<div class="tabla-aftosa col-lg-12 col-md-12 col-sm-12 col-xs-12">
+	<div class="tabla-aftosa col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
 			
-			<div  class="tr  col-lg-12 col-md-12 col-sm-12 col-xs-12 inner-text" style="text-shadow:none;padding-top:0;margin: 0;">			
+			<div  class="tr  col-lg-12 col-md-12 col-sm-12 col-xs-12 inner-text container-prensa" style="text-shadow:none;padding-top:0;margin: 0;">			
 				<h2 class="h2-aftosa hidden-md hidden-lg h2-titulo" ><?php echo Textos::model()->GetText(347); ?><br /></h2>
 					<h3 class="h3-rse" style="margin-bottom: 0%"><?php echo Textos::model()->GetText(63); ?></h3>
 						<p style="margin-top:2% ;margin-bottom:3.5%;"><?php echo Textos::model()->GetText(64); ?> </p>
@@ -70,183 +70,31 @@
                  </p>
 				
 				
-
-				
-				
-				
-				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 animate">
+				<?php 
+				$year= date("Y");
+				while($year>2000){ 
+					$notas =Notas::model()->findAllByAttributes(array('seccion'=>"rse"),"YEAR(fecha)=".$year."");
+					if(count($notas)>0){
+				?>
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 animate" style="margin-top:0;">
 					<div class="btn">
 						<div class="toggleIcon"></div>
-							<div class="ttl"><?php $notas =Notas::model()->findAllByAttributes(array('seccion'=>"rse"),"YEAR(fecha)=2016");?> 2016</div>
-							<div></div>
+							
+							
+							<div class="ttl"><?php echo $year; ?></div>
 					</div>
-					<?php
+					<?php 
 					foreach($notas as $nota){
 					?>
 						<ul style="padding:0;">
-							<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/nota-rse/13"><li><p><?php echo $nota->fecha; ?> <a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/nota-rse/13" style="float: right;padding-right: 7%;">Leer  más</a> <div class="linea-rse-not"></div></p><h1 class="h1-noticias-rse"><?php echo $nota->titulo; ?> </h1> </li></a>
+							<li><a hfref=""><p><?php echo $nota->fecha; ?><a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/nota-prensa/1" style="float: right;padding-right: 7%;" style="float: right;padding-right: 7%;">Leer  más</a><div class="linea-rse-not"></div></p><h1 class="h1-noticias-rse"><?php echo $nota->titulo; ?> </h1></a></li>
 						</ul>
 					<?php } ?>
-					</div>
+				</div>
+				<?php } ?>
+				<?php $year--; ?>
+				<?php } ?>
 					
-				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 animate">
-					<div class="btn">
-						<div class="toggleIcon"></div>
-							<div class="ttl"><?php $notas =Notas::model()->findAllByAttributes(array('seccion'=>"rse"),"YEAR(fecha)=2012");?>  2012</div>
-					</div>
-					<?php
-					foreach($notas as $nota){
-					?>
-						<ul style="padding:0;">
-							<li><a hfref=""><p><?php echo $nota->fecha; ?>   <a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/nota-rse/15" style="float: right;padding-right: 7%;">Leer  más</a><div class="linea-rse-not"></div></p><h1 class="h1-noticias-rse"><?php echo $nota->titulo; ?> </h1></a></li>
-						</ul>
-					<?php } ?>
-					</div>
-					
-
-				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 animate">
-					<div class="btn">
-						<div class="toggleIcon"></div>
-							<div class="ttl"><?php $notas =Notas::model()->findAllByAttributes(array('seccion'=>"rse"),"YEAR(fecha)=2010");?>2010</div>
-					</div>
-					<?php
-					foreach($notas as $nota){
-					?>
-						<ul style="padding:0;">
-							<li><a hfref=""><p><?php echo $nota->fecha; ?> <a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/nota-rse/17" style="float: right;padding-right: 7%;">Leer  más</a><div class="linea-rse-not"></div></p><h1 class="h1-noticias-rse"><?php echo $nota->titulo; ?> </h1></a></li>
-						</ul>
-					<?php } ?>
-					</div>
-					
-					
-
-				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 animate">
-					<div class="btn">
-						<div class="toggleIcon"></div>
-							<div class="ttl"><?php $notas =Notas::model()->findAllByAttributes(array('seccion'=>"rse"),"YEAR(fecha)=2009");?>2009</div>
-					</div>
-					<?php
-					foreach($notas as $nota){
-					?>
-						<ul style="padding:0;">
-							<li><a hfref=""><p><?php echo $nota->fecha; ?> <a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/nota-rse/19" style="float: right;padding-right: 7%;">Leer  más</a><div class="linea-rse-not"></div></p><h1 class="h1-noticias-rse"><?php echo $nota->titulo; ?> </h1></a></li>
-						</ul>
-					<?php } ?>
-					</div>
-					
-						
-	
-				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 animate">
-					<div class="btn">
-						<div class="toggleIcon"></div>
-							<div class="ttl"><?php $notas =Notas::model()->findAllByAttributes(array('seccion'=>"rse"),"YEAR(fecha)=2008");?>2008</div>
-					</div>
-					<?php
-					foreach($notas as $nota){
-					?>
-						<ul style="padding:0;">
-							<li><a hfref=""><p><?php echo $nota->fecha; ?> <a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/nota-rse/23" style="float: right;padding-right: 7%;">Leer  más</a><div class="linea-rse-not"></div></p><h1 class="h1-noticias-rse"><?php echo $nota->titulo; ?> </h1></a></li>
-						</ul>
-					<?php } ?>
-					</div>
-
-	
-				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 animate">
-					<div class="btn">
-						<div class="toggleIcon"></div>
-							<div class="ttl"><?php $notas =Notas::model()->findAllByAttributes(array('seccion'=>"rse"),"YEAR(fecha)=2007");?>2007</div>
-					</div>
-					<?php
-					foreach($notas as $nota){
-					?>
-						<ul style="padding:0;">
-							<li class="ripple" data-ripple-color="#38BFBF"><a hfref=""><p><?php echo $nota->fecha; ?> <a href="" style="float: right;padding-right: 7%;">Leer  más</a><div class="linea-rse-not"></div></p><h1 class="h1-noticias-rse"><?php echo $nota->titulo; ?> </h1></a></li>
-						</ul>
-					<?php } ?>
-					</div>
-					
-
-
-				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 animate">
-					<div class="btn">
-						<div class="toggleIcon"></div>
-							<div class="ttl"><?php $notas =Notas::model()->findAllByAttributes(array('seccion'=>"rse"),"YEAR(fecha)=2006");?>2006</div>
-					</div>
-					<?php
-					foreach($notas as $nota){
-					?>
-						<ul style="padding:0;">
-							<li class="ripple" data-ripple-color="#38BFBF"><a hfref=""><p><?php echo $nota->fecha; ?> <a href="" style="float: right;padding-right: 7%;">Leer  más</a><div class="linea-rse-not"></div></p><h1 class="h1-noticias-rse"><?php echo $nota->titulo; ?> </h1></a></li>
-						</ul>
-					<?php } ?>
-					</div>
-					
-
-
-				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 animate">
-					<div class="btn">
-						<div class="toggleIcon"></div>
-							<div class="ttl"><?php $notas =Notas::model()->findAllByAttributes(array('seccion'=>"rse"),"YEAR(fecha)=2005");?>2005</div>
-					</div>
-					<?php
-					foreach($notas as $nota){
-					?>
-						<ul style="padding:0;">
-							<li class="ripple" data-ripple-color="#38BFBF"><a hfref=""><p><?php echo $nota->fecha; ?> <a href="" style="float: right;padding-right: 7%;">Leer  más</a><div class="linea-rse-not"></div></p><h1 class="h1-noticias-rse"><?php echo $nota->titulo; ?> </h1></a></li>
-						</ul>
-					<?php } ?>
-					</div>
-					
-
-
-
-				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 animate">
-					<div class="btn">
-						<div class="toggleIcon"></div>
-							<div class="ttl"><?php $notas =Notas::model()->findAllByAttributes(array('seccion'=>"rse"),"YEAR(fecha)=2004");?>2004</div>
-					</div>
-					<?php
-					foreach($notas as $nota){
-					?>
-						<ul style="padding:0;">
-							<li class="ripple" data-ripple-color="#38BFBF"><a hfref=""><p><?php echo $nota->fecha; ?> <a href="" style="float: right;padding-right: 7%;">Leer  más</a><div class="linea-rse-not"></div></p><h1 class="h1-noticias-rse"><?php echo $nota->titulo; ?> </h1></a></li>
-						</ul>
-					<?php } ?>
-					</div>
-					
-					
-					
-
-				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 animate">
-					<div class="btn">
-						<div class="toggleIcon"></div>
-							<div class="ttl"><?php $notas =Notas::model()->findAllByAttributes(array('seccion'=>"rse"),"YEAR(fecha)=2003");?>2003</div>
-					</div>
-					<?php
-					foreach($notas as $nota){
-					?>
-						<ul style="padding:0;">
-							<li class="ripple" data-ripple-color="#38BFBF"><a hfref=""><p><?php echo $nota->fecha; ?> <a href="" style="float: right;padding-right: 7%;">Leer  más</a><div class="linea-rse-not"></div></p><h1 class="h1-noticias-rse"><?php echo $nota->titulo; ?> </h1></a></li>
-						</ul>
-					<?php } ?>
-					</div>
-			
-
-			
-
-				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 animate">
-					<div class="btn">
-						<div class="toggleIcon"></div>
-							<div class="ttl"><?php $notas =Notas::model()->findAllByAttributes(array('seccion'=>"rse"),"YEAR(fecha)=2002");?>2002</div>
-					</div>
-					<?php
-					foreach($notas as $nota){
-					?>
-						<ul style="padding:0;">
-							<li class="ripple" data-ripple-color="#38BFBF"><a hfref=""><p><?php echo $nota->fecha; ?> <a href="" style="float: right;padding-right: 7%;">Leer  más</a><div class="linea-rse-not"></div></p><h1 class="h1-noticias-rse"><?php echo $nota->titulo; ?> </h1></a></li>
-						</ul>
-					<?php } ?>
-					</div>
 					
 					
 				<!--PC-->
