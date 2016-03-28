@@ -22,13 +22,13 @@
 
 		<div  class="tr  col-lg-12 col-md-12 col-sm-12 col-xs-12 inner-text" style="text-shadow:none;padding-top:0;">		
 
-				<h2 style="color:#00255B;  text-shadow: none;margin:0;"><?php echo Textos::model()->GetText(385); ?></h2>
+				<h2 style="color:#00255B;  text-shadow: none;margin-bottom:20; margin-top: 0%; font-size:20px;"><?php echo Textos::model()->GetText(385); ?></h2>
 				<p><?php echo Textos::model()->GetText(386); ?>.</p>
 
-				<h2 style="margin-top:12%;color:#00255B;text-shadow: none;"><?php echo Textos::model()->GetText(387); ?></h2>
+				<h2 style="margin-top:12%;color:#00255B;text-shadow: none; font-size: 20px;"><?php echo Textos::model()->GetText(387); ?></h2>
 				<p><?php echo Textos::model()->GetText(388); ?></p>
 				
-				<h2 style="margin-top:12%;color:#00255B"><?php echo Textos::model()->GetText(389); ?></h2>
+				<h2 style="margin-top:12%;color:#00255B; font-size: 20px;"><?php echo Textos::model()->GetText(389); ?></h2>
 				
 				<!--PC-->
 				<div style="color:#8C8C8C">
