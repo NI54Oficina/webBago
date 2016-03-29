@@ -6599,7 +6599,7 @@ figure.snip1156:hover .salud-ambiental{
 }
 
 .leer-infotec-noticias:hover{
-	color:#337ab7;
+	color:#ccc;
 	transition: all 0.6s ease;
 }
 
@@ -6724,7 +6724,7 @@ figure.snip1156:hover .salud-ambiental{
     padding-left: 5px;
 }
 
-.volver-infotec-revista:hover div{
+.volver-infotec-revista:hover div {
 	background-image:url(../img/volver-info-tecnica.png);
 	background-repeat:no-repeat;
 	width: 42px;
