@@ -25,12 +25,21 @@
 		<div class="item" src="miscelaneo/admin">Administrar</div>
 	</div>
 	
+	<div class="item" >Notas</div>
+	<div class="item-list">
+		<div class="item" src="notas/create">Crear</div>
+		<div class="item" src="notas/admin">Administrar</div>
+	</div>
+	
+	
+	
 	
 	<div class="item" >User</div>
 	<div class="item-list">
 		<div class="item" src="user/create">Crear</div>
 		<div class="item" src="user/admin">Administrar</div>
 	</div>
+	
 	
 	<?php
 	if(Yii::app()->user->checkAccess('adminAccess')){
