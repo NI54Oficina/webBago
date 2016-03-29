@@ -6691,11 +6691,13 @@ figure.snip1156:hover .salud-ambiental{
 /** fin fix ipad menu**/
 
 
-#barra-institucional {width:50%;
-					height:1px;display:inline-block;
-						border-top:1px solid #02204C;
-						}
-						
+#barra-institucional {
+	width:50%;
+	height:1px;
+	display:inline-block;
+	border-top:1px solid #02204C;
+}
+
 .volver-infotec-revista div{
 	background-image:url(../img/volver-info-tecnica.png);
 	background-repeat:no-repeat;

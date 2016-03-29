@@ -30,7 +30,7 @@ if($nota && $nota->seccion=="tecnica"){
 	
 	<div class="tabla-aftosa col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
-		<div  class="tr  col-lg-12 col-md-12 col-sm-12 col-xs-12 inner-text" style="text-shadow:none;padding-top:0;">			
+		<div  class="tr col-lg-12 col-md-12 col-sm-12 col-xs-12 inner-text" style="text-shadow:none;padding-top:0;">			
 			<h5 style="color: #6D6D6D; padding-top: 0.5vh; padding-bottom: 0.5vh; padding-left: 1vh; margin: 0;"><?php $timeStamp=strtotime($nota->fecha); echo date('Y',$timeStamp) ; ?></h5>
 			<div class="line2-infotec-noticias"></div>
 			<h1 style="margin-left: 0;padding-bottom:6px;color: #66CCED;font-size: 22px;line-height: 30px;"><?php echo $nota->titulo; ?></h1>
