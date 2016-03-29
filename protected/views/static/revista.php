@@ -23,7 +23,7 @@
 	
 	
 		
-	<div class="col-lg-12 col-md-10 col-sm-12 col-xs-12" style="text-align: left;    margin: 0;padding:0 30px;">
+	<div class="col-lg-12 col-md-10 col-sm-12 col-xs-12" style="text-align: left; margin: 0;padding:0 30px;">
 	
 
 				<?php 

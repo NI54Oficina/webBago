@@ -276,7 +276,7 @@
   height: 0;
   width: 0;
   border: 7px solid transparent;
-  border-right: 7px solid white;
+  border-right: 7px solid transparent;
 }
 @media only screen and (min-width: 768px) {
   .cd-timeline-content h2 {
@@ -298,7 +298,7 @@
     top: 24px;
     left: 100%;
     border-color: transparent;
-    border-left-color: white;
+    border-left-color: transparent;
   }
   .cd-timeline-content .cd-read-more {
     float: left;
@@ -320,7 +320,7 @@
     left: auto;
     right: 100%;
     border-color: transparent;
-    border-right-color: white;
+    border-right-color: transparent;
 	transition: all 0.5s ease;
   }
   .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-read-more {
