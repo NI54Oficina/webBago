@@ -69,7 +69,7 @@
 		</div>-->
 		
 		<!-- +++++ LISTA VERSIONES MOBILE+++++ -->
-		<ul class=" col-lg-2 col-md-2 col-sm-2 col-xs-12" id="ul-nav-2-mobile" style="color:#0C6594;float:right;">
+		<ul class=" col-lg-2 col-md-2 col-sm-10 col-xs-12" id="ul-nav-2-mobile" style="color:#0C6594;">
 				<li class="li-nav-2"><a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/pais/traduccion/id/1/lng/0"style="float:left;padding: 10px 0px;color: #337ab7;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-arg.png" /></a></li>
 				<li class="li-nav-2"><a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/pais/traduccion/id/2/lng/2"style="float:left;padding: 10px 0px;color: #337ab7;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-br.png" /></a></li>
 				<li class="li-nav-2 dropdown" data-toggle="collapse"><a  href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"  style="float:left;padding: 10px 0px;color: #337ab7;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/mas-paises.png"  /></a>
@@ -109,7 +109,7 @@
 	
 		<!-- +++++++++++ BOTONERA +++++++++++ -->
 		<div id="container-ul-nav-header">
-			<ul class="ul-nav col-lg-11 col-md-11 col-sm-9 col-xs-9" id="ul-nav-principal" style="">
+			<ul class="ul-nav col-lg-11 col-md-12 col-sm-11 col-xs-9" id="ul-nav-principal" style="">
 			
 			
 			<!-- INSTITUCIONAL -->
