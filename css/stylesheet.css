@@ -3475,18 +3475,19 @@ a.iprodev:hover {
 }
 
 .tr{
-    padding-top: 3%;
+    padding-top: 1%;
     color: white;
     letter-spacing: 1px;
-    font-size: 37px;
+    font-size: 28px;
     
 }
 
 .tr-2{
-    padding-top: 3%;
+    padding-top: 2%;
     color: white;
-    letter-spacing: 1px;
+    letter-spacing: 1px;line-height: 25px;
     font-size: 19px;
+    margin-bottom: 35px;
 }
 
 #rrhh-img{

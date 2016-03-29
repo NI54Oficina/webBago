@@ -1057,6 +1057,14 @@
 				<div id="whiteFiller"style="background-color:white;position:absolute;width:100%;height:400px;z-index:2;top:226px;"></div>
 				<div style="width:100%;position:relative;z-index:4">
 				<p class="p-rrhh-home" style="width:50%;display:inline-block;margin:0;padding:0;" ><?php echo Textos::model()->GetText(112); ?></p>
+				<p><?php echo Textos::model()->GetText(483); ?>
+				   <?php echo Textos::model()->GetText(484); ?>
+				   <?php echo Textos::model()->GetText(485); ?>
+				   <?php echo Textos::model()->GetText(486); ?>
+				   <?php echo Textos::model()->GetText(487); ?>
+				   <?php echo Textos::model()->GetText(488); ?>
+
+				</p>
 				</div>
 				
 				</div>
