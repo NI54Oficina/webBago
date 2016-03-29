@@ -26,8 +26,10 @@ $this->menu=array(
 		'titulo',
 		'bajada',
 		'extra',
-		'texto',
 		'seccion',
 		'pais',
 	),
 )); ?>
+<div>
+<?php echo $model->texto; ?>
+</div>
