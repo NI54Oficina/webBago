@@ -56,6 +56,7 @@ return array(
 				"paises"=>array("web/get/data/paises"	),
 			
 				'<pais>/<controller:\w+>/<id:\d+>'=>'<controller>/view',
+				'<pais>/<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
 				
 				"gii/<data1>/<data2>"=>array("gii/<data1>/<data2>"),
 				
