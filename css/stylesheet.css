@@ -1751,9 +1751,9 @@ font-size: 22px;
 	
 	.buscador {
 		background-color: #E8E6E6;
-		border: none;
+		border:none;
 		width: 220px;
-		height: 40px;
+		height: 30px;
 		margin-bottom: 15%;
 		padding-left: 4%;
 		display:inline-block;
@@ -2283,9 +2283,9 @@ font-size: 22px;
 	
 	.buscador {
 		background-color: #E8E6E6;
-		border: none;
+		border-radius: 5px;
 		width: 235px;
-		height: 40px;
+		height: 30px;
 		margin-bottom: 15%;
 		padding-left: 4%;
 		display:inline-block;
@@ -3602,7 +3602,7 @@ section{
 	width: 11vw;
     background: rgba(255,255,255,0.2);
     display: inline-block;
-    height: 3.5vh;
+    height: 20px;
     border: 1px solid white;
 	padding-left:5%;
 	font-family:'arialregular';
@@ -5462,14 +5462,15 @@ figure.snip1156:hover .salud-ambiental{
 	}
 	
 	.buscador {
+
 		background-color: #E8E6E6;
-		border: none;
 		width: 180px;
-		height: 40px;
+		height: 25px;
 		margin-bottom: 15%;
 		padding-left: 4%;
 		display:inline-block;
 	}
+
 	.img-fundaciones-1{
 		width:70%;
 	}
