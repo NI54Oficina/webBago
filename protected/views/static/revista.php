@@ -3,7 +3,7 @@
 	
 				<div class="col-lg-2 col-md-2 col-sm-2 col-xs-3" style="display:inline-block;z-index:3;padding-top:3%;">
 					
-					<a class="volver-infotec-revista" href=""><div></div><p>Volver</p></a>
+					<a class="volver-infotec-revista" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/home"><div></div><p>Volver</p></a>
 				
 				</div>
 				
