@@ -9,7 +9,7 @@
 	<div class="side-title">
 		<div style="display:inline-block;">
 		<h2  class="h2-aftosa"><?php echo Textos::model()->GetText(347); ?></h2>	
-		<div style="width:50%;height:1px;display:inline-block;border-top:1px solid black;"></div>
+		<div id="barra-institucional"></div>
 		</div>
 	</div>
 	</div>
