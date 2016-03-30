@@ -61,3 +61,4 @@ templates
 protected\runtime
 *.log
 uploads
+*.log
