@@ -2920,7 +2920,7 @@ footer{
 
 
 #sub-filiales{
-    font-size: 13px;
+    font-size:13px;
 }
 
 
@@ -2937,9 +2937,6 @@ footer{
 p{
 	font-family: arialregular;
 }
-
-
-/** Style info **/
 
 
 /*--------------------------------------------------------------------------------- CSS  INFORMACIÓN TÉCNICA ------------------------------------------------------*/
@@ -2959,6 +2956,8 @@ p{
 
 
 /************ ESTILOS ***********/
+
+
 #info-tec{
 	background: rgb(129, 206, 231);
 	color:white;
@@ -3181,9 +3180,6 @@ p{
 	cursor:pointer;
 }
 
-/** Style institucional **/
-/** de aca para abajo **/
-
 /*--------------------------------------------------------------------------------- CSS  INSTITUCIONAL ------------------------------------------------------*/
 
 /************ FONTS ***********/
@@ -3237,10 +3233,10 @@ p{
 
 .content-home {
 
-    -webkit-animation: fadein 5s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 5s; /* Firefox < 16 */
-        -ms-animation: fadein 5s; /* Internet Explorer */
-         -o-animation: fadein 5s; /* Opera < 12.1 */
+    -webkit-animation: fadein 5s; 
+       -moz-animation: fadein 5s; 
+        -ms-animation: fadein 5s;
+         -o-animation: fadein 5s;
             animation: fadein 5s;
 }
 
@@ -3505,7 +3501,7 @@ a.iprodev:hover {
 #rrhh-img{
 	width: 100%;
 	margin-top: -8%;
-    z-index: 33333;
+    z-index: 4444;
 }
 
 /** Style Vademecum**/
@@ -3635,7 +3631,8 @@ section{
 
 .botonVademecum-Af{
 	background:url(../img/vad-af-normal.png);
-	width:158px;height:158px;
+	width:158px;
+	height:158px;
 	transition: all 0.5s ease;
 }
 
@@ -6305,8 +6302,6 @@ figure.snip1156:hover .salud-ambiental{
 		font-size:12px;
 	}
 	
-	 #evolucion-logo{
-	}
 }
 
 @media screen 
@@ -6467,7 +6462,7 @@ figure.snip1156:hover .salud-ambiental{
 	height: 40px;
 	background-image: url(../img/lupa-vademecum.png);
 	background-repeat: no-repeat;
-	background-position:  right;
+	background-position: right;
 	background-size: 100% 100%;
 	display:inline-block;
 	vertical-align: top;
@@ -6479,7 +6474,7 @@ figure.snip1156:hover .salud-ambiental{
 }
 
 #form1 #enviar:hover{
-	background: transparent;
+	background:transparent;
     border: 2px solid white;
 	transition: all 0.5s ease;
 }
@@ -6490,7 +6485,7 @@ figure.snip1156:hover .salud-ambiental{
 
 }
 
-.imagen-pais {
+.imagen-pais{
 	display:inline-block;
 	width: auto; 
 	margin-top:5px;
@@ -6607,7 +6602,7 @@ figure.snip1156:hover .salud-ambiental{
 }
 
 .leer-infotec-noticias:hover{
-	color:#ccc;
+	color:#003B5D;
 	transition: all 0.6s ease;
 }
 
@@ -6621,7 +6616,7 @@ figure.snip1156:hover .salud-ambiental{
 .h1-infotec-noticias{
 	color: white;
 	font-family: 'arialregular';
-	margin: 0;
+	margin:0;
 	padding-top: 5%; 
 	text-align: center; 
 	font-size: 25px;
@@ -6665,8 +6660,8 @@ figure.snip1156:hover .salud-ambiental{
     color: #6F6F6F;
     font-size: 13px;
     border-top: 1px solid #636363;
-    border-bottom: 1px solid grey;
-    padding-top: 1%;
+    border-bottom:1px solid grey;
+    padding-top:1%;
     padding-bottom: 1%;
 }
 
@@ -6706,8 +6701,7 @@ figure.snip1156:hover .salud-ambiental{
  }
 /** fin fix ipad menu**/
 
-
-#barra-institucional {
+#barra-institucional{
 	width:50%;
 	height:1px;
 	display:inline-block;
@@ -6770,16 +6764,14 @@ figure.snip1156:hover .salud-ambiental{
 #imagen-uno {margin-top: 115px;}
 
 @media only screen and (max-width:768px) {
-	#imagen-uno {margin-top: 10px;}
 
-
-	.img-fundaciones-1{ float: left ; width:100%; margin:0% auto  0% auto;  }
+	#imagen-uno {margin-top: 10px; }
+	.img-fundaciones-1{ float: left ; width:100%; margin:0% auto  0% auto;}
 	.img-fundaciones-2{ float: left; width:100%;margin:0% auto 0% auto; }
 	.img-fundaciones-3{float: left;width:100%;margin:0% 5% 0% 5%;}
-	.img-fundaciones-4{float: left;width:100%;margin:0% auto 0% auto;  }
+	.img-fundaciones-4{float: left;width:100%;margin:0% auto 0% auto;}
 	.img-fundaciones-5{float: left;width:100%;margin:0% 5% 0% 7%;  }
 	.img-fundaciones-6{float: left;width:100%; margin:0% auto 0% auto;  } 
-
    .imagenes-fundaciones{ height: 150px; width: 45%}
 
 	
@@ -6789,7 +6781,7 @@ figure.snip1156:hover .salud-ambiental{
 
 
 .navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse{
-	max-height:initial;
+	max-height:initial ;
 }
 .navbar-inverse .navbar-toggle,.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form{
 	border:none;
