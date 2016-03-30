@@ -18,7 +18,7 @@ blockquote {
 	padding:5px 20px; 
 }
 ul {color: #fff;}
-li {margin-bottom: 8px;}
+li {}
 pre {
 	white-space:pre-wrap;       /* css-3 */
 	white-space:-moz-pre-wrap;  /* Mozilla, since 1999 */
@@ -27,17 +27,17 @@ pre {
 	word-wrap:break-word;       /* Internet Explorer 5.5+ */
 }
 .box { 
-	background:#444; background:rgba(0,0,0,.6);
+	/*background:#444; background:rgba(0,0,0,.6);
 	padding:20px;
 	border-radius:5px;
-	margin-bottom:20px;
+	margin-bottom:20px;*/
 }
 .nav { 
-	position:fixed; 
+	/*position:fixed; 
 	top:50px;left:50px;
 	z-index: 999999;
 	width:150px; 
-	-webkit-transition-duration:0.6s;-moz-transition-duration:0.6s;-ms-transition-duration:0.6s;-o-transition-duration:0.6s;transition-duration:0.6s;
+	-webkit-transition-duration:0.6s;-moz-transition-duration:0.6s;-ms-transition-duration:0.6s;-o-transition-duration:0.6s;transition-duration:0.6s;*/
 }
 .credit {
 	margin:20px 0;
@@ -66,10 +66,10 @@ pre {
 	top:100vh;
 }
 .nav-link {
-	display:block;
+	/*display:block;
 	padding-bottom:10px;
 	text-decoration:none;
-	font-style:normal;
+	font-style:normal;*/
 }
 .toggle-btn {
 	position: absolute;

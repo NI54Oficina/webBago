@@ -6752,3 +6752,9 @@ figure.snip1156:hover .salud-ambiental{
 @media only screen and (max-width:768px) {
 	#imagen-uno {margin-top: 0px;}
 }
+.navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse{
+	max-height:initial;
+}
+.navbar-inverse .navbar-toggle,.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form{
+	border:none;
+}
