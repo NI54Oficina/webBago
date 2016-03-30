@@ -9,6 +9,9 @@
 
 	<!-- VIDEO DE FONDO -->
 	<?php include('video.php'); ?>
+	<?php include('header.php'); ?>
+		
+
 
 	
 		<div style="" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
@@ -448,7 +451,9 @@
 		
 					<!-- ///////////////// TRABAJOS TÉCNICOS /////////////////  -->
 					<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12" id="noticias-trabajos">
-						<?php 	$notas =Notas::model()->findAllByAttributes(array('seccion'=>"tecnica"));
+						<?php 	$notas =Notas::model()->findAllByAttributes(array('seccion'=>"tecnica"),array(
+						'limit' => 3,
+						));
 						if(count($notas)>0){  ?>
 						
 						<?php foreach($notas as $nota){ ?>
@@ -461,7 +466,15 @@
                     
 							<h5 id="protocolo-info-tec" > <?php echo $nota->titulo; ?></h5>
                     
-							<p id="resumen-noticias"> <?php echo $nota->bajada; ?> </p>
+							<p id="resumen-noticias"> 
+							<?php $bajada= $nota->bajada; 
+							$largoBajada=300;
+							if(strlen ($bajada)>$largoBajada){
+								$bajada= substr($bajada,0,$largoBajada);
+							}
+							echo $bajada."...";
+							?> 
+							</p>
 							</div>
 							<h3><a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/nota-tecnica/<?php echo $nota->id; ?>" id="leer-mas"> Leer más </a></h3>
                 

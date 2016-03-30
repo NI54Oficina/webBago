@@ -58,5 +58,8 @@ recursos-home
 src
 themes
 templates
-protected/runtime
+protected\runtime
+*.log
 uploads
+*.log
+protected/runtime/application.log
