@@ -64,9 +64,9 @@
                 
                 <p style="margin-top:3% ;margin-bottom:0%;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-bullet.png"  style="display:inline-block;" /> <?php echo Textos::model()->GetText(72); ?></p>
                 
-                <p><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-bullet.png"  style="display:inline-block;" /> <?php echo Textos::model()->GetText(73); ?></p>
+                <p style="margin-top: 3%;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-bullet.png"  style="display:inline-block;" /> <?php echo Textos::model()->GetText(73); ?></p>
                 
-                <p style="margin-bottom: 5%;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-bullet.png"  style="display:inline-block;" /> <?php echo Textos::model()->GetText(74); ?></p>
+                <p style="margin-bottom: 5%; margin-top: 3%;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-bullet.png"  style="display:inline-block;" /> <?php echo Textos::model()->GetText(74); ?></p>
              
                 
                  </p>

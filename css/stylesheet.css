@@ -1459,7 +1459,8 @@ font-size: 22px;
 		padding-bottom: 0.5em;
 		padding-top: 0.5em;
 		width:100%;
-	}
+		border-radius: 0px !important;
+	} 
 	
 	.ttl{
 		color: #002E75;
