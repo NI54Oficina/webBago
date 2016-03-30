@@ -945,7 +945,7 @@
 												$timeStamp=strtotime($primeraRevista->fecha);												
 												echo date('d',$timeStamp)." de ".$meses[date('n',$timeStamp)-1]. " de ".date('Y',$timeStamp) ; ?></p>
 		
-							<h2 id="h2-1"><?php echo  $primeraRevista->titulo; ?></h2>
+							<h2 id="h2-1">MOLINO <?php echo  $primeraRevista->numero; ?>: <?php echo  $primeraRevista->titulo; ?></h2>
 		
 							<p id="p-3"><?php echo  $primeraRevista->bajada; ?></p>
 		
@@ -1007,7 +1007,7 @@
 												$timeStamp=strtotime($revista->fecha);												
 												echo date('d',$timeStamp)." de ".$meses[date('n',$timeStamp)-1]. " de ".date('Y',$timeStamp) ; ?>
 												</p>
-										<h3 class="tit-rev"><?php echo $revista->titulo; ?></h3>
+										<h3 class="tit-rev">MOLINO <?php echo  $revista->numero; ?> : <?php echo $revista->titulo; ?></h3>
 										<p class="desc-rev"><?php echo $revista->bajada; ?></p>
 									</section>
 									<style>
