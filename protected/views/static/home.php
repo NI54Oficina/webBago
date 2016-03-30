@@ -9,6 +9,9 @@
 
 	<!-- VIDEO DE FONDO -->
 	<?php include('video.php'); ?>
+	<?php include('header.php'); ?>
+		
+
 
 	
 		<div style="" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
