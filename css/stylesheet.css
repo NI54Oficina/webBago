@@ -6467,7 +6467,7 @@ figure.snip1156:hover .salud-ambiental{
 	height: 40px;
 	background-image: url(../img/lupa-vademecum.png);
 	background-repeat: no-repeat;
-	background-position:  right;
+	background-position: right;
 	background-size: 100% 100%;
 	display:inline-block;
 	vertical-align: top;
@@ -6479,7 +6479,7 @@ figure.snip1156:hover .salud-ambiental{
 }
 
 #form1 #enviar:hover{
-	background: transparent;
+	background:transparent;
     border: 2px solid white;
 	transition: all 0.5s ease;
 }
@@ -6490,7 +6490,7 @@ figure.snip1156:hover .salud-ambiental{
 
 }
 
-.imagen-pais {
+.imagen-pais{
 	display:inline-block;
 	width: auto; 
 	margin-top:5px;
