@@ -2,7 +2,7 @@
 <!---------------------------------------------------------------------------------------------      HEADER     --------------------------------------------------------------------------------------------->
 
 
-<header class="main col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="width:100%;padding-bottom: 10px;background: -webkit-linear-gradient(left, rgba(255,255,255,1) 17%,rgba(255,255,255,1) 18%,rgba(255,255,255,0.89) 48%,rgba(255,255,255,0.7) 100%);
+<header id="navbar-main" class="navbar navbar-inverse col-lg-12 col-md-12 col-sm-12 col-xs-12" style="width:100%;padding-bottom: 10px;background: -webkit-linear-gradient(left, rgba(255,255,255,1) 17%,rgba(255,255,255,1) 18%,rgba(255,255,255,0.89) 48%,rgba(255,255,255,0.7) 100%);
     background: linear-gradient(to right, rgba(255,255,255,1) 17%,rgba(255,255,255,1) 18%,rgba(255,255,255,0.89) 48%,rgba(255,255,255,0.7) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#b3ffffff',GradientType=1 );">
 		<!--+++++ LOGO BAGÓ MOBILE +++++ -->

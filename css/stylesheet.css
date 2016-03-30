@@ -1459,7 +1459,8 @@ font-size: 22px;
 		padding-bottom: 0.5em;
 		padding-top: 0.5em;
 		width:100%;
-	}
+		border-radius: 0px !important;
+	} 
 	
 	.ttl{
 		color: #002E75;
@@ -4174,7 +4175,7 @@ section{
 }
 
 #p-3{
-	width:69%;
+	width:100% !important;
 	font-size:15px;
 }
 
@@ -4221,7 +4222,10 @@ p{
 } 
 
 #p-1{
-    width: 100%;
+    width: 100% !important;
+    font-size: 15px !important;
+    margin-bottom: 30px;
+
 }
 
 
@@ -5733,10 +5737,11 @@ figure.snip1156:hover .salud-ambiental{
 
 	.img-fundaciones-1{
 		width:70%;
+		
 	}
 
 	.img-fundaciones-2{
-		width:65%;
+		width:65%; 
 	}
 	
 	.img-fundaciones-3{
@@ -6742,6 +6747,7 @@ figure.snip1156:hover .salud-ambiental{
 }
 
 
+<<<<<<< HEAD
 #btn-mas:hover{
 	opacity: 0.4;
 	transition: all 0.6s ease;
@@ -6757,3 +6763,31 @@ figure.snip1156:hover .salud-ambiental{
 	outline:none;
 	border:none;
 }
+=======
+#imagen-uno {margin-top: 115px;}
+
+@media only screen and (max-width:768px) {
+	#imagen-uno {margin-top: 0px;}
+<<<<<<< HEAD
+
+	.img-fundaciones-1{ float: left ;width: 40%; margin:0% 5% 0% 5%; height: 200px; }
+	.img-fundaciones-2{ float: left; width: 40%;margin:0% auto 0% auto; height: 200px;}
+	.img-fundaciones-3{float: left;width: 40%;margin:0% 5% 0% 5%;height: 200px; }
+	.img-fundaciones-4{float: left;width: 40%; margin:0% auto 0% auto; height: 200px; }
+	.img-fundaciones-5{float: left;width: 40%; margin:0% 5% 0% 7%; height: 200px; }
+	.img-fundaciones-6{float: left; width: 40%; margin:0% auto 0% auto; height: 200px;  }
+
+
+	
+}
+
+=======
+}
+.navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse{
+	max-height:initial;
+}
+.navbar-inverse .navbar-toggle,.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form{
+	border:none;
+}
+>>>>>>> origin/master
+>>>>>>> origin/master
