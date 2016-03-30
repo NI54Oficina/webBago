@@ -5,8 +5,36 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<meta name="description" content="Biogénesis Bagó es una empresa de biotecnología que investiga, elabora y comercializa productos y servicios veterinarios, destinados a asegurar la salud y mejorar la productividad de los rodeos de carne y leche">
-	<meta name="keywords" content="Biogénesis Bagó, biotecnologia">
-	<meta name="author" content="Biogénesis Bagó">
+	
+	
+	<?php
+	
+	$metas= MetatagPage::model()->findAllByAttributes(array('idPage'=>$data));	
+	$lang= $_SESSION["lng"];
+	if(!isset($lang)){
+		$lang="es";
+	}
+	if($metas){
+	foreach($metas as $m){
+		$code= Metatag::model()->findByPk($m->idMetatag);
+		$variable=$m->dat;
+		/*$variable= Textos::model()->findByPk($variable);
+		if($variable){
+			$variable= $variable[$lang];
+		}else{
+			$variable="";
+		}*/
+		$variable= Textos::model()->GetText($variable,$lang);
+		if($code){
+			$code=$code->code;
+			$code= str_replace("[variable]",$variable,$code);
+			echo $code;
+		}
+	}
+	}
+	
+	?>
+	
 
 	<!--FAV ICON-->
 	<link href="<?php echo Yii::app()->request->baseUrl; ?>/img/favicon.ico" rel="shortcut icon" />
@@ -85,4 +113,4 @@
 			});
 		});
 		</script>
-	<title>BAGÓ</title>
+	

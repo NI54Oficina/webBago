@@ -27,10 +27,10 @@ class Textos extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('esp, eng, por', 'required'),
+			array('es, en, pt', 'required'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, esp, eng, por', 'safe', 'on'=>'search'),
+			array('id, es, en, pt', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -52,9 +52,9 @@ class Textos extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'esp' => 'Esp',
-			'eng' => 'Eng',
-			'por' => 'Por',
+			'es' => 'Es',
+			'en' => 'En',
+			'pt' => 'Pt',
 		);
 	}
 
@@ -77,9 +77,9 @@ class Textos extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('esp',$this->esp,true);
-		$criteria->compare('eng',$this->eng,true);
-		$criteria->compare('por',$this->por,true);
+		$criteria->compare('es',$this->es,true);
+		$criteria->compare('en',$this->en,true);
+		$criteria->compare('pt',$this->pt,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -97,11 +97,17 @@ class Textos extends CActiveRecord
 		return parent::model($className);
 	}
 	
-	public function GetText($id){
-		if(!isset($_SESSION["lng"])||$_SESSION["lng"]==""){
+	public function GetText($id,$lang=""){
+		$language="";
+		if($lang!=""){
+			$language=$lang;
+		}else if(!isset($_SESSION["lng"])||$_SESSION["lng"]==""){
 			//$_SESSION["lng"]="español";
 			//$_SESSION["pais"]=1;
+		}else{
+			$language= $_SESSION["lng"];
 		}
+		
 		$model=$this->findByPk($id);
 		$auxTran= $model[$_SESSION["lng"]];
 		if($auxTran==""){

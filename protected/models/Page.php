@@ -6,8 +6,7 @@
  * The followings are the available columns in table 'tbl_page':
  * @property integer $id
  * @property string $titulo
- * @property integer $url
- * @property string $texto
+ * @property string $url
  */
 class Page extends CActiveRecord
 {
@@ -27,12 +26,12 @@ class Page extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('titulo, url, texto', 'required'),
-			array('url', 'numerical', 'integerOnly'=>true),
+			array('titulo, url', 'required'),
 			array('titulo', 'length', 'max'=>255),
+			array('url', 'length', 'max'=>300),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, titulo, url, texto', 'safe', 'on'=>'search'),
+			array('id, titulo, url', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -56,7 +55,6 @@ class Page extends CActiveRecord
 			'id' => 'ID',
 			'titulo' => 'Titulo',
 			'url' => 'Url',
-			'texto' => 'Texto',
 		);
 	}
 
@@ -80,8 +78,7 @@ class Page extends CActiveRecord
 
 		$criteria->compare('id',$this->id);
 		$criteria->compare('titulo',$this->titulo,true);
-		$criteria->compare('url',$this->url);
-		$criteria->compare('texto',$this->texto,true);
+		$criteria->compare('url',$this->url,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

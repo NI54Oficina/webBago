@@ -72,9 +72,26 @@ class WebController extends Controller
 		}
 		//echo Pais::model()->findByPk($_SESSION['pais'])->nombre;
 		if($data!="home"&&$data!="paises"){
-		$this->renderPartial("//static/layout");
-		$this->renderPartial("//static/".$data,$model);
-		$this->renderPartial("//static/footer");
+			//			Metatags::model()->findByAttributes(array('id'=>$id));
+			$pagina= Page::model()->findByAttributes(array("url"=>$data));
+			$metas=null;
+			//if($pagina){
+				//$metas= MetatagPage::model()->findByAttributes(array('idPage'=>$pagina->id));
+			//}
+			//if(!isset($metas)){
+				//$metas= MetatagPage::model()->findAllByAttributes(array('idPage'=>"1",));
+//			}
+			
+			if($pagina){
+				$metas= $pagina->id;
+			}else{
+				$metas=1;
+			}
+			
+			//$metas= MetatagPage::model()->findAllByAttributes(array('idPage'=>"1",));
+			$this->renderPartial("//static/layout",$metas);
+			$this->renderPartial("//static/".$data,$model);
+			$this->renderPartial("//static/footer");
 		}else{
 			$this->renderPartial("//static/".$data,$model);
 		}

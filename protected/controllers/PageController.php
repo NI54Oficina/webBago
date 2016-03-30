@@ -32,8 +32,12 @@ class PageController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','admin','delete'),
+				'actions'=>array('create','update','admin','delete',"asign"),
 				'users'=>array('@'),
+			),
+			array('allow', // allow admin user to perform 'admin' and 'delete' actions
+				'actions'=>array(),
+				'users'=>array('admin'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -96,6 +100,51 @@ class PageController extends Controller
 
 		$this->render('update',array(
 			'model'=>$model,
+		));
+	}
+	
+	public function actionAsign($id){
+		$model=$this->loadModel($id);
+		$metas= Metatag::model()->findAll();
+		/*if(isset($_POST["Page"])){
+			foreach($_POST["Page"] as $key => $value){
+				$auxMeta= new MetatagPage();
+				$auxMeta->idPage= $id;
+				$auxMeta->idMetatag=$key;
+				$auxMeta->dat=$value;
+				$auxMeta->save();
+			}
+		}*/
+		if(isset($_POST["Page"])){
+			foreach($metas as $meta){
+				$auxMeta= new MetatagPage();
+				$auxMeta->idPage= $id;
+				$auxMeta->idMetatag=$meta->id;
+				if($_POST["Page"]["textId".$meta->id]==""){
+					$auxTexto= new Textos();
+				}else{
+					$auxTexto= Textos::model()->findByPk($_POST["Page"]["textId".$meta->id]);
+				}
+				$auxTexto->es=$_POST["Page"]["es".$meta->id];
+				$auxTexto->en=$_POST["Page"]["en".$meta->id];
+				$auxTexto->pt=$_POST["Page"]["pt".$meta->id];
+				$auxTexto->save();
+				$auxMeta->dat=$auxTexto->id;
+				$auxMeta->save();
+			}
+		}
+		
+		$metaValues=[];
+		foreach($metas as $meta){
+			$auxMeta=MetatagPage::model()->findByAttributes(array('idPage'=>$id,"idMetatag"=>$meta->id));
+			if($auxMeta){
+				$metaValues[]=$auxMeta->dat;
+			}else{
+				$metaValues[]= "";
+			}
+		}
+		$this->render('asign',array(
+			'model'=>$model,"metas"=>$metas,"metaValues"=>$metaValues,
 		));
 	}
 
@@ -166,4 +215,11 @@ class PageController extends Controller
 			Yii::app()->end();
 		}
 	}
+	
+	protected function beforeAction($event)
+    {
+        $conf = new PaisChecker;
+        $conf->PaisCheck();
+        return true;
+    }
 }

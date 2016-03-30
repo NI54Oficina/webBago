@@ -24,6 +24,5 @@ $this->menu=array(
 		'id',
 		'titulo',
 		'url',
-		'texto',
 	),
 )); ?>
