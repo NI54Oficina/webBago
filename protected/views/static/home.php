@@ -182,12 +182,12 @@
 			</div> <!-- Termina mapa-total -->
         
 				<ul id="ul-filiales-paises" class="col-sm-12 col-xs-12">
-					<li class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a href="javascript:void(0);" id="mex"><?php echo Textos::model()->GetText(418); ?> </li></a>
-					<li class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a href="javascript:void(0);" id="centroam"> <?php echo Textos::model()->GetText(463); ?> </li></a>
-					<li class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a href="javascript:void(0);" id="br"> <?php echo Textos::model()->GetText(412); ?> </li></a>
-					<li class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a href="javascript:void(0);" id="bol"> <?php echo Textos::model()->GetText(411); ?> </li></a>
-					<li class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a href="javascript:void(0);" id="uru"> <?php echo Textos::model()->GetText(424); ?> </li></a>
-					<li class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a href="javascript:void(0);" id="arg"><?php echo Textos::model()->GetText(410); ?> </li></a>
+					<li class="col-lg-2 col-md-6 col-sm-6 col-xs-6"><a href="javascript:void(0);" id="mex"><?php echo Textos::model()->GetText(418); ?> </li></a>
+					<li class="col-lg-2 col-md-6 col-sm-6 col-xs-6"><a href="javascript:void(0);" id="centroam"> <?php echo Textos::model()->GetText(463); ?> </li></a>
+					<li class="col-lg-2 col-md-6 col-sm-6 col-xs-6"><a href="javascript:void(0);" id="br"> <?php echo Textos::model()->GetText(412); ?> </li></a>
+					<li class="col-lg-2 col-md-6 col-sm-6 col-xs-6"><a href="javascript:void(0);" id="bol"> <?php echo Textos::model()->GetText(411); ?> </li></a>
+					<li class="col-lg-2 col-md-6 col-sm-6 col-xs-6"><a href="javascript:void(0);" id="uru"> <?php echo Textos::model()->GetText(424); ?> </li></a>
+					<li class="col-lg-2 col-md-6 col-sm-6 col-xs-6"><a href="javascript:void(0);" id="arg"><?php echo Textos::model()->GetText(410); ?> </li></a>
 				</ul>
 			
 		<!--------------------------- INFORMACIÓN PAÍSES -------------------------------->
@@ -200,7 +200,7 @@
 					<h2 id="titulo-info-mapa"><img class="band-filiales" src="<?php echo Yii::app()->request->baseUrl; ?>/img/banderitas-09.png"/> <?php echo Textos::model()->GetText(418); ?>  </h2>
 			
 						<p id="sub-filiales"  class="h4-fil bio" > <?php echo Textos::model()->GetText(464); ?>  </p>
-						<p  id="sub-filiales" class="h4-fil">
+						<p  id="sub-filiales" style="margin-top: 0;" class="h4-fil">
 						<?php echo Textos::model()->GetText(465); ?> </p>
 					
 						<!-- LINEA SEPARADORA-->

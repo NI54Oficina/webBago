@@ -48,8 +48,8 @@
 							</p>
 						</div>
 						
-						<div class="col-lg-12 col-md-12 col-sm-12" style="background:#66CCED;padding-top: 1%;">
-							<a  class="leer-infotec-noticias" style="text-align:center; display:block;padding-left:0;" href="<?php echo Yii::app()->request->baseUrl; ?>/uploads/molino/pdf/revista-<?php echo $nota->numero; ?>.pdf" target="_blank">Leer  más</a></p>
+						<div class="col-lg-12 col-md-12 col-sm-12" style="padding-top: 1%;">
+							<a  class="leer-infotec-noticias" style="text-align:center; background: #66CCED;padding-top: 1%;display:block;padding-left:0;" href="<?php echo Yii::app()->request->baseUrl; ?>/uploads/molino/pdf/revista-<?php echo $nota->numero; ?>.pdf" target="_blank">Leer  más</a></p>
 						</div>
 					</div>
 					<?php } 
