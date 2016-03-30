@@ -101,7 +101,7 @@
 
 			<div class="cd-timeline-content">
 				<h2  class="h2-cd"><?php echo Textos::model()->GetText(359); ?></h2>
-				<span class="cd-date"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-tiempo-bullet.png"  /></span>
+				<span class="cd-date"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-tiempo-bullet.png" /></span>
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
 		
@@ -226,25 +226,25 @@
 
 		<div class="cd-timeline-block">
 			<div class="cd-timeline-img cd-movie">
-				<p class="p-cd" style="margin-top: 15px;">2008</p>
+				<p class="p-cd" style="margin-top: 15px;">2008 </p>
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
 				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/casa.png" style="width: 22px;padding-bottom: 10px;"/>
 				<h2 class="h2-cd"><?php echo Textos::model()->GetText(370); ?></h2>
-				<span class="cd-date"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-tiempo-bullet.png"  /></span>
+				<span class="cd-date"> <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-tiempo-bullet.png"  /></span>
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
 
 		<div class="cd-timeline-block">
 			<div class="cd-timeline-img cd-picture">
-				<p class="p-cd" style="margin-top: 15px;">2009</p>
+				<p class="p-cd" style="margin-top: 15px;">2009 </p>
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
 				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/estrella.png" style="width:22px;padding-bottom:10px;"/>
 				<h2 class="h2-cd"><?php echo Textos::model()->GetText(371); ?></h2>
-				<span class="cd-date"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-tiempo-bullet.png"  /></span>
+				<span class="cd-date"> <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-tiempo-bullet.png"  /></span>
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
 
