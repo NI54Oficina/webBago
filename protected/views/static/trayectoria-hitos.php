@@ -61,7 +61,7 @@
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
-			<img class="img-cd" src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-vaca.png" style=" width: 60px;"/>
+				<img class="img-cd" src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-vaca.png" style=" width: 60px;"/>
 				<h2 class="h2-cd"><?php echo Textos::model()->GetText(354); ?></h2>
 				<img class="img-cd" src="<?php echo Yii::app()->request->baseUrl; ?>/img/estrella.png" style="width: 22px;margin-top:15%;padding-bottom: 10px;"/>
 				<p class="p-cd2"><?php echo Textos::model()->GetText(355); ?></p>
@@ -296,16 +296,16 @@
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
-			<div>
-			<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/bandera.png"/>
-			<h2  class="h2-cd"><?php echo Textos::model()->GetText(375); ?></h2>
-			</div>
+				<div>
+					<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/bandera.png"/>
+					<h2  class="h2-cd"><?php echo Textos::model()->GetText(375); ?></h2>
+				</div>
 			
-			<div>
-			<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/casa.png" style="width: 22px;padding-top: 40px;"/>
-			<h2  style="margin-top:1vh;" class="h2-cd"><?php echo Textos::model()->GetText(377); ?></h2>
-			<p class="p-cd2"><?php echo Textos::model()->GetText(378); ?></p>
-			</div>
+				<div>
+					<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/casa.png" style="width: 22px;padding-top: 40px;"/>
+					<h2  style="margin-top:1vh;" class="h2-cd"><?php echo Textos::model()->GetText(377); ?></h2>
+					<p class="p-cd2"><?php echo Textos::model()->GetText(378); ?></p>
+				</div>
 
 				<span class="cd-date"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-tiempo-bullet.png"  /></span>
 			</div> <!-- cd-timeline-content -->

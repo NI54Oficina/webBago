@@ -1,6 +1,15 @@
 <img id="logo-bago-mobile" class="hidden-lg hidden-md col-sm-12 col-xs-12" src="/webBago/img/logo-bago.png" style="opacity:0;">
-			<div class="header-layout-aftosa col-lg-12 col-md-12 col-sm-12 col-xs-12" style="    background: #66CCED;margin-top: 13vh;padding-bottom: 4%;margin-bottom: 5vh;">
+			<div class="header-layout-aftosa col-lg-12 col-md-12 col-sm-12 col-xs-12 header-infotec-revista" >
 	
+				<div class="col-lg-2 col-md-2 col-sm-2 col-xs-3" style="display:inline-block;z-index:3;padding-top:3%;">
+					
+					<a class="volver-infotec-revista" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/home"><div></div><p>Volver</p></a>
+				
+				</div>
+				
+				
+		<div class="col-lg-10 col-md-10 col-sm-10 col-xs-9 container-title-info-revista">
+		
 			<div class="dot-infotec-noticias" style="margin-right: 1%;"></div>
 			
 			<h1 class="h1-infotec-noticias">REVISTA EL MOLINO</h1>	
@@ -9,12 +18,12 @@
 			
 			<div class="border-infotec-noticias"></div>
 			</div>
-	
+		</div>
 	
 	
 	
 		
-	<div class="col-lg-12 col-md-10 col-sm-12 col-xs-12" style="text-align: left;    margin: 0;padding:0 30px;">
+	<div class="col-lg-12 col-md-10 col-sm-12 col-xs-12" style="text-align: left; margin: 0;padding:0 30px;">
 	
 
 				<?php 
@@ -24,7 +33,7 @@
 					foreach($notas as $nota){
 						
 					?>
-					<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 " style="margin-top:0;height: 414px;border: 1px solid #66cced;box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.45);margin-right: 1%;width: 270px;margin-bottom:1%;" >
+					<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 container-nota-revista" style="margin-top:0;height: 414px;border: 1px solid #66cced;box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.45);margin-right: 1%;" >
 						
 						<div style="margin-top:0;padding:10px;" hid="1">
 							<div style="margin: auto;text-align:center; ">

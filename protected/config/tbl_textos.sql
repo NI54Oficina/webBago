@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 28-03-2016 a las 19:02:17
+-- Tiempo de generación: 29-03-2016 a las 16:44:05
 -- Versión del servidor: 10.1.9-MariaDB
 -- Versión de PHP: 5.5.30
 
@@ -147,9 +147,9 @@ INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (107, 'Fronteras Productivas', '', ''),
 (108, 'Conozca las últimas novedades y tendencias en nuestro especial "Fronteras Productivas"', '', ''),
 (109, 'Leer revista', '', ''),
-(110, 'TRABAJA CON NOSOTROS', '', ''),
+(110, 'BIOGÉNESIS BAGÓ TIENE UN LUGAR PARA VOS', 'BIOGÉNESIS BAGÓ HAS A PLACE FOR YOU', ''),
 (111, 'Envianos tu cv', '', 'Envie seu CV'),
-(112, 'Apostamos al compromiso y la pasión de nuestros empleados como pilares indispensables para un sólido crecimiento de toda la compañía.', '', ''),
+(112, '¿Por qué Biogénesis Bagó es un buen lugar para trabajar?', 'Why is Biogénesis Bagó a good place to work?', ''),
 (113, 'CONTACTO', 'CONTACT', ''),
 (114, 'Nombre', 'Name', ''),
 (115, 'Apellido', 'Surname', ''),
@@ -492,7 +492,7 @@ INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (457, '<strong>Encuentros Biosolidarios </strong>', '<strong>Solidarity Meetings</strong>', '<strong> Encontros Biosolidários</strong>'),
 (458, 'Fundaciones con las que colaboramos', '', ''),
 (459, 'Casa Matriz', '', ''),
-(460, 'Filiales', '', ''),
+(460, 'Filiales', 'Affiliates', 'Controladas'),
 (461, 'Banco de vacunas', '', ''),
 (462, 'Antiaftosa de Norteamérica ', '', ''),
 (463, 'Centro América', '', ''),
@@ -510,11 +510,17 @@ INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (475, 'Calle Ppal Llano Bonito, Juan Díaz - Edificio Imp. El Universo. Apartado Postal 0838-02057 Zona 12, Panamá.', '', ''),
 (476, 'Vitaminas y', 'Vitamins and', ''),
 (477, 'minerales', 'minerals', ''),
-(478, 'Queremos que seas parte de este gran equipo', '', ''),
-(479, 'Ubicación', '', ''),
+(478, 'Envíanos tu Currículum Vitae y comenzá a transitar </br> el camino de ser parte de esta compañía en\n\nexpansión', 'Please send your Curriculum Vitae and </br>begin  expanding company', ''),
+(479, 'Ubicación', 'Location', 'Localização'),
 (480, 'Enviado', '', ''),
 (481, 'Enviando', '', ''),
-(482, 'Error de Envio', '', '');
+(482, 'Error de Envio', '', ''),
+(483, 'Por nuestra constante búsqueda de liderazgo en los países de América Latina', 'Because of our constant look out for leadership in countries of Latin America', ''),
+(484, 'Por nuestra vocación por mejorar la salud animal, con sistemas de producción comprometidos con el cuidado del medio ambiente', 'Because our aim is to improve animal health with production systems committed to taking care of the environment', ''),
+(485, 'Porque nos sentimos  orgullosos  de lo que hacemos y ofrecemos a nuestros clientes', 'Because we are proud of what we do and what we offer our clients', ''),
+(486, 'Por el buen clima laboral que sostenemos', 'Because of our positive work environment', ''),
+(487, 'Por nuestro compromiso con la gente y su desarrollo', 'Because of our commitment to the people and their development', ''),
+(488, 'Trabajar con equipos de diferentes áreas y regiones te permitirá construir nuevos lazos con colaboradores y, a la vez, descubrir  otras posibilidades de desarrollo profesional. Apostamos al compromiso y la pasión de nuestros empleados como pilares indispensables para un sólido crecimiento de toda la compañía', 'Working with teams from different areas and regions will allow you to build new bonds with collaborators and, simultaneously, discover other possibilities for your professional growth. We bet on our employees commitment and passion as our indispensable pillars for a solid growth of our entire company', '');
 
 --
 -- Índices para tablas volcadas
@@ -534,7 +540,7 @@ ALTER TABLE `tbl_textos`
 -- AUTO_INCREMENT de la tabla `tbl_textos`
 --
 ALTER TABLE `tbl_textos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=483;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=489;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

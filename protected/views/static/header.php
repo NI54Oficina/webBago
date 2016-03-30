@@ -69,7 +69,7 @@
 		</div>-->
 		
 		<!-- +++++ LISTA VERSIONES MOBILE+++++ -->
-		<ul class=" col-lg-2 col-md-2 col-sm-2 col-xs-12" id="ul-nav-2-mobile" style="color:#0C6594;float:right;">
+		<ul class=" col-lg-2 col-md-2 col-sm-10 col-xs-12" id="ul-nav-2-mobile" style="color:#0C6594;">
 				<li class="li-nav-2"><a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/pais/traduccion/id/1/lng/0"style="float:left;padding: 10px 0px;color: #337ab7;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-arg.png" /></a></li>
 				<li class="li-nav-2"><a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/pais/traduccion/id/2/lng/2"style="float:left;padding: 10px 0px;color: #337ab7;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-br.png" /></a></li>
 				<li class="li-nav-2 dropdown" data-toggle="collapse"><a  href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"  style="float:left;padding: 10px 0px;color: #337ab7;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/mas-paises.png"  /></a>
@@ -109,7 +109,7 @@
 	
 		<!-- +++++++++++ BOTONERA +++++++++++ -->
 		<div id="container-ul-nav-header">
-			<ul class="ul-nav col-lg-11 col-md-11 col-sm-9 col-xs-9" id="ul-nav-principal" style="">
+			<ul class="ul-nav col-lg-11 col-md-12 col-sm-11 col-xs-9" id="ul-nav-principal" style="">
 			
 			
 			<!-- INSTITUCIONAL -->
@@ -118,13 +118,13 @@
 				<ul class="dropdown-menu dropdown-menu-right">
 						<img  id="flecha-submenu" src="<?php echo Yii::app()->request->baseUrl; ?>/img/flecha-submenu.png" />
 							<li style="margin-top:-5px;"><a class="a-sub link-menu"  href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/quienes-somos"><?php echo Textos::model()->GetText(6); ?></a></li>
-							<li><a class="a-sub link-menu"  href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/mision-vision"><?php echo Textos::model()->GetText(8); ?></a></li>
-							<li><a class="a-sub link-menu" 	href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/lucha-contra-aftosa"><?php echo Textos::model()->GetText(10); ?></a></li>
-							<li><a class="a-sub link-menu"  href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/trayectoria-hitos"><?php echo Textos::model()->GetText(429); ?></a></li>
-							<li><a class="a-sub link-menu"  href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/nuestras-plantas"><?php echo Textos::model()->GetText(14); ?></a></li>
-							<li><a class="a-sub link-menu" 	href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/rse"><?php echo Textos::model()->GetText(431); ?></a></li>
-							<li><a class="a-sub link-menu" 	href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/proveedores"><?php echo Textos::model()->GetText(430); ?></a></li>
-							<li><a class="a-sub link-menu" 	href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/prensa"><?php echo Textos::model()->GetText(20); ?></a></li>
+							<li><a class="a-sub link-menu"	href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/mision-vision"><?php echo Textos::model()->GetText(8); ?></a></li>
+							<li><a class="a-sub link-menu"	href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/lucha-contra-aftosa"><?php echo Textos::model()->GetText(10); ?></a></li>
+							<li><a class="a-sub link-menu"	href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/trayectoria-hitos"><?php echo Textos::model()->GetText(429); ?></a></li>
+							<li><a class="a-sub link-menu"	href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/nuestras-plantas"><?php echo Textos::model()->GetText(14); ?></a></li>
+							<li><a class="a-sub link-menu"	href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/rse"><?php echo Textos::model()->GetText(431); ?></a></li>
+							<li><a class="a-sub link-menu"	href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/proveedores"><?php echo Textos::model()->GetText(430); ?></a></li>
+							<li><a class="a-sub link-menu"	href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/prensa"><?php echo Textos::model()->GetText(20); ?></a></li>
 				</ul>
 				
 			</li>
@@ -134,13 +134,13 @@
 			
 			
 			<!-- INFO TÉCNICA -->
-			<li class="li-nav  dropdown"><a href="#" class="a-nav dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo Textos::model()->GetText(433); ?> <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/flecha-menu.png" /></a>
+			<li class="li-nav  dropdown"><a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/informacion-tecnica" class="a-nav dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo Textos::model()->GetText(433); ?> <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/flecha-menu.png" /></a>
 				
 				<ul class="dropdown-menu dropdown-menu-right">
 							<img id="flecha-submenu" src="<?php echo Yii::app()->request->baseUrl; ?>/img/flecha-submenu.png" />
-								<li style="margin-top:-5px;"><a class="link-menu" href=""><?php echo Textos::model()->GetText(434); ?></a></li>
-								<li><a class="link-menu" href=""><?php echo Textos::model()->GetText(435); ?></a></li>
-								<li><a class="link-menu" href=""><?php echo Textos::model()->GetText(436); ?></a></li>
+								<li style="margin-top:-5px;"><a class="link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/informacion-tecnica"><?php echo Textos::model()->GetText(434); ?></a></li>
+								<li><a class="link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/informacion-tecnica"><?php echo Textos::model()->GetText(435); ?></a></li>
+								<li><a class="link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/informacion-tecnica"><?php echo Textos::model()->GetText(436); ?></a></li>
 					</ul>
 					
 			</li>
@@ -171,7 +171,7 @@
 			
 			
 			<!-- REVISTA EL MOLINO  -->
-			<li class="li-nav"><a class="a-nav link-menu" href=""><?php echo Textos::model()->GetText(451); ?></a></li>
+			<li class="li-nav"><a class="a-nav link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/revista"><?php echo Textos::model()->GetText(451); ?></a></li>
 		
 		
 			<!-- RRHH -->
