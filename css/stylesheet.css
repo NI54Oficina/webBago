@@ -6751,4 +6751,15 @@ figure.snip1156:hover .salud-ambiental{
 
 @media only screen and (max-width:768px) {
 	#imagen-uno {margin-top: 0px;}
+
+	.img-fundaciones-1{ float: left ;width: 40%; margin:0% 5% 0% 5%; height: 200px; }
+	.img-fundaciones-2{ float: left; width: 40%;margin:0% auto 0% auto; height: 200px;}
+	.img-fundaciones-3{float: left;width: 40%;margin:0% 5% 0% 5%;height: 200px; }
+	.img-fundaciones-4{float: left;width: 40%; margin:0% auto 0% auto; height: 200px; }
+	.img-fundaciones-5{float: left;width: 40%; margin:0% 5% 0% 7%; height: 200px; }
+	.img-fundaciones-6{float: left; width: 40%; margin:0% auto 0% auto; height: 200px;  }
+
+
+	
 }
+
