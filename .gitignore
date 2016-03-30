@@ -59,4 +59,5 @@ src
 themes
 templates
 protected/runtime
+*.log
 uploads
