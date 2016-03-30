@@ -2782,7 +2782,7 @@ footer{
 }
 
 .icn-ubicacion {
-    width: 6%;
+    width: 2%;
     display: inline-block;
 	margin-top: 0; 
 }
@@ -2828,7 +2828,7 @@ footer{
 
 
 .icn-ubicacion{
-	width:6%;
+	width:2%;
 	display:inline-block;
 }
 
@@ -2848,6 +2848,7 @@ footer{
 
 #ref-unica{
 	padding-bottom:2%;
+	display:inline-block;
 }
 
 
@@ -6747,7 +6748,7 @@ figure.snip1156:hover .salud-ambiental{
 }
 
 
-<<<<<<< HEAD
+
 #btn-mas:hover{
 	opacity: 0.4;
 	transition: all 0.6s ease;
@@ -6763,12 +6764,12 @@ figure.snip1156:hover .salud-ambiental{
 	outline:none;
 	border:none;
 }
-=======
+
 #imagen-uno {margin-top: 115px;}
 
 @media only screen and (max-width:768px) {
 	#imagen-uno {margin-top: 0px;}
-<<<<<<< HEAD
+
 
 	.img-fundaciones-1{ float: left ;width: 40%; margin:0% 5% 0% 5%; height: 200px; }
 	.img-fundaciones-2{ float: left; width: 40%;margin:0% auto 0% auto; height: 200px;}
@@ -6781,7 +6782,7 @@ figure.snip1156:hover .salud-ambiental{
 	
 }
 
-=======
+
 }
 .navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse{
 	max-height:initial;
@@ -6789,5 +6790,3 @@ figure.snip1156:hover .salud-ambiental{
 .navbar-inverse .navbar-toggle,.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form{
 	border:none;
 }
->>>>>>> origin/master
->>>>>>> origin/master

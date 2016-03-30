@@ -133,7 +133,7 @@
             
 			
 			<!---------- REFERENCIAS ------------------>
-				<div id="referencias" class="col-lg-4 col-md-4 col-sm-8 col-xs-8" style="cursor:default;position:relative;z-index:1; margin: auto;">
+				<div id="referencias" class="col-lg-12 col-md-12 col-sm-8 col-xs-8" style="cursor:default;position:relative;z-index:1; margin: auto;">
 					
 				
 					<!--- REFERENCIA -->			  
@@ -162,7 +162,7 @@
 					
 							<img class="icn-ubicacion" src="<?php echo Yii::app()->request->baseUrl; ?>/img/icn-vacunas.png">
 					
-						<p style="margin-bottom:0;" id="nom-ref"> NAFMDVD </p> <p style="margin-left:7%;"> <?php echo Textos::model()->GetText(461); ?> <br /> <?php echo Textos::model()->GetText(462); ?> </p>
+						<p style="margin-bottom:0;" id="nom-ref"> NAFMDVD  <?php echo Textos::model()->GetText(461); ?>  <?php echo Textos::model()->GetText(462); ?> </p>
 						
 					</div> <!-- Termina cada referencia -->
 					
@@ -182,12 +182,12 @@
 			</div> <!-- Termina mapa-total -->
         
 				<ul id="ul-filiales-paises" class="col-sm-12 col-xs-12">
-					<li class="col-lg-2 col-md-6 col-sm-6 col-xs-6"><a href="javascript:void(0);" id="mex"><?php echo Textos::model()->GetText(418); ?> </li></a>
-					<li class="col-lg-2 col-md-6 col-sm-6 col-xs-6"><a href="javascript:void(0);" id="centroam"> <?php echo Textos::model()->GetText(463); ?> </li></a>
-					<li class="col-lg-2 col-md-6 col-sm-6 col-xs-6"><a href="javascript:void(0);" id="br"> <?php echo Textos::model()->GetText(412); ?> </li></a>
-					<li class="col-lg-2 col-md-6 col-sm-6 col-xs-6"><a href="javascript:void(0);" id="bol"> <?php echo Textos::model()->GetText(411); ?> </li></a>
-					<li class="col-lg-2 col-md-6 col-sm-6 col-xs-6"><a href="javascript:void(0);" id="uru"> <?php echo Textos::model()->GetText(424); ?> </li></a>
-					<li class="col-lg-2 col-md-6 col-sm-6 col-xs-6"><a href="javascript:void(0);" id="arg"><?php echo Textos::model()->GetText(410); ?> </li></a>
+					<li class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a href="javascript:void(0);" id="mex"><?php echo Textos::model()->GetText(418); ?> </li></a>
+					<li class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a href="javascript:void(0);" id="centroam"> <?php echo Textos::model()->GetText(463); ?> </li></a>
+					<li class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a href="javascript:void(0);" id="br"> <?php echo Textos::model()->GetText(412); ?> </li></a>
+					<li class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a href="javascript:void(0);" id="bol"> <?php echo Textos::model()->GetText(411); ?> </li></a>
+					<li class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a href="javascript:void(0);" id="uru"> <?php echo Textos::model()->GetText(424); ?> </li></a>
+					<li class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a href="javascript:void(0);" id="arg"><?php echo Textos::model()->GetText(410); ?> </li></a>
 				</ul>
 			
 		<!--------------------------- INFORMACIÓN PAÍSES -------------------------------->
