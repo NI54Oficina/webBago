@@ -5,7 +5,7 @@
 			</div>
 	
 	
-	<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+	<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 fundaciones-imagenes">
 	<div class="side-title">
 		<div style="display:inline-block;">
 		<h2  class="h2-aftosa"><?php echo Textos::model()->GetText(347); ?></h2>	
