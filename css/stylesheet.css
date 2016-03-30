@@ -3233,10 +3233,10 @@ p{
 
 .content-home {
 
-    -webkit-animation: fadein 5s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 5s; /* Firefox < 16 */
-        -ms-animation: fadein 5s; /* Internet Explorer */
-         -o-animation: fadein 5s; /* Opera < 12.1 */
+    -webkit-animation: fadein 5s; 
+       -moz-animation: fadein 5s; 
+        -ms-animation: fadein 5s;
+         -o-animation: fadein 5s;
             animation: fadein 5s;
 }
 
@@ -3501,7 +3501,7 @@ a.iprodev:hover {
 #rrhh-img{
 	width: 100%;
 	margin-top: -8%;
-    z-index: 33333;
+    z-index: 4444;
 }
 
 /** Style Vademecum**/
@@ -3631,7 +3631,8 @@ section{
 
 .botonVademecum-Af{
 	background:url(../img/vad-af-normal.png);
-	width:158px;height:158px;
+	width:158px;
+	height:158px;
 	transition: all 0.5s ease;
 }
 
