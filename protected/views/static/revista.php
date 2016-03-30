@@ -28,7 +28,7 @@
 
 				<?php 
 					$meses = array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
-					$notas =Revista::model()->findAll();
+					$notas= Revista::model()->findAllByAttributes(array('lng'=>$_SESSION["lng"]),array('order'=>'fecha DESC')); 
 					if(count($notas)>0){
 					foreach($notas as $nota){
 						

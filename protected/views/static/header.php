@@ -104,7 +104,7 @@
 				<li class="li-nav-2"><div id="links"><a class="openlink" href="javascript:void(0);"  style="float:left;padding: 10px 0px;color: #337ab7;"><?php echo Textos::model()->GetText(426); ?></a></div></li>
 				<li class="li-nav-2"><a class="link-menu" href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/1/lng/es"style="float:left;padding: 10px 0px;color: #337ab7;"><?php echo Textos::model()->GetText(427); ?></a></li>
 				<li class="li-nav-2"><a class="link-menu" href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/2/lng/pt"style="float:left;padding: 10px 0px;color: #337ab7;"><?php echo Textos::model()->GetText(428); ?></a></li>
-				<!--<li class="li-nav-2"><a class="link-menu" href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/1/lng/en"style="float:left;padding: 10px 0px;color: #337ab7;">Versión Ingles</a></li>!-->
+				<li class="li-nav-2"><a class="link-menu" href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/9/lng/en"style="float:left;padding: 10px 0px;color: #337ab7;">Versión Ingles</a></li>
 				<li class="li-nav-2"><a class="link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/proveedores" style="float:left;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/fronteras-50x50-01.png" /></a></li>
 		</ul> <!-- termina lista versiones -->
 	
@@ -133,7 +133,7 @@
 			<!-- FILIALES -->
 			<li class="li-nav"><a class="a-nav link-menu" href=""><?php echo Textos::model()->GetText(432); ?></a></li>
 			
-			
+			<?php if($_SESSION["lng"]=="es"){ ?>
 			<!-- INFO TÉCNICA -->
 			<li class="li-nav  dropdown"><a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/informacion-tecnica" class="a-nav dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo Textos::model()->GetText(433); ?> <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/flecha-menu.png" /></a>
 				
@@ -145,7 +145,7 @@
 					</ul>
 					
 			</li>
-			
+			<?php } ?>
 			
 			<!-- VADEMÉCUM -->
 			<li class="li-nav  dropdown"><a href="#" class="a-nav dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo Textos::model()->GetText(348); ?> <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/flecha-menu.png" /></a>
@@ -170,10 +170,10 @@
 				
 			</li>
 			
-			
+			<?php if($_SESSION["lng"]!="en"){ ?>
 			<!-- REVISTA EL MOLINO  -->
 			<li class="li-nav"><a class="a-nav link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/revista"><?php echo Textos::model()->GetText(451); ?></a></li>
-		
+			<?php } ?>
 		
 			<!-- RRHH -->
 			<li class="li-nav"><a class="a-nav link-menu" href=""><?php echo Textos::model()->GetText(449); ?></a></li>

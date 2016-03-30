@@ -410,6 +410,7 @@
 			</div>       
 	</section>
 	
+	<?php if($_SESSION["lng"]=="es"){ ?>
 	<img style="width: 100%;position:relative;margin-bottom:-1px;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-celeste.png" alt="" />	
 	
 	<section class="special" data-scrollax-parent="true" style="background: rgb(129, 206, 231); min-height:100vh;width:100%;overflow-x:hidden;position:relative;" >
@@ -669,9 +670,10 @@
 
 
 		</section>
-
+		<img style="width: 100%;position:relative;margin-top:-1px;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-celeste-abajo.png" alt="" />	
+	<?php } ?>
 		<!--CURVA-->	
-		<img style="width: 100%;position:relative;margin-top:-1px;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-celeste-abajo.png" alt="" />		
+			
 		<section class="special col-lg-12 col-md-12 col-sm-12 col-xs-12" data-scrollax-parent="true" style="min-height:100vh;width:100%;">
 				
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
@@ -914,10 +916,16 @@
 	
 		<?php include('carrousel.php'); ?>
 		
+	
+		<?php $revistas= Revista::model()->findAllByAttributes(array('lng'=>$_SESSION["lng"]),array('order'=>'fecha DESC')); 
+		if($revistas){
+		
+		?>
+		
+		
 		<!--CURVA-->			
 		<img style="width: 100%;position:relative;margin-bottom:-2px;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-home.png" alt="" />
-	
-	
+		
 		<!------------------------------------------------------------------ SECCION 5: REVISTA EL MOLINO ------------------------------------------------------------------>	
 		<section class="special col-lg-12 col-md-12 col-sm-12 col-xs-12" data-scrollax-parent="true" style="min-height:100vh;background: rgba(0, 0, 0, 0.62);width:100%;overflow-x:hidden;padding-bottom:30px;">
 
@@ -927,7 +935,8 @@
 					
 					<!-- /////////// REVISTA EN TOTAL ///////// -->
 					<div id="ver-revista" class="col-lg-12 col-md-12"  style="background:white; padding-bottom: 4%;">	
-						<?php $revistas= Revista::model()->findAll(array('order'=>'fecha DESC')); ?>
+						
+						
 						<?php $primeraRevista=array_shift($revistas); ?>
 						<!-- IMAGEN REVISTA-->
 						<img class="col-lg-6 col-md-6"  id="img-rev" src="<?php echo Yii::app()->request->baseUrl; ?>/uploads/molino/img/destacada-<?php echo $primeraRevista->numero; ?>.png"/>
@@ -1037,7 +1046,7 @@
 			
 		</section>
 		
-		
+		<?php } ?>
 		<!------------------------------------------------------------------ SECCION 6: RRHH ------------------------------------------------------------------>
 		
 		<section class="special col-lg-12 col-md-12 col-sm-12 col-xs-12" data-scrollax-parent="true" style="min-height:100vh;width:100%;background-color: white;overflow:hidden;height:auto;"  id="back-rrhh">

@@ -9,7 +9,7 @@
  * @property string $fecha
  * @property string $titulo
  * @property string $bajada
- * @property string $pais
+ * @property string $lng
  */
 class Revista extends CActiveRecord
 {
@@ -29,13 +29,13 @@ class Revista extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('numero, fecha, titulo, bajada, pais', 'required'),
+			array('numero, fecha, titulo, bajada', 'required'),
 			array('numero', 'numerical', 'integerOnly'=>true),
 			array('titulo', 'length', 'max'=>300),
-			array('pais', 'length', 'max'=>3),
+			array('lng', 'length', 'max'=>3),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, numero, fecha, titulo, bajada, pais', 'safe', 'on'=>'search'),
+			array('id, numero, fecha, titulo, bajada, lng', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -61,7 +61,7 @@ class Revista extends CActiveRecord
 			'fecha' => 'Fecha',
 			'titulo' => 'Titulo',
 			'bajada' => 'Bajada',
-			'pais' => 'Pais',
+			'lng' => 'Lng',
 		);
 	}
 
@@ -88,7 +88,7 @@ class Revista extends CActiveRecord
 		$criteria->compare('fecha',$this->fecha,true);
 		$criteria->compare('titulo',$this->titulo,true);
 		$criteria->compare('bajada',$this->bajada,true);
-		$criteria->compare('pais',$this->pais,true);
+		$criteria->compare('lng',$this->lng,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
