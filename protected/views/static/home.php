@@ -410,12 +410,12 @@
 			</div>       
 	</section>
 	
-<<<<<<< HEAD
+
 	<?php if($_SESSION["lng"]=="es"){ ?>
 	<img style="width: 100%;position:relative;margin-bottom:-1px;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-celeste.png" alt="" />	
-=======
+
 	<img style="width:100%;position:relative;margin-bottom:-1px;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-celeste.png" alt="" />	
->>>>>>> origin/master
+
 	
 	<section class="special" data-scrollax-parent="true" style="background: rgb(129, 206, 231); min-height:100vh;width:100%;overflow-x:hidden;position:relative;" >
 
@@ -677,11 +677,9 @@
 		<img style="width: 100%;position:relative;margin-top:-1px;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-celeste-abajo.png" alt="" />	
 	<?php } ?>
 		<!--CURVA-->	
-<<<<<<< HEAD
-			
-=======
+
 		<img style="width:100%;position:relative;margin-top:-1px;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-celeste-abajo.png" alt="" />		
->>>>>>> origin/master
+
 		<section class="special col-lg-12 col-md-12 col-sm-12 col-xs-12" data-scrollax-parent="true" style="min-height:100vh;width:100%;">
 				
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >

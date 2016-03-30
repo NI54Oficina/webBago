@@ -2748,11 +2748,6 @@ footer{
 	letter-spacing:2px;
 }
 
-
-/** Style Filiales **/
-
-
-
 /*--------------------------------------------------------------------------------- CSS  FILIALES ------------------------------------------------------*/
 
 /************ FONTS ***********/
@@ -3027,7 +3022,7 @@ p{
 #opcion3{
 	margin-left:15px;
 }
-
+fH
 
 #border-menu img{
 	width:73%;
@@ -3056,7 +3051,6 @@ p{
 #texto{
 	font-family: 'arialregular';
     margin-right: 0;
-    
     text-align: left;
 }
 
@@ -3069,7 +3063,7 @@ p{
 
 
 #fecha-num{
-	font-size:49px;
+	font-size:48px;
 }
 
 
