@@ -15,7 +15,7 @@
 	<nav  id="navbarSecciones" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 collapse navbar-collapse" data-toggle="collapse">
 		
 		<div class="container-fluid" style="padding:0;">
-			<div id="boxes" style="">
+			<div id="boxes" style="text-align:left;">
 					
 					<div class="box">
 		
