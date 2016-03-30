@@ -3982,7 +3982,7 @@ section{
     text-align: center;
     padding-top: 6%;
     width: 15%;
-    margin-left: 7%;
+    margin-left: 4.5%;
 }
 
 
@@ -6766,19 +6766,28 @@ figure.snip1156:hover .salud-ambiental{
 
 @media only screen and (max-width:768px) {
 	#imagen-uno {margin-top: 0px;}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
 
-	.img-fundaciones-1{ float: left ;width: 40%; margin:0% 5% 0% 5%; height: 200px; }
-	.img-fundaciones-2{ float: left; width: 40%;margin:0% auto 0% auto; height: 200px;}
-	.img-fundaciones-3{float: left;width: 40%;margin:0% 5% 0% 5%;height: 200px; }
-	.img-fundaciones-4{float: left;width: 40%; margin:0% auto 0% auto; height: 200px; }
-	.img-fundaciones-5{float: left;width: 40%; margin:0% 5% 0% 7%; height: 200px; }
-	.img-fundaciones-6{float: left; width: 40%; margin:0% auto 0% auto; height: 200px;  }
+	.img-fundaciones-1{ float: left ;width: 40%; margin:0% 5% 0% 5%; height: 40%; }
+	.img-fundaciones-2{ float: left; width: 40%;margin:0% auto 0% auto; height: 40%;}
+	.img-fundaciones-3{float: left;width: 40%;margin:0% 5% 0% 5%;height: 40%; }
+	.img-fundaciones-4{float: left;width: 40%; margin:0% auto 0% auto; height: 40%; }
+	.img-fundaciones-5{float: left;width: 40%; margin:0% 5% 0% 7%; height: 40%; }
+	.img-fundaciones-6{float: left; width: 40%; margin:0% auto 0% auto; height: 40%;  }
 
 
 	
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/master
 }
 .navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse{
 	max-height:initial;
@@ -6786,6 +6795,12 @@ figure.snip1156:hover .salud-ambiental{
 .navbar-inverse .navbar-toggle,.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form{
 	border:none;
 }
+<<<<<<< HEAD
 .li-paises{
 	text-align:left;
 }
+=======
+>>>>>>> origin/master
+>>>>>>> origin/master
+>>>>>>> origin/master
+>>>>>>> origin/master
