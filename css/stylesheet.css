@@ -2920,7 +2920,7 @@ footer{
 
 
 #sub-filiales{
-    font-size: 13px;
+    font-size:13px;
 }
 
 
@@ -2937,9 +2937,6 @@ footer{
 p{
 	font-family: arialregular;
 }
-
-
-/** Style info **/
 
 
 /*--------------------------------------------------------------------------------- CSS  INFORMACIÓN TÉCNICA ------------------------------------------------------*/
@@ -2959,6 +2956,8 @@ p{
 
 
 /************ ESTILOS ***********/
+
+
 #info-tec{
 	background: rgb(129, 206, 231);
 	color:white;
@@ -3180,9 +3179,6 @@ p{
 #img-btn-mas:hover{
 	cursor:pointer;
 }
-
-/** Style institucional **/
-/** de aca para abajo **/
 
 /*--------------------------------------------------------------------------------- CSS  INSTITUCIONAL ------------------------------------------------------*/
 
