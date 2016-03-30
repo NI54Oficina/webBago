@@ -466,7 +466,7 @@
 							<p id="resumen-noticias"> 
 							<?php $bajada= $nota->bajada; 
 							$largoBajada=300;
-							if(strlen ($bajada)>){
+							if(strlen ($bajada)>$largoBajada){
 								$bajada= substr($bajada,0,$largoBajada);
 							}
 							echo $bajada."...";
