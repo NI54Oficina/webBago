@@ -11,8 +11,8 @@
 		<h2  class="h2-aftosa"><?php echo Textos::model()->GetText(347); ?></h2>	
 		<div id="barra-institucional"></div>
 		</div>
-		<p class="fundaciones" ><?php echo Textos::model()->GetText(458); ?></p>
-				<div><img class="img-fundaciones-1" src="<?php echo Yii::app()->request->baseUrl; ?>/img/rse-prosaia.png"  /></div>
+		
+				<div id="imagen-uno"><img class="img-fundaciones-1" src="<?php echo Yii::app()->request->baseUrl; ?>/img/rse-prosaia.png"  /></div>
 				<div><img class="img-fundaciones-2" src="<?php echo Yii::app()->request->baseUrl; ?>/img/rse-garrahan.png"  /></div>
 				<div><img class="img-fundaciones-3" src="<?php echo Yii::app()->request->baseUrl; ?>/img/rse-mundo-sano.png"  /></div>
 				<div><img class="img-fundaciones-4" src="<?php echo Yii::app()->request->baseUrl; ?>/img/rse-misiones-rurales.png"  /></div>
