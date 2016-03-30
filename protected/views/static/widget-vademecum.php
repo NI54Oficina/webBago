@@ -5,7 +5,7 @@
 
 	<input type="text" class="buscador" name="arg" style="width:88%;" />
 
-	<button  id="btn-buscador-vademecum" style="width:10%;margin-left:1%;background-size:90% auto; background-position:right;">
+	<button  id="btn-buscador-vademecum" style="width:10%;margin-left:1%;background-size:90% auto; background-position:right; margin-top: -5px;">
 		
 	</button>
 	</form>
