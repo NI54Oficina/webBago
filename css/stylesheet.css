@@ -6607,7 +6607,7 @@ figure.snip1156:hover .salud-ambiental{
 }
 
 .leer-infotec-noticias:hover{
-	color:#ccc;
+	color:#003B5D;
 	transition: all 0.6s ease;
 }
 
@@ -6621,7 +6621,7 @@ figure.snip1156:hover .salud-ambiental{
 .h1-infotec-noticias{
 	color: white;
 	font-family: 'arialregular';
-	margin: 0;
+	margin:0;
 	padding-top: 5%; 
 	text-align: center; 
 	font-size: 25px;
@@ -6707,7 +6707,7 @@ figure.snip1156:hover .salud-ambiental{
 /** fin fix ipad menu**/
 
 
-#barra-institucional {
+#barra-institucional{
 	width:50%;
 	height:1px;
 	display:inline-block;
@@ -6770,16 +6770,14 @@ figure.snip1156:hover .salud-ambiental{
 #imagen-uno {margin-top: 115px;}
 
 @media only screen and (max-width:768px) {
+
 	#imagen-uno {margin-top: 10px;}
-
-
-	.img-fundaciones-1{ float: left ; width:100%; margin:0% auto  0% auto;  }
+	.img-fundaciones-1{ float: left ; width:100%; margin:0% auto  0% auto;}
 	.img-fundaciones-2{ float: left; width:100%;margin:0% auto 0% auto; }
 	.img-fundaciones-3{float: left;width:100%;margin:0% 5% 0% 5%;}
-	.img-fundaciones-4{float: left;width:100%;margin:0% auto 0% auto;  }
+	.img-fundaciones-4{float: left;width:100%;margin:0% auto 0% auto;}
 	.img-fundaciones-5{float: left;width:100%;margin:0% 5% 0% 7%;  }
 	.img-fundaciones-6{float: left;width:100%; margin:0% auto 0% auto;  } 
-
    .imagenes-fundaciones{ height: 150px; width: 45%}
 
 	
@@ -6789,7 +6787,7 @@ figure.snip1156:hover .salud-ambiental{
 
 
 .navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse{
-	max-height:initial;
+	max-height:initial ;
 }
 .navbar-inverse .navbar-toggle,.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form{
 	border:none;
