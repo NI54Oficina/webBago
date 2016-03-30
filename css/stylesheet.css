@@ -4174,7 +4174,7 @@ section{
 }
 
 #p-3{
-	width:69%;
+	width:100% !important;
 	font-size:15px;
 }
 
@@ -4221,7 +4221,10 @@ p{
 } 
 
 #p-1{
-    width: 100%;
+    width: 100% !important;
+    font-size: 15px !important;
+    margin-bottom: 30px;
+
 }
 
 
