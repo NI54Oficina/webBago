@@ -38,7 +38,7 @@
 #cd-timeline {
 	position: relative;
 	padding: 2em 0;
-	margin-top: 2em;
+	margin-top:2em;
 	margin-bottom: 2em;
 }
 
@@ -59,7 +59,7 @@
   
 #cd-timeline {
 	margin-top: 3em;
-	margin-bottom: 3em;
+	margin-bottom:3em;
 }
 
 
@@ -112,7 +112,7 @@
   
   
   .cd-timeline-block:last-child {
-    margin-bottom: 0;
+    margin-bottom:0;
   }
   
 }
@@ -164,7 +164,7 @@
 @media only screen and (min-width: 1170px) {
   .cd-timeline-img {
     width: 60px;
-    height: 60px;
+    height:60px;
     left: 50%;
     margin-left: -30px;
     /* Force Hardware Acceleration in WebKit */
