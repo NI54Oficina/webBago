@@ -2463,7 +2463,7 @@ font-size: 22px;
 }
 
 #noticias p{
-	padding: 0px 10px;
+	padding: 0px 0px;
 	margin:0;
 	padding-left:0;
 	font-size:12.5px;
@@ -2877,7 +2877,7 @@ footer{
 #titulo-cont{
 	font-family: 'arialregular';
 	color:#8BCDE0;
-	font-size:15px;
+	font-size:13px;
 }
 
 
@@ -2898,7 +2898,7 @@ footer{
 #titulo-dist{
 	font-family: 'arialregular';
 	color:#8BCDE0;
-	font-size:22px;
+	font-size:18px;
 }
 
 
@@ -2916,13 +2916,13 @@ footer{
 
 
 #sub-filiales{
-    font-size: 15px;
+    font-size: 13px;
 }
 
 
 .band-filiales{
 	margin-top:-2%;
-	width: auto;
+	width:8%;
 }
 
  
@@ -5223,7 +5223,7 @@ figure.snip1156:hover .salud-ambiental{
   and (max-device-width: 1024px) 
   and (-webkit-min-device-pixel-ratio: 1) {
 	.h2-cd {
-		color: #B2B2B2;
+		color: #C8C6C6;
 		font-weight: 700;
 		font-family: 'arialregular';
 		font-size:18px;
@@ -6742,3 +6742,18 @@ figure.snip1156:hover .salud-ambiental{
 }
 
 
+#btn-mas:hover{
+	opacity: 0.4;
+	transition: all 0.6s ease;
+}
+
+
+#btn-mas{
+	transition: all 0.6s ease;
+}
+
+
+#btn-rev:focus{
+	outline:none;
+	border:none;
+}

@@ -484,7 +484,7 @@
 }
 
 .h2-cd{
-	color:#B2B2B2;
+	color:#C8C6C6;
 	font-weight: 700;
 	font-family:'arialregular';
 	font-size:40px;
@@ -498,6 +498,7 @@
 	font-size:11px;
 	transition: 0.3s all ease-in-out;
     line-height: 18px;
+	color:#C8C6C6;
 }
 .img-cd{
 	transition: all 0.5s ease;
