@@ -183,17 +183,18 @@ $(function(){
 	}
 	
 	function SameHeight(){
-		
+		//console.log("entra same height");
 		var auxId=1;
 		while($( "[hid="+auxId+"]" ).length){
 			var hidHeight=0;
-			ResetHeight();
+			//ResetHeight();
 			$("[hid="+auxId+"]").each(function(){
 				if($(this).innerHeight()>hidHeight){
 					hidHeight= $(this).innerHeight();
 				}
 				
 			});
+			//console.log(hidHeight);
 			$("[hid="+auxId+"]").css("height",hidHeight+"px");
 			auxId++;
 		}
