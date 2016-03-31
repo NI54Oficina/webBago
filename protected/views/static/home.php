@@ -432,8 +432,6 @@
 	<?php if($_SESSION["lng"]=="es"){ ?>
 	
 
-	<img style="width:100%;position:relative;margin-bottom:-1px;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-celeste.png" alt="" />	
-
 	
 	<section class="special" data-scrollax-parent="true" style="background: rgb(129, 206, 231); min-height:100vh;width:100%;overflow-x:hidden;position:relative;" >
 
@@ -677,13 +675,13 @@
 					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" id="seccion-mas">
 					
 						<div id="btn-mas" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-						
+							<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/informacion-tecnica" style="color:white;">
 							<img id="img-btn-mas" src="<?php echo Yii::app()->request->baseUrl; ?>/img/btn-mas.png"/>
 							<p id="texto-btn-mas"> Trabajos técnicos </p>
 							
 					
 						</div> <!-- Termina btn-mas -->
-					
+					</a>
 					</div> <!-- Termina seccion-mas -->      
         
 				</div> <!-- Termina noticias -->
@@ -692,7 +690,6 @@
 
 
 		</section>
-		<img style="width: 100%;position:relative;margin-top:-1px;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-celeste-abajo.png" alt="" />	
 	<?php } ?>
 		<!--CURVA-->	
 
