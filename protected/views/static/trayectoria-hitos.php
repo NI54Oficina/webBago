@@ -8,16 +8,21 @@
 	
 
 	<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-	<div class="side-title">
-		<div style="display:inline-block;">
-		<h2  class="h2-aftosa"><?php echo Textos::model()->GetText(347); ?></h2>	
-
-		<div id="barra-institucional"></div>
+	
+		<div class="side-title">
+			
+			<div style="display:inline-block;">
+				<h2  class="h2-aftosa"><?php echo Textos::model()->GetText(347); ?></h2>	
+				<div id="barra-institucional"></div>
+			</div>
+			
 		</div>
-	</div>
+		
 	</div>
 	
-	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/main.js"></script>
+<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/main.js"></script>
+
+
 <div class="div-texto-aftosa col-lg-6 col-md-6 col-sm-12 col-xs-12" style="text-align: left;">
 	
 	<div class="tabla-aftosa col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -192,6 +197,10 @@
 	
 	
 
+	
+	
+	
+	
 	<!--Nace biogenesis bago -->
 	<div class="container-anios-linea-tiempo">
 		<div>

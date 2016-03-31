@@ -6861,9 +6861,10 @@ figure.snip1156:hover .salud-ambiental{
 }
 
 #gota-vademecum {
-    			margin-right: 10px;
-   			 width: 20px;
-    			margin-top: -5px;}
+    margin-right: 10px;
+   	width: 20px;
+    margin-top: -5px;
+}
 
 .p-widget-v:hover {color: #202020}
 
@@ -7007,7 +7008,7 @@ figure.snip1156 .d-a-2 h2{
 	
 }
 
-
+/*redes-sociales-home*/
 #fb-home{
 	opacity:1;
 	transition:all 0.5s ease;
@@ -7030,7 +7031,7 @@ figure.snip1156 .d-a-2 h2{
 }
 
 
-
+/*flecha*/
 @-webkit-keyframes pulse {
   0% {
     opacity: 0;
@@ -7157,76 +7158,85 @@ figure.snip1156 .d-a-2 h2{
 }
 
 .scroll-down {
-  margin: 0;
-  border: 2px solid #fff;
-  -moz-border-radius: 100px;
-  -webkit-border-radius: 100px;
-  border-radius: 100px;
-  position: absolute;
-  left: 50%;
-  top: 70%;
-  width: 50px;
-  height: 50px;
-  margin-left: -50px;
-  margin-top: 0px;
+	margin: 0;
+	border: 2px solid #fff;
+	-moz-border-radius: 100px;
+	-webkit-border-radius: 100px;
+	border-radius: 100px;
+	position: absolute;
+	left: 50%;
+	top: 70%;
+	width: 50px;
+	height: 50px;
+	margin-left: -50px;
+	margin-top: 0px;
 	z-index: 2;
 }
+
+
 .scroll-down a {
-  display: block;
-  opacity: 0;
-  -moz-border-radius: 100px;
-  -webkit-border-radius: 100px;
-  border-radius: 100px;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-  line-height: 0;
-  font-size: 0;
-  color: transparent;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-  height: 100%;
-  -moz-background-size: 0 auto;
-  -o-background-size: 0 auto;
-  -webkit-background-size: 0 auto;
-  background-size: 0 auto;
-  -webkit-animation: pulse 1.9s 0.05s infinite normal ease forwards;
-  -moz-animation: pulse 1.8s 0.05s infinite normal ease forwards;
-  -o-animation: pulse 1.8s 0.05s infinite normal ease forwards;
-  animation: pulse 1.8s 0.05s infinite normal ease forwards;
-  background-image: url("http://jamesmuspratt.com/codepen/img/arrow-down.svg");
-  background-repeat: no-repeat;
+	display: block;
+	opacity: 0;
+	-moz-border-radius: 100px;
+	-webkit-border-radius: 100px;
+	border-radius: 100px;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	-webkit-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+	line-height: 0;
+	font-size: 0;
+	color: transparent;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	height: 100%;
+	-moz-background-size: 0 auto;
+	-o-background-size: 0 auto;
+	-webkit-background-size: 0 auto;
+	background-size: 0 auto;
+	-webkit-animation: pulse 1.9s 0.05s infinite normal ease forwards;
+	-moz-animation: pulse 1.8s 0.05s infinite normal ease forwards;
+	-o-animation: pulse 1.8s 0.05s infinite normal ease forwards;
+	animation: pulse 1.8s 0.05s infinite normal ease forwards;
+	background-image: url("http://jamesmuspratt.com/codepen/img/arrow-down.svg");
+	background-repeat: no-repeat;
 }
+
+
 .scroll-down a:before, .scroll-down a:after {
-  content: " ";
-  position: absolute;
-  top: -7px;
-  left: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: url("http://jamesmuspratt.com/codepen/img/arrow-down.svg") no-repeat;
-  -moz-background-size: 100% auto;
-  -o-background-size: 100% auto;
-  -webkit-background-size: 100% auto;
-  background-size: 100% auto;
+	content: " ";
+	position: absolute;
+	top: -7px;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: url("http://jamesmuspratt.com/codepen/img/arrow-down.svg") no-repeat;
+	-moz-background-size: 100% auto;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100% auto;
+	background-size: 100% auto;
 }
+
+
 .scroll-down a:before {
-  -webkit-animation: pulse 1.8s 0.20s infinite normal ease forwards;
-  -moz-animation: pulse 1.8s 0.20s infinite normal ease forwards;
-  -o-animation: pulse 1.8s 0.20s infinite normal ease forwards;
-  animation: pulse 1.8s 0.20s infinite normal ease forwards;
+	-webkit-animation: pulse 1.8s 0.20s infinite normal ease forwards;
+	-moz-animation: pulse 1.8s 0.20s infinite normal ease forwards;
+	-o-animation: pulse 1.8s 0.20s infinite normal ease forwards;
+	animation: pulse 1.8s 0.20s infinite normal ease forwards;
     top: -8px;
 }
+
+
 .scroll-down a:after {
-  -webkit-animation: pulse 1.8s 0.55s infinite normal ease forwards;
-  -moz-animation: pulse 1.8s 0.55s infinite normal ease forwards;
-  -o-animation: pulse 1.8s 0.55s infinite normal ease forwards;
-  animation: pulse 1.8s 0.55s infinite normal ease forwards;
-  top: -12px;
+	-webkit-animation: pulse 1.8s 0.55s infinite normal ease forwards;
+	-moz-animation: pulse 1.8s 0.55s infinite normal ease forwards;
+	-o-animation: pulse 1.8s 0.55s infinite normal ease forwards;
+	animation: pulse 1.8s 0.55s infinite normal ease forwards;
+	top: -12px;
 }
+
 .scroll-down a:hover {
-  background-color: rgba(0, 0, 0, 0.3);
+	background-color: rgba(0, 0, 0, 0.3);
 }
