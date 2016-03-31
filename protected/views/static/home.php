@@ -431,7 +431,7 @@
 
 	<?php if($_SESSION["lng"]=="es"){ ?>
 	
-
+	<img style="width: 100%;position:relative;margin-bottom:-1px;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-celeste.png" alt="" />	
 	
 	<section class="special" data-scrollax-parent="true" style="background: rgb(129, 206, 231); min-height:100vh;width:100%;overflow-x:hidden;position:relative;" >
 
@@ -690,6 +690,7 @@
 
 
 		</section>
+		<img style="width:100%;position:relative;margin-top:-1px;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-celeste-abajo.png" alt="" />	
 	<?php } ?>
 		<!--CURVA-->	
 
