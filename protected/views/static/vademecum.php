@@ -59,8 +59,13 @@ function sanear_string($string)
 }
 ?>
 <?php
-
-$productos =Producto::model()->findAllByAttributes(array('seccion'=>$data->id,"pais"=>Yii::app()->session['pais']));;
+$pais= Pais::model()->findByPk(Yii::app()->session['pais']);
+if($pais->catalogo==1){
+	$pais=$pais->id;
+}else{
+	$pais=8;
+}
+$productos =Producto::model()->findAllByAttributes(array('seccion'=>$data->id,"pais"=>$pais));;
 $idSeccion= $data->id;
 $auxLink= $data->nombre;
 $auxLink=  sanear_string($auxLink);
@@ -114,12 +119,15 @@ $auxId=0;
 	$id= $producto->id;
 	$imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"id DESC"));
 	?>
-	<div class=" col-lg-4 col-md-4 col-sm-6 col-xs-12 div-img-aft same-height" hid="1" style="background-color:#f5f5f5;">
-		<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/productos/id<?php echo $producto->id; ?>">
+	<div class=" col-lg-4 col-md-4 col-sm-6 col-xs-12 div-img-aft same-height" hid="1" style="">
+		<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/productos/id<?php echo $producto->id; ?>" style="background-color:#f5f5f5;display:inline-block;width:96%;height:96%;margin:2%;">
 		<figure class="snip1156 image">
 			<div>
-				<img style="width:45%;display:inline-block;margin:10%; float: left; margin-top: 5%;" class="img-cat-aft " src="<?php echo Yii::app()->getBaseUrl(true); ?>/vademecums/<?php echo $imagen->id; ?>.png" /> 
-				<div id="targets">
+				<div class="inner-producto-vademecum">
+				<div class="producto-vademecum-top">
+				<img style="width:45%;display:inline-block;margin:5%; margin-top: 5%;margin-right:0;text-align:left;" class="img-cat-aft " src="<?php echo Yii::app()->getBaseUrl(true); ?>/vademecums/<?php echo $imagen->id; ?>.png" /> 
+				<div class="targets-vademecum">
+					<div class="columna-target">
 					<?php
 					$target= $producto->target;
 					$targetImages=array('<img src="'.Yii::app()->getBaseUrl(true).'/images/caballo.png">',
@@ -141,7 +149,7 @@ $auxId=0;
 							echo $targetImages[$auxTarget];
 						}
 						if($auxDiv>=2){
-							//echo "</div><div id='targets'>";
+							echo "</div><div class='columna-target'>";
 							$auxDiv=0;
 						}
 						$auxTarget++;
@@ -150,10 +158,13 @@ $auxId=0;
 					
 					?>
 					</div>
+					</div>
+					</div>
 					<h3><?php echo $producto->nombre; ?></h3>
+				</div>
 				<figcaption>
 					<div class="d-a-2 <?php echo $normalizado; ?>">
-						<h2 class="<?php echo $normalizado; ?>-h2"><?php echo $producto->nombre; ?></h2>
+						<h2 class="<?php echo $normalizado; ?>-h2">+<br><?php echo $producto->nombre; ?></h2>
 					</div>
 					<div>
 					</div>

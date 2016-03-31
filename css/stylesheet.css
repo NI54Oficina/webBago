@@ -85,9 +85,9 @@ font-size: 22px;
 }
 
 .div-img-aft {
-    webkit-box-shadow: inset 0px -1px 0px 15px rgba(255,255,255,1);
+    /*webkit-box-shadow: inset 0px -1px 0px 15px rgba(255,255,255,1);
     -moz-box-shadow: inset 0px -1px 0px 15px rgba(255,255,255,1);
-    box-shadow: inset 5px -1px 0px 3px rgba(255,255,255,1);
+    box-shadow: inset 5px -1px 0px 3px rgba(255,255,255,1);*/
 }
 
 
@@ -1570,9 +1570,9 @@ font-size: 22px;
 	
 	
 	.div-img-aft{
-	    webkit-box-shadow: inset 0px -1px 0px 15px rgba(255,255,255,1);
+	    /*webkit-box-shadow: inset 0px -1px 0px 15px rgba(255,255,255,1);
 		-moz-box-shadow: inset 0px -1px 0px 15px rgba(255,255,255,1);
-		box-shadow: inset 5px -1px 0px 3px rgba(255,255,255,1);
+		box-shadow: inset 5px -1px 0px 3px rgba(255,255,255,1);*/
 	}
 	
 	.p-img-vad{
@@ -1696,7 +1696,7 @@ font-size: 22px;
 	
 	figure.snip1156:hover img,
 	figure.snip1156.hover img {
-		opacity: 0.4;
+		
 	}
 	
 	figure.snip1156:hover figcaption h2,
@@ -1748,10 +1748,10 @@ font-size: 22px;
 	
 	figure.snip1156:hover .d-a-2{
 		border: 2px solid #7F781A;
-		margin-top:  14.5%;
-		width: 68%;
-		margin-left: 16%;
-		height: 80px;
+		/*margin-top:  14.5%;*/
+		width: 90%;
+		/*margin-left: 16%;*/
+		height: 90%;
 	}
 	
 	figure.snip1156:hover .d-a-2 h2{
@@ -2092,10 +2092,10 @@ font-size: 22px;
 		color:#003B5D;
 	}
 	figure.snip1156:hover .d-a-2 {
-		margin-top: 16%;
-		width: 68%;
-		margin-left: 16%;
-		height: 175px;
+		/*margin-top: 16%;*/
+		width: 90%;
+		/*margin-left: 16%;*/
+		height: 90%;
 		font-weight:900;
 		letter-spacing:1px;
 	}
@@ -2198,10 +2198,10 @@ font-size: 22px;
 	
 	figure.snip1156:hover .d-a-2 {
 		border: 2px solid #7F781A;
-		margin-top: 16%;
-		width: 68%;
-		margin-left: 16%;
-		height: 63%;
+		/*margin-top: 16%;*/
+		width: 90%;
+		/*margin-left: 16%;*/
+		height: 90%;
 		font-weight:900;
 		letter-spacing:0.5px;
 	}
@@ -2309,10 +2309,10 @@ font-size: 22px;
 	}
 	
 	figure.snip1156:hover .d-a-2 {
-		margin-top: 18%;
-		width: 68%;
-		margin-left: 16%;
-		height: 63%;
+		/*margin-top: 18%;*/
+		width: 90%;
+		/*margin-left: 16%;*/
+		height: 90%;
 		font-weight:900;
 		letter-spacing:0.5px;
 	}
@@ -6806,3 +6806,82 @@ figure.snip1156:hover .salud-ambiental{
 
 .p-widget-v:hover {color: #202020}
 
+figure.snip1156 figcaption > div:hover{
+	background:transparent;
+}
+figure.snip1156 figcaption:hover{
+background-color:rgba(200,100,100,0.5);
+}
+
+figure.snip1156 figcaption > div{
+	margin:5%;
+	
+}
+figure.snip1156{
+	width:100%;
+	height:100%;
+}
+
+figure.snip1156 :hover{
+	background: transparent;
+}
+
+figure.snip1156:hover .inner-producto-vademecum{
+	transition:1;
+	transform-origin: 0% 0%;
+}
+
+figure.snip1156:hover .inner-producto-vademecum{
+	
+	-ms-transform: scale(1.5,1.5); /* IE 9 */
+    -webkit-transform: scale(1.5,1.5); /* Safari */
+    transform: scale(1.5,1.5);
+	
+}
+
+.div-img-aft{
+	overflow:hidden;
+	
+}
+
+figure.snip1156 .d-a-2 h2{
+	display:inline-block;
+	width:100%;
+	height:50%;
+	text-align:center;
+	color:white !important;
+}
+
+.targets-vademecum{
+	width:45%;
+	display:inline-block;
+	float:right;
+	padding-top:10%;
+	padding-right:5%;
+}
+.targets-vademecum img{
+	width:100% !important;
+}
+.snip1156.image h3{
+	display:block;
+}
+
+.columna-target{
+	width:30%;
+	float:right;
+}
+
+@media only screen and (max-width:768px) {
+	figcaption{
+		display:none;
+	}
+	
+	figure.snip1156:hover .inner-producto-vademecum{
+		
+		-ms-transform: scale(1,1); /* IE 9 */
+		-webkit-transform: scale(1,1); /* Safari */
+		transform: scale(1,1);
+		
+	}
+
+}

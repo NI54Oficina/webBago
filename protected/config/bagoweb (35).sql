@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 30-03-2016 a las 21:10:21
+-- Tiempo de generación: 31-03-2016 a las 19:52:16
 -- Versión del servidor: 5.5.24
 -- Versión de PHP: 5.4.45
 
@@ -1009,21 +1009,34 @@ CREATE TABLE IF NOT EXISTS `tbl_pais` (
   `url` varchar(100) NOT NULL,
   `short` varchar(2) NOT NULL,
   `lng` varchar(5) NOT NULL,
+  `catalogo` int(1) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=22 ;
 
 --
 -- Volcado de datos para la tabla `tbl_pais`
 --
 
-INSERT INTO `tbl_pais` (`id`, `nombre`, `icon`, `url`, `short`, `lng`) VALUES
-(1, 'Argentina', 0, 'argentina', 'ar', 'es'),
-(2, 'Brasil', 0, 'brasil', 'br', 'pt'),
-(5, 'Bolivia', 0, 'Bolivia', 'bo', 'es'),
-(6, 'México', 0, 'Mxico', 'mx', 'es'),
-(7, 'Uruguay', 0, 'Uruguay', 'uy', 'es'),
-(8, 'General', 0, 'General', '##', 'es'),
-(9, 'USA', 0, 'USA', 'en', 'en');
+INSERT INTO `tbl_pais` (`id`, `nombre`, `icon`, `url`, `short`, `lng`, `catalogo`) VALUES
+(1, 'Argentina', 0, 'argentina', 'ar', 'es', 1),
+(2, 'Brasil', 0, 'brasil', 'br', 'pt', 1),
+(5, 'Bolivia', 0, 'Bolivia', 'bo', 'es', 1),
+(6, 'México', 0, 'Mxico', 'mx', 'es', 1),
+(7, 'Uruguay', 0, 'Uruguay', 'uy', 'es', 0),
+(8, 'General', 0, 'General', 'xx', 'es', 0),
+(9, 'USA', 0, 'USA', 'en', 'en', 1),
+(10, 'Costa Rica', 0, 'Costa Rica', 'cr', 'es', 0),
+(11, 'Ecuador', 0, 'Ecuador', 'ec', 'es', 0),
+(12, 'El Salvador', 0, 'El salvador', 'sv', 'es', 0),
+(13, 'Guatemala', 0, 'Guatemala', 'gt', 'es', 0),
+(14, 'Honduras', 0, 'Honduras', 'hn', 'es', 0),
+(15, 'Nicaragua', 0, 'Nicaragua', 'ni', 'es', 0),
+(16, 'Panamá', 0, 'Panamá', 'pa', 'es', 0),
+(17, 'Paraguay', 0, 'Paraguay', 'py', 'es', 0),
+(18, 'Perú', 0, 'Perú', 'pe', 'es', 0),
+(19, 'República Dominicana', 0, 'República Dominicana', 'do', 'es', 0),
+(20, 'Uruguay', 0, 'Uruguay', 'uy', 'es', 0),
+(21, 'Venezuela', 0, 'Venezuela', 've', 'es', 0);
 
 -- --------------------------------------------------------
 
@@ -10239,7 +10252,7 @@ CREATE TABLE IF NOT EXISTS `tbl_textos` (
   `en` text NOT NULL COMMENT 'ingles',
   `pt` text NOT NULL COMMENT 'portugues',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=489 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=490 ;
 
 --
 -- Volcado de datos para la tabla `tbl_textos`
@@ -10728,7 +10741,8 @@ INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (485, 'Porque nos sentimos  orgullosos  de lo que hacemos y ofrecemos a nuestros clientes', 'Because we are proud of what we do and what we offer our clients', ''),
 (486, 'Por el buen clima laboral que sostenemos', 'Because of our positive work environment', ''),
 (487, 'Por nuestro compromiso con la gente y su desarrollo', 'Because of our commitment to the people and their development', ''),
-(488, 'Trabajar con equipos de diferentes áreas y regiones te permitirá construir nuevos lazos con colaboradores y, a la vez, descubrir  otras posibilidades de desarrollo profesional. Apostamos al compromiso y la pasión de nuestros empleados como pilares indispensables para un sólido crecimiento de toda la compañía', 'Working with teams from different areas and regions will allow you to build new bonds with collaborators and, simultaneously, discover other possibilities for your professional growth. We bet on our employees commitment and passion as our indispensable pillars for a solid growth of our entire company', '');
+(488, 'Trabajar con equipos de diferentes áreas y regiones te permitirá construir nuevos lazos con colaboradores y, a la vez, descubrir  otras posibilidades de desarrollo profesional. Apostamos al compromiso y la pasión de nuestros empleados como pilares indispensables para un sólido crecimiento de toda la compañía', 'Working with teams from different areas and regions will allow you to build new bonds with collaborators and, simultaneously, discover other possibilities for your professional growth. We bet on our employees commitment and passion as our indispensable pillars for a solid growth of our entire company', ''),
+(489, 'Copyright de Biogénesis Bagó®', '', '');
 
 -- --------------------------------------------------------
 

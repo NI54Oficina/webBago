@@ -30,24 +30,24 @@
 						<!-- LISTA DE PAÍSES-->
 						<div style="margin-top:-2 %;">
 							<ul class="ul-paises" >
-								<li class="li-paises"><a href=""><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-arg.png" /><?php echo Textos::model()->GetText(410); ?></a></li>
-								<li class="li-paises"><a href=""><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-bol.png" /><?php echo Textos::model()->GetText(411); ?></a></li>
-								<li class="li-paises"><a href=""><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-br.png" /><?php echo Textos::model()->GetText(412); ?></a></li>
-								<li class="li-paises"><a href=""><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-cost.png" /><?php echo Textos::model()->GetText(413); ?></a></li>
-								<li class="li-paises"><a href=""><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-ec.png" /><?php echo Textos::model()->GetText(414); ?></a></li>
-								<li class="li-paises"><a href=""><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-sal.png" /><?php echo Textos::model()->GetText(415); ?></a></li>
+								<li class="li-paises"><a class="link-menu" href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/1/lng/es"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-arg.png" /><?php echo Textos::model()->GetText(410); ?></a></li>
+								<li class="li-paises"><a class="link-menu" href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/5/lng/es"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-bol.png" /><?php echo Textos::model()->GetText(411); ?></a></li>
+								<li class="li-paises"><a class="link-menu" href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/2/lng/es"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-br.png" /><?php echo Textos::model()->GetText(412); ?></a></li>
+								<li class="li-paises"><a class="link-menu" href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/10/lng/es"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-cost.png" /><?php echo Textos::model()->GetText(413); ?></a></li>
+								<li class="li-paises"><a class="link-menu" href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/11/lng/es"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-ec.png" /><?php echo Textos::model()->GetText(414); ?></a></li>
+								<li class="li-paises"><a class="link-menu" href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/12/lng/es"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-sal.png" /><?php echo Textos::model()->GetText(415); ?></a></li>
 							
-								<li class="li-paises"><a href=""><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-guat.png" /><?php echo Textos::model()->GetText(416); ?></a></li>
-								<li class="li-paises"><a href=""><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-hon.png" /><?php echo Textos::model()->GetText(417); ?></a></li>
-								<li class="li-paises"><a href=""><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-mex.png" /><?php echo Textos::model()->GetText(418); ?></a></li>
-								<li class="li-paises"><a href=""><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-nic.png" /><?php echo Textos::model()->GetText(419); ?></a></li>
-								<li class="li-paises"><a href=""><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-pan.png" /><?php echo Textos::model()->GetText(420); ?></a></li>
-								<li class="li-paises"><a href=""><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-par.png" /><?php echo Textos::model()->GetText(421); ?></a></li>
+								<li class="li-paises"><a class="link-menu" href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/13/lng/es"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-guat.png" /><?php echo Textos::model()->GetText(416); ?></a></li>
+								<li class="li-paises"><a class="link-menu" href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/14/lng/es"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-hon.png" /><?php echo Textos::model()->GetText(417); ?></a></li>
+								<li class="li-paises"><a class="link-menu" href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/6/lng/es"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-mex.png" /><?php echo Textos::model()->GetText(418); ?></a></li>
+								<li class="li-paises"><a class="link-menu" href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/15/lng/es"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-nic.png" /><?php echo Textos::model()->GetText(419); ?></a></li>
+								<li class="li-paises"><a class="link-menu" href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/16/lng/es"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-pan.png" /><?php echo Textos::model()->GetText(420); ?></a></li>
+								<li class="li-paises"><a class="link-menu" href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/17/lng/es"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-par.png" /><?php echo Textos::model()->GetText(421); ?></a></li>
 							
-								<li class="li-paises"><a href=""><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-per.png" /><?php echo Textos::model()->GetText(422); ?></a></li>
-								<li class="li-paises"><a href=""><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-rep.png" /><?php echo Textos::model()->GetText(423); ?></a></li>
-								<li class="li-paises"><a href=""><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-uru.png" /><?php echo Textos::model()->GetText(424); ?></a></li>
-								<li class="li-paises"><a href=""><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-ven.png" /><?php echo Textos::model()->GetText(425); ?></a></li>
+								<li class="li-paises"><a class="link-menu" href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/18/lng/es"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-per.png" /><?php echo Textos::model()->GetText(422); ?></a></li>
+								<li class="li-paises"><a class="link-menu" href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/19/lng/es"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-rep.png" /><?php echo Textos::model()->GetText(423); ?></a></li>
+								<li class="li-paises"><a class="link-menu" href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/20/lng/es"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-uru.png" /><?php echo Textos::model()->GetText(424); ?></a></li>
+								<li class="li-paises"><a class="link-menu" href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/21/lng/es"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-ven.png" /><?php echo Textos::model()->GetText(425); ?></a></li>
 							</ul>
 						</div>
 					
@@ -71,27 +71,32 @@
 		
 		<!-- +++++ LISTA VERSIONES MOBILE+++++ -->
 		<ul class=" col-lg-2 col-md-2 col-sm-10 col-xs-12" id="ul-nav-2-mobile" style="color:#0C6594;">
-				<li class="li-nav-2"><a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/pais/traduccion/id/1/lng/0"style="float:left;padding: 10px 0px;color: #337ab7;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-arg.png" /></a></li>
+				
+				<?php if($_SESSION["lng"]!="es"){ ?>
+				<li class="li-nav-2"><a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/pais/traduccion/id/1/lng/es"style="float:left;padding: 10px 0px;color: #337ab7;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-arg.png" /></a></li>
+				<?php } ?>
+				<?php if($_SESSION["lng"]!="pt"){ ?>
 				<li class="li-nav-2"><a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/pais/traduccion/id/2/lng/2"style="float:left;padding: 10px 0px;color: #337ab7;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-br.png" /></a></li>
+				<?php } ?>
 				<li class="li-nav-2 dropdown" data-toggle="collapse"><a  href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"  style="float:left;padding: 10px 0px;color: #337ab7;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/mas-paises.png"  /></a>
 				
 					<ul class="dropdown-menu dropdown-menu-right lista-menu collapse" id="ul-paises-nav">
-								<li class="li-paises-nav" ><a href="" class="a-otros-paises-mobile"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-arg.png" /><?php echo Textos::model()->GetText(410); ?></a></li>
-								<li class="li-paises-nav" ><a href="" class="a-otros-paises-mobile"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-bol.png" /><?php echo Textos::model()->GetText(411); ?></a></li>
-								<li class="li-paises-nav" ><a href="" class="a-otros-paises-mobile"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-br.png" /><?php echo Textos::model()->GetText(412); ?></a></li>
-								<li class="li-paises-nav" ><a href="" class="a-otros-paises-mobile"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-cost.png" /><?php echo Textos::model()->GetText(413); ?></a></li>
-								<li class="li-paises-nav" ><a href="" class="a-otros-paises-mobile"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-ec.png" /><?php echo Textos::model()->GetText(414); ?></a></li>
-								<li class="li-paises-nav" ><a href="" class="a-otros-paises-mobile"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-sal.png" /><?php echo Textos::model()->GetText(415); ?></a></li>
-								<li class="li-paises-nav" ><a href="" class="a-otros-paises-mobile"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-guat.png" /><?php echo Textos::model()->GetText(416); ?></a></li>
-								<li class="li-paises-nav" ><a href="" class="a-otros-paises-mobile"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-hon.png" /><?php echo Textos::model()->GetText(417); ?></a></li>
-								<li class="li-paises-nav" ><a href="" class="a-otros-paises-mobile"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-mex.png" /><?php echo Textos::model()->GetText(418); ?></a></li>
-								<li class="li-paises-nav" ><a href="" class="a-otros-paises-mobile"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-nic.png" /><?php echo Textos::model()->GetText(419); ?></a></li>
-								<li class="li-paises-nav" ><a href="" class="a-otros-paises-mobile"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-pan.png" /><?php echo Textos::model()->GetText(420); ?></a></li>
-								<li class="li-paises-nav" ><a href="" class="a-otros-paises-mobile"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-par.png" /><?php echo Textos::model()->GetText(421); ?></a></li>
-								<li class="li-paises-nav" ><a href="" class="a-otros-paises-mobile"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-per.png" /><?php echo Textos::model()->GetText(422); ?></a></li>
-								<li class="li-paises-nav" ><a href="" class="a-otros-paises-mobile"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-rep.png" /><?php echo Textos::model()->GetText(423); ?></a></li>
-								<li class="li-paises-nav" ><a href="" class="a-otros-paises-mobile"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-uru.png" /><?php echo Textos::model()->GetText(424); ?></a></li>
-								<li class="li-paises-nav" ><a href="" class="a-otros-paises-mobile"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-ven.png" /><?php echo Textos::model()->GetText(425); ?></a></li>
+								<li class="li-paises-nav" ><a href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/1/lng/es" class="a-otros-paises-mobile link-menu"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-arg.png" /><?php echo Textos::model()->GetText(410); ?></a></li>
+								<li class="li-paises-nav" ><a href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/5/lng/es" class="a-otros-paises-mobile link-menu"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-bol.png" /><?php echo Textos::model()->GetText(411); ?></a></li>
+								<li class="li-paises-nav" ><a href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/2/lng/es" class="a-otros-paises-mobile link-menu"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-br.png" /><?php echo Textos::model()->GetText(412); ?></a></li>
+								<li class="li-paises-nav" ><a href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/10/lng/es" class="a-otros-paises-mobile link-menu"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-cost.png" /><?php echo Textos::model()->GetText(413); ?></a></li>
+								<li class="li-paises-nav" ><a href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/11/lng/es" class="a-otros-paises-mobile link-menu"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-ec.png" /><?php echo Textos::model()->GetText(414); ?></a></li>
+								<li class="li-paises-nav" ><a href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/12/lng/es" class="a-otros-paises-mobile link-menu"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-sal.png" /><?php echo Textos::model()->GetText(415); ?></a></li>
+								<li class="li-paises-nav" ><a href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/13/lng/es" class="a-otros-paises-mobile link-menu"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-guat.png" /><?php echo Textos::model()->GetText(416); ?></a></li>
+								<li class="li-paises-nav" ><a href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/14/lng/es" class="a-otros-paises-mobile link-menu"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-hon.png" /><?php echo Textos::model()->GetText(417); ?></a></li>
+								<li class="li-paises-nav" ><a href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/6/lng/es" class="a-otros-paises-mobile link-menu"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-mex.png" /><?php echo Textos::model()->GetText(418); ?></a></li>
+								<li class="li-paises-nav" ><a href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/15/lng/es" class="a-otros-paises-mobile link-menu"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-nic.png" /><?php echo Textos::model()->GetText(419); ?></a></li>
+								<li class="li-paises-nav" ><a href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/16/lng/es" class="a-otros-paises-mobile link-menu"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-pan.png" /><?php echo Textos::model()->GetText(420); ?></a></li>
+								<li class="li-paises-nav" ><a href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/17/lng/es" class="a-otros-paises-mobile link-menu"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-par.png" /><?php echo Textos::model()->GetText(421); ?></a></li>
+								<li class="li-paises-nav" ><a href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/18/lng/es" class="a-otros-paises-mobile link-menu"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-per.png" /><?php echo Textos::model()->GetText(422); ?></a></li>
+								<li class="li-paises-nav" ><a href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/19/lng/es" class="a-otros-paises-mobile link-menu"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-rep.png" /><?php echo Textos::model()->GetText(423); ?></a></li>
+								<li class="li-paises-nav" ><a href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/20/lng/es" class="a-otros-paises-mobile link-menu"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-uru.png" /><?php echo Textos::model()->GetText(424); ?></a></li>
+								<li class="li-paises-nav" ><a href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/21/lng/es" class="a-otros-paises-mobile link-menu"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-ven.png" /><?php echo Textos::model()->GetText(425); ?></a></li>
 					</ul>
 					
 				</li>
@@ -102,9 +107,15 @@
 		<!-- +++++ LISTA VERSIONES +++++ -->
 		<ul class=" col-lg-6 col-md-6 col-sm-4 col-xs-12" id="ul-nav-2" style="color:#0C6594;float:right;    text-align: right;">
 				<li class="li-nav-2"><div id="links"><a class="openlink" href="javascript:void(0);"  style="float:left;padding: 10px 0px;color: #337ab7;"><?php echo Textos::model()->GetText(426); ?></a></div></li>
+				<?php if($_SESSION["lng"]!="es"){ ?>
 				<li class="li-nav-2"><a class="link-menu" href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/1/lng/es"style="float:left;padding: 10px 0px;color: #337ab7;"><?php echo Textos::model()->GetText(427); ?></a></li>
+				<?php } ?>
+				<?php if($_SESSION["lng"]!="pt"){ ?>
 				<li class="li-nav-2"><a class="link-menu" href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/2/lng/pt"style="float:left;padding: 10px 0px;color: #337ab7;"><?php echo Textos::model()->GetText(428); ?></a></li>
+				<?php } ?>
+				<?php if($_SESSION["lng"]!="en"){ ?>
 				<li class="li-nav-2"><a class="link-menu" href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/9/lng/en"style="float:left;padding: 10px 0px;color: #337ab7;">Versión Ingles</a></li>
+				<?php } ?>
 				<li class="li-nav-2"><a class="link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/proveedores" style="float:left;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/fronteras-50x50-01.png" /></a></li>
 		</ul> <!-- termina lista versiones -->
 	
