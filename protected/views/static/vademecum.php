@@ -83,12 +83,18 @@ $auxId=0;
 
 <div style="margin-top:10%;" class="hidden-xs hidden-sm">
 <h1 class="vademecum"> <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/punto-<?php echo $normalizado; ?>.png" /> <?php echo Textos::model()->GetText(348); ?> <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/punto-<?php echo $normalizado; ?>.png" /></h1>
-<p  style="text-align:center;border-bottom:1px solid #0082C8;width:3%;margin:auto;margin-top:0%;"></p>
+<p  style="text-align:center;border-bottom:1px solid #7F7F7F;width:3%;margin:auto;margin-top:0%;"></p>
 </div>
+
+
+ <!-- ACA ESTA EL TITULO CON LA GOTA -->
 
 <h2 class="titulo-vad titulo-<?php echo $normalizado; ?>">
 
-<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/gota-<?php echo $normalizado; ?>.png"  /><?php echo Yii::app()->paisChecker->getSeccion($data->id); ?></h2>
+<img id="gota-vademecum" src="<?php echo Yii::app()->request->baseUrl; ?>/img/gota-<?php echo $normalizado; ?>.png"  />
+<?php echo Yii::app()->paisChecker->getSeccion($data->id); ?></h2>
+
+ <!-- ACA ESTA EL TITULO CON LA GOTA -->
 
 <a href="<?php echo Yii::app()->getBaseUrl(true); ?>"><div class=" col-lg-3 col-md-3 col-sm-12 col-xs-12 volver hidden-sm hidden-xs">
 <p>Volver</p>
