@@ -162,7 +162,7 @@ $auxId=0;
 					</div>
 					<h3><?php echo $producto->nombre; ?></h3>
 				</div>
-				<figcaption>
+				<figcaption class="fig-<?php echo $normalizado; ?>">
 					<div class="d-a-2 <?php echo $normalizado; ?>">
 						<h2 class="<?php echo $normalizado; ?>-h2">+<br><?php echo $producto->nombre; ?></h2>
 					</div>
