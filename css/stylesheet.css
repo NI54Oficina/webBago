@@ -660,7 +660,13 @@ font-size: 22px;
 		vertical-align:middle;
 		text-align:center;
 	}
-	
+
+	/**TITULO AFSTOSA HARDOCODEADO **/
+
+	.titulo-aftosa #gota-vademecum { margin-left: -3%; }
+
+	/**TITULO AFSTOSA HARDOCODEADO **/
+
 	.icono-quienes{
 		background-image:url(../img/icono-quienes-des.png);
 		background-repeat:no-repeat;
@@ -6787,3 +6793,7 @@ figure.snip1156:hover .salud-ambiental{
 	text-align:left;
 }
 
+#gota-vademecum {
+    			margin-right: 10px;
+   			 width: 20px;
+    			margin-top: -5px;}
