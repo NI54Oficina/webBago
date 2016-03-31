@@ -101,7 +101,7 @@
 
 			<div class="cd-timeline-content">
 				<h2  class="h2-cd"><?php echo Textos::model()->GetText(359); ?></h2>
-				<span class="cd-date"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-tiempo-bullet.png"  /></span>
+				<span class="cd-date"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-tiempo-bullet.png" /></span>
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
 		
@@ -226,25 +226,25 @@
 
 		<div class="cd-timeline-block">
 			<div class="cd-timeline-img cd-movie">
-				<p class="p-cd" style="margin-top: 15px;">2008</p>
+				<p class="p-cd" style="margin-top: 15px;">2008 </p>
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
 				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/casa.png" style="width: 22px;padding-bottom: 10px;"/>
 				<h2 class="h2-cd"><?php echo Textos::model()->GetText(370); ?></h2>
-				<span class="cd-date"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-tiempo-bullet.png"  /></span>
+				<span class="cd-date"> <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-tiempo-bullet.png"  /></span>
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
 
 		<div class="cd-timeline-block">
 			<div class="cd-timeline-img cd-picture">
-				<p class="p-cd" style="margin-top: 15px;">2009</p>
+				<p class="p-cd" style="margin-top: 15px;">2009 </p>
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
 				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/estrella.png" style="width:22px;padding-bottom:10px;"/>
 				<h2 class="h2-cd"><?php echo Textos::model()->GetText(371); ?></h2>
-				<span class="cd-date"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-tiempo-bullet.png"  /></span>
+				<span class="cd-date"> <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-tiempo-bullet.png"  /></span>
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
 
@@ -316,7 +316,7 @@
 	</section> 
 	
 	<div class="col-lg-12" style=" margin: auto; text-align: center;">
-		<img style="width: 230px;padding-bottom:20px;" id="evolucion-logo" src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-evolucion-logo.png" />
+		<img style="width:230px;padding-bottom:20px;"  id="evolucion-logo" src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-evolucion-logo.png" />
 	</div>
 		<h2  style="text-align:center;color:#00173B;font-size:23px;"><?php echo Textos::model()->GetText(379); ?></h2>
 		

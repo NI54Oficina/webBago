@@ -1,3 +1,9 @@
+<?php if($_SESSION["lng"]=="en"){ ?>
+	
+<h3 style="padding-top:40vh;">Sección no habilitada en su idioma</h3>
+
+
+<?php }else{ ?>
 <img id="logo-bago-mobile" class="hidden-lg hidden-md col-sm-12 col-xs-12" src="/webBago/img/logo-bago.png" style="opacity:0;">
 			<div class="header-layout-aftosa col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
@@ -59,3 +65,5 @@
 </div>
 
 <?php include('widget.php'); ?>
+
+<?php } ?>

@@ -410,7 +410,12 @@
 			</div>       
 	</section>
 	
+
+	<?php if($_SESSION["lng"]=="es"){ ?>
 	<img style="width: 100%;position:relative;margin-bottom:-1px;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-celeste.png" alt="" />	
+
+	<img style="width:100%;position:relative;margin-bottom:-1px;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-celeste.png" alt="" />	
+
 	
 	<section class="special" data-scrollax-parent="true" style="background: rgb(129, 206, 231); min-height:100vh;width:100%;overflow-x:hidden;position:relative;" >
 
@@ -650,7 +655,7 @@
 			
 			
 			
-					<!-------- SECCION MÁS DE TRABAJOS TÉCNICOS -->
+					<!-- SECCION MÁS DE TRABAJOS TÉCNICOS -->
 					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" id="seccion-mas">
 					
 						<div id="btn-mas" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -669,9 +674,12 @@
 
 
 		</section>
-
+		<img style="width: 100%;position:relative;margin-top:-1px;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-celeste-abajo.png" alt="" />	
+	<?php } ?>
 		<!--CURVA-->	
-		<img style="width: 100%;position:relative;margin-top:-1px;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-celeste-abajo.png" alt="" />		
+
+		<img style="width:100%;position:relative;margin-top:-1px;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-celeste-abajo.png" alt="" />		
+
 		<section class="special col-lg-12 col-md-12 col-sm-12 col-xs-12" data-scrollax-parent="true" style="min-height:100vh;width:100%;">
 				
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
@@ -693,9 +701,9 @@
 			
 								<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id1">
 				
-									<div class="botonVademecum-Af"style=""> 
+									<div class="botonVademecum-Af"> 
 		
-											<div class="outerLine-Af"style="">
+											<div class="outerLine-Af">
 											<p style="text-transform: uppercase;" id="nom-btn"><?php echo Textos::model()->GetText(437); ?> </p>
 									</div>
 		
@@ -711,9 +719,9 @@
 							
 							<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id6">
 							
-								<div class="botonVademecum-Ant"style=""> 
+								<div class="botonVademecum-Ant"> 
 			
-									<div class="outerLine-Ant"style="">
+									<div class="outerLine-Ant">
 										<p style="text-transform: uppercase;" id="nom-btn"> <?php echo Textos::model()->GetText(438); ?> </p>
 									</div>
 			
@@ -729,9 +737,9 @@
 							
 							<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id4">
 							
-								<div class="botonVademecum-Int"style=""> 
+								<div class="botonVademecum-Int"> 
 			
-									<div class="outerLine-Int"style="">
+									<div class="outerLine-Int">
 										<p style="text-transform: uppercase;" id="nom-btn"><?php echo Textos::model()->GetText(440); ?> </p>
 									</div>
 			
@@ -747,9 +755,9 @@
 							
 							<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id3">
 							
-								<div class="botonVademecum-Ext"style=""> 
+								<div class="botonVademecum-Ext"> 
 			
-									<div class="outerLine-Ext"style="">
+									<div class="outerLine-Ext">
 										<p style="text-transform: uppercase;" id="nom-btn"><?php echo Textos::model()->GetText(439); ?> </p>
 									</div>
 			
@@ -765,9 +773,9 @@
 						
 							<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id2">
 								
-								<div class="botonVademecum-Bio"style=""> 
+								<div class="botonVademecum-Bio"> 
 			
-									<div class="outerLine-Bio"style="">
+									<div class="outerLine-Bio">
 										<p style="text-transform: uppercase;" id="nom-btn"><?php echo Textos::model()->GetText(441); ?> </p>
 									</div>
 			
@@ -783,9 +791,9 @@
 							
 							<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id5">
 								
-								<div class="botonVademecum-Ende"style=""> 
+								<div class="botonVademecum-Ende"> 
 			
-									<div class="outerLine-Ende"style="">
+									<div class="outerLine-Ende">
 										<p style="text-transform: uppercase;" id="nom-btn"><?php echo Textos::model()->GetText(442); ?> </p>
 									</div>
 			
@@ -801,9 +809,9 @@
 							
 							<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id9">
 								
-								<div class="botonVademecum-Farma"style=""> 
+								<div class="botonVademecum-Farma"> 
 			
-									<div class="outerLine-Farma"style="">
+									<div class="outerLine-Farma">
 										<p style="text-transform: uppercase;" id="nom-btn"><?php echo Textos::model()->GetText(443); ?></p>
 									</div>
 			
@@ -819,9 +827,9 @@
 						
 							<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id11">
 								
-								<div class="botonVademecum-Nutri"style=""> 
+								<div class="botonVademecum-Nutri"> 
 			
-									<div class="outerLine-Nutri"style="">
+									<div class="outerLine-Nutri">
 										<p style="text-transform: uppercase;" id="nom-btn"><?php echo Textos::model()->GetText(444); ?></p>
 									</div>
 			
@@ -837,9 +845,9 @@
 							
 							<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id7">
 								
-								<div class="botonVademecum-Repro"style=""> 
+								<div class="botonVademecum-Repro"> 
 			
-									<div class="outerLine-Repro"style="">
+									<div class="outerLine-Repro">
 										<p style="text-transform: uppercase;" id="nom-btn"><?php echo Textos::model()->GetText(445); ?></p>
 									</div>
 			
@@ -855,7 +863,7 @@
 							
 							<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id10">
 							
-								<div class="botonVademecum-Sal-Amb"style=""> 
+								<div class="botonVademecum-Sal-Amb"> 
 				
 									<div class="outerLine-Sal-Amb"style="">
 										<p style="text-transform: uppercase;" id="nom-btn"><?php echo Textos::model()->GetText(446); ?></p>
@@ -873,7 +881,7 @@
 						
 							<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id8">
 							
-								<div class="botonVademecum-Vit-Min"style=""> 
+								<div class="botonVademecum-Vit-Min"> 
 			
 									<div class="outerLine-Vit-Min"style="">
 										<p style="text-transform: uppercase;" id="nom-btn" style="margin-top: 38%;"> <?php echo Textos::model()->GetText(476); ?><BR/> <?php echo Textos::model()->GetText(477); ?></p>
@@ -914,10 +922,16 @@
 	
 		<?php include('carrousel.php'); ?>
 		
+	
+		<?php $revistas= Revista::model()->findAllByAttributes(array('lng'=>$_SESSION["lng"]),array('order'=>'fecha DESC')); 
+		if($revistas){
+		
+		?>
+		
+		
 		<!--CURVA-->			
 		<img style="width: 100%;position:relative;margin-bottom:-2px;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-home.png" alt="" />
-	
-	
+		
 		<!------------------------------------------------------------------ SECCION 5: REVISTA EL MOLINO ------------------------------------------------------------------>	
 		<section class="special col-lg-12 col-md-12 col-sm-12 col-xs-12" data-scrollax-parent="true" style="min-height:100vh;background: rgba(0, 0, 0, 0.62);width:100%;overflow-x:hidden;padding-bottom:30px;">
 
@@ -927,7 +941,8 @@
 					
 					<!-- /////////// REVISTA EN TOTAL ///////// -->
 					<div id="ver-revista" class="col-lg-12 col-md-12"  style="background:white; padding-bottom: 4%;">	
-						<?php $revistas= Revista::model()->findAll(array('order'=>'fecha DESC')); ?>
+						
+						
 						<?php $primeraRevista=array_shift($revistas); ?>
 						<!-- IMAGEN REVISTA-->
 						<img class="col-lg-6 col-md-6"  id="img-rev" src="<?php echo Yii::app()->request->baseUrl; ?>/uploads/molino/img/destacada-<?php echo $primeraRevista->numero; ?>.png"/>
@@ -1037,7 +1052,7 @@
 			
 		</section>
 		
-		
+		<?php } ?>
 		<!------------------------------------------------------------------ SECCION 6: RRHH ------------------------------------------------------------------>
 		
 		<section class="special col-lg-12 col-md-12 col-sm-12 col-xs-12" data-scrollax-parent="true" style="min-height:100vh;width:100%;background-color: white;overflow:hidden;height:auto;"  id="back-rrhh">
