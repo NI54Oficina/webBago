@@ -124,7 +124,7 @@ font-size: 22px;
 	height:100%;
 	background-size:100% 100%; 
 	position:fixed; 
-	z-index:0;
+	z-index:-1;
 	top:0;
     background-color: rgba(0, 0, 0, 0.50);
 	
@@ -158,7 +158,7 @@ font-size: 22px;
 	z-index:1;
 	width:100%;
 	overflow:hidden;
-	
+	padding-bottom:4%;
 	text-align:center;
 }
 
@@ -199,7 +199,7 @@ font-size: 22px;
     font-size: 22px;
     letter-spacing: 1px;
     text-align: center;
-    margin-top: 7%;
+    margin-top: 2%;
     line-height: 42px;
 	display:inline-block;
 }
@@ -6793,17 +6793,228 @@ margin-top: 100%;
 	text-align:left;
 }
 
-<<<<<<< HEAD
+
 
 .item-institucional canvas{ position:absolute; display:block;width:100%;margin-top:-10px;-ms-transform: rotate(180deg); -webkit-transform: rotate(1800deg);transform: rotate(180deg);}
 .item-institucional .glyphicon{margin-top:15px;background-color:transparent;position:relative;top:-10px;display:inline-block;background-color:white;padding-left:10px;padding-right:10px;}
 .plus-container{width:100%;display:block;
 }
-=======
+
 #gota-vademecum {
     			margin-right: 10px;
    			 width: 20px;
     			margin-top: -5px;}
 
 .p-widget-v:hover {color: #202020}
->>>>>>> origin/master
+
+
+@-webkit-keyframes pulse {
+  0% {
+    opacity: 0;
+    background-position: top;
+    -moz-background-size: 0 auto;
+    -o-background-size: 0 auto;
+    -webkit-background-size: 0 auto;
+    background-size: 0 auto;
+  }
+  10% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    -moz-background-size: 75% auto;
+    -o-background-size: 75% auto;
+    -webkit-background-size: 75% auto;
+    background-size: 75% auto;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    background-position: bottom;
+    -moz-background-size: 0 auto;
+    -o-background-size: 0 auto;
+    -webkit-background-size: 0 auto;
+    background-size: 0 auto;
+  }
+}
+@-moz-keyframes pulse {
+  0% {
+    opacity: 0;
+    background-position: top;
+    -moz-background-size: 0 auto;
+    -o-background-size: 0 auto;
+    -webkit-background-size: 0 auto;
+    background-size: 0 auto;
+  }
+  10% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    -moz-background-size: 75% auto;
+    -o-background-size: 75% auto;
+    -webkit-background-size: 75% auto;
+    background-size: 75% auto;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    background-position:  bottom;
+    -moz-background-size: 0 auto;
+    -o-background-size: 0 auto;
+    -webkit-background-size: 0 auto;
+    background-size: 0 auto;
+  }
+}
+@-ms-keyframes pulse {
+  0% {
+    opacity: 0;
+    background-position: top;
+    -moz-background-size: 0 auto;
+    -o-background-size: 0 auto;
+    -webkit-background-size: 0 auto;
+    background-size: 0 auto;
+  }
+  10% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    -moz-background-size: 75% auto;
+    -o-background-size: 75% auto;
+    -webkit-background-size: 75% auto;
+    background-size: 75% auto;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    background-position: bottom;
+    -moz-background-size: 0 auto;
+    -o-background-size: 0 auto;
+    -webkit-background-size: 0 auto;
+    background-size: 0 auto;
+  }
+}
+@keyframes pulse {
+  0% {
+    opacity: 0;
+    background-position:  top;
+    -moz-background-size: 0 auto;
+    -o-background-size: 0 auto;
+    -webkit-background-size: 0 auto;
+    background-size: 0 auto;
+  }
+  10% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    -moz-background-size: 75% auto;
+    -o-background-size: 75% auto;
+    -webkit-background-size: 75% auto;
+    background-size: 75% auto;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    background-position: bottom;
+    -moz-background-size: 0 auto;
+    -o-background-size: 0 auto;
+    -webkit-background-size: 0 auto;
+    background-size: 0 auto;
+  }
+}
+
+.scroll-down {
+  margin: 0;
+  border: 2px solid #fff;
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 100px;
+  border-radius: 100px;
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  width: 50px;
+  height: 50px;
+  margin-left: -50px;
+  margin-top: 0px;
+	z-index: 2;
+}
+.scroll-down a {
+  display: block;
+  opacity: 0;
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 100px;
+  border-radius: 100px;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  line-height: 0;
+  font-size: 0;
+  color: transparent;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 100%;
+  -moz-background-size: 0 auto;
+  -o-background-size: 0 auto;
+  -webkit-background-size: 0 auto;
+  background-size: 0 auto;
+  -webkit-animation: pulse 1.9s 0.05s infinite normal ease forwards;
+  -moz-animation: pulse 1.8s 0.05s infinite normal ease forwards;
+  -o-animation: pulse 1.8s 0.05s infinite normal ease forwards;
+  animation: pulse 1.8s 0.05s infinite normal ease forwards;
+  background-image: url("http://jamesmuspratt.com/codepen/img/arrow-down.svg");
+  background-repeat: no-repeat;
+}
+.scroll-down a:before, .scroll-down a:after {
+  content: " ";
+  position: absolute;
+  top: -7px;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url("http://jamesmuspratt.com/codepen/img/arrow-down.svg") no-repeat;
+  -moz-background-size: 100% auto;
+  -o-background-size: 100% auto;
+  -webkit-background-size: 100% auto;
+  background-size: 100% auto;
+}
+.scroll-down a:before {
+  -webkit-animation: pulse 1.8s 0.20s infinite normal ease forwards;
+  -moz-animation: pulse 1.8s 0.20s infinite normal ease forwards;
+  -o-animation: pulse 1.8s 0.20s infinite normal ease forwards;
+  animation: pulse 1.8s 0.20s infinite normal ease forwards;
+    top: -8px;
+}
+.scroll-down a:after {
+  -webkit-animation: pulse 1.8s 0.55s infinite normal ease forwards;
+  -moz-animation: pulse 1.8s 0.55s infinite normal ease forwards;
+  -o-animation: pulse 1.8s 0.55s infinite normal ease forwards;
+  animation: pulse 1.8s 0.55s infinite normal ease forwards;
+     top: -12px;
+}
+.scroll-down a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.container-revistas-molino{
+	margin: auto;
+	text-align:center;
+	background: rgb(255,255,255); 
+	background: -moz-linear-gradient(top, rgba(255,255,255,1) 16%, rgba(242,242,242,1) 100%);
+	background: -webkit-linear-gradient(top, rgba(255,255,255,1) 16%,rgba(242,242,242,1) 100%); 
+	background: linear-gradient(to bottom, rgba(255,255,255,1) 16%,rgba(242,242,242,1) 100%); 
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f2f2f2',GradientType=0 );    
+	padding-bottom: 9px; 
+}
