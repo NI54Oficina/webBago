@@ -127,21 +127,21 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 		<p style="text-align:center;margin-top:50%;">Registrado en</p>
 		<p style="text-align:center;border-bottom:1px solid #0082C8;width:15%;margin:auto;"></p>
 		
-		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 paises-registrados" style="margin: 30%;  margin-top: 8%;" >
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 paises-registrados"  >
 
-			<div style=" width: 150px; ">
+			<div style=" width: 130px; ">
               
-              <div align="left" >
+              <div >
               <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/argentina.png" class="imagen-pais" align="left" />
-              <p class="nombre-pais">Argentina</p>
+              <p class="nombre-pais" align="center;" >Argentina</p>
               </div>
               </div>
 
-			<p class="col-lg-7 col-md-7 col-sm-12 col-xs-12" style="border-bottom:1px solid #CCC;  margin-top: 4%; margin-bottom: 4%; float:left;"></p>
+			<p class="col-lg-7 col-md-7 col-sm-12 col-xs-12" style="border-bottom:1px solid #CCC;  margin-top: 2%; margin-bottom: 2%; width: 170px; "></p>
 			
 
-			  <div >
-			  <div style="  width: 150px;"  >
+			  <div style="  width: 130px; height: auto;">
+			  <div   >
 			 <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/brasil.png" class="imagen-pais" align="left" />
              <p class="nombre-pais">Brasil	</p>		
              </div>
