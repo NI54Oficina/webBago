@@ -1957,7 +1957,7 @@ font-size: 22px;
 	}
 	
 	#volver{
-		margin-left: 1%;
+		
 	}
 	
 	
@@ -6481,13 +6481,12 @@ figure.snip1156:hover .salud-ambiental{
 
  /****  NUEVAS CONFIGURACIONES Y ALINEACIONES DE DISEÑO  *******/
 
-.nombre-pais {
-margin-top: 100%;
+.nombre-pais { margin-bottom:10px!important; text-align: center; width:auto !important;
+	  margin-top: 2% !important;
 }
 
 .imagen-pais{
-	display:inline-block;
-	width: 15%; 
+	width: 20%; 
 	margin-top:5px;
 	vertical-align: left;
 }
@@ -6499,7 +6498,7 @@ margin-top: 100%;
  }
 
 .paises-registrados { 
-	margin: 30%;  
+	margin-left: 20%;
 	margin-top: 8%;
 	text-align: center;
 }
