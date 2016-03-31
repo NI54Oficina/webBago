@@ -1964,7 +1964,7 @@ font-size: 22px;
 	
 	
 	#facebook:hover{
-		margin-top:1.5%;
+		margin-top:-3%;
 		-webkit-transition: all .3s linear; 
 		-o-transition: all .3s linear; 
 		-moz-transition: all .3s linear; 
@@ -1995,7 +1995,7 @@ font-size: 22px;
 	}
 	
 	#youtube:hover{
-		margin-top:1.5%;
+		margin-top:-3%;
 		-webkit-transition: all .3s linear; 
 		-o-transition: all .3s linear; 
 		-moz-transition: all .3s linear; 
