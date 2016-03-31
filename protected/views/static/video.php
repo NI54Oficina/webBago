@@ -23,7 +23,7 @@
 	<div class=" col-lg-6 col-md-6 col-sm-6 col-xs-6" >
 	<!-- TEXTO -->
 	<div class="general-texto-home-header" >
-		<h1  style="margin: 0; margin-top: 7%; text-align: left; margin-left: 60px;" class="h1-home-ev bienvenidos"><?php echo Textos::model()->GetText(1); ?></h1>
+		<h1 class="h1-home-ev bienvenidos"><?php echo Textos::model()->GetText(1); ?></h1>
 	</div>
 	
 	
@@ -48,7 +48,7 @@
 		</div>
 		<p class="scroll-down"><a href="#complements" class="animate">More</a></p>
 	<!-- TEXTO  PRIMERA SECCION-->
-	<div class="general-texto-home-header div-inst" style="padding-top:380px;">
+	<div class="general-texto-home-header div-inst">
 
 		<h1  class="h1-inst-home"><img class="img-punto-home" src="<?php echo Yii::app()->request->baseUrl; ?>/img/punto-home.png"  style="    vertical-align: top;margin-right:8px;text-transform: uppercase;"/><?php echo Textos::model()->GetText(347); ?></h1>
 		<img   class="img-punto-home" src="<?php echo Yii::app()->getBaseUrl(true); ?>/img/punto-home.png"  /><br>

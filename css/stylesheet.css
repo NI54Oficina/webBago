@@ -1957,7 +1957,7 @@ font-size: 22px;
 	}
 	
 	#volver{
-		margin-left: 1%;
+		
 	}
 	
 	
@@ -5665,6 +5665,22 @@ figure.snip1156:hover .salud-ambiental{
 		width: 340px;
 		margin-bottom: 8%;
 	}
+	
+	.div-inst{
+		padding-top:590px;	
+	}
+	
+	.bienvenidos {
+		margin: 0; 
+		margin-top: 7%;
+		text-align: left; 
+		margin-left: 60px;
+	}
+  	.logo-blanco {
+		width: 60%;
+		margin-top: 15%;
+	}
+	
 }
 
 
@@ -5674,7 +5690,23 @@ figure.snip1156:hover .salud-ambiental{
   and (max-device-width: 1024px) 
   and (orientation: landscape) 
   and (-webkit-min-device-pixel-ratio: 1) {
+	.bienvenidos {
+		margin: 0; 
+		margin-top: 7%;
+		text-align: left; 
+		margin-left: 60px;
+	}
+
+	.logo-blanco {
+		width: 24%;
+		margin-top: 0%;
+	}	
+ 
 	
+	
+	.div-inst{
+		padding-top:380px;	
+	}
 	
 	.container-nota-revista{
 		width: 250px;
@@ -5688,7 +5720,6 @@ figure.snip1156:hover .salud-ambiental{
 	
     .header-infotec-revista{
 		background: #66CCED;
-		margin-top: 13vh;
 		padding-bottom: 4%;
 		margin-bottom: 5vh;
 	}
@@ -6033,6 +6064,10 @@ figure.snip1156:hover .salud-ambiental{
   and (max-device-width: 736px)
   and (-webkit-min-device-pixel-ratio: 2) {
 
+	.logo-blanco {
+		width: 60%;
+		margin-top: -3%;
+	}
    	.container-nota-revista{
 		margin-bottom:5%;
 	}
@@ -6302,6 +6337,13 @@ figure.snip1156:hover .salud-ambiental{
 		font-size:12px;
 	}
 	
+	.bienvenidos {
+		margin: 0; 
+		margin-top: 7%;
+		text-align: left; 
+		margin-left: 10px;
+	}
+	
 }
 
 @media screen 
@@ -6309,6 +6351,22 @@ figure.snip1156:hover .salud-ambiental{
   and (max-device-width: 2100px) 
   and (-webkit-min-device-pixel-ratio: 1) { 
   
+
+  	.logo-blanco {
+		width: 24%;
+		margin-top: 0%;
+	}
+	
+ 	.bienvenidos {
+		margin: 0; 
+		margin-top: 7%;
+		text-align: left; 
+		margin-left: 60px;
+	}
+	.div-inst{
+		padding-top:380px;	
+	}
+	
   	.container-nota-revista{
 		width: 270px;
 		margin-bottom:1%;
@@ -6481,13 +6539,12 @@ figure.snip1156:hover .salud-ambiental{
 
  /****  NUEVAS CONFIGURACIONES Y ALINEACIONES DE DISEÑO  *******/
 
-.nombre-pais {
-margin-top: 100%;
+.nombre-pais { margin-bottom:10px!important; text-align: center; width:auto !important;
+	  margin-top: 2% !important;
 }
 
 .imagen-pais{
-	display:inline-block;
-	width: 15%; 
+	width: 20%; 
 	margin-top:5px;
 	vertical-align: left;
 }
@@ -6499,7 +6556,7 @@ margin-top: 100%;
  }
 
 .paises-registrados { 
-	margin: 30%;  
+	margin-left: 20%;
 	margin-top: 8%;
 	text-align: center;
 }
@@ -6761,6 +6818,9 @@ margin-top: 100%;
 	border:none;
 }
 
+
+	
+	
 #imagen-uno {margin-top: 115px;}
 
 @media only screen and (max-width:768px) {
@@ -7017,4 +7077,52 @@ margin-top: 100%;
 	background: linear-gradient(to bottom, rgba(255,255,255,1) 16%,rgba(242,242,242,1) 100%); 
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f2f2f2',GradientType=0 );    
 	padding-bottom: 9px; 
+}
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 736px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+	.logo-blanco {
+		width: 60%;
+		margin-top: -3%;
+	}
+	
+	.h1-home-ev {
+		text-align: center;
+		color: white;
+		text-shadow: 0px 3px black;
+		letter-spacing: 1px;
+		font-family: 'arialregular';
+		font-size: 27px;
+	}
+
+	.salud-animal {
+		color: #79C8EE;
+		font-size: 84px;
+		margin-top: -1%;
+		font-weight: bold;
+	}
+	
+	.scroll-down {
+		margin: 0;
+		border: 2px solid #fff;
+		-moz-border-radius: 100px;
+		-webkit-border-radius: 100px;
+		border-radius: 100px;
+		position: absolute;
+		left: 59%;
+		top: 84%;
+		width: 50px;
+		height: 50px;
+		margin-left: -50px;
+		margin-top: 0px;
+		z-index: 2;
+	}
+	
+	.div-inst{
+		padding-top: 255px;;
+	}
+	
 }
