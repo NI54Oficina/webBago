@@ -6867,7 +6867,7 @@ figure.snip1156:hover .salud-ambiental{
 
 .p-widget-v:hover {color: #202020}
 
-<<<<<<< HEAD
+
 figure.snip1156 figcaption > div:hover{
 	background:transparent;
 }
@@ -6946,7 +6946,7 @@ figure.snip1156 .d-a-2 h2{
 		
 	}
 
-=======
+
 
 @-webkit-keyframes pulse {
   0% {
@@ -7227,5 +7227,4 @@ figure.snip1156 .d-a-2 h2{
 #ytb-home:hover{
 	opacity:0.5;
 	transition:all 0.5s ease;
->>>>>>> origin/master
 }
