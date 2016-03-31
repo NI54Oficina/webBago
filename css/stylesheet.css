@@ -5303,6 +5303,7 @@ figure.snip1156:hover .salud-ambiental{
   and (min-device-width: 768px) 
   and (max-device-width: 1024px) 
   and (-webkit-min-device-pixel-ratio: 1) {
+	
 	.icn-ubicacion {
 		width: 3%;
 		display: inline-block;
@@ -6539,8 +6540,11 @@ figure.snip1156:hover .salud-ambiental{
 
  /****  NUEVAS CONFIGURACIONES Y ALINEACIONES DE DISEÑO  *******/
 
-.nombre-pais { margin-bottom:10px!important; text-align: center; width:auto !important;
-	  margin-top: 2% !important;
+.nombre-pais {
+	margin-bottom:10px!important; 
+	text-align: center; 
+	width:auto !important;
+	margin-top: 2% !important;
 }
 
 .imagen-pais{
@@ -6583,7 +6587,10 @@ figure.snip1156:hover .salud-ambiental{
 	}
 
 
-	.h2-titulo { margin-bottom: 0%; height: 20px; }
+	.h2-titulo { 
+		margin-bottom: 0%; 
+		height: 20px; 
+	}
 
 	
 } 				  
@@ -6729,6 +6736,7 @@ figure.snip1156:hover .salud-ambiental{
   and (max-device-width: 1024px) 
   and (orientation: portrait) 
   and (-webkit-min-device-pixel-ratio: 1) {
+  
 	.navbar-collapse.collapse{
 		display:none !important;
 		visibility:hidden !important;
@@ -6757,6 +6765,8 @@ figure.snip1156:hover .salud-ambiental{
 	}
  }
 /** fin fix ipad menu**/
+
+
 
 #barra-institucional{
 	width:50%;
@@ -6818,8 +6828,6 @@ figure.snip1156:hover .salud-ambiental{
 	border:none;
 }
 
-
-	
 	
 #imagen-uno {margin-top: 115px;}
 
@@ -6949,6 +6957,8 @@ figure.snip1156 .d-a-2 h2{
 
 
 }
+
+
 .container-revistas-molino{
 	margin: auto;
 	text-align:center;
@@ -7007,6 +7017,9 @@ figure.snip1156 .d-a-2 h2{
 	}
 	
 }
+
+
+
 
 /*redes-sociales-home*/
 #fb-home{
