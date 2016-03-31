@@ -298,3 +298,86 @@ jQuery(document).ready(function($) {
         }
     });
 });
+
+
+(function() {
+  var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+                              window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+  window.requestAnimationFrame = requestAnimationFrame;
+})();
+ 
+function hoverElement(canvas,widthParent){
+	
+	this.canvas = canvas;
+    this.context = this.canvas.getContext('2d');
+	this.x = this.canvas.width / 2;
+	this.y = this.canvas.height / 2;
+	this.radius = widthParent/2.15;
+	this.endPercent = 110;
+	this.curPerc = 0;
+	this.counterClockwise = false;
+	this.circ = Math.PI * 2;
+	this.quart = Math.PI / 2;
+
+	this.context.lineWidth = 1;
+	this.context.strokeStyle = '#666';
+	this.context.shadowOffsetX = 0;
+	this.context.shadowOffsetY = 0;
+	this.context.shadowBlur = 0;
+	this.context.shadowColor = 'transparent';
+
+	this.direction=-1;
+	this.speed=5;
+
+};
+
+var hover= [];
+
+ function animate(current,id) {
+  
+			hover[id].context.clearRect(0, 0, hover[id].canvas.width, hover[id].canvas.height);
+		 hover[id].context.beginPath();
+		 hover[id].context.arc(hover[id].x, hover[id].y, hover[id].radius, -(hover[id].quart), ((hover[id].circ) *current) - hover[id].quart, false);
+		 hover[id].context.stroke();
+		 hover[id].curPerc+=hover[id].direction;
+		 if(hover[id].curPerc>100){
+			hover[id].curPerc=100;
+		 }else if(hover[id].curPerc<0){
+			hover[id].curPerc=0;
+		 }
+		 if (hover[id].curPerc < hover[id].endPercent) {
+			 requestAnimationFrame(function () {
+				 animate(hover[id].curPerc / 100,id)
+			 });
+		 }
+ }
+
+
+$(document).ready(function(){
+	var auxId=0;
+	$(".item-institucional canvas").each(function(){
+		$(this).attr("canvasid",auxId);
+		hover.push(new hoverElement(this,$(this).height()));
+		auxId++;
+	});	
+	
+	var id=0;
+	while($( "[canvasid="+id+"]" ).length){
+	
+		animate(0,id);
+		id++;
+	}
+
+	
+	$(".item-institucional").on("mouseover",function(){
+	
+		hover[$(this).find('canvas').attr("canvasid")].direction=hover[$(this).find('canvas').attr("canvasid")].speed;
+		
+	});
+	$(".item-institucional").on("mouseout",function(){
+		
+		hover[$(this).find('canvas').attr("canvasid")].direction=-1*hover[$(this).find('canvas').attr("canvasid")].speed;
+		
+	});
+});
+ 
