@@ -46,9 +46,9 @@
 			<h1 class="h1-home-ev row" style="text-transform: uppercase;"><?php echo Textos::model()->GetText(2); ?></h1>
 			<h1 class="h1-home-ev salud-animal row" style="text-transform: uppercase;"><?php echo Textos::model()->GetText(3); ?></h1>
 		</div>
-		<p class="scroll-down"><a href="#complements" class="animate">More</a></p>
+		<p id="arrowdown" class="scroll-down"><a href="#complements" class="animate">More</a></p>
 	<!-- TEXTO  PRIMERA SECCION-->
-	<div class="general-texto-home-header div-inst">
+	<div class="general-texto-home-header div-inst" id="complements">
 
 		<h1  class="h1-inst-home"><img class="img-punto-home" src="<?php echo Yii::app()->request->baseUrl; ?>/img/punto-home.png"  style="    vertical-align: top;margin-right:8px;text-transform: uppercase;"/><?php echo Textos::model()->GetText(347); ?></h1>
 		<img   class="img-punto-home" src="<?php echo Yii::app()->getBaseUrl(true); ?>/img/punto-home.png"  /><br>
