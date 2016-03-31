@@ -13,14 +13,30 @@
 
 	foreach($secciones as $value){
 		?>
-		<div class="tr-widget col-lg-12 col-md-12 col-sm-12 col-xs-12"><div class="td-widget col-lg-2 col-md-2 col-sm-2 col-xs-2" ><img class="img-widget" src="<?php echo Yii::app()->request->baseUrl; ?>/img/<?php 
+		<div class="tr-widget col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		<div class="td-widget col-lg-2 col-md-2 col-sm-2 col-xs-2" >
+		<img class="img-widget" src="<?php echo Yii::app()->request->baseUrl; ?>/img/<?php 
 		if($value==$idSeccion){
 			echo "gotas-menu-chico-".$normalizado.".png";
 		}else{
 			echo 'widget-vademecum.png';
 		}
-		?>" alt="quienes somos" /></div><div><a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id<?php echo $value; ?>"><p class="p-widget-v"><?php echo Yii::app()->paisChecker->getSeccion($value); ?></p></a></div>	
-	<div class="col-lg-10 col-md-10 col-sm-12 col-xs-12" style="border:1px solid #D9D9D9;float:right;"></div></div>
+		?>" alt="quienes somos" />
+
+		</div>
+
+		<div>
+
+		<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id<?php echo $value; ?>">
+		<p class="p-widget-v"><?php echo Yii::app()->paisChecker->getSeccion($value); ?>
+		</p>
+		</a>
+		</div>	
+
+	<div class="col-lg-10 col-md-10 col-sm-12 col-xs-12" style="border:1px solid #D9D9D9;float:right;">
+		
+	</div>
+	</div>
 		<?php
 	}
 
