@@ -88,7 +88,7 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 
 
 
-
+<!-- BARRA IZQUIERDA A MODIFICAR -->
 
 <div  class=" col-lg-3 col-md-3 col-sm-12 col-xs-12 imagen-producto">
 		
@@ -96,7 +96,7 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 	
 	
 		<p style="text-align:center;">Compartir en</p>
- 		<p  style="text-align:center;border-bottom:1px solid #0082C8;width:15%;margin:auto;margin-top:-2%;"></p>
+ 		<p  style="text-align:center;width:15%;margin:auto;margin-top:-2%; margin-bottom: 5px;"></p>
  		<p  style="text-align:center;border-bottom:1px solid #0082C8;width:15%;margin:auto;"></p>
   		
   		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin: auto; text-align: center; margin-top: 7%;">
@@ -124,33 +124,39 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 			</a>
 		</div>!-->
 		
-		<p style="text-align:center;margin-top:10vh;">Registrado en</p>
+		<p style="text-align:center;margin-top:50%;">Registrado en</p>
 		<p style="text-align:center;border-bottom:1px solid #0082C8;width:15%;margin:auto;"></p>
 		
-		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 paises-registrados" style="margin: 30%;  margin-top: 8%;" align="left">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 paises-registrados" style="margin: 30%;  margin-top: 8%;" >
 
-			<div style="height:50px; float: left ;width: 150px; ">
+			<div style=" width: 150px; ">
               
-              <div align="left" ><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/argentina.png" class="imagen-pais" align="left" />
-				<p class="nombre-pais">Argentina</p>
+              <div align="left" >
+              <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/argentina.png" class="imagen-pais" align="left" />
+              <p class="nombre-pais">Argentina</p>
+              </div>
+              </div>
 
-             </div>
-
-			</div>
-
-			<p class="col-lg-7 col-md-7 col-sm-12 col-xs-12" style="border-bottom:1px solid #CCC;  margin-top: 4%;"></p>
+			<p class="col-lg-7 col-md-7 col-sm-12 col-xs-12" style="border-bottom:1px solid #CCC;  margin-top: 4%; margin-bottom: 4%; float:left;"></p>
 			
 
-			<div  >
-			  <div style=" height:50px; width: 150px;" align="left" >
-			  <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/brasil.png" class="imagen-pais" align="left" />
+			  <div >
+			  <div style="  width: 150px;"  >
+			 <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/brasil.png" class="imagen-pais" align="left" />
+             <p class="nombre-pais">Brasil	</p>		
+             </div>
+			 </div>
 
-			  <p class="nombre-pais">Brasil	</p>		
 
-			  </div>
-			</div>
-			</div>
+		</div>
 	</div>
+
+
+
+<!-- BARRA IZQUIERDA A MODIFICAR -->
+
+
+
 
 	<div  class=" col-lg-6 col-md-6 col-sm-12 col-xs-12" style="overflow:hidden;">
 		 <div id="targets-inner">

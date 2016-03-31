@@ -6482,12 +6482,12 @@ figure.snip1156:hover .salud-ambiental{
  /****  NUEVAS CONFIGURACIONES Y ALINEACIONES DE DISEÑO  *******/
 
 .nombre-pais {
-
+margin-top: 100%;
 }
 
 .imagen-pais{
 	display:inline-block;
-	width: auto; 
+	width: 15%; 
 	margin-top:5px;
 	vertical-align: left;
 }
