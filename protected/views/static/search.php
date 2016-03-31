@@ -61,7 +61,7 @@ function sanear_string($string)
 <?php
 
 
-
+$idSeccion=-1;
 
 //echo "<div style='width:100%;min-height:100px;background-color:red; color:black;position:fixed;z-index:1000000;'>";
 //echo count($productos);
