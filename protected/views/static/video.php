@@ -30,7 +30,7 @@
 	</div>
 	
 	<div class=" col-lg-6 col-md-6 col-sm-6 col-xs-6 redes-home-video">
-		<!--<a href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/1/lng/0"style="color:white;float:left;padding:10px;opacity:0.8;">Español</a>
+		<!--<a href="<?php echo Yii::app()->getBaseUrl(true);?>/pais/traduccion/id/1/lng/0"style="color:white;float:left;padding:10px;opacity:0.8;">Español</a>
 		<a href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/2/lng/2"style="color:white;float:left;padding:10px;opacity:0.8;">Portugues</a>!-->
 		<?php include('redes-sociales-home-header.php'); ?> 
 	
@@ -46,7 +46,7 @@
 			<h1 class="h1-home-ev row" style="text-transform: uppercase;"><?php echo Textos::model()->GetText(2); ?></h1>
 			<h1 class="h1-home-ev salud-animal row" style="text-transform: uppercase;"><?php echo Textos::model()->GetText(3); ?></h1>
 		</div>
-		<p id="arrowdown" class="scroll-down"><a href="#complements" class="animate">More</a></p>
+		<p id="arrowdown" class="scroll-down"><a href="#complements" class="animate">Mas</a></p>
 	<!-- TEXTO  PRIMERA SECCION-->
 	<div class="general-texto-home-header div-inst" id="complements">
 
@@ -55,9 +55,7 @@
 		<div class="border-inst"></div><br>
 		<p  class="p-inst-home"><?php echo Textos::model()->GetText(4); ?> <br /> <?php echo Textos::model()->GetText(5); ?></p>
 	</div>
-	
-
 	</div>
-	<div class="overlay-video">
 	
+	<div class="overlay-video">
 	</div>

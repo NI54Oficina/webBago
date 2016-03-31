@@ -573,7 +573,7 @@
                         
 								<img class="col-lg-5 col-md-5 col-sm-5 col-xs-3 img-d" src="<?php echo Yii::app()->request->baseUrl; ?>/img/descarga-archivos.png"/>
                             
-								<h3 class="col-lg-7 col-md-7 col-sm-7 col-xs-3" id="titulo-archivo"> Ovino Central y Norte </h3>
+								<h3 class="col-lg-7 col-md-7 col-sm-7 col-xs-3" id="titulo-archivo">Ovino Central y Norte </h3>
                             
 								<p><a  class="col-lg-4 col-md-4 col-sm-4 col-xs-3" href="#" id="descarga-link"> Descargar </a></p>
                             
