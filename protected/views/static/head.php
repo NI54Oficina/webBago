@@ -10,9 +10,11 @@
 	<?php
 	
 	$metas= MetatagPage::model()->findAllByAttributes(array('idPage'=>$data));	
-	$lang= $_SESSION["lng"];
-	if(!isset($lang)){
+	$lang="";
+	if(!isset($_SESSION["lng"])){
 		$lang="es";
+	}else{
+		$lang=  $_SESSION["lng"];
 	}
 	if($metas){
 	foreach($metas as $m){

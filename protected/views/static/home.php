@@ -9,7 +9,6 @@
 
 	<!-- VIDEO DE FONDO -->
 	<?php include('video.php'); ?>
-	<?php include('header.php'); ?>
 		
 
 
@@ -432,11 +431,8 @@
 
 	<?php if($_SESSION["lng"]=="es"){ ?>
 	
-<<<<<<< HEAD
 	<img style="width: 100%;position:relative;margin-bottom:-1px;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-celeste.png" alt="" />	
 	
-=======
->>>>>>> origin/master
 	<section class="special" data-scrollax-parent="true" style="background: rgb(129, 206, 231); min-height:100vh;width:100%;overflow-x:hidden;position:relative;" >
 
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"  id="info-tec" style="overflow:hidden;padding-bottom:30px;">
@@ -942,7 +938,7 @@
 		<?php include('carrousel.php'); ?>
 		
 	
-		<?php $revistas= Revista::model()->findAllByAttributes(array('lng'=>$_SESSION["lng"]),array('order'=>'fecha DESC')); 
+		<?php $revistas= Revista::model()->findAllByAttributes(array('lng'=>$_SESSION["lng"]),array('order'=>'fecha DESC','limit' => 3)); 
 		if($revistas){
 		
 		?>
@@ -1018,7 +1014,7 @@
 					<div id="slider1" class="row col-lg-12 col-xs-12"> 
 							
 						<!-- BOTON ANTES / IZQUIERDA /PREV -->
-						<a class="buttons prev" href="#">&#60;</a>
+						<!--<a class="buttons prev" href="#">&#60;</a>!-->
 						
 						
 						<!--******* CONTENEDOR ****** -->
@@ -1055,12 +1051,15 @@
 								</li><!-- termina item -->
 							
 								<?php } ?>
+								<li>
+								ACA VA EL LEER MAS 
+								</li>
 							</ul> <!-- termina listado revista -->
 							
 						</div> <!-- termina contenedor revista -->
 						
 						<!-- BOTON DESPUÉS / DERECHA /NEXT -->
-						<a class="buttons next" href="#">&#62;</a>
+						<!--<a class="buttons next" href="#">&#62;</a>!-->
 						
 					</div><!--termina Carousel-->
 				</div>
