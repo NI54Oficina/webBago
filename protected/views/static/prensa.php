@@ -1,6 +1,6 @@
 <?php if($_SESSION["lng"]=="en"){ ?>
-	
-<h3 style="padding-top:40vh;">Sección no habilitada en su idioma</h3>
+
+<?php include("block.php"); ?>
 
 
 <?php }else{ ?>

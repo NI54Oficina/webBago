@@ -17,7 +17,7 @@
 	</div>
 
 <?php
-$nota =Notas::model()->findByPk($data);
+$nota = Notas::model()->findByAttributes(array("id"=>$data,"seccion"=>"rse"));
 ?>
 
 <div class="div-texto-aftosa col-lg-5 col-md-5 col-sm-12 col-xs-12" style="text-align: left;">

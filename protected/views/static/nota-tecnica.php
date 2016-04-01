@@ -22,7 +22,7 @@
 	
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding:0 5%;">
 <?php
-$nota =Notas::model()->findByPk($data);
+$nota = Notas::model()->findByAttributes(array("id"=>$data,"seccion"=>"tecnica"));
 if($nota && $nota->seccion=="tecnica"){
 ?>
 
