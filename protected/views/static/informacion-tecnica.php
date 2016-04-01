@@ -42,8 +42,8 @@
 								<p style="line-height: 19px;font-size: 13px;"><?php echo $nota->bajada; ?></p>
 							</div>
 							
-							<div class="col-lg-12 col-md-12 col-sm-12" style="background:#66CCED;padding-top: 1%;">
-							<a class="leer-infotec-noticias" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/nota-tecnica/<?php echo $nota->id; ?>">Leer  más</a></p>
+							<div class="col-lg-12 col-md-12 col-sm-12" style="background:#66CCED;padding-top: 2%; padding-bottom: 2%;">
+							<a class="leer-infotec-noticias" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/nota-tecnica/<?php echo $nota->id; ?>">Leer  más</a>
 							</div>
 							
 					</div>
