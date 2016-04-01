@@ -2654,9 +2654,10 @@ footer{
 
 
 #form1 textarea{
-    width: 100%;
+	width: 97%;
     background: rgba(255,255,255,0.2);
     height: 15vh;
+    margin-left: -15px;
 }
 
 
@@ -2737,6 +2738,7 @@ footer{
 	margin:0;
 	width:100%;
 	margin-top:15px;
+    margin-left: 10px;
 }
 
 .ubicacion{
@@ -6351,6 +6353,14 @@ figure.snip1156:hover .salud-ambiental{
   and (max-device-width: 2100px) 
   and (-webkit-min-device-pixel-ratio: 1) { 
   
+#texto-btn-mas2{ 
+	font-family: 'arialregular';
+    font-size: 17px;
+    padding-top: 2%;
+    margin-top: 5px !important;
+    display: block;
+    text-align: center;
+}
 
   	.logo-blanco {
 		width: 24%;
@@ -7332,6 +7342,35 @@ figure.snip1156 .d-a-2 h2{
 		margin-top: 8%;
 		text-align: center;	
 	}
+	
+	#slider1 {
+		min-height: 30vh;
+		overflow: hidden;
+		position: relative;
+		padding: 0 13px 10px;
+		background-size: 100% auto;
+		margin-left: 0%;
+	}
+	
+	#slider1 .overview li {
+		float: left;
+		margin: 10px 20px 0 0;
+		padding: 0px;
+		height: 190px;
+		border: 1px solid #359FBD;
+		width: 285px;
+		max-width: 67vw;
+	}
+	
+	#texto-btn-mas2 {
+		font-family: 'arialregular';
+		font-size: 18px;
+		padding-top: 2%;
+		margin-top: 5px !important;
+		display: block;
+		text-align: center;
+		padding-left: 50%;
+	}
 }
 
 @media only screen 
@@ -7362,6 +7401,17 @@ figure.snip1156 .d-a-2 h2{
 		z-index: 2;
 	}
 	
+	.input-vad {
+		width: 36vw;
+		background: rgba(255,255,255,0.2);
+		display: inline-block;
+		height: 33px;
+		border: 1px solid white;
+		padding-left: 5%;
+		font-family: 'arialregular';
+		color: white;
+		letter-spacing: 2px;
+	}
 }
 
 
@@ -7377,3 +7427,33 @@ h5{
     outline: #ffcf5c;
     border: 1px solid #ffcf5c;
 }
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+	.icn-ubicacion {
+		width: 2%;
+		display: inline-block;
+	}
+	
+	#slider1 .overview li {
+		float: left;
+		margin: 10px 20px 0 0;
+		padding: 1px;
+		height: 190px;
+		border: 1px solid #359FBD;
+		width: 335px;
+		max-width: 67vw;
+	}
+	
+	#texto-btn-mas2{ 
+		font-family: 'arialregular';
+		font-size: 17px;
+		padding-top: 2%;
+		margin-top: 5px !important;
+		display: block;
+	}
+}
+

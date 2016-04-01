@@ -363,7 +363,7 @@
 						<div id="separador"></div>
 			
 						<h3  id="titulo-cont">  <?php echo Textos::model()->GetText(113); ?></h3> 			
-						<p>Maritza Cespedes</p>
+						<p>Rossy Frías</p>
 						
 			
 						<!-- LINEA SEPARADORA-->						
@@ -371,7 +371,7 @@
 			
 			
 						<h3  id="titulo-cont">   E-MAIL  </h3> 	
-						<p> maritza.cespedes@biogenesisbago.com</p>								
+						<p>Rossy.frias@biogenesisbago.com</p>								
 		
 				</div> <!-- Termina info-bolivia-->
 		
@@ -385,7 +385,7 @@
 	
 						<p id="sub-filiales"  class="h4-fil bio" >Biogénesis Bagó Uruguay S.A.</p>	
 						
-						<p  id="sub-filiales" class="h4-fil">Francisco Acuña de Figueroa 2119 (detras del Anexo del Palacio Legislativo), Montevideo, Uruguay. </p>
+						<p  id="sub-filiales" class="h4-fil">Francisco Acuña de Figueroa 2119 (detrás del Anexo del Palacio Legislativo), Montevideo, Uruguay. </p>
 			
 			
 						<!-- LINEA SEPARADORA-->						
@@ -415,7 +415,7 @@
 	
 						<p id="sub-filiales"  class="h4-fil bio" >Casa Matriz Argentina</p>	
 						
-						<p  id="sub-filiales" class="h4-fil">Ruta Panamericana Km 38,5, Garín - Prov. de Bs. As. Argentina.</p>
+						<p  id="sub-filiales" class="h4-fil">Ruta Panamericana Km 38,5, Garín <br />Prov. de Bs. As. Argentina </p>
 						
 						
 						
@@ -499,7 +499,7 @@
                     
 							<h2 id="titulo-info-tec" > <?php echo $meses[date('n',$timeStamp)-1]; ?> </h2>
                     
-							<h5 id="protocolo-info-tec" > <?php echo $nota->titulo; ?></h5>
+							<h4 id="protocolo-info-tec" > <?php echo $nota->titulo; ?></h5>
                     
 							<p id="resumen-noticias"> 
 							<?php $bajada= $nota->bajada; 
@@ -1035,10 +1035,10 @@
 						<div class="viewport">
 						
 							<!-- LISTA REVISTAS -->
-							<ul class="overview">
+							<ul class="overview" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 								<?php foreach($revistas as $revista){ ?> 
 								<!-- ITEM REVISTA-->
-								<li id="revista-<?php echo $revista->id; ?>">
+								<li id="revista-<?php echo $revista->id; ?>" class="col-lg-4 col-md-2 col-sm-2 col-xs-4">
 								
 									<!-- img -->
 									<div class="rev-30"> </div> 
@@ -1065,8 +1065,13 @@
 								</li><!-- termina item -->
 							
 								<?php } ?>
-								<li>
-								ACA VA EL LEER MAS 
+								<li style="border:none;" class="col-lg-4  col-md-2 col-sm-2 col-xs-4">
+									<div id="btn-mas" class="col-lg-6 col-md-6 col-sm-3 col-xs-3">
+										<a href="http://localhost/webBago/ar/revista" style="color:white;">
+											<img id="img-btn-mas" src="/webBago/img/btn-mas.png" style="position:initial">
+											<p id="texto-btn-mas2"> Leer más </p>
+										</a>
+									</div>
 								</li>
 							</ul> <!-- termina listado revista -->
 							
@@ -1259,7 +1264,7 @@
 							<div class="col-md-12 col-md-12 col-sm-12 col-xs-12">
 								<div class="textarea-contacto">
 								<label id="textarea-label" for="exampleInputName2"><p style="text-transform: uppercase;"><?php echo Textos::model()->GetText(122); ?></p></label> 
-									<textarea rows="4" id="textarea" name="mensaje" class="required"></textarea>
+									<textarea rows="3" id="textarea" name="mensaje" class="required"></textarea>
 									</div>
 							</div>  <!--termina form textarea-->
 					
