@@ -11,14 +11,14 @@
 		<h2  class="h2-aftosa"><?php echo Textos::model()->GetText(347); ?></h2>	
 		<div id="barra-institucional"></div>
 		</div>
-		
-				<div id="imagen-uno" class="imagenes-fundaciones"><img class="img-fundaciones-1" src="<?php echo Yii::app()->request->baseUrl; ?>/img/rse-prosaia.png"  /></div>
-				<div  class="imagenes-fundaciones"><img class="img-fundaciones-2" src="<?php echo Yii::app()->request->baseUrl; ?>/img/rse-garrahan.png"  /></div>
-				<div  class="imagenes-fundaciones"><img class="img-fundaciones-3" src="<?php echo Yii::app()->request->baseUrl; ?>/img/rse-mundo-sano.png"  /></div>
-				<div  class="imagenes-fundaciones"><img class="img-fundaciones-4" src="<?php echo Yii::app()->request->baseUrl; ?>/img/rse-misiones-rurales.png"  /></div>
-				<div  class="imagenes-fundaciones"><img class="img-fundaciones-5" src="<?php echo Yii::app()->request->baseUrl; ?>/img/rse-solidagro.png"  /></div>
-				<div  class="imagenes-fundaciones"><img class="img-fundaciones-6" src="<?php echo Yii::app()->request->baseUrl; ?>/img/rse-fernandez.png"  /></div>
-			</div>
+			<div>
+				<div class="imagenes-fundaciones col-lg-12 col-md-12 col-sm-6 col-xs-6"><img class="img-fundaciones-1" src="<?php echo Yii::app()->request->baseUrl; ?>/img/rse-prosaia.png"  /></div>
+				<div  class="imagenes-fundaciones col-lg-12 col-md-12 col-sm-6 col-xs-6"><img class="img-fundaciones-2" src="<?php echo Yii::app()->request->baseUrl; ?>/img/rse-garrahan.png"  /></div>
+				<div  class="imagenes-fundaciones col-lg-12 col-md-12 col-sm-6 col-xs-6"><img class="img-fundaciones-3" src="<?php echo Yii::app()->request->baseUrl; ?>/img/rse-mundo-sano.png"  /></div>
+				<div  class="imagenes-fundaciones col-lg-12 col-md-12 col-sm-6 col-xs-6"><img class="img-fundaciones-4" src="<?php echo Yii::app()->request->baseUrl; ?>/img/rse-misiones-rurales.png"  /></div>
+				<div  class="imagenes-fundaciones col-lg-12 col-md-12 col-sm-6 col-xs-6"><img class="img-fundaciones-5" src="<?php echo Yii::app()->request->baseUrl; ?>/img/rse-solidagro.png"  /></div>
+				<div  class="imagenes-fundaciones col-lg-12 col-md-12 col-sm-6 col-xs-6"><img class="img-fundaciones-6" src="<?php echo Yii::app()->request->baseUrl; ?>/img/rse-fernandez.png"  /></div>
+			</div>	
 	</div>
 	</div>
 	

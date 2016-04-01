@@ -25,40 +25,46 @@
 						
 								<!-- 	QUIÉNES SOMOS -->
 								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional" hid="1">
-									
-									<canvas class="" id="myCanvas" height="90px"></canvas>
-									<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home-quienes.png" />
-									<div class="plus-container"><span  class=" glyphicon glyphicon-plus"></span></div>
-									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/quienes-somos"><h1 class="h1-1-home"><?php echo Textos::model()->GetText(6); ?></h1></a>
-									
-									<p class="p-in-h"><?php echo Textos::model()->GetText(7); ?></p>
+									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/quienes-somos">	
+										<canvas class="" id="myCanvas" height="90px"></canvas>
+										<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home-quienes.png" />
+										<div class="plus-container"><span  class=" glyphicon glyphicon-plus"></span></div>
+										<h1 class="h1-1-home"><?php echo Textos::model()->GetText(6); ?></h1>
+										<p class="p-in-h"><?php echo Textos::model()->GetText(7); ?></p>
+									</a>
 								</div>
 								
 								<!--	MISIÓN, VISIÓN Y VALORES -->
 								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional" hid="1">
-									<canvas class="" id="myCanvas" height="90px"></canvas>
-									<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home-mision.png" />
-									<div class="plus-container"><span  class=" glyphicon glyphicon-plus"></span></div>									
-									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/mision-vision"><h1 class="h1-1-home mis"><?php echo Textos::model()->GetText(8); ?></h1></a>			
-									<p class="p-in-h"><?php echo Textos::model()->GetText(9); ?></p>									
+									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/mision-vision">
+										<canvas class="" id="myCanvas" height="90px"></canvas>
+										<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home-mision.png" />
+										<div class="plus-container"><span  class=" glyphicon glyphicon-plus"></span></div>									
+										<h1 class="h1-1-home mis"><?php echo Textos::model()->GetText(8); ?></h1>		
+										<p class="p-in-h"><?php echo Textos::model()->GetText(9); ?></p>	
+									</a>	
 								</div>
 								
 								<!--	LUCHA CONTRA AFTOSA -->
 								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional" hid="1">
-									<canvas class="" id="myCanvas" height="90px"></canvas>
-									<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home-aftosa.png" />
-									<div class="plus-container"><span  class=" glyphicon glyphicon-plus"></span></div>
-									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/lucha-contra-aftosa"><h1 class="h1-1-home mis"><?php echo Textos::model()->GetText(10); ?></h1></a>
-									<p class="p-in-h"> <?php echo Textos::model()->GetText(11); ?></p>											
+									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/lucha-contra-aftosa">
+										<canvas class="" id="myCanvas" height="90px"></canvas>
+										<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home-aftosa.png" />
+										<div class="plus-container"><span  class=" glyphicon glyphicon-plus"></span></div>
+										<h1 class="h1-1-home mis"><?php echo Textos::model()->GetText(10); ?></h1>
+										<p class="p-in-h"> <?php echo Textos::model()->GetText(11); ?></p>		
+									</a>
 								</div>
 								
 								<!--	TRAYECTORIA - HITOS -->
 								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional" hid="1">
-									<canvas class="" id="myCanvas" height="90px"></canvas>
-									<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home-trayectoria.png" />
-									<div class="plus-container"><span  class=" glyphicon glyphicon-plus"></span></div>
-									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/trayectoria-hitos"><h1 class="h1-1-home tray"><?php echo Textos::model()->GetText(12); ?></h1></a>		
-									<p class="p-in-h"><?php echo Textos::model()->GetText(13); ?></p>		
+									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/trayectoria-hitos">
+										<canvas class="" id="myCanvas" height="90px"></canvas>
+										<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home-trayectoria.png" />
+										<div class="plus-container"><span  class=" glyphicon glyphicon-plus"></span></div>
+										<h1 class="h1-1-home tray"><?php echo Textos::model()->GetText(12); ?></h1>		
+										<p class="p-in-h"><?php echo Textos::model()->GetText(13); ?></p>
+									</a>
 								</div>
 						
 						
@@ -67,38 +73,46 @@
 						
 								<!--	NUESTRAS PLANTAS -->
 								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional" hid="1">
-									<canvas class="" id="myCanvas" height="90px"></canvas>
-									<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home-plantas.png" />
-									<div class="plus-container"><span  class=" glyphicon glyphicon-plus"></span></div>
-									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/nuestras-plantas"><h1 class="h1-1-home"><?php echo Textos::model()->GetText(14); ?></h1></a>
-									<p class="p-in-h"><?php echo Textos::model()->GetText(15); ?></p>
+									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/nuestras-plantas">
+										<canvas class="" id="myCanvas" height="90px"></canvas>
+										<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home-plantas.png" />
+										<div class="plus-container"><span  class=" glyphicon glyphicon-plus"></span></div>
+										<h1 class="h1-1-home"><?php echo Textos::model()->GetText(14); ?></h1>
+										<p class="p-in-h"><?php echo Textos::model()->GetText(15); ?></p>
+									</a>
 								</div>
 								
 								<!--	RSE - SUSTENTABILIDAD -->
 								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional" hid="1">
-									<canvas class="" id="myCanvas" height="90px"></canvas>
-									<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home-rse.png" />	
-									<div class="plus-container"><span  class=" glyphicon glyphicon-plus"></span></div>									
-									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/rse"><h1 class="h1-1-home mis"><?php echo Textos::model()->GetText(16); ?></h1></a>			
-									<p class="p-in-h"><?php echo Textos::model()->GetText(17); ?></p>									
+									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/rse">
+										<canvas class="" id="myCanvas" height="90px"></canvas>
+										<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home-rse.png" />	
+										<div class="plus-container"><span  class=" glyphicon glyphicon-plus"></span></div>									
+										<h1 class="h1-1-home mis"><?php echo Textos::model()->GetText(16); ?></h1>			
+										<p class="p-in-h"><?php echo Textos::model()->GetText(17); ?></p>			
+									</a>
 								</div>
 								
 								<!-- 	INFO PARA PROVEEDORES -->
 								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional" hid="1">
-									<canvas class="" id="myCanvas" height="90px"></canvas>
-									<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home-proveedores.png" />
-									<div class="plus-container"><span  class=" glyphicon glyphicon-plus"></span></div>
-									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/proveedores"><h1 class="h1-1-home mis"><?php echo Textos::model()->GetText(18); ?></h1></a>			
-									<p class="p-in-h"><?php echo Textos::model()->GetText(19); ?></p>									
+									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/proveedores">
+										<canvas class="" id="myCanvas" height="90px"></canvas>
+										<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home-proveedores.png" />
+										<div class="plus-container"><span  class=" glyphicon glyphicon-plus"></span></div>
+										<h1 class="h1-1-home mis"><?php echo Textos::model()->GetText(18); ?></h1>			
+										<p class="p-in-h"><?php echo Textos::model()->GetText(19); ?></p>	
+									</a>
 								</div>
 								
 								<!--	PRENSA -->
 								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional" hid="1">
-									<canvas class="" id="myCanvas" height="90px"></canvas>
-									<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home-prensa.png" />	
-									<div class="plus-container"><span  class=" glyphicon glyphicon-plus"></span></div>
-									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/prensa"><h1 class="h1-1-home mis pren"><?php echo Textos::model()->GetText(20); ?></h1></a>			
-									<p class="p-in-h"><?php echo Textos::model()->GetText(21); ?></p>									
+									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/prensa">
+										<canvas class="" id="myCanvas" height="90px"></canvas>
+										<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home-prensa.png" />	
+										<div class="plus-container"><span  class=" glyphicon glyphicon-plus"></span></div>
+										<h1 class="h1-1-home mis pren"><?php echo Textos::model()->GetText(20); ?></h1>			
+										<p class="p-in-h"><?php echo Textos::model()->GetText(21); ?></p>				
+									</a>
 								</div>
 						
 				
@@ -899,7 +913,7 @@
 								<div class="botonVademecum-Vit-Min"> 
 			
 									<div class="outerLine-Vit-Min"style="">
-										<p style="text-transform: uppercase;" id="nom-btn" style="margin-top: 38%;"> <?php echo Textos::model()->GetText(476); ?><BR/> <?php echo Textos::model()->GetText(477); ?></p>
+										<p style="text-transform: uppercase; margin-top: 39%;" id="nom-btn"> <?php echo Textos::model()->GetText(476); ?><BR/> <?php echo Textos::model()->GetText(477); ?></p>
 									</div>
 			
 								</div>
@@ -1136,7 +1150,7 @@
 				
 				<!-- ////////// TITULO ////////////// -->
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="display:inline-block;">
-					<h1 id="contacto" style="margin:0;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-bullet--.png"/> <?php echo Textos::model()->GetText(113); ?><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-bullet--.png" /></h1>
+					<h1 id="contacto" style="margin:0;padding-top: 45px;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-bullet--.png"/> <?php echo Textos::model()->GetText(113); ?><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-bullet--.png" /></h1>
 					<!--<img style="width: 100%;position:relative;" class="hidden-lg hidden-md" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-home-abajo.png" alt="" />!-->
 					<img style="width: 100%;position:relative;" class="" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-home-abajo.png" alt="" />
 				</div>
