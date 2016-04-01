@@ -1855,11 +1855,11 @@ font-size: 22px;
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: auto auto;
-	-webkit-transition: all 1s ease;
+		-webkit-transition: all 1s ease;
 		-moz-transition: all 1s ease;
 		-o-transition: all 1s ease;
 		-ms-transition: all 1s ease;
-			transition: all 1s ease;
+		transition: all 1s ease;
 	}
 	
 	.descargar:hover{
@@ -1911,11 +1911,11 @@ font-size: 22px;
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: auto auto;    margin-top: -6%;
-	-webkit-transition: all 1s ease;
+		-webkit-transition: all 1s ease;
 		-moz-transition: all 1s ease;
 		-o-transition: all 1s ease;
 		-ms-transition: all 1s ease;
-			transition: all 1s ease;
+		transition: all 1s ease;
 		margin-left: -10%;
 		opacity:0.4;
 	}
@@ -1928,11 +1928,11 @@ font-size: 22px;
 		color: #B2B2B2;
 		font-size: 17px;
 		font-family: 'arialregular';
-	-webkit-transition: all 1s ease;
+		-webkit-transition: all 1s ease;
 		-moz-transition: all 1s ease;
 		-o-transition: all 1s ease;
 		-ms-transition: all 1s ease;
-			transition: all 1s ease;
+		transition: all 1s ease;
 	}
 	
 	.volver:hover p{
@@ -2075,9 +2075,7 @@ font-size: 22px;
 		color:#003B5D;
 	}
 	figure.snip1156:hover .d-a-2 {
-		/*margin-top: 16%;*/
 		width: 90%;
-		/*margin-left: 16%;*/
 		height: 90%;
 		font-weight:900;
 		letter-spacing:1px;
@@ -2292,9 +2290,7 @@ font-size: 22px;
 	}
 	
 	figure.snip1156:hover .d-a-2 {
-		/*margin-top: 18%;*/
 		width: 90%;
-		/*margin-left: 16%;*/
 		height: 90%;
 		font-weight:900;
 		letter-spacing:0.5px;
@@ -2465,10 +2461,6 @@ font-size: 22px;
 #list-menu li a{
 	text-decoration:none;
 }
-
-
-/*** Style cont ***/
-
 
 /*--------------------------------------------------------------------------------- CSS CONTACTO ------------------------------------------------------*/
 
@@ -7417,7 +7409,7 @@ figure.snip1156 .d-a-2 h2{
 h5{
 	font-size: 16px;
     text-align: left;
-    padding-top: 60px;
+    padding-top: 55px;
     color: #B9B9B9;
     letter-spacing: 1px;
 }
