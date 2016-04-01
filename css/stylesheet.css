@@ -5761,7 +5761,6 @@ figure.snip1156:hover .salud-ambiental{
 	}
 	
 	.buscador {
-
 		background-color: #E8E6E6;
 		width: 180px;
 		height: 25px;
@@ -5833,6 +5832,8 @@ figure.snip1156:hover .salud-ambiental{
 		vertical-align: super;
 	}
 	
+	
+	
 	#error-number img{
 		width:27%;
 	}
@@ -5840,6 +5841,8 @@ figure.snip1156:hover .salud-ambiental{
 	#container-text-error{
 		text-align:left;
 	}
+	
+	
 	
 	#container-text-error h2{
 	    color: #BD0020;
@@ -5866,9 +5869,7 @@ figure.snip1156:hover .salud-ambiental{
 		color: grey;
 		font-family: 'arialregular';	
 	}
-	
-	 #evolucion-logo{
-	}
+
 }
 
 /* Landscape */
@@ -7083,6 +7084,7 @@ figure.snip1156 .d-a-2 h2{
 
 
 /*redes-sociales-home*/
+
 #fb-home{
 	opacity:1;
 	transition:all 0.5s ease;
@@ -7103,6 +7105,7 @@ figure.snip1156 .d-a-2 h2{
 	opacity:0.5;
 	transition:all 0.5s ease;
 }
+
 
 
 /*flecha*/
