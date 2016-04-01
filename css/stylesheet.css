@@ -1485,6 +1485,8 @@ font-size: 22px;
 		text-align:center;
 		display:block;
 		color:#ccc;
+		position:absolute;
+		width:100%;
 	}
 	
 	#boxes a.closelink{
@@ -1507,7 +1509,8 @@ font-size: 22px;
 	
 	
 	.ul-paises{
-		margin-left:8%;
+		/*margin-left:8%;*/
+		padding: 20px 8%;
 	}
 	
 	
@@ -2555,7 +2558,7 @@ p{
 	-moz-box-shadow:inset 0px 0px 5px 4px rgba(53, 177, 228, 0.7);
 	box-shadow:inset 0px 0px 5px 4px rgba(53, 177, 228, 0.7);
 	position:absolute;
-	z-index:100000;
+	z-index:100;
 	width: 89%; 
 	height: 50vh;
 	display:inline-block;

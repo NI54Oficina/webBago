@@ -1,3 +1,4 @@
+<?php $meses = array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"); ?>
 <img id="logo-bago-mobile" class="hidden-lg hidden-md col-sm-12 col-xs-12" src="/webBago/img/logo-bago.png" style="opacity:0;">
 			<div class="header-layout-aftosa col-lg-12 col-md-12 col-sm-12 col-xs-12">
 				<div style="width:100%;position:absolute;"><h1 class="titulo-layout-aftosa" style="">RSE</h1></div>
@@ -89,7 +90,10 @@
 					foreach($notas as $nota){
 					?>
 						<ul style="padding:0;">
-							<li><a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/nota-rse/<?php echo $nota->id; ?>"><p><?php echo $nota->fecha; ?><a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/nota-rse/<?php echo $nota->id; ?>" style="float: right;padding-right: 7%;" style="float: right;padding-right: 7%;">Leer  más</a><div class="linea-rse-not"></div></p><h1 class="h1-noticias-rse"><?php echo $nota->titulo; ?> </h1></a></li>
+							<li><a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/nota-rse/<?php echo $nota->id; ?>"><p><?php 
+							$timeStamp=strtotime($nota->fecha);	
+							echo date('d',$timeStamp)." de ".$meses[date('n',$timeStamp)-1];
+							?><a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/nota-rse/<?php echo $nota->id; ?>" style="float: right;padding-right: 7%;" style="float: right;padding-right: 7%;">Leer  más</a><div class="linea-rse-not"></div></p><h1 class="h1-noticias-rse"><?php echo $nota->titulo; ?> </h1></a></li>
 						</ul>
 					<?php } ?>
 				</div>

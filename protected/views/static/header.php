@@ -28,7 +28,7 @@
 						
 						
 						<!-- LISTA DE PAÍSES-->
-						<div style="margin-top:-2 %;">
+						<div style="">
 							<ul class="ul-paises" >
 								<li class="li-paises"><a class="link-menu" href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/1/lng/es"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-arg.png" /><?php echo Textos::model()->GetText(410); ?></a></li>
 								<li class="li-paises"><a class="link-menu" href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/5/lng/es"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-bol.png" /><?php echo Textos::model()->GetText(411); ?></a></li>
