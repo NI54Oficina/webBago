@@ -655,11 +655,6 @@ font-size: 22px;
 	}
 	
 	
-	.titulo-vad{
-		color:#7F781A;
-		vertical-align:middle;
-		text-align:center;
-	}
 
 	/**TITULO AFSTOSA HARDOCODEADO **/
 
@@ -7275,3 +7270,10 @@ figure.snip1156 .d-a-2 h2{
 }
 
 .nota-rse strong {color:#66CCED;}
+
+
+
+	.titulo-vad{
+		vertical-align:middle;
+		text-align:center;
+	}
