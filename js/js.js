@@ -423,17 +423,18 @@ $(function() {
 });
 
 $(document).ready(function(){
-	$("body").on("mousedown",".animateCollapse",function(){
+	$("body").on("mousedown",".animateCollapse .btn",function(){
+		
 		var hasClass=false;
-		if($(this).hasClass("after")){
-			$(this).removeClass("after");
+		if($(this).parent().hasClass("after")){
+			$(this).parent().removeClass("after");
 		}else{
 			$(".after").each(function(){
-			if(!$(this).hasClass("noRemove")){
-				$(this).removeClass("after");
+			if(!$(this).parent().hasClass("noRemove")){
+				$(this).parent().removeClass("after");
 				}
 			});
-			$(this).addClass("after");
+			$(this).parent().addClass("after");
 		}
 		/*if($(this).hasClass("after")){
 			hasClass=true;
