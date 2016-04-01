@@ -6991,8 +6991,8 @@ figure.snip1156 .d-a-2 h2{
 	
 	figure.snip1156:hover .inner-producto-vademecum{
 		
-		-ms-transform: scale(1,1); /* IE 9 */
-		-webkit-transform: scale(1,1); /* Safari */
+		-ms-transform: scale(1,1); 
+		-webkit-transform: scale(1,1); 
 		transform: scale(1,1);
 		
 	}
@@ -7300,7 +7300,7 @@ figure.snip1156 .d-a-2 h2{
 
 @media screen and (max-width:414px){
 
- #descripcion {height: auto !important;}
+	#descripcion {height: auto !important;}
 
 }
 
@@ -7362,6 +7362,7 @@ figure.snip1156 .d-a-2 h2{
 		text-align: center;
 		padding-left: 50%;
 	}
+	
 }
 
 @media only screen 
