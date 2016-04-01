@@ -51,7 +51,7 @@
 		</div>
 		
 		<!-- FLECHA -->
-		<p id="arrowdown" class="scroll-down"><a href="#complements" class="animate">Abajo</a></p>
+		<p id="arrowdown" class="scroll-down"><a href="#complements" class="animate"></a></p>
 		
 		<!-- TEXTO  PRIMERA SECCION-->
 		<?php include('header.php'); ?>
