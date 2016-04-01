@@ -2629,12 +2629,14 @@ footer{
 	
 }
 	
-
+/*** VER QUE ONDA **/
 	
 .copy{
     text-align: center;
-	/*background-image:url(../img/fondo-contacto-footer.png);*/
-	/*background-color:rgba(26, 26, 26, 0.31);*/
+	background-image:url(../img/fondo-contacto-footer.png);
+	background-color:rgba(51, 51, 51, 0.5);
+	margin-bottom: 0%;
+
     height: 6vh;
 }
 

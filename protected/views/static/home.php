@@ -1131,7 +1131,7 @@
 
 
 		<!------------------------------------------------------------------ SECCION 7: CONTACTO ------------------------------------------------------------------>
-		<section class="special" data-scrollax-parent="true" style="min-height:100vh;width:100%;text-align:center;padding-bottom:30px;background-image:url(<?php echo Yii::app()->request->baseUrl; ?>/img/fondo-contacto.png);"   id="back-rrhh" >
+		<section class="special" data-scrollax-parent="true" style="min-height:100vh;width:100%;text-align:center;background-image:url(<?php echo Yii::app()->request->baseUrl; ?>/img/fondo-contacto.png);"   id="back-rrhh" >
 			<div id="contenido" style="display:inline-block;text-align:center;">
 				
 				<!-- ////////// TITULO ////////////// -->
@@ -1317,12 +1317,7 @@
 			
 			
 					<!-- /////////////// REDES SOCIALES  ///////////////  -->
-					
-				
-			</div>
-		
-		</section>
-			<div style="text-align:center;" class="hidden-lg hidden-md">
+					<div style="text-align:center; background: transparent;" class="hidden-lg hidden-md">
 						
 						<?php include('redes-sociales-home-mobile.php');?>
 					
@@ -1333,18 +1328,20 @@
 				<div style="text-align:center;" class="hidden-sm hidden-xs">
 					<?php include('redes-sociales-home-pc.php');?>
 				</div>	
-				
-
-
-<div >
-
-</div>
-		
-	
-	<!-- SCRIPT PARALLAX -->
+					<!-- SCRIPT PARALLAX -->
 	<?php include('parallax.php'); ?>
 	<!-- FOOTER-->
 	<?php  include('footer-home.php');?>
+
+
+		
+	
+				
+			</div>
+		
+		</section>
+			
+
 	<script>
 	$(document).ready(function(){
 		console.log("ready para arreglo rrhh");
