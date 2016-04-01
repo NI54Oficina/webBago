@@ -69,9 +69,9 @@ $productos =Producto::model()->findAllByAttributes(array('seccion'=>$data->id,"p
 $idSeccion= $data->id;
 $auxLink= $data->nombre;
 $auxLink=  sanear_string($auxLink);
-$auxLink = str_replace(' ', '-', $auxLink); // Replaces all spaces with hyphens.
+$auxLink = str_replace(' ', '-', $auxLink); 
 
-$auxLink = preg_replace('/[^A-Za-z0-9\-]/', '', $auxLink); // Removes special chars.
+$auxLink = preg_replace('/[^A-Za-z0-9\-]/', '', $auxLink);
 $auxLink = preg_replace('/-+/', '-', $auxLink);
 $auxLink= strtolower($auxLink);
 $normalizado= $auxLink;
@@ -125,7 +125,7 @@ $auxId=0;
 			<div>
 				<div class="inner-producto-vademecum">
 				<div class="producto-vademecum-top">
-				<img style="width:45%;display:inline-block;margin:5%; margin-top: 5%;margin-right:0;text-align:left;" class="img-cat-aft " src="<?php echo Yii::app()->getBaseUrl(true); ?>/vademecums/<?php echo $imagen->id; ?>.png" /> 
+				<img style="width:45%;display:inline-block;margin-top: 5%;margin-right:0;text-align:left;" class="img-cat-aft " src="<?php echo Yii::app()->getBaseUrl(true); ?>/vademecums/<?php echo $imagen->id; ?>.png" /> 
 				<div class="targets-vademecum">
 					<div class="columna-target">
 					<?php
