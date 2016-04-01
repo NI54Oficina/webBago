@@ -6149,77 +6149,7 @@ figure.snip1156:hover .salud-ambiental{
 	}
 	
 	
-	.animateCollapse{
-		position: relative;
-		margin: 0;
-	}
 	
-	.animateCollapse li{
-		-webkit-transition: all 0.3s ease-out;
-		transition: all 0.3s ease-out;
-		height: 0;
-		opacity: 0;
-		overflow: hidden;
-		padding: 0 1em;
-		border:1px solid #E0E0E0;
-	}
-	
-	.after li{
-		height: auto;
-		opacity: 1;
-		padding: 0.5em 1em;
-		width: 100%;
-		margin-left: 0;
-		padding-right: 0;
-	}
-	
-	.toggleIcon {
-		width: 1em;
-		height: 1em;
-		left:90%;
-		top: 0.8em;
-		bottom: 0;
-		position: absolute;
-		color:#66CCED;
-	}
-	
-	.toggleIcon::before, .toggleIcon::after {
-		content: '';
-		position: absolute;
-		background: #66CCED;
-		-webkit-transition: 0.3s cubic-bezier(0.45, 0.01, 0.27, 1.4);
-		transition: 0.3s cubic-bezier(0.45, 0.01, 0.27, 1.4);
-	}
-	
-	.toggleIcon::before {
-		width: 2px;
-		height: 100%;
-		left: calc(101% - 2px);
-		margin-left: 1px;
-	}
-	
-	.toggleIcon::after {
-		width: 100%;
-		height: 2px;
-		top: calc(50% - 1px);
-	}
-	
-	.after .toggleIcon::before {
-		opacity: 0;
-		-webkit-transform: rotate(45deg);
-		-ms-transform: rotate(45deg);
-		transform: rotate(45deg);
-		text-shadow: 0 0 3px #333;
-	}
-	
-	.after .toggleIcon::after {
-		-webkit-transform: none;
-		-ms-transform: none;
-		transform: none;
-		-webkit-transform: rotate(180deg);
-		-ms-transform: rotate(180deg);
-		transform: rotate(180deg);
-	}
 	/* ripple */
 	.ripple{
 		overflow: hidden;
@@ -6262,44 +6192,7 @@ figure.snip1156:hover .salud-ambiental{
 		}
 	}
 	
-	.btn{
-		overflow: hidden;
-		background: #E0E0E0;
-		padding-bottom: 0.5em;
-		padding-top: 0.5em;
-		width:100%;
-	}
-	.ttl{
-		color: #002E75;
-		margin: 0;
-		font-weight: bold;
-		letter-spacing: 5px;
-		padding: 1px 0 0 0;
-		float:left;
-		font-size:15px;
-	}
 	
-	.animateCollapse{
-		overflow: hidden;
-		width: 100%;
-		margin:2% auto;
-	}
-	
-	.h1-noticias-rse {
-		color: #002A68;
-		font-size: 15px;
-		font-family: 'arialregular';
-		font-weight: 700;
-		letter-spacing: 0.5px;
-		margin-left:0;
-		width:93%;
-}
-
-.linea-rse-not {
-    border: 1px solid #67C6DB;
-    width: 9%;
-    margin-top: 0;
-}
 	
 	
 	
@@ -7369,3 +7262,117 @@ h5{
     color: #B9B9B9;
     letter-spacing: 1px;
 }
+
+.btn{
+		overflow: hidden;
+		background: #E0E0E0;
+		padding-bottom: 0.5em;
+		padding-top: 0.5em;
+		width:100%;
+	}
+	.ttl{
+		color: #002E75;
+		margin: 0;
+		font-weight: bold;
+		letter-spacing: 5px;
+		padding: 1px 0 0 0;
+		float:left;
+		font-size:15px;
+	}
+	
+	.animateCollapse{
+		overflow: hidden;
+		width: 100%;
+		margin:2% auto;
+	}
+	
+	.h1-noticias-rse {
+		color: #002A68;
+		font-size: 15px;
+		font-family: 'arialregular';
+		font-weight: 700;
+		letter-spacing: 0.5px;
+		margin-left:0;
+		width:93%;
+}
+
+.linea-rse-not {
+    border: 1px solid #67C6DB;
+    width: 9%;
+    margin-top: 0;
+}
+
+.animateCollapse{
+		position: relative;
+		margin: 0;
+	}
+	
+	.animateCollapse li{
+		-webkit-transition: all 0.3s ease-out;
+		transition: all 0.3s ease-out;
+		height: 0;
+		opacity: 0;
+		overflow: hidden;
+		padding: 0 1em;
+		width:100%;
+		border:1px solid #E0E0E0;
+		margin-left: 0;
+		padding-right: 0;
+	}
+	
+	.after li{
+		height: auto;
+		opacity: 1;
+		padding: 0.5em 1em;
+		width: 100%;
+		margin-left: 0;
+		padding-right: 0;
+	}
+	
+	.toggleIcon {
+		width: 1em;
+		height: 1em;
+		left:90%;
+		top: 0.8em;
+		bottom: 0;
+		position: absolute;
+		color:#66CCED;
+	}
+	
+	.toggleIcon::before, .toggleIcon::after {
+		content: '';
+		position: absolute;
+		background: #66CCED;
+		-webkit-transition: 0.3s cubic-bezier(0.45, 0.01, 0.27, 1.4);
+		transition: 0.3s cubic-bezier(0.45, 0.01, 0.27, 1.4);
+	}
+	
+	.toggleIcon::before {
+		width: 2px;
+		height: 100%;
+		left: calc(101% - 2px);
+		margin-left: 1px;
+	}
+	
+	.toggleIcon::after {
+		width: 100%;
+		height: 2px;
+		top: calc(50% - 1px);
+	}
+	
+	.after .toggleIcon::before {
+		opacity: 0;
+		-webkit-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		transform: rotate(45deg);
+		text-shadow: 0 0 3px #333;
+	}
+	
+	.after .toggleIcon::after {
+		-webkit-transform: none;
+		-ms-transform: none;
+		transform: none;
+		-webkit-transform: rotate(180deg);
+		-ms-transform: rotate(180deg);
+		transform: rotate(180deg);
+	}
