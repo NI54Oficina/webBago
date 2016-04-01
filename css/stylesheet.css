@@ -1559,15 +1559,6 @@ font-size: 22px;
 		
 	}
 	
-	
-	
-	
-	.div-img-aft{
-	    /*webkit-box-shadow: inset 0px -1px 0px 15px rgba(255,255,255,1);
-		-moz-box-shadow: inset 0px -1px 0px 15px rgba(255,255,255,1);
-		box-shadow: inset 5px -1px 0px 3px rgba(255,255,255,1);*/
-	}
-	
 	.p-img-vad{
 		background:#f7f8f8;
 		position:relative;
@@ -1741,15 +1732,14 @@ font-size: 22px;
 	
 	figure.snip1156:hover .d-a-2{
 		border: 2px solid #7F781A;
-		/*margin-top:  14.5%;*/
 		width: 90%;
-		/*margin-left: 16%;*/
 		height: 90%;
 	}
 	
 	figure.snip1156:hover .d-a-2 h2{
 		font-size:15px;
 	}
+	
 	/********** BUSCADOR *************/
 	
 	.buscador {
