@@ -64,6 +64,13 @@ class WebController extends Controller
 			//tendria que buscar por id y no por nombre
 			$id= substr($id,2);
 			$auxSeccion =Producto::model()->findByAttributes(array('id'=>$id));;
+			if($auxSeccion->pais!=$_SESSION["pais"]){
+				$auxPais=Pais::model()->findByPk($_SESSION["pais"]);
+				if($auxPais->catalogo==1||($auxPais->catalogo==0&&$auxSeccion->pais!=8)){
+					header("Location: http://".$_SERVER['SERVER_NAME']."/".$_SESSION["webRoot"].$_SESSION["short"]."/");
+					exit();
+				}
+			}
 			if($auxSeccion!=null){
 				$model=$auxSeccion;
 			}
