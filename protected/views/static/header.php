@@ -21,9 +21,9 @@
 		
 						<!-- CERRAR-->
 						<p>
-						<a class="closelink" href="javascript:void(0);">
-							<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-close.png" style="padding-top: 1.5%;" />
-						</a>
+							<a class="closelink" href="javascript:void(0);">
+								<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-close.png" style="padding-top: 1.5%;" />
+							</a>
 						</p>
 						
 						

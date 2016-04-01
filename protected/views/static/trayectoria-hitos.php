@@ -8,16 +8,26 @@
 	
 
 	<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-	<div class="side-title">
-		<div style="display:inline-block;">
-		<h2  class="h2-aftosa"><?php echo Textos::model()->GetText(347); ?></h2>	
-
-		<div id="barra-institucional"></div>
+	
+		<div class="side-title">
+			
+			<div style="display:inline-block;">
+				<h2  class="h2-aftosa"><?php echo Textos::model()->GetText(347); ?></h2>	
+				<div id="barra-institucional"></div>
+			</div>
+			
 		</div>
-	</div>
+		
 	</div>
 	
-	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/main.js"></script>
+<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/main.js"></script>
+
+
+
+
+
+
+
 <div class="div-texto-aftosa col-lg-6 col-md-6 col-sm-12 col-xs-12" style="text-align: left;">
 	
 	<div class="tabla-aftosa col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -26,6 +36,8 @@
 		<div>
 			<p class="anios-1934-2006">1934</p>
 		</div>
+		
+		
 		<p class="nace-linea-tiempo">Nace</p> <p class="bago-linea-tiempo" style="color: #011E49;">laboratorios Bagó</p>
 	</div>
 			<!--<img style="" src="img/linea-tiempo-1-01.png" />-->
@@ -53,6 +65,7 @@
 				<h2 class="h2-cd"><?php echo Textos::model()->GetText(353); ?></h2>
 				<span class="cd-date"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-tiempo-bullet.png"  /></span>
 			</div> <!-- cd-timeline-content -->
+			
 		</div> <!-- cd-timeline-block -->
 
 		<div class="cd-timeline-block">
@@ -84,7 +97,7 @@
 
 		<div class="cd-timeline-block">
 			<div class="cd-timeline-img cd-location">
-				<p class="p-cd" style="margin-top: 15px;">1993</p>
+				<p class="p-cd" style="margin-top: 15px;">1993 </p>
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
@@ -96,7 +109,7 @@
 
 		<div class="cd-timeline-block">
 			<div class="cd-timeline-img cd-movie">
-				<p class="p-cd" style="margin-top: 15px;">1994</p>
+				<p class="p-cd" style="margin-top: 15px;">1994 </p>
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
@@ -178,6 +191,8 @@
 
 	<div class="cd-timeline-block">
 			<div class="cd-timeline-img cd-location">
+			
+			
 				<p class="p-cd" style="margin-top: 15px;">2003</p>
 			</div> <!-- cd-timeline-img -->
 
@@ -192,6 +207,10 @@
 	
 	
 
+	
+	
+	
+	
 	<!--Nace biogenesis bago -->
 	<div class="container-anios-linea-tiempo">
 		<div>

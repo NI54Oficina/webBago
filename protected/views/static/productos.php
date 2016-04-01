@@ -137,7 +137,7 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
               </div>
               </div>
 
-			<p class="col-lg-7 col-md-7 col-sm-12 col-xs-12" style="border-bottom:1px solid #CCC;  margin-top: 2%; margin-bottom: 2%; width: 170px; "></p>
+			<p class="col-lg-7 col-md-7 col-sm-12 col-xs-12" style="border-bottom:1px solid #CCC;  margin-top: 2%; margin-bottom: 2%; width: 160px; "></p>
 			
 
 			  <div style="  width: 130px; height: auto;">

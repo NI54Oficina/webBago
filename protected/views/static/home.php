@@ -16,9 +16,11 @@
 	
 		<div style="" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
 
-		<!--CURVA-->
+			<!--CURVA-->
 		
-		<img style="  width: 100%;margin-bottom:-1px;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-arriba-home.png" alt="" /><section class="special" data-scrollax-parent="true" style="background:white;min-height:100vh;width:100%;text-align:center;"><div class="" style="display:inline-block;background:white;width:98%;">
+			<img style="width: 100%;margin-bottom:-1px;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-arriba-home.png" alt="" /><section class="special" data-scrollax-parent="true" style="background:white;min-height:100vh;width:100%;text-align:center;">
+		
+			<div class="" style="display:inline-block;background:white;width:98%;">
 					
 					<!-- CUATRO ICONOS -->
 						
@@ -101,7 +103,7 @@
 								</div>
 						
 				
-				</div>
+			</div>
 
 		</section>
 		
@@ -113,8 +115,8 @@
 
 		<section class="special" data-scrollax-parent="true" style="background:transparent;min-height:100vh;width:100%;overflow-x:hidden;">
 		<!------------------------------------------------------------------ SECCION 2: FILIALES ------------------------------------------------------------------>			
-					
-					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-bottom:30px;">
+			
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-bottom:30px;">
     	
 						<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12" id="mapa-total">
     	 
@@ -155,9 +157,9 @@
 					
 				
 					<!--- REFERENCIA -->			  
-						<div id="ref-unica">
+					<div id="ref-unica">
 					
-							<img class="icn-ubicacion" src="<?php echo Yii::app()->request->baseUrl; ?>/img/icn-casa-matriz.png">
+						<img class="icn-ubicacion" src="<?php echo Yii::app()->request->baseUrl; ?>/img/icn-casa-matriz.png">
 					
 						<p id="nom-ref"> <?php echo Textos::model()->GetText(459); ?> </p>
 						
@@ -167,18 +169,17 @@
 					<!--- REFERENCIA -->
 					<div id="ref-unica">
 					
-							<img class="icn-ubicacion" src="<?php echo Yii::app()->request->baseUrl; ?>/img/icn-filiales.png">
+						<img class="icn-ubicacion" src="<?php echo Yii::app()->request->baseUrl; ?>/img/icn-filiales.png">
 					
 						<p id="nom-ref"> <?php echo Textos::model()->GetText(460); ?> </p>
 						
 					</div> <!-- Termina cada referencia -->
-					
-					
+				
 					
 					<!--- REFERENCIA -->				
 					<div id="ref-unica">
 					
-							<img class="icn-ubicacion" src="<?php echo Yii::app()->request->baseUrl; ?>/img/icn-vacunas.png">
+						<img class="icn-ubicacion" src="<?php echo Yii::app()->request->baseUrl; ?>/img/icn-vacunas.png">
 					
 						<p style="margin-bottom:0;" id="nom-ref"> NAFMDVD  <?php echo Textos::model()->GetText(461); ?>  <?php echo Textos::model()->GetText(462); ?> </p>
 						
@@ -188,7 +189,7 @@
 					<!--- REFERENCIA -->				
 					<div id="ref-unica">
 					
-							<img class="icn-ubicacion" src="<?php echo Yii::app()->request->baseUrl; ?>/img/icn-janh.png">
+						<img class="icn-ubicacion" src="<?php echo Yii::app()->request->baseUrl; ?>/img/icn-janh.png">
 					
 						<p id="nom-ref"> Jinhai Biotechnology Co., Ltd. </p>
 						
@@ -213,7 +214,7 @@
 			
 			
 				<!--********** MÉXICO **********-->
-				<div id="infoMexico" class="info-mapa" style="">
+				<div id="infoMexico" class="info-mapa">
 				
 					<h2 id="titulo-info-mapa"><img class="band-filiales" src="<?php echo Yii::app()->request->baseUrl; ?>/img/banderitas-09.png"/> <?php echo Textos::model()->GetText(418); ?>  </h2>
 			
@@ -378,7 +379,7 @@
 						<div id="separador"></div>
 			
 						
-						<h3  id="titulo-cont">   <?php echo Textos::model()->GetText(466); ?></h3> 
+						<h3  id="titulo-cont">   <?php echo Textos::model()->GetText(466); ?> </h3> 
 						<p>(59) (82) 924 - 9878 / 0800 8263</p>			
 			
 			
@@ -431,8 +432,11 @@
 
 	<?php if($_SESSION["lng"]=="es"){ ?>
 	
+<<<<<<< HEAD
 	<img style="width: 100%;position:relative;margin-bottom:-1px;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-celeste.png" alt="" />	
 	
+=======
+>>>>>>> origin/master
 	<section class="special" data-scrollax-parent="true" style="background: rgb(129, 206, 231); min-height:100vh;width:100%;overflow-x:hidden;position:relative;" >
 
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"  id="info-tec" style="overflow:hidden;padding-bottom:30px;">
@@ -553,7 +557,7 @@
                             
 							</div> <!-- Termina cada descarga-->
                        
-					   </div>
+						</div>
 					   <div>
 							<!--***** DESCARGA ***** -->
 							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6" id="descarga-margin">
@@ -573,7 +577,7 @@
                         
 								<img class="col-lg-5 col-md-5 col-sm-5 col-xs-3 img-d" src="<?php echo Yii::app()->request->baseUrl; ?>/img/descarga-archivos.png"/>
                             
-								<h3 class="col-lg-7 col-md-7 col-sm-7 col-xs-3" id="titulo-archivo"> Ovino Central y Norte </h3>
+								<h3 class="col-lg-7 col-md-7 col-sm-7 col-xs-3" id="titulo-archivo">Ovino Central y Norte </h3>
                             
 								<p><a  class="col-lg-4 col-md-4 col-sm-4 col-xs-3" href="#" id="descarga-link"> Descargar </a></p>
                             
@@ -666,7 +670,7 @@
                     
 						</div>
   
-					</div> <!-- Termina texto-completo -->  
+				</div> <!-- Termina texto-completo -->  
 			
 			
 			

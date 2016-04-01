@@ -5303,6 +5303,7 @@ figure.snip1156:hover .salud-ambiental{
   and (min-device-width: 768px) 
   and (max-device-width: 1024px) 
   and (-webkit-min-device-pixel-ratio: 1) {
+	
 	.icn-ubicacion {
 		width: 3%;
 		display: inline-block;
@@ -6539,8 +6540,11 @@ figure.snip1156:hover .salud-ambiental{
 
  /****  NUEVAS CONFIGURACIONES Y ALINEACIONES DE DISEÑO  *******/
 
-.nombre-pais { margin-bottom:10px!important; text-align: center; width:auto !important;
-	  margin-top: 2% !important;
+.nombre-pais {
+	margin-bottom:10px!important; 
+	text-align: center; 
+	width:auto !important;
+	margin-top: 2% !important;
 }
 
 .imagen-pais{
@@ -6583,7 +6587,10 @@ figure.snip1156:hover .salud-ambiental{
 	}
 
 
-	.h2-titulo { margin-bottom: 0%; height: 20px; }
+	.h2-titulo { 
+		margin-bottom: 0%; 
+		height: 20px; 
+	}
 
 	
 } 				  
@@ -6729,6 +6736,7 @@ figure.snip1156:hover .salud-ambiental{
   and (max-device-width: 1024px) 
   and (orientation: portrait) 
   and (-webkit-min-device-pixel-ratio: 1) {
+  
 	.navbar-collapse.collapse{
 		display:none !important;
 		visibility:hidden !important;
@@ -6757,6 +6765,8 @@ figure.snip1156:hover .salud-ambiental{
 	}
  }
 /** fin fix ipad menu**/
+
+
 
 #barra-institucional{
 	width:50%;
@@ -6818,8 +6828,6 @@ figure.snip1156:hover .salud-ambiental{
 	border:none;
 }
 
-
-	
 	
 #imagen-uno {margin-top: 115px;}
 
@@ -6861,9 +6869,10 @@ figure.snip1156:hover .salud-ambiental{
 }
 
 #gota-vademecum {
-    			margin-right: 10px;
-   			 width: 20px;
-    			margin-top: -5px;}
+    margin-right: 10px;
+   	width: 20px;
+    margin-top: -5px;
+}
 
 .p-widget-v:hover {color: #202020}
 
@@ -6958,7 +6967,95 @@ figure.snip1156 .d-a-2 h2{
 	}
 
 
+}
 
+
+.container-revistas-molino{
+	margin: auto;
+	text-align:center;
+	background: rgb(255,255,255); 
+	background: -moz-linear-gradient(top, rgba(255,255,255,1) 16%, rgba(242,242,242,1) 100%);
+	background: -webkit-linear-gradient(top, rgba(255,255,255,1) 16%,rgba(242,242,242,1) 100%); 
+	background: linear-gradient(to bottom, rgba(255,255,255,1) 16%,rgba(242,242,242,1) 100%); 
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f2f2f2',GradientType=0 );    
+	padding-bottom: 9px; 
+}
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 736px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+	.logo-blanco {
+		width: 60%;
+		margin-top: -3%;
+	}
+	
+	.h1-home-ev {
+		text-align: center;
+		color: white;
+		text-shadow: 0px 3px black;
+		letter-spacing: 1px;
+		font-family: 'arialregular';
+		font-size: 27px;
+	}
+
+	.salud-animal {
+		color: #79C8EE;
+		font-size: 84px;
+		margin-top: -1%;
+		font-weight: bold;
+	}
+	
+	.scroll-down {
+		margin: 0;
+		border: 2px solid #fff;
+		-moz-border-radius: 100px;
+		-webkit-border-radius: 100px;
+		border-radius: 100px;
+		position: absolute;
+		left: 59%;
+		top: 84%;
+		width: 50px;
+		height: 50px;
+		margin-left: -50px;
+		margin-top: 0px;
+		z-index: 2;
+	}
+	
+	.div-inst{
+		padding-top: 255px;;
+	}
+	
+}
+
+
+
+
+/*redes-sociales-home*/
+#fb-home{
+	opacity:1;
+	transition:all 0.5s ease;
+}
+
+
+#fb-home:hover{
+	opacity:0.5;
+	transition:all 0.5s ease;
+}
+
+#ytb-home{
+	opacity:1;
+	transition:all 0.5s ease;
+}
+
+#ytb-home:hover{
+	opacity:0.5;
+	transition:all 0.5s ease;
+}
+
+
+/*flecha*/
 @-webkit-keyframes pulse {
   0% {
     opacity: 0;
@@ -7085,157 +7182,85 @@ figure.snip1156 .d-a-2 h2{
 }
 
 .scroll-down {
-  margin: 0;
-  border: 2px solid #fff;
-  -moz-border-radius: 100px;
-  -webkit-border-radius: 100px;
-  border-radius: 100px;
-  position: absolute;
-  left: 50%;
-  top: 70%;
-  width: 50px;
-  height: 50px;
-  margin-left: -50px;
-  margin-top: 0px;
+	margin: 0;
+	border: 2px solid #fff;
+	-moz-border-radius: 100px;
+	-webkit-border-radius: 100px;
+	border-radius: 100px;
+	position: absolute;
+	left: 50%;
+	top: 70%;
+	width: 50px;
+	height: 50px;
+	margin-left: -50px;
+	margin-top: 0px;
 	z-index: 2;
 }
+
+
 .scroll-down a {
-  display: block;
-  opacity: 0;
-  -moz-border-radius: 100px;
-  -webkit-border-radius: 100px;
-  border-radius: 100px;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-  line-height: 0;
-  font-size: 0;
-  color: transparent;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-  height: 100%;
-  -moz-background-size: 0 auto;
-  -o-background-size: 0 auto;
-  -webkit-background-size: 0 auto;
-  background-size: 0 auto;
-  -webkit-animation: pulse 1.9s 0.05s infinite normal ease forwards;
-  -moz-animation: pulse 1.8s 0.05s infinite normal ease forwards;
-  -o-animation: pulse 1.8s 0.05s infinite normal ease forwards;
-  animation: pulse 1.8s 0.05s infinite normal ease forwards;
-  background-image: url("http://jamesmuspratt.com/codepen/img/arrow-down.svg");
-  background-repeat: no-repeat;
+	display: block;
+	opacity: 0;
+	-moz-border-radius: 100px;
+	-webkit-border-radius: 100px;
+	border-radius: 100px;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	-webkit-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+	line-height: 0;
+	font-size: 0;
+	color: transparent;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	height: 100%;
+	-moz-background-size: 0 auto;
+	-o-background-size: 0 auto;
+	-webkit-background-size: 0 auto;
+	background-size: 0 auto;
+	-webkit-animation: pulse 1.9s 0.05s infinite normal ease forwards;
+	-moz-animation: pulse 1.8s 0.05s infinite normal ease forwards;
+	-o-animation: pulse 1.8s 0.05s infinite normal ease forwards;
+	animation: pulse 1.8s 0.05s infinite normal ease forwards;
+	background-image: url("http://jamesmuspratt.com/codepen/img/arrow-down.svg");
+	background-repeat: no-repeat;
 }
+
+
 .scroll-down a:before, .scroll-down a:after {
-  content: " ";
-  position: absolute;
-  top: -7px;
-  left: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: url("http://jamesmuspratt.com/codepen/img/arrow-down.svg") no-repeat;
-  -moz-background-size: 100% auto;
-  -o-background-size: 100% auto;
-  -webkit-background-size: 100% auto;
-  background-size: 100% auto;
+	content: " ";
+	position: absolute;
+	top: -7px;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: url("http://jamesmuspratt.com/codepen/img/arrow-down.svg") no-repeat;
+	-moz-background-size: 100% auto;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100% auto;
+	background-size: 100% auto;
 }
+
+
 .scroll-down a:before {
-  -webkit-animation: pulse 1.8s 0.20s infinite normal ease forwards;
-  -moz-animation: pulse 1.8s 0.20s infinite normal ease forwards;
-  -o-animation: pulse 1.8s 0.20s infinite normal ease forwards;
-  animation: pulse 1.8s 0.20s infinite normal ease forwards;
+	-webkit-animation: pulse 1.8s 0.20s infinite normal ease forwards;
+	-moz-animation: pulse 1.8s 0.20s infinite normal ease forwards;
+	-o-animation: pulse 1.8s 0.20s infinite normal ease forwards;
+	animation: pulse 1.8s 0.20s infinite normal ease forwards;
     top: -8px;
 }
+
+
 .scroll-down a:after {
-  -webkit-animation: pulse 1.8s 0.55s infinite normal ease forwards;
-  -moz-animation: pulse 1.8s 0.55s infinite normal ease forwards;
-  -o-animation: pulse 1.8s 0.55s infinite normal ease forwards;
-  animation: pulse 1.8s 0.55s infinite normal ease forwards;
-     top: -12px;
+	-webkit-animation: pulse 1.8s 0.55s infinite normal ease forwards;
+	-moz-animation: pulse 1.8s 0.55s infinite normal ease forwards;
+	-o-animation: pulse 1.8s 0.55s infinite normal ease forwards;
+	animation: pulse 1.8s 0.55s infinite normal ease forwards;
+	top: -12px;
 }
+
 .scroll-down a:hover {
-  background-color: rgba(0, 0, 0, 0.3);
-}
-
-.container-revistas-molino{
-	margin: auto;
-	text-align:center;
-	background: rgb(255,255,255); 
-	background: -moz-linear-gradient(top, rgba(255,255,255,1) 16%, rgba(242,242,242,1) 100%);
-	background: -webkit-linear-gradient(top, rgba(255,255,255,1) 16%,rgba(242,242,242,1) 100%); 
-	background: linear-gradient(to bottom, rgba(255,255,255,1) 16%,rgba(242,242,242,1) 100%); 
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f2f2f2',GradientType=0 );    
-	padding-bottom: 9px; 
-}
-
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 736px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-
-	.logo-blanco {
-		width: 60%;
-		margin-top: -3%;
-	}
-	
-	.h1-home-ev {
-		text-align: center;
-		color: white;
-		text-shadow: 0px 3px black;
-		letter-spacing: 1px;
-		font-family: 'arialregular';
-		font-size: 27px;
-	}
-
-	.salud-animal {
-		color: #79C8EE;
-		font-size: 84px;
-		margin-top: -1%;
-		font-weight: bold;
-	}
-	
-	.scroll-down {
-		margin: 0;
-		border: 2px solid #fff;
-		-moz-border-radius: 100px;
-		-webkit-border-radius: 100px;
-		border-radius: 100px;
-		position: absolute;
-		left: 59%;
-		top: 84%;
-		width: 50px;
-		height: 50px;
-		margin-left: -50px;
-		margin-top: 0px;
-		z-index: 2;
-	}
-	
-	.div-inst{
-		padding-top: 255px;;
-	}
-	
-}
-
-
-#fb-home{
-	opacity:1;
-	transition:all 0.5s ease;
-}
-
-
-#fb-home:hover{
-	opacity:0.5;
-	transition:all 0.5s ease;
-}
-
-#ytb-home{
-	opacity:1;
-	transition:all 0.5s ease;
-}
-
-#ytb-home:hover{
-	opacity:0.5;
-	transition:all 0.5s ease;
+	background-color: rgba(0, 0, 0, 0.3);
 }
