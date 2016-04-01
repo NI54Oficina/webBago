@@ -6493,8 +6493,10 @@ figure.snip1156:hover .salud-ambiental{
 
 
 #infodcha div.error{
-	color:red;
+	color:#ffcf5c;
 	position:absolute;
+    padding-top: 3px;
+    font-size: 12px;
 }
 
 #enviando,#enviado,#errorEnvio{
@@ -6876,8 +6878,9 @@ figure.snip1156 .d-a-2 h2{
 }
 
 .columna-target{
-	width:30%;
-	float:right;
+	width: 42%;
+    float: right;
+    padding-right: 14px;
 }
 
 @media only screen and (max-width:768px) {
@@ -7266,6 +7269,7 @@ h5{
     letter-spacing: 1px;
 }
 
+<<<<<<< HEAD
 .btn{
 		overflow: hidden;
 		background: #E0E0E0;
@@ -7379,3 +7383,9 @@ h5{
 		-ms-transform: rotate(180deg);
 		transform: rotate(180deg);
 	}
+=======
+#form1 .error:focus{
+    outline: #ffcf5c;
+    border: 1px solid #ffcf5c;
+}
+>>>>>>> origin/master
