@@ -6880,8 +6880,19 @@ figure.snip1156:hover .salud-ambiental{
 figure.snip1156 figcaption > div:hover{
 	background:transparent;
 }
+/** hover caption **/
 figure.snip1156 figcaption:hover{
-background-color:rgba(200,100,100,0.5);
+
+}
+
+figure.snip1156  .fig-salud-ambiental:hover{
+background-color:rgba(38,203,212,0.5);
+}
+figure.snip1156  .fig-aftosa:hover{
+background-color:rgba(0,130,200,0.5);
+}
+figure.snip1156  .fig-antibioticos:hover{
+background-color:rgba(255,4,35,0.5);
 }
 
 figure.snip1156 figcaption > div{
