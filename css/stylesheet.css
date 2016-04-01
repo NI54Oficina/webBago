@@ -7372,3 +7372,8 @@ h5{
     color: #B9B9B9;
     letter-spacing: 1px;
 }
+
+#form1 .error:focus{
+    outline: #ffcf5c;
+    border: 1px solid #ffcf5c;
+}
