@@ -1555,11 +1555,9 @@ font-size: 22px;
 	/*********************** VADEMECUM*********************/
 	#table-vad{
 		border: none;
-		
 		font-size: 11.5px;
 		margin-top: 7%;
 		height: 400px;
-		
 		display:inline-block;
 		
 	}
@@ -1600,8 +1598,8 @@ font-size: 22px;
 	}
 	
 	.image {
-		-webkit-transition: all 0.7s ease;
-		transition: all 0.7s ease;
+		-webkit-transition: all 1.5s ease;
+		transition: all 1.5s ease;
 	}
 	
 	.container:hover p{
@@ -2657,9 +2655,10 @@ footer{
 
 
 #form1 textarea{
-    width: 100%;
+	width: 97%;
     background: rgba(255,255,255,0.2);
     height: 15vh;
+    margin-left: -15px;
 }
 
 
@@ -2740,6 +2739,7 @@ footer{
 	margin:0;
 	width:100%;
 	margin-top:15px;
+    margin-left: 10px;
 }
 
 .ubicacion{
@@ -4647,7 +4647,7 @@ figure.snip1156:hover .antiparasitarios-internos{
 }
 
 .titulo-endectocidas{
-color:#9B9501 !important;
+	color:#9B9501 !important;
 }
 
 
@@ -4660,7 +4660,7 @@ figure.snip1156:hover .endectocidas{
 }
 
 .titulo-antibioticos{
-color:#FF0423 !important;
+	color:#FF0423 !important;
 }
 
 
@@ -5242,6 +5242,8 @@ figure.snip1156:hover .salud-ambiental{
 	
 }
 
+
+
 @media only screen 
   and (min-device-width: 320px) 
   and (max-device-width: 736px)
@@ -5760,7 +5762,6 @@ figure.snip1156:hover .salud-ambiental{
 	}
 	
 	.buscador {
-
 		background-color: #E8E6E6;
 		width: 180px;
 		height: 25px;
@@ -5832,6 +5833,8 @@ figure.snip1156:hover .salud-ambiental{
 		vertical-align: super;
 	}
 	
+	
+	
 	#error-number img{
 		width:27%;
 	}
@@ -5839,6 +5842,8 @@ figure.snip1156:hover .salud-ambiental{
 	#container-text-error{
 		text-align:left;
 	}
+	
+	
 	
 	#container-text-error h2{
 	    color: #BD0020;
@@ -5865,9 +5870,7 @@ figure.snip1156:hover .salud-ambiental{
 		color: grey;
 		font-family: 'arialregular';	
 	}
-	
-	 #evolucion-logo{
-	}
+
 }
 
 /* Landscape */
@@ -5949,6 +5952,8 @@ figure.snip1156:hover .salud-ambiental{
 		width:260px;
 	}
 }
+
+
 
 /* Portrait */
 @media only screen 
@@ -6153,6 +6158,27 @@ figure.snip1156:hover .salud-ambiental{
 	
 	
 	
+<<<<<<< HEAD
+=======
+	.after .toggleIcon::before {
+		opacity: 0;
+		-webkit-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		transform: rotate(45deg);
+		text-shadow: 0 0 3px #333;
+	}
+	
+	.after .toggleIcon::after {
+		-webkit-transform: none;
+		-ms-transform: none;
+		transform: none;
+		-webkit-transform: rotate(180deg);
+		-ms-transform: rotate(180deg);
+		transform: rotate(180deg);
+	}
+	
+	
+>>>>>>> origin/master
 	/* ripple */
 	.ripple{
 		overflow: hidden;
@@ -6247,6 +6273,14 @@ figure.snip1156:hover .salud-ambiental{
   and (max-device-width: 2100px) 
   and (-webkit-min-device-pixel-ratio: 1) { 
   
+#texto-btn-mas2{ 
+	font-family: 'arialregular';
+    font-size: 17px;
+    padding-top: 2%;
+    margin-top: 5px !important;
+    display: block;
+    text-align: center;
+}
 
   	.logo-blanco {
 		width: 24%;
@@ -6963,6 +6997,7 @@ figure.snip1156 .d-a-2 h2{
 
 
 /*redes-sociales-home*/
+
 #fb-home{
 	opacity:1;
 	transition:all 0.5s ease;
@@ -6983,6 +7018,7 @@ figure.snip1156 .d-a-2 h2{
 	opacity:0.5;
 	transition:all 0.5s ease;
 }
+
 
 
 /*flecha*/
@@ -7205,12 +7241,14 @@ figure.snip1156 .d-a-2 h2{
 
 
 
-	.titulo-vad{
-		vertical-align:middle;
-		text-align:center;
-	}
+.titulo-vad{
+	vertical-align:middle;
+	text-align:center;
+}
 
-.titulo-nutricion {color:#D18900;}	
+.titulo-nutricion {
+	color:#D18900;
+}	
 
 
 /* Portrait  IPAD*/
@@ -7227,6 +7265,35 @@ figure.snip1156 .d-a-2 h2{
 		margin-left: 42%;
 		margin-top: 8%;
 		text-align: center;	
+	}
+	
+	#slider1 {
+		min-height: 30vh;
+		overflow: hidden;
+		position: relative;
+		padding: 0 13px 10px;
+		background-size: 100% auto;
+		margin-left: 0%;
+	}
+	
+	#slider1 .overview li {
+		float: left;
+		margin: 10px 20px 0 0;
+		padding: 0px;
+		height: 190px;
+		border: 1px solid #359FBD;
+		width: 285px;
+		max-width: 67vw;
+	}
+	
+	#texto-btn-mas2 {
+		font-family: 'arialregular';
+		font-size: 18px;
+		padding-top: 2%;
+		margin-top: 5px !important;
+		display: block;
+		text-align: center;
+		padding-left: 50%;
 	}
 }
 
@@ -7258,6 +7325,17 @@ figure.snip1156 .d-a-2 h2{
 		z-index: 2;
 	}
 	
+	.input-vad {
+		width: 36vw;
+		background: rgba(255,255,255,0.2);
+		display: inline-block;
+		height: 33px;
+		border: 1px solid white;
+		padding-left: 5%;
+		font-family: 'arialregular';
+		color: white;
+		letter-spacing: 2px;
+	}
 }
 
 
@@ -7388,4 +7466,37 @@ h5{
     outline: #ffcf5c;
     border: 1px solid #ffcf5c;
 }
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+	.icn-ubicacion {
+		width: 2%;
+		display: inline-block;
+	}
+	
+	#slider1 .overview li {
+		float: left;
+		margin: 10px 20px 0 0;
+		padding: 1px;
+		height: 190px;
+		border: 1px solid #359FBD;
+		width: 335px;
+		max-width: 67vw;
+	}
+	
+	#texto-btn-mas2{ 
+		font-family: 'arialregular';
+		font-size: 17px;
+		padding-top: 2%;
+		margin-top: 5px !important;
+		display: block;
+	}
+}
+
 >>>>>>> origin/master
