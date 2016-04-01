@@ -78,7 +78,7 @@
 					$notas =Notas::model()->findAllByAttributes(array('seccion'=>"rse"),"YEAR(fecha)=".$year."");
 					if(count($notas)>0){
 				?>
-				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 animate" style="margin-top:0;">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 animateCollapse" style="margin-top:0;">
 					<div class="btn">
 						<div class="toggleIcon"></div>
 							

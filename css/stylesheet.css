@@ -1347,12 +1347,12 @@ font-size: 22px;
 	}
 	
 	
-	.animate{
+	.animateCollapse{
 		position: relative;
 		margin: 0;
 	}
 	
-	.animate li{
+	.animateCollapse li{
 		-webkit-transition: all 0.3s ease-out;
 		transition: all 0.3s ease-out;
 		height: 0;
@@ -1480,7 +1480,7 @@ font-size: 22px;
 		float:left;
 	}
 	
-	.animate{
+	.animateCollapse{
 		overflow: hidden;
 		width: 100%;
 		margin:2% auto;
@@ -6150,12 +6150,12 @@ figure.snip1156:hover .salud-ambiental{
 	}
 	
 	
-	.animate{
+	.animateCollapse{
 		position: relative;
 		margin: 0;
 	}
 	
-	.animate li{
+	.animateCollapse li{
 		-webkit-transition: all 0.3s ease-out;
 		transition: all 0.3s ease-out;
 		height: 0;
@@ -6280,7 +6280,7 @@ figure.snip1156:hover .salud-ambiental{
 		font-size:15px;
 	}
 	
-	.animate{
+	.animateCollapse{
 		overflow: hidden;
 		width: 100%;
 		margin:2% auto;
@@ -6632,7 +6632,7 @@ figure.snip1156:hover .salud-ambiental{
 	
 }
 
-.container-prensa .animate li{
+.container-prensa .animateCollapse li{
 	margin:0;
 	border:none;
 }

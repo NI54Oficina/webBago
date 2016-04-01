@@ -421,3 +421,32 @@ $(function() {
     }
   });
 });
+
+$(document).ready(function(){
+	$("body").on("mousedown",".animateCollapse",function(){
+		var hasClass=false;
+		if($(this).hasClass("after")){
+			$(this).removeClass("after");
+		}else{
+			$(".after").each(function(){
+			if(!$(this).hasClass("noRemove")){
+				$(this).removeClass("after");
+				}
+			});
+			$(this).addClass("after");
+		}
+		/*if($(this).hasClass("after")){
+			hasClass=true;
+		}
+		$(".after").each(function(){
+			if(!$(this).hasClass("noRemove")){
+			$(this).removeClass("after");
+			}
+		});
+		
+		if(hasClass){
+			$(this).addClass("after");
+		}
+		*/
+	});
+});
