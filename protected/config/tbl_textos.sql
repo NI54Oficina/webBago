@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 31-03-2016 a las 17:35:17
+-- Tiempo de generación: 01-04-2016 a las 14:24:00
 -- Versión del servidor: 10.1.9-MariaDB
 -- Versión de PHP: 5.5.30
 
@@ -38,7 +38,7 @@ CREATE TABLE `tbl_textos` (
 --
 
 INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
-(1, 'Bienvenidos a', 'Welcome to', 'Bienvenidos a'),
+(1, 'Bienvenidos ', 'Welcome ', 'Bienvenidos '),
 (2, 'La evolución de la', 'The evolution of', 'A evolução da'),
 (3, 'Salud animal', 'Animal Health', 'Saúde animal'),
 (4, 'BIOGÉNESIS BAGÓ reconocida', '\n', ''),
