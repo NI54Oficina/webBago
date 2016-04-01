@@ -6597,8 +6597,10 @@ figure.snip1156:hover .salud-ambiental{
 
 
 #infodcha div.error{
-	color:red;
+	color:#ffcf5c;
 	position:absolute;
+    padding-top: 3px;
+    font-size: 12px;
 }
 
 #enviando,#enviado,#errorEnvio{
@@ -6980,8 +6982,9 @@ figure.snip1156 .d-a-2 h2{
 }
 
 .columna-target{
-	width:30%;
-	float:right;
+	width: 42%;
+    float: right;
+    padding-right: 14px;
 }
 
 @media only screen and (max-width:768px) {

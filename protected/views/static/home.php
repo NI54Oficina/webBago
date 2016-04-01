@@ -1299,13 +1299,13 @@
 							errorElement: 'div',
 							messages: {
 								nombre: {
-									required: "Debe completar su nombre.",
+									required: "*Debe completar su nombre.",
 								},
 								email: {
-									required: "Debe proporcionar un mail de contacto válido.",
+									required: "*Debe proporcionar un mail de contacto válido.",
 								},
 								mensaje: {
-									required: "Debe ingresar un mensaje.",
+									required: "*Debe ingresar un mensaje.",
 								},
 							},
 							
@@ -1350,11 +1350,11 @@
 
 		
 	
-				
+			
 			</div>
 		
 		</section>
-			
+	
 
 	<script>
 	$(document).ready(function(){
