@@ -11,14 +11,14 @@
 		<h2  class="h2-aftosa"><?php echo Textos::model()->GetText(347); ?></h2>	
 		<div id="barra-institucional"></div>
 		</div>
-		
-				<div id="imagen-uno" class="imagenes-fundaciones"><img class="img-fundaciones-1" src="<?php echo Yii::app()->request->baseUrl; ?>/img/rse-prosaia.png"  /></div>
-				<div  class="imagenes-fundaciones"><img class="img-fundaciones-2" src="<?php echo Yii::app()->request->baseUrl; ?>/img/rse-garrahan.png"  /></div>
-				<div  class="imagenes-fundaciones"><img class="img-fundaciones-3" src="<?php echo Yii::app()->request->baseUrl; ?>/img/rse-mundo-sano.png"  /></div>
-				<div  class="imagenes-fundaciones"><img class="img-fundaciones-4" src="<?php echo Yii::app()->request->baseUrl; ?>/img/rse-misiones-rurales.png"  /></div>
-				<div  class="imagenes-fundaciones"><img class="img-fundaciones-5" src="<?php echo Yii::app()->request->baseUrl; ?>/img/rse-solidagro.png"  /></div>
-				<div  class="imagenes-fundaciones"><img class="img-fundaciones-6" src="<?php echo Yii::app()->request->baseUrl; ?>/img/rse-fernandez.png"  /></div>
-			</div>
+			<div>
+				<div class="imagenes-fundaciones col-lg-12 col-md-12 col-sm-6 col-xs-6"><img class="img-fundaciones-1" src="<?php echo Yii::app()->request->baseUrl; ?>/img/rse-prosaia.png"  /></div>
+				<div  class="imagenes-fundaciones col-lg-12 col-md-12 col-sm-6 col-xs-6"><img class="img-fundaciones-2" src="<?php echo Yii::app()->request->baseUrl; ?>/img/rse-garrahan.png"  /></div>
+				<div  class="imagenes-fundaciones col-lg-12 col-md-12 col-sm-6 col-xs-6"><img class="img-fundaciones-3" src="<?php echo Yii::app()->request->baseUrl; ?>/img/rse-mundo-sano.png"  /></div>
+				<div  class="imagenes-fundaciones col-lg-12 col-md-12 col-sm-6 col-xs-6"><img class="img-fundaciones-4" src="<?php echo Yii::app()->request->baseUrl; ?>/img/rse-misiones-rurales.png"  /></div>
+				<div  class="imagenes-fundaciones col-lg-12 col-md-12 col-sm-6 col-xs-6"><img class="img-fundaciones-5" src="<?php echo Yii::app()->request->baseUrl; ?>/img/rse-solidagro.png"  /></div>
+				<div  class="imagenes-fundaciones col-lg-12 col-md-12 col-sm-6 col-xs-6"><img class="img-fundaciones-6" src="<?php echo Yii::app()->request->baseUrl; ?>/img/rse-fernandez.png"  /></div>
+			</div>	
 	</div>
 	</div>
 	
@@ -38,7 +38,7 @@
 
 				<h4  class="h2-rse" style="display:inline-block;"><?php echo Textos::model()->GetText(455); ?></h4>
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hidden-xs hidden-sm linea-rse"> </div>
-				<p style="margin-top:2%; margin-bottom: 5%;"><?php echo Textos::model()->GetText(66); ?> </p>
+				<p style="margin-top:2%; margin-bottom: 2%;"><?php echo Textos::model()->GetText(66); ?> </p>
                 
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hidden-xs hidden-sm linea-rse" style="margin-top:2%;" > </div>
 				

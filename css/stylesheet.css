@@ -655,11 +655,6 @@ font-size: 22px;
 	}
 	
 	
-	.titulo-vad{
-		color:#7F781A;
-		vertical-align:middle;
-		text-align:center;
-	}
 
 	/**TITULO AFSTOSA HARDOCODEADO **/
 
@@ -3230,6 +3225,7 @@ fH
 	font-size:13px;
 	margin:0;
 	display:inline-block;
+	color:#A7A7A7;
 }
 
 
@@ -3468,13 +3464,12 @@ a.iprodev:hover {
 }
 
 .send-rrhh{
-	
     background:#0C5582;
     padding-top: 10px;
     padding-bottom: 10px;
-    padding:10px;
+    padding:15px;
     z-index: 99999999;    
-	font-size: 19px;
+	font-size: 15px;
 }
 
 #back-rrhh{ 
@@ -4619,14 +4614,15 @@ display:none;
 }
 
 #targets-inner{
-	width:30%;
+	width:100%;
 	display:inline-block;
-	text-align:center;
+	text-align:left;
 	float:top;
+    padding-top: 55px;
 }
 
 #targets-inner img{
-	width:20px;
+	width:auto;
 	max-width:58px;
 }
 
@@ -6545,9 +6541,10 @@ figure.snip1156:hover .salud-ambiental{
 
 .nombre-pais {
 	margin-bottom:10px!important; 
-	text-align: center; 
+	text-align: left; 
 	width:auto !important;
 	margin-top: 2% !important;
+    padding-left: 35px;
 }
 
 .imagen-pais{
@@ -6867,7 +6864,7 @@ figure.snip1156:hover .salud-ambiental{
 
 
 .item-institucional canvas{ position:absolute; display:block;width:100%;margin-top:-10px;-ms-transform: rotate(180deg); -webkit-transform: rotate(1800deg);transform: rotate(180deg);}
-.item-institucional .glyphicon{margin-top:15px;background-color:transparent;position:relative;top:-10px;display:inline-block;background-color:white;padding-left:10px;padding-right:10px;}
+.item-institucional .glyphicon{margin-top:15px;background-color:transparent;position:relative;top:-10px;display:inline-block;background-color:white;padding-left:10px;padding-right:10px; color: #AAAAAA;}
 .plus-container{width:100%;display:block;
 }
 
@@ -6897,6 +6894,37 @@ background-color:rgba(0,130,200,0.5);
 figure.snip1156  .fig-antibioticos:hover{
 background-color:rgba(255,4,35,0.5);
 }
+
+figure.snip1156  .fig-antiparasitarios-externos:hover{
+background-color:rgba(13, 85, 63, 0.5);
+}
+
+figure.snip1156  .fig-antiparasitarios-internos:hover{
+background-color:rgba(0, 149, 95, 0.5);
+}
+
+figure.snip1156  .fig-biologicos:hover{
+background-color:rgba(100, 101, 104, 0.5);
+}
+
+figure.snip1156  .fig-endectocidas:hover{
+background-color:rgba(155, 149, 1, 0.5);
+}
+
+figure.snip1156  .fig-farmaceuticos:hover{
+background-color:rgba(109, 58, 93, 0.5);
+}
+
+figure.snip1156  .fig-reproductivos:hover{
+background-color:rgba(255, 103, 27, 0.5);
+}
+
+figure.snip1156  .fig-vitaminicos-y-minerales:hover{
+background-color:rgba(0, 59, 93, 0.5);
+}
+
+
+
 
 figure.snip1156 figcaption > div{
 	margin:5%;
@@ -7275,3 +7303,60 @@ figure.snip1156 .d-a-2 h2{
 }
 
 .nota-rse strong {color:#66CCED;}
+
+
+
+	.titulo-vad{
+		vertical-align:middle;
+		text-align:center;
+	}
+
+.titulo-nutricion {color:#D18900;}	
+
+
+/* Portrait  IPAD*/
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+	#volver{ 
+	    margin-left: -250px;
+	}
+	
+	.paises-registrados {
+		margin-left: 42%;
+		margin-top: 8%;
+		text-align: center;	
+	}
+}
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 736px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+	.item-institucional .glyphicon{
+		display:none;
+	}
+	
+	.item-institucional canvas{ 
+		display:none;
+	}
+	
+	.scroll-down {
+		margin: 0;
+		border: 2px solid #fff;
+		-moz-border-radius: 100px;
+		-webkit-border-radius: 100px;
+		border-radius: 100px;
+		position: absolute;
+		left: 56%;
+		top: 79%;
+		width: 50px;
+		height: 50px;
+		margin-left: -50px;
+		margin-top: 0px;
+		z-index: 2;
+	}
+	
+}
