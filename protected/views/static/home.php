@@ -1100,15 +1100,15 @@
 				<p class="p-rrhh-home" style="width:50%;display:inline-block;margin:0;padding:0;" ><?php echo Textos::model()->GetText(112); ?></p>
 
 
-				<!-- ESTOS SON LOS TEXTOS QUE TIENE QUE APARECER YU DESAPARECCER EN RRHH DE LA HOME !-->
+				<!-- ESTOS SON LOS TEXTOS QUE TIENE QUE APARECER Y DESAPARECCER EN RRHH DE LA HOME !-->
 
 				<p style="font-size: 14px; margin-top: 10px;">
-				   <?php echo Textos::model()->GetText(483); ?></br>
-				   <?php echo Textos::model()->GetText(484); ?> </br>
-				   <?php echo Textos::model()->GetText(485); ?></br>
-				   <?php echo Textos::model()->GetText(486); ?></br>
-				   <?php echo Textos::model()->GetText(487); ?></br>
-				   <?php echo Textos::model()->GetText(488); ?></br>
+				   <?php echo Textos::model()->GetText(483); ?>/</br>
+				   <?php echo Textos::model()->GetText(484); ?>/ </br>
+				   <?php echo Textos::model()->GetText(485); ?>/</br>
+				   <?php echo Textos::model()->GetText(486); ?>/</br>
+				   <?php echo Textos::model()->GetText(487); ?>/</br>
+				   <?php echo Textos::model()->GetText(488); ?>/</br>
 
 				</p>
 
