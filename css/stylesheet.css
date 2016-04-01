@@ -1552,11 +1552,9 @@ font-size: 22px;
 	/*********************** VADEMECUM*********************/
 	#table-vad{
 		border: none;
-		
 		font-size: 11.5px;
 		margin-top: 7%;
 		height: 400px;
-		
 		display:inline-block;
 		
 	}
@@ -7328,12 +7326,14 @@ figure.snip1156 .d-a-2 h2{
 
 
 
-	.titulo-vad{
-		vertical-align:middle;
-		text-align:center;
-	}
+.titulo-vad{
+	vertical-align:middle;
+	text-align:center;
+}
 
-.titulo-nutricion {color:#D18900;}	
+.titulo-nutricion {
+	color:#D18900;
+}	
 
 
 /* Portrait  IPAD*/
