@@ -1131,7 +1131,7 @@
 
 
 		<!------------------------------------------------------------------ SECCION 7: CONTACTO ------------------------------------------------------------------>
-		<section class="special" data-scrollax-parent="true" style="min-height:100vh;width:100%;text-align:center;background-image:url(<?php echo Yii::app()->request->baseUrl; ?>/img/fondo-contacto.png);background-size:auto 100%;float:left;overflow:hidden;"   id="section-contacto" >
+		<section class="special" data-scrollax-parent="true" style="width:100%;text-align:center;background-image:url(<?php echo Yii::app()->request->baseUrl; ?>/img/fondo-contacto.png);background-size:auto 100%;float:left;overflow:hidden;"   id="section-contacto" >
 			<div id="contenido" style="display:inline-block;text-align:center;">
 				
 				<!-- ////////// TITULO ////////////// -->
@@ -1145,7 +1145,7 @@
 			
     
 					<!--********** DESCRIPCIÓN / UBICACIÓN **********  -->
-					<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12" id="descripcion" style="display:inline-block;float:initial;padding-bottom:20px;overflow:hidden;" hid="2">
+					<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12" id="descripcion" style="" hid="2">
                         
 						<p style="text-transform: uppercase;" class="ubicacion"><img class="ico-ubi" src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-ubicacion.png"/><?php echo Textos::model()->GetText(479); ?></p>
                         

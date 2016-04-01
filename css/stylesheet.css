@@ -2542,6 +2542,7 @@ p{
 #descripcion{
 	color:#FFF;
 	border-right:#fff solid thin;
+	display:inline-block;float:initial;padding-bottom:20px;overflow:hidden;
    
     
 }
@@ -2633,8 +2634,8 @@ footer{
 	
 .copy{
     text-align: center;
-	background-image:url(../img/fondo-contacto-footer.png);
-	background-color:rgba(51, 51, 51, 0.5);
+	/**background-image:url(../img/fondo-contacto-footer.png);**/
+	background-color:rgba(0, 0, 0, 0.5);
 	margin-bottom: 0%;
 
     height: 6vh;
@@ -7265,4 +7266,10 @@ figure.snip1156 .d-a-2 h2{
 
 .scroll-down a:hover {
 	background-color: rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (max-width:414px){
+
+ #descripcion {height: auto !important;}
+
 }
