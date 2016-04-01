@@ -4646,7 +4646,7 @@ figure.snip1156:hover .antiparasitarios-internos{
 }
 
 .titulo-endectocidas{
-color:#9B9501 !important;
+	color:#9B9501 !important;
 }
 
 
@@ -4659,7 +4659,7 @@ figure.snip1156:hover .endectocidas{
 }
 
 .titulo-antibioticos{
-color:#FF0423 !important;
+	color:#FF0423 !important;
 }
 
 
@@ -5240,6 +5240,8 @@ figure.snip1156:hover .salud-ambiental{
 	}
 	
 }
+
+
 
 @media only screen 
   and (min-device-width: 320px) 
@@ -5949,6 +5951,8 @@ figure.snip1156:hover .salud-ambiental{
 	}
 }
 
+
+
 /* Portrait */
 @media only screen 
   and (min-device-width: 320px) 
@@ -6222,6 +6226,8 @@ figure.snip1156:hover .salud-ambiental{
 		-ms-transform: rotate(180deg);
 		transform: rotate(180deg);
 	}
+	
+	
 	/* ripple */
 	.ripple{
 		overflow: hidden;
