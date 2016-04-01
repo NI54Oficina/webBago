@@ -1597,8 +1597,8 @@ font-size: 22px;
 	}
 	
 	.image {
-		-webkit-transition: all 0.7s ease;
-		transition: all 0.7s ease;
+		-webkit-transition: all 1.5s ease;
+		transition: all 1.5s ease;
 	}
 	
 	.container:hover p{
