@@ -38,7 +38,7 @@
 
 				<h4  class="h2-rse" style="display:inline-block;"><?php echo Textos::model()->GetText(455); ?></h4>
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hidden-xs hidden-sm linea-rse"> </div>
-				<p style="margin-top:2%; margin-bottom: 5%;"><?php echo Textos::model()->GetText(66); ?> </p>
+				<p style="margin-top:2%; margin-bottom: 2%;"><?php echo Textos::model()->GetText(66); ?> </p>
                 
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hidden-xs hidden-sm linea-rse" style="margin-top:2%;" > </div>
 				
