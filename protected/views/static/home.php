@@ -148,15 +148,12 @@
 						
 							<!------- MAPA ----------->
 							<map name="img-mapaMap">
-								<!--<area class="btn-mapa" idInfo="infoCanada" shape="rect" coords="102,106,165,128" href="#">
-								<area class="btn-mapa" idInfo="infoEEUU" shape="rect" coords="99,145,202,166" href="#"> -->
 								<area class="btn-mapa" idInfo="infoMexico" shape="rect" coords="88,190,154,209" href="javascript:void(0);">
 								<area class="btn-mapa" idInfo="infoCenAm" shape="rect" coords="173,200,275,223" href="javascript:void(0);">
 								<area class="btn-mapa" idInfo="infoBrasil" shape="rect" coords="228,253,275,271" href="javascript:void(0);">
 								<area class="btn-mapa" idInfo="infoBolivia" shape="rect" coords="166,276,224,293" href="javascript:void(0);">
 								<area class="btn-mapa" idInfo="infoUruguay" shape="rect" coords="237,304,302,327" href="javascript:void(0);">
 								<area class="btn-mapa" idInfo="infoArgentina" shape="rect" coords="212,326,312,344" href="javascript:void(0);">
-							<!--  <area class="btn-mapa" idInfo="infoChina" shape="rect" coords="546,151,594,175" href="#"> -->
 							</map>
 						
 						</div> 
@@ -181,6 +178,7 @@
 					</div> <!-- Termina cada referencia -->
 					
 					
+					
 					<!--- REFERENCIA -->
 					<div id="ref-unica">
 					
@@ -189,6 +187,7 @@
 						<p id="nom-ref"> <?php echo Textos::model()->GetText(460); ?> </p>
 						
 					</div> <!-- Termina cada referencia -->
+				
 				
 					
 					<!--- REFERENCIA -->				
