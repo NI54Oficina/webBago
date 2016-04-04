@@ -77,16 +77,16 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 <div  class="tabla-aftosa col-lg-12 col-md-12 col-sm-11 col-xs-11" style="margin-top:10%;margin-bottom:20vh;text-align:center;display:inline-block;float:initial;padding:0 5%;">
 
 
-<h1 class="vademecum"> <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/punto-<?php echo $normalizado; ?>.png" /><?php echo Textos::model()->GetText(348); ?><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/punto-<?php echo $normalizado; ?>.png" /></h1>
-<p  style="text-align:center;border-bottom:1px solid #0082C8;width:3%;margin:auto;margin-top:0%;"></p>
-<h2 class="titulo-vad titulo-<?php echo $normalizado; ?>">
+<h1 class="vademecum-producto"> <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/punto-<?php echo $normalizado; ?>.png" /><?php echo Textos::model()->GetText(348); ?><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/punto-<?php echo $normalizado; ?>.png" /></h1>
+<p id="barra-vademecum" ></p>
+<h2 class="titulo-vad-producto titulo-<?php echo $normalizado; ?>">
 
 <img id="gota-producto"  src="<?php echo Yii::app()->request->baseUrl; ?>/img/gota-<?php echo $normalizado; ?>.png"  />
 
 <?php echo $seccion->nombre; ?></h2>
 
-<a href="<?php echo Yii::app()->request->baseUrl; ?>/vademecum/id<?php echo $seccion->id; ?>"><div class=" col-lg-3 col-md-3 col-sm-12 col-xs-12 volver" id="volver">
-<p>Volver</p>
+<a href="<?php echo Yii::app()->request->baseUrl; ?>/vademecum/id<?php echo $seccion->id; ?>"><div class=" col-lg-3 col-md-3 col-sm-12 col-xs-12 volver" id="volver-producto">
+<p><?php echo Textos::model()->GetText(490); ?></p>
 </div></a>
 
 
@@ -96,20 +96,20 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 
 <div  class=" col-lg-3 col-md-3 col-sm-12 col-xs-12 imagen-producto">
 		
-		<img src="<?php echo Yii::app()->getBaseUrl(true); ?>/vademecums/<?php echo $imagen->id; ?>.png" align="center" />
+		<img  src="<?php echo Yii::app()->getBaseUrl(true); ?>/vademecums/<?php echo $imagen->id; ?>.png" align="center" />
 	
 	
-		<p style="text-align:center; padding-bottom: 1.5%;"><?php echo Textos::model()->GetText(452); ?></p>
- 		<p  style="text-align:center;width:15%;margin:auto;margin-top:-2%; margin-bottom: 5px;"></p>
- 		<p  style="text-align:center;border-bottom:1px solid #0082C8;width:15%;margin:auto;"></p>
+		<p id="compartido"><?php echo Textos::model()->GetText(452); ?></p>
+ 		<p style="text-align:center;width:15%;margin:auto;margin-top:-2%; margin-bottom: 5px;" ></p>
+ 		<p id="barra-superior"></p>
   		
-  		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin: auto; text-align: center; margin-top: 7%;">
+  		<div id="barra-xs">
 			
-			<a href="" class="col-lg-3 col-md-3 col-sm-6 col-xs-6 facebook" style="float:initial;display:inline-block;">
+			<a href="" class="col-lg-3 col-md-3 col-sm-6 col-xs-6 facebook" >
 				
 			</a>
 			
-			<a class="col-lg-3 col-md-3 col-sm-6 col-xs-6 mail" style="float:initial;display:inline-block;">
+			<a class="col-lg-3 col-md-3 col-sm-6 col-xs-6 mail" >
 			</a>
 		</div>
 		
@@ -128,9 +128,66 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 			</a>
 		</div>!-->
 		
-		<p style="text-align:center;margin-top:50%; margin-bottom: 1.5%;"><?php echo Textos::model()->GetText(453); ?></p>
-		<p style="text-align:center;border-bottom:1px solid #0082C8;width:15%;margin:auto;"></p>
+		<p id="registrado"><?php echo Textos::model()->GetText(453); ?></p>
+		<p id="barra-media"></p>
 		
+			<div id="targets-mobile" >
+					<?php
+					$target= $data->target;
+					if($target[0]!=0){
+						echo '<img src="'.Yii::app()->getBaseUrl(true).'/images/caballo.png">';
+					}else{
+						//echo '<img src="images/caballo.png" style="opacity:0.2;">';
+					}
+					if($target[1]!=0){
+						echo '<img src="'.Yii::app()->getBaseUrl(true).'/images/cabra.png">';
+					}else{
+						//echo '<img src="images/cabra.png" style="opacity:0.2;">';
+					}
+					if($target[2]!=0){
+						echo '<img src="'.Yii::app()->getBaseUrl(true).'/images/chancho.png">';
+					}else{
+						//echo '<img src="images/chancho.png" style="opacity:0.2;">';
+					}
+					if($target[3]!=0){
+						echo '<img src="'.Yii::app()->getBaseUrl(true).'/images/conejo.png">';
+					}else{
+						//echo '<img src="images/conejo.png" style="opacity:0.2;">';
+					}
+					if($target[4]!=0){
+						echo '<img src="'.Yii::app()->getBaseUrl(true).'/images/gallina.png">';
+					}else{
+						//echo '<img src="images/gallina.png" style="opacity:0.2;">';
+					}
+					if($target[5]!=0){
+						echo '<img src="'.Yii::app()->getBaseUrl(true).'/images/perro.png">';
+					}else{
+						//echo '<img src="images/perro.png" style="opacity:0.2;">';
+					}
+					if($target[6]!=0){
+						echo '<img src="'.Yii::app()->getBaseUrl(true).'/images/gato.png">';
+					}else{
+						//echo '<img src="images/gato.png" style="opacity:0.2;">';
+					}
+					if($target[7]!=0){
+						echo '<img src="'.Yii::app()->getBaseUrl(true).'/images/oveja.png">';
+					}else{
+						//echo '<img src="images/oveja.png" style="opacity:0.2;">';
+					}
+					if($target[8]!=0){
+						echo '<img src="'.Yii::app()->getBaseUrl(true).'/images/pez.png">';
+					}else{
+						//echo '<img src="images/pez.png" style="opacity:0.2;">';
+					}
+					if($target[9]!=0){
+						echo '<img src="'.Yii::app()->getBaseUrl(true).'/images/vaca.png">';
+					}else{
+						//echo '<img src="images/vaca.png" style="opacity:0.2;">';
+					}
+					
+					?>
+					</div>
+
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 paises-registrados"  >
 
 			<div style=" width: 130px; ">
@@ -141,7 +198,7 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
               </div>
               </div>
 
-			<p class="col-lg-7 col-md-7 col-sm-12 col-xs-12" style="border-bottom:1px solid #CCC;  margin-bottom: 4%; width: 160px; "></p>
+			<p class="col-lg-7 col-md-7 col-sm-12 col-xs-12" id="barra-paises"></p>
 			
 
 			  <div style="  width: 130px; height: auto;">
@@ -149,9 +206,22 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 			 <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/brasil.png" class="imagen-pais" align="left" />
              <p class="nombre-pais">Brasil	</p>		
              </div>
+
 			 </div>
 
 
+
+
+		</div>
+
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="contacto-mobile">
+			
+			<a href="" class="col-lg-3 col-md-3 col-sm-6 col-xs-6 facebook" >
+				
+			</a>
+			
+			<a class="col-lg-3 col-md-3 col-sm-6 col-xs-6 mail" >
+			</a>
 		</div>
 	</div>
 
@@ -162,7 +232,7 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 
 
 
-	<div  class=" col-lg-6 col-md-6 col-sm-12 col-xs-12" style="overflow:hidden;">
+	<div  class=" col-lg-6 col-md-6 col-sm-12 col-xs-12 cuerpo-producto" style="overflow:hidden;">
 		 <div id="targets-inner">
 					<?php
 					$target= $data->target;

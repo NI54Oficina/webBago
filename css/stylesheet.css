@@ -647,7 +647,7 @@ font-size: 22px;
 	
 	/*************************** VADEMECUM*************************/
 	
-	.vademecum{
+	.vademecum, .vademecum-producto{
 		color:#7F7F7F;
 		text-align:center;
 		margin: 0;
@@ -659,7 +659,10 @@ font-size: 22px;
 	/**TITULO AFSTOSA HARDOCODEADO **/
 
 	.titulo-aftosa #gota-vademecum , .titulo-aftosa #gota-producto{ margin-left: -3%; }
-
+	.titulo-aftosa{
+		color:#0082C8 !important;
+	}
+	
 	/**TITULO AFSTOSA HARDOCODEADO **/
 
 	.icono-quienes{
@@ -1809,120 +1812,7 @@ font-size: 22px;
 		color: #A0A0A0;
 	}
 	
-	.facebook{
-		background-image: url(../img/facebook-desactivado.png);
-		height: 35px;
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: auto auto;
-	-webkit-transition: all 1s ease;
-		-moz-transition: all 1s ease;
-		-o-transition: all 1s ease;
-		-ms-transition: all 1s ease;
-			transition: all 1s ease;
-	}
-	
-	.facebook:hover{
-		background-image: url(../img/facebook-activado.png);
-		height: 35px;
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: auto auto;
-	}
-	
-	.mail{
-		background-image: url(../img/mail-desactivado.png);
-		height: 35px;
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: auto auto;
-	-webkit-transition: all 1s ease;
-		-moz-transition: all 1s ease;
-		-o-transition: all 1s ease;
-		-ms-transition: all 1s ease;
-			transition: all 1s ease;
-	}
-	
-	.mail:hover{
-		background-image: url(../img/mail-activado.png);
-		height: 35px;
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: auto auto;
-	}
-	
-	
-	.descargar{
-		background-image: url(../img/descargar-desactivado.png);
-		height: 35px;
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: auto auto;
-		-webkit-transition: all 1s ease;
-		-moz-transition: all 1s ease;
-		-o-transition: all 1s ease;
-		-ms-transition: all 1s ease;
-		transition: all 1s ease;
-	}
-	
-	.descargar:hover{
-		background-image: url(../img/descargar-activado.png);
-		height: 35px;
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: auto auto;
-	}
-	
-	.print{
-		background-image: url(../img/imprimir-desactivado.png);
-		height: 35px;
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: auto auto;
-	-webkit-transition: all 1s ease;
-		-moz-transition: all 1s ease;
-		-o-transition: all 1s ease;
-		-ms-transition: all 1s ease;
-			transition: all 1s ease;
-	}
-	
-	.print:hover{
-		background-image: url(../img/imprimir-activado.png);
-		height: 35px;
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: auto auto;
-	}
-	
-	.volver{
-		background-image: url(../img/volver-desactivado.png);
-		height: 42px;
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: auto auto;    margin-top: -6%;
-	-webkit-transition: all 1s ease;
-		-moz-transition: all 1s ease;
-		-o-transition: all 1s ease;
-		-ms-transition: all 1s ease;
-			transition: all 1s ease;
-		margin-left: -10%;
-	}
-	
-	.volver:hover{
-		background-image: url(../img/volver-desactivado.png);
-		height: 42px;
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: auto auto;    margin-top: -6%;
-		-webkit-transition: all 1s ease;
-		-moz-transition: all 1s ease;
-		-o-transition: all 1s ease;
-		-ms-transition: all 1s ease;
-		transition: all 1s ease;
-		margin-left: -10%;
-		opacity:0.4;
-	}
-	
+
 	.volver p{
 		display:inline-block;
 		vertical-align: middle;
@@ -1995,9 +1885,6 @@ font-size: 22px;
 	}
 	
 	
-	.titulo-aftosa{
-		color:#0082C8;
-	}
 	
 	.h4-aftosa{
 		color:#0082C8;
@@ -2604,7 +2491,7 @@ p{
 
 
 footer{
-	margin-top:10%;
+	margin-top:130px;
 	
 }
 	
@@ -6459,13 +6346,13 @@ figure.snip1156:hover .salud-ambiental{
 .imagen-pais{
 	width: 20%; 
 	margin-top:-1px;
-	vertical-align: left;
 }
 
 .imagen-producto { 
 	display:inline-block; 
  	text-align:center;
  	overflow:hidden; 
+ 	margin-top: 5%;
  }
 
 .paises-registrados { 
@@ -6480,21 +6367,11 @@ figure.snip1156:hover .salud-ambiental{
 		display:none !important;
     }
 	
-	.imagen-pais { 
-		width: 30%; 
-		text-align: left; 
-	}
-
-	#targets-inner img { 
-		display: none; 
-	} 
+	
 
 /* ¨.TARGET-INNER SON IMAGENES BORRADAS DE VAQUITAS PORQUE FALTA MODIFICARLES LA UBICACION*/
 
-	.paises-registrados {
-		margin:10% !important;
-	}
-
+	
 
 	.h2-titulo { 
 		margin-bottom: 0%; 
@@ -7477,7 +7354,174 @@ h5{
 position:fixed;
 }
 
+/*IMAGENES RSE SOLO EN IPAD*/
+
 @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
 
 	.imagenes-fundaciones {height: 280px}
+	#registrado {margin-top: 5% !important;}
+	#barra-xs {margin-top: 2% !important;}
 }
+
+/*PAGINA PRODUCTOS PASADO A CLASES E ID*/
+
+
+#compartido {text-align:center; padding-bottom: 1.5%;}
+
+#registrado {text-align:center;margin-top:50%; margin-bottom: 1.5%;}
+
+#barra-media {text-align:center;border-bottom:1px solid #0082C8;width:15%;margin:auto;}
+#barra-paises {border-bottom:1px solid #CCC;  margin-bottom: 4%; width: 160px; }
+#barra-superior {text-align:center;border-bottom:1px solid #0082C8;width:15%;margin:auto;}
+#barra-vademecum {text-align:center;border-bottom:1px solid #0082C8;width:3%;margin:auto;margin-top:0%;}
+#targets-mobile img {width:auto;
+	max-width:58px;display: none !important;}
+
+#barra-xs {margin: auto; text-align: center; margin-top: 7%;}
+
+/*PRODUCTOS EN MOBILE*/
+
+@media screen and (max-width: 768px) {
+
+	#registrado ,#compartido, #barra-media, #barra-paises, #barra-superior, #barra-xs, #targets-inner img,  .facebook, .mail, #barra-vademecum, .vademecum-producto {display: none;}
+	#volver-producto {float: left; text-align: left; margin-top: -10% !important;}
+	.titulo-vad-producto {text-align: right; font-size: 17px; margin-bottom: 0%;}
+	
+	#targets-mobile img {display: inline-block !important; margin: 0px auto auto auto;  width: 12% ; 
+	}
+   .imagen-pais {margin:0px 15% 0px 0px; width: 20%;}
+   .paises-registrados {margin:5% 0% 5% 0%; float: left; width: 50%;}
+   .cuerpo-producto {margin-top: -20%;}
+   #contacto-mobile{display: inline-block !important;  text-align: right; margin-left:20%; position: relative; margin-top: -16%;}
+   	.facebook {float: left !important;background-position: right!important; margin-right: -5%; }
+   	.mail {}
+   	#volver-producto {background-position: left;     background-size: 10%; }
+   	#volver-producto p {margin-left: 12%;
+    margin-top: 3%;}
+}
+
+
+
+#contacto-mobile {display: none;}
+
+	.facebook{
+		background-image: url(../img/facebook-desactivado.png);
+		height: 35px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: auto auto;
+	-webkit-transition: all 1s ease;
+		-moz-transition: all 1s ease;
+		-o-transition: all 1s ease;
+		-ms-transition: all 1s ease;
+			transition: all 1s ease;
+			float:initial;
+			display:inline-block;
+	}
+	
+	.facebook:hover{
+		background-image: url(../img/facebook-activado.png);
+		height: 35px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: auto auto;
+	}
+	
+	.mail{
+		background-image: url(../img/mail-desactivado.png);
+		height: 35px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: auto auto;
+	-webkit-transition: all 1s ease;
+		-moz-transition: all 1s ease;
+		-o-transition: all 1s ease;
+		-ms-transition: all 1s ease;
+			transition: all 1s ease;
+			float:initial;
+			display:inline-block;
+	}
+	
+	.mail:hover{
+		background-image: url(../img/mail-activado.png);
+		height: 35px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: auto auto;
+	}
+	
+	
+	.descargar{
+		background-image: url(../img/descargar-desactivado.png);
+		height: 35px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: auto auto;
+		-webkit-transition: all 1s ease;
+		-moz-transition: all 1s ease;
+		-o-transition: all 1s ease;
+		-ms-transition: all 1s ease;
+		transition: all 1s ease;
+	}
+	
+	.descargar:hover{
+		background-image: url(../img/descargar-activado.png);
+		height: 35px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: auto auto;
+	}
+	
+	.print{
+		background-image: url(../img/imprimir-desactivado.png);
+		height: 35px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: auto auto;
+	-webkit-transition: all 1s ease;
+		-moz-transition: all 1s ease;
+		-o-transition: all 1s ease;
+		-ms-transition: all 1s ease;
+			transition: all 1s ease;
+	}
+	
+	.print:hover{
+		background-image: url(../img/imprimir-activado.png);
+		height: 35px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: auto auto;
+	}
+	
+	.volver{
+		background-image: url(../img/volver-desactivado.png);
+		height: 42px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: auto auto;    margin-top: -6%;
+	-webkit-transition: all 1s ease;
+		-moz-transition: all 1s ease;
+		-o-transition: all 1s ease;
+		-ms-transition: all 1s ease;
+			transition: all 1s ease;
+		margin-left: -4%;
+		margin-top: -4%;
+	}
+	
+	.volver:hover{
+		background-image: url(../img/volver-desactivado.png);
+		height: 42px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: auto auto;  
+		-webkit-transition: all 1s ease;
+		-moz-transition: all 1s ease;
+		-o-transition: all 1s ease;
+		-ms-transition: all 1s ease;
+		transition: all 1s ease;
+		
+		opacity:0.4;
+	}
+
+
+	 
