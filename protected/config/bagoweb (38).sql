@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 04-04-2016 a las 11:37:35
+-- Tiempo de generación: 04-04-2016 a las 11:49:12
 -- Versión del servidor: 5.5.24
 -- Versión de PHP: 5.4.45
 
@@ -826,7 +826,7 @@ CREATE TABLE IF NOT EXISTS `tbl_metatag_page` (
 --
 
 INSERT INTO `tbl_metatag_page` (`id`, `idPage`, `idMetatag`, `dat`) VALUES
-(4, 1, 1, '493');
+(1, 1, 1, '493');
 
 -- --------------------------------------------------------
 

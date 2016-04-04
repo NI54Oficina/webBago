@@ -1,4 +1,4 @@
-<?php include('head.php'); ?>
+
 	<!-- VIDEO-->
 		<!--JS-->
     <link rel="stylesheet" href="<?php echo Yii::app()->getBaseUrl(true); ?>/css/style.css">

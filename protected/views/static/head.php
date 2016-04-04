@@ -10,6 +10,7 @@
 	<?php
 	
 	$metas= MetatagPage::model()->findAllByAttributes(array('idPage'=>$data));	
+	
 	$lang="";
 	if(!isset($_SESSION["lng"])){
 		$lang="es";
