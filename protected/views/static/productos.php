@@ -79,7 +79,11 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 
 <h1 class="vademecum"> <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/punto-<?php echo $normalizado; ?>.png" /><?php echo Textos::model()->GetText(348); ?><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/punto-<?php echo $normalizado; ?>.png" /></h1>
 <p  style="text-align:center;border-bottom:1px solid #0082C8;width:3%;margin:auto;margin-top:0%;"></p>
-<h2 class="titulo-vad titulo-<?php echo $normalizado; ?>"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/gota-<?php echo $normalizado; ?>.png"  /><?php echo $seccion->nombre; ?></h2>
+<h2 class="titulo-vad titulo-<?php echo $normalizado; ?>">
+
+<img id="gota-producto"  src="<?php echo Yii::app()->request->baseUrl; ?>/img/gota-<?php echo $normalizado; ?>.png"  />
+
+<?php echo $seccion->nombre; ?></h2>
 
 <a href="<?php echo Yii::app()->request->baseUrl; ?>/vademecum/id<?php echo $seccion->id; ?>"><div class=" col-lg-3 col-md-3 col-sm-12 col-xs-12 volver" id="volver">
 <p>Volver</p>
@@ -95,7 +99,7 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 		<img src="<?php echo Yii::app()->getBaseUrl(true); ?>/vademecums/<?php echo $imagen->id; ?>.png" align="center" />
 	
 	
-		<p style="text-align:center;">Compartir en</p>
+		<p style="text-align:center; padding-bottom: 1.5%;"><?php echo Textos::model()->GetText(452); ?></p>
  		<p  style="text-align:center;width:15%;margin:auto;margin-top:-2%; margin-bottom: 5px;"></p>
  		<p  style="text-align:center;border-bottom:1px solid #0082C8;width:15%;margin:auto;"></p>
   		
@@ -124,7 +128,7 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 			</a>
 		</div>!-->
 		
-		<p style="text-align:center;margin-top:50%;">Registrado en</p>
+		<p style="text-align:center;margin-top:50%; margin-bottom: 1.5%;"><?php echo Textos::model()->GetText(453); ?></p>
 		<p style="text-align:center;border-bottom:1px solid #0082C8;width:15%;margin:auto;"></p>
 		
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 paises-registrados"  >
@@ -137,7 +141,7 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
               </div>
               </div>
 
-			<p class="col-lg-7 col-md-7 col-sm-12 col-xs-12" style="border-bottom:1px solid #CCC;  margin-top: 2%; margin-bottom: 2%; width: 160px; "></p>
+			<p class="col-lg-7 col-md-7 col-sm-12 col-xs-12" style="border-bottom:1px solid #CCC;  margin-bottom: 4%; width: 160px; "></p>
 			
 
 			  <div style="  width: 130px; height: auto;">
