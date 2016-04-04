@@ -1823,6 +1823,8 @@ font-size: 22px;
 		-o-transition: all 1s ease;
 		-ms-transition: all 1s ease;
 			transition: all 1s ease;
+			float:initial;
+			display:inline-block;
 	}
 	
 	.facebook:hover{
@@ -1844,6 +1846,8 @@ font-size: 22px;
 		-o-transition: all 1s ease;
 		-ms-transition: all 1s ease;
 			transition: all 1s ease;
+			float:initial;
+			display:inline-block;
 	}
 	
 	.mail:hover{
@@ -6460,7 +6464,6 @@ figure.snip1156:hover .salud-ambiental{
 .imagen-pais{
 	width: 20%; 
 	margin-top:-1px;
-	vertical-align: left;
 }
 
 .imagen-producto { 
@@ -6482,19 +6485,11 @@ figure.snip1156:hover .salud-ambiental{
 		display:none !important;
     }
 	
-	.imagen-pais { 
-		width: 30%; 
-		text-align: left; 
-	}
-
-	 
+	
 
 /* ¨.TARGET-INNER SON IMAGENES BORRADAS DE VAQUITAS PORQUE FALTA MODIFICARLES LA UBICACION*/
 
-	.paises-registrados {
-		margin:10% !important;
-	}
-
+	
 
 	.h2-titulo { 
 		margin-bottom: 0%; 
@@ -7477,12 +7472,14 @@ h5{
 position:fixed;
 }
 
+/*IMAGENES RSE SOLO EN IPAD*/
+
 @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
 
 	.imagenes-fundaciones {height: 280px}
 }
 
-
+/*PAGINA PRODUCTOS PASADO A CLASES E ID*/
 
 
 #compartido {text-align:center; padding-bottom: 1.5%;}
@@ -7493,17 +7490,29 @@ position:fixed;
 #barra-paises {border-bottom:1px solid #CCC;  margin-bottom: 4%; width: 160px; }
 #barra-superior {text-align:center;border-bottom:1px solid #0082C8;width:15%;margin:auto;}
 #barra-vademecum {text-align:center;border-bottom:1px solid #0082C8;width:3%;margin:auto;margin-top:0%;}
+#targets-mobile img {width:auto;
+	max-width:58px;display: none !important;}
+
+#barra-xs {margin: auto; text-align: center; margin-top: 7%;}
+
+/*PRODUCTOS EN MOBILE*/
+
 @media screen and (max-width: 768px) {
 
-	#registrado ,#compartido, #barra-media, #barra-paises, #barra-superior, #barra-vademecum, .vademecum {display: none;}
-#volver {float: left; text-align: left; margin-top: -10% !important;}
+	#registrado ,#compartido, #barra-media, #barra-paises, #barra-superior, #barra-xs, #barra-vademecum, .vademecum {display: none;}
+	#volver {float: left; text-align: left; margin-top: -10% !important;}
 	.titulo-vad {text-align: right; font-size: 17px;}
-
+	#targets-inner img {display: none;}
+	#targets-mobile img {display: block !important; margin: 0px auto auto auto;  width: 12% ;
+	}
+   .imagen-pais {margin:0px 15% 0px 0px; width: 20%;}
+   .paises-registrados {margin:5% 0% 5% 0%;}
+   .cuerpo-producto {margin-top: -20%;}
 
 }
 
 
-/* MODO PILOTO - ANIMALES DE PRODUCTOS EN MOBILE DESAPARECEN
-#targets-inner img { display: none; }
 
-*/
+
+
+	 

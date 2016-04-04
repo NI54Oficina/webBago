@@ -103,13 +103,13 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
  		<p style="text-align:center;width:15%;margin:auto;margin-top:-2%; margin-bottom: 5px;" ></p>
  		<p id="barra-superior"></p>
   		
-  		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin: auto; text-align: center; margin-top: 7%;">
+  		<div id="barra-xs">
 			
-			<a href="" class="col-lg-3 col-md-3 col-sm-6 col-xs-6 facebook" style="float:initial;display:inline-block;">
+			<a href="" class="col-lg-3 col-md-3 col-sm-6 col-xs-6 facebook" >
 				
 			</a>
 			
-			<a class="col-lg-3 col-md-3 col-sm-6 col-xs-6 mail" style="float:initial;display:inline-block;">
+			<a class="col-lg-3 col-md-3 col-sm-6 col-xs-6 mail" >
 			</a>
 		</div>
 		
@@ -131,6 +131,63 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 		<p id="registrado"><?php echo Textos::model()->GetText(453); ?></p>
 		<p id="barra-media"></p>
 		
+			<div id="targets-mobile" >
+					<?php
+					$target= $data->target;
+					if($target[0]!=0){
+						echo '<img src="'.Yii::app()->getBaseUrl(true).'/images/caballo.png">';
+					}else{
+						//echo '<img src="images/caballo.png" style="opacity:0.2;">';
+					}
+					if($target[1]!=0){
+						echo '<img src="'.Yii::app()->getBaseUrl(true).'/images/cabra.png">';
+					}else{
+						//echo '<img src="images/cabra.png" style="opacity:0.2;">';
+					}
+					if($target[2]!=0){
+						echo '<img src="'.Yii::app()->getBaseUrl(true).'/images/chancho.png">';
+					}else{
+						//echo '<img src="images/chancho.png" style="opacity:0.2;">';
+					}
+					if($target[3]!=0){
+						echo '<img src="'.Yii::app()->getBaseUrl(true).'/images/conejo.png">';
+					}else{
+						//echo '<img src="images/conejo.png" style="opacity:0.2;">';
+					}
+					if($target[4]!=0){
+						echo '<img src="'.Yii::app()->getBaseUrl(true).'/images/gallina.png">';
+					}else{
+						//echo '<img src="images/gallina.png" style="opacity:0.2;">';
+					}
+					if($target[5]!=0){
+						echo '<img src="'.Yii::app()->getBaseUrl(true).'/images/perro.png">';
+					}else{
+						//echo '<img src="images/perro.png" style="opacity:0.2;">';
+					}
+					if($target[6]!=0){
+						echo '<img src="'.Yii::app()->getBaseUrl(true).'/images/gato.png">';
+					}else{
+						//echo '<img src="images/gato.png" style="opacity:0.2;">';
+					}
+					if($target[7]!=0){
+						echo '<img src="'.Yii::app()->getBaseUrl(true).'/images/oveja.png">';
+					}else{
+						//echo '<img src="images/oveja.png" style="opacity:0.2;">';
+					}
+					if($target[8]!=0){
+						echo '<img src="'.Yii::app()->getBaseUrl(true).'/images/pez.png">';
+					}else{
+						//echo '<img src="images/pez.png" style="opacity:0.2;">';
+					}
+					if($target[9]!=0){
+						echo '<img src="'.Yii::app()->getBaseUrl(true).'/images/vaca.png">';
+					}else{
+						//echo '<img src="images/vaca.png" style="opacity:0.2;">';
+					}
+					
+					?>
+					</div>
+
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 paises-registrados"  >
 
 			<div style=" width: 130px; ">
@@ -162,7 +219,7 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 
 
 
-	<div  class=" col-lg-6 col-md-6 col-sm-12 col-xs-12" style="overflow:hidden;">
+	<div  class=" col-lg-6 col-md-6 col-sm-12 col-xs-12 cuerpo-producto" style="overflow:hidden;">
 		 <div id="targets-inner">
 					<?php
 					$target= $data->target;
