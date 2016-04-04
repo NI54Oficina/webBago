@@ -647,7 +647,7 @@ font-size: 22px;
 	
 	/*************************** VADEMECUM*************************/
 	
-	.vademecum{
+	.vademecum, .vademecum-producto{
 		color:#7F7F7F;
 		text-align:center;
 		margin: 0;
@@ -1812,125 +1812,7 @@ font-size: 22px;
 		color: #A0A0A0;
 	}
 	
-	.facebook{
-		background-image: url(../img/facebook-desactivado.png);
-		height: 35px;
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: auto auto;
-	-webkit-transition: all 1s ease;
-		-moz-transition: all 1s ease;
-		-o-transition: all 1s ease;
-		-ms-transition: all 1s ease;
-			transition: all 1s ease;
-			float:initial;
-			display:inline-block;
-	}
-	
-	.facebook:hover{
-		background-image: url(../img/facebook-activado.png);
-		height: 35px;
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: auto auto;
-	}
-	
-	.mail{
-		background-image: url(../img/mail-desactivado.png);
-		height: 35px;
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: auto auto;
-	-webkit-transition: all 1s ease;
-		-moz-transition: all 1s ease;
-		-o-transition: all 1s ease;
-		-ms-transition: all 1s ease;
-			transition: all 1s ease;
-			float:initial;
-			display:inline-block;
-	}
-	
-	.mail:hover{
-		background-image: url(../img/mail-activado.png);
-		height: 35px;
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: auto auto;
-	}
-	
-	
-	.descargar{
-		background-image: url(../img/descargar-desactivado.png);
-		height: 35px;
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: auto auto;
-		-webkit-transition: all 1s ease;
-		-moz-transition: all 1s ease;
-		-o-transition: all 1s ease;
-		-ms-transition: all 1s ease;
-		transition: all 1s ease;
-	}
-	
-	.descargar:hover{
-		background-image: url(../img/descargar-activado.png);
-		height: 35px;
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: auto auto;
-	}
-	
-	.print{
-		background-image: url(../img/imprimir-desactivado.png);
-		height: 35px;
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: auto auto;
-	-webkit-transition: all 1s ease;
-		-moz-transition: all 1s ease;
-		-o-transition: all 1s ease;
-		-ms-transition: all 1s ease;
-			transition: all 1s ease;
-	}
-	
-	.print:hover{
-		background-image: url(../img/imprimir-activado.png);
-		height: 35px;
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: auto auto;
-	}
-	
-	.volver{
-		background-image: url(../img/volver-desactivado.png);
-		height: 42px;
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: auto auto;    margin-top: -6%;
-	-webkit-transition: all 1s ease;
-		-moz-transition: all 1s ease;
-		-o-transition: all 1s ease;
-		-ms-transition: all 1s ease;
-			transition: all 1s ease;
-		margin-left: -4%;
-		margin-top: -4%;
-	}
-	
-	.volver:hover{
-		background-image: url(../img/volver-desactivado.png);
-		height: 42px;
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: auto auto;  
-		-webkit-transition: all 1s ease;
-		-moz-transition: all 1s ease;
-		-o-transition: all 1s ease;
-		-ms-transition: all 1s ease;
-		transition: all 1s ease;
-		
-		opacity:0.4;
-	}
-	
+
 	.volver p{
 		display:inline-block;
 		vertical-align: middle;
@@ -2609,7 +2491,7 @@ p{
 
 
 footer{
-	margin-top:10%;
+	margin-top:130px;
 	
 }
 	
@@ -7477,6 +7359,8 @@ position:fixed;
 @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
 
 	.imagenes-fundaciones {height: 280px}
+	#registrado {margin-top: 5% !important;}
+	#barra-xs {margin-top: 2% !important;}
 }
 
 /*PAGINA PRODUCTOS PASADO A CLASES E ID*/
@@ -7499,21 +7383,145 @@ position:fixed;
 
 @media screen and (max-width: 768px) {
 
-	#registrado ,#compartido, #barra-media, #barra-paises, #barra-superior, #barra-xs, #barra-vademecum, .vademecum {display: none;}
-	#volver {float: left; text-align: left; margin-top: -10% !important;}
-	.titulo-vad {text-align: right; font-size: 17px;}
-	#targets-inner img {display: none;}
-	#targets-mobile img {display: block !important; margin: 0px auto auto auto;  width: 12% ;
+	#registrado ,#compartido, #barra-media, #barra-paises, #barra-superior, #barra-xs, #targets-inner img,  .facebook, .mail, #barra-vademecum, .vademecum-producto {display: none;}
+	#volver-producto {float: left; text-align: left; margin-top: -10% !important;}
+	.titulo-vad-producto {text-align: right; font-size: 17px; margin-bottom: 0%;}
+	
+	#targets-mobile img {display: inline-block !important; margin: 0px auto auto auto;  width: 12% ; 
 	}
    .imagen-pais {margin:0px 15% 0px 0px; width: 20%;}
-   .paises-registrados {margin:5% 0% 5% 0%; float: left;}
+   .paises-registrados {margin:5% 0% 5% 0%; float: left; width: 50%;}
    .cuerpo-producto {margin-top: -20%;}
-   #contacto-mobile{display: block !important;  text-align: right; margin-right: 1px;}
-
+   #contacto-mobile{display: inline-block !important;  text-align: right; margin-left:20%; position: relative; margin-top: -16%;}
+   	.facebook {float: left !important;background-position: right!important; margin-right: -5%; }
+   	.mail {}
+   	#volver-producto {background-position: left;     background-size: 10%; }
+   	#volver-producto p {margin-left: 12%;
+    margin-top: 3%;}
 }
 
 
 
 #contacto-mobile {display: none;}
+
+	.facebook{
+		background-image: url(../img/facebook-desactivado.png);
+		height: 35px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: auto auto;
+	-webkit-transition: all 1s ease;
+		-moz-transition: all 1s ease;
+		-o-transition: all 1s ease;
+		-ms-transition: all 1s ease;
+			transition: all 1s ease;
+			float:initial;
+			display:inline-block;
+	}
+	
+	.facebook:hover{
+		background-image: url(../img/facebook-activado.png);
+		height: 35px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: auto auto;
+	}
+	
+	.mail{
+		background-image: url(../img/mail-desactivado.png);
+		height: 35px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: auto auto;
+	-webkit-transition: all 1s ease;
+		-moz-transition: all 1s ease;
+		-o-transition: all 1s ease;
+		-ms-transition: all 1s ease;
+			transition: all 1s ease;
+			float:initial;
+			display:inline-block;
+	}
+	
+	.mail:hover{
+		background-image: url(../img/mail-activado.png);
+		height: 35px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: auto auto;
+	}
+	
+	
+	.descargar{
+		background-image: url(../img/descargar-desactivado.png);
+		height: 35px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: auto auto;
+		-webkit-transition: all 1s ease;
+		-moz-transition: all 1s ease;
+		-o-transition: all 1s ease;
+		-ms-transition: all 1s ease;
+		transition: all 1s ease;
+	}
+	
+	.descargar:hover{
+		background-image: url(../img/descargar-activado.png);
+		height: 35px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: auto auto;
+	}
+	
+	.print{
+		background-image: url(../img/imprimir-desactivado.png);
+		height: 35px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: auto auto;
+	-webkit-transition: all 1s ease;
+		-moz-transition: all 1s ease;
+		-o-transition: all 1s ease;
+		-ms-transition: all 1s ease;
+			transition: all 1s ease;
+	}
+	
+	.print:hover{
+		background-image: url(../img/imprimir-activado.png);
+		height: 35px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: auto auto;
+	}
+	
+	.volver{
+		background-image: url(../img/volver-desactivado.png);
+		height: 42px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: auto auto;    margin-top: -6%;
+	-webkit-transition: all 1s ease;
+		-moz-transition: all 1s ease;
+		-o-transition: all 1s ease;
+		-ms-transition: all 1s ease;
+			transition: all 1s ease;
+		margin-left: -4%;
+		margin-top: -4%;
+	}
+	
+	.volver:hover{
+		background-image: url(../img/volver-desactivado.png);
+		height: 42px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: auto auto;  
+		-webkit-transition: all 1s ease;
+		-moz-transition: all 1s ease;
+		-o-transition: all 1s ease;
+		-ms-transition: all 1s ease;
+		transition: all 1s ease;
+		
+		opacity:0.4;
+	}
+
 
 	 
