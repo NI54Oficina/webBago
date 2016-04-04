@@ -127,6 +127,7 @@ class PageController extends Controller
 					$auxMeta=MetatagPage::model()->findByAttributes(array('idPage'=>$id,"dat"=>$_POST["Page"]["textId".$meta->id]));
 					$auxTexto= Textos::model()->findByPk($_POST["Page"]["textId".$meta->id]);
 				}
+				
 				$auxTexto->es=$_POST["Page"]["es".$meta->id];
 				$auxTexto->en=$_POST["Page"]["en".$meta->id];
 				$auxTexto->pt=$_POST["Page"]["pt".$meta->id];

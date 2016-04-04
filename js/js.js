@@ -1,3 +1,4 @@
+var isHome=false;
 $(function() {
     var boxClone;
 	var showingBox=false;
@@ -143,6 +144,7 @@ $(function(){
   
     });
 	jQuery(window).load(function () {
+		Header();
 		SameHeight();
 		$("#vademecum-loading").hide();
 		$("#vademecum-loading").css('right','initial');
@@ -168,7 +170,9 @@ $(function(){
 
 	
 	$( window ).resize(function() {
+		Header();
 		ResetHeight();
+		SetDistanceHeader();
 		setTimeout(function(){
 		SameHeight()},1000);
 	});
@@ -180,6 +184,10 @@ $(function(){
 			id++;
 		}
 	}
+	
+	var headerHeight=0;
+	var distanceHeader=0;
+	SetDistanceHeader();
 	
 	function SameHeight(){
 		//console.log("entra same height");
@@ -198,6 +206,31 @@ $(function(){
 			auxId++;
 		}
 	}
+	
+	function Header(){
+		if(!isHome){
+			
+			$("body").css("padding-top",$("#navbar-main").height()+"px");
+		}
+	}
+	
+	function SetDistanceHeader(){
+		distanceHeader= $(window).height()*0.85;
+		//console.log(distanceHeader);
+	}
+	
+	$(window).scroll(function() {
+		if(isHome){
+			if ($(window).scrollTop() >= distanceHeader) {
+					$("#navbar-main").fadeIn();
+					//console.log("aparece");
+			   
+			} else {
+					$("#navbar-main").fadeOut();
+					//console.log("se oculta");
+			}
+		}
+    });
 
    $(document).ready(function(){
 				
@@ -272,7 +305,8 @@ $(function(){
 
 				
 jQuery(document).ready(function($) {
-  
+	
+  /*
     // Fixa navbar ao ultrapassa-lo
     var navbar = $('#navbar-main'),
     		distance = navbar.offset().top,
@@ -298,7 +332,7 @@ jQuery(document).ready(function($) {
             navbar.removeClass('navbar-fixed-top');
             //	$("body").css("padding-top", "0px");
         }
-    });
+    });*/
 });
 
 

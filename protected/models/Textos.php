@@ -27,7 +27,7 @@ class Textos extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('es, en, pt', 'required'),
+			//array('es, en, pt', 'required'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, es, en, pt', 'safe', 'on'=>'search'),

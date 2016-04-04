@@ -55,6 +55,14 @@
 		<div style="width:100%;text-align:center;"><p id="arrowdown" class="scroll-down" style="display:inline-block;"><a href="#complements" class="animate"></a></p></div>
 		
 		<!-- TEXTO  PRIMERA SECCION-->
+		<script>
+		isHome=true;
+		</script>
+		<style>
+		#navbar-main{
+			display:none;
+		}
+		</style>
 		<?php include('header.php'); ?>
 		<div class="general-texto-home-header div-inst" id="complements">
 

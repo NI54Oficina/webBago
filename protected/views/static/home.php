@@ -1,9 +1,7 @@
 <?php include('head-index.php'); ?>
 
 <?php $meses = array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"); ?>
-<style>
-#navbar-main{position:initial;}
-</style>
+
 <body id="skrollable" style="width:100%;overflow-x:hidden;">
 
 <!--COMENTARIO DE LINEA TEST -->
@@ -1289,7 +1287,7 @@
 							submitHandler: function(form) {
 								
 							$.post( "<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/web/contacto", $( "#form1" ).serialize() ).done(function(data){
-								console.log("exito!");
+								//console.log("exito!");
 								$("#enviando").fadeOut(100);
 								$("#enviado").fadeIn(100);
 								$("#errorEnvio").hide();
@@ -1366,7 +1364,7 @@
 
 	<script>
 	$(document).ready(function(){
-		console.log("ready para arreglo rrhh");
+		//console.log("ready para arreglo rrhh");
 		$("#curva-rrhh").height();
 		$("#whiteFiller").css("top",$("#curva-rrhh").height());
 		

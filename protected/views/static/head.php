@@ -104,9 +104,9 @@
 
 		<script>
 		$(document).ready(function () {
-			console.log("asdas");
+			
 			$("body").on("click",".link-menu",function(evt){
-				console.log("asdas");
+				
 				if (evt.ctrlKey){
 					window.open($(this).attr("href"));
 				}else{

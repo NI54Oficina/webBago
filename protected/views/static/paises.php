@@ -11,7 +11,7 @@
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/bower_components/jquery-ui/ui/minified/jquery-ui.min.js"></script>
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/bower_components/video.js"></script>
 
-  <div style="width:100vw; height:100vh; z-index:10; position:relative;background-color:rgba(0,0,0,0.5)"> 
+	<div style="width:100vw; height:100vh; z-index:10; position:relative;background-color:rgba(0,0,0,0.5)"> 
     <!-- BigVideo -->
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/bower_components/BigVideo/lib/bigvideo.js"></script>
 
