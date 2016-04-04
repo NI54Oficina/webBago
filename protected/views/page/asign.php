@@ -10,13 +10,13 @@ foreach(array_combine($metaValues,$metas) as $value => $meta){
 		<div><strong>Code:</strong> <?php echo CHtml::encode($meta->code); ?>
 		</div>
 		<label>Español*</label>
-		<input hidden name="textID<?php echo $meta->id; ?>" value="<?php echo $value ?>">
+		<input hidden name="Page[textId<?php echo $meta->id; ?>]" value="<?php if(isset($value)&&$value!=""){ echo $value;}else{echo -1;} ?>">
 		<?php $auxText= Textos::model()->findByPk($value); ?>
-		<input name="Page[es<?php echo $meta->id; ?>]" value="<?php echo $auxText->es; ?>" /><br>
+		<input name="Page[es<?php echo $meta->id; ?>]" value="<?php if(isset($auxText)) echo $auxText->es; ?>" /><br>
 		<label>Ingles(opcional)</label>
-		<input name="Page[en<?php echo $meta->id; ?>]" value="<?php echo $auxText->en; ?>" /><br>
+		<input name="Page[en<?php echo $meta->id; ?>]" value="<?php if(isset($auxText)) echo $auxText->en; ?>" /><br>
 		<label>Portugues(opcional)</label>
-		<input name="Page[pt<?php echo $meta->id; ?>]" value="<?php echo $auxText->pt; ?>" /><br>
+		<input name="Page[pt<?php echo $meta->id; ?>]" value="<?php if(isset($auxText)) echo $auxText->pt; ?>" /><br>
 	</div>
 	<hr>
 	<?php

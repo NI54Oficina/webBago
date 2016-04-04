@@ -1,7 +1,9 @@
 <?php include('head-index.php'); ?>
 
 <?php $meses = array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"); ?>
-
+<style>
+#navbar-main{position:initial;}
+</style>
 <body id="skrollable" style="width:100%;overflow-x:hidden;">
 
 <!--COMENTARIO DE LINEA TEST -->

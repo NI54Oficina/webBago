@@ -117,12 +117,14 @@ class PageController extends Controller
 		}*/
 		if(isset($_POST["Page"])){
 			foreach($metas as $meta){
-				$auxMeta= new MetatagPage();
-				$auxMeta->idPage= $id;
-				$auxMeta->idMetatag=$meta->id;
-				if($_POST["Page"]["textId".$meta->id]==""){
+				
+				if($_POST["Page"]["textId".$meta->id]=="-1"){
+					$auxMeta= new MetatagPage();
+					$auxMeta->idPage= $id;
+					$auxMeta->idMetatag=$meta->id;
 					$auxTexto= new Textos();
 				}else{
+					$auxMeta=MetatagPage::model()->findByAttributes(array('idPage'=>$id,"dat"=>$_POST["Page"]["textId".$meta->id]));
 					$auxTexto= Textos::model()->findByPk($_POST["Page"]["textId".$meta->id]);
 				}
 				$auxTexto->es=$_POST["Page"]["es".$meta->id];

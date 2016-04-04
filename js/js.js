@@ -278,7 +278,10 @@ jQuery(document).ready(function($) {
     		distance = navbar.offset().top,
         $window = $(window);
 		if(distance>0){
+			navbar.css("opacity",1);
 			navbar.hide();
+		}else{
+			//$("body").css("padding-top", navbar.height()+"px");
 		}
 
     $window.scroll(function() {
@@ -287,13 +290,13 @@ jQuery(document).ready(function($) {
 				navbar.fadeIn();
 			}
             navbar.removeClass('navbar-fixed-top').addClass('navbar-fixed-top');
-          	$("body").css("padding-top", "70px");
+          	//$("body").css("padding-top", navbar.height()+"px");
         } else {
 			if(distance>0){
 				navbar.fadeOut();
 			}
             navbar.removeClass('navbar-fixed-top');
-            $("body").css("padding-top", "0px");
+            //	$("body").css("padding-top", "0px");
         }
     });
 });

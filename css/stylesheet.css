@@ -163,8 +163,8 @@ font-size: 22px;
 }
 
 .div-inst{ 
-	min-height: 50vh;     
-	
+	min-height: 35vh;     
+	padding-top:15vh;
 }
 
 .img-punto-home{
@@ -3234,7 +3234,7 @@ fH
 
 
 .content-home {
-
+min-height:100vh;
     -webkit-animation: fadein 5s; 
        -moz-animation: fadein 5s; 
         -ms-animation: fadein 5s;
@@ -5672,7 +5672,7 @@ figure.snip1156:hover .salud-ambiental{
 	}
 	
 	.div-inst{
-		padding-top:590px;	
+		/*padding-top:590px;	*/
 	}
 	
 	.bienvenidos {
@@ -5710,7 +5710,7 @@ figure.snip1156:hover .salud-ambiental{
 	
 	
 	.div-inst{
-		padding-top:380px;	
+		/*padding-top:380px;	*/
 	}
 	
 	.container-nota-revista{
@@ -6158,8 +6158,6 @@ figure.snip1156:hover .salud-ambiental{
 	
 	
 	
-<<<<<<< HEAD
-=======
 	.after .toggleIcon::before {
 		opacity: 0;
 		-webkit-transform: rotate(45deg);
@@ -6177,8 +6175,7 @@ figure.snip1156:hover .salud-ambiental{
 		transform: rotate(180deg);
 	}
 	
-	
->>>>>>> origin/master
+
 	/* ripple */
 	.ripple{
 		overflow: hidden;
@@ -6294,7 +6291,7 @@ figure.snip1156:hover .salud-ambiental{
 		margin-left: 60px;
 	}
 	.div-inst{
-		padding-top:380px;	
+		/*padding-top:380px;*/
 	}
 	
   	.container-nota-revista{
@@ -6978,17 +6975,15 @@ figure.snip1156 .d-a-2 h2{
 		-webkit-border-radius: 100px;
 		border-radius: 100px;
 		position: absolute;
-		left: 59%;
 		top: 84%;
 		width: 50px;
 		height: 50px;
-		margin-left: -50px;
 		margin-top: 0px;
 		z-index: 2;
 	}
 	
 	.div-inst{
-		padding-top: 255px;;
+		/*padding-top: 255px;;*/
 	}
 	
 }
@@ -7154,11 +7149,11 @@ figure.snip1156 .d-a-2 h2{
 	-webkit-border-radius: 100px;
 	border-radius: 100px;
 	position: absolute;
-	left: 50%;
-	top: 70%;
+	
+	top: 85%;
 	width: 50px;
 	height: 50px;
-	margin-left: -50px;
+	
 	margin-top: 0px;
 	z-index: 2;
 }
@@ -7316,11 +7311,9 @@ figure.snip1156 .d-a-2 h2{
 		-webkit-border-radius: 100px;
 		border-radius: 100px;
 		position: absolute;
-		left: 56%;
 		top: 79%;
 		width: 50px;
 		height: 50px;
-		margin-left: -50px;
 		margin-top: 0px;
 		z-index: 2;
 	}
@@ -7347,7 +7340,7 @@ h5{
     letter-spacing: 1px;
 }
 
-<<<<<<< HEAD
+
 .btn{
 		overflow: hidden;
 		background: #E0E0E0;
@@ -7461,14 +7454,12 @@ h5{
 		-ms-transform: rotate(180deg);
 		transform: rotate(180deg);
 	}
-=======
+
 #form1 .error:focus{
     outline: #ffcf5c;
     border: 1px solid #ffcf5c;
 }
-<<<<<<< HEAD
->>>>>>> origin/master
-=======
+
 
 @media only screen 
   and (min-device-width: 768px) 
@@ -7499,4 +7490,6 @@ h5{
 	}
 }
 
->>>>>>> origin/master
+#navbar-main{
+position:fixed;
+}
