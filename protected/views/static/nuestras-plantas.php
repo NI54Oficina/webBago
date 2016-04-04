@@ -1,4 +1,3 @@
-<img id="logo-bago-mobile" class="hidden-lg hidden-md col-sm-12 col-xs-12" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo-bago.png" style="opacity:0;">
 			<div class="header-layout-aftosa col-lg-12 col-md-12 col-sm-12 col-xs-12">
 				<div style="width:100%;position:absolute;"><h1 class="titulo-layout-aftosa" style=""><?php echo Textos::model()->GetText(14); ?></h1></div>
 				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/nuestras-plantas.png" style="width:100vw;" />	
