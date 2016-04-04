@@ -59,6 +59,12 @@ function sanear_string($string)
 }
 ?>
 <?php 
+$pais= Pais::model()->findByPk(Yii::app()->session['pais']);
+if($pais->catalogo==1){
+	$pais=$pais->id;
+}else{
+	$pais=8;
+}
 $seccion= Seccion::model()->findByPk($data->seccion);
 $idSeccion= $data->seccion;
 $auxLink= $seccion->nombre;
@@ -292,7 +298,7 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 		 
 		 <h3 style="margin-top:10%;font-family:'arialregular'; font-weight: bolder; color: #424242;text-align:left;"><?php echo $data->nombre; ?> </h3>
 		 
-		 <div style="margin-top:4%;text-align:left;">
+		 <div style="margin-top:4%;text-align:left;" class="contenido-producto">
 		 
 			<?php
 

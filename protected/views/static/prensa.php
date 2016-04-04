@@ -1,4 +1,4 @@
-<?php if($_SESSION["lng"]=="en"){ ?>
+<?php if($_SESSION["lng"]!="es"){ ?>
 
 <?php include("block.php"); ?>
 

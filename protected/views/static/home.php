@@ -107,7 +107,7 @@
 								<?php } ?>
 								
 								<!--	PRENSA -->
-								<?php if($_SESSION["lng"]!="en"){ ?>
+								<?php if($_SESSION["lng"]=="es"){ ?>
 								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional" hid="1">
 									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/prensa">
 										<canvas class="" id="myCanvas" height="90px"></canvas>

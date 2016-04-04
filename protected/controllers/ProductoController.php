@@ -254,9 +254,9 @@ class ProductoController extends Controller
 			
 			if($model->save()){
 				
-				$imagen= Imagen::model()->findByPk($_POST['Producto']['imagen']);
+				/*$imagen= Imagen::model()->findByPk($_POST['Producto']['imagen']);
 				$imagen->producto_id= $model->id;
-				$imagen->save();
+				$imagen->save();*/
 				
 				$contenidos= ProductoContenido::model()->findAll(array("condition"=>"producto_id = $id","order"=>"id"));
 				foreach($contenidos as $contenido){

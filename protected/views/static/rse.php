@@ -1,3 +1,9 @@
+<?php if($_SESSION["lng"]=="pt"){ ?>
+
+<?php include("block.php"); ?>
+
+
+<?php }else{ ?>
 <?php $meses = array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"); ?>
 
 			<div class="header-layout-aftosa col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -110,5 +116,5 @@
 		</div>
 	</div>
 	
-	
+<?php } ?>
 <?php include('widget.php'); ?>

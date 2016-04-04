@@ -1,3 +1,9 @@
+<?php if($_SESSION["lng"]=="pt"){ ?>
+
+<?php include("block.php"); ?>
+
+
+<?php }else{ ?>
 
 			<div class="header-layout-aftosa col-lg-12 col-md-12 col-sm-12 col-xs-12">
 				<div style="width:100%;position:absolute;"><h1 class="titulo-layout-aftosa" style="">RSE</h1></div>
@@ -33,5 +39,5 @@ $nota = Notas::model()->findByAttributes(array("id"=>$data,"seccion"=>"rse"));
 </div>
 </div>
 
-
+<?php } ?>
 <?php include('widget.php'); ?>

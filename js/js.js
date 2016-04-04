@@ -146,6 +146,7 @@ $(function(){
 	jQuery(window).load(function () {
 		Header();
 		SameHeight();
+		$(".fadder").css('opacity',1);
 		$("#vademecum-loading").hide();
 		$("#vademecum-loading").css('right','initial');
 		$.each($("#vademecum-loading .div-img-aft img"), function(index,value){
@@ -216,6 +217,7 @@ $(function(){
 	
 	function SetDistanceHeader(){
 		distanceHeader= $(window).height()*0.85;
+		
 		//console.log(distanceHeader);
 	}
 	

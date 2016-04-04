@@ -7498,13 +7498,13 @@ position:fixed;
 		height: 42px;
 		background-repeat: no-repeat;
 		background-position: center;
-		background-size: auto auto;    margin-top: -6%;
+		background-size: auto auto;    
 	-webkit-transition: all 1s ease;
 		-moz-transition: all 1s ease;
 		-o-transition: all 1s ease;
 		-ms-transition: all 1s ease;
 			transition: all 1s ease;
-		margin-left: -4%;
+		
 		margin-top: -4%;
 	}
 	
@@ -7533,3 +7533,17 @@ position:fixed;
 	 	.img-fundaciones-1{margin-top: 37%;}
 
 	 }
+	 
+.fadder{
+	opacity:0;
+	transition:0.5s;
+}
+
+.contenido-producto ul,.contenido-producto ol,.contenido-producto li{
+list-style-type: disc;
+list-style: disc;
+}
+
+.d-a-2{
+border-color:white !important;
+}

@@ -1,3 +1,9 @@
+<?php 
+					$meses = array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+					$notas= Revista::model()->findAllByAttributes(array('lng'=>$_SESSION["lng"]),array('order'=>'fecha DESC')); 
+					if(count($notas)>0){
+						
+?>
 <img id="logo-bago-mobile" class="hidden-lg hidden-md col-sm-12 col-xs-12" src="/webBago/img/logo-bago.png" style="opacity:0;    ">
 			<div class="header-layout-aftosa col-lg-12 col-md-12 col-sm-12 col-xs-12 header-infotec-revista" style="background:#359FBD;">
 	
@@ -26,10 +32,7 @@
 	<div class="col-lg-12 col-md-10 col-sm-12 col-xs-12" style="text-align: left; margin: 0;padding:0 30px;">
 	
 
-				<?php 
-					$meses = array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
-					$notas= Revista::model()->findAllByAttributes(array('lng'=>$_SESSION["lng"]),array('order'=>'fecha DESC')); 
-					if(count($notas)>0){
+				<?php
 					foreach($notas as $nota){
 				
 				?>
@@ -58,3 +61,10 @@
 	</div>
 
 	
+<?php
+}else{
+		?>
+		<?php include("block.php"); ?>
+		<?php
+}
+?>
