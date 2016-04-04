@@ -206,9 +206,22 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 			 <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/brasil.png" class="imagen-pais" align="left" />
              <p class="nombre-pais">Brasil	</p>		
              </div>
+
 			 </div>
 
 
+
+
+		</div>
+
+		<div id="contacto-mobile">
+			
+			<a href="" class="col-lg-3 col-md-3 col-sm-6 col-xs-6 facebook" >
+				
+			</a>
+			
+			<a class="col-lg-3 col-md-3 col-sm-6 col-xs-6 mail" >
+			</a>
 		</div>
 	</div>
 

@@ -7506,13 +7506,14 @@ position:fixed;
 	#targets-mobile img {display: block !important; margin: 0px auto auto auto;  width: 12% ;
 	}
    .imagen-pais {margin:0px 15% 0px 0px; width: 20%;}
-   .paises-registrados {margin:5% 0% 5% 0%;}
+   .paises-registrados {margin:5% 0% 5% 0%; float: left;}
    .cuerpo-producto {margin-top: -20%;}
+   #contacto-mobile{display: block !important;  text-align: right; margin-right: 1px;}
 
 }
 
 
 
-
+#contacto-mobile {display: none;}
 
 	 
