@@ -1,4 +1,9 @@
+<?php if($_SESSION["lng"]!="es"){ ?>
 
+<?php include("block.php"); ?>
+
+
+<?php }else{ ?>
 			<div class="header-layout-aftosa col-lg-12 col-md-12 col-sm-12 col-xs-12">
 				<div style="width:100%;position:absolute;"><h1 class="titulo-layout-aftosa" style=""><?php echo Textos::model()->GetText(18); ?></h1></div>
 				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/info-proveedores.png" style="width:100vw;" />	
@@ -37,3 +42,5 @@
 </div>
 
 <?php include('widget.php'); ?>
+
+<?php } ?>

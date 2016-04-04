@@ -12,6 +12,10 @@
 	<?php $secciones=[1,6,3,4,2,5,9,11,7,10,8];
 
 	foreach($secciones as $value){
+		$auxProducto= Producto::model()->findByAttributes(array('seccion'=>$value,"pais"=>$pais));
+		if($auxProducto){
+			
+		
 		?>
 		<div class="tr-widget col-lg-12 col-md-12 col-sm-12 col-xs-12">
 		<div class="td-widget col-lg-2 col-md-2 col-sm-2 col-xs-2" >
@@ -39,7 +43,7 @@
 	</div>
 		<?php
 	}
-
+	}
 	?>
 	</div>
 </div>

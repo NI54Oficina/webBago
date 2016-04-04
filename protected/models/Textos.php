@@ -109,7 +109,7 @@ class Textos extends CActiveRecord
 		}
 		
 		$model=$this->findByPk($id);
-		$auxTran= $model[$_SESSION["lng"]];
+		$auxTran= $model[$language];
 		if($auxTran==""){
 			foreach($model as $m){
 				if($m!=""&&!is_numeric($m)){

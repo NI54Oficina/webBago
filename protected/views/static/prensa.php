@@ -33,7 +33,7 @@
 				<?php 
 				$year= date("Y");
 				while($year>2000){ 
-					$notas =Notas::model()->findAllByAttributes(array('seccion'=>"prensa"),"YEAR(fecha)=".$year."");
+					$notas =Notas::model()->findAllByAttributes(array('seccion'=>"prensa","pais"=>$_SESSION['lng']),"YEAR(fecha)=".$year."");
 					if(count($notas)>0){
 				?>
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 animateCollapse" style="margin-top:0;">

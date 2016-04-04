@@ -87,6 +87,10 @@ class Seccion extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+	
+	public function catalogoActual(){
+		
+	}
 
 	/**
 	 * Returns the static model of the specified AR class.
