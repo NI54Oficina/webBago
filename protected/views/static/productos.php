@@ -96,11 +96,11 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 
 <div  class=" col-lg-3 col-md-3 col-sm-12 col-xs-12 imagen-producto">
 		
-		<img src="<?php echo Yii::app()->getBaseUrl(true); ?>/vademecums/<?php echo $imagen->id; ?>.png" align="center" />
+		<img  src="<?php echo Yii::app()->getBaseUrl(true); ?>/vademecums/<?php echo $imagen->id; ?>.png" align="center" />
 	
 	
-		<p style="text-align:center; padding-bottom: 1.5%;"><?php echo Textos::model()->GetText(452); ?></p>
- 		<p  style="text-align:center;width:15%;margin:auto;margin-top:-2%; margin-bottom: 5px;"></p>
+		<p id="compartido"><?php echo Textos::model()->GetText(452); ?></p>
+ 		<p id="barra-superior" ></p>
  		<p  style="text-align:center;border-bottom:1px solid #0082C8;width:15%;margin:auto;"></p>
   		
   		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin: auto; text-align: center; margin-top: 7%;">
@@ -128,8 +128,8 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 			</a>
 		</div>!-->
 		
-		<p style="text-align:center;margin-top:50%; margin-bottom: 1.5%;"><?php echo Textos::model()->GetText(453); ?></p>
-		<p style="text-align:center;border-bottom:1px solid #0082C8;width:15%;margin:auto;"></p>
+		<p id="registrado"><?php echo Textos::model()->GetText(453); ?></p>
+		<p id="barra-media"></p>
 		
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 paises-registrados"  >
 

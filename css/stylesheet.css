@@ -1905,7 +1905,8 @@ font-size: 22px;
 		-o-transition: all 1s ease;
 		-ms-transition: all 1s ease;
 			transition: all 1s ease;
-		margin-left: -10%;
+		margin-left: -4%;
+		margin-top: -4%;
 	}
 	
 	.volver:hover{
@@ -1913,13 +1914,13 @@ font-size: 22px;
 		height: 42px;
 		background-repeat: no-repeat;
 		background-position: center;
-		background-size: auto auto;    margin-top: -6%;
+		background-size: auto auto;  
 		-webkit-transition: all 1s ease;
 		-moz-transition: all 1s ease;
 		-o-transition: all 1s ease;
 		-ms-transition: all 1s ease;
 		transition: all 1s ease;
-		margin-left: -10%;
+		
 		opacity:0.4;
 	}
 	
@@ -1996,7 +1997,7 @@ font-size: 22px;
 	
 	
 	.titulo-aftosa{
-		color:#0082C8;
+		color:#0082C8 !important;
 	}
 	
 	.h4-aftosa{
@@ -6466,6 +6467,7 @@ figure.snip1156:hover .salud-ambiental{
 	display:inline-block; 
  	text-align:center;
  	overflow:hidden; 
+ 	margin-top: 5%;
  }
 
 .paises-registrados { 
@@ -7480,4 +7482,22 @@ position:fixed;
 @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
 
 	.imagenes-fundaciones {height: 280px}
+}
+
+
+
+
+#compartido {text-align:center; padding-bottom: 1.5%;}
+
+#registrado {text-align:center;margin-top:50%; margin-bottom: 1.5%;}
+
+#barra-media {text-align:center;border-bottom:1px solid #0082C8;width:15%;margin:auto;}
+
+#barra-superior {text-align:center;width:15%;margin:auto;margin-top:-2%; margin-bottom: 5px;}
+@media screen and (max-width: 768px) {
+
+	#registrado {display: none;}
+	#compartido {display: none;}
+	#barra-media{display: none;}
+	#barra-superior {display: none;}
 }
