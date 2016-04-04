@@ -659,7 +659,10 @@ font-size: 22px;
 	/**TITULO AFSTOSA HARDOCODEADO **/
 
 	.titulo-aftosa #gota-vademecum , .titulo-aftosa #gota-producto{ margin-left: -3%; }
-
+	.titulo-aftosa{
+		color:#0082C8 !important;
+	}
+	
 	/**TITULO AFSTOSA HARDOCODEADO **/
 
 	.icono-quienes{
@@ -1996,9 +1999,6 @@ font-size: 22px;
 	}
 	
 	
-	.titulo-aftosa{
-		color:#0082C8 !important;
-	}
 	
 	.h4-aftosa{
 		color:#0082C8;
@@ -6487,9 +6487,7 @@ figure.snip1156:hover .salud-ambiental{
 		text-align: left; 
 	}
 
-	#targets-inner img { 
-		display: none; 
-	} 
+	 
 
 /* ¨.TARGET-INNER SON IMAGENES BORRADAS DE VAQUITAS PORQUE FALTA MODIFICARLES LA UBICACION*/
 
@@ -7492,12 +7490,20 @@ position:fixed;
 #registrado {text-align:center;margin-top:50%; margin-bottom: 1.5%;}
 
 #barra-media {text-align:center;border-bottom:1px solid #0082C8;width:15%;margin:auto;}
-
-#barra-superior {text-align:center;width:15%;margin:auto;margin-top:-2%; margin-bottom: 5px;}
+#barra-paises {border-bottom:1px solid #CCC;  margin-bottom: 4%; width: 160px; }
+#barra-superior {text-align:center;border-bottom:1px solid #0082C8;width:15%;margin:auto;}
+#barra-vademecum {text-align:center;border-bottom:1px solid #0082C8;width:3%;margin:auto;margin-top:0%;}
 @media screen and (max-width: 768px) {
 
-	#registrado {display: none;}
-	#compartido {display: none;}
-	#barra-media{display: none;}
-	#barra-superior {display: none;}
+	#registrado ,#compartido, #barra-media, #barra-paises, #barra-superior, #barra-vademecum, .vademecum {display: none;}
+#volver {float: left; text-align: left; margin-top: -10% !important;}
+	.titulo-vad {text-align: right; font-size: 17px;}
+
+
 }
+
+
+/* MODO PILOTO - ANIMALES DE PRODUCTOS EN MOBILE DESAPARECEN
+#targets-inner img { display: none; }
+
+*/

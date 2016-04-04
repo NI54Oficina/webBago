@@ -78,7 +78,7 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 
 
 <h1 class="vademecum"> <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/punto-<?php echo $normalizado; ?>.png" /><?php echo Textos::model()->GetText(348); ?><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/punto-<?php echo $normalizado; ?>.png" /></h1>
-<p  style="text-align:center;border-bottom:1px solid #0082C8;width:3%;margin:auto;margin-top:0%;"></p>
+<p id="barra-vademecum" ></p>
 <h2 class="titulo-vad titulo-<?php echo $normalizado; ?>">
 
 <img id="gota-producto"  src="<?php echo Yii::app()->request->baseUrl; ?>/img/gota-<?php echo $normalizado; ?>.png"  />
@@ -86,7 +86,7 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 <?php echo $seccion->nombre; ?></h2>
 
 <a href="<?php echo Yii::app()->request->baseUrl; ?>/vademecum/id<?php echo $seccion->id; ?>"><div class=" col-lg-3 col-md-3 col-sm-12 col-xs-12 volver" id="volver">
-<p>Volver</p>
+<p><?php echo Textos::model()->GetText(490); ?></p>
 </div></a>
 
 
@@ -100,8 +100,8 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 	
 	
 		<p id="compartido"><?php echo Textos::model()->GetText(452); ?></p>
- 		<p id="barra-superior" ></p>
- 		<p  style="text-align:center;border-bottom:1px solid #0082C8;width:15%;margin:auto;"></p>
+ 		<p style="text-align:center;width:15%;margin:auto;margin-top:-2%; margin-bottom: 5px;" ></p>
+ 		<p id="barra-superior"></p>
   		
   		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin: auto; text-align: center; margin-top: 7%;">
 			
@@ -141,7 +141,7 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
               </div>
               </div>
 
-			<p class="col-lg-7 col-md-7 col-sm-12 col-xs-12" style="border-bottom:1px solid #CCC;  margin-bottom: 4%; width: 160px; "></p>
+			<p class="col-lg-7 col-md-7 col-sm-12 col-xs-12" id="barra-paises"></p>
 			
 
 			  <div style="  width: 130px; height: auto;">
