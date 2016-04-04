@@ -81,7 +81,12 @@ $auxId=0;
 <div style="width:100%;">
 <div  class="tabla-aftosa col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-bottom:25vh;padding:0 5%;"> 
 
-<div style="margin-top:15vh;" class="hidden-lg hidden-md">
+<a href="<?php echo Yii::app()->getBaseUrl(true); ?>"><div class=" col-lg-3 col-md-3 col-sm-12 col-xs-12 volver-mobile hidden-lg hidden-md">
+<p id="volver-p"><?php echo Textos::model()->GetText(490); ?></p>
+</div></a>
+
+
+<div id="titulo-vademecum" class="hidden-lg hidden-md">
 <h1 class="vademecum"> <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/punto-<?php echo $normalizado; ?>.png" /> <?php echo Textos::model()->GetText(348); ?> <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/punto-<?php echo $normalizado; ?>.png" /></h1>
 <p  style="text-align:center;border-bottom:1px solid #0082C8;width:3%;margin:auto;margin-top:0%;"></p>
 </div>
@@ -105,9 +110,6 @@ $auxId=0;
 <p><?php echo Textos::model()->GetText(490); ?></p>
 </div></a>
 
-<a href="<?php echo Yii::app()->getBaseUrl(true); ?>"><div class=" col-lg-3 col-md-3 col-sm-12 col-xs-12 volver-mobile hidden-lg hidden-md">
-<p id="volver-p"><?php echo Textos::model()->GetText(490); ?></p>
-</div></a>
 
 
 <div  class=" col-lg-9 col-md-9 col-sm-12 col-xs-12" style="display:inline-block;text-align:center;"  id="vademecum-loading">

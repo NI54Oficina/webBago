@@ -390,8 +390,8 @@ font-size: 22px;
 		height: 42px;
 		background-repeat: no-repeat;
 		background-position: center;
-		background-size: auto auto;    
-		margin-top: -6%;
+		background-size: 10%;    
+		margin-top: 15%;
 	-webkit-transition: all 1s ease;
 		-moz-transition: all 1s ease;
 		-o-transition: all 1s ease;
@@ -411,7 +411,7 @@ font-size: 22px;
 	.volver-mobile p{
 		display:inline-block;
 		vertical-align: middle;
-		margin-top: 1%;
+		margin-top: 2.5%;
 		margin-left: 120px;
 		color: #B2B2B2;
 		font-size: 17px;
@@ -1357,7 +1357,7 @@ font-size: 22px;
 		opacity: 0;
 		overflow: hidden;
 		padding: 0 1em;
-		border:1px solid #E0E0E0;
+		border:1px solid #E0E0E0 ;
 	}
 	
 	.after li{
@@ -7524,4 +7524,12 @@ position:fixed;
 	}
 
 
-	 
+	 #titulo-vademecum {margin-top:15vh}
+
+
+
+	 @media screen and (min-device-width:1024px)
+	 {
+	 	.img-fundaciones-1{margin-top: 37%;}
+
+	 }
