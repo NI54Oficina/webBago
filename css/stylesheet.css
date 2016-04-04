@@ -6751,7 +6751,7 @@ figure.snip1156:hover .salud-ambiental{
 	.img-fundaciones-4{float: left;width:100%;margin:0% auto 0% auto;}
 	.img-fundaciones-5{float: left;width:100%;margin:0% 5% 0% 7%;  }
 	.img-fundaciones-6{float: left;width:100%; margin:0% auto 0% auto;  } 
-   .imagenes-fundaciones{ height: 150px; width: 45%}
+   .imagenes-fundaciones{ height: 150px; }
 
 	
 }
@@ -7475,4 +7475,9 @@ h5{
 
 #navbar-main{
 position:fixed;
+}
+
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+
+	.imagenes-fundaciones {height: 280px}
 }
