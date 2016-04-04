@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 04-04-2016 a las 11:49:12
+-- Tiempo de generación: 04-04-2016 a las 11:49:54
 -- Versión del servidor: 5.5.24
 -- Versión de PHP: 5.4.45
 
@@ -10758,7 +10758,7 @@ INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (488, 'Trabajar con equipos de diferentes áreas y regiones te permitirá construir nuevos lazos con colaboradores y, a la vez, descubrir  otras posibilidades de desarrollo profesional. Apostamos al compromiso y la pasión de nuestros empleados como pilares indispensables para un sólido crecimiento de toda la compañía', 'Working with teams from different areas and regions will allow you to build new bonds with collaborators and, simultaneously, discover other possibilities for your professional growth. We bet on our employees commitment and passion as our indispensable pillars for a solid growth of our entire company', ''),
 (489, 'Copyright de Biogénesis Bagó®', '', ''),
 (490, 'Volver', 'Back', 'Retorno'),
-(493, 'as', 'asdasda', 'a');
+(493, 'Biogensis Bago', 'Biogensis Bago', 'Biogensis Bago');
 
 -- --------------------------------------------------------
 
