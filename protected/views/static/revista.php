@@ -4,7 +4,7 @@
 					if(count($notas)>0){
 						
 ?>
-<img id="logo-bago-mobile" class="hidden-lg hidden-md col-sm-12 col-xs-12" src="/webBago/img/logo-bago.png" style="opacity:0;    ">
+
 			<div class="header-layout-aftosa col-lg-12 col-md-12 col-sm-12 col-xs-12 header-infotec-revista" style="background:#359FBD;">
 	
 				<div class="col-lg-2 col-md-2 col-sm-2 col-xs-3" style="display:inline-block;z-index:3;padding-top:3%;">
@@ -29,42 +29,54 @@
 	
 	
 		
-	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align: left; ">
-	<div style="width: 96%; height: 96%;">
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="text-align: left; margin-right: auto;padding: 0 15px;">
+	
 		<?php
 					foreach($notas as $nota){
 				
 				?>
-					<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 container-nota-revista" style="margin-top:0;border: 1px solid #359FBD;box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.45); "  >
+				
+<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 "  style="display:inline-block;text-align: center;" >
 					
+			<div class="container-nota-revista revista-fondo " style="border: 1px solid #359FBD;box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.45);width: 98%; display:inline-block;text-align: left;margin-bottom: 20px;">
 
-						<div style="margin-top:0;padding:10px;" hid="1">
-							<div class="container-revistas-molino">
+						<div class="test" style="margin-top:0;padding:10px;" hid="1">
+
+							<div class=" container-revistas-molino">
+
 								<img style=" width: auto;" src="<?php echo Yii::app()->request->baseUrl; ?>/uploads/molino/img/portada-<?php echo $nota->numero; ?>.png">
+
 							</div>
+
 							<p  style="font-size: 12px; margin: 0;"><?php 
 												$timeStamp=strtotime($nota->fecha);												
 												echo date('d',$timeStamp)." de ".$meses[date('n',$timeStamp)-1]. " de ".date('Y',$timeStamp) ; ?></p>
-							<h1 class="h1-noticias-rse" style="color:#359FBD;margin-top:0;">MOLINO <?php echo $nota->numero; ?></h1>
+
+							<h1 class="h1-noticias-rse" style="color:#359FBD;margin-top:0;">MOLINO <?php echo $nota->numero; ?>
+							</h1>
+
 							<p style="font-size: 12px; margin: 0;line-height:20px;">
 							<?php echo $nota->titulo; ?> 
+
 							</p>
+
 						</div>
 						
 							<div class="col-lg-12 col-md-12 col-sm-12" style="padding-top: 1%;background: #359FBD;">
 
-								<a class="leer-infotec-noticias" href="<?php echo Yii::app()->request->baseUrl; ?>/uploads/molino/pdf/revista-<?php echo $nota->numero; ?>.pdf" target="_blank">Leer  más</a>
+								<a style="margin-left: -8px;" class="leer-infotec-noticias" href="<?php echo Yii::app()->request->baseUrl; ?>/uploads/molino/pdf/revista-<?php echo $nota->numero; ?>.pdf" target="_blank"> Leer  más</a>
 
 
-						</div>
+							</div>
 
-</div>
+			</div>
 
+		</div>
 					<?php } 
 					 ?>
 
 </div>
-					</div>
+					
 	
 <?php
 }else{

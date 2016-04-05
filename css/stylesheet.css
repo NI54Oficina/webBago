@@ -1460,15 +1460,8 @@ font-size: 22px;
 		}
 	}
 	
-	/*.btn{
-		overflow: hidden;
-		background: #f1f1f1;
-		padding-bottom: 0.5em;
-		padding-top: 0.5em;
-		width:100%;
-		border-radius: 0px !important;
-	} 
-	*/
+	
+	
 	.ttl{
 		color: #002E75;
 		margin: 0;
@@ -1482,6 +1475,7 @@ font-size: 22px;
 		overflow: hidden;
 		width: 100%;
 		margin:2% auto;
+		border-radius: 0px !important;
 	}
 	
 	#boxes p{
@@ -5536,7 +5530,7 @@ figure.snip1156:hover .salud-ambiental{
 	}
 	
 	.container-nota-revista{
-		width: 340px;
+		
 		margin-bottom: 8%;
 	}
 	
@@ -5583,7 +5577,7 @@ figure.snip1156:hover .salud-ambiental{
 	}
 	
 	.container-nota-revista{
-		width: 250px;
+		
 		margin-bottom:2%;
 	}
 	
@@ -5818,7 +5812,7 @@ figure.snip1156:hover .salud-ambiental{
 	
    	.container-nota-revista{
 		margin-bottom:5%;
-		width:260px;
+		
 	}
 }
 
@@ -6164,7 +6158,7 @@ figure.snip1156:hover .salud-ambiental{
 	}
 	
   	.container-nota-revista{
-		width: 270px;
+		
 		margin-bottom:1%;
 	}
 	
@@ -6435,7 +6429,8 @@ figure.snip1156:hover .salud-ambiental{
 	margin-top:0;
 	padding-bottom:0;    
 	box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.58); 
-	margin-right: 1%;	
+	margin-right: 0%;	
+	;
 }
 
 .line-infotec-noticias{
@@ -7561,3 +7556,4 @@ border-color:white !important;
 	opacity:0;
 }
 
+.container-nota-revista:hover {opacity: 0.8; }

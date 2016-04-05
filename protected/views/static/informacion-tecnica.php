@@ -23,17 +23,20 @@
 	
 	
 		
-	<div class="col-lg-12 col-md-10 col-sm-12 col-xs-12" style="text-align: left; margin: 0;padding:0 30px;">
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align: left; margin-right: auto;padding:0 15px;">
 	
 
 				<?php 
 				
+
 					$notas =Notas::model()->findAllByAttributes(array('seccion'=>"tecnica"));
 					if(count($notas)>0){
 					foreach($notas as $nota){
 						
 					?>
-					<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 container-infotec-noticias  container-nota-revista">
+
+	<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 "  style="display:inline-block;text-align: center;" >				
+					<div class="container-infotec-noticias  container-nota-revista" style="width: 98%; display:inline-block;text-align: left;margin-bottom: 20px;">
 						
 						<div style="margin-top:0;padding:28px; padding-bottom: 12px;padding-top: 7px;"  hid="1">
 								<p><?php $timeStamp=strtotime($nota->fecha); echo date('Y',$timeStamp) ; ?></p>
@@ -47,11 +50,12 @@
 							</div>
 							
 					</div>
+			</div>		
 					<?php } 
 					} ?>
 			
 					
-				
+			
 
 	</div>
 
