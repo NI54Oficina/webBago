@@ -1460,15 +1460,15 @@ font-size: 22px;
 		}
 	}
 	
-	.btn{
+	/*.btn{
 		overflow: hidden;
-		background: #F1F1F1;
+		background: #f1f1f1;
 		padding-bottom: 0.5em;
 		padding-top: 0.5em;
 		width:100%;
 		border-radius: 0px !important;
 	} 
-	
+	*/
 	.ttl{
 		color: #002E75;
 		margin: 0;
@@ -7203,11 +7203,12 @@ h5{
 
 .btn{
 		overflow: hidden;
-		background: #E0E0E0;
+		background: rgba(221, 221, 221, 0.61);
 		padding-bottom: 0.5em;
 		padding-top: 0.5em;
 		width:100%;
 	}
+
 	.ttl{
 		color: #002E75;
 		margin: 0;
@@ -7547,3 +7548,6 @@ list-style: disc;
 .d-a-2{
 border-color:white !important;
 }
+
+
+.animateCollapse ul:hover {background-color:background: rgba(221, 221, 221, 0.80);;}
