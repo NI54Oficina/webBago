@@ -363,7 +363,7 @@
 		
 						<div class="info-mapa" id="infoCostarica">
 					
-					<h2 id="titulo-info-mapa"><img  src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-ec.png"/> Costa Rica</h2>
+					<h2 id="titulo-info-mapa"><img  src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-cost.png"/> Costa Rica</h2>
 	
 							<p id="sub-filiales"  class="h4-fil bio" >Representaciones Cadelga S.A. </p>
 							<p  id="sub-filiales" class="h4-fil">Casa 399, Av. 5ta. y Calle 26 Barrio México, San José, Costa Rica</p>
@@ -428,7 +428,7 @@
 		
 				<div class="info-mapa" id="infoElSalvador">
 					
-					<h2 id="titulo-info-mapa"><img  src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-ec.png"/>El Salvador</h2>
+					<h2 id="titulo-info-mapa"><img  src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-sal.png"/>El Salvador</h2>
 	
 							<p id="sub-filiales"  class="h4-fil bio" >DUWEST EL SALVADOR </p>
 							<p  id="sub-filiales" class="h4-fil">Calle El Progreso frente a Ex Hospital de ANTEL, Colonia Roma, San Salvador, El Salvador.</p>
@@ -454,7 +454,7 @@
 		
 				<div class="info-mapa" id="infoGuatemala">
 					
-					<h2 id="titulo-info-mapa"><img  src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-ec.png"/>Guatemala</h2>
+					<h2 id="titulo-info-mapa"><img  src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-guat.png"/>Guatemala</h2>
 	
 							<p id="sub-filiales"  class="h4-fil bio" >Tecnología Pecuaria, S.A</p>
 							<p  id="sub-filiales" class="h4-fil">3ra. Calle 3-17, Zona 9 <br />Guatemala<br /> RUC 2312990-5</p>
@@ -485,7 +485,7 @@
 		
 				<div class="info-mapa" id="infoHonduras">
 					
-					<h2 id="titulo-info-mapa"><img  src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-ec.png"/>Honduras</h2>
+					<h2 id="titulo-info-mapa"><img  src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-hon.png"/>Honduras</h2>
 	
 							<p id="sub-filiales"  class="h4-fil bio" >EYL Comercial S.A.</p>
 							<p  id="sub-filiales" class="h4-fil">Callejón "El Carmen", Barrio San Rafael Frente al Hospital El Carmen, Tegucigalpa, Honduras</p>
@@ -523,7 +523,7 @@
 		
 				<div class="info-mapa" id="infoNicaragua">
 					
-					<h2 id="titulo-info-mapa"><img  src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-ec.png"/>Nicaragua</h2>
+					<h2 id="titulo-info-mapa"><img  src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-nic.png"/>Nicaragua</h2>
 	
 							<p id="sub-filiales"  class="h4-fil bio" >Agrocampos, S.A.</p>
 							<p  id="sub-filiales" class="h4-fil">Semáforos de la Subasta 800 MT <br /> Al Sur frente a Remasa</p>
@@ -557,7 +557,7 @@
 		
 				<div class="info-mapa" id="infoPanama">
 					
-					<h2 id="titulo-info-mapa"><img  src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-ec.png"/>Panamá</h2>
+					<h2 id="titulo-info-mapa"><img  src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-pan.png"/>Panamá</h2>
 	
 							<p id="sub-filiales"  class="h4-fil bio" >Filial Biogénesis Bagó de Panamá S.A.</p>
 							<p  id="sub-filiales" class="h4-fil">Beatriz M. de Cabal y 51. Ciudad de Panamá</p>
@@ -1357,7 +1357,7 @@
 					
 						
 						<!-- TITULO-->
-						<img class="icono-menu right" src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-rrhh.png"><h2 id="titulo-vad" class=" move-x"><span class="border-vad-2">RRHH</span> </h2><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-rrhh.png" class="icono-menu left">
+						<img class="icono-menu right" src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-rrhh.png"><h2 id="titulo-vad" ><span class="border-vad-2">RRHH</span> </h2><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-rrhh.png" class="icono-menu left">
 	
 							<!-- TEXTO HEADER-->
 							<h3  class="tr move-x"><?php echo Textos::model()->GetText(110); ?></h3>
