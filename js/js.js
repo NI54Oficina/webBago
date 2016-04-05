@@ -350,7 +350,7 @@ function hoverElement(canvas,widthParent){
     this.context = this.canvas.getContext('2d');
 	this.x = this.canvas.width / 2;
 	this.y = this.canvas.height / 2;
-	this.radius = widthParent/2.15;
+	this.radius = widthParent;
 	this.endPercent = 110;
 	this.curPerc = 0;
 	this.counterClockwise = false;
@@ -372,8 +372,7 @@ function hoverElement(canvas,widthParent){
 var hover= [];
 
  function animate(current,id) {
-  
-			hover[id].context.clearRect(0, 0, hover[id].canvas.width, hover[id].canvas.height);
+		 hover[id].context.clearRect(0, 0, hover[id].canvas.width, hover[id].canvas.height);
 		 hover[id].context.beginPath();
 		 hover[id].context.arc(hover[id].x, hover[id].y, hover[id].radius, -(hover[id].quart), ((hover[id].circ) *current) - hover[id].quart, false);
 		 hover[id].context.stroke();
@@ -395,17 +394,15 @@ $(document).ready(function(){
 	var auxId=0;
 	$(".item-institucional canvas").each(function(){
 		$(this).attr("canvasid",auxId);
-		hover.push(new hoverElement(this,$(this).height()));
+		hover.push(new hoverElement(this,45));
 		auxId++;
-	});	
+	});
 	
 	var id=0;
 	while($( "[canvasid="+id+"]" ).length){
-	
 		animate(0,id);
 		id++;
 	}
-
 	
 	$(".item-institucional").on("mouseover",function(){
 	
