@@ -349,7 +349,7 @@ function hoverElement(canvas,widthParent){
 	this.canvas = canvas;
     this.context = this.canvas.getContext('2d');
 	this.x = this.canvas.width / 2;
-	this.y = this.canvas.height / 2;
+	this.y = this.canvas.height / 2-3;
 	this.radius = widthParent;
 	this.endPercent = 110;
 	this.curPerc = 0;
