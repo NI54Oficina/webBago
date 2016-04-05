@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 05-04-2016 a las 14:24:42
+-- Tiempo de generación: 05-04-2016 a las 19:02:57
 -- Versión del servidor: 10.1.9-MariaDB
 -- Versión de PHP: 5.5.30
 
@@ -41,8 +41,8 @@ INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (1, 'Bienvenidos ', 'Welcome ', 'Bienvenidos '),
 (2, 'La evolución de la', 'The evolution of', 'A evolução da'),
 (3, 'Salud animal', 'Animal Health', 'Saúde animal'),
-(4, 'BIOGÉNESIS BAGÓ reconocida', '\n', ''),
-(5, '“mejor empresa latinoamericana veterinaria 2014”', '', ''),
+(4, 'BIOGÉNESIS BAGÓ reconocida', '\n', 'BIOGÉNESIS BAGÓ reconocida'),
+(5, '“mejor empresa latinoamericana veterinaria 2014”', '', '"melhor empresa do setor Veterinário da América Latina em 2014"'),
 (6, 'Quiénes somos', 'Who we are', 'Quem Somos'),
 (7, 'Biogénesis Bagó es una empresa líder en la investigación y desarrollo de biotecnologías para la constante evolución de la salud animal.', 'Biogénesis Bagó is a leading company in research and development of biotechnology to further help the constant evolution in animal health.', 'A Biogénesis Bagó é uma empresa líder na pesquisa e\n\ndesenvolvimento de biotecnologias para constante evolução da saúde animal.'),
 (8, 'Misión , Visión y Valores', 'Mission, Vision and Values', 'Visão, Missão e Valores'),
@@ -499,7 +499,7 @@ INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (464, 'Biogénesis Bagó de México S.A. de C.V.', '', ''),
 (465, 'Av. Periférico Sur 6677 Piso 5, Delegación Xochimilco, Colonia Ejidos de Tepepan, México DF.', '', ''),
 (466, 'TEL', '', ''),
-(467, '(52) (55) 5555 8223 / 5555 8216 <br/>(Llamada sin costo desde el interior del país) 01-800-999-2240 ', '', ''),
+(467, '(52) (55) 3000-1500 (extensiones 1578 y 1423) <br/> </br>(Llamada sin costo desde el interior del país) 01-800-999-2240  </br> milagros.ramos@biogenesisbago.com', '', ''),
 (468, 'Distribuidoras:', '', ''),
 (469, 'ELANCO: Eli Lilly y Cía de México S.A. de C.V.', '', ''),
 (470, 'Calzada de Tlalpan #2024, Colonia Campestre Churubusco, C.P. 04200, México, D.F.', '', ''),
