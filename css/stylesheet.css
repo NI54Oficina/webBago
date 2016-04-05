@@ -3340,6 +3340,7 @@ a.iprodev:hover {
     padding:15px;
     z-index: 99999999;    
 	font-size: 15px;
+	transition: all 0.5s ease;
 }
 
 #back-rrhh{ 
@@ -7627,4 +7628,5 @@ border-color:white !important;
 .send-rrhh:hover{ 
 	background: transparent;
     border: 2px solid white;
+	transition: all 0.5s ease;
 }
