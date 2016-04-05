@@ -280,6 +280,8 @@
 				<!--********** CENTRO AMÉRICA **********-->
 				
 				<div class="info-mapa" id="infoCenAm"> 
+
+					<div style="width:300px;height:100px;background: red;" class="btn-mapa" idInfo="infoArgentina"></div>
 					
 					<h2 id="titulo-info-mapa"><?php echo Textos::model()->GetText(463); ?></h2>
 					
