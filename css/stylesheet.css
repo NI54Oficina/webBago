@@ -7547,3 +7547,7 @@ list-style: disc;
 .d-a-2{
 border-color:white !important;
 }
+
+.vjs-control-bar{
+	opacity:0;
+}
