@@ -19,7 +19,7 @@
 		
 			<img style="width: 100%;margin-bottom:-1px;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-arriba-home.png" alt="" /><section class="special" data-scrollax-parent="true" style="background:white;min-height:100vh;width:100%;text-align:center;">
 		
-			<div class="" style="display:inline-block;background:white;width:98%;">
+			<div class="" style="display:inline-block;background:white;width:98%;padding-top:0px;">
 					
 					<!-- CUATRO ICONOS -->
 						
@@ -72,7 +72,7 @@
 						
 						
 								<!--	NUESTRAS PLANTAS -->
-								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional" hid="1">
+								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional" hid="1" style="padding-top: 10px;">
 									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/nuestras-plantas">
 										<canvas class="" id="myCanvas" height="90px"></canvas>
 										<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home-plantas.png" />
@@ -83,7 +83,7 @@
 								</div>
 								
 								<!--	RSE - SUSTENTABILIDAD -->
-								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional" hid="1">
+								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional" hid="1" style="padding-top: 10px;">
 									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/rse">
 										<canvas class="" id="myCanvas" height="90px"></canvas>
 										<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home-rse.png" />	
@@ -95,7 +95,7 @@
 								
 								<?php if($_SESSION["lng"]=="es"){ ?>
 								<!-- 	INFO PARA PROVEEDORES -->
-								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional" hid="1">
+								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional" hid="1" style="padding-top: 10px;">
 									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/proveedores">
 										<canvas class="" id="myCanvas" height="90px"></canvas>
 										<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home-proveedores.png" />
@@ -197,7 +197,7 @@
 					
 						<img class="icn-ubicacion" src="<?php echo Yii::app()->request->baseUrl; ?>/img/icn-vacunas.png">
 					
-						<p style="margin-bottom:0;" id="nom-ref"> NAFMDVD  <?php echo Textos::model()->GetText(461); ?>  <?php echo Textos::model()->GetText(462); ?> </p>
+						<p style="margin-bottom:0;" id="nom-ref"> NAFMDVD</p>  <p style="font-size: 10px; padding-left: 18px;margin-bottom: 0px;"><?php echo Textos::model()->GetText(461); ?>  </p>  <p  style="font-size: 10px; padding-left: 18px;"><?php echo Textos::model()->GetText(462); ?> </p>
 						
 					</div> <!-- Termina cada referencia -->
 					
@@ -501,8 +501,6 @@
 						<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12" id="texto" >
 							<div hid="3">
 							<h4 id="fecha-info-tec"> <?php $timeStamp=strtotime($nota->fecha); echo date('Y',$timeStamp) ; ?> </h4>
-                    
-							<h2 id="titulo-info-tec" > <?php echo $meses[date('n',$timeStamp)-1]; ?> </h2>
                     
 							<h4 id="protocolo-info-tec" > <?php echo $nota->titulo; ?></h5>
                     
@@ -1070,11 +1068,13 @@
 								</li><!-- termina item -->
 							
 								<?php } ?>
-								<li style="border:none;" class="col-lg-4  col-md-2 col-sm-2 col-xs-4">
-									<div id="btn-mas" class="col-lg-6 col-md-6 col-sm-3 col-xs-3">
-										<a href="http://localhost/webBago/ar/revista" style="color:white;">
-											<img id="img-btn-mas" src="/webBago/img/btn-mas.png" style="position:initial">
-											<p id="texto-btn-mas2"> Leer más </p>
+								
+								
+									<li class="col-lg-4  col-md-2 col-sm-2 col-xs-4">
+									<div id="btn-mas" class="col-lg-12 col-md-12 col-sm-3 col-xs-3"  style="cursor:pointer; padding-top: 59px;">
+										<a href="http://localhost/webBago/ar/revista">
+											<img id="img-btn-mas" src="/webBago/img/mas-ediciones-01.png" style="    position: inherit;">
+											<p id="texto-btn-mas2"> Números anteriores</p>
 										</a>
 									</div>
 								</li>
