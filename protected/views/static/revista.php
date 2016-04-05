@@ -29,14 +29,14 @@
 	
 	
 		
-	<div class="col-lg-12 col-md-10 col-sm-12 col-xs-12" style="text-align: left; margin: 0;padding:0 30px;">
+	<div class="col-lg-12 col-md-10 col-sm-12 col-xs-12" style="text-align: left; ">
 	
 
 				<?php
 					foreach($notas as $nota){
 				
 				?>
-					<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 container-nota-revista" style="margin-top:0;border: 1px solid #359FBD;box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.45);margin-right: 1%;"  >
+					<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 container-nota-revista" style="margin-top:0;border: 1px solid #359FBD;box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.45); "  >
 						
 						<div style="margin-top:0;padding:10px;" hid="1">
 							<div class="container-revistas-molino">
