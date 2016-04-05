@@ -8,16 +8,18 @@
     <script src="<?php echo Yii::app()->getBaseUrl(true); ?>/bower_components/BigVideo/lib/bigvideo.js"></script>
 
     <!-- Demo -->
-
+	
     <script>
 	    $(function() {
             var BV = new $.BigVideo();
-			//BV.init();
-			//BV.show('<?php echo Yii::app()->getBaseUrl(true); ?>/video/home.mp4',{ambient:true});
+			BV.init();
+			BV.show('<?php echo Yii::app()->getBaseUrl(true); ?>/video/home.mp4',{ambient:true});
 	    });
     </script>
 	<div >
+	<div class="overlay-video" style="z-index:0;">
 	
+	</div>
 	<div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
 	
 		<div class=" col-lg-6 col-md-6 col-sm-6 col-xs-6" >
@@ -75,6 +77,4 @@
 
 	</div>
 	
-	<div class="overlay-video">
 	
-	</div>

@@ -1133,13 +1133,13 @@
 
 				<!-- ESTOS SON LOS TEXTOS QUE TIENE QUE APARECER Y DESAPARECCER EN RRHH DE LA HOME !-->
 
-				<p style="font-size: 14px; margin-top: 10px;">
-				   <?php echo Textos::model()->GetText(483); ?>/</br>
-				   <?php echo Textos::model()->GetText(484); ?>/ </br>
-				   <?php echo Textos::model()->GetText(485); ?>/</br>
-				   <?php echo Textos::model()->GetText(486); ?>/</br>
-				   <?php echo Textos::model()->GetText(487); ?>/</br>
-				   <?php echo Textos::model()->GetText(488); ?>/</br>
+				<p style="font-size: 14px; margin-top: 10px;" id="textoFade" style="position:absolute;">
+				   <?php echo Textos::model()->GetText(483); ?>/
+				   <?php echo Textos::model()->GetText(484); ?>/
+				   <?php echo Textos::model()->GetText(485); ?>/
+				   <?php echo Textos::model()->GetText(486); ?>/
+				   <?php echo Textos::model()->GetText(487); ?>/
+				   <?php echo Textos::model()->GetText(488); ?>/
 
 				</p>
 
@@ -1374,6 +1374,24 @@
 		$("#curva-rrhh").height();
 		$("#whiteFiller").css("top",$("#curva-rrhh").height());
 		
+		var textFade= $("#textoFade").text();
+		textFade= textFade.split("/");
+		$("#textoFade").text("");
+		var indextText=0;
+		$("#textoFade").text(textFade[indextText]);
+		setInterval(function(){
+			indextText++;
+			if(indextText>=textFade.length){
+				indextText=0;
+			}
+			$("#textoFade").fadeOut(500);
+			setTimeout(function(){
+				$("#textoFade").text(textFade[indextText]);
+				$("#textoFade").fadeIn(500);
+			},600);
+			
+			
+		},6000);
 	});
 	</script>
 </body>

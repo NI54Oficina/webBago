@@ -2667,6 +2667,7 @@ footer{
 #mapa-total{
 	font-family:'arialregular';
 	margin-left:4%;
+	border-right:solid thin #fff;
 }
 
 
@@ -2721,7 +2722,7 @@ footer{
 
 
 #info-mapa{
-	border-left:solid thin #fff;
+	/*border-left:solid thin #fff;*/
 	 margin-top: 3%;
 }
 
