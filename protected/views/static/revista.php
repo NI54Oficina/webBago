@@ -29,15 +29,15 @@
 	
 	
 		
-	<div class="col-lg-12 col-md-10 col-sm-12 col-xs-12" style="text-align: left; ">
-	
-
-				<?php
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align: left; ">
+	<div style="width: 96%; height: 96%;">
+		<?php
 					foreach($notas as $nota){
 				
 				?>
 					<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 container-nota-revista" style="margin-top:0;border: 1px solid #359FBD;box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.45); "  >
-						
+					
+
 						<div style="margin-top:0;padding:10px;" hid="1">
 							<div class="container-revistas-molino">
 								<img style=" width: auto;" src="<?php echo Yii::app()->request->baseUrl; ?>/uploads/molino/img/portada-<?php echo $nota->numero; ?>.png">
@@ -52,14 +52,19 @@
 						</div>
 						
 							<div class="col-lg-12 col-md-12 col-sm-12" style="padding-top: 1%;background: #359FBD;">
-								<a class="leer-infotec-noticias" href="<?php echo Yii::app()->request->baseUrl; ?>/uploads/molino/pdf/revista-<?php echo $nota->numero; ?>.pdf" target="_blank">Leer  más</a></p>
+
+								<a class="leer-infotec-noticias" href="<?php echo Yii::app()->request->baseUrl; ?>/uploads/molino/pdf/revista-<?php echo $nota->numero; ?>.pdf" target="_blank">Leer  más</a>
+
+
 						</div>
-					</div>
+
+</div>
+
 					<?php } 
 					 ?>
 
-	</div>
-
+</div>
+					</div>
 	
 <?php
 }else{
