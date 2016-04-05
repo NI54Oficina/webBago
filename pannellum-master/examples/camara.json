@@ -1,0 +1,29 @@
+{
+    "showZoomCtrl": false,
+	
+	"autoRotate": true,
+	
+	"autoRotateInactivityDelay": -5,
+	
+	"autoRotateInactivityDelay": 1,
+	
+	"autoLoad": true,
+	
+	"keyboardZoom": false,
+	
+	"showFullscreenCtrl": false,
+    
+   
+    
+    "type": "cubemap",
+    
+    "cubeMap": [
+        "./camara/image 112.jpg",
+		"./camara/image 113.jpg",
+		"./camara/image 117.jpg",
+		"./camara/image 116.jpg",
+		"./camara/image 114.jpg",
+        "./camara/image 115.jpg"
+        
+    ]
+}

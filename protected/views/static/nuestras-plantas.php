@@ -10,7 +10,7 @@
 	
 	
 	<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-	<div class="side-title">
+	<div id="sidePlantas" class="side-title">
 		<div style="display:inline-block;">
 		<h2  class="h2-aftosa"><?php echo Textos::model()->GetText(347); ?></h2>	
 		<div id="barra-institucional"></div>
@@ -19,14 +19,17 @@
 	</div>
 
 	
-<div class="div-texto-aftosa col-lg-6 col-md-6 col-sm-12 col-xs-12" style="text-align: left;">
+	<div class="div-texto-aftosa col-lg-6 col-md-6 col-sm-12 col-xs-12" style="text-align: left;">
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align:right;" id="nuestrasPlantasTopVideo">
-		<a href="nuestras-plantas-menu.php" style="display:inline-block;float:right;width:150%;" id="videoPlanta">
-			<object id="videoPlantaVideo" width="100%" height="500" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" >
+		
+		<a href="nuestras-plantas-menu" style="display:inline-block;float:right;width:150%;height:50vh;position:relative;z-index:10000;" id="videoPlanta">
+			<iframe width="100%" height="100%" allowfullscreen style="border-style:none;" src="<?php echo Yii::app()->request->baseUrl; ?>/pannellum-master/src/standalone/pannellum.htm?config=../../examples/exterior.json" ></iframe>
+			<img style="margin-top: -10%;margin-left: 80%;position:relative;z-index:100;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/mas.png" alt="" />
+			<!--<object id="videoPlantaVideo" width="100%" height="500" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" >
 				<param name="SRC" value="1080/Exterior/exterior_1080_out.swf">
 				<embed src="<?php echo Yii::app()->request->baseUrl; ?>/1080/Exterior/exterior_1080_out.swf" width="900" height="500" style="width: 100%;">
 							<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/nuestras-plantas-menu" style="z-index: 21;margin-left: -14%;position: relative;">
-								<img style="margin-top: -10%;margin-left: 80%;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/mas.png" alt="" /></a>
+								</a>
 			</object>
 			<!--<object id="videoPlantaVideo"  type="application/x-shockwave-flash" 
 			  data="<?php echo Yii::app()->request->baseUrl; ?>/1080/Exterior/exterior_1080_out.swf" 
@@ -36,7 +39,7 @@
 			</object>!-->
 		</a>
 		</div>
-	<div class="tabla-aftosa col-lg-12 col-md-12 col-sm-12 col-xs-12">
+	<div class="tabla-aftosa col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-top:4vh;">
 		<div  class="tr  col-lg-12 col-md-12 col-sm-12 col-xs-12 inner-text" style="text-shadow:none;padding-top:0;">		
 					<p><strong><?php echo Textos::model()->GetText(77); ?></strong></p>
 					<p><strong><?php echo Textos::model()->GetText(78); ?></strong></p>
@@ -118,11 +121,11 @@
 
 </div>
 <script>
-document.getElementById("videoPlantaVideo").addEventListener("load", padTitle());
+/*document.getElementById("videoPlantaVideo").addEventListener("load", padTitle());
 function padTitle(){
 	console.log($("#videoPlanta").outerHeight());
 	$(".side-title").css("padding-top",$("#videoPlanta").height());
-}
+}*/
 </script>
 <?php include('widget.php'); ?>
 

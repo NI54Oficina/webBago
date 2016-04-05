@@ -1,0 +1,33 @@
+{
+    "showZoomCtrl": false,
+	
+	"autoRotate": true,
+	
+	"autoRotateInactivityDelay": -5,
+	
+	"autoRotateInactivityDelay": 1,
+	
+	"autoLoad": true,
+	
+	"minYaw": 30,
+	"maxYaw": 170,
+	
+	"keyboardZoom": false,
+	
+	"showFullscreenCtrl": false,
+    
+    
+    
+    "type": "cubemap",
+    
+    "cubeMap": [
+        "./exterior/image 112.jpg",
+        "./exterior/image 113.jpg",
+		"./exterior/image 117.jpg",
+		"./exterior/image 116.jpg",
+        "./exterior/image 114.jpg",
+        "./exterior/image 115.jpg"
+        
+        
+    ]
+}

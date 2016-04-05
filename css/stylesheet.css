@@ -7409,6 +7409,10 @@ position:fixed;
    	#volver-producto {background-position: left;     background-size: 10%; }
    	#volver-producto p {margin-left: 12%;
     margin-top: 3%;}
+	
+	#sidePlantas{
+		padding-top:0;
+	}
 }
 
 
@@ -7566,3 +7570,7 @@ border-color:white !important;
 }
 
 .container-nota-revista:hover {opacity: 0.8; }
+
+#sidePlantas{
+		padding-top:54vh;
+}

@@ -102,6 +102,7 @@ return array(
 				
 				"<pais>/vademecum/<id>"=>array("web/get/data/vademecum/id/<id>"),
 				"<pais>/productos/<id>"=>array("web/get/data/productos/id/<id>"),
+				"<pais>/vista/<id>"=>array("web/get/data/vista/id/<id>"),
 				"<pais>/gii/default/login"=>array("gii/default/login"),
 				
 				'<pais>/<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
