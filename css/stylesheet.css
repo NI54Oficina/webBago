@@ -7549,5 +7549,11 @@ list-style: disc;
 border-color:white !important;
 }
 
+<<<<<<< HEAD
 
 .animateCollapse ul:hover {background-color:background: rgba(221, 221, 221, 0.80);;}
+=======
+.vjs-control-bar{
+	opacity:0;
+}
+>>>>>>> origin/master
