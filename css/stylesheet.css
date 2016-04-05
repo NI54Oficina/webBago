@@ -6651,9 +6651,15 @@ figure.snip1156:hover .salud-ambiental{
 
 
 
-.item-institucional canvas{ position:absolute; display:block;margin-top:-10px;-ms-transform: rotate(180deg); -webkit-transform: rotate(1800deg);transform: rotate(180deg);}
+.item-institucional canvas{ position:absolute; margin-top:-10px;-ms-transform: rotate(180deg); -webkit-transform: rotate(1800deg);transform: rotate(180deg);display:inline-block;text-align:center;left:0;
+right:0;
+margin-left:auto;
+margin-right:auto;}
 .item-institucional .glyphicon{margin-top:15px;background-color:transparent;position:relative;top:-10px;display:inline-block;background-color:white;padding-left:10px;padding-right:10px; color: #AAAAAA;padding-bottom:10px;}
 .plus-container{width:100%;display:block;
+}
+.item-institucional >a{
+	display:inline-block;text-align:center;
 }
 
 #gota-vademecum , #gota-producto{

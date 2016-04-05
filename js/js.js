@@ -393,6 +393,7 @@ var hover= [];
 $(document).ready(function(){
 	var auxId=0;
 	$(".item-institucional canvas").each(function(){
+		
 		$(this).attr("canvasid",auxId);
 		hover.push(new hoverElement(this,45));
 		auxId++;
