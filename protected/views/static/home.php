@@ -247,31 +247,31 @@
 						
 						<p> <?php echo Textos::model()->GetText(467); ?></p>
 				
-						<h3 id="titulo-dist" class="dist"><?php echo Textos::model()->GetText(468); ?> </h3>
+						<!-- <h3 id="titulo-dist" class="dist"><?php echo Textos::model()->GetText(468); ?> </h3>
 			
 							<h4> <span id="sub-filiales" class="bold-fil"> <?php echo Textos::model()->GetText(418); ?>  </h4>
 							
 							<p id="sub-filiales"  class="bold-fil mar"> <?php echo Textos::model()->GetText(469); ?>  </p>
 							<p class="mar"> <?php echo Textos::model()->GetText(470); ?> </p>
-					
+					 -->
 						<!-- LINEA SEPARADORA-->					
-						<div id="separador"></div>
+						<!-- <div id="separador"></div>
 					
 						<h3  id="titulo-cont">  <?php echo Textos::model()->GetText(466); ?> </h3> 
 				
-						<p>+52 (33) 3819-5552</p>
+						<p>+52 (33) 3819-5552</p> -->
 						
 						<!-- LINEA SEPARADORA-->					
-						<div id="separador"></div>
+					<!-- 	<div id="separador"></div>
 				
 						<h3  id="titulo-cont"> <?php echo Textos::model()->GetText(113); ?></h3> 
-						<p>ALONDRA PARTIDA</p>
+						<p>ALONDRA PARTIDA</p> -->
 					
 						<!-- LINEA SEPARADORA-->					
-						<div id="separador"></div>
+						<!-- <div id="separador"></div>
 				
 						<h3  id="titulo-cont">  E-MAIL </h3> 
-						<p>mx_servicio_elanco@lilly.com</p>
+						<p>mx_servicio_elanco@lilly.com</p> -->
 				
 				</div> <!-- Termina info-México-->
 		
