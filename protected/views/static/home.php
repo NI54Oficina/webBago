@@ -1659,6 +1659,16 @@
 			duration: "2s",
 			windowarea: "50%"
 		}); 
+		
+		
+		$("#vade").boxLoader({
+			direction:"x",
+			position: "-50%",
+			effect: "fadeIn",
+			duration: "2s",
+			windowarea: "50%"
+		}); 
+		
 	</script>
 </body>
 
