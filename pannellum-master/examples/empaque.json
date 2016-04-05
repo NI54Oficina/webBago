@@ -1,0 +1,32 @@
+{
+    "showZoomCtrl": false,
+	
+	"autoRotate": true,
+	
+	"autoRotateInactivityDelay": -5,
+	
+	"autoRotateInactivityDelay": 1,
+	
+	"autoLoad": true,
+	
+	"keyboardZoom": false,
+	
+	"showFullscreenCtrl": false,
+    
+  
+    
+    "type": "cubemap",
+    
+    "cubeMap": [
+        "./empaque/image 112.jpg",
+		"./empaque/image 116.jpg",
+       
+		"./empaque/image 117.jpg",
+		 "./empaque/image 113.jpg",
+       
+        "./empaque/image 115.jpg",
+		 "./empaque/image 114.jpg"
+        
+        
+    ]
+}
