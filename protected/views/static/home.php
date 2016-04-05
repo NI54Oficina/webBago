@@ -150,12 +150,12 @@
 						
 							<!------- MAPA ----------->
 							<map name="img-mapaMap">
-								<area class="btn-mapa" idInfo="infoMexico" shape="rect" coords="88,190,154,209" href="javascript:void(0);">
-								<area class="btn-mapa" idInfo="infoCenAm" shape="rect" coords="173,200,275,223" href="javascript:void(0);">
-								<area class="btn-mapa" idInfo="infoBrasil" shape="rect" coords="228,253,275,271" href="javascript:void(0);">
-								<area class="btn-mapa" idInfo="infoBolivia" shape="rect" coords="166,276,224,293" href="javascript:void(0);">
-								<area class="btn-mapa" idInfo="infoUruguay" shape="rect" coords="237,304,302,327" href="javascript:void(0);">
-								<area class="btn-mapa" idInfo="infoArgentina" shape="rect" coords="212,326,312,344" href="javascript:void(0);">
+								<area class="btn-mapa" info="infoMexico" shape="rect" coords="88,190,154,209" href="javascript:void(0);">
+								<area class="btn-mapa" info="infoCenAm" shape="rect" coords="173,200,275,223" href="javascript:void(0);">
+								<area class="btn-mapa" info="infoBrasil" shape="rect" coords="228,253,275,271" href="javascript:void(0);">
+								<area class="btn-mapa" info="infoBolivia" shape="rect" coords="166,276,224,293" href="javascript:void(0);">
+								<area class="btn-mapa" info="infoUruguay" shape="rect" coords="237,304,302,327" href="javascript:void(0);">
+								<area class="btn-mapa" info="infoArgentina" shape="rect" coords="212,326,312,344" href="javascript:void(0);">
 							</map>
 						
 						</div> 
@@ -255,23 +255,23 @@
 							<p class="mar"> <?php echo Textos::model()->GetText(470); ?> </p>
 					
 						<!-- LINEA SEPARADORA-->					
-						<div id="separador"></div>
+						<!-- <div id="separador"></div>
 					
 						<h3  id="titulo-cont">  <?php echo Textos::model()->GetText(466); ?> </h3> 
 				
-						<p>+52 (33) 3819-5552</p>
+						<p>+52 (33) 3819-5552</p> -->
 						
 						<!-- LINEA SEPARADORA-->					
-						<div id="separador"></div>
+					<!-- 	<div id="separador"></div>
 				
 						<h3  id="titulo-cont"> <?php echo Textos::model()->GetText(113); ?></h3> 
-						<p>ALONDRA PARTIDA</p>
+						<p>ALONDRA PARTIDA</p> -->
 					
 						<!-- LINEA SEPARADORA-->					
-						<div id="separador"></div>
+						<!-- <div id="separador"></div>
 				
 						<h3  id="titulo-cont">  E-MAIL </h3> 
-						<p>mx_servicio_elanco@lilly.com</p>
+						<p>mx_servicio_elanco@lilly.com</p> -->
 				
 				</div> <!-- Termina info-México-->
 		
@@ -280,6 +280,8 @@
 				<!--********** CENTRO AMÉRICA **********-->
 				
 				<div class="info-mapa" id="infoCenAm"> 
+
+					<!--<div style="width:300px;height:100px;background: red;" class="btn-mapa" info="infoArgentina"></div>!-->
 					
 					<h2 id="titulo-info-mapa"><?php echo Textos::model()->GetText(463); ?></h2>
 					

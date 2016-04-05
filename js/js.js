@@ -235,73 +235,16 @@ $(function(){
     });
 
    $(document).ready(function(){
-				
-					$("#mex").click(function() {
+
+   					
+   					$("body").on("mousedown",".btn-mapa",function(){
+   						
+   						$(".info-mapa").hide();
+						var info=$(this).attr("info");
+   						
+   						$("#"+ $(this).attr("info")).show();
+   					});
 					
-						$("#infoMexico").fadeIn(800);
-						$("#infoCenAm").css('display','none');
-						$("#infoBrasil").css('display','none');
-						$("#infoBolivia").css('display','none');
-						$("#infoUruguay").css('display','none');
-						$("#infoArgentina").css('display','none');
-					
-					});
-					
-					$("#centroam").click(function() {
-					
-						$("#infoCenAm").fadeIn(800);
-						$("#infoMexico").css('display','none');
-						$("#infoBrasil").css('display','none');
-						$("#infoBolivia").css('display','none');
-						$("#infoUruguay").css('display','none');
-						$("#infoArgentina").css('display','none');
-					
-					});
-					
-					$("#br").click(function() {
-					
-						$("#infoBrasil").fadeIn(800);
-						$("#infoMexico").css('display','none');
-						$("#infoCenAm").css('display','none');
-						$("#infoBolivia").css('display','none');
-						$("#infoUruguay").css('display','none');
-						$("#infoArgentina").css('display','none');
-					
-					});
-					
-					$("#bol").click(function() {
-					
-						$("#infoBolivia").fadeIn(800);
-						$("#infoMexico").css('display','none');
-						$("#infoCenAm").css('display','none');
-						$("#infoBrasil").css('display','none');
-						$("#infoUruguay").css('display','none');
-						$("#infoArgentina").css('display','none');
-					
-					});
-					
-					
-					$("#uru").click(function() {
-					
-						$("#infoUruguay").fadeIn(800);
-						$("#infoMexico").css('display','none');
-						$("#infoCenAm").css('display','none');
-						$("#infoBrasil").css('display','none');
-						$("#infoBolivia").css('display','none');
-						$("#infoArgentina").css('display','none');
-					
-					});
-					
-					$("#arg").click(function() {
-					
-						$("#infoArgentina").fadeIn(800);
-						$("#infoMexico").css('display','none');
-						$("#infoCenAm").css('display','none');
-						$("#infoBrasil").css('display','none');
-						$("#infoBolivia").css('display','none');
-						$("#infoUruguay").css('display','none');
-					
-					});					
 					
 				});
 

@@ -2674,7 +2674,11 @@ footer{
 	color:#8BCDE0;
 	font-family:'arialregular';
     margin-top: -9%;
+<<<<<<< HEAD
     margin-bottom: 7%;
+=======
+    margin-bottom: 5%;
+>>>>>>> origin/master
     font-size: 32px;
 }
 
@@ -7209,7 +7213,7 @@ h5{
 
 .btn{
 		overflow: hidden;
-		background: rgba(221, 221, 221, 0.61);
+		background: rgb(234, 233, 233);
 		padding-bottom: 0.5em;
 		padding-top: 0.5em;
 		width:100%;
@@ -7243,7 +7247,7 @@ h5{
 
 .linea-rse-not {
     border: 1px solid #67C6DB;
-    width: 9%;
+    width: 93%;
     margin-top: 0;
 }
 

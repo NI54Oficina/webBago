@@ -17,9 +17,5 @@ $(document).ready(function(e) {
               
               
 <script>
-	$("body").on("mousedown",".btn-mapa",function(){
-		console.log( $(this).attr("idInfo"));
-			$(".info-mapa").hide();
-				$("#"+$(this).attr("idInfo")).show();
-	});
+	
 </script>

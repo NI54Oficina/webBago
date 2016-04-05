@@ -46,8 +46,8 @@
 
 
 		<div class="content-home">
-			<h1 class="h1-home-ev row" style="text-transform: uppercase;"><?php echo Textos::model()->GetText(2); ?></h1>
-			<h1 class="h1-home-ev salud-animal row" style="text-transform: uppercase;"><?php echo Textos::model()->GetText(3); ?></h1>
+			<h1 class="h1-home-ev row" style="text-transform: uppercase;margin-right:0;margin-left:0;"><?php echo Textos::model()->GetText(2); ?></h1>
+			<h1 class="h1-home-ev salud-animal row" style="text-transform: uppercase;margin-right:0;margin-left:0;"><?php echo Textos::model()->GetText(3); ?></h1>
 		</div>
 		
 		<!-- FLECHA -->
