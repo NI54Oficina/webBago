@@ -72,7 +72,7 @@
 						
 						
 								<!--	NUESTRAS PLANTAS -->
-								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional" hid="1" style="padding-top: 10px;">
+								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional" hid="1" >
 									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/nuestras-plantas">
 										<canvas class="" id="myCanvas" height="90px"></canvas>
 										<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home-plantas.png" />
@@ -83,7 +83,7 @@
 								</div>
 								
 								<!--	RSE - SUSTENTABILIDAD -->
-								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional" hid="1" style="padding-top: 10px;">
+								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional" hid="1" >
 									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/rse">
 										<canvas class="" id="myCanvas" height="90px"></canvas>
 										<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home-rse.png" />	
@@ -95,7 +95,7 @@
 								
 								<?php if($_SESSION["lng"]=="es"){ ?>
 								<!-- 	INFO PARA PROVEEDORES -->
-								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional" hid="1" style="padding-top: 10px;">
+								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional" hid="1" >
 									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/proveedores">
 										<canvas class="" id="myCanvas" height="90px"></canvas>
 										<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home-proveedores.png" />

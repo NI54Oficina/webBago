@@ -3138,7 +3138,7 @@ min-height:100vh;
 
 .item-institucional {
 	text-align:center;
-	padding-top:30px;
+	padding-top:20px;
 	padding-bottom:30px;
 	height:auto;overflow:hidden;
 }
@@ -6660,7 +6660,7 @@ figure.snip1156:hover .salud-ambiental{
 
 
 
-.item-institucional canvas{ position:absolute; margin-top:-10px;-ms-transform: rotate(180deg); -webkit-transform: rotate(1800deg);transform: rotate(180deg);display:inline-block;text-align:center;left:0;
+.item-institucional canvas{ position:absolute; margin-top:-15px;-ms-transform: rotate(180deg); -webkit-transform: rotate(1800deg);transform: rotate(180deg);display:inline-block;text-align:center;left:0;
 right:0;
 margin-left:auto;
 margin-right:auto;}
@@ -7578,4 +7578,8 @@ border-color:white !important;
 
 #sidePlantas{
 		padding-top:54vh;
+}
+
+.ul-nav li a {
+	white-space:initial;
 }
