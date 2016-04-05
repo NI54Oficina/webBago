@@ -2667,7 +2667,6 @@ footer{
 #mapa-total{
 	font-family:'arialregular';
 	margin-left:4%;
-	border-right:solid thin #fff;
 }
 
 
@@ -2722,7 +2721,7 @@ footer{
 
 
 #info-mapa{
-	/*border-left:solid thin #fff;*/
+	border-left:solid thin #fff;
 	 margin-top: 3%;
 }
 
@@ -3341,6 +3340,7 @@ a.iprodev:hover {
     padding:15px;
     z-index: 99999999;    
 	font-size: 15px;
+	transition: all 0.5s ease;
 }
 
 #back-rrhh{ 
@@ -7577,10 +7577,62 @@ border-color:white !important;
 
 .container-nota-revista:hover {opacity: 0.8; }
 
+
+#iconos-institucional div{
+	opacity:0;
+}
+
+#texto{
+	opacity:0;
+ }
+
+#titulo-mapa
+{
+	z-index:3333;
+	position:relative;
+}
+
+#botones div {
+	opacity:0;
+}
+
+@keyframes myfirst
+{
+0%   {left:0px; top:-80px;opacity:0; }
+10%   {left:0px; opacity:0.1; }
+20%   {left:0px; opacity:0.2; }
+30%   {left:0px; opacity:0.3; }
+40%   {left:0px; opacity:0.4; }
+50%   {left:0px; opacity:0.5; }
+60%   {left:0px; opacity:0.6; }
+70%   {left:0px; opacity:0.7; }
+80%   {left:0px; opacity:0.8; }
+90%   {left:0px; opacity:0.9; }
+100% {left:0px; top:0px; opacity:1;}
+}
+
+@-webkit-keyframes myfirst /* Safari and Chrome */
+{
+0%   { left:0px; top:-80px;}
+100% {left:0px; top:0px;}
+}
+
+
+
+
 #sidePlantas{
 		padding-top:54vh;
+}
+
+
+
+.send-rrhh:hover{ 
+	background: transparent;
+    border: 2px solid white;
+	transition: all 0.5s ease;
 }
 
 .ul-nav li a {
 	white-space:initial;
 }
+

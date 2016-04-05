@@ -17,14 +17,14 @@
 
 			<!--CURVA-->
 		
-			<img style="width: 100%;margin-bottom:-1px;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-arriba-home.png" alt="" /><section class="special" data-scrollax-parent="true" style="background:white;min-height:100vh;width:100%;text-align:center;">
+			<img style="width: 100%;margin-bottom:-1px;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-arriba-home.png" alt="" /><section class="special" data-scrollax-parent="true" style="background:white;width:100%;text-align:center;">
 		
-			<div class="" style="display:inline-block;background:white;width:98%;padding-top:0px;">
+			<div id="iconos-institucional" style="display:inline-block;background:white;width:98%;padding-top:0px;">
 					
 					<!-- CUATRO ICONOS -->
 						
 								<!-- 	QUIÉNES SOMOS -->
-								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional" hid="1">
+								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional" hid="1" id="inst-quienes">
 									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/quienes-somos">	
 										<canvas class="" id="myCanvas" height="90px"></canvas>
 										<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home-quienes.png" />
@@ -35,7 +35,7 @@
 								</div>
 								
 								<!--	MISIÓN, VISIÓN Y VALORES -->
-								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional" hid="1">
+								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional" hid="1" id="inst-mision">
 									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/mision-vision">
 										<canvas class="" id="myCanvas" height="90px"></canvas>
 										<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home-mision.png" />
@@ -133,7 +133,7 @@
 		<section class="special" data-scrollax-parent="true" style="background:transparent;min-height:100vh;width:100%;overflow-x:hidden;">
 		<!------------------------------------------------------------------ SECCION 2: FILIALES ------------------------------------------------------------------>			
 			
-			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-bottom:30px;">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-bottom:30px;" id="map">
     	
 						<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12" id="mapa-total">
     	 
@@ -164,7 +164,7 @@
 						<?php include('script-mapa.php');?>
              
 					<!-- Termina mapa -->
-            
+
 			
 			<!---------- REFERENCIAS ------------------>
 				<div id="referencias" class="col-lg-12 col-md-12 col-sm-8 col-xs-8" style="cursor:default;position:relative;z-index:1; margin: auto;">
@@ -283,15 +283,15 @@
 
 					<!--<div style="width:300px;height:100px;background: red;" class="btn-mapa" info="infoArgentina"></div>!-->
 					
-					<h2 id="titulo-info-mapa"><?php echo Textos::model()->GetText(463); ?></h2>
+						<h2 id="titulo-info-mapa"><?php echo Textos::model()->GetText(463); ?></h2>
 					
-						<p id="sub-filiales"  class="h4-fil bio" ><?php echo Textos::model()->GetText(471); ?></p>
+						<!--<p id="sub-filiales"  class="h4-fil bio" ><?php echo Textos::model()->GetText(471); ?></p>
 						
 						<p id="sub-filiales"  class="h4-fil bio" ><?php echo Textos::model()->GetText(472); ?></p>
 	
 						<p><?php echo Textos::model()->GetText(473); ?></p>
 			
-						<!-- LINEA SEPARADORA-->	
+						<!-- LINEA SEPARADORA
 						<div id="separador"></div>
 			
 						<h3  id="titulo-cont">   <?php echo Textos::model()->GetText(466); ?> </h3> 
@@ -299,14 +299,14 @@
 
 			
 			
-						<!-- LINEA SEPARADORA-->						
+						<!-- LINEA SEPARADORA						
 						<div id="separador"></div>
 			
 						<h3  id="titulo-cont"><?php echo Textos::model()->GetText(113); ?></h3> 			
 						<p>Rocío Ortega</p>
 			
 						
-						<!-- LINEA SEPARADORA-->						
+						<!-- LINEA SEPARADORA					
 						<div id="separador"></div>
 			
 
@@ -321,13 +321,258 @@
 				
 							<p id="sub-filiales"  class="bold-fil mar"> <?php echo Textos::model()->GetText(474); ?> </p>
 							
-							<p class="mar"> <?php echo Textos::model()->GetText(475); ?>  </p>	
+							<p class="mar"> <?php echo Textos::model()->GetText(475); ?>  </p>	-->
+							
+							
+					<ul class="paises-centroamerica" style="padding:0">
+					
+						<li style="padding-top:20px;font-size: 14px;"  class="btn-mapa" info="infoCostarica"><a style="color:white;" href=""> Costa Rica</a></li>
+						<div id="separador"></div>
+						
+						
+						<li style="padding-top:20px;font-size: 14px;"  class="btn-mapa" info="infoEcuador"><a style="color:white;" href=""> Ecuador</a></li>
+						<div id="separador"></div>
+						
+						
+						<li style="padding-top:20px; font-size: 14px;"  class="btn-mapa" info="infoElSalvador"><a style="color:white;" href=""> El Salvador</a></li>
+						<div id="separador"></div>
+						
+						
+						<li style="padding-top:20px; font-size: 14px;"  class="btn-mapa" info="infoGuatemala"><a style="color:white;" href=""> Guatemala</a></li>
+						<div id="separador"></div>
+						
+						
+						<li style="padding-top:20px; font-size: 14px;"  class="btn-mapa" info="infoHonduras"><a style="color:white;" href=""> Honduras</a></li>
+						<div id="separador"></div>
+						
+						
+						<li style="padding-top:20px;font-size: 14px;"  class="btn-mapa" info="infoNicaragua"><a style="color:white;" href=""> Nicaragua</a></li>
+						<div id="separador"></div>
+						
+						
+						<li style="padding-top:20px; font-size: 14px;"  class="btn-mapa" info="infoPanama"><a style="color:white;" href=""> Panamá</a></li>
+						<div id="separador"></div>
+					
+					</ul>
+				
+				
+		
+			</div> <!-- Termina info-Centro América-->	
 			
-				</div> <!-- Termina info-Centro América-->
+					<!--********** COSTA RICA**********-->
 		
+						<div class="info-mapa" id="infoCostarica">
+					
+					<h2 id="titulo-info-mapa"><img  src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-ec.png"/> Costa Rica</h2>
+	
+							<p id="sub-filiales"  class="h4-fil bio" >Representaciones Cadelga S.A. </p>
+							<p  id="sub-filiales" class="h4-fil">Casa 399, Av. 5ta. y Calle 26 Barrio México, San José, Costa Rica</p>
+			
+						
+						<!-- LINEA SEPARADORA-->						
+						<div id="separador"></div>
+
+						<h3  id="titulo-cont">  TEL  </h3> 	
+						<p>506-2221-0104  / 0084</p>		
+						
+					<!-- LINEA SEPARADORA-->						
+						<div id="separador"></div>
+
+						<h3  id="titulo-cont">  CONTACTO  </h3> 	
+						<p> David Mora / Silvia Aguilar</p>		
+
+						<!-- LINEA SEPARADORA-->						
+						<div id="separador"></div>
+
+						<h3  id="titulo-cont">   E-MAIL  </h3> 	
+						<p>  david.mora@cadelga.com</p>														
+				
+				</div> <!-- Termina info-costa rica-->
+
+				
+				
+				<!--********** ECUADOR**********-->
 		
+				<div class="info-mapa" id="infoEcuador">
+					
+					<h2 id="titulo-info-mapa"><img  src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-ec.png"/>Ecuador  </h2>
+	
+							<p id="sub-filiales"  class="h4-fil bio" >QUIMICA SUIZA INDUSTRIAL DEL ECUADOR QSI S.A. </p>
+							<p  id="sub-filiales" class="h4-fil">Av. Galo Plaza Lasso 10640 y Manuel Zambrano <br />Quito - ECUADOR  <br /> RUC - 1792373255001</p>
+			
+						
+						<!-- LINEA SEPARADORA-->						
+						<div id="separador"></div>
+
+						<h3  id="titulo-cont">  TEL  </h3> 	
+						<p>593 2 3961200</p>		
+						
+					<!-- LINEA SEPARADORA-->						
+						<div id="separador"></div>
+
+						<h3  id="titulo-cont">  CONTACTO  </h3> 	
+						<p>Sandra Collahuazo</p>		
+
+						<!-- LINEA SEPARADORA-->						
+						<div id="separador"></div>
+
+						<h3  id="titulo-cont">   E-MAIL  </h3> 	
+						<p> Sandra.Collahuazo@quifatex.com</p>														
+				
+				</div> <!-- Termina info-ecuador-->
+				
+				
+			
+				<!--**********EL SALVADOR**********-->
+				
 		
+				<div class="info-mapa" id="infoElSalvador">
+					
+					<h2 id="titulo-info-mapa"><img  src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-ec.png"/>El Salvador</h2>
+	
+							<p id="sub-filiales"  class="h4-fil bio" >DUWEST EL SALVADOR </p>
+							<p  id="sub-filiales" class="h4-fil">Calle El Progreso frente a Ex Hospital de ANTEL, Colonia Roma, San Salvador, El Salvador.</p>
+			
+						
+						<!-- LINEA SEPARADORA-->						
+						<div id="separador"></div>
+
+						<h3  id="titulo-cont">  TEL  </h3> 	
+						<p>(503) 2245-3388</p>		
+						
+					<!-- LINEA SEPARADORA-->						
+						<div id="separador"></div>
+
+						<h3  id="titulo-cont"> FAX </h3> 	
+						<p>(503) 2223-6234</p>														
+				
+				</div> <!-- Termina info-el salvador-->
+				
+			
+				
+				<!--********** GUATEMALA**********-->
 		
+				<div class="info-mapa" id="infoGuatemala">
+					
+					<h2 id="titulo-info-mapa"><img  src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-ec.png"/>Guatemala</h2>
+	
+							<p id="sub-filiales"  class="h4-fil bio" >Tecnología Pecuaria, S.A</p>
+							<p  id="sub-filiales" class="h4-fil">3ra. Calle 3-17, Zona 9 <br />Guatemala<br /> RUC 2312990-5</p>
+			
+						
+						<!-- LINEA SEPARADORA-->						
+						<div id="separador"></div>
+
+						<h3  id="titulo-cont">  TEL  </h3> 	
+						<p>2329-5660 /2329-5643/ 2329-5642</p>		
+						
+					<!-- LINEA SEPARADORA-->						
+						<div id="separador"></div>
+
+						<h3  id="titulo-cont">  CONTACTO  </h3> 	
+						<p>Silvia Fuentes  </p>		
+
+						<!-- LINEA SEPARADORA-->						
+						<div id="separador"></div>
+
+						<h3  id="titulo-cont">   E-MAIL  </h3> 	
+						<p>silvia@tecnopec.com</p>														
+				
+				</div> <!-- Termina info-guatemala-->
+				
+				
+				<!--********** HONDURAS**********-->
+		
+				<div class="info-mapa" id="infoHonduras">
+					
+					<h2 id="titulo-info-mapa"><img  src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-ec.png"/>Honduras</h2>
+	
+							<p id="sub-filiales"  class="h4-fil bio" >EYL Comercial S.A.</p>
+							<p  id="sub-filiales" class="h4-fil">Callejón "El Carmen", Barrio San Rafael Frente al Hospital El Carmen, Tegucigalpa, Honduras</p>
+			
+						
+						<!-- LINEA SEPARADORA-->						
+						<div id="separador"></div>
+
+						<h3  id="titulo-cont">  TEL  </h3> 	
+						<p>504-232-3389/504-231-0850</p>		
+						
+						<!-- LINEA SEPARADORA-->						
+						<div id="separador"></div>
+
+						<h3  id="titulo-cont">  FAX  </h3> 	
+						<p>504-239-5634</p>		
+						
+					<!-- LINEA SEPARADORA-->						
+						<div id="separador"></div>
+
+						<h3  id="titulo-cont">  CONTACTO  </h3> 	
+						<p>Ing.Curt Eyl</p>		
+
+						<!-- LINEA SEPARADORA-->						
+						<div id="separador"></div>
+
+						<h3  id="titulo-cont">   E-MAIL  </h3> 	
+						<p>curt@eylcomercial.com</p>														
+				
+				</div> <!-- Termina info-honduras-->
+				
+				
+				
+				<!--********** NICARAGUA**********-->
+		
+				<div class="info-mapa" id="infoNicaragua">
+					
+					<h2 id="titulo-info-mapa"><img  src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-ec.png"/>Nicaragua</h2>
+	
+							<p id="sub-filiales"  class="h4-fil bio" >Agrocampos, S.A.</p>
+							<p  id="sub-filiales" class="h4-fil">Semáforos de la Subasta 800 MT <br /> Al Sur frente a Remasa</p>
+			
+						
+						<!-- LINEA SEPARADORA-->						
+						<div id="separador"></div>
+
+						<h3  id="titulo-cont">  TEL  </h3> 	
+						<p>2252-3073/1131/1046</p>				
+						
+					<!-- LINEA SEPARADORA-->						
+						<div id="separador"></div>
+
+						<h3  id="titulo-cont">  CONTACTO  </h3> 	
+						<p>Mauricio Salgado/Arlen Torres  </p>		
+
+						<!-- LINEA SEPARADORA-->						
+						<div id="separador"></div>
+
+						<h3  id="titulo-cont">   E-MAIL  </h3> 	
+						<p>mauricio.salgado@agromesa.com.ni   </p>
+						<p>agromesa@gmail.com  </p>														
+				
+				</div> <!-- Termina info-nicaragua-->
+				
+				
+				
+				
+				<!--********** PANAMÁ**********-->
+		
+				<div class="info-mapa" id="infoPanama">
+					
+					<h2 id="titulo-info-mapa"><img  src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-ec.png"/>Panamá</h2>
+	
+							<p id="sub-filiales"  class="h4-fil bio" >Filial Biogénesis Bagó de Panamá S.A.</p>
+							<p  id="sub-filiales" class="h4-fil">Beatriz M. de Cabal y 51. Ciudad de Panamá</p>
+			
+						
+						<!-- LINEA SEPARADORA-->						
+						<div id="separador"></div>
+
+						<h3  id="titulo-cont">  TEL  </h3> 	
+						<p>507- 212 5512</p>				
+				
+				</div> <!-- Termina info-panama-->
+					
+			
+			
 				<!--********** BRASIL**********-->
 				
 				<div class="info-mapa" id="infoBrasil">
@@ -342,7 +587,8 @@
 						<div id="separador"></div>
 
 						<h3  id="titulo-cont">   E-MAIL  </h3> 	
-						<p> vendas@biogenesisbago.com</p>						
+						<p> vendas@biogenesisbago.com</p>	
+
 				
 				</div> <!-- Termina info-brasil-->
 			
@@ -454,7 +700,7 @@
 	
 	<img style="width: 100%;position:relative;margin-bottom:-1px;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-celeste.png" alt="" />	
 	
-	<section class="special" data-scrollax-parent="true" style="background: rgb(129, 206, 231); min-height:100vh;width:100%;overflow-x:hidden;position:relative;" >
+	<section class="special" data-scrollax-parent="true" style="background: rgb(129, 206, 231);width:100%;overflow-x:hidden;position:relative;" >
 
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"  id="info-tec" style="overflow:hidden;padding-bottom:30px;">
 
@@ -1072,7 +1318,7 @@
 								<?php } ?>
 								
 								
-									<li class="col-lg-4  col-md-2 col-sm-2 col-xs-4">
+									<li class="col-lg-4  col-md-2 col-sm-2 col-xs-4" style="border:none;">
 									<div id="btn-mas" class="col-lg-12 col-md-12 col-sm-3 col-xs-3"  style="cursor:pointer; padding-top: 59px;">
 										<a href="http://localhost/webBago/ar/revista">
 											<img id="img-btn-mas" src="/webBago/img/mas-ediciones-01.png" style="    position: inherit;">
@@ -1111,11 +1357,11 @@
 					
 						
 						<!-- TITULO-->
-						<img class="icono-menu right" src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-rrhh.png"><h2 id="titulo-vad"><span class="border-vad-2">RRHH</span> </h2><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-rrhh.png" class="icono-menu left">
+						<img class="icono-menu right" src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-rrhh.png"><h2 id="titulo-vad" class=" move-x"><span class="border-vad-2">RRHH</span> </h2><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-rrhh.png" class="icono-menu left">
 	
 							<!-- TEXTO HEADER-->
-							<h3 class="tr"><?php echo Textos::model()->GetText(110); ?></h3>
-							<h4 class="tr-2"><?php echo Textos::model()->GetText(478); ?></h4>
+							<h3  class="tr move-x"><?php echo Textos::model()->GetText(110); ?></h3>
+							<h4 class="tr-2  move-x"><?php echo Textos::model()->GetText(478); ?></h4>
 							<a href="" style="display:inline-block;"><div class="send-rrhh" style="color:white;border-radius: 5px;"><?php echo Textos::model()->GetText(111); ?></div></a>
 
 						
@@ -1393,6 +1639,54 @@
 			
 		},6000);
 	});
+
+	</script>
+    
+	<script type="text/javascript">
+		
+		$("#mapa").boxLoader({
+			direction:"x",
+			position: "-50%",
+			effect: "fadeIn",
+			duration: "3s",
+			windowarea: "50%"
+		}); 
+		
+		$(".move-x").boxLoader({
+			direction:"x",
+			position: "50%",
+			effect: "fadeIn",
+			duration: "2s",
+			windowarea: "50%"
+		}); 
+		
+		
+		$("#descripcion").boxLoader({
+			direction:"x",
+			position: "-50%",
+			effect: "fadeIn",
+			duration: "2s",
+			windowarea: "50%"
+		}); 
+		
+		
+		$("#infodcha").boxLoader({
+			direction:"x",
+			position: "50%",
+			effect: "fadeIn",
+			duration: "2s",
+			windowarea: "50%"
+		}); 
+		
+		
+		$("#vade").boxLoader({
+			direction:"x",
+			position: "-50%",
+			effect: "fadeIn",
+			duration: "2s",
+			windowarea: "50%"
+		}); 
+		
 	</script>
 </body>
 

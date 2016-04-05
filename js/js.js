@@ -431,3 +431,63 @@ $(document).ready(function(){
 		*/
 	});
 });
+
+$(window).scroll(function() {
+
+if ($(this).scrollTop() >100){  
+
+	$('#iconos-institucional div').each(function(i) {
+	$(this).delay((i++) * 200).fadeTo(1000, 1); })
+
+
+}});
+
+$(window).scroll(function() {
+if ($(this).scrollTop() >380){  
+	$('#titulo-mapa').css('animation','fadein 2s');
+	$('#titulo-mapa').css('animation','myfirst 3s');
+	$('#titulo-mapa').css('animation','myfirst 3s ease-out forwards');
+
+}});
+
+$(window).scroll(function() {
+
+if ($(this).scrollTop() >2500){  
+	$('#titulo-info').css('animation','fadein 2s');
+	$('#titulo-info').css('animation','myfirst 3s');
+	$('#titulo-info').css('animation','myfirst 3s ease-out forwards');
+}});
+
+
+$(window).scroll(function() {
+
+if ($(this).scrollTop() >2650){  
+
+	$('#info-tec #texto').each(function(i) {
+	$(this).delay((i++) * 400).fadeTo(1000, 1); })
+}});
+
+
+
+
+$(window).scroll(function() {
+
+if ($(this).scrollTop() >2850){  
+
+	$('#botones div').each(function(i) {
+	$(this).delay((i++) * 150).fadeTo(1000, 1); })
+	
+	$('#nom-btn').css('animation','fadein 2s');
+	$('#nom-btn').css('animation','myfirst 3s');
+	$('#nom-btn').css('animation','myfirst 3s ease-out forwards');
+	
+}});
+
+
+$(window).scroll(function() {
+
+if ($(this).scrollTop() >3050){  
+
+	$('#titulo-vad').fadeIn();
+	
+}});
