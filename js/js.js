@@ -238,10 +238,11 @@ $(function(){
 
    					
    					$("body").on("mousedown",".btn-mapa",function(){
-   						console.log(this);
+   						
    						$(".info-mapa").hide();
-   						console.log("#"+ $("this").attr("idInfo"));
-   						$("#"+ $("this").attr("idInfo")).show();
+						var info=$(this).attr("info");
+   						
+   						$("#"+ $(this).attr("info")).show();
    					});
 					
 					
