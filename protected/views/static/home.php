@@ -692,7 +692,58 @@
 				
 				</div> <!-- Termina info-argentina-->
 		
-		
+			<!--------- PARAGUAY ------>
+				<div class="info-mapa" id="infoParaguay">
+					
+					<h2 id="titulo-info-mapa"><img  src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-cost.png"/>Paraguay</h2>
+	
+							<p id="sub-filiales"  class="h4-fil bio" >Ciavet S.R.L.</p>
+							<p  id="sub-filiales" class="h4-fil">Capitán Cañiza 1202 y Teodoro S. Mongelos, Asunción, Paraguay</p>
+			
+						
+						<!-- LINEA SEPARADORA-->						
+						<div id="separador"></div>
+
+						<h3  id="titulo-cont">  TEL  </h3> 	
+						<p>00595-21-201-893</p>		
+						
+					<!-- LINEA SEPARADORA-->						
+						<div id="separador"></div>
+
+						<h3  id="titulo-cont">  CONTACTO  </h3> 	
+						<p>Dr. Silvio Moro, Giannina Moro </p>		
+
+						<!-- LINEA SEPARADORA-->						
+						<div id="separador"></div>
+
+						<h3  id="titulo-cont">E-MAIL</h3> 	
+						<p>gmoro@ciavet.com.py</p>				
+
+						<!-- LINEA SEPARADORA-->						
+						<div id="separador"></div>
+						<p id="sub-filiales"  class="h4-fil bio" >Agroveterinaria Consult-Pec S.R.L.</p>
+						<p  id="sub-filiales" class="h4-fil">José D. López 200 c/teófilo Del Puerto, Asunción, Paraguay</p>				
+
+						<!-- LINEA SEPARADORA-->						
+						<div id="separador"></div>
+
+						<h3  id="titulo-cont">TEL</h3> 	
+						<p>595-21-520-600</p>		
+						
+					<!-- LINEA SEPARADORA-->						
+						<div id="separador"></div>
+
+						<h3  id="titulo-cont">  CONTACTO  </h3> 	
+						<p> Marcelo Serrati/ Sergio Zalazar</p>		
+
+						<!-- LINEA SEPARADORA-->						
+						<div id="separador"></div>
+
+						<h3  id="titulo-cont">   E-MAIL  </h3> 	
+						<p>semcon@consultpec.com.py</p>										
+				
+				</div> <!-- Termina info-paraguay-->
+
 				</div> <!-- Termina info-mapa -->
 			
 			</div>       
