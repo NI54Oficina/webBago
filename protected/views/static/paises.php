@@ -26,7 +26,8 @@
     </script>
 
 	<!-- PAÍSES -->
-	<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo-blanco.png" style="width:22%;float:right; padding-right: 118px;; padding-top: 29px;"/>
+	<p style="font-family: 'arialregular'; color: white; font-weight: 700; display: inline-block; padding-top: 65px;text-shadow: 0px 3px black;">LA EVOLUCIÓN DE LA <span style="display: block;color:#79C8EE;text-align: center; line-height: 35px;">SALUD ANIMAL</span></p>
+	<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo-blanco.png" style="width:22%;float:right; padding-right: 118px; padding-top: 29px;"/>
 	<div class="col-lg-1"></div>
 	<div id="paises-home" class="col-lg-12 col-md-12 " style="color:white;margin-top:5%;">
 	
