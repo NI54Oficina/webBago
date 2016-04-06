@@ -57,8 +57,7 @@ fonts
 recursos-home
 themes
 templates
-protected\runtime
+runtime
 *.log
 uploads
 *.log
-protected/runtime/application.log

@@ -29,9 +29,9 @@
 
 		</div>
 
-		<div>
+		<div id="menu-vademecum">
 
-		<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id<?php echo $value; ?>">
+		<a  href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id<?php echo $value; ?>">
 		<p class="p-widget-v"><?php echo Yii::app()->paisChecker->getSeccion($value); ?>
 		</p>
 		</a>

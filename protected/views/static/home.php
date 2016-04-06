@@ -1482,7 +1482,7 @@
 					
 							<!-- ******** EMPRESA ******** -->
 							<div class="col-lg-6  col-md-6 col-xs-12">
-							<div class="input-contacto">
+								<div class="input-contacto">
 								<label for="exampleInputName2"><p style="text-transform: uppercase;"><?php echo Textos::model()->GetText(118); ?></p></label>
 									<input class="form-inline" name="empresa" type="text" value="">
 									</div>
