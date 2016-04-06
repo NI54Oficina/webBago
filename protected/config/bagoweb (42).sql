@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 05-04-2016 a las 10:56:38
+-- Tiempo de generación: 06-04-2016 a las 14:10:08
 -- Versión del servidor: 5.5.24
 -- Versión de PHP: 5.4.45
 
@@ -819,7 +819,7 @@ CREATE TABLE IF NOT EXISTS `tbl_metatag_page` (
   `idMetatag` int(11) NOT NULL,
   `dat` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 --
 -- Volcado de datos para la tabla `tbl_metatag_page`
