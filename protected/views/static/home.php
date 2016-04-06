@@ -697,7 +697,7 @@
 					
 					<h2 id="titulo-info-mapa"><img  src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-cost.png"/>Paraguay</h2>
 	
-							<p id="sub-filiales"  class="h4-fil bio" >Ciavet S.R.L.</p>
+							<p id="sub-filiales"  class="h4-fil bio">Ciavet S.R.L.</p>
 							<p  id="sub-filiales" class="h4-fil">Capitán Cañiza 1202 y Teodoro S. Mongelos, Asunción, Paraguay</p>
 			
 						
