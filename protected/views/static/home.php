@@ -1404,7 +1404,7 @@
 
 
 		<!------------------------------------------------------------------ SECCION 7: CONTACTO ------------------------------------------------------------------>
-		<section class="special" data-scrollax-parent="true" style="width:100%;text-align:center;background-image:url(<?php echo Yii::app()->request->baseUrl; ?>/img/fondo-contacto.png);background-size:auto 100%;float:left;overflow:hidden;"   id="section-contacto" >
+		<section class="special" data-scrollax-parent="true" style="width:100%;text-align:center;background-image:url(<?php echo Yii::app()->request->baseUrl; ?>/img/fondo-contacto.png);background-size:auto 100%;float:left;overflow:hidden;position:relative;"   id="section-contacto" >
 			<div id="contenido" style="display:inline-block;text-align:center;">
 				
 				<!-- ////////// TITULO ////////////// -->
