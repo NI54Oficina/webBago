@@ -1420,7 +1420,7 @@
 					<!--********** DESCRIPCIÓN / UBICACIÓN **********  -->
 					<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12" id="descripcion" style="" hid="2">
                         
-						<p style="text-transform: uppercase;" class="ubicacion"><img class="ico-ubi" src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-ubicacion.png"/><?php echo Textos::model()->GetText(479); ?></p>
+						<p style="text-transform:uppercase;" class="ubicacion"><img class="ico-ubi" src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-ubicacion.png"/><?php echo Textos::model()->GetText(479); ?></p>
                         
                         <p>Ruta Panamericana Km 38,5 Garín</p>
                        

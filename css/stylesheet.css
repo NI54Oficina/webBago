@@ -5119,6 +5119,20 @@ figure.snip1156:hover .salud-ambiental{
 		visibility:hidden;
 	}
 	
+	.volver-mobile {
+    background-image: url(../img/volver-desactivado.png);
+    height: 42px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 5%;
+    margin-top: 15%;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+    margin-left: -44%;
+}
 }
 
 
@@ -5208,7 +5222,20 @@ figure.snip1156:hover .salud-ambiental{
   and (max-device-width: 1024px) 
   and (orientation: portrait) 
   and (-webkit-min-device-pixel-ratio: 1) {
-
+.volver-mobile {
+    background-image: url(../img/volver-desactivado.png);
+    height: 42px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 5%;
+    margin-top: 15%;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+    margin-left: -44%;
+}
   	.container-title-info-revista{
 		display:inline-block; 
 		margin-left: -60px;
@@ -6826,6 +6853,20 @@ figure.snip1156 .d-a-2 h2{
   and (min-device-width: 320px) 
   and (max-device-width: 736px)
   and (-webkit-min-device-pixel-ratio: 2) {
+.volver-mobile {
+    background-image: url(../img/volver-desactivado.png);
+    height: 42px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 5%;
+    margin-top: 15%;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+    margin-left: -44%;
+}
 
 	.logo-blanco {
 		width: 60%;
@@ -7173,7 +7214,20 @@ figure.snip1156 .d-a-2 h2{
 		padding-left: 50%;
 	}
 	#descripcion {height: auto !important;border:none;}
-	
+	.volver-mobile {
+    background-image: url(../img/volver-desactivado.png);
+    height: 42px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 5%;
+    margin-top: 15%;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+    margin-left: -44%;
+}
 }
 
 @media only screen 
