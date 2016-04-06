@@ -132,7 +132,7 @@
 		<!--CURVA-->
 		<img style=" width: 100%;position:relative;margin-top:-2px;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-home-abajo.png" alt="" style="" />	
 
-		<section class="special" data-scrollax-parent="true" style="background:transparent;width:100%;overflow-x:hidden;">
+		<section class="special" data-scrollax-parent="true" style="background:transparent;width:100%;overflow-x:hidden;" id="mapa-filiales">
 		<!------------------------------------------------------------------ SECCION 2: FILIALES ------------------------------------------------------------------>			
 			
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-bottom:30px;" id="map">
@@ -569,7 +569,7 @@
 						<!-- LINEA SEPARADORA-->						
 						<div id="separador"></div>
 
-						<h3  id="titulo-cont">  TEL  </h3> 	
+						<h3  id="titulo-cont">TEL</h3> 	
 						<p>507- 212 5512</p>				
 				
 				</div> <!-- Termina info-panama-->
@@ -703,7 +703,7 @@
 	
 	<img style="width: 100%;position:relative;margin-bottom:-1px;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-celeste.png" alt="" />	
 	
-	<section class="special" data-scrollax-parent="true" style="background: rgb(129, 206, 231);width:100%;overflow-x:hidden;position:relative;" >
+	<section class="special" data-scrollax-parent="true" style="background: rgb(129, 206, 231);width:100%;overflow-x:hidden;position:relative;" id="inform-tec">
 
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"  id="info-tec" style="overflow:hidden;padding-bottom:30px;">
 
@@ -724,9 +724,9 @@
 					
 					<ul id="list-menu"  class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
-						<li class="col-lg-1 col-md-2 col-sm-2 col-xs-3"><a  id="opcion1" href="javascript:void(0)"> Trabajos técnicos </a></li>
-						<li class="col-lg-1 col-md-2 col-sm-2 col-xs-3"><a  id="opcion2" href="javascript:void(0)"> Planes Sanitarios </a></li>
-						<li class="col-lg-1 col-md-2 col-sm-2 col-xs-3" ><a id="opcion3" href="javascript:void(0)"> Planillas <br /> de trabajo </a></li>             
+						<li class="col-lg-1 col-md-2 col-sm-2 col-xs-3"><a  id="opcion1" href="javascript:void(0)">Trabajos técnicos</a></li>
+						<li class="col-lg-1 col-md-2 col-sm-2 col-xs-3"><a  id="opcion2" href="javascript:void(0)">Planes Sanitarios</a></li>
+						<li class="col-lg-1 col-md-2 col-sm-2 col-xs-3"><a id="opcion3" href="javascript:void(0)">Planillas<br />de trabajo</a></li>             
 					
 					</ul> 
 					
