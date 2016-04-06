@@ -335,8 +335,8 @@
 
 			<div class="cd-timeline-content">
 				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/medalla.png" style="width:22px;padding-bottom: 10px;"/>
-				<h2  class="h2-cd">Premio Animal Pharm</h2>
-				<p class="p-cd2">como Mejor empresa Latinoamericana del Sector Veterinario</p>
+				<h2  class="h2-cd"><?php echo Textos::model()->GetText(494); ?></h2>
+				<p class="p-cd2"><?php echo Textos::model()->GetText(495); ?></p>
 				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/animal-pharm.png" style="width:70px;padding-bottom: 10px; padding-top: 30px;"/>				
 				<span class="cd-date"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-tiempo-bullet.png"  /></span>
 			</div> <!-- cd-timeline-content -->
@@ -352,11 +352,11 @@
 			
 				<div>
 					<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/medalla.png" style="width: 22px;padding-top: 40px;"/>
-					<h2  style="margin-top:1vh;" class="h2-cd">Premio Clarín</h2>
-					<p class="p-cd2">Desarrollo empresarial</p>
+					<h2  style="margin-top:1vh;" class="h2-cd"><?php echo Textos::model()->GetText(497); ?></h2>
+					<p class="p-cd2"><?php echo Textos::model()->GetText(498); ?></p>
 					<div style="border-bottom: 1px solid #0082c8; margin-top: 10px; margin-bottom: 10px;"></div>
-					<h2  class="h2-cd">Premio Funprecit</h2>
-					<p class="p-cd2">a la excelencia en desarrollos para la salud animal</p>
+					<h2  class="h2-cd"><?php echo Textos::model()->GetText(499); ?></h2>
+					<p class="p-cd2"><?php echo Textos::model()->GetText(500); ?></p>
 				</div>
 
 				<span class="cd-date"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-tiempo-bullet.png"  /></span>
