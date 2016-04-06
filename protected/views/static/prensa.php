@@ -26,7 +26,7 @@
 	
 <div class="div-texto-aftosa col-lg-6 col-md-6 col-sm-12 col-xs-12" style="text-align: left;">
 		
-	<div class="tabla-aftosa col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align: left;    margin: 0;">
+	<div class="tabla-aftosa col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align: left;    margin: 0; margin-bottom: 20%;">
 
 		<div  class="tr  col-lg-12 col-md-12 col-sm-12 col-xs-12 inner-text container-prensa" style="text-shadow:none;padding-top:0;">		
 
