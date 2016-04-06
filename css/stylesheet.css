@@ -7641,6 +7641,15 @@ border-color:white !important;
 	white-space:initial;
 }
 
+
 @media screen and (max-width: 1024px){
 	.banderas-paises-principal { opacity: 1; }
 }
+
+/**arreglo paises botones en resolusión pc chica **/
+@media screen and (min-width: 769px){
+	#ul-nav-2-mobile{
+		display:none !important;
+	}
+}
+

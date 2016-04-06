@@ -26,9 +26,9 @@
     </script>
 
 	<!-- PAÍSES -->
-	<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo-blanco.png" style="width:25%;float:right; padding-right: 118px;; padding-top: 29px;"/>
+	<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo-blanco.png" style="width:22%;float:right; padding-right: 118px;; padding-top: 29px;"/>
 	<div class="col-lg-1"></div>
-	<div id="paises-home" class="col-lg-12 col-md-12 " style="color:white;margin-top:13vh;">
+	<div id="paises-home" class="col-lg-12 col-md-12 " style="color:white;margin-top:5%;">
 	
 			
 			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 banderas-paises-principal"><a  href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/1/lng/es" class="a-paises-principal"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-arg.png" /><p>Argentina</p></a></div>
@@ -48,7 +48,7 @@
 			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 banderas-paises-principal"><a  href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/20/lng/es" class="a-paises-principal"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-uru.png" /><p>Uruguay</p></a></div>
 			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 banderas-paises-principal"><a  href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/21/lng/es" class="a-paises-principal"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-ven.png" /><p>Venezuela</p></a></div>
 			
-			<div  class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-top: 60px; padding-left: 70px;">
+			<div  class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-top: 25px; padding-left: 70px;">
 				<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="display: block;border-top: 1px solid white;width: 3%;"></div>
 				<a style="color:white;font-family:'arialregular';" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>en"><p style="display: inline-block;margin: 0;margin-top: 13px; margin-left: -40px; font-size: 15px;">English version</p></a>
 	</div>
