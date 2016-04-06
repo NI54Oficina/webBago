@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-04-2016 a las 19:47:26
+-- Tiempo de generación: 06-04-2016 a las 22:09:33
 -- Versión del servidor: 10.1.9-MariaDB
 -- Versión de PHP: 5.5.30
 
@@ -42,7 +42,7 @@ INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (2, 'La evolución de la', 'The evolution of', 'A evolução da'),
 (3, 'Salud animal', 'Animal Health', 'Saúde animal'),
 (4, 'BIOGÉNESIS BAGÓ reconocida', '\n', ''),
-(5, '“mejor empresa latinoamericana veterinaria 2014”', '', ''),
+(5, 'INSTITUCIONAL', 'INSTITUTIONAL', 'INSTITUCIONAL'),
 (6, 'Quiénes somos', 'Who we are', 'Quem Somos'),
 (7, 'Biogénesis Bagó es una empresa líder en la investigación y desarrollo de biotecnologías para la constante evolución de la salud animal.', 'Biogénesis Bagó is a leading company in research and development of biotechnology to further help the constant evolution in animal health.', 'A Biogénesis Bagó é uma empresa líder na pesquisa e\n\ndesenvolvimento de biotecnologias para constante evolução da saúde animal.'),
 (8, 'Misión, Visión y Valores', 'Mission, Vision and Values', 'Visão, Missão e Valores'),
