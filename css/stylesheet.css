@@ -7493,13 +7493,13 @@ position:fixed;
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: auto auto;
-	-webkit-transition: all 1s ease;
+		-webkit-transition: all 1s ease;
 		-moz-transition: all 1s ease;
 		-o-transition: all 1s ease;
 		-ms-transition: all 1s ease;
-			transition: all 1s ease;
-			float:initial;
-			display:inline-block;
+		transition: all 1s ease;
+		float:initial;
+		display:inline-block;
 	}
 	
 	.facebook:hover{
@@ -7516,13 +7516,13 @@ position:fixed;
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: auto auto;
-	-webkit-transition: all 1s ease;
+		-webkit-transition: all 1s ease;
 		-moz-transition: all 1s ease;
 		-o-transition: all 1s ease;
 		-ms-transition: all 1s ease;
-			transition: all 1s ease;
-			float:initial;
-			display:inline-block;
+		transition: all 1s ease;
+		float:initial;
+		display:inline-block;
 	}
 	
 	.mail:hover{
@@ -7535,8 +7535,8 @@ position:fixed;
 	
 	
 	.descargar{
-		background-image: url(../img/descargar-desactivado.png);
-		height: 35px;
+		background-image:url(../img/descargar-desactivado.png);
+		height:35px;
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: auto auto;
@@ -7561,11 +7561,11 @@ position:fixed;
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: auto auto;
-	-webkit-transition: all 1s ease;
+		-webkit-transition: all 1s ease;
 		-moz-transition: all 1s ease;
 		-o-transition: all 1s ease;
 		-ms-transition: all 1s ease;
-			transition: all 1s ease;
+		transition: all 1s ease;
 	}
 	
 	.print:hover{
@@ -7601,7 +7601,6 @@ position:fixed;
 		-o-transition: all 1s ease;
 		-ms-transition: all 1s ease;
 		transition: all 1s ease;
-		
 		opacity:0.4;
 	}
 
@@ -7622,12 +7621,12 @@ position:fixed;
 }
 
 .contenido-producto ul,.contenido-producto ol,.contenido-producto li{
-list-style-type: disc;
-list-style: disc;
+	list-style-type: disc;
+	list-style: disc;
 }
 
 .d-a-2{
-border-color:white !important;
+	border-color:white !important;
 }
 
 .animateCollapse ul:hover {background-color: rgba(221, 221, 221, 0.30);}
@@ -7672,7 +7671,7 @@ border-color:white !important;
 100% {left:0px; top:0px; opacity:1;}
 }
 
-@-webkit-keyframes myfirst /* Safari and Chrome */
+@-webkit-keyframes myfirst 
 {
 0%   { left:0px; top:-80px;}
 100% {left:0px; top:0px;}
