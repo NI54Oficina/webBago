@@ -442,17 +442,10 @@ if ($(this).scrollTop() >100){
 
 }});
 
-$(window).scroll(function() {
-if ($(this).scrollTop() >380){  
-	$('#titulo-mapa').css('animation','fadein 2s');
-	$('#titulo-mapa').css('animation','myfirst 3s');
-	$('#titulo-mapa').css('animation','myfirst 3s ease-out forwards');
-
-}});
 
 $(window).scroll(function() {
 
-if ($(this).scrollTop() >2500){  
+if ($(this).scrollTop() >2300){  
 	$('#titulo-info').css('animation','fadein 2s');
 	$('#titulo-info').css('animation','myfirst 3s');
 	$('#titulo-info').css('animation','myfirst 3s ease-out forwards');
@@ -461,7 +454,7 @@ if ($(this).scrollTop() >2500){
 
 $(window).scroll(function() {
 
-if ($(this).scrollTop() >2650){  
+if ($(this).scrollTop() >2450){  
 
 	$('#info-tec #texto').each(function(i) {
 	$(this).delay((i++) * 400).fadeTo(1000, 1); })
@@ -474,6 +467,10 @@ $(window).scroll(function() {
 
 if ($(this).scrollTop() >2850){  
 
+	$('#vade').css('animation','fadein 2s');
+	$('#vade').css('animation','myfirst 3s');
+	$('#vade').css('animation','myfirst 3s ease-out forwards');
+	
 	$('#botones div').each(function(i) {
 	$(this).delay((i++) * 150).fadeTo(1000, 1); })
 	
@@ -486,8 +483,9 @@ if ($(this).scrollTop() >2850){
 
 $(window).scroll(function() {
 
-if ($(this).scrollTop() >3050){  
+if ($(this).scrollTop() >3850){  
+	$('.move-x').css('animation','fadein 2s');
+	$('.move-x').css('animation','myfirst 3s');
+	$('.move-x').css('animation','myfirst 3s ease-out forwards');
 
-	$('#titulo-vad').fadeIn();
-	
 }});

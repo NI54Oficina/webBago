@@ -140,7 +140,7 @@
 							<!----- TITULO MAPA --->
 							<div id="titulo-mapa">
          		
-								<h1> <span class="border-celeste">FI</span>LIALES Y REP. COMERCIALES </h1>
+								<h1 id="t-filiales"> <span class="border-celeste">FI</span>LIALES Y REP. COMERCIALES </h1>
                 
 							</div> <!-- Termina titulo-mapa -->
  
@@ -1358,11 +1358,11 @@
 					
 						
 						<!-- TITULO-->
-						<img class="icono-menu right" src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-rrhh.png"><h2 id="titulo-vad" ><span class="border-vad-2">RRHH</span> </h2><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-rrhh.png" class="icono-menu left">
+						<div class="move-x-3"><img class="icono-menu right" src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-rrhh.png"><h2 id="titulo-vad" ><span class="border-vad-2">RRHH</span> </h2><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-rrhh.png" class="icono-menu left"></div>
 	
 							<!-- TEXTO HEADER-->
-							<h3  class="tr move-x"><?php echo Textos::model()->GetText(110); ?></h3>
-							<h4 class="tr-2  move-x"><?php echo Textos::model()->GetText(478); ?></h4>
+							<h3  class="tr move-x-1"><?php echo Textos::model()->GetText(110); ?></h3>
+							<h4 class="tr-2  move-x-2"><?php echo Textos::model()->GetText(478); ?></h4>
 							<a href="" style="display:inline-block;"><div class="send-rrhh" style="color:white;border-radius: 5px;"><?php echo Textos::model()->GetText(111); ?></div></a>
 
 						
@@ -1409,7 +1409,7 @@
 				
 				<!-- ////////// TITULO ////////////// -->
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="display:inline-block;">
-					<h1 id="contacto" style="margin:0;padding-top: 45px;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-bullet--.png"/> <?php echo Textos::model()->GetText(113); ?><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-bullet--.png" /></h1>
+					<h1 id="contacto" style="margin:0;padding-top: 45px;"><div id="cont-h1"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-bullet--.png"/> <?php echo Textos::model()->GetText(113); ?><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-bullet--.png" /></div></h1>
 					<!--<img style="width: 100%;position:relative;" class="hidden-lg hidden-md" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-home-abajo.png" alt="" />!-->
 					<img style="width: 100%;position:relative;" class="" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-home-abajo.png" alt="" />
 				</div>
@@ -1653,13 +1653,48 @@
 			windowarea: "50%"
 		}); 
 		
-		$(".move-x").boxLoader({
-			direction:"x",
-			position: "50%",
+		$(".move-x-1").boxLoader({
+			direction:"y",
+			position: "-100%",
+			effect: "fadeIn",
+			duration: "6s",
+			windowarea: "100%"
+		}); 
+		
+		$(".move-x-2").boxLoader({
+			direction:"y",
+			position: "-100%",
+			effect: "fadeIn",
+			duration: "8s",
+			windowarea: "100%"
+		}); 
+		
+		
+		$(".move-x-3").boxLoader({
+			direction:"y",
+			position: "-100%",
 			effect: "fadeIn",
 			duration: "2s",
-			windowarea: "50%"
+			windowarea: "100%"
 		}); 
+		
+		
+		$("#cont-h1").boxLoader({
+			direction:"y",
+			position: "-100%",
+			effect: "fadeIn",
+			duration: "2s",
+			windowarea: "100%"
+		}); 
+		
+		$("#t-filiales").boxLoader({
+			direction:"y",
+			position: "-100%",
+			effect: "fadeIn",
+			duration: "3s",
+			windowarea: "100%"
+		}); 
+		
 		
 		
 		$("#descripcion").boxLoader({
@@ -1674,15 +1709,6 @@
 		$("#infodcha").boxLoader({
 			direction:"x",
 			position: "50%",
-			effect: "fadeIn",
-			duration: "2s",
-			windowarea: "50%"
-		}); 
-		
-		
-		$("#vade").boxLoader({
-			direction:"x",
-			position: "-50%",
 			effect: "fadeIn",
 			duration: "2s",
 			windowarea: "50%"
