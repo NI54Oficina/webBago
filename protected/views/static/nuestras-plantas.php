@@ -24,7 +24,7 @@
 		
 		<a href="nuestras-plantas-menu" style="display:inline-block;float:right;width:150%;height:50vh;position:relative;" id="videoPlanta">
 			<iframe width="100%" height="100%" allowfullscreen style="border-style:none;" src="<?php echo Yii::app()->request->baseUrl; ?>/pannellum-master/src/standalone/pannellum.htm?config=../../examples/exterior.json" ></iframe>
-			<img style="margin-top: -10%;margin-left: 80%;position:relative;z-index:100;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/mas.png" alt="" />
+			<img style="margin-top: -10%;margin-left: 0;position:relative;z-index:100;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/mas.png" alt="" />
 			<!--<object id="videoPlantaVideo" width="100%" height="500" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" >
 				<param name="SRC" value="1080/Exterior/exterior_1080_out.swf">
 				<embed src="<?php echo Yii::app()->request->baseUrl; ?>/1080/Exterior/exterior_1080_out.swf" width="900" height="500" style="width: 100%;">

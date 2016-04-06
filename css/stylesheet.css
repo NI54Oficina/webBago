@@ -6563,6 +6563,10 @@ figure.snip1156:hover .salud-ambiental{
 		position:relative;
 		z-index:100000;
 	}
+	
+	#sidePlantas{
+		padding-top:0 !important;
+	}
  }
 /** fin fix ipad menu**/
 
