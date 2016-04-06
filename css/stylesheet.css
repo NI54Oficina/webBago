@@ -7588,7 +7588,6 @@ position:fixed;
 		-o-transition: all 1s ease;
 		-ms-transition: all 1s ease;
 			transition: all 1s ease;
-		
 		margin-top: -4%;
 	}
 	
@@ -7684,7 +7683,7 @@ border-color:white !important;
 
 
 #sidePlantas{
-		padding-top:54vh;
+	padding-top:54vh;
 }
 
 

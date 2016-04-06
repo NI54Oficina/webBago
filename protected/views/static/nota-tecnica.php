@@ -35,6 +35,12 @@ if($nota && $nota->seccion=="tecnica"){
 			<div class="line2-infotec-noticias"></div>
 			<h1 style="margin-left: 0;padding-bottom:6px;color: #66CCED;font-size:22px;line-height: 30px;"><?php echo $nota->titulo; ?></h1>
 			<p style="font-size: 14px;"><?php echo $nota->texto; ?></p>
+
+
+
+
+
+
 		</div>
 		
 	</div>

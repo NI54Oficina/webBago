@@ -1601,7 +1601,7 @@
 				<div style="text-align:center;" class="hidden-sm hidden-xs">
 					<?php include('redes-sociales-home-pc.php');?>
 				</div>	
-					<!-- SCRIPT PARALLAX -->
+	<!-- SCRIPT PARALLAX -->
 	<?php include('parallax.php'); ?>
 	<!-- FOOTER-->
 	<?php  include('footer-home.php');?>
