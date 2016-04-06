@@ -19,7 +19,7 @@
 	<?php } ?>
 	<?php if($_SESSION["lng"]=="es"){ ?>
 	<div class="tr-widget col-lg-12 col-md-12 col-sm-12 col-xs-12"><a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/prensa"><div class="td-widget  col-lg-2 col-md-2 col-sm-2 col-xs-2" ><div class="img-widget icono-prensa"></div></div><div><p class="p-widget"><?php echo Textos::model()->GetText(20); ?></p></div></a></div>
-	</div>
+	
 	<?php } ?>
-
+	</div>
 </div>
