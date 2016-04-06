@@ -1290,7 +1290,7 @@
 								<?php foreach($revistas as $revista){ ?> 
 								<!-- ITEM REVISTA-->
 								<li id="revista-<?php echo $revista->id; ?>" class="col-lg-4 col-md-2 col-sm-2 col-xs-4">
-								
+									<a href="<?php echo Yii::app()->request->baseUrl; ?>/uploads/molino/pdf/revista-<?php echo $revista->numero; ?>.pdf" target="_blank">
 									<!-- img -->
 									<div class="rev-30"> </div> 
 								
@@ -1313,6 +1313,7 @@
 										background-image:url(<?php echo Yii::app()->request->baseUrl; ?>/uploads/molino/img/portada-<?php echo $revista->numero; ?>.png);
 									}
 									</style>
+									</a>
 								</li><!-- termina item -->
 							
 								<?php } ?>
