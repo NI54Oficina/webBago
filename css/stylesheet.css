@@ -6517,7 +6517,6 @@ figure.snip1156:hover .salud-ambiental{
 .line2-infotec-noticias{
     border-top: 1px solid #6D6D6D;
     width: 35px;
-    margin-left: 7px;
 }
 
 .pinside-infotec-noticias{
@@ -7173,6 +7172,7 @@ figure.snip1156 .d-a-2 h2{
 		text-align: center;
 		padding-left: 50%;
 	}
+	#descripcion {height: auto !important;border:none;}
 	
 }
 

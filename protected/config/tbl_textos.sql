@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-04-2016 a las 19:18:24
+-- Tiempo de generación: 06-04-2016 a las 19:47:26
 -- Versión del servidor: 10.1.9-MariaDB
 -- Versión de PHP: 5.5.30
 
@@ -45,7 +45,7 @@ INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (5, '“mejor empresa latinoamericana veterinaria 2014”', '', ''),
 (6, 'Quiénes somos', 'Who we are', 'Quem Somos'),
 (7, 'Biogénesis Bagó es una empresa líder en la investigación y desarrollo de biotecnologías para la constante evolución de la salud animal.', 'Biogénesis Bagó is a leading company in research and development of biotechnology to further help the constant evolution in animal health.', 'A Biogénesis Bagó é uma empresa líder na pesquisa e\n\ndesenvolvimento de biotecnologias para constante evolução da saúde animal.'),
-(8, 'Misión , Visión y Valores', 'Mission, Vision and Values', 'Visão, Missão e Valores'),
+(8, 'Misión, Visión y Valores', 'Mission, Vision and Values', 'Visão, Missão e Valores'),
 (9, 'Nuestros principales compromisos para ayudar a producir las crecientes demandas de alimentos de calidad que el mundo necesita.', 'Our main commitment is to help produce high quality food to comply with the growing demands of the world today.  ', 'Nosso principal compromisso é ajudar a produzir\nmais para atender a crescente demanda de alimentos de qualidade que o \nmundo necessita.'),
 (10, 'Lucha contra la  Aftosa', 'Fight against Foot and Mouth Disease  ', 'Luta Contra a Febre Aftosa'),
 (11, 'Por la calidad de nuestra vacuna, somos un referente mundial en la lucha contra la Fiebre Aftosa. Aportamos más de 2000 millones de dosis para campañas oficiales.', 'Due to the quality of our vaccine, we are a world renowned referent in the fight against Foot and Mouth Disease.  We supply over 2000 million doses for official campaigns.  ', 'Pela qualidade de nossas vacinas, somos uma referencia mundial na luta contra a Febre Aftosa. Contribuímos com mais de 2 bilhões de doses para campanhas oficiais.'),
