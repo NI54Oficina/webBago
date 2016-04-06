@@ -6,7 +6,7 @@
 				
 				</div>
 				
-				<div class="col-lg-10 col-md-10 col-sm-10 col-xs-9 container-title-info-revista">
+				<div class="col-lg-10 col-md-10 col-sm-10 col-xs-9 container-title-info-revista" >
 					<div class="dot-infotec-noticias" style="margin-right: 1%;"></div>
 			
 					<h1 class="h1-infotec-noticias2">INFORMACIÓN TÉCNICA</h1>	
