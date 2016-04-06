@@ -1020,7 +1020,7 @@
 								<div class="botonVademecum-Int"> 
 			
 									<div class="outerLine-Int">
-										<p style="text-transform: uppercase;" id="nom-btn"><?php echo Textos::model()->GetText(440); ?> </p>
+										<p style="text-transform: uppercase; width: 90%;" id="nom-btn"><?php echo Textos::model()->GetText(440); ?> </p>
 									</div>
 			
 								</div>
