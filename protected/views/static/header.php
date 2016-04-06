@@ -158,7 +158,7 @@
 				
 				<ul class="dropdown-menu dropdown-menu-right">
 							<img id="flecha-submenu" src="<?php echo Yii::app()->request->baseUrl; ?>/img/flecha-submenu.png" />
-								<li style="margin-top:-5px;"><a class="link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/home"><?php echo Textos::model()->GetText(434); ?></a></li>
+								<li style="margin-top:-5px;"><a class="link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/home#info-tec"><?php echo Textos::model()->GetText(434); ?></a></li>
 								<li><a class="link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/home"><?php echo Textos::model()->GetText(435); ?></a></li>
 								<li><a class="link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/informacion-tecnica"><?php echo Textos::model()->GetText(436); ?></a></li>
 					</ul>
@@ -214,11 +214,11 @@
 			<?php } ?>
 		
 			<!-- RRHH -->
-			<li class="li-nav"><a class="a-nav link-menu" href=""><?php echo Textos::model()->GetText(449); ?></a></li>
+			<li class="li-nav"><a class="a-nav link-menu" href="<?php echo Yii::app()->request->baseUrl; ?>/home#header-rrhh"><?php echo Textos::model()->GetText(449); ?></a></li>
 			
 			
 			<!-- CONTACTO -->
-			<li class="li-nav"><a class="a-nav link-menu" href="<?php echo Yii::app()->request->baseUrl; ?>/home"><?php echo Textos::model()->GetText(450); ?></a></li>
+			<li class="li-nav"><a class="a-nav link-menu" href="<?php echo Yii::app()->request->baseUrl; ?>/home#section-contacto"><?php echo Textos::model()->GetText(450); ?></a></li>
 			
 		</ul> <!-- termina botonera -->
 		

@@ -34,7 +34,7 @@
 		</div>
 		
 		
-		<p class="nace-linea-tiempo">Nace</p> <p class="bago-linea-tiempo" style="color: #011E49;">laboratorios Bagó</p>
+		<p class="nace-linea-tiempo"><?php echo Textos::model()->GetText(501); ?></p> <p class="bago-linea-tiempo" style="color: #011E49;"><?php echo Textos::model()->GetText(502); ?></p>
 	</div>
 			<!--<img style="" src="img/linea-tiempo-1-01.png" />-->
 		<section id="cd-timeline" class="cd-container">
