@@ -152,11 +152,12 @@
 						
 							<!------- MAPA ----------->
 							<map name="img-mapaMap">
-								<area class="btn-mapa" info="infoMexico" shape="rect" coords="88,190,154,209" href="javascript:void(0);">
-								<area class="btn-mapa" info="infoCenAm" shape="rect" coords="173,200,275,223" href="javascript:void(0);">
-								<area class="btn-mapa" info="infoBrasil" shape="rect" coords="228,253,275,271" href="javascript:void(0);">
-								<area class="btn-mapa" info="infoBolivia" shape="rect" coords="166,276,224,293" href="javascript:void(0);">
-								<area class="btn-mapa" info="infoUruguay" shape="rect" coords="237,304,302,327" href="javascript:void(0);">
+								<area class="btn-mapa" info="infoMexico" shape="rect" coords="140,190,195,209" href="javascript:void(0);">
+								<area class="btn-mapa" info="infoCenAm" shape="rect" coords="220,195,298,228" href="javascript:void(0);">
+								<area class="btn-mapa" info="infoBrasil" shape="rect" coords="288,250,315,281" href="javascript:void(0);">
+								<area class="btn-mapa" info="infoBolivia" shape="rect" coords="220,276,268,293" href="javascript:void(0);">
+								<area class="btn-mapa" info="infoParaguay" shape="rect" coords="280,290,336,308" href="javascript:void(0);">
+								<area class="btn-mapa" info="infoUruguay" shape="rect" coords="280,310,336,328" href="javascript:void(0);">
 								<area class="btn-mapa" info="infoArgentina" shape="rect" coords="260,336,320,355" href="javascript:void(0);">
 							</map>
 						
