@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 05-04-2016 a las 19:02:57
+-- Tiempo de generación: 06-04-2016 a las 18:11:30
 -- Versión del servidor: 10.1.9-MariaDB
 -- Versión de PHP: 5.5.30
 
@@ -38,20 +38,20 @@ CREATE TABLE `tbl_textos` (
 --
 
 INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
-(1, 'Bienvenidos ', 'Welcome ', 'Bienvenidos '),
+(1, 'Bienvenidos ', 'Welcome ', 'Bem Vindos'),
 (2, 'La evolución de la', 'The evolution of', 'A evolução da'),
 (3, 'Salud animal', 'Animal Health', 'Saúde animal'),
-(4, 'BIOGÉNESIS BAGÓ reconocida', '\n', 'BIOGÉNESIS BAGÓ reconocida'),
-(5, '“mejor empresa latinoamericana veterinaria 2014”', '', '"melhor empresa do setor Veterinário da América Latina em 2014"'),
+(4, 'BIOGÉNESIS BAGÓ reconocida', '\n', ''),
+(5, '“mejor empresa latinoamericana veterinaria 2014”', '', ''),
 (6, 'Quiénes somos', 'Who we are', 'Quem Somos'),
 (7, 'Biogénesis Bagó es una empresa líder en la investigación y desarrollo de biotecnologías para la constante evolución de la salud animal.', 'Biogénesis Bagó is a leading company in research and development of biotechnology to further help the constant evolution in animal health.', 'A Biogénesis Bagó é uma empresa líder na pesquisa e\n\ndesenvolvimento de biotecnologias para constante evolução da saúde animal.'),
 (8, 'Misión , Visión y Valores', 'Mission, Vision and Values', 'Visão, Missão e Valores'),
 (9, 'Nuestros principales compromisos para ayudar a producir las crecientes demandas de alimentos de calidad que el mundo necesita.', 'Our main commitment is to help produce high quality food to comply with the growing demands of the world today.  ', 'Nosso principal compromisso é ajudar a produzir\nmais para atender a crescente demanda de alimentos de qualidade que o \nmundo necessita.'),
-(10, 'Lucha contra la  Aftosa', 'Fight against Foot and Mouth Disease:  ', 'Luta Contra a Febre Aftosa'),
+(10, 'Lucha contra la  Aftosa', 'Fight against Foot and Mouth Disease  ', 'Luta Contra a Febre Aftosa'),
 (11, 'Por la calidad de nuestra vacuna, somos un referente mundial en la lucha contra la Fiebre Aftosa. Aportamos más de 2000 millones de dosis para campañas oficiales.', 'Due to the quality of our vaccine, we are a world renowned referent in the fight against Foot and Mouth Disease.  We supply over 2000 million doses for official campaigns.  ', 'Pela qualidade de nossas vacinas, somos uma referencia mundial na luta contra a Febre Aftosa. Contribuímos com mais de 2 bilhões de doses para campanhas oficiais.'),
 (12, 'Trayectoria - hitos', 'Milestone Trajectory', 'Marcos'),
 (13, 'Un recorrido que demuestra el espíritu innovador y la permanente evolución de la compañía en la búsqueda de soluciones para una producción más eficiente.', 'A path that shows the innovative spirit and the permanent evolution of the company whilst searching for solutions to a more efficient production.  ', 'Um caminho que mostra o espírito inovador e a constante evolução  da empresa na busca de soluções para uma produção mais eficiente.'),
-(14, 'Nuestras plantas', 'Our plantOur Manufacturing Plants', 'Nossos Parques Industriais'),
+(14, 'Nuestras plantas', 'Our Manufacturing Plants', 'Nossos Parques Industriais'),
 (15, 'Avanzada tecnología y  altos estándares de calidad respaldan  todo el proceso de producción en nuestras plantas modelos instaladas en Argentina.', 'Advanced technology and high quality standards support the entire production process in our model manufacturing plants in Argentina', 'Avançada tecnologia e altos padrões de qualidade são os pilares do processo de produção em nossas industriais instaladas na Argentina, Brasil e China.'),
 (16, 'RSE - Sustentabilidad', 'RSE-Sustainability', 'RSE Sustentabilidade'),
 (17, 'Aportamos nuestros mejores recursos para desarrollar soluciones y relaciones sustentables, junto a las comunidades de los países donde actuamos.', 'We supply our best resources to develop solutions and sustainable relationships together with the communities in the countries in which we are present.', 'Fornecemos nossos melhores recursos para  desenvolver soluções sustentáveis junto às comunidades dos países que   atuamos.'),
@@ -134,11 +134,11 @@ INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (94, '• Hormonales: sólido', '• Hormones: Solids', '• Hormonais:  Sólidos'),
 (95, '• Ectoparasiticidas', '• Ectoparasiticides', '• Ectoparasiticidas'),
 (96, 'Planta Arraçoiaba da Serra , Sao Paulo, Brasil', 'Arraçoiaba da Serra Manufacturing Plant, Sao Paulo, Brazil', 'Parque Industrial Arraçoiaba da Serra, São Paulo, Brasil'),
-(97, 'Mas control sobre ectoparasitosis ', 'More control of ectoparasites', 'Mais controle sobre ectoparasitoses'),
+(97, 'Más control sobre ectoparásitos', 'More control of ectoparasites', 'Mais controle sobre ectoparasitoses'),
 (98, 'Para brindar soluciones tecnológicas que cubran las necesidades específicas de la ganadería en Brasil, instalamos una planta dedicada a la producción de ectoparaciticidas.', 'In order to offer technological solutions to cover the specific needs of livestock in Brazil, we built a plant specialised in the production of ectoparasiticides.  ', 'Para fornecer soluções tecnológicas que atendam às necessidades específicas   da pecuária no Brasil, instalou-se uma fábrica dedicada à produção de   ectoparaciticidas.'),
 (99, 'Nuestras instalaciones cumplen con los máximos estándares de calidad y con las normas de BPM (Buenas Prácticas de Manufactura) exigidas por el Ministerio de Agricultura, Pecuaria y Abastecimiento de Brasil.', 'Our installations comply with the highest standards of quality and the norms of Good Manufacturing Practices (GMP) demanded by the Ministry of Agriculture, Fishery and Supply in Brazil.  ', 'Nossas instalações seguem os mais altos padrões de qualidade e com as  normas de BPM (Boas Praticas de Manufatura) exigidas pelo Ministério de   Agricultura, Pecuária e Abastecimento do Brasil.'),
 (100, ' Planta Jinhai Biotechnology, provincia de Shaanxi, China', 'Jinhai Biotechnology Manufacturing Plant, Shaanxi Province, China', 'Parque Industrial Jinhai Biotechnology, província de Shaanxi, China'),
-(101, 'Alta calidad de vacuna contra la Aftosa para la producción china', 'High Quality Vaccine against Foot and Mouth Disease for Chinese Production', 'Alta qualidade em vacinas contra a Aftosa para a produção chinesa'),
+(101, 'Alta calidad de vacuna contra la Fiebre Aftosa para la producción china', 'High Quality Vaccine against Foot and Mouth Disease for Chinese Production', 'Alta qualidade em vacinas contra a Febre Aftosa para a produção chinesa'),
 (102, 'Jinhai Biotechnology es una empresa que surge del Joint Venture entre Biogénesis Bagó y  la compañía china Hile Biotechnology para la producción de vacuna contra la Fiebre Aftosa.', 'Jinhai Biotechnology is a Joint Venture company between Biogenesis Bagó and the Chinese company Hile Biotechnology for the production of the vaccine against Foot and Mouth Disease.', 'Jinhai Biotechnology é uma empresa que surge através da Join Venture entre   Biogénesis Bagó e a companhia chinesa Hile Biotechnology para a produção   de vacina contra Febre Aftosa.'),
 (103, 'Con una superficie cubierta de casi 15000 m2 cubiertos, con tecnología de última generación, en la planta funcionan las áreas de producción,  los laboratorios de control de calidad, junto con los depósitos de materias primas y producto terminado. De acuerdo a lo requerido por la legislación china, la planta cuenta también con un sector segregado, con áreas de bioseguridad y acceso restringido, donde se realizan ensayos de control de calidad en animales.', 'With a surface area of almost 15 000 m2 and with next-generation technology, the plant is responsable for production, quality control laboratories, as well as the storage units for raw materials and the finished product.  According to Chinese legislation, the manufacturing plant also has an isolated area, with biosafety measures and restricted access, where quality controls are tested on animals.  ', 'Com uma área coberta de 15.000m², e tecnologia de última geração,   funcionam as áreas de produção, laboratórios de controle de qualidade,   depósitos de matéria prima e produto final. De acordo com o exigido pela   legislação chinesa, o parque conta também com um setor separado, com áreas   de biossegurança e acesso restrito, onde são realizados testes de controle de   qualidade em animais.'),
 (104, 'REVISTA EL MOLINO', 'MAGAZINE EL MOLINO', 'REVISTA EL MOLINO'),
@@ -499,7 +499,7 @@ INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (464, 'Biogénesis Bagó de México S.A. de C.V.', '', ''),
 (465, 'Av. Periférico Sur 6677 Piso 5, Delegación Xochimilco, Colonia Ejidos de Tepepan, México DF.', '', ''),
 (466, 'TEL', '', ''),
-(467, '(52) (55) 3000-1500 (extensiones 1578 y 1423) <br/> </br>(Llamada sin costo desde el interior del país) 01-800-999-2240  </br> milagros.ramos@biogenesisbago.com', '', ''),
+(467, '(52) (55) 5555 8223 / 5555 8216 <br/>(Llamada sin costo desde el interior del país) 01-800-999-2240 ', '', ''),
 (468, 'Distribuidoras:', '', ''),
 (469, 'ELANCO: Eli Lilly y Cía de México S.A. de C.V.', '', ''),
 (470, 'Calzada de Tlalpan #2024, Colonia Campestre Churubusco, C.P. 04200, México, D.F.', '', ''),
@@ -523,8 +523,15 @@ INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (488, 'Trabajar con equipos de diferentes áreas y regiones te permitirá construir nuevos lazos con colaboradores y, a la vez, descubrir  otras posibilidades de desarrollo profesional. Apostamos al compromiso y la pasión de nuestros empleados como pilares indispensables para un sólido crecimiento de toda la compañía', 'Working with teams from different areas and regions will allow you to build new bonds with collaborators and, simultaneously, discover other possibilities for your professional growth. We bet on our employees commitment and passion as our indispensable pillars for a solid growth of our entire company', ''),
 (489, 'Copyright de Biogénesis Bagó®', '', ''),
 (490, 'Volver', 'Back', 'Retorno'),
-(493, 'Biogensis Bago', 'Biogensis Bago', 'Biogensis Bago'),
-(494, 'Sección no habilitada en su idioma', '', '');
+(493, 'Biogensis Bago', '', ''),
+(494, 'Premio Animal Pharm', 'Animal Pharm Award', 'Prêmio Animal Pharm'),
+(495, 'como Mejor empresa Latinoamericana del Sector Veterinario', 'for the Best Company in Latin & South America', 'Melhor empresa do setor Veterinário da América Latina em 2014'),
+(497, 'Diario Clarin 2015', 'Clarin Award', 'Premio Clarín'),
+(498, 'Desarrollo empresarial', 'Business development', '"Prêmio trabalho e Trajectoria"'),
+(499, 'Premio Funprecit', 'Funprecit Award', 'Fumprecit'),
+(500, 'a la excelencia en desarrollos para la salud animal', 'to the excellence in Animal Health developments', '"Prêmio excelência no desenvolvimento de sanidade animal"'),
+(501, 'Nace', 'Creation of', 'Nasce'),
+(502, 'laboratorios Bagó', 'Bagó laboratories', 'laboratorios Bagó');
 
 --
 -- Índices para tablas volcadas
@@ -544,7 +551,7 @@ ALTER TABLE `tbl_textos`
 -- AUTO_INCREMENT de la tabla `tbl_textos`
 --
 ALTER TABLE `tbl_textos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=495;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=503;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
