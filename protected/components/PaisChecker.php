@@ -10,7 +10,10 @@ class PaisChecker extends CApplicationComponent
 			$initUrl=$_SERVER['REQUEST_URI'];
 			
 			if(substr($initUrl, -1)!="/"){
-						header("Location: http://".$_SERVER['SERVER_NAME']."/".$initUrl."/");
+						$toGo=$_SERVER['SERVER_NAME']."/".$initUrl."/";
+						$toGo= str_replace("//","/",$toGo);
+						header("Location: http://".$toGo);
+						exit();
 			}
 			
 			$initUrl=substr($initUrl,1);
@@ -41,7 +44,9 @@ class PaisChecker extends CApplicationComponent
 				
 				if( isset($_SESSION["pais"])){
 					$short= Pais::model()->findByPk($_SESSION["pais"])->short;
-					header("Location: http://".$_SERVER['SERVER_NAME']."/".$webRoot.$short."/".$currentUrl);
+					$toGo= $_SERVER['SERVER_NAME']."/".$webRoot.$short."/".$currentUrl;
+					$toGo= str_replace("//","/",$toGo);
+					header("Location: http://".$toGo);
 				}else{
 					if(!isset($_SESSION["redirectURL"])){
 						//echo "entra session";
@@ -49,7 +54,9 @@ class PaisChecker extends CApplicationComponent
 					}else{
 						
 					}
-					header("Location: http://".$_SERVER['SERVER_NAME']."/".$webRoot."paises");
+					$toG=$_SERVER['SERVER_NAME']."/".$webRoot."paises";
+					$toGo= str_replace("//","/",$toGo);
+					header("Location: http://".$toGo);
 				}
 				
 				exit();
