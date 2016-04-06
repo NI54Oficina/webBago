@@ -3073,6 +3073,11 @@ fH
 	font-weight:700;
 }
 
+.item-institucional a:focus{
+	text-decoration: none;
+	outline-color: transparent;
+
+}
 
 .p-inst-home{
     color: white;
@@ -5025,6 +5030,17 @@ figure.snip1156:hover .salud-ambiental{
 	transition:all 0.5s ease;
 }
 
+.banderas-paises-principal a:focus{
+	text-decoration: none;
+	color: inherit;
+}
+
+.banderas-paises-principal a:active{
+	text-decoration: none;
+	color: inherit;
+}
+
+
 .a-paises-principal:hover{
 	color:white;
 }
@@ -6496,6 +6512,11 @@ figure.snip1156:hover .salud-ambiental{
 	transition: all 0.6s ease;
 }
 
+.leer-infotec-noticias:focus{
+	text-decoration: none;
+	color: inherit;
+}
+
 
 
 #titulo-infotec-noticias{
@@ -7709,3 +7730,5 @@ border-color:white !important;
 	}
 }
 
+
+#menu-vademecum a:focus {text-decoration:none}
