@@ -1420,7 +1420,7 @@
 			
     
 					<!--********** DESCRIPCIÓN / UBICACIÓN **********  -->
-					<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12" id="descripcion" style="" hid="2">
+					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" id="descripcion" style="float:left;" hid="2">
                         
 						<p style="text-transform:uppercase;" class="ubicacion"><img class="ico-ubi" src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-ubicacion.png"/><?php echo Textos::model()->GetText(479); ?></p>
                         
@@ -1438,7 +1438,7 @@
                   
 				
 					<!-- ////////// INFORMACIÓN ////////////// -->        
-					<div id="infodcha" class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="display:inline-block;float:initial;text-align:center;" hid="2">        
+					<div id="infodcha" class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="display:inline-block;float:left;text-align:center;" hid="2">        
 						<div id="enviando"><?php echo Textos::model()->GetText(481); ?></div>
 						<div id="enviado"><?php echo Textos::model()->GetText(480); ?></div>
 						<div id="errorEnvio"><?php echo Textos::model()->GetText(482); ?></div>
