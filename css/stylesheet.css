@@ -7640,4 +7640,10 @@ border-color:white !important;
 .ul-nav li a {
 	white-space:initial;
 }
-
+/**arreglo paises botones en resolusión pc chica **/
+@media screen and (min-width: 769px){
+	#ul-nav-2-mobile{
+		display:none !important;
+	}
+}
+/** **/
