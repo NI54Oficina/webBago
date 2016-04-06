@@ -132,7 +132,7 @@
 		<!--CURVA-->
 		<img style=" width: 100%;position:relative;margin-top:-2px;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-home-abajo.png" alt="" style="" />	
 
-		<section class="special" data-scrollax-parent="true" style="background:transparent;width:100%;overflow-x:hidden;">
+		<section class="special" data-scrollax-parent="true" style="background:transparent;width:100%;overflow-x:hidden;" id="mapa-filiales">
 		<!------------------------------------------------------------------ SECCION 2: FILIALES ------------------------------------------------------------------>			
 			
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-bottom:30px;" id="map">
@@ -702,7 +702,7 @@
 	
 	<img style="width: 100%;position:relative;margin-bottom:-1px;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-celeste.png" alt="" />	
 	
-	<section class="special" data-scrollax-parent="true" style="background: rgb(129, 206, 231);width:100%;overflow-x:hidden;position:relative;" >
+	<section class="special" data-scrollax-parent="true" style="background: rgb(129, 206, 231);width:100%;overflow-x:hidden;position:relative;" id="inform-tec">
 
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"  id="info-tec" style="overflow:hidden;padding-bottom:30px;">
 

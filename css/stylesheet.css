@@ -84,11 +84,6 @@ p{
 font-size: 22px;
 }
 
-.div-img-aft {
-    /*webkit-box-shadow: inset 0px -1px 0px 15px rgba(255,255,255,1);
-    -moz-box-shadow: inset 0px -1px 0px 15px rgba(255,255,255,1);
-    box-shadow: inset 5px -1px 0px 3px rgba(255,255,255,1);*/
-}
 
 
 /****************** HOME  VIDEO *******************/
@@ -7694,8 +7689,8 @@ position:fixed;
 
 @-webkit-keyframes myfirst 
 {
-0%   { left:0px; top:-80px;}
-100% {left:0px; top:0px;}
+	0%   { left:0px; top:-80px;}
+	100% {left:0px; top:0px;}
 }
 
 
