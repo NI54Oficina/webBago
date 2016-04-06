@@ -987,7 +987,7 @@
 									<div class="botonVademecum-Af"> 
 		
 											<div class="outerLine-Af">
-											<p style="text-transform: uppercase;" id="nom-btn"><?php echo Textos::model()->GetText(437); ?> </p>
+											<p style="text-transform: uppercase;" id="nom-btn"><?php echo Yii::app()->paisChecker->getSeccion(1); ?></p>
 									</div>
 		
 									</div>
@@ -1005,7 +1005,7 @@
 								<div class="botonVademecum-Ant"> 
 			
 									<div class="outerLine-Ant">
-										<p style="text-transform: uppercase;" id="nom-btn"> <?php echo Textos::model()->GetText(438); ?> </p>
+										<p style="text-transform: uppercase;" id="nom-btn"><?php echo Yii::app()->paisChecker->getSeccion(6); ?></p>
 									</div>
 			
 								</div>
@@ -1023,7 +1023,7 @@
 								<div class="botonVademecum-Int"> 
 			
 									<div class="outerLine-Int">
-										<p style="text-transform: uppercase; width: 90%;" id="nom-btn"><?php echo Textos::model()->GetText(440); ?> </p>
+										<p style="text-transform: uppercase; width: 90%;" id="nom-btn"><?php echo Yii::app()->paisChecker->getSeccion(4); ?> </p>
 									</div>
 			
 								</div>
@@ -1041,7 +1041,7 @@
 								<div class="botonVademecum-Ext"> 
 			
 									<div class="outerLine-Ext">
-										<p style="text-transform: uppercase;" id="nom-btn"><?php echo Textos::model()->GetText(439); ?> </p>
+										<p style="text-transform: uppercase;" id="nom-btn"><?php echo Yii::app()->paisChecker->getSeccion(3); ?></p>
 									</div>
 			
 								</div>
@@ -1059,7 +1059,7 @@
 								<div class="botonVademecum-Bio"> 
 			
 									<div class="outerLine-Bio">
-										<p style="text-transform: uppercase;" id="nom-btn"><?php echo Textos::model()->GetText(441); ?> </p>
+										<p style="text-transform: uppercase;" id="nom-btn"><?php echo Yii::app()->paisChecker->getSeccion(2); ?></p>
 									</div>
 			
 								</div>
@@ -1077,7 +1077,7 @@
 								<div class="botonVademecum-Ende"> 
 			
 									<div class="outerLine-Ende">
-										<p style="text-transform: uppercase;" id="nom-btn"><?php echo Textos::model()->GetText(442); ?> </p>
+										<p style="text-transform: uppercase;" id="nom-btn"><?php echo Yii::app()->paisChecker->getSeccion(5); ?></p>
 									</div>
 			
 								</div>
@@ -1095,7 +1095,7 @@
 								<div class="botonVademecum-Farma"> 
 			
 									<div class="outerLine-Farma">
-										<p style="text-transform: uppercase;" id="nom-btn"><?php echo Textos::model()->GetText(443); ?></p>
+										<p style="text-transform: uppercase;" id="nom-btn"><?php echo Yii::app()->paisChecker->getSeccion(9); ?></p>
 									</div>
 			
 								</div>
@@ -1113,7 +1113,7 @@
 								<div class="botonVademecum-Nutri"> 
 			
 									<div class="outerLine-Nutri">
-										<p style="text-transform: uppercase;" id="nom-btn"><?php echo Textos::model()->GetText(444); ?></p>
+										<p style="text-transform: uppercase;" id="nom-btn"><?php echo Yii::app()->paisChecker->getSeccion(11); ?></p>
 									</div>
 			
 								</div>
@@ -1131,7 +1131,7 @@
 								<div class="botonVademecum-Repro"> 
 			
 									<div class="outerLine-Repro">
-										<p style="text-transform: uppercase;" id="nom-btn"><?php echo Textos::model()->GetText(445); ?></p>
+										<p style="text-transform: uppercase;" id="nom-btn"><?php echo Yii::app()->paisChecker->getSeccion(7); ?></p>
 									</div>
 			
 								</div>
@@ -1149,7 +1149,7 @@
 								<div class="botonVademecum-Sal-Amb"> 
 				
 									<div class="outerLine-Sal-Amb"style="">
-										<p style="text-transform: uppercase;" id="nom-btn"><?php echo Textos::model()->GetText(446); ?></p>
+										<p style="text-transform: uppercase;" id="nom-btn"><?php echo Yii::app()->paisChecker->getSeccion(10); ?></p>
 									</div>
 				
 								</div>
@@ -1167,7 +1167,7 @@
 								<div class="botonVademecum-Vit-Min"> 
 			
 									<div class="outerLine-Vit-Min"style="">
-										<p style="text-transform: uppercase; margin-top: 39%;" id="nom-btn"> <?php echo Textos::model()->GetText(476); ?><BR/> <?php echo Textos::model()->GetText(477); ?></p>
+										<p style="text-transform: uppercase; margin-top: 39%;" id="nom-btn"><?php echo Yii::app()->paisChecker->getSeccion(8); ?></p>
 									</div>
 			
 								</div>
