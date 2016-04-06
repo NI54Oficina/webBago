@@ -1,6 +1,6 @@
 
 	<script src="<?php echo Yii::app()->getBaseUrl(true); ?>/js/jquery.rwdImageMaps.js"></script>
-	<script src="<?php echo Yii::app()->getBaseUrl(true); ?>/js/jquery.rwdImageMaps.min.js"></script>
+	<!--<script src="<?php echo Yii::app()->getBaseUrl(true); ?>/js/jquery.rwdImageMaps.min.js"></script>!-->
 
 
 <script>
