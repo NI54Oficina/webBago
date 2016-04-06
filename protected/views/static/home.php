@@ -157,7 +157,7 @@
 								<area class="btn-mapa" info="infoBrasil" shape="rect" coords="228,253,275,271" href="javascript:void(0);">
 								<area class="btn-mapa" info="infoBolivia" shape="rect" coords="166,276,224,293" href="javascript:void(0);">
 								<area class="btn-mapa" info="infoUruguay" shape="rect" coords="237,304,302,327" href="javascript:void(0);">
-								<area class="btn-mapa" info="infoArgentina" shape="rect" coords="212,326,312,344" href="javascript:void(0);">
+								<area class="btn-mapa" info="infoArgentina" shape="rect" coords="260,336,320,355" href="javascript:void(0);">
 							</map>
 						
 						</div> 

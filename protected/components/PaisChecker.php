@@ -54,7 +54,7 @@ class PaisChecker extends CApplicationComponent
 					}else{
 						
 					}
-					$toG=$_SERVER['SERVER_NAME']."/".$webRoot."paises";
+					$toGo=$_SERVER['SERVER_NAME']."/".$webRoot."paises";
 					$toGo= str_replace("//","/",$toGo);
 					header("Location: http://".$toGo);
 				}

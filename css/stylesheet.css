@@ -2669,6 +2669,7 @@ footer{
 #mapa-total{
 	font-family:'arialregular';
 	margin-left:4%;
+	border-right:solid thin #fff;
 }
 
 
@@ -2723,7 +2724,7 @@ footer{
 
 
 #info-mapa{
-	border-left:solid thin #fff;
+	/*border-left:solid thin #fff;*/
 	 margin-top: 3%;
 }
 
@@ -6795,7 +6796,7 @@ figure.snip1156:hover .inner-producto-vademecum{
 figure.snip1156 .d-a-2 h2{
 	display:inline-block;
 	width:100%;
-	height:50%;
+	height:65%;
 	text-align:center;
 	color:white !important;
 }
@@ -7709,3 +7710,6 @@ border-color:white !important;
 	}
 }
 
+.plus-vademecum{
+	font-size:50px;
+}
