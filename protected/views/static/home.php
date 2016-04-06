@@ -1374,7 +1374,7 @@
 				<div style="width:100%;display:inline-block;text-align:center;padding-bottom:10vh;margin-top:-2px;padding-top:40vh;position:relative;">
 				<!-- TEXTO-->
 				<div id="whiteFiller"style="background-color:white;position:absolute;width:100%;height:400px;z-index:2;top:226px;"></div>
-				<div style="width:100%;position:relative;z-index:4">
+				<div style="width:100%;position:relative;z-index:4; height: 100px;">
 				<p class="p-rrhh-home" style="width:50%;display:inline-block;margin:0;padding:0;" ><?php echo Textos::model()->GetText(112); ?></p>
 
 
