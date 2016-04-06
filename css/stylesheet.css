@@ -7641,3 +7641,6 @@ border-color:white !important;
 	white-space:initial;
 }
 
+@media screen and (max-width: 1024px){
+	.banderas-paises-principal { opacity: 1; }
+}
