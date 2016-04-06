@@ -13,7 +13,7 @@
 	    $(function() {
             var BV = new $.BigVideo();
 			BV.init();
-			BV.show('<?php echo Yii::app()->getBaseUrl(true); ?>/video/home.mp4',{ambient:true});
+			BV.show('<?php echo Yii::app()->getBaseUrl(true); ?>/video/home1.mp4',{ambient:true});
 	    });
     </script>
 	<div >
