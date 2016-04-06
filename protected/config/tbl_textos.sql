@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-04-2016 a las 18:11:30
+-- Tiempo de generación: 06-04-2016 a las 19:18:24
 -- Versión del servidor: 10.1.9-MariaDB
 -- Versión de PHP: 5.5.30
 
@@ -38,7 +38,7 @@ CREATE TABLE `tbl_textos` (
 --
 
 INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
-(1, 'Bienvenidos ', 'Welcome ', 'Bem Vindos'),
+(1, 'Bienvenidos ', 'Welcome ', 'Bem-vindos'),
 (2, 'La evolución de la', 'The evolution of', 'A evolução da'),
 (3, 'Salud animal', 'Animal Health', 'Saúde animal'),
 (4, 'BIOGÉNESIS BAGÓ reconocida', '\n', ''),
@@ -470,16 +470,16 @@ INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (434, 'Planes sanitarios', '', 'Planos sanitários produtivos'),
 (435, 'Planillas de trabajo', '', ''),
 (436, 'Trabajos técnicos', '', 'Trabalhos técnicos'),
-(437, 'Aftosa', 'Foot and Mouth Disease', ''),
-(438, 'Antibióticos', 'Antibiotics', ''),
+(437, 'Aftosa', 'Foot and Mouth Disease', 'Aftosa'),
+(438, 'Antibióticos', 'Antibiotics', 'Antibióticos'),
 (439, 'Antiparasitarios externos', 'External parasiticides', ''),
 (440, 'Antiparasitarios internos', 'Internal parasiticides', ''),
-(441, 'Biólogicos', 'Biological', ''),
+(441, 'Biólogicos', 'Biological', 'Biológica'),
 (442, 'Endectocidas', 'Endectocides', ''),
-(443, 'Farmacéuticos', 'Pharmaceutical', ''),
+(443, 'Farmacéuticos', 'Pharmaceutical', 'Farmacêuticos '),
 (444, 'Nutrición', 'Nutrition', ''),
-(445, 'Reproductivos', 'Reproductive', ''),
-(446, 'Salud ambiental', 'Environmental health', ''),
+(445, 'Reproductivos', 'Reproductive', 'Reprodutiva'),
+(446, 'Salud ambiental', 'Environmental health', 'Saúde Ambiental'),
 (447, 'Vitaminas y minerales', 'Vitamins & minerals', ''),
 (449, 'rrhh', 'rrhh', ''),
 (450, 'contacto', 'contact', 'contato'),
