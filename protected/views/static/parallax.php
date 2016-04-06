@@ -1,6 +1,6 @@
 
-<script src="//iprodev.github.io/Scrollax.js/assets/js/smoothscroll.js"></script>
-<script src="//iprodev.github.io/Scrollax.js/lib/scrollax.min.js"></script>
+<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/smoothscroll.js"></script>
+<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/scrollax.min.js"></script>
 
  <script>
       jQuery(document).ready(function ($) {
