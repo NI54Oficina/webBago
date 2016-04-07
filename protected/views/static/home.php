@@ -27,7 +27,7 @@
 								<!-- 	QUIÉNES SOMOS -->
 								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional" hid="1" id="inst-quienes">
 									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/quienes-somos">	
-										<canvas class="" id="myCanvas" height="90px"></canvas>
+										<canvas class="" id="myCanvas" height="90px" width="100%"></canvas>
 										<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home-quienes.png" />
 										<div class="plus-container"><span  class=" glyphicon glyphicon-plus"></span></div>
 										<h1 class="h1-1-home"><?php echo Textos::model()->GetText(6); ?></h1>
@@ -38,7 +38,7 @@
 								<!--	MISIÓN, VISIÓN Y VALORES -->
 								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional" hid="1" id="inst-mision">
 									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/mision-vision">
-										<canvas class="" id="myCanvas" height="90px"></canvas>
+										<canvas class="" id="myCanvas" height="90px" width="100%"></canvas>
 										<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home-mision.png" />
 										<div class="plus-container"><span  class=" glyphicon glyphicon-plus"></span></div>									
 										<h1 class="h1-1-home mis"><?php echo Textos::model()->GetText(8); ?></h1>		
@@ -49,7 +49,7 @@
 								<!--	LUCHA CONTRA AFTOSA -->
 								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional" hid="1">
 									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/lucha-contra-aftosa">
-										<canvas class="" id="myCanvas" height="90px"></canvas>
+										<canvas class="" id="myCanvas" height="90px" width="100%"></canvas>
 										<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home-aftosa.png" />
 										<div class="plus-container"><span  class=" glyphicon glyphicon-plus"></span></div>
 										<h1 class="h1-1-home mis"><?php echo Textos::model()->GetText(10); ?></h1>
@@ -60,7 +60,7 @@
 								<!--	TRAYECTORIA - HITOS -->
 								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional" hid="1">
 									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/trayectoria-hitos">
-										<canvas class="" id="myCanvas" height="90px"></canvas>
+										<canvas class="" id="myCanvas" height="90px" width="100%"></canvas>
 										<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home-trayectoria.png" />
 										<div class="plus-container"><span  class=" glyphicon glyphicon-plus"></span></div>
 										<h1 class="h1-1-home tray"><?php echo Textos::model()->GetText(12); ?></h1>		
@@ -75,7 +75,7 @@
 								<!--	NUESTRAS PLANTAS -->
 								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional" hid="1" >
 									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/nuestras-plantas">
-										<canvas class="" id="myCanvas" height="90px"></canvas>
+										<canvas class="" id="myCanvas" height="90px" width="100%"></canvas>
 										<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home-plantas.png" />
 										<div class="plus-container"><span  class=" glyphicon glyphicon-plus"></span></div>
 										<h1 class="h1-1-home"><?php echo Textos::model()->GetText(14); ?></h1>
@@ -87,7 +87,7 @@
 								<!--	RSE - SUSTENTABILIDAD -->
 								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional" hid="1" >
 									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/rse">
-										<canvas class="" id="myCanvas" height="90px"></canvas>
+										<canvas class="" id="myCanvas" height="90px" width="100%"></canvas>
 										<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home-rse.png" />	
 										<div class="plus-container"><span  class=" glyphicon glyphicon-plus"></span></div>									
 										<h1 class="h1-1-home mis"><?php echo Textos::model()->GetText(16); ?></h1>			
@@ -100,7 +100,7 @@
 								<!-- 	INFO PARA PROVEEDORES -->
 								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional" hid="1" >
 									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/proveedores">
-										<canvas class="" id="myCanvas" height="90px"></canvas>
+										<canvas class="" id="myCanvas" height="90px" width="100%"></canvas>
 										<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home-proveedores.png" />
 										<div class="plus-container"><span  class=" glyphicon glyphicon-plus"></span></div>
 										<h1 class="h1-1-home mis"><?php echo Textos::model()->GetText(18); ?></h1>			
@@ -113,7 +113,7 @@
 								<?php if($_SESSION["lng"]=="es"){ ?>
 								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional" hid="1">
 									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/prensa">
-										<canvas class="" id="myCanvas" height="90px"></canvas>
+										<canvas class="" id="myCanvas" height="90px" width="100%"></canvas>
 										<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home-prensa.png" />	
 										<div class="plus-container"><span  class=" glyphicon glyphicon-plus"></span></div>
 										<h1 class="h1-1-home mis pren"><?php echo Textos::model()->GetText(20); ?></h1>			
@@ -136,7 +136,7 @@
 		<section class="special" data-scrollax-parent="true" style="background:transparent;width:100%;overflow-x:hidden;" id="mapa-filiales">
 		<!------------------------------------------------------------------ SECCION 2: FILIALES ------------------------------------------------------------------>			
 			
-			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-bottom:30px;" id="map">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-bottom:30px;padding-left:2%;" id="map">
     	
 						<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12" id="mapa-total">
     	 
@@ -1462,14 +1462,12 @@
 
 				<ul  class="colg-lg-10" style="font-size: 13px; text-align: center; color: #359fbd;    width: 65%;  margin: auto; margin-top: 10px;" id="ul-rrhh-home" style="position:absolute;">
 				
-				
-				   <li><?php echo Textos::model()->GetText(483); ?></li>
+					<li><?php echo Textos::model()->GetText(483); ?></li>
 				   <li><?php echo Textos::model()->GetText(484); ?></li>
 				   <li><?php echo Textos::model()->GetText(485); ?></li>
 				   <li><?php echo Textos::model()->GetText(486); ?></li>
 				   <li><?php echo Textos::model()->GetText(487); ?></li>
 				   <li style="line-height:17px;"><?php echo Textos::model()->GetText(488); ?></li>
-
 				</ul>
 
 				<!-- HASTA ACA !-->
