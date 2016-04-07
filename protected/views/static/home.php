@@ -140,10 +140,10 @@
     	
 						<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12" id="mapa-total">
     	 
-							<!----- TITULO MAPA --->
+							<!----- TITULO MAPA -->
 							<div id="titulo-mapa">
          		
-								<h1 id="t-filiales"> <span class="border-celeste">FI</span>LIALES Y REP. COMERCIALES </h1>
+								<h1 id="t-filiales"><?php echo Textos::model()->GetText(503); ?></h1>
                 
 							</div> <!-- Termina titulo-mapa -->
  

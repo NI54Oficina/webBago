@@ -645,7 +645,7 @@ font-size: 22px;
 	/**TITULO AFSTOSA HARDOCODEADO **/
 
 	.titulo-aftosa #gota-vademecum , .titulo-aftosa #gota-producto{ margin-left: -3%; }
-	.titulo-aftosa{
+	.titulo-aftosa, #barra-superior-aftosa, #barra-media-aftosa{
 		color:#0082C8 !important;
 	}
 	
@@ -1872,7 +1872,7 @@ font-size: 22px;
 		color:#0082C8;
 	}
 	
-	.titulo-endectocida{
+	.titulo-endectocida, #barra-superior-endectocida, #barra-media-endectocida{
 		color:#9B9501;
 	}
 	
@@ -1880,7 +1880,7 @@ font-size: 22px;
 		color:#9B9501;
 	}
 	
-	.titulo-antibioticos{
+	.titulo-antibioticos, #barra-superior-antibioticos, #barra-media-antibioticos{
 		color:#FF0423;
 	}
 	
@@ -1888,7 +1888,7 @@ font-size: 22px;
 		color:#FF0423;
 	}
 	
-	.titulo-antiparasitarios-externos{
+	.titulo-antiparasitarios-externos, #barra-superior-antiparasitarios-externos, #barra-media-antiparasitarios-externos{
 		color:#0D553F;
 	}
 	
@@ -1896,7 +1896,7 @@ font-size: 22px;
 		color:#0D553F;
 	}
 	
-	.titulo-antiparasitarios-internos{
+	.titulo-antiparasitarios-internos, #barra-superior-antiparasitarios-internos, #barra-media-antiparasitarios-internos{
 		color:#00955F;
 	}
 	
@@ -1904,7 +1904,7 @@ font-size: 22px;
 		color:#00955F;
 	}
 	
-	.titulo-biologicos{
+	.titulo-biologicos, #barra-superior-biologicos, #barra-media-biologicos{
 		color:#646568;
 	}
 	
@@ -1913,7 +1913,7 @@ font-size: 22px;
 	}
 	
 	
-	.titulo-far{
+	.titulo-far, #barra-superior-far, #barra-media-far{
 		color:#6D3A5D;
 	}
 	
@@ -1921,7 +1921,7 @@ font-size: 22px;
 		color:#6D3A5D;
 	}
 	
-	.titulo-rep{
+	.titulo-rep, #barra-superior-rep, #barra-media-rep{
 		color:#FF671B;
 	}
 	
@@ -1930,7 +1930,7 @@ font-size: 22px;
 	}
 	
 	
-	.titulo-sal{
+	.titulo-sal, #barra-superior-sal, #barra-media-sal{
 		color:#26CBD4;
 	}
 	
@@ -1939,7 +1939,7 @@ font-size: 22px;
 	}
 	
 	
-	.titulo-vit{
+	.titulo-vit, #barra-superior-vit, #barra-media-vit{
 		color:#003B5D;
 	}
 	
@@ -7172,7 +7172,7 @@ figure.snip1156 .d-a-2 h2{
 	text-align:center;
 }
 
-.titulo-nutricion {
+.titulo-nutricion, #barra-superior-nutricion, #barra-media-nutricion {
 	color:#D18900;
 }	
 
