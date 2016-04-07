@@ -118,7 +118,9 @@
 				<?php } ?>
 				<?php if($_SESSION["lng"]=="es"){ ?>
 				<li class="li-nav-2">
-				<a class="link-menu"  href="http://www.fronterasproductivas.com/" target="_blank" style="float:left;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/fronteras-50x50-01.png" /></a></li>
+				<a class="link-menu"  href="http://www.fronterasproductivas.com/" target="_blank" style="float:left;"> <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/fronteras-50x50-01.png" /> 
+				</a>
+				</li>
 				<?php } ?>
 		</ul> <!-- termina lista versiones -->
 	
