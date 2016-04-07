@@ -97,7 +97,7 @@ font-size: 22px;
 
 .salud-animal{
     color: #79C8EE;
-    font-size: 95px;
+    font-size: 80px;
     margin-top: -1%;
     font-weight: bold;
 }
@@ -170,7 +170,7 @@ font-size: 22px;
 .h1-inst-home{
 	display:inline-block; 
 	color:white; 
-	font-size: 32px;
+	font-size: 30px;
 	margin-left: 3px;
 }
 
@@ -6892,7 +6892,7 @@ figure.snip1156 .d-a-2 h2{
 
 	.salud-animal {
 		color: #79C8EE;
-		font-size: 84px;
+		font-size: 80px;
 		margin-top: -1%;
 		font-weight: bold;
 	}
@@ -7759,3 +7759,8 @@ position:fixed;
 .marker {color: red;}
 
 .pre { font-size: 10px; padding: 5px; margin-bottom: 50x;}
+
+
+#ul-rrhh-home li{
+	line-height:30px;
+}
