@@ -308,7 +308,7 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 
 			foreach($contenidos as $contenido){
 				?><div>
-				<h4 class="h4-vad h4-<?php echo $normalizado; ?>"><?php echo ProductoPartes::model()->findByPk($contenido->parte)->nombre; ?></h4>
+				<h4 class="h4-vad h4-<?php echo $normalizado; ?>"><?php echo Yii::app()->paisChecker->getTitles($contenido->parte);?></h4>
 				<p class="p-vad"><?php echo $contenido->text; ?></p>
 				</div>
 				<?php

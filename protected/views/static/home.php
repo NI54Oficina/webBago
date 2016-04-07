@@ -1606,7 +1606,7 @@
 							<!-- ******** BOTÓN ENVIAR ******** -->
 							<div class="col-lg-12 col-md-12 col-xs-12" > 
 									<div class="input-contacto" style="text-align:right;">
-									<input id="enviar" name="ENVIAR" type="submit" class="pull-right">
+									<button id="enviar" name="ENVIAR" type="submit" class="pull-right"><?php echo Textos::model()->GetText(123); ?></button>
 									</div>
 							</div>  <!--termina form btn enviar-->
 	

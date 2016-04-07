@@ -92,5 +92,14 @@ class PaisChecker extends CApplicationComponent
 				return Seccion::model()->findByPk($idSeccion)->nombre;
 			}
 		}
+		
+		public function getTitles($idSeccion){
+			$traduccion= PpartesRegionalizacion::model()->findByAttributes(array("idParte"=>$idSeccion,"pais"=>Yii::app()->session['pais']));
+			if($traduccion!=null){
+				return $traduccion->nombre;;
+			}else{
+				return Seccion::model()->findByPk($idSeccion)->nombre;
+			}
+		}
     }
 ?>
