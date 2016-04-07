@@ -79,7 +79,7 @@ $auxId=0;
 ?>
 <style>body{background-color:white;}</style>
 <div style="width:100%;">
-<div  class="tabla-aftosa col-lg-12 col-md-12 col-sm-12 col-xs-12 fadder" style="margin-bottom:25vh;padding:0 5%;"> 
+<div  class="tabla-aftosa col-lg-12 col-md-12 col-sm-12 col-xs-12 fadder" style="margin-top:4%; margin-bottom:25vh;padding:0 5%;"> 
 
 <a href="<?php echo Yii::app()->getBaseUrl(true); ?>"><div class=" col-lg-3 col-md-3 col-sm-12 col-xs-12 volver-mobile hidden-lg hidden-md">
 <p id="volver-p"><?php echo Textos::model()->GetText(490); ?></p>
@@ -87,12 +87,12 @@ $auxId=0;
 
 
 <div id="titulo-vademecum" class="hidden-lg hidden-md">
-<h1 class="vademecum"> <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/punto-<?php echo $normalizado; ?>.png" /> <?php echo Textos::model()->GetText(348); ?> <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/punto-<?php echo $normalizado; ?>.png" /></h1>
+<h1 class="vademecum"> <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/punto-<?php echo $normalizado; ?>.png" /><?php echo Textos::model()->GetText(348); ?><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/punto-<?php echo $normalizado; ?>.png" /></h1>
 <p  style="text-align:center;border-bottom:1px solid #0082C8;width:3%;margin:auto;margin-top:0%;"></p>
 </div>
 
-<div style="margin-top:30px;" class="hidden-xs hidden-sm">
-<h1 class="vademecum"> <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/punto-<?php echo $normalizado; ?>.png" /> <?php echo Textos::model()->GetText(348); ?> <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/punto-<?php echo $normalizado; ?>.png" /></h1>
+<div  class="hidden-xs hidden-sm">
+<h1 class="vademecum"> <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/punto-<?php echo $normalizado; ?>.png" /><?php echo Textos::model()->GetText(348); ?><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/punto-<?php echo $normalizado; ?>.png" /></h1>
 <p  style="text-align:center;border-bottom:1px solid #7F7F7F;width:3%;margin:auto;margin-top:0%;"></p>
 </div>
 
@@ -101,8 +101,7 @@ $auxId=0;
 
 <h2 class="titulo-vad titulo-<?php echo $normalizado; ?>">
 
-<img id="gota-vademecum" src="<?php echo Yii::app()->request->baseUrl; ?>/img/gota-<?php echo $normalizado; ?>.png"  />
-<?php echo Yii::app()->paisChecker->getSeccion($data->id); ?></h2>
+<img id="gota-vademecum" src="<?php echo Yii::app()->request->baseUrl; ?>/img/gota-<?php echo $normalizado; ?>.png"  /><?php echo Yii::app()->paisChecker->getSeccion($data->id);?></h2>
 
  <!-- ACA ESTA EL TITULO CON LA GOTA -->
 

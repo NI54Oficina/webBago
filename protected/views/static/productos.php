@@ -80,16 +80,14 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 ?>
 <style>body{background-color:white;}</style>
 <div style="width:100%;">
-<div  class="tabla-aftosa col-lg-12 col-md-12 col-sm-11 col-xs-11" style="margin-top:10%;margin-bottom:20vh;text-align:center;display:inline-block;float:initial;padding:0 5%;">
+<div  class="tabla-aftosa col-lg-12 col-md-12 col-sm-11 col-xs-11" style="margin-top:4%;margin-bottom:25vh;text-align:center;display:inline-block;float:initial;padding:0 5%;">
 
 
-<h1 class="vademecum-producto"> <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/punto-<?php echo $normalizado; ?>.png" /><?php echo Textos::model()->GetText(348); ?><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/punto-<?php echo $normalizado; ?>.png" /></h1>
+<h1 class="vademecum-producto"> <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/punto-<?php echo $normalizado; ?>.png" /><?php echo Textos::model()->GetText(348);?><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/punto-<?php echo $normalizado; ?>.png" /></h1>
 <p id="barra-vademecum" ></p>
 <h2 class="titulo-vad-producto titulo-<?php echo $normalizado; ?>">
 
-<img id="gota-producto"  src="<?php echo Yii::app()->request->baseUrl; ?>/img/gota-<?php echo $normalizado; ?>.png"  />
-
-<?php echo $seccion->nombre; ?></h2>
+<img id="gota-producto"  src="<?php echo Yii::app()->request->baseUrl; ?>/img/gota-<?php echo $normalizado; ?>.png"  /><?php echo $seccion->nombre; ?></h2>
 
 <a href="<?php echo Yii::app()->request->baseUrl; ?>/vademecum/id<?php echo $seccion->id; ?>"><div class=" col-lg-3 col-md-3 col-sm-12 col-xs-12 volver" id="volver-producto">
 <p><?php echo Textos::model()->GetText(490); ?></p>
