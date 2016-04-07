@@ -7726,3 +7726,10 @@ position:fixed;
 
 #menu-vademecum a:focus {text-decoration:none}
 
+
+ .inner-text h2{color: black; font-size: 15px;line-height: 25px;} 
+ .inner-text h3{color: black; line-height: 25px;} 
+ .inner-text li {color:#8C8C8C; font-size: 15px; line-height: 25px;}
+ .inner-text table {color: black; font-size: 15px;line-height: 25px;}
+
+.marker {color: red;}
