@@ -7,6 +7,7 @@ class WebController extends Controller
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
 	public $layout='//layouts/admin';
+	
 
 	/**
 	 * @return array action filters
@@ -39,6 +40,10 @@ class WebController extends Controller
 			array('deny',  // deny all users
 				'users'=>array('*'),
 			),
+			'captcha'=>array(
+			   'class'=>'CCaptchaAction',
+			   'backColor'=>0xFFFFFF,
+			  ),
 		);
 	}
 
@@ -63,6 +68,7 @@ class WebController extends Controller
 		if($data=="productos"){
 			//tendria que buscar por id y no por nombre
 			$id= substr($id,2);
+			
 			$auxSeccion =Producto::model()->findByAttributes(array('id'=>$id));;
 			if($auxSeccion->pais!=$_SESSION["pais"]){
 				$auxPais=Pais::model()->findByPk($_SESSION["pais"]);
