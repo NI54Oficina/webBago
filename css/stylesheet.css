@@ -5111,7 +5111,7 @@ figure.snip1156:hover .salud-ambiental{
 @media only screen 
   and (min-device-width: 768px) 
   and (max-device-width: 1024px) 
-  and (-webkit-min-device-pixel-ratio: 1) {
+  {
 	.h2-cd {
 		color: #C8C6C6;
 		font-weight: 700;
@@ -5204,7 +5204,7 @@ figure.snip1156:hover .salud-ambiental{
 @media only screen 
   and (min-device-width: 768px) 
   and (max-device-width: 1024px) 
-  and (-webkit-min-device-pixel-ratio: 1) {
+   {
 	
 	.icn-ubicacion {
 		width: 3%;
@@ -5226,7 +5226,7 @@ figure.snip1156:hover .salud-ambiental{
   and (min-device-width: 768px) 
   and (max-device-width: 1024px) 
   and (orientation: portrait) 
-  and (-webkit-min-device-pixel-ratio: 1) {
+   {
 .volver-mobile {
     background-image: url(../img/volver-desactivado.png);
     height: 42px;
@@ -6179,7 +6179,7 @@ figure.snip1156:hover .salud-ambiental{
 @media screen 
   and (min-device-width: 1200px) 
   and (max-device-width: 2100px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
+   { 
   
 #texto-btn-mas2{ 
 	font-family: 'arialregular';
@@ -6570,7 +6570,7 @@ figure.snip1156:hover .salud-ambiental{
   and (min-device-width: 768px) 
   and (max-device-width: 1024px) 
   and (orientation: portrait) 
-  and (-webkit-min-device-pixel-ratio: 1) {
+  {
   
 	.navbar-collapse.collapse{
 		display:none !important;
@@ -7182,7 +7182,7 @@ figure.snip1156 .d-a-2 h2{
   and (min-device-width: 768px) 
   and (max-device-width: 1024px) 
   and (orientation: portrait) 
-  and (-webkit-min-device-pixel-ratio: 1) {
+  {
 	#volver{ 
 	    margin-left: -250px;
 	}
@@ -7413,7 +7413,7 @@ h5{
   and (min-device-width: 768px) 
   and (max-device-width: 1024px) 
   and (orientation: landscape) 
-  and (-webkit-min-device-pixel-ratio: 1) {
+   {
 	.icn-ubicacion {
 		width: 2%;
 		display: inline-block;
