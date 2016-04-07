@@ -2,8 +2,9 @@
 
 <?php $meses = array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"); ?>
 
-<body id="skrollable" style="width:100%;overflow-x:hidden;">
 
+<body id="skrollable" style="width:100%;overflow-x:hidden;">
+<script src="<?php echo Yii::app()->getBaseUrl(true); ?>/js/jquery.boxloader.min.js"></script>	
 <!--COMENTARIO DE LINEA TEST -->
 
 
@@ -746,7 +747,32 @@
 
 				</div> <!-- Termina info-mapa -->
 			
-			</div>       
+			</div>     
+			<?php 
+			$shortToId=
+			[
+				"ar" => "infoArgentina",
+				"br" => "infoBrasil",
+				"bo" => "infoBolivia",
+				"mx" => "infoMexico",
+				"uy" => "infoUruguay",
+				"cr" => "infoCostarica",
+				"ec" => "infoEcuador",
+				"sv" => "infoElSalvador",
+				"gt" => "infoGuatemala",
+				"hn" => "infoHonduras",
+				"ni" => "infoNicaragua",
+				"pa" => "infoPanama",
+			];
+			if(array_key_exists($_SESSION['short'],$shortToId)){
+			?>
+			<script>
+			
+			$("#<?php echo $shortToId[$_SESSION['short']]; ?>").show();
+			</script>
+			<?php 
+			}
+			?>
 	</section>
 	
 
@@ -1306,7 +1332,7 @@
 	
 					</div> <!--Termina la vista de la revista-->
 					
-					<script src="<?php echo Yii::app()->getBaseUrl(true); ?>/js/jquery.boxloader.min.js"></script>	
+					
 						<script type="text/javascript">
 							
 							$("#img-rev").boxLoader({
@@ -1698,7 +1724,7 @@
 	</script>
     
 	<script type="text/javascript">
-		
+		$(document).ready(function(){
 		$("#mapa").boxLoader({
 			direction:"x",
 			position: "-50%",
@@ -1767,7 +1793,7 @@
 			duration: "2s",
 			windowarea: "50%"
 		}); 
-		
+		});
 	</script>
 </body>
 
