@@ -6599,8 +6599,7 @@ figure.snip1156:hover .salud-ambiental{
 		z-index:100000;
 	}
 	
-	#sidePlantas{
-		padding-top:0 !important;
+	
 	}
  }
 /** fin fix ipad menu**/
@@ -7708,6 +7707,8 @@ position:fixed;
 
 @media screen and (max-width: 1024px){
 	.banderas-paises-principal { opacity: 1; }
+	#sidePlantas{
+		padding-top:0 !important;}
 }
 
 
