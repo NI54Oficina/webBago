@@ -472,7 +472,7 @@ if ($(this).scrollTop() >2850){
 	$('#vade').css('animation','myfirst 3s ease-out forwards');
 	
 	$('#botones div').each(function(i) {
-	$(this).delay((i++) * 150).fadeTo(1000, 1); })
+	$(this).delay((i++) * 90).fadeTo(1000, 1); })
 	
 	$('#nom-btn').css('animation','fadein 2s');
 	$('#nom-btn').css('animation','myfirst 3s');
