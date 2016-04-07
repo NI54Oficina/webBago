@@ -7765,6 +7765,7 @@ position:fixed;
 	line-height:30px;
 }
 
+/*SONY E3*/
 @media only screen 
   and (min-device-width: 480px) 
   and (max-device-width: 854px){
@@ -7819,7 +7820,7 @@ position:fixed;
 
   }
   
-  
+  /* IPHONE 5*/
   @media only screen 
   and (min-device-width: 320px) 
   and (max-device-width: 568px){
