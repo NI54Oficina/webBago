@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-04-2016 a las 19:41:29
+-- Tiempo de generación: 07-04-2016 a las 20:17:45
 -- Versión del servidor: 5.6.24
 -- Versión de PHP: 5.6.8
 
@@ -491,7 +491,7 @@ INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (456, '<strong>Cuidado del medio ambiente</strong> ', '<strong>Taking Care of the Environment</strong>', '<strong>Cuidado com o meio ambiente</strong> '),
 (457, '<strong>Encuentros Biosolidarios </strong>', '<strong>Solidarity Meetings</strong>', '<strong> Encontros Biosolidários</strong>'),
 (458, 'Fundaciones con las que colaboramos', '', ''),
-(459, 'Casa Matriz', '', ''),
+(459, 'Casa Matriz', 'Headquarters', ''),
 (460, 'Filiales', 'Affiliates', 'Controladas'),
 (461, 'Banco de vacunas', '', ''),
 (462, 'Antiaftosa de Norteamérica ', '', ''),
