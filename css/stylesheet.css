@@ -7458,6 +7458,7 @@ position:fixed;
 
 #registrado {text-align:center;margin-top:50%; margin-bottom: 1.5%;}
 
+#barra-media
 #barra-media-aftosa {text-align:center;border-bottom:1px solid #0082C8;width:15%;margin:auto;}
 #barra-media-antibioticos {text-align:center;border-bottom:1px solid #FF0423;width:15%;margin:auto;}
 #barra-media-antiparasitarios-externos {text-align:center;border-bottom:1px solid #0D553F;width:15%;margin:auto;}
@@ -7481,7 +7482,7 @@ position:fixed;
 #barra-superior-vitaminicos-y-minerales {text-align:center;border-bottom:1px solid #003B5D;width:15%;margin:auto;}
 
 
-#barra-paises {border-bottom:1px solid #CCC;  margin-bottom: 4%; width: 160px; 
+#barra-paises {border-bottom:1px solid #CCC;  margin-bottom: 4%; width: 160px; }
 
 #barra-vademecum {text-align:center;border-bottom:1px solid #7F7F7F;width:3%;margin:auto;margin-top:0%;}
 #targets-mobile img {width:auto;
