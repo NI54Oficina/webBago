@@ -1,13 +1,4 @@
-<div class="captchaContainer"><?php $this->widget('CCaptcha'); ?></div>
-<script>
-$(document).ready(function(){
-	$(".captchaContainer img").each(function(){
-		var startSrc=$(this).attr("src");
-		startSrc="<?php echo "http://".$_SERVER['SERVER_NAME'] ?>"+startSrc;
-		$(this).attr("src",startSrc);
-	});	
-});
-</script>
+
 			<div class="header-layout-aftosa col-lg-12 col-md-12 col-sm-12 col-xs-12">
 				<div style="width:100%;position:absolute;"><h1 class="titulo-layout-aftosa" style=""><?php echo Textos::model()->GetText(6); ?></h1></div>
 				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/quienes-somos-oscura-01.png" style="width:100vw;" />	
@@ -51,6 +42,7 @@ $(document).ready(function(){
 			
            <h2 class="h2-aftosa"><?php echo Textos::model()->GetText(38); ?></h2>
            
+<div class="captchaContainer"><?php $this->widget('CCaptcha'); ?></div>
 		   <!-- CONTENIDO -->
            <p style="margin-top:1%;"><?php echo Textos::model()->GetText(39); ?></p>
            
@@ -100,9 +92,5 @@ $(document).ready(function(){
 		</div>
 	</div>
 	
-
-
-
-
 
 <?php include('widget.php'); ?>

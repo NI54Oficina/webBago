@@ -16,7 +16,6 @@ return array(
 	'import'=>array(
 		'application.models.*',
 		'application.components.*',
-		'application.vendors.*',
 		//tag
 		//'ext.behaviors.model.taggable.*',
 	),
