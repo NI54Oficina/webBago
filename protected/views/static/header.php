@@ -10,7 +10,7 @@
 		
 	<span  class=" glyphicon glyphicon-menu-hamburger navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarSecciones" aria-expanded="false" aria-controls="navbar" ></span>
 	
-	<div class="div-nav-2"><a href="" style="float:left;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/fronteras-50x50-01.png" /></a></div>
+	<div class="div-nav-2"><a href="http://www.fronterasproductivas.com/" target="_blank" style="float:left;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/fronteras-50x50-01.png" /></a></div>
 	<!-- ////////////////BARA DE NAVEGACIÓN //////////////////-->
 	<nav  id="navbarSecciones" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 collapse navbar-collapse" data-toggle="collapse">
 		

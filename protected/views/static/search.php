@@ -74,7 +74,9 @@ if($pais->catalogo==1){
 
 if(isset($_POST["arg"])){
 	//echo $_POST["arg"];
-	$productos=Producto::model()->taggedWith($_POST["arg"])->findAll();
+	
+//	$arg= str_replace(" ",',',$_POST["arg"]);
+	$productos=Producto::model()->taggedWith($arg)->findAll();
 }
 //echo "</div>";
 $nombre="Búsqueda";

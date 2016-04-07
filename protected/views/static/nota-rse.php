@@ -24,14 +24,19 @@
 
 <?php
 $nota = Notas::model()->findByAttributes(array("id"=>$data,"seccion"=>"rse"));
+
 ?>
+<?php $meses = array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"); ?>
 
 <div class="div-texto-aftosa col-lg-5 col-md-5 col-sm-12 col-xs-12" style="text-align: left;">
 	
 	<div class="tabla-aftosa col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
 
 		<div  class="tr  col-lg-12 col-md-12 col-sm-12 col-xs-12 inner-text nota-rse" style="text-shadow:none;padding-top:0;">			
-			<h5 style="color: #66CCED; background: whitesmoke; padding-top: 0.5vh; padding-bottom: 0.5vh; padding-left: 1vh; margin: 0;"><?php echo $nota->fecha; ?></h5>
+			<h5 style="color: #66CCED; background: whitesmoke; padding-top: 0.5vh; padding-bottom: 0.5vh; padding-left: 1vh; margin: 0;"><?php 
+							$timeStamp=strtotime($nota->fecha);	
+							echo date('d',$timeStamp)." de ".$meses[date('n',$timeStamp)-1];
+							?></h5>
 			<h1 style="margin-left: 0;padding-bottom:6px;color: #003b5d;"><?php echo $nota->titulo; ?></h1>
 			<p><?php echo $nota->texto; ?></p>
 		</div>
