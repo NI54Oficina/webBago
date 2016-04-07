@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-04-2016 a las 22:09:33
+-- Tiempo de generación: 07-04-2016 a las 18:47:26
 -- Versión del servidor: 10.1.9-MariaDB
 -- Versión de PHP: 5.5.30
 
@@ -531,7 +531,8 @@ INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (499, 'Premio Funprecit', 'Funprecit Award', 'Fumprecit'),
 (500, 'a la excelencia en desarrollos para la salud animal', 'to the excellence in Animal Health developments', '"Prêmio excelência no desenvolvimento de sanidade animal"'),
 (501, 'Nace', 'Creation of', 'Nasce'),
-(502, 'laboratorios Bagó', 'Bagó laboratories', 'laboratorios Bagó');
+(502, 'laboratorios Bagó', 'Bagó laboratories', 'laboratorios Bagó'),
+(503, '<span class="border-celeste">FI</span>LIALES Y REP. COMERCIALES ', '<span class="border-celeste">AF</span>FILIATES AND SALES REPS', '<span class="border-celeste">CO</span>NTROLADAS E REP. COMERCIAL');
 
 --
 -- Índices para tablas volcadas
@@ -551,7 +552,7 @@ ALTER TABLE `tbl_textos`
 -- AUTO_INCREMENT de la tabla `tbl_textos`
 --
 ALTER TABLE `tbl_textos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=503;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=504;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
