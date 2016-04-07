@@ -7764,3 +7764,49 @@ position:fixed;
 #ul-rrhh-home li{
 	line-height:30px;
 }
+
+@media only screen 
+  and (min-device-width: 480px) 
+  and (max-device-width: 854px){
+  .border-celeste {
+    border-bottom: none;
+}
+
+	#ul-filiales-paises{
+		display:block;
+	}
+	#ul-filiales-paises{
+		padding-left:7%;
+		padding-top:5%;
+	}
+	
+	#ul-filiales-paises li{
+		display:inline-block;
+		padding-top:5%;
+	}
+	
+	
+	#ul-filiales-paises li a{
+		color:white;
+		font-weight:700;
+	}
+	
+		.cd-timeline-content .cd-date{
+		display:none;
+	}
+
+	
+	.h2-cd {
+    color: #B2B2B2;
+    font-weight: 700;
+    font-family: 'arialregular';
+    font-size: 18px;
+    margin-top: 0;
+}
+
+.cd-timeline-block {
+    position: relative;
+    transition: 0.3s all ease-in-out;
+    margin-top: 8%;
+}
+  }
