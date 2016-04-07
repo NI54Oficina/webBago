@@ -465,14 +465,14 @@ if ($(this).scrollTop() >2450){
 
 $(window).scroll(function() {
 
-if ($(this).scrollTop() >2850){  
+if ($(this).scrollTop() >2730){  
 
 	$('#vade').css('animation','fadein 2s');
 	$('#vade').css('animation','myfirst 3s');
 	$('#vade').css('animation','myfirst 3s ease-out forwards');
 	
 	$('#botones div').each(function(i) {
-	$(this).delay((i++) * 90).fadeTo(1000, 1); })
+	$(this).delay((i++) * 150).fadeTo(1000, 1); })
 	
 	$('#nom-btn').css('animation','fadein 2s');
 	$('#nom-btn').css('animation','myfirst 3s');
