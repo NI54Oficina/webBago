@@ -62,7 +62,12 @@ function sanear_string($string)
 
 
 $idSeccion=-1;
-
+$pais= Pais::model()->findByPk(Yii::app()->session['pais']);
+if($pais->catalogo==1){
+	$pais=$pais->id;
+}else{
+	$pais=8;
+}
 //echo "<div style='width:100%;min-height:100px;background-color:red; color:black;position:fixed;z-index:1000000;'>";
 //echo count($productos);
 //echo Yii::app()->session['pais'];
@@ -88,17 +93,23 @@ $auxId=0;
 ?>
 <style>body{background-color:white;}</style>
 <div style="width:100%;">
-<div  class="tabla-aftosa col-lg-11 col-md-11 col-sm-12 col-xs-12" style="margin-bottom:25vh;"> 
+<div  class="tabla-aftosa col-lg-12 col-md-12 col-sm-12 col-xs-12 fadder" style="margin-top:4%; margin-bottom:25vh;padding:0 5%;"> 
 
-<div style="margin-top:12%;" class="hidden-lg hidden-md">
+<a href="<?php echo Yii::app()->getBaseUrl(true); ?>"><div class=" col-lg-3 col-md-3 col-sm-12 col-xs-12 volver-mobile hidden-lg hidden-md">
+<p id="volver-p"><?php echo Textos::model()->GetText(490); ?></p>
+</div></a>
+
+
+<div id="titulo-vademecum" class="hidden-lg hidden-md">
 <h1 class="vademecum"> <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/punto-<?php echo $normalizado; ?>.png" /> <?php echo Textos::model()->GetText(348); ?> <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/punto-<?php echo $normalizado; ?>.png" /></h1>
-<p  style="text-align:center;border-bottom:1px solid #0082C8;width:3%;margin:auto;margin-top:0%;margin-left:50%"></p>
+<p  style="text-align:center;border-bottom:1px solid #0082C8;width:3%;margin:auto;margin-top:0%;"></p>
 </div>
 
-<div style="margin-top:10%;" class="hidden-xs hidden-sm">
+<div class="hidden-xs hidden-sm">
 <h1 class="vademecum"> <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/punto-<?php echo $normalizado; ?>.png" /> <?php echo Textos::model()->GetText(348); ?> <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/punto-<?php echo $normalizado; ?>.png" /></h1>
-<p  style="text-align:center;border-bottom:1px solid #0082C8;width:3%;margin:auto;margin-top:0%;margin-left:50%"></p>
+<p  style="text-align:center;border-bottom:1px solid #0082C8;width:3%;margin:auto;margin-top:0%;"></p>
 </div>
+
 
 <h2 class="titulo-vad titulo-<?php echo $normalizado; ?>"><?php echo $nombre; ?></h2>
 
