@@ -45,10 +45,13 @@ if($nota && $nota->seccion=="tecnica"){
 		
 	</div>
 </div>
-<div class="div-texto-aftosa col-lg-3 col-md-3 col-sm-12 col-xs-12" style="text-align: left; padding-top: 142px;">
-<p class="pinside-infotec-noticias" style="font-size: 13px; line-height: 20px;padding-top: 3%;padding-bottom: 3%;"><?php echo $nota->extra; ?></p>
-</div>
-<?php 
+	<?php if(isset($nota->extra)&&$nota->extra!=""){ ?>
+		<div class="div-texto-aftosa col-lg-3 col-md-3 col-sm-12 col-xs-12" style="text-align: left; padding-top: 142px;">
+			<p class="pinside-infotec-noticias" style="font-size: 13px; line-height: 20px;padding-top: 3%;padding-bottom: 3%;"><?php echo $nota->extra; ?></p>
+		</div>
+	<?php 
+	}
+
 }
 ?>
 </div>

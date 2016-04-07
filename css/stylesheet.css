@@ -384,7 +384,7 @@ font-size: 22px;
 		height: 42px;
 		background-repeat: no-repeat;
 		background-position: center;
-		background-size: 10%;    
+		background-size: auto auto;
 		margin-top: 15%;
 	-webkit-transition: all 1s ease;
 		-moz-transition: all 1s ease;
@@ -399,7 +399,7 @@ font-size: 22px;
 		height: 42px;
 		background-repeat: no-repeat;
 		background-position: center;
-		background-size: auto auto;    margin-top: -6%;
+		background-size: auto auto;   /* margin-top: -6%;*/
 	}
 	
 	.volver-mobile p{
