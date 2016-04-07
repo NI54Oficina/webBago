@@ -3444,7 +3444,7 @@ section{
     display: inline-block;
     text-align: center;
     margin-top: 44%;
-    font-size: 11px;
+    font-size: 10px;
     font-family: 'arialregular';
 	padding:0 10px;
 }
@@ -7464,7 +7464,7 @@ position:fixed;
 #barra-media-antiparasitarios-externos {text-align:center;border-bottom:1px solid #0D553F;width:15%;margin:auto;}
 #barra-media-antiparasitarios-internos {text-align:center;border-bottom:1px solid #00955F;width:15%;margin:auto;}
 #barra-media-biologicos {text-align:center;border-bottom:1px solid #646568;width:15%;margin:auto;}
-#barra-media-endectocida  {text-align:center;border-bottom:1px solid #9B9501;width:15%;margin:auto;}	
+#barra-media-endectocidas  {text-align:center;border-bottom:1px solid #9B9501;width:15%;margin:auto;}	
 #barra-media-farmaceuticos {text-align:center;border-bottom:1px solid #6D3A5D;width:15%;margin:auto;}
 #barra-media-reproductivos {text-align:center;border-bottom:1px solid #FF671B;width:15%;margin:auto;}
 #barra-media-salud-ambiental {text-align:center;border-bottom:1px solid #26CBD4;width:15%;margin:auto;}
@@ -7475,7 +7475,7 @@ position:fixed;
 #barra-superior-antiparasitarios-externos {text-align:center;border-bottom:1px solid #0D553F;width:15%;margin:auto;}
 #barra-superior-antiparasitarios-internos{text-align:center;border-bottom:1px solid #00955F;width:15%;margin:auto;}
 #barra-superior-biologicos {text-align:center;border-bottom:1px solid #646568;width:15%;margin:auto;} 
-#barra-superior-endectocida  {text-align:center;border-bottom:1px solid #9B9501;width:15%;margin:auto;} 
+#barra-superior-endectocidas  {text-align:center;border-bottom:1px solid #9B9501;width:15%;margin:auto;} 
 #barra-superior-farmaceuticos {text-align:center;border-bottom:1px solid #6D3A5D ;width:15%;margin:auto;} 
 #barra-superior-reproductivos {text-align:center;border-bottom:1px solid #FF671B;width:15%;margin:auto;}
 #barra-superior-salud-ambiental {text-align:center;border-bottom:1px solid #26CBD4;width:15%;margin:auto;}

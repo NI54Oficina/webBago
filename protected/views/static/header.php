@@ -117,7 +117,8 @@
 				<li class="li-nav-2"><a class="link-menu" href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/9/lng/en"style="float:left;padding: 10px 0px;color: #337ab7;">English version</a></li>
 				<?php } ?>
 				<?php if($_SESSION["lng"]=="es"){ ?>
-				<li class="li-nav-2"><a class="link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/proveedores" style="float:left;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/fronteras-50x50-01.png" /></a></li>
+				<li class="li-nav-2">
+				<a class="link-menu"  href="http://www.fronterasproductivas.com/" target="_blank" style="float:left;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/fronteras-50x50-01.png" /></a></li>
 				<?php } ?>
 		</ul> <!-- termina lista versiones -->
 	
