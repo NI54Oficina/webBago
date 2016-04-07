@@ -83,7 +83,7 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 <div  class="tabla-aftosa col-lg-12 col-md-12 col-sm-11 col-xs-11" style="margin-top:4%;margin-bottom:25vh;text-align:center;display:inline-block;float:initial;padding:0 5%;">
 
 
-<h1 class="vademecum-producto"> <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/punto-<?php echo $normalizado; ?>.png" /><?php echo Textos::model()->GetText(348);?><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/punto-<?php echo $normalizado; ?>.png" /></h1>
+<h1 class="vademecum-producto"> <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/punto-<?php echo $normalizado; ?>.png" /><?php echo Textos::model()->GetText(348);?><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/notas/punto-<?php echo $normalizado; ?>.png" /></h1>
 <p id="barra-vademecum" ></p>
 <h2 class="titulo-vad-producto titulo-<?php echo $normalizado; ?>">
 
@@ -105,7 +105,7 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 	
 		<p id="compartido"><?php echo Textos::model()->GetText(452); ?></p>
  		<p style="text-align:center;width:15%;margin:auto;margin-top:-2%; margin-bottom: 5px;" ></p>
- 		<p id="barra-superior"></p>
+ 		<p id="barra-superior-<?php echo $normalizado; ?>"></p>
   		
   		<div id="barra-xs">
 			
@@ -133,7 +133,7 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 		</div>!-->
 		
 		<p id="registrado"><?php echo Textos::model()->GetText(453); ?></p>
-		<p id="barra-media"></p>
+		<p id="barra-media-<?php echo $normalizado; ?>"></p>
 		
 			<div id="targets-mobile" >
 					<?php
