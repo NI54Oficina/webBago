@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
+-- version 4.3.11
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-04-2016 a las 18:47:26
--- Versión del servidor: 10.1.9-MariaDB
--- Versión de PHP: 5.5.30
+-- Tiempo de generación: 07-04-2016 a las 19:41:29
+-- Versión del servidor: 5.6.24
+-- Versión de PHP: 5.6.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -14,7 +14,7 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40101 SET NAMES utf8 */;
 
 --
 -- Base de datos: `bagoweb`
@@ -26,12 +26,12 @@ SET time_zone = "+00:00";
 -- Estructura de tabla para la tabla `tbl_textos`
 --
 
-CREATE TABLE `tbl_textos` (
+CREATE TABLE IF NOT EXISTS `tbl_textos` (
   `id` int(11) NOT NULL,
   `es` text NOT NULL COMMENT 'español',
   `en` text NOT NULL COMMENT 'ingles',
   `pt` text NOT NULL COMMENT 'portugues'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=504 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tbl_textos`
@@ -53,7 +53,7 @@ INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (13, 'Un recorrido que demuestra el espíritu innovador y la permanente evolución de la compañía en la búsqueda de soluciones para una producción más eficiente.', 'A path that shows the innovative spirit and the permanent evolution of the company whilst searching for solutions to a more efficient production.  ', 'Um caminho que mostra o espírito inovador e a constante evolução  da empresa na busca de soluções para uma produção mais eficiente.'),
 (14, 'Nuestras plantas', 'Our Manufacturing Plants', 'Nossos Parques Industriais'),
 (15, 'Avanzada tecnología y  altos estándares de calidad respaldan  todo el proceso de producción en nuestras plantas modelos instaladas en Argentina.', 'Advanced technology and high quality standards support the entire production process in our model manufacturing plants in Argentina', 'Avançada tecnologia e altos padrões de qualidade são os pilares do processo de produção em nossas industriais instaladas na Argentina, Brasil e China.'),
-(16, 'RSE - Sustentabilidad', 'RSE-Sustainability', 'RSE Sustentabilidade'),
+(16, 'RSE - Sustentabilidad', 'CSR-Sustainability', 'RSE Sustentabilidade'),
 (17, 'Aportamos nuestros mejores recursos para desarrollar soluciones y relaciones sustentables, junto a las comunidades de los países donde actuamos.', 'We supply our best resources to develop solutions and sustainable relationships together with the communities in the countries in which we are present.', 'Fornecemos nossos melhores recursos para  desenvolver soluções sustentáveis junto às comunidades dos países que   atuamos.'),
 (18, 'INFO para Proveedores', 'Suppliers', 'Provedores'),
 (19, 'Información útil AFIP / Ingresos Brutos', 'Useful information AFIP / Gross Income', 'Informações uteis AFIP/ Resultado Bruto.'),
@@ -552,7 +552,7 @@ ALTER TABLE `tbl_textos`
 -- AUTO_INCREMENT de la tabla `tbl_textos`
 --
 ALTER TABLE `tbl_textos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=504;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=504;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

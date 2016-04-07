@@ -1460,15 +1460,17 @@
 
 				<!-- ESTOS SON LOS TEXTOS QUE TIENE QUE APARECER Y DESAPARECCER EN RRHH DE LA HOME !-->
 
-				<p style="font-size: 14px; margin-top: 10px;" id="textoFade" style="position:absolute;">
-				   <?php echo Textos::model()->GetText(483); ?>/
-				   <?php echo Textos::model()->GetText(484); ?>/
-				   <?php echo Textos::model()->GetText(485); ?>/
-				   <?php echo Textos::model()->GetText(486); ?>/
-				   <?php echo Textos::model()->GetText(487); ?>/
-				   <?php echo Textos::model()->GetText(488); ?>/
+				<ul  class="colg-lg-10" style="font-size: 13px; text-align: center; color: #359fbd;    width: 65%;  margin: auto; margin-top: 10px;" id="ul-rrhh-home" style="position:absolute;">
+				
+				
+				   <li><?php echo Textos::model()->GetText(483); ?></li>
+				   <li><?php echo Textos::model()->GetText(484); ?></li>
+				   <li><?php echo Textos::model()->GetText(485); ?></li>
+				   <li><?php echo Textos::model()->GetText(486); ?></li>
+				   <li><?php echo Textos::model()->GetText(487); ?></li>
+				   <li style="line-height:17px;"><?php echo Textos::model()->GetText(488); ?></li>
 
-				</p>
+				</ul>
 
 				<!-- HASTA ACA !-->
 				</div>

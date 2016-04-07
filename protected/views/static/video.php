@@ -48,7 +48,7 @@
 
 
 		<div class="content-home" style="position:relative;">
-			<h1 class="h1-home-ev row" style="text-transform: uppercase;margin-right:0;margin-left:0;"><?php echo Textos::model()->GetText(2); ?></h1>
+			<h1 class="h1-home-ev row" style="text-transform: uppercase;margin-right:0;margin-left:0;font-size: 38px;"><?php echo Textos::model()->GetText(2); ?></h1>
 			<h1 class="h1-home-ev salud-animal row" style="text-transform: uppercase;margin-right:0;margin-left:0;"><?php echo Textos::model()->GetText(3); ?></h1>
 		</div>
 		
