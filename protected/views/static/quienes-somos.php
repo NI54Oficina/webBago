@@ -1,4 +1,13 @@
-
+<div class="captchaContainer"><?php $this->widget('CCaptcha'); ?></div>
+<script>
+$(document).ready(function(){
+	$(".captchaContainer img").each(function(){
+		var startSrc=$(this).attr("src");
+		startSrc="<?php echo "http://".$_SERVER['SERVER_NAME'] ?>"+startSrc;
+		$(this).attr("src",startSrc);
+	});	
+});
+</script>
 			<div class="header-layout-aftosa col-lg-12 col-md-12 col-sm-12 col-xs-12">
 				<div style="width:100%;position:absolute;"><h1 class="titulo-layout-aftosa" style=""><?php echo Textos::model()->GetText(6); ?></h1></div>
 				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/quienes-somos.png" style="width:100vw;" />	
