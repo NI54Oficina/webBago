@@ -68,13 +68,14 @@
 		<?php include('header.php'); ?>
 		<div class="general-texto-home-header div-inst" id="complements">
 
-			<h1  class="h1-inst-home"><img class="img-punto-home" src="<?php echo Yii::app()->request->baseUrl; ?>/img/punto-home.png"  style="    vertical-align: top;margin-right:8px;text-transform: uppercase;"/><?php echo Textos::model()->GetText(347); ?></h1>
+			<h1  class="h1-inst-home" ><img class="img-punto-home" src="<?php echo Yii::app()->request->baseUrl; ?>/img/punto-home.png"  style="    vertical-align: top;margin-right:8px;text-transform: uppercase;"/><?php echo Textos::model()->GetText(5);?></h1>
 			<img   class="img-punto-home" src="<?php echo Yii::app()->getBaseUrl(true); ?>/img/punto-home.png"  /><br>
 			<div class="border-inst"></div><br>
-			<p  class="p-inst-home"><?php echo Textos::model()->GetText(4); ?> </br> <?php echo Textos::model()->GetText(5); ?></p>
+			<p  class="p-inst-home"></br></p>
 			
 		</div>
 
 	</div>
 	
 	
+<!-- <img   class="img-punto-home" src="<?php echo Yii::app()->getBaseUrl(true); ?>/img/punto-home.png"  /> -->

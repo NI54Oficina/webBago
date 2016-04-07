@@ -55,3 +55,17 @@ if($nota && $nota->seccion=="tecnica"){
 }
 ?>
 </div>
+<style>
+.inner-text img{
+	max-width: 100%;
+}
+</style>
+<script>
+$(document).ready(function(){
+	$(".imagen-nota-tecnica").each(function(){
+		var startSrc=$(this).attr("src");
+		startSrc="<?php echo Yii::app()->getBaseUrl(true); ?>"+startSrc;
+		$(this).attr("src",startSrc);
+	});	
+});
+</script>
