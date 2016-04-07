@@ -6599,8 +6599,7 @@ figure.snip1156:hover .salud-ambiental{
 		z-index:100000;
 	}
 	
-	#sidePlantas{
-		padding-top:0 !important;
+	
 	}
  }
 /** fin fix ipad menu**/
@@ -7708,6 +7707,8 @@ position:fixed;
 
 @media screen and (max-width: 1024px){
 	.banderas-paises-principal { opacity: 1; }
+	#sidePlantas{
+		padding-top:0 !important;}
 }
 
 
@@ -7726,3 +7727,10 @@ position:fixed;
 
 #menu-vademecum a:focus {text-decoration:none}
 
+
+ .inner-text h2{color: black; font-size: 15px;line-height: 25px;} 
+ .inner-text h3{color: black; line-height: 25px;} 
+ .inner-text li {color:#8C8C8C; font-size: 15px; line-height: 25px;}
+ .inner-text table {color: black; font-size: 15px;line-height: 25px;}
+
+.marker {color: red;}
