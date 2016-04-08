@@ -1542,13 +1542,21 @@
                         
 						<p style="text-transform:uppercase;" class="ubicacion"><img class="ico-ubi" src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-ubicacion.png"/><?php echo Textos::model()->GetText(479); ?></p>
                         
-                        <p>Ruta Panamericana Km 38,5 Garín</p>
+                     
+                        
                        
 					
 						<!-- MAPA -->
-						<div class="mapa"></div>
+						<!--<div class="mapa"></div>!-->
 						
-						<iframe class="" style="width:89%;height:50vh;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3276.321995531876!2d-58.47311858426047!3d-34.79784007530322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcd1838f6768bf%3A0x1fe233fc9fc7b0d0!2sBiogenesis+-+Bago!5e0!3m2!1ses!2sar!4v1454509545701" width="600" height="450" frameborder="0" style="border:0" allowfullscreen ></iframe>
+						<!--<iframe class="" style="width:89%;height:50vh;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3276.321995531876!2d-58.47311858426047!3d-34.79784007530322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcd1838f6768bf%3A0x1fe233fc9fc7b0d0!2sBiogenesis+-+Bago!5e0!3m2!1ses!2sar!4v1454509545701" width="600" height="450" frameborder="0" style="border:0" allowfullscreen ></iframe>!-->
+						<?php if($_SESSION["lng"]=="pt"){ ?>
+						<p>Av. Manoel Ribas, 985 - Mercês</p>
+                        <iframe style="width:89%;height:50vh;"  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3603.4664824665533!2d-49.29041138444461!3d-25.422663438829932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce3f946aac7ff%3A0xbdbd9765e14046d2!2sAv.+Manoel+Ribas%2C+985+-+Merc%C3%AAs%2C+Curitiba+-+PR%2C+Brasil!5e0!3m2!1ses!2sar!4v1460127317366" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+						<?php }else{ ?>
+						   <p>Ruta Panamericana Km 38,5 Garín</p>
+						<iframe  style="width:89%;height:50vh;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13165.129935934561!2d-58.71431924216879!3d-34.419579093363566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bca1f2712699bd%3A0x3985a0fecc05b5c6!2zQmlvZ8OpbmVzaXMgQmFnw7MgU0E!5e0!3m2!1ses!2sar!4v1460127475557" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+						<?php } ?>
                        
 					   <!-- termina mapa-->
 					   
