@@ -87,7 +87,7 @@ $this->menu=array(
 		<hr>
 		<div class="form-group">
 			<label for="Producto_nombre" id="label_imagen">Imagen</label><br>
-			<input type="text" class="required" name="Producto[imagen]" value="" id="image_id" style="opacity:0;position:absolute;left:-999999px;">
+			<input type="text" class="required" name="Producto[imagen]" value="-1" id="image_id" style="opacity:0;position:absolute;left:-999999px;">
 			<div id="dropzone-example" style="width:100%;height:100px;background-color:#c4c4c4;margin:20px;padding:10px;"></div>
 			<div id="previewImage"></div>
 		</div>

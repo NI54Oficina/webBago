@@ -76,7 +76,9 @@ $auxLink = preg_replace('/-+/', '-', $auxLink);
 $auxLink= strtolower($auxLink);
 $normalizado= $auxLink;
 $id= $data->id;
+
 $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"id DESC"));
+
 ?>
 <style>body{background-color:white;}</style>
 <div style="width:100%;">
@@ -103,9 +105,9 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 <!-- BARRA IZQUIERDA A MODIFICAR -->
 
 <div  class=" col-lg-3 col-md-3 col-sm-12 col-xs-12 imagen-producto">
-		
+		<?php if($imagen){ ?>
 		<img  src="<?php echo Yii::app()->getBaseUrl(true); ?>/vademecums/<?php echo $imagen->id; ?>.png" align="center" />
-	
+	<?php } ?>
 	
 		<p id="compartido"><?php echo Textos::model()->GetText(452); ?></p>
  		<p style="text-align:center;width:15%;margin:auto;margin-top:-2%; margin-bottom: 5px;" ></p>
@@ -239,7 +241,7 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="contacto-mobile">
 			
-			<a href="" class="col-lg-3 col-md-3 col-sm-6 col-xs-6 facebook" >
+			<a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//<?php echo $_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI']; ?>" class="col-lg-3 col-md-3 col-sm-6 col-xs-6 facebook" >
 				
 			</a>
 			

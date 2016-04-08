@@ -102,7 +102,7 @@ class ProductoController extends Controller
 			$model->fecha=date("Y-m-d H:i:sa", $d);
 			if($model->save()){
 				
-				if($_POST['Producto']['imagen']){
+				if($_POST['Producto']['imagen']&&$_POST['Producto']['imagen']!=-1&&$_POST['Producto']['imagen']!="-1"){
 					$imagen= Imagen::model()->findByPk($_POST['Producto']['imagen']);
 					$imagen->producto_id= $model->id;
 					$imagen->save();
@@ -588,11 +588,12 @@ class ProductoController extends Controller
 	public function actionAdminPais()
 	{
 		$this->layout="adminProductos";
-		if(isset($_GET['pais'])){
+		$posts = Producto::model()->findAll();
+		/*if(isset($_GET['pais'])){
 			$posts = Producto::model()->taggedWith($_GET['pais'])->findAll();
 		}else{
-			$posts = Producto::model()->findAll();
-		}
+			
+		}*/
 		$this->render('adminPais',array(
 			'model'=>$posts,
 		));
