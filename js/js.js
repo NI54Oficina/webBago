@@ -445,11 +445,14 @@ if ($(this).scrollTop() >100){
 
 $(window).scroll(function() {
 
-if ($(this).scrollTop() >2300){  
-	$('#titulo-info').css('animation','fadein 2s');
-	$('#titulo-info').css('animation','myfirst 3s');
-	$('#titulo-info').css('animation','myfirst 3s ease-out forwards');
+if ($(this).scrollTop() >200){  
+
+	$('#table .tr-widget').each(function(i) {
+	$(this).delay((i++) * 200).fadeTo(1000, 1); })
+
+
 }});
+
 
 
 $(window).scroll(function() {
@@ -464,13 +467,9 @@ if ($(this).scrollTop() >2450){
 
 
 $(window).scroll(function() {
-
 if ($(this).scrollTop() >2730){  
 
-	$('#vade').css('animation','fadein 2s');
-	$('#vade').css('animation','myfirst 3s');
-	$('#vade').css('animation','myfirst 3s ease-out forwards');
-	
+
 	$('#botones div').each(function(i) {
 	$(this).delay((i++) * 150).fadeTo(1000, 1); })
 	

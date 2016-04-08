@@ -8613,5 +8613,11 @@ position:fixed;
     transition: all 1s ease;
     margin-top: -4%;
     text-align: left;
-    margin-left: -138px;
+    margin-left: -11%;
+	opacity:0.5;
+	}
+	
+	
+	#ul-rrhh-home{
+		color:#359fbd;
 	}

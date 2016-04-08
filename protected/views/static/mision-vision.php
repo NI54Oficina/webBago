@@ -4,6 +4,7 @@
 				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/mision-vision-oscura-01.png" style="width:100vw;" />	
 			</div>
 	</section>
+	<script src="<?php echo Yii::app()->getBaseUrl(true); ?>/js/jquery.boxloader.min.js"></script>	
 
 
 	<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">

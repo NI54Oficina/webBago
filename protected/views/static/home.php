@@ -1404,13 +1404,13 @@
 							<ul class="overview" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 								<?php foreach($revistas as $revista){ ?> 
 								<!-- ITEM REVISTA-->
-<<<<<<< HEAD
+
 								<li id="revista-<?php echo $revista->id; ?>" class="col-lg-4 col-md-2 col-sm-2 col-xs-4 revista-slider-240">
 									<a href="<?php echo Yii::app()->request->baseUrl; ?>/uploads/molino/pdf/revista-<?php echo $revista->numero; ?>.pdf" target="_blank">
-=======
+
 								<li id="revista-<?php echo $revista->id; ?>" class="col-lg-4 col-md-2 col-sm-2 col-xs-4">
 									<a href="<?php echo Yii::app()->request->baseUrl; ?>/elmolino/<?php echo $revista->numero; ?>" target="_blank">
->>>>>>> origin/master
+
 									<!-- img -->
 									<div class="rev-30"> </div> 
 								
@@ -1829,7 +1829,7 @@
 			direction:"y",
 			position: "-100%",
 			effect: "fadeIn",
-			duration: "2s",
+			duration: "3s",
 			windowarea: "100%"
 		}); 
 		
@@ -1837,7 +1837,7 @@
 			direction:"y",
 			position: "-100%",
 			effect: "fadeIn",
-			duration: "2s",
+			duration: "3s",
 			windowarea: "100%"
 		}); 	
 		
