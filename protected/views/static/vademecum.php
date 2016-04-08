@@ -139,7 +139,7 @@ $auxId=0;
 				<div class="inner-producto-vademecum">
 				<div class="producto-vademecum-top">
 				<?php if($imagen){ ?>
-				<img style="width:45%;display:inline-block;margin-top: 5%;margin-right:0;text-align:left;" class="img-cat-aft " src="<?php echo Yii::app()->getBaseUrl(true); ?>/vademecums/<?php echo $imagen->id; ?>.png" /> 
+				<img style="width:40%;display:inline-block;margin-top: 5%;margin-right:0;text-align:left;" class="img-cat-aft " src="<?php echo Yii::app()->getBaseUrl(true); ?>/vademecums/<?php echo $imagen->id; ?>.png" /> 
 				<?php } ?>
 				<div class="targets-vademecum">
 					<div class="columna-target">

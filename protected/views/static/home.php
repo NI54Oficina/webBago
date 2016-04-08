@@ -775,6 +775,10 @@
 				"ni" => "infoNicaragua",
 				"pa" => "infoPanama",
 				"en" => "infoArgentina",
+				"py" => "infoParaguay",
+				"pe" => "infoArgentina",
+				"do" => "infoArgentina",
+				"ve" => "infoArgentina",
 			];
 			if(array_key_exists($_SESSION['short'],$shortToId)){
 			?>
@@ -1363,7 +1367,7 @@
 							<p id="p-3"><?php echo  $primeraRevista->bajada; ?></p>
 		
 							<div class="btn-">
-								<a href="<?php echo Yii::app()->request->baseUrl; ?>/uploads/molino/pdf/revista-<?php echo $primeraRevista->numero; ?>.pdf" target="_blank"><button type="button" id="btn-rev">Leer revista</button></a>
+								<a href="<?php echo Yii::app()->request->baseUrl; ?>/elmolino/<?php echo $primeraRevista->numero; ?>" target="_blank"><button type="button" id="btn-rev">Leer revista</button></a>
 							</div> <!--Termina btn-->
 		
 						</div> <!--Temrina info revista -->
@@ -1408,7 +1412,7 @@
 								<?php foreach($revistas as $revista){ ?> 
 								<!-- ITEM REVISTA-->
 								<li id="revista-<?php echo $revista->id; ?>" class="col-lg-4 col-md-2 col-sm-2 col-xs-4">
-									<a href="<?php echo Yii::app()->request->baseUrl; ?>/uploads/molino/pdf/revista-<?php echo $revista->numero; ?>.pdf" target="_blank">
+									<a href="<?php echo Yii::app()->request->baseUrl; ?>/elmolino/<?php echo $revista->numero; ?>" target="_blank">
 									<!-- img -->
 									<div class="rev-30"> </div> 
 								
