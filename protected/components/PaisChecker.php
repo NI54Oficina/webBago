@@ -98,7 +98,7 @@ class PaisChecker extends CApplicationComponent
 			if($traduccion!=null){
 				return $traduccion->nombre;;
 			}else{
-				return Seccion::model()->findByPk($idSeccion)->nombre;
+				return ProductoPartes::model()->findByPk($idSeccion)->nombre;
 			}
 		}
     }

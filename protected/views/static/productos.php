@@ -113,7 +113,7 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
   		
   		<div id="barra-xs">
 			
-			<a href="" class="col-lg-3 col-md-3 col-sm-6 col-xs-6 facebook" >
+			<a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//<?php echo $_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI']; ?>" class="col-lg-3 col-md-3 col-sm-6 col-xs-6 facebook" >
 				
 			</a>
 			

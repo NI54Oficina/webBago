@@ -159,12 +159,12 @@
 			<!-- INFO TÉCNICA -->
 			<li class="li-nav  dropdown"><a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/informacion-tecnica" class="a-nav dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo Textos::model()->GetText(433); ?> <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/flecha-menu.png" /></a>
 				
-				<ul class="dropdown-menu dropdown-menu-right">
+				<!--<ul class="dropdown-menu dropdown-menu-right">
 							<img id="flecha-submenu" src="<?php echo Yii::app()->request->baseUrl; ?>/img/flecha-submenu.png" />
 								<li style="margin-top:-5px;"><a class="link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/home/#inform-tec"><?php echo Textos::model()->GetText(434); ?></a></li>
 								<li><a class="link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/home/#inform-tec"><?php echo Textos::model()->GetText(435); ?></a></li>
 								<li><a class="link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/informacion-tecnica"><?php echo Textos::model()->GetText(436); ?></a></li>
-					</ul>
+					</ul>!-->
 					
 			</li>
 			<?php } ?>
@@ -211,7 +211,7 @@
 				
 			</li>
 			
-			<?php if($_SESSION["lng"]!="en"){ ?>
+			<?php if($_SESSION["lng"]=="es"){ ?>
 			<!-- REVISTA EL MOLINO  -->
 			<li class="li-nav"><a class="a-nav link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/revista"><?php echo Textos::model()->GetText(451); ?></a></li>
 			<?php } ?>

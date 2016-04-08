@@ -213,7 +213,7 @@
 			<p class="anios-1934-2006">2006</p>
 		</div>
 		
-		<p class="nace-linea-tiempo">Nace</p> <p class="bago-linea-tiempo" style="color:#011E49;">Biogénesis Bagó</p>
+		<p class="nace-linea-tiempo"><?php echo Textos::model()->GetText(501); ?></p> <p class="bago-linea-tiempo" style="color:#011E49;">Biogénesis Bagó</p>
 
 	</div>
 	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">

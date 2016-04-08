@@ -802,8 +802,8 @@
 					<ul id="list-menu"  class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
 						<li class="col-lg-1 col-md-2 col-sm-2 col-xs-3"><a  id="opcion1" href="javascript:void(0)">Trabajos técnicos</a></li>
-						<li class="col-lg-1 col-md-2 col-sm-2 col-xs-3"><a  id="opcion2" href="javascript:void(0)">Planes Sanitarios</a></li>
-						<li class="col-lg-1 col-md-2 col-sm-2 col-xs-3"><a id="opcion3" href="javascript:void(0)">Planillas<br />de trabajo</a></li>             
+						<!--<li class="col-lg-1 col-md-2 col-sm-2 col-xs-3"><a  id="opcion2" href="javascript:void(0)">Planes Sanitarios</a></li>
+						<li class="col-lg-1 col-md-2 col-sm-2 col-xs-3"><a id="opcion3" href="javascript:void(0)">Planillas<br />de trabajo</a></li>             !-->
 					
 					</ul> 
 					
