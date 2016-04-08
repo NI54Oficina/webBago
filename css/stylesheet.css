@@ -7510,8 +7510,8 @@ position:fixed;
    .imagen-pais {margin:0px 15% 0px 0px; width: 20%;}
    .paises-registrados {margin:5% 0% 5% 0%; float: left; width: 50%;}
    .cuerpo-producto {margin-top: -20%;}
-   #contacto-mobile{display: inline-block !important;  text-align: right; margin-left:20%; position: relative; margin-top: -16%;}
-   	.facebook {float: left !important;background-position: right!important; margin-right: -5%; }
+   #contacto-mobile{display: inline-block !important;  text-align: right; /*margin-left:20%; position: relative; margin-top: -16%;*/}
+   	.facebook {background-position: right!important;  }
    	.mail {}
    	#volver-producto {background-position: left;     background-size: 10%; }
    	#volver-producto p {margin-left: 12%;

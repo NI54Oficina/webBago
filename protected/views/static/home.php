@@ -195,6 +195,17 @@
 					</div> <!-- Termina cada referencia -->
 				
 				
+						
+					<!--- REFERENCIA -->
+					<div id="ref-unica">
+					
+						<img class="icn-ubicacion" src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-naranja-distribuidoras.png">
+					
+						<p id="nom-ref">Distribuidoras </p>
+						
+					</div> <!-- Termina cada referencia -->
+				
+				
 					
 					<!--- REFERENCIA -->				
 					<div id="ref-unica">
