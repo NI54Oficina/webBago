@@ -26,18 +26,21 @@
 						
 								<!-- 	QUIÉNES SOMOS -->
 								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional" hid="1" id="inst-quienes">
-									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/quienes-somos">	
-										<canvas class="" id="myCanvas" height="90px" width="100%"></canvas>
+									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/quienes-somos " target="_blank">	
+
 										<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home-quienes.png" />
 										<div class="plus-container"><span  class=" glyphicon glyphicon-plus"></span></div>
 										<h1 class="h1-1-home"><?php echo Textos::model()->GetText(6); ?></h1>
 										<p class="p-in-h"><?php echo Textos::model()->GetText(7); ?></p>
 									</a>
 								</div>
+
+
+								<!--  -->
 								
 								<!--	MISIÓN, VISIÓN Y VALORES -->
 								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional" hid="1" id="inst-mision">
-									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/mision-vision">
+									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/mision-vision" target="_blank">
 										<canvas class="" id="myCanvas" height="90px" width="100%"></canvas>
 										<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home-mision.png" />
 										<div class="plus-container"><span  class=" glyphicon glyphicon-plus"></span></div>									
@@ -48,7 +51,7 @@
 								
 								<!--	LUCHA CONTRA AFTOSA -->
 								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional" hid="1">
-									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/lucha-contra-aftosa">
+									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/lucha-contra-aftosa" target="_blank">
 										<canvas class="" id="myCanvas" height="90px" width="100%"></canvas>
 										<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home-aftosa.png" />
 										<div class="plus-container"><span  class=" glyphicon glyphicon-plus"></span></div>
@@ -59,7 +62,7 @@
 								
 								<!--	TRAYECTORIA - HITOS -->
 								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional" hid="1">
-									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/trayectoria-hitos">
+									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/trayectoria-hitos" target="_blank">
 										<canvas class="" id="myCanvas" height="90px" width="100%"></canvas>
 										<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home-trayectoria.png" />
 										<div class="plus-container"><span  class=" glyphicon glyphicon-plus"></span></div>
@@ -74,7 +77,7 @@
 						
 								<!--	NUESTRAS PLANTAS -->
 								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional" hid="1" >
-									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/nuestras-plantas">
+									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/nuestras-plantas" target="_blank">
 										<canvas class="" id="myCanvas" height="90px" width="100%"></canvas>
 										<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home-plantas.png" />
 										<div class="plus-container"><span  class=" glyphicon glyphicon-plus"></span></div>
@@ -86,7 +89,7 @@
 								<?php if($_SESSION["lng"]!="pt"){ ?>
 								<!--	RSE - SUSTENTABILIDAD -->
 								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional" hid="1" >
-									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/rse">
+									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/rse" target="_blank">
 										<canvas class="" id="myCanvas" height="90px" width="100%"></canvas>
 										<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home-rse.png" />	
 										<div class="plus-container"><span  class=" glyphicon glyphicon-plus"></span></div>									
@@ -99,7 +102,7 @@
 								<?php if($_SESSION["lng"]=="es"){ ?>
 								<!-- 	INFO PARA PROVEEDORES -->
 								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional" hid="1" >
-									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/proveedores">
+									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/proveedores" target="_blank">
 										<canvas class="" id="myCanvas" height="90px" width="100%"></canvas>
 										<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home-proveedores.png" />
 										<div class="plus-container"><span  class=" glyphicon glyphicon-plus"></span></div>
@@ -112,7 +115,7 @@
 								<!--	PRENSA -->
 								<?php if($_SESSION["lng"]=="es"){ ?>
 								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional" hid="1">
-									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/prensa">
+									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/prensa" target="_blank">
 										<canvas class="" id="myCanvas" height="90px" width="100%"></canvas>
 										<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home-prensa.png" />	
 										<div class="plus-container"><span  class=" glyphicon glyphicon-plus"></span></div>
@@ -1500,7 +1503,7 @@
 
 				<!-- ESTOS SON LOS TEXTOS QUE TIENE QUE APARECER Y DESAPARECCER EN RRHH DE LA HOME !-->
 
-				<ul  class="colg-lg-10" style="font-size: 15px; text-align: center; color: #359fbd;    width: 50%;  margin: auto; margin-top: 40px;" id="ul-rrhh-home" style="position:relative;">
+				<ul  class="colg-lg-10" style="" id="ul-rrhh-home" style="position:relative;">
 				
 					<li><?php echo Textos::model()->GetText(483); ?></li>
 				   <li><?php echo Textos::model()->GetText(484); ?></li>

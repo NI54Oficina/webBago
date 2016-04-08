@@ -7770,7 +7770,23 @@ position:fixed;
 
 #ul-rrhh-home li{
 	line-height:30px;
+	font-size: 15px; 
+	text-align: center; 
+	color: #359fbd;    
+	width: 50%;  
+	margin: auto; 
+	margin-top: 40px;
 }
+
+
+@media screen and (max-width:768px){
+	#ul-rrhh-home li {width: 100% !important;
+		margin:0% !important;}
+
+  #ul-rrhh-home{margin:2%; padding: 0px;}
+}
+
+
 
 /*SONY E3*/
 @media only screen 
