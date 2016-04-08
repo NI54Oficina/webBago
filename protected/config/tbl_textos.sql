@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.3.11
+-- version 4.5.1
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-04-2016 a las 20:17:45
--- Versión del servidor: 5.6.24
--- Versión de PHP: 5.6.8
+-- Tiempo de generación: 08-04-2016 a las 16:06:50
+-- Versión del servidor: 10.1.9-MariaDB
+-- Versión de PHP: 5.5.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -14,7 +14,7 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
 -- Base de datos: `bagoweb`
@@ -26,12 +26,12 @@ SET time_zone = "+00:00";
 -- Estructura de tabla para la tabla `tbl_textos`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_textos` (
+CREATE TABLE `tbl_textos` (
   `id` int(11) NOT NULL,
   `es` text NOT NULL COMMENT 'español',
   `en` text NOT NULL COMMENT 'ingles',
   `pt` text NOT NULL COMMENT 'portugues'
-) ENGINE=InnoDB AUTO_INCREMENT=504 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tbl_textos`
@@ -99,7 +99,7 @@ INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (59, '•	En 2013, Biogénesis Bagó y HILE Biotechnology inician el proyecto de trabajo en conjunto para la producción y comercialización de la <strong>vacuna anti Aftosa en la República Popular de China</strong>. La planta comenzará a operar en 2016 con una capacidad de producción de 400 millones de dosis por año. Somos la primera y única empresa de biotecnología del sector privado en el mundo que cumple con la calidad requerida por las autoridades sanitarias del gobierno chino, para dar respuesta al principal problema sanitario que afecta los rodeos del país asiático.', '•	In 2013 Biogénesis Bagó and HILE Biotechnology started a project for the production and commercialisation of the <strong>vaccine against Foot and Mouth Disease in the Republic of China</strong>.  The manufacturing plant will begin to function in 2016 with a production capability of 400 million doses per year.  We are the first and only biotechnology company in the private sector of the world that complies with quality requirements of health authorities of the Chinese government and that will be able to respond to the main health issues affecting livestock in China. ', '•	Em 2013, a Biogénesis Bagó e HLE Biotechnology iniciaram o projeto de  trabalho em conjunto para a produção e comercialização da vacina anti   Aftosa na República Popular da China. A planta industrial começará   operar em 2016 com uma capacidade produtiva de 400 milhões de   doses por ano. Somos a primeira e única empresa de biotecnologia do   setor privado no mundo que cumpre com os padrões de qualidade   requerida pelas autoridades sanitárias do governo chinês, para dar   resposta ao principal problema sanitário que atinge os rebanhos   asiáticos.'),
 (60, 'Nuestros colaboradores son quienes marcan la diferencia, quienes agregan valor al negocio, haciendo de nuestra compañía una de las empresas líderes dentro del mercado de la sanidad animal.', '', ''),
 (61, 'Trabajamos día a día respetando nuestros valores: Innovación, Cercanía, Flexibilidad, Responsabilidad, Progreso, Trabajo en Equipo, Integridad y Excelencia. Si te sentís con ganas y preparado para sumarte a un equipo dinámico y pujante, te invitamos a que formes parte de Biogénesis Bagó.', '', ''),
-(62, 'Envíanos tu CV', '', 'ENVIE SEU CV'),
+(62, 'Envíanos tu CV', 'Send your CV', 'ENVIE SEU CV'),
 (63, 'Responsabilidad Social Empresaria', 'Corporate Social Responsibility', 'Responsabilidade Social Empresarial'),
 (64, 'Somos una empresa que busca liderar la evolución de la  salud animal siempre integrada a las necesidades del ser humano. Nos  comprometemos con la realidad de las comunidades de los países donde actuamos y aportamos nuestros mejores recursos para desarrollar soluciones productivas sustentables.', 'We are a company that strives to lead the evolution of animal health, always taking into account peoples needs.  We are committed to the reality of the communities within the countries we work and offer our best resources to develop productive and sustainable solutions.  ', 'Somos uma empresa que lidera a busca da evolução da saúde animal, sempre  integrada às necessidades do ser humano. Temos comprometimento com a   realidade das comunidades dos países em que atuamos e levamos nossos   melhores recursos para desenvolver soluções produtivas e sustentáveis.'),
 (65, 'Gestión responsable y comprometida', 'Committed and Responsible Management', 'Gestão Responsável e Comprometida'),
@@ -147,18 +147,18 @@ INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (107, 'Fronteras Productivas', '', ''),
 (108, 'Conozca las últimas novedades y tendencias en nuestro especial "Fronteras Productivas"', '', ''),
 (109, 'Leer revista', '', ''),
-(110, 'BIOGÉNESIS BAGÓ TIENE UN LUGAR PARA VOS', 'BIOGÉNESIS BAGÓ HAS A PLACE FOR YOU', ''),
-(111, 'Envianos tu cv', '', 'Envie seu CV'),
-(112, '¿Por qué Biogénesis Bagó es un buen lugar para trabajar?', 'Why is Biogénesis Bagó a good place to work?', ''),
-(113, 'CONTACTO', 'CONTACT', ''),
+(110, 'BIOGÉNESIS BAGÓ TIENE UN LUGAR PARA VOS', 'BIOGÉNESIS BAGÓ HAS A PLACE FOR YOU', 'BIOGÉNESIS BAGÓ TEM UM LUGAR  PARA VOCÊ'),
+(111, 'Envianos tu cv', 'Send your CV', 'Envie seu CV'),
+(112, '¿Por qué Biogénesis Bagó es un buen lugar para trabajar?', 'Why is Biogénesis Bagó a good place to work?', 'Por quê Biogénesis Bagó é um excelente lugar para trabalhar?'),
+(113, 'CONTACTO', 'CONTACT', 'CONTATO'),
 (114, 'Nombre', 'Name', ''),
 (115, 'Apellido', 'Surname', ''),
 (116, 'e-mail', 'e-mail', ''),
 (117, 'Teléfono', 'Phone', ''),
 (118, 'Empresa', 'Company', ''),
 (119, 'Cargo', 'Position', ''),
-(120, 'Dirección', 'Adress', ''),
-(121, 'Departamento', '', ''),
+(120, 'Dirección', 'Address', ''),
+(121, 'Departamento', 'Country', ''),
 (122, 'Mensaje', 'Message', ''),
 (123, 'Enviar', 'Send', ''),
 (124, '', '', ''),
@@ -464,7 +464,7 @@ INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (428, 'Versión portugués', 'Portuguese version', ''),
 (429, 'Trayectoria', 'Trajectory', 'Trajetória'),
 (430, 'Info para proveedores', 'Supliers', 'Provedores'),
-(431, 'Rse', 'Rse', 'Rse'),
+(431, 'Rse', 'Csr', 'Rse'),
 (432, 'Filiales y rep. comerciales', 'Affiliates and Sales Reps', 'Controladas e Rep. Comercial '),
 (433, 'info técnica', '', 'info técnica'),
 (434, 'Planes sanitarios', '', 'Planos sanitários produtivos'),
@@ -485,16 +485,16 @@ INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (450, 'contacto', 'contact', 'contato'),
 (451, 'revista el molino', 'magazine el molino', ''),
 (452, 'Compartir en', 'Share', ''),
-(453, 'Registrado en ', '', ''),
+(453, 'Registrado en ', 'Registred', ''),
 (454, 'Versión ingles', 'English version', ''),
 (455, '<strong>Nuestro rol social en emergencias</strong> ', '<strong>Our social role in emergencies</strong> ', '<strong>Nosso rol social para emergências </strong>'),
 (456, '<strong>Cuidado del medio ambiente</strong> ', '<strong>Taking Care of the Environment</strong>', '<strong>Cuidado com o meio ambiente</strong> '),
 (457, '<strong>Encuentros Biosolidarios </strong>', '<strong>Solidarity Meetings</strong>', '<strong> Encontros Biosolidários</strong>'),
 (458, 'Fundaciones con las que colaboramos', '', ''),
 (459, 'Casa Matriz', 'Headquarters', ''),
-(460, 'Filiales', 'Affiliates', 'Controladas'),
-(461, 'Banco de vacunas', '', ''),
-(462, 'Antiaftosa de Norteamérica ', '', ''),
+(460, 'Filiales', 'Our Subsidiaries', 'Controladas'),
+(461, '', '', ''),
+(462, 'Banco de vacunas</br>Antiaftosa de Norteamérica ', 'North American FMD Vaccine Bank', ''),
 (463, 'Centro América', '', ''),
 (464, 'Biogénesis Bagó de México S.A. de C.V.', '', ''),
 (465, 'Av. Periférico Sur 6677 Piso 5, Delegación Xochimilco, Colonia Ejidos de Tepepan, México DF.', '', ''),
@@ -510,17 +510,17 @@ INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (475, 'Calle Ppal Llano Bonito, Juan Díaz - Edificio Imp. El Universo. Apartado Postal 0838-02057 Zona 12, Panamá.', '', ''),
 (476, 'Vitaminas y', 'Vitamins and', ''),
 (477, 'minerales', 'minerals', ''),
-(478, 'Envíanos tu Currículum Vitae y comenzá a transitar </br> el camino de ser parte de esta compañía en\n\nexpansión', 'Please send your Curriculum Vitae and </br>begin  expanding company', ''),
+(478, 'Envíanos tu Currículum Vitae y comenzá a transitar </br> el camino de ser parte de esta compañía en\n\nexpansión', 'Please send your Curriculum Vitae and </br>begin  expanding company', 'Envie seu Curriculum Vitae e faça parte desta empresa em  expansão'),
 (479, 'Ubicación', 'Location', 'Localização'),
 (480, 'Enviado', '', ''),
 (481, 'Enviando', '', ''),
 (482, 'Error de Envio', '', ''),
-(483, 'Por nuestra constante búsqueda de liderazgo en los países de América Latina', 'Because of our constant look out for leadership in countries of Latin America', ''),
-(484, 'Por nuestra vocación por mejorar la salud animal, con sistemas de producción comprometidos con el cuidado del medio ambiente', 'Because our aim is to improve animal health with production systems committed to taking care of the environment', ''),
-(485, 'Porque nos sentimos  orgullosos  de lo que hacemos y ofrecemos a nuestros clientes', 'Because we are proud of what we do and what we offer our clients', ''),
-(486, 'Por el buen clima laboral que sostenemos', 'Because of our positive work environment', ''),
-(487, 'Por nuestro compromiso con la gente y su desarrollo', 'Because of our commitment to the people and their development', ''),
-(488, 'Trabajar con equipos de diferentes áreas y regiones te permitirá construir nuevos lazos con colaboradores y, a la vez, descubrir  otras posibilidades de desarrollo profesional. Apostamos al compromiso y la pasión de nuestros empleados como pilares indispensables para un sólido crecimiento de toda la compañía', 'Working with teams from different areas and regions will allow you to build new bonds with collaborators and, simultaneously, discover other possibilities for your professional growth. We bet on our employees commitment and passion as our indispensable pillars for a solid growth of our entire company', ''),
+(483, 'Por nuestra constante búsqueda de liderazgo en los países de América Latina', 'Because of our constant look out for leadership in countries of Latin America', 'Pela nossa constante busca de liderança nos países da América Latina'),
+(484, 'Por nuestra vocación por mejorar la salud animal, con sistemas de producción comprometidos con el cuidado del medio ambiente', 'Because our aim is to improve animal health with production systems committed to taking care of the environment', 'Pela nossa vocação em melhorar a saúde animal, com sistemas de produção comprometidos  com o cuidado do meio ambiente'),
+(485, 'Porque nos sentimos  orgullosos  de lo que hacemos y ofrecemos a nuestros clientes', 'Because we are proud of what we do and what we offer our clients', 'Porque nos sentimos orgulhosos do que fazemos e oferecemos a nossos clientes'),
+(486, 'Por el buen clima laboral que sostenemos', 'Because of our positive work environment', 'Pelo excelente clima de trabalho que sustentamos'),
+(487, 'Por nuestro compromiso con la gente y su desarrollo', 'Because of our commitment to the people and their development', 'Pelo nosso compromisso com o constante desenvolvimento dos colaboradores'),
+(488, 'Trabajar con equipos de diferentes áreas y regiones te permitirá construir nuevos lazos con colaboradores y, a la vez, descubrir  otras posibilidades de desarrollo profesional. Apostamos al compromiso y la pasión de nuestros empleados como pilares indispensables para un sólido crecimiento de toda la compañía', 'Working with teams from different areas and regions will allow you to build new bonds with collaborators and, simultaneously, discover other possibilities for your professional growth. We bet on our employees commitment and passion as our indispensable pillars for a solid growth of our entire company', 'Trabalhar com equipes de diferentes áreas e regiões lhe permitirá construir novos laços com  colaboradores além de descobrir outras possibilidades de desenvolvimento profissional.   Apostamos no compromisso e paixão de nossos colaboradores como pilares indispensáveis   para um sólido crescimento de toda companhia'),
 (489, 'Copyright de Biogénesis Bagó®', '', ''),
 (490, 'Volver', 'Back', 'Retorno'),
 (493, 'Biogensis Bago', '', ''),
@@ -530,9 +530,11 @@ INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (498, 'Desarrollo empresarial', 'Business development', '"Prêmio trabalho e Trajectoria"'),
 (499, 'Premio Funprecit', 'Funprecit Award', 'Fumprecit'),
 (500, 'a la excelencia en desarrollos para la salud animal', 'to the excellence in Animal Health developments', '"Prêmio excelência no desenvolvimento de sanidade animal"'),
-(501, 'Nace', 'Creation of', 'Nasce'),
+(501, 'Nace', 'Creation of', 'Nace'),
 (502, 'laboratorios Bagó', 'Bagó laboratories', 'laboratorios Bagó'),
-(503, '<span class="border-celeste">FI</span>LIALES Y REP. COMERCIALES ', '<span class="border-celeste">AF</span>FILIATES AND SALES REPS', '<span class="border-celeste">CO</span>NTROLADAS E REP. COMERCIAL');
+(503, '<span class="border-celeste">FI</span>LIALES Y REP. COMERCIALES ', '<span class="border-celeste">AF</span>FILIATES AND SALES REPS', '<span class="border-celeste">CO</span>NTROLADAS E REP. COMERCIAL'),
+(504, 'NAFMDVD\n', 'NAFMDVB \n', ''),
+(505, 'Casa Matriz Argentina', 'Headquarters Argentina', '');
 
 --
 -- Índices para tablas volcadas
@@ -552,7 +554,7 @@ ALTER TABLE `tbl_textos`
 -- AUTO_INCREMENT de la tabla `tbl_textos`
 --
 ALTER TABLE `tbl_textos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=504;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=506;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
