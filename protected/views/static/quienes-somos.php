@@ -40,7 +40,7 @@
 		<div  class="tr  col-lg-12 col-md-12 col-sm-12 col-xs-12 inner-text" style="text-shadow:none;padding-top:0;">			
            <!-- TITIULO SUBSECCIÓN -->
 			
-           <h2 class="h2-aftosa"><?php echo Textos::model()->GetText(38); ?></h2>
+           <h2 class="h2-aftosa" style="color:#02204C;"><?php echo Textos::model()->GetText(38); ?></h2>
            
 <div class="captchaContainer"><?php $this->widget('CCaptcha'); ?></div>
 		   <!-- CONTENIDO -->
@@ -78,7 +78,7 @@
 		<div  class="tr  col-lg-12 col-md-12 col-sm-12 col-xs-12 inner-text" style="text-shadow:none;padding-top:0;color:#656565;">		
 
             <!-- TÍTIULO SUBSECCIÓN -->          
-           <h2 class="h2-aftosa">
+           <h2 class="h2-aftosa" style="color:#02204C;">
            <?php echo Textos::model()->GetText(46); ?></h2>
            
            <p style="margin-top:1%;">

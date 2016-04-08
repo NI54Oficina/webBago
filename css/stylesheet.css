@@ -62,7 +62,11 @@ a:hover{
 p{
 	font-family:'arialregular';
 }
-
+	.tabla-aftosa p{
+		line-height: 29px;
+		font-size: 15.5px;
+		color:#8C8C8C;
+	}
 .header{
 	background: -moz-linear-gradient(left, rgba(255,255,255,1) 13%, rgba(255,255,255,0.91) 32%, rgba(255,255,255,0.61) 100%);
 	background: -webkit-linear-gradient(left, rgba(255,255,255,1) 13%,rgba(255,255,255,0.91) 32%,rgba(255,255,255,0.61) 100%);
@@ -98,8 +102,9 @@ font-size: 22px;
 .salud-animal{
     color: #79C8EE;
     font-size: 80px;
-    margin-top: -1%;
+    margin-top: 0;
     font-weight: bold;
+	line-height: 120px;
 }
 
 .bienvenidos{
@@ -444,7 +449,7 @@ font-size: 22px;
 	
 	.titulo-layout-aftosa{
 		color:white;
-		margin-top:29%;
+		margin-top:25%;
 		text-shadow:0px 0px 7px #494949;
 		letter-spacing:2px;
 		font-size:60px;
@@ -599,7 +604,7 @@ font-size: 22px;
 		font-family:'arialregular';
 		font-weight:700;
 		margin-bottom: 10px;
-		
+		    padding-right: 8%;
 	}
 	
 	.h2-rse{
@@ -1106,7 +1111,7 @@ font-size: 22px;
 	
 	.titulo-layout-aftosa{
 		color:white;
-		margin-top:29%;
+		margin-top:25%;
 		text-shadow: 0px 0px 7px #000000;
 		font-size:56px;
 		text-align:center;
@@ -1311,7 +1316,7 @@ font-size: 22px;
 		font-weight:700;
 		margin-top: 0px;
 		margin-bottom: 5%;
-		
+		padding-right: 8%;
 	}	
 	
 	.linea-rse{
@@ -1796,18 +1801,19 @@ font-size: 22px;
 	
 
 	.volver p{
-		display:inline-block;
-		vertical-align: middle;
-		margin-top: 3%;
-		margin-left: 120px;
-		color: #B2B2B2;
-		font-size: 17px;
-		font-family: 'arialregular';
-		-webkit-transition: all 1s ease;
-		-moz-transition: all 1s ease;
-		-o-transition: all 1s ease;
-		-ms-transition: all 1s ease;
-		transition: all 1s ease;
+	display: inline-block;
+    vertical-align: middle;
+    margin-top: 3%;
+    margin-left: 184px;
+    color: #B2B2B2;
+    font-size: 17px;
+    font-family: 'arialregular';
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+
 	}
 	
 	.volver:hover p{
@@ -5147,7 +5153,7 @@ figure.snip1156:hover .salud-ambiental{
 
 
 @media only screen 
-  and (min-device-width: 320px) 
+  and (min-device-width: 325px) 
   and (max-device-width: 736px)
   and (-webkit-min-device-pixel-ratio: 2) {
 	.h2-cd {
@@ -5790,7 +5796,7 @@ figure.snip1156:hover .salud-ambiental{
 
 /* Landscape */
 @media only screen 
-  and (min-device-width: 320px) 
+  and (min-device-width: 325px) 
   and (max-device-width: 736px)
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: landscape) {
@@ -5872,7 +5878,7 @@ figure.snip1156:hover .salud-ambiental{
 
 /* Portrait */
 @media only screen 
-  and (min-device-width: 320px) 
+  and (min-device-width: 325px) 
   and (max-device-width: 480px)
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) {
@@ -5983,7 +5989,7 @@ figure.snip1156:hover .salud-ambiental{
 
 
 @media only screen 
-  and (min-device-width: 320px) 
+  and (min-device-width: 325px) 
   and (max-device-width: 736px)
   and (-webkit-min-device-pixel-ratio: 2) {
 
@@ -6865,7 +6871,7 @@ figure.snip1156 .d-a-2 h2{
 }
 
 @media only screen 
-  and (min-device-width: 320px) 
+  and (min-device-width: 325px) 
   and (max-device-width: 736px)
   and (-webkit-min-device-pixel-ratio: 2) {
 .volver-mobile {
@@ -7246,7 +7252,7 @@ figure.snip1156 .d-a-2 h2{
 }
 
 @media only screen 
-  and (min-device-width: 320px) 
+  and (min-device-width: 325px) 
   and (max-device-width: 736px)
   and (-webkit-min-device-pixel-ratio: 2) {
 	.item-institucional .glyphicon{
@@ -7616,31 +7622,35 @@ position:fixed;
 	}
 	
 	.volver{
-		background-image: url(../img/volver-desactivado.png);
-		height: 42px;
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: auto auto;    
-		-webkit-transition: all 1s ease;
-		-moz-transition: all 1s ease;
-		-o-transition: all 1s ease;
-		-ms-transition: all 1s ease;
-		transition: all 1s ease;
-		margin-top: -4%;
+    background-image: url(../img/volver-desactivado.png);
+    height: 42px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto auto;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+    margin-top: -4%;
+    text-align: left;
+    margin-left: -138px;
 	}
 	
 	.volver:hover{
 		background-image: url(../img/volver-desactivado.png);
-		height: 42px;
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: auto auto;  
-		-webkit-transition: all 1s ease;
-		-moz-transition: all 1s ease;
-		-o-transition: all 1s ease;
-		-ms-transition: all 1s ease;
-		transition: all 1s ease;
-		opacity:0.4;
+    height: 42px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto auto;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+    margin-top: -4%;
+    text-align: left;
+    margin-left: -138px;
 	}
 
 
@@ -7758,8 +7768,8 @@ position:fixed;
 #menu-vademecum a:focus {text-decoration:none}
 
 
- .inner-text h2{color: black; font-size: 15px;line-height: 25px;} 
- .inner-text h3{color: black; line-height: 25px;} 
+ .inner-text h2{color: white; font-size: 15px;line-height: 25px;} 
+ .inner-text h3{color: #02204C; line-height: 25px;} 
  .inner-text li {color:#8C8C8C; font-size: 15px; line-height: 25px;}
  .inner-text table {color: black; font-size: 15px;line-height: 25px;}
 
@@ -7829,7 +7839,7 @@ position:fixed;
   
   /* IPHONE 5*/
   @media only screen 
-  and (min-device-width: 320px) 
+  and (min-device-width: 325px) 
   and (max-device-width: 568px){
   .border-celeste {
     border-bottom: none;
@@ -7885,3 +7895,703 @@ position:fixed;
 }
 
   }
+  
+  
+ .laevolucion{
+	font-size: 38px;
+ }
+ 
+ 
+ @media only screen 
+  and (min-device-width: 200px) 
+  and (max-device-width: 321px) 
+  {
+  
+   .border-celeste {
+		border-bottom: none;
+	}
+	.bienvenidos {
+		font-size: 18px;
+		text-align: center;
+	}
+	
+	.icn-ubicacion {
+		width: 6.5%;
+		display: inline-block;
+	}
+	
+	.logo-blanco {
+		width: 45%;
+		margin-top: 0%;
+	}
+	
+	.border-video {
+		width: 9%;
+		border: 1px solid white;
+		margin: auto;
+		margin-top: 0px;
+		margin-bottom: 50px;
+		text-align: center;
+	}
+	
+	.laevolucion {
+		font-size: 18px;
+	}
+	
+	.salud-animal {
+		color: #79C8EE;
+		font-size: 24px;
+		margin-top: -1%;
+		font-weight: bold;
+	}
+	
+	.scroll-down {
+		margin: 0;
+		border: 2px solid #fff;
+		-moz-border-radius: 100px;
+		-webkit-border-radius: 100px;
+		border-radius: 100px;
+		position: absolute;
+		top: 77%;
+		width: 50px;
+		height: 50px;
+		margin-top: 0px;
+		z-index: 2;
+		margin-left: -25px;
+	}
+  
+ 	#logo-bago{
+		display:none;
+	}
+	
+	#logo-bago-mobile{
+		display:inline-block;
+		width: 40%;
+		padding-top: 2%;
+		padding-bottom: 2%;
+	}
+	
+	.li-paises {
+		display: inline-block;
+		color: white;
+		width: 16%;
+		font-size: 13px;
+	}
+
+	#ul-nav-2 {
+		border-bottom:1px solid #D3D3D3;
+	}
+	
+	.ul-nav {
+		float: left;
+		text-align: left;
+	    line-height: 60px;
+	}
+
+	.dropdown-menu{
+		box-shadow: none;
+		background: white;
+		border: none;
+		transition: all 0.4s ease;
+	}
+	
+	.dropdown{
+		transition: all 0.4s ease;
+	}
+	.open{
+		transition: all 0.4s ease;
+	}
+	
+	.ul-nav li ul li {
+		box-shadow: none;
+		text-align: left;
+	}
+	
+	.dropdown-menu>li>a {
+		background:white;
+		padding: 3px 13px;
+	}
+	
+	.ul-nav li ul {
+		transition: 0.4s all ease-in-out;
+		display: none;
+		width: 100%;
+		position: absolute;
+		min-width: 200px;
+		padding-top: 0px;
+	}
+
+	#flecha-submenu{
+		display:none;
+	}	
+	
+	#ul-nav-2{
+		display:none;
+	}
+	
+	#ul-nav-principal{
+		height:100vh;
+		display: inline-block;
+		width: 100vw;
+		position: initial;
+		float: initial !important;
+	}
+	
+	
+	.li-nav-2{
+		width:auto;
+		display:inline-block;
+	}
+	
+	.li-paises-nav{
+		display: inline-block;
+		padding:0;
+		margin:0;
+		width:48%;
+	}
+	
+	.div-nav-2{
+		width: auto;
+		display: inline-block;
+		float: right;
+		padding-right: 10px;
+	}
+	
+	.main{
+		position:fixed;
+	}
+	
+	#container-ul-nav-header{
+		height:80vh;
+		overflow: auto;
+		width: 100vw;
+	}
+	
+	
+	#box-desktop{
+		display:none;
+	}
+	
+	#box-mobile{
+		display:block;
+	}
+	
+	.dropdown-menu>li>a {
+		color:#b6b6b6;
+	}
+	
+	#ul-paises-nav{
+	    width: 100vw;
+		left: 0;
+		top: 20vh;
+		position: fixed;
+		min-height: 80vh;
+		transition: all 0.4s ease;
+		padding: 0;
+		margin:0;
+	}
+	
+	#ul-filiales-paises{
+		display:block;
+	}
+	#ul-filiales-paises{
+		padding-left:7%;
+		padding-top:5%;
+	}
+	
+	#ul-filiales-paises li{
+		display:inline-block;
+		padding-top:5%;
+	}
+	
+	
+	#ul-filiales-paises li a{
+		color:white;
+		font-weight:700;
+		letter-spacing:1px;
+	}
+	
+	#info-mapa{
+		border:none;
+	}
+	
+	#btn-rev {
+		width:72%;
+	}
+	
+	.vademecum-240{
+	    display: block;
+		width: 100%;
+	}
+	
+	.b-l {
+		margin-left: 3%;
+		margin-top: 0;
+		margin-bottom: 1%;
+		width: 93%;
+	}
+	
+	#list-menu {
+		list-style: none;
+		margin-top: 2%;
+		margin-left: 0%;
+	}
+	
+	.infotec-240{
+	    width: 100%;
+		display: block;
+		margin-top: 4%;
+	}
+	
+	#botonera-buscar {
+		font-family: arialregular;
+		display: inline-block;
+		text-align: center;
+		padding-top: 6%;
+		width: 100%;
+		margin-left: 0; 
+		margin-top: 0;
+	}
+	
+	.input-vad {
+		width: 68vw;
+		background: rgba(255,255,255,0.2);
+		display: inline-block;
+		height: 34px;
+		border: 1px solid white;
+		padding-left: 5%;
+		font-family: 'arialregular';
+		color: white;
+		letter-spacing: 2px;
+	}
+	
+	#btn-buscar {
+		background-image: url(../img/lupa-2-01.png);
+		width: 38px;
+		height: 48px;
+		border: none;
+		background-color: transparent;
+		margin-top: 0; 
+		margin-left: 0; 
+		display: inline-block;
+	}
+	
+	.h1-1-home {
+		font-size: 12px;
+		color: #00173B;
+		margin-top: 15%;
+		font-family: 'arialregular';
+		font-weight: 700;
+	}
+	
+	
+	#ver-revista {
+		padding-left: 7%;
+		padding-top: 6%;
+	}
+
+	#img-rev {
+		width: 55%;
+		box-shadow: 2px 2px 20px;
+		margin-right: 7%;
+	}	
+	
+	#info-revista h1 {
+		margin: 0;
+		margin-bottom: 3%;
+		font-size: 32px;
+		margin-left: -13px;
+		padding-top: 6%;
+	}
+	
+	#info-revista p {
+		margin-left: -6%;
+		font-size: 13px;
+		width: 57%;
+		padding-top: 6%;
+	}
+	
+	#h2-1 {
+		font-size: 23px;
+		margin-left: -13.8px;
+	}
+	
+	.border-tit{
+		border:none;
+	}
+
+	.revista-slider-240{
+		display:none;
+	}
+	
+	#slider1 .overview li {
+		float: left;
+		margin: 10px 20px 0 0;
+		padding: 1px;
+		height: 182px;
+		border: 1px solid #359FBD;
+		width: 70%;
+		max-width: 100%;
+		margin-top: -52px;
+	}
+	
+	#slider1 .viewport {
+		min-height: 150px;
+		overflow: hidden;
+		position: relative;
+	}
+	
+	#contacto {
+		color: #0093C9;
+		font-family: 'arialregular';
+		background: #fff;
+		text-align: center;
+		margin-top: 0%;
+		height: 90px;
+		margin-left: -4%;
+		font-size: 28px;
+	}
+	
+	#form1 input {
+		width: 100%;
+		background: rgba(255,255,255,0.2);
+		display: inherit;
+		border: none;
+		height: 10.5vh;
+	}
+	
+	.ico-ubi {
+		padding: 1%;
+		width: 7%;
+		vertical-align: top;
+	}
+	
+	#form1 textarea {
+		width: 97%;
+		background: rgba(255,255,255,0.2);
+		height: 27vh;
+		margin-left: -15px;
+	}
+	
+	#form1 #enviar {
+		background: #359FBD;
+		opacity: 1;
+		border-radius: 5px 5px 5px 5px;
+		-moz-border-radius: 5px 5px 5px 5px;
+		-webkit-border-radius: 5px 5px 5px 5px;
+		border: none;
+		height: 10vh;
+		color: #fff;
+		width: 100%;
+		margin-top: 4%;
+		font-size: 17px;
+		letter-spacing: 1px;
+		font-family: 'arialregular';
+		transition: all 0.5s ease;
+		display: inline-block;
+		max-width: 207px;
+
+	}
+	
+	.input-contacto {
+		display: inline-block;
+		text-align: center;
+		max-width: 500px;
+		display: inline-block;
+		margin: 0;
+		width: 100%;
+		margin-top: 15px;
+	}
+	
+	.copy p {
+		font-family: 'arialregular';
+		color: white;
+		letter-spacing: 1px;
+		font-size: 11px;
+		display: inline-block;
+	}
+	
+.ul-nav li a {
+    font-size: 12px;
+}
+
+.dropdown-menu>li>a {
+    color: #b6b6b6;
+    text-transform: uppercase;
+    padding-top: 15px;
+}
+
+.ul-nav li a {
+    text-decoration: none;
+    display: block;
+    color: #656565;
+    text-transform: uppercase;
+}
+
+.dropdown-menu>li>a {
+	background: white;
+    color: #b6b6b6;
+    display: block;
+    padding: 0px 1px;
+    clear: both;
+    font-weight: 400;
+    line-height: 1.42857143;
+    white-space: nowrap;
+}
+
+.li-paises-nav {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    width: 49%;
+    font-size: 9px;
+}
+
+#ul-paises-nav {
+    width: 100vw;
+    left: 0;
+    top: 33vh;
+    position: fixed;
+    min-height: 38vh;
+    transition: all 0.4s ease;
+    padding: 0;
+    margin: 0;
+}
+
+	.h2-cd {
+		color: #B2B2B2;
+		font-weight: 700;
+		font-family: 'arialregular';
+		font-size:18px;
+		margin-top: 0;
+	}
+
+	.cd-timeline-content .cd-date{
+		display:none;
+	}
+
+	.titulo-layout-aftosa {
+      color: white;
+		margin-top: 25%;
+		text-shadow: 0px 0px 7px #494949;
+		letter-spacing: 2px;
+		font-size: 17px;
+		text-align: center;
+	}
+	
+	.inner-text {
+    width: 90%;
+    padding-left: 4%;
+}
+
+.tabla-aftosa p {
+    line-height: 29px;
+    font-size: 13.5px;
+    color: #8C8C8C;
+}
+
+.redes-footer {
+    background: #027EAB;
+    border: none;
+}
+
+.copyright {
+    background: #122551;
+    color: white;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    font-family: 'arialregular';
+    letter-spacing: 0.5px;
+    font-size: 12px;
+}
+
+.icono-bullet {
+    width: 6%;
+    float: left;
+    padding-top: 5px;
+}
+
+.proveedores-li {
+    margin-bottom: 8%;
+    font-weight: 700;
+}
+.vademecum, .vademecum-producto {
+    color: #7F7F7F;
+    text-align: center;
+    margin: 0;
+    font-size: 18px;
+}
+
+.snip1156.image h3 {
+    display: none;
+    color: #b8b8b8;
+    font-size: 16px;
+    margin-left: 20px;
+	display:block;
+}
+
+.titulo-vad-producto {
+    text-align: center;
+    font-size: 17px;
+    margin-bottom: 0%;
+}
+
+#volver-producto {
+    float: left;
+    text-align: left;
+    margin-top: 5% !important;
+}
+
+.h1-inst-home {
+    display: inline-block;
+    color: white;
+    font-size: 23px;
+    margin-left: 3px;
+}
+
+#descarga-margin {
+    margin-bottom: 10%;
+	width: 100%;
+    display: block;
+}
+  }
+  
+  @media only screen 
+  and (min-device-width: 200px) 
+  and (max-device-width: 321px) 
+   and (orientation: landscape) {
+
+	.scroll-down {
+		margin: 0;
+		border: 2px solid #fff;
+		-moz-border-radius: 100px;
+		-webkit-border-radius: 100px;
+		border-radius: 100px;
+		position: absolute;
+		top: 75%;
+		width: 50px;
+		height: 50px;
+		margin-top: 0px;
+		z-index: 2;
+		margin-left: -25px;
+	}  
+	
+   .logo-blanco {
+		width: 36%;
+		margin-top: 0%;
+	}
+	
+	.border-video {
+		width: 9%;
+		border: 1px solid white;
+		margin: auto;
+		margin-top: 0px;
+		margin-bottom: 18px;
+		text-align: center;
+	}
+	
+	.laevolucion {
+		font-size: 18px;
+		margin-top: -7px;
+		margin-bottom: 0;
+	}
+   
+	#slider1 .overview li {
+		float: left;
+		margin: 10px 20px 0 0;
+		padding: 1px;
+		height: 182px;
+		border: 1px solid #359FBD;
+		width: 100%;
+		max-width: 100%;
+		margin-top: -52px;
+	}
+	
+	#form1 input {
+		width: 100%;
+		background: rgba(255,255,255,0.2);
+		display: inherit;
+		border: none;
+		height: 12.5vh;
+	}
+	
+	#form1 #enviar {
+		background: #359FBD;
+		opacity: 1;
+		border-radius: 5px 5px 5px 5px;
+		-moz-border-radius: 5px 5px 5px 5px;
+		-webkit-border-radius: 5px 5px 5px 5px;
+		border: none;
+		height: 18vh;
+		color: #fff;
+		width: 100%;
+		margin-top: 4%;
+		font-size: 17px;
+		letter-spacing: 1px;
+		font-family: 'arialregular';
+		transition: all 0.5s ease;
+		display: inline-block;
+		max-width: 275px;
+	}
+
+ }
+  
+.nota-tecnica-container h1{
+	color: #66CCED !important;
+	margin-left:0;
+	font-size: 30px;
+	    line-height: 30px;
+}
+
+.nota-tecnica-container h3{
+	color: #66CCED !important;
+}
+
+	.volver p{
+	display: inline-block;
+    vertical-align: middle;
+    margin-top: 3%;
+    margin-left: 184px;
+    color: #B2B2B2;
+    font-size: 17px;
+    font-family: 'arialregular';
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+
+	}
+	
+	
+		.volver{
+    background-image: url(../img/volver-desactivado.png);
+    height: 42px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto auto;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+    margin-top: -4%;
+    text-align: left;
+    margin-left: -11%;
+	}
+	
+	.volver:hover{
+		background-image: url(../img/volver-desactivado.png);
+    height: 42px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto auto;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+    margin-top: -4%;
+    text-align: left;
+    margin-left: -138px;
+	}

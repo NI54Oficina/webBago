@@ -813,9 +813,9 @@
 					
 					<ul id="list-menu"  class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
-						<li class="col-lg-1 col-md-2 col-sm-2 col-xs-3"><a  id="opcion1" href="javascript:void(0)">Trabajos técnicos</a></li>
-						<li class="col-lg-1 col-md-2 col-sm-2 col-xs-3"><a  id="opcion2" href="javascript:void(0)">Planes Sanitarios</a></li>
-						<li class="col-lg-1 col-md-2 col-sm-2 col-xs-3"><a id="opcion3" href="javascript:void(0)">Planillas<br />de trabajo</a></li>             
+						<li class="col-lg-1 col-md-2 col-sm-2 col-xs-3 infotec-240"><a  id="opcion1" href="javascript:void(0)">Trabajos técnicos</a></li>
+						<li class="col-lg-1 col-md-2 col-sm-2 col-xs-3 infotec-240"><a  id="opcion2" href="javascript:void(0)">Planes Sanitarios</a></li>
+						<li class="col-lg-1 col-md-2 col-sm-2 col-xs-3 infotec-240"><a id="opcion3" href="javascript:void(0)">Planillas<br />de trabajo</a></li>             
 						<script>
 						$(document).ready(function () {
 							
@@ -906,9 +906,9 @@
                         
 								<img class="col-lg-5 col-md-5 col-sm-5 col-xs-3 img-d" src="<?php echo Yii::app()->request->baseUrl; ?>/img/descarga-archivos.png"/>
                             
-								<h3 class="col-lg-4 col-md-4 col-sm-4 col-xs-3" id="titulo-archivo"> TAMBO </h3>
+								<h3 class="col-lg-4 col-md-4 col-sm-4 col-xs-3" id="titulo-archivo"> CRÍA  </h3>
                             
-								<p><a  class="col-lg-4 col-md-4 col-sm-4 col-xs-3" href="#" id="descarga-link"> Descargar </a></p>
+								<p><a  class="col-lg-4 col-md-4 col-sm-4 col-xs-3" href="<?php echo Yii::app()->request->baseUrl; ?>/uploads/planes-sanitarios/cria.pdf" download="cria"  id="descarga-link"> Descargar </a></p>
                             
 							</div> <!-- Termina cada descarga-->
                    
@@ -918,9 +918,9 @@
                         
 								<img class="col-lg-5 col-md-5 col-sm-5 col-xs-3 img-d" src="<?php echo Yii::app()->request->baseUrl; ?>/img/descarga-archivos.png"/>
                             
-								<h3 class="col-lg-4 col-md-4 col-sm-4 col-xs-3" id="titulo-archivo"> CRÍA </h3>
+								<h3 class="col-lg-4 col-md-4 col-sm-4 col-xs-3" id="titulo-archivo"> FEED-LOT </h3>
                             
-								<p><a  class="col-lg-4 col-md-4 col-sm-4 col-xs-3" href="#" id="descarga-link"> Descargar </a></p>
+								<p><a  class="col-lg-4 col-md-4 col-sm-4 col-xs-3" href="<?php echo Yii::app()->request->baseUrl; ?>/uploads/planes-sanitarios/feedlot.pdf" download="feedlot"  id="descarga-link"> Descargar </a></p>
                             
 							</div> <!-- Termina cada descarga-->
                        
@@ -932,7 +932,7 @@
                             
 								<h3 class="col-lg-4 col-md-4 col-sm-4 col-xs-3" id="titulo-archivo"> RECRÍA </h3>
                             
-								<p><a  class="col-lg-4 col-md-4 col-sm-4 col-xs-3" href="#" id="descarga-link"> Descargar </a></p>
+								<p><a  class="col-lg-4 col-md-4 col-sm-4 col-xs-3" href="<?php echo Yii::app()->request->baseUrl; ?>/uploads/planes-sanitarios/recria.pdf" download="recria"  id="descarga-link"> Descargar </a></p>
                             
 							</div> <!-- Termina cada descarga-->
                        
@@ -943,9 +943,9 @@
                         
 								<img class="col-lg-5 col-md-5 col-sm-5 col-xs-3 img-d" src="<?php echo Yii::app()->request->baseUrl; ?>/img/descarga-archivos.png"/>
                             
-								<h3 class="col-lg-7 col-md-7 col-sm-7 col-xs-3" id="titulo-archivo"> FEED-LOT </h3>
+								<h3 class="col-lg-7 col-md-7 col-sm-7 col-xs-3" id="titulo-archivo"> TAMBO </h3>
                             
-								<p><a  class="col-lg-4 col-md-4 col-sm-4 col-xs-3" href="#" id="descarga-link"> Descargar </a></p>
+								<p><a  class="col-lg-4 col-md-4 col-sm-4 col-xs-3" href="<?php echo Yii::app()->request->baseUrl; ?>/uploads/planes-sanitarios/tambo.pdf" download="tambo"  id="descarga-link"> Descargar </a></p>
                             
 							</div> <!-- Termina cada descarga-->
                        
@@ -958,20 +958,10 @@
                             
 								<h3 class="col-lg-7 col-md-7 col-sm-7 col-xs-3" id="titulo-archivo">Ovino Central y Norte </h3>
                              
-								<p><a  class="col-lg-4 col-md-4 col-sm-4 col-xs-3" href="#" id="descarga-link"> Descargar </a></p>
+								<p><a  class="col-lg-4 col-md-4 col-sm-4 col-xs-3" href="<?php echo Yii::app()->request->baseUrl; ?>/uploads/planes-sanitarios/ovinoscentralynorte.pdf" download="ovinoscentralynorte"  id="descarga-link"> Descargar </a></p>
                             
 							</div> <!-- Termina cada descarga-->
-							
-							<!--***** DESCARGA ***** -->					   
-							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6" id="descarga-margin">
-                        
-								<img class="col-lg-5 col-md-5 col-sm-5 col-xs-3 img-d" src="<?php echo Yii::app()->request->baseUrl; ?>/img/descarga-archivos.png"/>
-                            
-								<h3 class="col-lg-7 col-md-7 col-sm-7 col-xs-3" id="titulo-archivo"> Ovino Central y Norte </h3>
-                            
-								<p><a  class="col-lg-4 col-md-4 col-sm-4 col-xs-3" href="#" id="descarga-link"> Descargar </a></p>
-                            
-							</div> <!-- Termina cada descarga-->
+
 							
                        </div>
                     
@@ -991,9 +981,9 @@
                         
 								<img class="col-lg-5 col-md-5 col-sm-5 col-xs-3 img-d" src="<?php echo Yii::app()->request->baseUrl; ?>/img/descarga-archivos.png"/>
                             
-								<h3 class="col-lg-4 col-md-4 col-sm-4 col-xs-3" id="titulo-archivo"> TAMBO </h3>
+								<h3 class="col-lg-4 col-md-4 col-sm-4 col-xs-3" id="titulo-archivo"> Control de tacto </h3>
                             
-								<p><a  class="col-lg-4 col-md-4 col-sm-4 col-xs-3" href="#" id="descarga-link"> Descargar </a></p>
+								<p><a  class="col-lg-4 col-md-4 col-sm-4 col-xs-3" href="<?php echo Yii::app()->request->baseUrl; ?>/uploads/planillas-de-trabajo/Agenda-16.jpg" download="Control de tacto" id="descarga-link"> Descargar </a></p>
                             
 							</div> <!-- Termina cada descarga-->
                    
@@ -1003,9 +993,9 @@
                         
 								<img class="col-lg-5 col-md-5 col-sm-5 col-xs-3 img-d" src="<?php echo Yii::app()->request->baseUrl; ?>/img/descarga-archivos.png"/>
                             
-								<h3 class="col-lg-4 col-md-4 col-sm-4 col-xs-3" id="titulo-archivo"> CRÍA </h3>
+								<h3 class="col-lg-4 col-md-4 col-sm-4 col-xs-3" id="titulo-archivo"> Control de destete</h3>
                             
-								<p><a  class="col-lg-4 col-md-4 col-sm-4 col-xs-3" href="#" id="descarga-link"> Descargar </a></p>
+								<p><a  class="col-lg-4 col-md-4 col-sm-4 col-xs-3" href="<?php echo Yii::app()->request->baseUrl; ?>/uploads/planillas-de-trabajo/Agenda-17.jpg" download="Control de destete" id="descarga-link" id="descarga-link"> Descargar </a></p>
                             
 							</div> <!-- Termina cada descarga-->
                        
@@ -1015,9 +1005,9 @@
                         
 								<img class="col-lg-5 col-md-5 col-sm-5 col-xs-3 img-d" src="<?php echo Yii::app()->request->baseUrl; ?>/img/descarga-archivos.png"/>
                             
-								<h3 class="col-lg-4 col-md-4 col-sm-4 col-xs-3" id="titulo-archivo"> RECRÍA </h3>
+								<h3 class="col-lg-4 col-md-4 col-sm-4 col-xs-3" id="titulo-archivo"> Control de nacimientos </h3>
                             
-								<p><a  class="col-lg-4 col-md-4 col-sm-4 col-xs-3" href="#" id="descarga-link"> Descargar </a></p>
+								<p><a  class="col-lg-4 col-md-4 col-sm-4 col-xs-3" href="<?php echo Yii::app()->request->baseUrl; ?>/uploads/planillas-de-trabajo/Agenda-18.jpg" download="Control de nacimientos" id="descarga-link" id="descarga-link"> Descargar </a></p>
                             
 							</div> <!-- Termina cada descarga-->
                        
@@ -1027,9 +1017,9 @@
                         
 								<img class="col-lg-5 col-md-5 col-sm-5 col-xs-3 img-d" src="<?php echo Yii::app()->request->baseUrl; ?>/img/descarga-archivos.png"/>
                             
-								<h3 class="col-lg-7 col-md-7 col-sm-7 col-xs-3" id="titulo-archivo"> FEED-LOT </h3>
+								<h3 class="col-lg-7 col-md-7 col-sm-7 col-xs-3" id="titulo-archivo"> Control de mortandades </h3>
                             
-								<p><a  class="col-lg-4 col-md-4 col-sm-4 col-xs-3" href="#" id="descarga-link"> Descargar </a></p>
+								<p><a  class="col-lg-4 col-md-4 col-sm-4 col-xs-3" href="<?php echo Yii::app()->request->baseUrl; ?>/uploads/planillas-de-trabajo/Agenda-19.jpg" download="Control de mortandades" id="descarga-link"> Descargar </a></p>
                             
 							</div> <!-- Termina cada descarga-->
                        
@@ -1040,9 +1030,9 @@
                         
 								<img class="col-lg-5 col-md-5 col-sm-5 col-xs-3 img-d" src="<?php echo Yii::app()->request->baseUrl; ?>/img/descarga-archivos.png"/>
                             
-								<h3 class="col-lg-7 col-md-7 col-sm-7 col-xs-3" id="titulo-archivo"> Ovino Central y Norte </h3>
+								<h3 class="col-lg-7 col-md-7 col-sm-7 col-xs-3" id="titulo-archivo">Agenda ganadera 2016 </h3>
                             
-								<p><a  class="col-lg-4 col-md-4 col-sm-4 col-xs-3" href="#" id="descarga-link"> Descargar </a></p>
+								<p><a  class="col-lg-4 col-md-4 col-sm-4 col-xs-3" href="<?php echo Yii::app()->request->baseUrl; ?>/uploads/planillas-de-trabajo/JPG Agenda ganadera.zip" download="Agenda ganadera 2016" id="descarga-link"> Descargar </a></p>
                             
 							</div> <!-- Termina cada descarga-->
                        
@@ -1095,7 +1085,7 @@
 					<div class="col-lg-10 col-md-11 col-sm-12 col-xs-12" id="botones" >
 				
 						<!-- ******* AFTOSA ******** -->
-						<div id="botonera-af" class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+						<div id="botonera-af" class="col-lg-3 col-md-3 col-sm-3 col-xs-6 vademecum-240">
 			
 								<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id1">
 				
@@ -1113,7 +1103,7 @@
 		
 		
 						<!-- ******* ANTIBIÓTICOS ******** -->		
-						<div id="botonera-ant" class="col-lg-3 col-md-3 col-sm-3 col-xs-6"> 
+						<div id="botonera-ant" class="col-lg-3 col-md-3 col-sm-3 col-xs-6 vademecum-240"> 
 							
 							<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id6">
 							
@@ -1131,7 +1121,7 @@
 		
 		
 						<!-- ******* ANTIPARASITÁRIOS EXTERNOS ******** -->	
-						<div id="botonera-int" class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+						<div id="botonera-int" class="col-lg-3 col-md-3 col-sm-3 col-xs-6 vademecum-240">
 							
 							<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id4">
 							
@@ -1149,7 +1139,7 @@
 		
 		
 						<!-- ******* ANTIPARASITÁRIOS INTERNOS ******** -->	
-						<div id="botonera-ext" class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+						<div id="botonera-ext" class="col-lg-3 col-md-3 col-sm-3 col-xs-6 vademecum-240">
 							
 							<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id3">
 							
@@ -1167,7 +1157,7 @@
 		
 		
 						<!-- ******* BIOLÓGICOS ******** -->	
-						<div id="botonera-bio" class="col-lg-3 col-md-3 col-sm-3 col-xs-6"> 
+						<div id="botonera-bio" class="col-lg-3 col-md-3 col-sm-3 col-xs-6 vademecum-240"> 
 						
 							<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id2">
 								
@@ -1185,7 +1175,7 @@
 		
 		
 						<!-- ******* ENDECTOCIDAS ******** -->	
-						<div id="botonera-ende" class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+						<div id="botonera-ende" class="col-lg-3 col-md-3 col-sm-3 col-xs-6 vademecum-240">
 							
 							<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id5">
 								
@@ -1203,7 +1193,7 @@
 		
 		
 						<!-- ******* FARMACÉUTICOS ******** -->	
-						<div id="botonera-farma" class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+						<div id="botonera-farma" class="col-lg-3 col-md-3 col-sm-3 col-xs-6 vademecum-240">
 							
 							<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id9">
 								
@@ -1221,7 +1211,7 @@
 		
 		
 						<!-- ******* NUTRICIÓN ******** -->	
-						<div id="botonera-nutri" class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+						<div id="botonera-nutri" class="col-lg-3 col-md-3 col-sm-3 col-xs-6 vademecum-240">
 						
 							<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id11">
 								
@@ -1239,7 +1229,7 @@
 		
 		
 						<!-- ******* REPRODUCTIVOS ******** -->	
-						<div id="botonera-repro" class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+						<div id="botonera-repro" class="col-lg-3 col-md-3 col-sm-3 col-xs-6 vademecum-240">
 							
 							<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id7">
 								
@@ -1257,7 +1247,7 @@
 		
 		
 						<!-- ******* SALUD AMBIENTAL ******** -->	
-						<div id="botonera-amb" class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+						<div id="botonera-amb" class="col-lg-3 col-md-3 col-sm-3 col-xs-6 vademecum-240">
 							
 							<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id10">
 							
@@ -1275,7 +1265,7 @@
 		
 		
 						<!-- ******* VITAMINAS Y MINERALES ******** -->	
-						<div id="botonera-vit-min" class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+						<div id="botonera-vit-min" class="col-lg-3 col-md-3 col-sm-3 col-xs-6 vademecum-240">
 						
 							<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id8">
 							
@@ -1407,7 +1397,7 @@
 							<ul class="overview" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 								<?php foreach($revistas as $revista){ ?> 
 								<!-- ITEM REVISTA-->
-								<li id="revista-<?php echo $revista->id; ?>" class="col-lg-4 col-md-2 col-sm-2 col-xs-4">
+								<li id="revista-<?php echo $revista->id; ?>" class="col-lg-4 col-md-2 col-sm-2 col-xs-4 revista-slider-240">
 									<a href="<?php echo Yii::app()->request->baseUrl; ?>/uploads/molino/pdf/revista-<?php echo $revista->numero; ?>.pdf" target="_blank">
 									<!-- img -->
 									<div class="rev-30"> </div> 
@@ -1823,7 +1813,21 @@
 			windowarea: "100%"
 		}); 
 		
+		$("#titulo-info").boxLoader({
+			direction:"y",
+			position: "-100%",
+			effect: "fadeIn",
+			duration: "2s",
+			windowarea: "100%"
+		}); 
 		
+			$("#vade").boxLoader({
+			direction:"y",
+			position: "-100%",
+			effect: "fadeIn",
+			duration: "2s",
+			windowarea: "100%"
+		}); 	
 		
 		$("#descripcion").boxLoader({
 			direction:"x",

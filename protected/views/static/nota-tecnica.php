@@ -26,7 +26,7 @@ $nota = Notas::model()->findByAttributes(array("id"=>$data,"seccion"=>"tecnica")
 if($nota && $nota->seccion=="tecnica"){
 ?>
 
-<div class="div-texto-aftosa col-lg-9 col-md-9 col-sm-12 col-xs-12" style="text-align: left;">
+<div class="div-texto-aftosa col-lg-9 col-md-9 col-sm-12 col-xs-12 nota-tecnica-container" style="text-align: left;">
 	
 	<div class="tabla-aftosa col-lg-12 col-md-12 col-sm-12 col-xs-12">
 

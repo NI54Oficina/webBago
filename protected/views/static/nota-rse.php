@@ -37,7 +37,7 @@ $nota = Notas::model()->findByAttributes(array("id"=>$data,"seccion"=>"rse"));
 							$timeStamp=strtotime($nota->fecha);	
 							echo date('d',$timeStamp)." de ".$meses[date('n',$timeStamp)-1];
 							?></h5>
-			<h1 style="margin-left: 0;padding-bottom:6px;color: #003b5d;"><?php echo $nota->titulo; ?></h1>
+			<h1 style="margin-left: 0;padding-bottom:6px;color: #003b5d;line-height: 45px;"><?php echo $nota->titulo; ?></h1>
 			<p><?php echo $nota->texto; ?></p>
 		</div>
 		
