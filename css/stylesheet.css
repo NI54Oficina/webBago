@@ -2767,7 +2767,11 @@ footer{
     width: 11%;
     margin-top: 5%;
 }
-
+#separador-mayor{
+    border: 1px solid #fff;
+    width: 95%;
+    margin-top: 5%;
+}
 
 .info-mapa{
 	display:none;

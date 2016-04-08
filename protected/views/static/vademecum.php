@@ -105,9 +105,11 @@ $auxId=0;
 
  <!-- ACA ESTA EL TITULO CON LA GOTA -->
 
-<a href="<?php echo Yii::app()->getBaseUrl(true); ?>"><div class=" col-lg-3 col-md-3 col-sm-12 col-xs-12 volver hidden-sm hidden-xs">
+<a href="<?php echo Yii::app()->request->baseUrl;?>/home#contenido-vad">
+<div class=" col-lg-3 col-md-3 col-sm-12 col-xs-12 volver hidden-sm hidden-xs">
 <p><?php echo Textos::model()->GetText(490); ?></p>
-</div></a>
+</div>
+</a>
 
 
 
