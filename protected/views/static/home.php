@@ -1443,7 +1443,7 @@
 							<!-- TEXTO HEADER-->
 							<h3  class="tr move-x-1"><?php echo Textos::model()->GetText(110); ?></h3>
 							<h4 class="tr-2  move-x-2"><?php echo Textos::model()->GetText(478); ?></h4>
-							<a href="" style="display:inline-block;"><div class="send-rrhh" style="color:white;border-radius: 5px;"><?php echo Textos::model()->GetText(111); ?></div></a>
+							<a href="http://biogenesisbago.zonajobs.com.ar/" target="_blank" style="display:inline-block;"><div class="send-rrhh" style="color:white;border-radius: 5px;"><?php echo Textos::model()->GetText(111); ?></div></a>
 
 						
 				</div>  <!-- termina header -->
