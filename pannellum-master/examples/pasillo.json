@@ -18,14 +18,14 @@
     "type": "cubemap",
     
     "cubeMap": [
-        "./pasillo/image 112.jpg",
-		"./pasillo/image 116.jpg",
-		"./pasillo/image 117.jpg",
-		"./pasillo/image 113.jpg",
+        "./pasillo/image-112.jpg",
+		"./pasillo/image-116.jpg",
+		"./pasillo/image-117.jpg",
+		"./pasillo/image-113.jpg",
 		
 		
-		"./pasillo/image 114.jpg",
-        "./pasillo/image 115.jpg"
+		"./pasillo/image-114.jpg",
+        "./pasillo/image-115.jpg"
         
     ]
 }

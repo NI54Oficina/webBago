@@ -18,12 +18,12 @@
     "type": "cubemap",
     
     "cubeMap": [
-        "./camara/image 112.jpg",
-		"./camara/image 113.jpg",
-		"./camara/image 117.jpg",
-		"./camara/image 116.jpg",
-		"./camara/image 114.jpg",
-        "./camara/image 115.jpg"
+        "./camara/image-112.jpg",
+		"./camara/image-113.jpg",
+		"./camara/image-117.jpg",
+		"./camara/image-116.jpg",
+		"./camara/image-114.jpg",
+        "./camara/image-115.jpg"
         
     ]
 }

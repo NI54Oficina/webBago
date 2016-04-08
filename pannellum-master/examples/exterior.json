@@ -21,12 +21,12 @@
     "type": "cubemap",
     
     "cubeMap": [
-        "./exterior/image 112.jpg",
-        "./exterior/image 113.jpg",
-		"./exterior/image 117.jpg",
-		"./exterior/image 116.jpg",
-        "./exterior/image 114.jpg",
-        "./exterior/image 115.jpg"
+        "./exterior/image-112.jpg",
+        "./exterior/image-113.jpg",
+		"./exterior/image-117.jpg",
+		"./exterior/image-116.jpg",
+        "./exterior/image-114.jpg",
+        "./exterior/image-115.jpg"
         
         
     ]
