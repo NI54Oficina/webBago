@@ -65,11 +65,21 @@ if($pais->catalogo==1){
 }else{
 	$pais=8;
 }
-$productos =Producto::model()->findAllByAttributes(array('seccion'=>$data->id,"pais"=>$pais));;
 $idSeccion= $data->id;
+if($idSeccion==1&&Yii::app()->session['pais']==17){
+	$pais=17;
+}
+
+$productos =Producto::model()->findAllByAttributes(array('seccion'=>$data->id,"pais"=>$pais));;
+
+if($pais=17){
+	$pais=8;
+}
+
 $auxLink= $data->nombre;
 $auxLink=  sanear_string($auxLink);
 $auxLink = str_replace(' ', '-', $auxLink); 
+
 
 $auxLink = preg_replace('/[^A-Za-z0-9\-]/', '', $auxLink);
 $auxLink = preg_replace('/-+/', '-', $auxLink);
