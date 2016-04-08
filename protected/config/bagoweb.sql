@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-04-2016 a las 16:52:15
+-- Tiempo de generación: 08-04-2016 a las 17:19:49
 -- Versión del servidor: 10.1.9-MariaDB
 -- Versión de PHP: 5.5.30
 
@@ -1518,7 +1518,8 @@ INSERT INTO `tbl_producto` (`id`, `nombre`, `seccion`, `target`, `link`, `descri
 (402, 'ESTREPTOCARBOCAFTIAZOL', 9, '1110011101', 'ESTREPTOCARBOCAFTIAZOL', '', '2016-03-09 17:16:06', 'ESTREPTOCARBOCAFTIAZOL', 'ESTREPTOCARBOCAFTIAZOL,Farmacéuticos,USA', 0, '9', 0),
 (403, 'BAGODRYL® ', 10, '0000000000', 'BAGODRYL-', '', '2016-03-09 17:18:12', 'BAGODRYL® , BAGODRYL, Antiseptic, disinfectant ,surface ,germicide.', 'BAGODRYL®,BAGODRYL,Antiseptic,disinfectant,surface,germicide.,Salud Ambiental,USA', 0, '9', 0),
 (404, 'BIOX® ', 10, '1110011101', 'BIOX-', '', '2016-03-09 17:25:05', 'BIOX, BIOX® ,', 'BIOX,BIOX®,Salud Ambiental,USA', 0, '9', 0),
-(405, 'AFTOSAN®', 1, '0000000001', 'AFTOSAN', '', '2016-04-08 11:35:08', 'aftosan, fiebre aftosa, biogenesis, bovinos', 'aftosan,fiebre aftosa,biogenesis,bovinos,Aftosa,Paraguay', 0, '17', 0);
+(405, 'AFTOSAN®', 1, '0000000001', 'AFTOSAN', '', '2016-04-08 11:35:08', 'aftosan, fiebre aftosa, biogenesis, bovinos', 'aftosan,fiebre aftosa,biogenesis,bovinos,Aftosa,Paraguay', 0, '17', 0),
+(408, 'ADAPTADOR MIN', 8, '0000000001', 'ADAPTADOR-MIN', '', '2016-04-08 12:11:56', 'adaptador min, vitaminicos y minerales, suplemento mineral de cobre, zinc, manganeso, selenio', 'adaptador min,vitaminicos y minerales,suplemento mineral de cobre,zinc,manganeso,selenio,Vitamínicos y Minerales,Bolivia', 0, '5', 0);
 
 -- --------------------------------------------------------
 
@@ -3648,7 +3649,19 @@ INSERT INTO `tbl_producto_contenido` (`id`, `producto_id`, `parte`, `text`) VALU
 (5503, 405, 14, 'Bovinos: 5 mL por vía intramuscular profunda o subcutánea.'),
 (5504, 405, 4, 'Deberá administrarse siguiendo los lineamientos de los planes diseñados por la Autoridad Sanitaria de cada país.\r\n<br><strong>Bovinos:</strong></br>\r\nDosis: 5mL </br>\r\nVía de Administración: Intramuscular, Subcutánea </br>\r\nPuntos de aplicación: Tercio medio superior de la tabla del cuello,Detrás de la paleta<br>\r\nDosis: 5mL </br>\r\nVía de Administración: Subcutánea </br>\r\nPuntos de aplicación: Detrás de la paleta<br>\r\n\r\n<strong>Porcinos:</strong></br>\r\nDosis: 3mL </br>\r\nVía de Administración: Intramuscular</br>\r\nPuntos de aplicación: Tabla del cuello detrás de la oreja a<br>\r\n\r\n<strong>Ovinos y Caprinos:</strong></br>\r\nDosis: 3mL </br>\r\nVía de Administración: Intramuscular</br>\r\nPuntos de aplicación: Tabla del cuello detrás de la oreja a<br>'),
 (5505, 405, 5, 'Mantener entre 2o C y 8o C, al resguardo de la luz. No congelar.\r\n'),
-(5506, 405, 6, 'Frascos por 10, 25 y 50 dosis de 5 mL.');
+(5506, 405, 6, 'Frascos por 10, 25 y 50 dosis de 5 mL.'),
+(5507, 406, 7, 'Suplemento mineral inyectable para bovinos.'),
+(5508, 406, 2, 'Cobre (como edetato ), 1,0 g; Zinc (como edetato ), 4,0 g; Manganeso (como edetato), 1,0 g; Selenio (como selenito de sodio), 0,5 g; excipientes, c.s.p. 100 mL.'),
+(5509, 406, 1, 'ADAPTADOR MIN es una solución inyectable\r\nde microelementos que está indicada para la prevención\r\ny control del estrés oxidativo en terneros al destete, al inicio\r\nde un plan de inmunización y al ingreso de animales al\r\nfeedlot; así como otras situaciones que pudiesen generar\r\nla formación de radicales superóxido, como por ejemplo\r\nel transporte. ADAPTADOR MIN también está indicado\r\npara la prevención y tratamiento de las carencias de\r\nlos microelementos que ésta solución contiene (Cobre,\r\nZinc, Selenio y Manganeso). Los microelementos de\r\nADAPTADOR MIN y las vitaminas de ADAPTADOR VIT\r\nrepresentan en forma conjunta o aislada factores esenciales\r\npara la defensa antioxidante del organismo.'),
+(5510, 406, 14, 'La dosis aconsejada de ADAPTADOR MIN, es de 1 mL\r\ncada 50 kg de p.v. El intervalo entre dosis no debe ser\r\ninferior a 30 días. Animales jóvenes (terneros/as) hasta\r\n200 kg: 1 mL cada 50 kg de p.v. Animales en recría\r\n(novillos y vaquillonas): 4 mL por animal como dosis total.\r\nAnimales Adultos: Vacas: 5 mL por animal como dosis\r\ntotal. Toros: 6 mL por animal como dosis total. </br>\r\nAplicar por vía subcutánea con agujas 12 x 18.\r\nSe recomienda generar reserva hepática fetal tratando\r\na las vacas con ADAPTADOR MIN en el último tercio\r\nde la gestación, evitando de esa forma las deficiencias\r\nde Cu y Zn en el ternero al pie de corta edad, al ser difícil\r\nel tratamiento en esta categoría.'),
+(5511, 406, 8, 'No posee.'),
+(5512, 406, 6, 'Frascos por 500 mL. </br>\r\nKit compuesto por 1 frasco de ADAPTADOR MIN por\r\n500 mL y 1 frasco de ADAPTADOR VIT por 500 mL.\r\n'),
+(5513, 408, 7, 'Suplemento mineral inyectable para bovinos.'),
+(5514, 408, 2, 'Cobre (como edetato ), 1,0 g; Zinc (como edetato ), 4,0 g;\r\nManganeso (como edetato), 1,0 g; Selenio (como selenito\r\nde sodio), 0,5 g; excipientes, c.s.p. 100 mL.'),
+(5515, 408, 1, 'ADAPTADOR MIN es una solución inyectable\r\nde microelementos que está indicada para la prevención\r\ny control del estrés oxidativo en terneros al destete, al inicio\r\nde un plan de inmunización y al ingreso de animales al\r\nfeedlot; así como otras situaciones que pudiesen generar\r\nla formación de radicales superóxido, como por ejemplo\r\nel transporte. ADAPTADOR MIN también está indicado\r\npara la prevención y tratamiento de las carencias de\r\nlos microelementos que ésta solución contiene (Cobre,\r\nZinc, Selenio y Manganeso). Los microelementos de\r\nADAPTADOR MIN y las vitaminas de ADAPTADOR VIT\r\nrepresentan en forma conjunta o aislada factores esenciales\r\npara la defensa antioxidante del organismo.'),
+(5516, 408, 14, 'La dosis aconsejada de ADAPTADOR MIN, es de 1 mL\r\ncada 50 kg de p.v. El intervalo entre dosis no debe ser\r\ninferior a 30 días. Animales jóvenes (terneros/as) hasta\r\n200 kg: 1 mL cada 50 kg de p.v. Animales en recría\r\n(novillos y vaquillonas): 4 mL por animal como dosis total.\r\nAnimales Adultos: Vacas: 5 mL por animal como dosis\r\ntotal. Toros: 6 mL por animal como dosis total. </br>\r\nAplicar por vía subcutánea con agujas 12 x 18.\r\nSe recomienda generar reserva hepática fetal tratando\r\na las vacas con ADAPTADOR MIN en el último tercio\r\nde la gestación, evitando de esa forma las deficiencias\r\nde Cu y Zn en el ternero al pie de corta edad, al ser difícil\r\nel tratamiento en esta categoría.'),
+(5517, 408, 8, 'No posee.'),
+(5518, 408, 6, 'Frascos por 500 mL.</br>\r\nKit compuesto por 1 frasco de ADAPTADOR MIN por\r\n500 mL y 1 frasco de ADAPTADOR VIT por 500 mL.');
 
 -- --------------------------------------------------------
 
@@ -4526,17 +4539,17 @@ CREATE TABLE `tbl_tag` (
 INSERT INTO `tbl_tag` (`id`, `name`, `count`, `user_id`) VALUES
 (1, 'prueba', -5, 0),
 (2, 'Aftosa', -14, 0),
-(3, 'Acción', 245, 0),
+(3, 'Acción', 246, 0),
 (4, 'Vacuna inactivada', -7, 0),
 (5, 'inmunización', -14, 0),
 (6, 'Fiebre', -22, 0),
 (7, 'Aftosa.', -7, 0),
-(8, 'Indicaciones', 322, 0),
-(9, 'Composición', 332, 0),
+(8, 'Indicaciones', 323, 0),
+(9, 'Composición', 333, 0),
 (10, 'Dosis y via de administración', 320, 0),
 (11, 'Esquema de vacunación sugerido', 50, 0),
 (12, 'Conservación', 84, 0),
-(13, 'Presentación', 280, 0),
+(13, 'Presentación', 281, 0),
 (14, 'Vacuna', -97, 0),
 (15, 'queratoconjuntivitis infecciosa bovina', -6, 0),
 (16, 'Herpesvirus bovino', -7, 0),
@@ -4603,7 +4616,7 @@ INSERT INTO `tbl_tag` (`id`, `name`, `count`, `user_id`) VALUES
 (77, 'garrapata', -8, 0),
 (78, 'Antiparasitarios Externos', -46, 0),
 (79, 'Precauciones', 43, 0),
-(80, 'Periodo de retiro', 246, 0),
+(80, 'Periodo de retiro', 247, 0),
 (81, 'rabia', -6, 0),
 (82, 'canina', -6, 0),
 (83, 'felina', -6, 0),
@@ -4727,7 +4740,7 @@ INSERT INTO `tbl_tag` (`id`, `name`, `count`, `user_id`) VALUES
 (201, 'vitamina D3', -7, 0),
 (202, 'vitamina E', -7, 0),
 (203, 'vitaminas liposolubles.', 0, 0),
-(204, 'Vitamínicos y Minerales', -50, 0),
+(204, 'Vitamínicos y Minerales', -47, 0),
 (205, 'Suplemento mineral', -6, 0),
 (206, 'Suplemento Vitamínico', -7, 0),
 (207, 'Calcificante', -6, 0),
@@ -4736,7 +4749,7 @@ INSERT INTO `tbl_tag` (`id`, `name`, `count`, `user_id`) VALUES
 (210, 'cardiotónico.', 2, 0),
 (211, 'Cobre', -14, 0),
 (212, 'Cu', -15, 0),
-(213, 'Zinc', -15, 0),
+(213, 'Zinc', -12, 0),
 (214, 'Zn', -15, 0),
 (215, 'Antidiarréico', -5, 0),
 (216, 'antiséptico', -10, 0),
@@ -4865,7 +4878,7 @@ INSERT INTO `tbl_tag` (`id`, `name`, `count`, `user_id`) VALUES
 (339, 'GONAXAL', -2, 0),
 (340, 'vitaminas liposolubles', -6, 0),
 (341, 'BAGÓ AD3E', -5, 0),
-(342, 'ADAPTADOR MIN', -7, 0),
+(342, 'ADAPTADOR MIN', -4, 0),
 (343, 'ADAPTADOR', -27, 0),
 (344, 'MIN', -21, 0),
 (345, 'SUPLENUT', -12, 0),
@@ -5015,7 +5028,7 @@ INSERT INTO `tbl_tag` (`id`, `name`, `count`, `user_id`) VALUES
 (489, 'Vacina para a prevenção do complexo de enfermidades entéricas e  sistêmicas dos \r\nbovinos causadas por  infecções de Rotavírus.\r\nProteção contra endot', 0, 0),
 (490, 'Vacina para a prevenção do complexo de enfermidades entéricas e  sistêmicas dos \r\nbovinos causadas por  infecções de Rotavírus.\r\nProteção contra endot', 1, 0),
 (491, 'producto', 0, 0),
-(492, 'Bolivia', 56, 0),
+(492, 'Bolivia', 57, 0),
 (493, 'México', 22, 0),
 (494, 'virus rábico', -6, 0),
 (495, 'parásitos pulmonares', -4, 0),
@@ -5056,7 +5069,7 @@ INSERT INTO `tbl_tag` (`id`, `name`, `count`, `user_id`) VALUES
 (530, 'bago pell', 1, 0),
 (531, 'anabólico', 3, 0),
 (532, 'aumentar ganancia', 1, 0),
-(533, 'Vía y forma de administración y aplicación', 7, 0),
+(533, 'Vía y forma de administración y aplicación', 8, 0),
 (534, 'liquido', 2, 0),
 (535, 'aftogen', 1, 0),
 (536, 'fiebre aftosa', 3, 0),
@@ -5536,7 +5549,10 @@ INSERT INTO `tbl_tag` (`id`, `name`, `count`, `user_id`) VALUES
 (1010, 'germicide.', 1, 0),
 (1011, 'aftosan', 1, 0),
 (1012, 'biogenesis', 1, 0),
-(1013, 'Paraguay', 1, 0);
+(1013, 'Paraguay', 1, 0),
+(1014, 'suplemento mineral de cobre', 3, 0),
+(1015, 'manganeso', 3, 0),
+(1016, 'selenio', 3, 0);
 
 -- --------------------------------------------------------
 
@@ -10954,7 +10970,35 @@ INSERT INTO `tbl_tag_producto` (`id`, `tag_id`, `producto_id`) VALUES
 (101807, 533, 405),
 (101808, 11, 405),
 (101809, 12, 405),
-(101810, 13, 405);
+(101810, 13, 405),
+(101817, 342, 406),
+(101818, 204, 406),
+(101819, 1014, 406),
+(101820, 213, 406),
+(101821, 1015, 406),
+(101822, 1016, 406),
+(101823, 204, 406),
+(101830, 342, 407),
+(101831, 204, 407),
+(101832, 1014, 407),
+(101833, 213, 407),
+(101834, 1015, 407),
+(101835, 1016, 407),
+(101836, 204, 407),
+(101921, 342, 408),
+(101922, 204, 408),
+(101923, 1014, 408),
+(101924, 213, 408),
+(101925, 1015, 408),
+(101926, 1016, 408),
+(101927, 204, 408),
+(101928, 492, 408),
+(101929, 3, 408),
+(101930, 9, 408),
+(101931, 8, 408),
+(101932, 533, 408),
+(101933, 80, 408),
+(101934, 13, 408);
 
 -- --------------------------------------------------------
 
@@ -11056,19 +11100,19 @@ INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (80, 'Vacunas más consistentes y efectivas', 'More consistent and effective vaccines', 'Vacinas mais consistentes e eficazes'),
 (81, 'Construimos una planta modelo, única por su tecnología y capacidad de producción. Con introducción de equipamiento de última generación, evolucionamos en nuevos sistemas de  producción, concentración y purificación de antígenos que, combinados con adyuvantes específicos, nos permiten formular las vacunas más potentes y eficaces.', 'We built a model manufacturing plant, unique because of its technology and production capability.  With the addition of next-generation equipment, we have been able to evolve in our new production systems, concentration and purification of antigens which, combined with specific adjuvants, allow us to formulate more potent and efficient vaccines.  ', 'Construímos uma planta modelo, única por sua tecnologia e capacidade de   produção. Com introdução de equipamentos de última geração, evoluímos em   sistemas de produção, concentração e purificação de antígenos que,   combinados com adjuvantes específicos, nos permitiram formular vacinas mais   potentes e eficazes.'),
 (82, 'Además de los métodos convencionales desarrollamos y patentamos una nueva tecnología de cultivo celular y de producción viral, para asegurar mayor calidad y  cantidad de antígenos en cada una de nuestras vacunas.', 'Furthermore, apart from conventional methods, we have developed and patented new technology in cell cultures and viral production, in order to ensure better quality and more quantity of antigens in each of our vaccines.  ', 'Além dos métodos convencionais desenvolvemos e patenteamos uma nova  tecnologia de cultivo celular e de produção viral, para garantir maior qualidade   e quantidade de antígenos em cada uma de nossas vacinas.'),
-(83, '•	<strong><font color="#26CBD4" >Unidad de producción de Vacuna contra la Fiebre Aftosa: </font></strong>200 millones de dosis anuales, bajo las más altas  normas de bioseguridad, nivel 4 (NBS 4 OIE).', '•	<strong><font color="#26CBD4" >Vaccine against Foot and Mouth Disease Production Unit:</font></strong> 200 million annual doses, under the highest biosafety norms, level 4 (NBS OIE).', '•	<strong><font color="#26CBD4" >Unidade de produção de Vacinas contra Febre Aftosa: </font></strong>200 milhões  de doses anuais, sob as mais rigorosas normas de biossegurança, nível   4 (NBS 4 OIE).'),
-(84, '•	<strong><font color="#26CBD4" >Unidad de producción de Biológicos ViBa:</font></strong> 100 millones de dosis anuales de vacuna combinada, destinadas a la prevención de enfermedades virales y bacterianas, bajo niveles de Bioseguridad 2 y 2+. ', '•	<strong><font color="#26CBD4" >Biological ViBa Production Unit:</font></strong> 100 million annual doses of the combined vaccine, destined to prevent viral and bacterial diseases, under biosafety levels 2 and 2+.  ', '•	<strong><font color="#26CBD4" >Unidade de produção de Biológicos ViBa:</font></strong>100 milhões de doses  anuais de vacina combinada, destinadas na prevenção de doenças   virais e bacterianas, sob níveis de segurança de biossegurança 2 e 2+.'),
-(85, '•	<strong><font color="#26CBD4" >Unidad de producción de Vacuna Antirrábica para bovinos, caninos y felinos:  </font></strong> 30 millones de dosis anuales,  elaboradas bajo niveles de bioseguridad 3 y  normas específicas de la OIE.', '•	<strong><font color="#26CBD4" >Dogs and Cats Rabies Vaccine Production Unit:</font></strong> 30 million annual doses, elaborated under biosafety level 3 and specific OIE norms.', '•	<strong><font color="#26CBD4" >Unidade de produção de Vacinas Antirrábicas para bovinos,  caninos e felinos:</font></strong>30 milhões de doses anuais, elaboradas sob níveis  de biossegurança 3 e normas específicas da OIE.'),
+(83, '<strong><font color="#26CBD4" >Unidad de producción de Vacuna contra la Fiebre Aftosa: </font></strong>200 millones de dosis anuales, bajo las más altas  normas de bioseguridad, nivel 4 (NBS 4 OIE).', '<strong><font color="#26CBD4" >Vaccine against Foot and Mouth Disease Production Unit:</font></strong> 200 million annual doses, under the highest biosafety norms, level 4 (NBS OIE).', '<strong><font color="#26CBD4" >Unidade de produção de Vacinas contra Febre Aftosa: </font></strong>200 milhões  de doses anuais, sob as mais rigorosas normas de biossegurança, nível   4 (NBS 4 OIE).'),
+(84, '<strong><font color="#26CBD4" >Unidad de producción de Biológicos ViBa:</font></strong> 100 millones de dosis anuales de vacuna combinada, destinadas a la prevención de enfermedades virales y bacterianas, bajo niveles de Bioseguridad 2 y 2+. ', '<strong><font color="#26CBD4" >Biological ViBa Production Unit:</font></strong> 100 million annual doses of the combined vaccine, destined to prevent viral and bacterial diseases, under biosafety levels 2 and 2+.  ', '<strong><font color="#26CBD4" >Unidade de produção de Biológicos ViBa:</font></strong>100 milhões de doses  anuais de vacina combinada, destinadas na prevenção de doenças   virais e bacterianas, sob níveis de segurança de biossegurança 2 e 2+.'),
+(85, '<strong><font color="#26CBD4" >Unidad de producción de Vacuna Antirrábica para bovinos, caninos y felinos:  </font></strong> 30 millones de dosis anuales,  elaboradas bajo niveles de bioseguridad 3 y  normas específicas de la OIE.', '<strong><font color="#26CBD4" >Dogs and Cats Rabies Vaccine Production Unit:</font></strong> 30 million annual doses, elaborated under biosafety level 3 and specific OIE norms.', '<strong><font color="#26CBD4" >Unidade de produção de Vacinas Antirrábicas para bovinos,  caninos e felinos:</font></strong>30 milhões de doses anuais, elaboradas sob níveis  de biossegurança 3 e normas específicas da OIE.'),
 (86, 'Planta Monte Grande- Buenos Aires, Argentina', 'Monte Grande Manufacturing Plant, Buenos Aires, Argentina:', 'Parque Industrial Monte Grande – Buenos Aires, Argentina'),
 (87, 'Soluciones para los principales problemas de la producción ganadera', 'Solutions for main problems in livestock production', 'Soluções para os principais problemas da produção pecuária'),
 (88, 'Aquí elaboramos nuestra línea de productos farmacéuticos para ofrecer planes sanitarios completos y eficaces, adaptados a las necesidades de la producción ganadera.', 'Here we elaborate our line of pharmaceutical products so as to offer complete and efficient sanitation plans, which are adapted to the needs of livestock production.', 'Aqui é elaborada nossa linha de produtos farmacêuticos para oferecer planos  sanitários completos e eficazes, adaptados as necessidades da produção   pecuária.'),
 (89, 'La planta cuenta con  <strong>6 unidades de producción</strong>, con una capacidad anual  <strong>de 3 millones de unidades al año:</strong>', 'The plant has <strong>6 production units</strong>, with an  <strong>annual capacity of 3 million units </strong>:', 'O Parque conta com <strong>6 unidades de produção</strong>, com capacidade anual de <strong>3   milhões de unidades por ano:</strong>'),
-(90, '•	Línea de Inyectables', '• Inyectable Line', '• Linha de injetáveis'),
-(91, '• Línea de orales', '• Oral Line', '• Linha de orais'),
-(92, '• Antibióticos ', '• Antibiotics', '• Antibióticos '),
-(93, '• Hormonales: Inyectables', '• Hormones: Inyectables', '• Hormonais: Injetáveis'),
-(94, '• Hormonales: sólido', '• Hormones: Solids', '• Hormonais:  Sólidos'),
-(95, '• Ectoparasiticidas', '• Ectoparasiticides', '• Ectoparasiticidas'),
+(90, 'Línea de Inyectables', 'Inyectable Line', 'Linha de injetáveis'),
+(91, 'Línea de orales', 'Oral Line', 'Linha de orais'),
+(92, 'Antibióticos ', 'Antibiotics', 'Antibióticos '),
+(93, 'Hormonales: Inyectables', 'Hormones: Inyectables', 'Hormonais: Injetáveis'),
+(94, 'Hormonales: sólido', 'Hormones: Solids', 'Hormonais:  Sólidos'),
+(95, 'Ectoparasiticidas', 'Ectoparasiticides', 'Ectoparasiticidas'),
 (96, 'Planta Arraçoiaba da Serra , Sao Paulo, Brasil', 'Arraçoiaba da Serra Manufacturing Plant, Sao Paulo, Brazil', 'Parque Industrial Arraçoiaba da Serra, São Paulo, Brasil'),
 (97, 'Más control sobre ectoparásitos', 'More control of ectoparasites', 'Mais controle sobre ectoparasitoses'),
 (98, 'Para brindar soluciones tecnológicas que cubran las necesidades específicas de la ganadería en Brasil, instalamos una planta dedicada a la producción de ectoparaciticidas.', 'In order to offer technological solutions to cover the specific needs of livestock in Brazil, we built a plant specialised in the production of ectoparasiticides.  ', 'Para fornecer soluções tecnológicas que atendam às necessidades específicas   da pecuária no Brasil, instalou-se uma fábrica dedicada à produção de   ectoparaciticidas.'),
@@ -11744,12 +11788,12 @@ ALTER TABLE `tbl_ppartes_regionalizacion`
 -- AUTO_INCREMENT de la tabla `tbl_producto`
 --
 ALTER TABLE `tbl_producto`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=406;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=409;
 --
 -- AUTO_INCREMENT de la tabla `tbl_producto_contenido`
 --
 ALTER TABLE `tbl_producto_contenido`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5507;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5519;
 --
 -- AUTO_INCREMENT de la tabla `tbl_producto_partes`
 --
@@ -11779,12 +11823,12 @@ ALTER TABLE `tbl_seccion_regionalizacion`
 -- AUTO_INCREMENT de la tabla `tbl_tag`
 --
 ALTER TABLE `tbl_tag`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1014;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1017;
 --
 -- AUTO_INCREMENT de la tabla `tbl_tag_producto`
 --
 ALTER TABLE `tbl_tag_producto`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=101811;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=101935;
 --
 -- AUTO_INCREMENT de la tabla `tbl_textos`
 --
