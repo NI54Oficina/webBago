@@ -135,7 +135,7 @@ $auxId=0;
 	
 	<?php if(isset($productos)){ foreach($productos as $producto){
 		
-	if($producto->pais==Yii::app()->session['pais']){
+	if($producto->pais==$pais){
 		$auxIndex++;
 	$id= $producto->id;
 	$imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"id DESC"));
