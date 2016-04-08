@@ -76,8 +76,12 @@ if(isset($_POST["arg"])){
 	//echo $_POST["arg"];
 	
 //	$arg= str_replace(" ",',',$_POST["arg"]);
-	$productos=Producto::model()->taggedWith($arg)->findAll();
+$productos=Producto::model()->taggedWith($_POST["arg"])->findAll();	
 }
+
+//f(isset($productos)){
+//echo count($productos);
+//}
 //echo "</div>";
 $nombre="Búsqueda";
 //$data->nombre="Busqueda";
@@ -136,71 +140,52 @@ $auxId=0;
 	$id= $producto->id;
 	$imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"id DESC"));
 	?>
-	<div class=" col-lg-4 col-md-4 col-sm-6 col-xs-12 div-img-aft same-height" hid="1" style="background-color:#f5f5f5;">
-		<a href="<?php echo Yii::app()->getBaseUrl(true); ?>/productos/id<?php echo $producto->id; ?>">
+	<div class=" col-lg-4 col-md-4 col-sm-6 col-xs-12 div-img-aft same-height" hid="1" style="">
+		<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/productos/id<?php echo $producto->id; ?>" style="background-color:#f5f5f5;display:inline-block;width:96%;height:96%;margin:2%;">
 		<figure class="snip1156 image">
 			<div>
-				<img style="width:45%;display:inline-block;margin:0; margin-top: 5%;" class="img-cat-aft " src="<?php echo Yii::app()->getBaseUrl(true); ?>/vademecums/<?php echo $imagen->id; ?>.png" /> 
-				<div id="targets">
+				<div class="inner-producto-vademecum">
+				<div class="producto-vademecum-top">
+				<img style="width:45%;display:inline-block;margin-top: 5%;margin-right:0;text-align:left;" class="img-cat-aft " src="<?php echo Yii::app()->getBaseUrl(true); ?>/vademecums/<?php echo $imagen->id; ?>.png" /> 
+				<div class="targets-vademecum">
+					<div class="columna-target">
 					<?php
 					$target= $producto->target;
-					if($target[0]!=0){
-						echo '<img src="'.Yii::app()->getBaseUrl(true).'/images/caballo.png">';
-					}else{
-						//echo '<img src="images/caballo.png" style="opacity:0.2;">';
+					$targetImages=array('<img src="'.Yii::app()->getBaseUrl(true).'/images/caballo.png">',
+								'<img src="'.Yii::app()->getBaseUrl(true).'/images/cabra.png">',
+								'<img src="'.Yii::app()->getBaseUrl(true).'/images/chancho.png">',
+								'<img src="'.Yii::app()->getBaseUrl(true).'/images/conejo.png">',
+								'<img src="'.Yii::app()->getBaseUrl(true).'/images/gallina.png">',
+								'<img src="'.Yii::app()->getBaseUrl(true).'/images/perro.png">',
+								'<img src="'.Yii::app()->getBaseUrl(true).'/images/gato.png">',
+								'<img src="'.Yii::app()->getBaseUrl(true).'/images/oveja.png">',
+								'<img src="'.Yii::app()->getBaseUrl(true).'/images/pez.png">',
+								'<img src="'.Yii::app()->getBaseUrl(true).'/images/vaca.png">',
+								);
+							$auxTarget=0;
+							$auxDiv=0;
+					foreach(str_split($target) as $t){
+						if($t==1){
+							$auxDiv++;
+							echo $targetImages[$auxTarget];
+						}
+						if($auxDiv>=2){
+							echo "</div><div class='columna-target'>";
+							$auxDiv=0;
+						}
+						$auxTarget++;
 					}
-					if($target[1]!=0){
-						echo '<img src="'.Yii::app()->getBaseUrl(true).'/images/cabra.png">';
-					}else{
-						//echo '<img src="images/cabra.png" style="opacity:0.2;">';
-					}
-					if($target[2]!=0){
-						echo '<img src="'.Yii::app()->getBaseUrl(true).'/images/chancho.png">';
-					}else{
-						//echo '<img src="images/chancho.png" style="opacity:0.2;">';
-					}
-					if($target[3]!=0){
-						echo '<img src="'.Yii::app()->getBaseUrl(true).'/images/conejo.png">';
-					}else{
-						//echo '<img src="images/conejo.png" style="opacity:0.2;">';
-					}
-					if($target[4]!=0){
-						echo '<img src="'.Yii::app()->getBaseUrl(true).'/images/gallina.png">';
-					}else{
-						//echo '<img src="images/gallina.png" style="opacity:0.2;">';
-					}
-					if($target[5]!=0){
-						echo '<img src="'.Yii::app()->getBaseUrl(true).'/images/perro.png">';
-					}else{
-						//echo '<img src="images/perro.png" style="opacity:0.2;">';
-					}
-					if($target[6]!=0){
-						echo '<img src="'.Yii::app()->getBaseUrl(true).'/images/gato.png">';
-					}else{
-						//echo '<img src="images/gato.png" style="opacity:0.2;">';
-					}
-					if($target[7]!=0){
-						echo '<img src="'.Yii::app()->getBaseUrl(true).'/images/oveja.png">';
-					}else{
-						//echo '<img src="images/oveja.png" style="opacity:0.2;">';
-					}
-					if($target[8]!=0){
-						echo '<img src="'.Yii::app()->getBaseUrl(true).'/images/pez.png">';
-					}else{
-						//echo '<img src="images/pez.png" style="opacity:0.2;">';
-					}
-					if($target[9]!=0){
-						echo '<img src="'.Yii::app()->getBaseUrl(true).'/images/vaca.png">';
-					}else{
-						//echo '<img src="images/vaca.png" style="opacity:0.2;">';
-					}
+					
 					
 					?>
 					</div>
+					</div>
+					</div>
 					<h3><?php echo $producto->nombre; ?></h3>
-				<figcaption>
+				</div>
+				<figcaption class="fig-<?php echo $normalizado; ?>">
 					<div class="d-a-2 <?php echo $normalizado; ?>">
-						<h2 class="<?php echo $normalizado; ?>-h2"><?php echo $producto->nombre; ?></h2>
+						<h2 class="<?php echo $normalizado; ?>-h2"><span class="plus-vademecum">+</span><br><?php echo $producto->nombre; ?></h2>
 					</div>
 					<div>
 					</div>

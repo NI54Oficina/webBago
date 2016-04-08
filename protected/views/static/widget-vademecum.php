@@ -1,7 +1,7 @@
 <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 visible-desktop hidden-sm hidden-xs" id="table-vad" style="height:auto;overflow:hidden;text-align:left;">
 	<div class="col-lg-11 col-md-11 col-sm-12 col-xs-12" style="float:right;">
 	
-	<form action="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/search" method="post" style="float:right;width:96%;">
+	<form action="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/search/" method="post" style="float:right;width:96%;">
 
 	<input type="text" class="buscador" name="arg" style="width:88%;" />
 
