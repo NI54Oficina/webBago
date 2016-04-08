@@ -111,7 +111,7 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 	
 		<p id="compartido"><?php echo Textos::model()->GetText(452); ?></p>
  		<p style="text-align:center;width:15%;margin:auto;margin-top:-2%; margin-bottom: 5px;" ></p>
- 		<p id="barra-superior-<?php echo $normalizado; ?>"></p>
+ 		<p id="barra-superior-<?php echo $normalizado; ?>" class="col-xs-hidden col-sm-hidden"></p>
   		
   		<div id="barra-xs">
 			
