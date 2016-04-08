@@ -1455,19 +1455,21 @@
 				<!-- TEXTO-->
 				<div id="whiteFiller"style="background-color:white;position:absolute;width:100%;height:400px;z-index:2;top:226px;"></div>
 				<div style="width:100%;position:relative;z-index:4; height: 100px;">
-				<p class="p-rrhh-home" style="width:50%;display:inline-block;margin:0;padding:0;" ><?php echo Textos::model()->GetText(112); ?></p>
+
+
+				<p class="p-rrhh-home" style="width:50%;display:inline-block;margin:0;padding:0; position: relative;" ><?php echo Textos::model()->GetText(112); ?></p>
 
 
 				<!-- ESTOS SON LOS TEXTOS QUE TIENE QUE APARECER Y DESAPARECCER EN RRHH DE LA HOME !-->
 
-				<ul  class="colg-lg-10" style="font-size: 13px; text-align: center; color: #359fbd;    width: 65%;  margin: auto; margin-top: 10px;" id="ul-rrhh-home" style="position:absolute;">
+				<ul  class="colg-lg-10" style="font-size: 15px; text-align: center; color: #359fbd;    width: 50%;  margin: auto; margin-top: 40px;" id="ul-rrhh-home" style="position:relative;">
 				
 					<li><?php echo Textos::model()->GetText(483); ?></li>
 				   <li><?php echo Textos::model()->GetText(484); ?></li>
 				   <li><?php echo Textos::model()->GetText(485); ?></li>
 				   <li><?php echo Textos::model()->GetText(486); ?></li>
 				   <li><?php echo Textos::model()->GetText(487); ?></li>
-				   <li style="line-height:17px;"><?php echo Textos::model()->GetText(488); ?></li>
+				   <li style="line-height:18px; margin-top: 8px;"><?php echo Textos::model()->GetText(488); ?></li>
 				</ul>
 
 				<!-- HASTA ACA !-->
