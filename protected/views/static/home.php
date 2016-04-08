@@ -201,7 +201,7 @@
 					
 						<img class="icn-ubicacion" src="<?php echo Yii::app()->request->baseUrl; ?>/img/icn-vacunas.png">
 					
-						<p style="margin-bottom:0;" id="nom-ref"> NAFMDVD</p>  <p style="font-size: 10px; padding-left: 18px;margin-bottom: 0px;"><?php echo Textos::model()->GetText(461); ?>  </p>  <p  style="font-size: 10px; padding-left: 18px;"><?php echo Textos::model()->GetText(462); ?> </p>
+						<p style="margin-bottom:0;" id="nom-ref"><?php echo Textos::model()->GetText(504); ?>  </p>  <p style="font-size: 10px; padding-left: 18px;margin-bottom: 0px;"><?php echo Textos::model()->GetText(462); ?>  </p>  <p  style="font-size: 10px; padding-left: 18px;">
 						
 					</div> <!-- Termina cada referencia -->
 					
@@ -670,7 +670,7 @@
 			
 					<h2 id="titulo-info-mapa"><img class="band-filiales" src="<?php echo Yii::app()->request->baseUrl; ?>/img/banderitas-01.png"/> Argentina </h2>
 	
-						<p id="sub-filiales"  class="h4-fil bio" >Casa Matriz Argentina</p>	
+						<p id="sub-filiales"  class="h4-fil bio" ><?php echo Textos::model()->GetText(505); ?></p>	
 						
 						<p  id="sub-filiales" class="h4-fil">Ruta Panamericana Km 38,5, Garín <br />Prov. de Bs. As. Argentina </p>
 						
