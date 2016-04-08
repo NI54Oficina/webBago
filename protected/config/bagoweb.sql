@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-04-2016 a las 16:08:25
+-- Tiempo de generación: 08-04-2016 a las 16:52:15
 -- Versión del servidor: 10.1.9-MariaDB
 -- Versión de PHP: 5.5.30
 
@@ -778,7 +778,8 @@ INSERT INTO `tbl_imagen_ref` (`id`, `producto_id`) VALUES
 (623, 401),
 (624, 402),
 (625, 403),
-(626, 404);
+(626, 404),
+(632, 405);
 
 -- --------------------------------------------------------
 
@@ -1516,7 +1517,8 @@ INSERT INTO `tbl_producto` (`id`, `nombre`, `seccion`, `target`, `link`, `descri
 (401, 'BAGO-PELL® ', 9, '0000000101', 'BAGO-PELL-', '', '2016-03-09 17:14:24', 'BAGO,PELL,BAGO-PELL® , Subcutaneous, anabolic, implant ,cattle ,sheep.', 'BAGO,PELL,BAGO-PELL®,Subcutaneous,anabolic,implant,cattle,sheep.,Farmacéuticos,USA', 0, '9', 0),
 (402, 'ESTREPTOCARBOCAFTIAZOL', 9, '1110011101', 'ESTREPTOCARBOCAFTIAZOL', '', '2016-03-09 17:16:06', 'ESTREPTOCARBOCAFTIAZOL', 'ESTREPTOCARBOCAFTIAZOL,Farmacéuticos,USA', 0, '9', 0),
 (403, 'BAGODRYL® ', 10, '0000000000', 'BAGODRYL-', '', '2016-03-09 17:18:12', 'BAGODRYL® , BAGODRYL, Antiseptic, disinfectant ,surface ,germicide.', 'BAGODRYL®,BAGODRYL,Antiseptic,disinfectant,surface,germicide.,Salud Ambiental,USA', 0, '9', 0),
-(404, 'BIOX® ', 10, '1110011101', 'BIOX-', '', '2016-03-09 17:25:05', 'BIOX, BIOX® ,', 'BIOX,BIOX®,Salud Ambiental,USA', 0, '9', 0);
+(404, 'BIOX® ', 10, '1110011101', 'BIOX-', '', '2016-03-09 17:25:05', 'BIOX, BIOX® ,', 'BIOX,BIOX®,Salud Ambiental,USA', 0, '9', 0),
+(405, 'AFTOSAN®', 1, '0000000001', 'AFTOSAN', '', '2016-04-08 11:35:08', 'aftosan, fiebre aftosa, biogenesis, bovinos', 'aftosan,fiebre aftosa,biogenesis,bovinos,Aftosa,Paraguay', 0, '17', 0);
 
 -- --------------------------------------------------------
 
@@ -3640,7 +3642,13 @@ INSERT INTO `tbl_producto_contenido` (`id`, `producto_id`, `parte`, `text`) VALU
 (5497, 73, 1, '<p>Tratamiento y control de parasitosis internas (gastrointestinales y pulmonares, en estad&iacute;os juveniles, adultos e inhibidos) y externas (garrapata, sarna, piojos chupadores, ura y miasis) de los bovinos y ovinos. Al ser un producto vitam&iacute;nico combinado es de excelente aplicaci&oacute;n en animales en crecimiento, en la b&uacute;squeda de una mejor respuesta inmunitaria de las vacunaciones, para evitar p&eacute;rdida de peso en destetes o movimientos de hacienda y lograr mejores &iacute;ndices de fertilidad y engorde. La dosificaci&oacute;n vitam&iacute;nica aplicada cubre en m&aacute;s los requerimientos de las diferentes categor&iacute;as, facilitando el manejo y reduciendo los movimientos del ganado.</p>\r\n\r\n<p>Espectro de acci&oacute;n</p>\r\n\r\n<p><strong>Bovinos:<br />\r\nPar&aacute;sitos internos: Par&aacute;sitos gastrointestinales: </strong>Cooperia oncophora (adultos y L4), Cooperia punctata (adultos y L4), Cooperia spp (adultos y L3), Haemonchus placei (adultos, L3 y L4), Nematodirus helvetianus (adultos), Nematodirus spathiger (adultos), Ostertagia (Teladorsagia) ostertagi (adultos, L3 y L4 incluyendo larvas inhibidas).<br />\r\n<strong>Par&aacute;sitos pulmonares: </strong>Dictyocaulus viviparus (adultos, L4 y estados inhibidos).<br />\r\n<strong>Garrapata com&uacute;n del bovino: </strong>Rhipicephalus microplus.<br />\r\n<strong>Piojos Chupadores: </strong>Haematopinus eurysternus, Linognathus vituli, Solenopotes capillatus.<br />\r\n<strong>Miasis: </strong>Dermatobia hominis (Ura), Hypoderma bovis, Hypoderma lineatum.<br />\r\n<strong>Como tratamiento coadyuvante en el control de: Piojos m&aacute;sticadores: </strong>Damalinia bovis.</p>\r\n\r\n<p><strong>Ovinos:<br />\r\nPar&aacute;sitos internos: Par&aacute;sitos gastrointestinales: </strong>Nematodes gastrointestinales y pulmonares, estad&iacute;os inmaduros y adultos.<br />\r\n<strong>Par&aacute;sitos externos: </strong>Oestrus ovis (gusano de la nariz).<br />\r\n<strong>&Aacute;caros de la sarna: </strong>Psoroptes communis var. ovis, Sarcoptes scabiei var. ovis; Psorergates ovis.</p>\r\n\r\n<p><strong>Ovinos: </strong><br />\r\n<strong>Par&aacute;sitos internos: Par&aacute;sitos gastrointestinales:</strong> Nematodes gastrointestinales y pulmonares, estad&iacute;os inmaduros y adultos.<br />\r\n<strong>Par&aacute;sitos externos: </strong>Oestrus ovis (gusano de la nariz).<br />\r\n<strong>&Aacute;caros de la sarna: </strong>Psoroptes communis var. ovis, Sarcoptes scabiei var. ovis; Psorergates ovis.</p>\r\n'),
 (5498, 73, 3, '<p><strong>Bovinos: </strong>1 mL/50 kg de p.v.(200 mcg/kg) por v&iacute;a subcut&aacute;nea con aguja 10/18.</p>\r\n\r\n<p><strong>Ovinos: </strong>0,5 mL cada 25 kg de p.v. (200 mcg/kg) por v&iacute;a subcut&aacute;nea con aguja 10/15, en la piel floja detr&aacute;s de la paleta o en la ingle, en la cara interna del muslo. Para el tratamiento contra la sarna por Psoroptes communis var. ovis se deben aplicar dos dosis de 1 mL cada 50 kg de p.v. con un intervalo de 7 d&iacute;as entre la 1&ordm; y 2&ordm; dosis o una &uacute;nica dosis de 1 mL cada 30 kg de p.v. (300 mcg/kg). Contra la sarna por Sarcoptes scabiei aplicar una sola dosis de 1 mL cada 50 Kg de p.v.</p>\r\n\r\n<p>&nbsp;</p>\r\n'),
 (5499, 73, 8, '<p>Entre el &uacute;ltimo tratamiento y la faena para consumo deben transcurrir:</p>\r\n\r\n<p><strong>Bovinos: </strong>35 d&iacute;as.</p>\r\n\r\n<p><strong>Ovinos: </strong>28 d&iacute;as.</p>\r\n\r\n<p>No aplicar en vacas lecheras en lactaci&oacute;n ni dentro de los 35 d&iacute;as previos al parto cuando la leche se destine a consumo humano o industrializaci&oacute;n.</p>\r\n\r\n<p>No aplicar en ovejas en lactaci&oacute;n ni dentro de los 28 d&iacute;as previos al parto cuando la leche se destine a consumo humano o industrializaci&oacute;n.</p>\r\n'),
-(5500, 73, 6, '<p>Frascos por 50 mL y 500 mL.</p>\r\n');
+(5500, 73, 6, '<p>Frascos por 50 mL y 500 mL.</p>\r\n'),
+(5501, 405, 1, 'Vacuna inactivada para la inmunización contra la Fiebre Aftosa.'),
+(5502, 405, 2, 'Vacuna oleosa con virus de la Fiebre Aftosa tipo O1 Campos, A24 Cruzeiro y C3 Indaial, obtenidos en cultivo de células BHK, inactivados con B.E.I.\r\n'),
+(5503, 405, 14, 'Bovinos: 5 mL por vía intramuscular profunda o subcutánea.'),
+(5504, 405, 4, 'Deberá administrarse siguiendo los lineamientos de los planes diseñados por la Autoridad Sanitaria de cada país.\r\n<br><strong>Bovinos:</strong></br>\r\nDosis: 5mL </br>\r\nVía de Administración: Intramuscular, Subcutánea </br>\r\nPuntos de aplicación: Tercio medio superior de la tabla del cuello,Detrás de la paleta<br>\r\nDosis: 5mL </br>\r\nVía de Administración: Subcutánea </br>\r\nPuntos de aplicación: Detrás de la paleta<br>\r\n\r\n<strong>Porcinos:</strong></br>\r\nDosis: 3mL </br>\r\nVía de Administración: Intramuscular</br>\r\nPuntos de aplicación: Tabla del cuello detrás de la oreja a<br>\r\n\r\n<strong>Ovinos y Caprinos:</strong></br>\r\nDosis: 3mL </br>\r\nVía de Administración: Intramuscular</br>\r\nPuntos de aplicación: Tabla del cuello detrás de la oreja a<br>'),
+(5505, 405, 5, 'Mantener entre 2o C y 8o C, al resguardo de la luz. No congelar.\r\n'),
+(5506, 405, 6, 'Frascos por 10, 25 y 50 dosis de 5 mL.');
 
 -- --------------------------------------------------------
 
@@ -4517,18 +4525,18 @@ CREATE TABLE `tbl_tag` (
 
 INSERT INTO `tbl_tag` (`id`, `name`, `count`, `user_id`) VALUES
 (1, 'prueba', -5, 0),
-(2, 'Aftosa', -15, 0),
+(2, 'Aftosa', -14, 0),
 (3, 'Acción', 245, 0),
 (4, 'Vacuna inactivada', -7, 0),
 (5, 'inmunización', -14, 0),
 (6, 'Fiebre', -22, 0),
 (7, 'Aftosa.', -7, 0),
-(8, 'Indicaciones', 321, 0),
-(9, 'Composición', 331, 0),
+(8, 'Indicaciones', 322, 0),
+(9, 'Composición', 332, 0),
 (10, 'Dosis y via de administración', 320, 0),
-(11, 'Esquema de vacunación sugerido', 49, 0),
-(12, 'Conservación', 83, 0),
-(13, 'Presentación', 279, 0),
+(11, 'Esquema de vacunación sugerido', 50, 0),
+(12, 'Conservación', 84, 0),
+(13, 'Presentación', 280, 0),
 (14, 'Vacuna', -97, 0),
 (15, 'queratoconjuntivitis infecciosa bovina', -6, 0),
 (16, 'Herpesvirus bovino', -7, 0),
@@ -4550,7 +4558,7 @@ INSERT INTO `tbl_tag` (`id`, `name`, `count`, `user_id`) VALUES
 (32, 'prevención', -70, 0),
 (33, 'Hemoglobinuria', -5, 0),
 (34, 'Bacilar', -6, 0),
-(35, 'bovinos', -246, 0),
+(35, 'bovinos', -245, 0),
 (36, 'Mancha', -15, 0),
 (37, 'Gangrena', -5, 0),
 (38, 'Enterotoxemia', -9, 0),
@@ -5048,10 +5056,10 @@ INSERT INTO `tbl_tag` (`id`, `name`, `count`, `user_id`) VALUES
 (530, 'bago pell', 1, 0),
 (531, 'anabólico', 3, 0),
 (532, 'aumentar ganancia', 1, 0),
-(533, 'Vía y forma de administración y aplicación', 6, 0),
+(533, 'Vía y forma de administración y aplicación', 7, 0),
 (534, 'liquido', 2, 0),
 (535, 'aftogen', 1, 0),
-(536, 'fiebre aftosa', 2, 0),
+(536, 'fiebre aftosa', 3, 0),
 (537, 'Uruguay', 49, 0),
 (538, 'bioqueratogen oleo', 1, 0),
 (539, 'prevención de la queratoconjuntivitis infecciosa', 1, 0),
@@ -5525,7 +5533,10 @@ INSERT INTO `tbl_tag` (`id`, `name`, `count`, `user_id`) VALUES
 (1007, 'Antiseptic', 1, 0),
 (1008, 'disinfectant', 1, 0),
 (1009, 'surface', 1, 0),
-(1010, 'germicide.', 1, 0);
+(1010, 'germicide.', 1, 0),
+(1011, 'aftosan', 1, 0),
+(1012, 'biogenesis', 1, 0),
+(1013, 'Paraguay', 1, 0);
 
 -- --------------------------------------------------------
 
@@ -10931,7 +10942,19 @@ INSERT INTO `tbl_tag_producto` (`id`, `tag_id`, `producto_id`) VALUES
 (101729, 8, 73),
 (101730, 10, 73),
 (101731, 80, 73),
-(101732, 13, 73);
+(101732, 13, 73),
+(101799, 1011, 405),
+(101800, 536, 405),
+(101801, 1012, 405),
+(101802, 35, 405),
+(101803, 2, 405),
+(101804, 1013, 405),
+(101805, 8, 405),
+(101806, 9, 405),
+(101807, 533, 405),
+(101808, 11, 405),
+(101809, 12, 405),
+(101810, 13, 405);
 
 -- --------------------------------------------------------
 
@@ -11681,7 +11704,7 @@ ALTER TABLE `tbl_establecimiento`
 -- AUTO_INCREMENT de la tabla `tbl_imagen_ref`
 --
 ALTER TABLE `tbl_imagen_ref`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=632;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=633;
 --
 -- AUTO_INCREMENT de la tabla `tbl_metatag`
 --
@@ -11721,12 +11744,12 @@ ALTER TABLE `tbl_ppartes_regionalizacion`
 -- AUTO_INCREMENT de la tabla `tbl_producto`
 --
 ALTER TABLE `tbl_producto`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=405;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=406;
 --
 -- AUTO_INCREMENT de la tabla `tbl_producto_contenido`
 --
 ALTER TABLE `tbl_producto_contenido`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5501;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5507;
 --
 -- AUTO_INCREMENT de la tabla `tbl_producto_partes`
 --
@@ -11756,12 +11779,12 @@ ALTER TABLE `tbl_seccion_regionalizacion`
 -- AUTO_INCREMENT de la tabla `tbl_tag`
 --
 ALTER TABLE `tbl_tag`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1011;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1014;
 --
 -- AUTO_INCREMENT de la tabla `tbl_tag_producto`
 --
 ALTER TABLE `tbl_tag_producto`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=101733;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=101811;
 --
 -- AUTO_INCREMENT de la tabla `tbl_textos`
 --
