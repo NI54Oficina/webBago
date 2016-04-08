@@ -138,8 +138,8 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 			</a>
 		</div>!-->
 		
-		<p id="registrado"><?php echo Textos::model()->GetText(453);?></p>
-		<p id="barra-media-<?php echo $normalizado; ?>"></p>
+		<!--<p id="registrado"><?php echo Textos::model()->GetText(453);?></p>
+		<p id="barra-media-<?php echo $normalizado; ?>"></p>!-->
 		
 			<div id="targets-mobile" >
 					<?php

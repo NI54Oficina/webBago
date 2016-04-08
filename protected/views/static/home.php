@@ -763,6 +763,7 @@
 				"hn" => "infoHonduras",
 				"ni" => "infoNicaragua",
 				"pa" => "infoPanama",
+				"en" => "infoArgentina",
 			];
 			if(array_key_exists($_SESSION['short'],$shortToId)){
 			?>
@@ -802,9 +803,35 @@
 					<ul id="list-menu"  class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
 						<li class="col-lg-1 col-md-2 col-sm-2 col-xs-3"><a  id="opcion1" href="javascript:void(0)">Trabajos técnicos</a></li>
-						<!--<li class="col-lg-1 col-md-2 col-sm-2 col-xs-3"><a  id="opcion2" href="javascript:void(0)">Planes Sanitarios</a></li>
-						<li class="col-lg-1 col-md-2 col-sm-2 col-xs-3"><a id="opcion3" href="javascript:void(0)">Planillas<br />de trabajo</a></li>             !-->
-					
+						<li class="col-lg-1 col-md-2 col-sm-2 col-xs-3"><a  id="opcion2" href="javascript:void(0)">Planes Sanitarios</a></li>
+						<li class="col-lg-1 col-md-2 col-sm-2 col-xs-3"><a id="opcion3" href="javascript:void(0)">Planillas<br />de trabajo</a></li>             
+						<script>
+						$(document).ready(function () {
+							
+							CheckSub();
+							$("body").on("mousedown",".link-menu",function(evt){
+								var attr = $(this).attr('down');
+								if (typeof attr !== typeof undefined && attr !== false) {
+									eval(attr);
+								}
+								CheckSub();
+							});
+						});
+						function CheckSub(){
+							if(sessionStorage.sub){
+							if(sessionStorage.sub=="sanitarios"){
+								$("#opcion2").click();
+							}else if(sessionStorage.sub=="planillas"){
+								$("#opcion3").click();
+							}else{
+								$("#opcion1").click();
+							}
+							sessionStorage.removeItem("sub");
+							}
+							
+						}
+						
+						</script>
 					</ul> 
 					
 					<!-- borde-->

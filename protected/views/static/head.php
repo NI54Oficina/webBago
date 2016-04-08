@@ -106,7 +106,15 @@
 		$(document).ready(function () {
 			
 			$("body").on("click",".link-menu",function(evt){
-				
+				var attr = $(this).attr('down');
+				// For some browsers, `attr` is undefined; for others,
+				// `attr` is false.  Check for both.
+				if (typeof attr !== typeof undefined && attr !== false) {
+					eval(attr);
+				}
+				if (typeof CheckSub !== 'undefined' && $.isFunction(CheckSub)) {
+					CheckSub();
+				}
 				if (evt.ctrlKey){
 					window.open($(this).attr("href"));
 				}else{
