@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-04-2016 a las 17:19:49
+-- Tiempo de generación: 08-04-2016 a las 18:50:06
 -- Versión del servidor: 10.1.9-MariaDB
 -- Versión de PHP: 5.5.30
 
@@ -779,7 +779,11 @@ INSERT INTO `tbl_imagen_ref` (`id`, `producto_id`) VALUES
 (624, 402),
 (625, 403),
 (626, 404),
-(632, 405);
+(632, 405),
+(633, 409),
+(634, 410),
+(635, 411),
+(636, 408);
 
 -- --------------------------------------------------------
 
@@ -1519,7 +1523,10 @@ INSERT INTO `tbl_producto` (`id`, `nombre`, `seccion`, `target`, `link`, `descri
 (403, 'BAGODRYL® ', 10, '0000000000', 'BAGODRYL-', '', '2016-03-09 17:18:12', 'BAGODRYL® , BAGODRYL, Antiseptic, disinfectant ,surface ,germicide.', 'BAGODRYL®,BAGODRYL,Antiseptic,disinfectant,surface,germicide.,Salud Ambiental,USA', 0, '9', 0),
 (404, 'BIOX® ', 10, '1110011101', 'BIOX-', '', '2016-03-09 17:25:05', 'BIOX, BIOX® ,', 'BIOX,BIOX®,Salud Ambiental,USA', 0, '9', 0),
 (405, 'AFTOSAN®', 1, '0000000001', 'AFTOSAN', '', '2016-04-08 11:35:08', 'aftosan, fiebre aftosa, biogenesis, bovinos', 'aftosan,fiebre aftosa,biogenesis,bovinos,Aftosa,Paraguay', 0, '17', 0),
-(408, 'ADAPTADOR MIN', 8, '0000000001', 'ADAPTADOR-MIN', '', '2016-04-08 12:11:56', 'adaptador min, vitaminicos y minerales, suplemento mineral de cobre, zinc, manganeso, selenio', 'adaptador min,vitaminicos y minerales,suplemento mineral de cobre,zinc,manganeso,selenio,Vitamínicos y Minerales,Bolivia', 0, '5', 0);
+(408, 'ADAPTADOR MIN', 8, '0000000001', 'ADAPTADOR-MIN', '', '2016-04-08 12:11:56', 'adaptador min, vitaminicos y minerales, suplemento mineral de cobre, zinc, manganeso, selenio', 'adaptador min,vitaminicos y minerales,suplemento mineral de cobre,zinc,manganeso,selenio,Vitamínicos y Minerales,Bolivia', 0, '5', 0),
+(409, 'GALMETRIN® PLUS PÓ', 3, '1110000101', 'GALMETRIN-PLUS-P', '', '2016-04-08 12:37:45', 'antiparatsitarios externos, galmetrin plus po, bovinos, equinos', 'antiparatsitarios externos,galmetrin plus po,bovinos,equinos,Antiparasitarios Externos,Brasil', 0, '2', 0),
+(410, 'GALMETRIN® PLUS POMADA', 3, '1110000101', 'GALMETRIN-PLUS-POMADA', '', '2016-04-08 12:43:51', 'larvicina, antiparasitarios externos, galmetrin plus pomada, ', 'larvicina,antiparasitarios externos,galmetrin plus pomada,Antiparasitarios Externos,Brasil', 0, '2', 0),
+(411, 'GALMETRIN® PLUS SOLUÇÃO', 3, '1110000101', 'GALMETRIN-PLUS-SOLUO', '', '2016-04-08 12:49:30', 'galmetrin, antiparasitarios externos, larvicina de uso externo, ', 'galmetrin,antiparasitarios externos,larvicina de uso externo,Antiparasitarios Externos,Brasil', 0, '2', 0);
 
 -- --------------------------------------------------------
 
@@ -3661,7 +3668,27 @@ INSERT INTO `tbl_producto_contenido` (`id`, `producto_id`, `parte`, `text`) VALU
 (5515, 408, 1, 'ADAPTADOR MIN es una solución inyectable\r\nde microelementos que está indicada para la prevención\r\ny control del estrés oxidativo en terneros al destete, al inicio\r\nde un plan de inmunización y al ingreso de animales al\r\nfeedlot; así como otras situaciones que pudiesen generar\r\nla formación de radicales superóxido, como por ejemplo\r\nel transporte. ADAPTADOR MIN también está indicado\r\npara la prevención y tratamiento de las carencias de\r\nlos microelementos que ésta solución contiene (Cobre,\r\nZinc, Selenio y Manganeso). Los microelementos de\r\nADAPTADOR MIN y las vitaminas de ADAPTADOR VIT\r\nrepresentan en forma conjunta o aislada factores esenciales\r\npara la defensa antioxidante del organismo.'),
 (5516, 408, 14, 'La dosis aconsejada de ADAPTADOR MIN, es de 1 mL\r\ncada 50 kg de p.v. El intervalo entre dosis no debe ser\r\ninferior a 30 días. Animales jóvenes (terneros/as) hasta\r\n200 kg: 1 mL cada 50 kg de p.v. Animales en recría\r\n(novillos y vaquillonas): 4 mL por animal como dosis total.\r\nAnimales Adultos: Vacas: 5 mL por animal como dosis\r\ntotal. Toros: 6 mL por animal como dosis total. </br>\r\nAplicar por vía subcutánea con agujas 12 x 18.\r\nSe recomienda generar reserva hepática fetal tratando\r\na las vacas con ADAPTADOR MIN en el último tercio\r\nde la gestación, evitando de esa forma las deficiencias\r\nde Cu y Zn en el ternero al pie de corta edad, al ser difícil\r\nel tratamiento en esta categoría.'),
 (5517, 408, 8, 'No posee.'),
-(5518, 408, 6, 'Frascos por 500 mL.</br>\r\nKit compuesto por 1 frasco de ADAPTADOR MIN por\r\n500 mL y 1 frasco de ADAPTADOR VIT por 500 mL.');
+(5518, 408, 6, 'Frascos por 500 mL.</br>\r\nKit compuesto por 1 frasco de ADAPTADOR MIN por\r\n500 mL y 1 frasco de ADAPTADOR VIT por 500 mL.'),
+(5519, 409, 13, 'Larvicida de uso externo (em pó)</br>\r\nPara bovinos, equinos, caprinos, ovinos e suínos.'),
+(5520, 409, 2, 'Composição: Cada 100 g contém: </br>\r\nCipermetrina ...................................2,0 g </br>\r\nClorpirifós .......................................2,0 g</br>\r\nExcipiente inerte q.s.p ................100,0 g</br>'),
+(5521, 409, 1, 'Polvilhar na ferida e ao seu redor como preventivo e curativo das bicheiras ou miíases,\r\ncausadas por Cochliomyia hominivorax, Cochliomyia macellaria, Chrysomyia bezziana,\r\nLucilia cuprina e Lucilia spp, em bovinos, ovinos, equinos, suínos e caprinos. Tem ação\r\nresidual de 10 -12 dias; repetir o tratamento se a ferida for lavada por chuva e na época\r\nde muita incidência de moscas, garantindo a cicatrização total da ferida Indicado na\r\ncastração, descorna, feridas acidentais etc.'),
+(5522, 409, 10, 'Não apresenta. '),
+(5523, 409, 9, '- Mantenha o produto fora do alcance de crianças e animais domésticos.</br>\n- Não armazenar o produto ou suas caixas junto de alimentos.</br>\n- Evitar beber, comer ou fumar durante a manipulação do produto ou o tratamento dos\nanimais.</br>\n- Sua ingestão pode provocar cefaleias, náuseas, vômitos, diarreias, lesões hepática ou\nrenal e, em casos severos, estado de colapso e/ou coma. Em caso de acidente, lavar a\npele com abundante água e sabão; no caso de contato com os olhos, lavar com água\npelo menos durante 15 minutos. Este produto contém organofosforado. Seu antídoto\né o Sulfato de Atropina. </br>'),
+(5524, 409, 16, 'ABATE: 4 dias após a última aplicação.\r\nLEITE: 4 dias após a última aplicação. '),
+(5525, 409, 6, 'Talqueiras de 350 g'),
+(5526, 410, 13, 'Larvicida de uso externo (pomada)</br>\r\nPara bovinos, equinos, caprinos, ovinos e suínos.'),
+(5527, 410, 2, 'Cada 100 g contém: </br>\r\nCipermetrina ........................................... 2,0 g </br>\r\nDiclorvos .................................................1,0 g </br>\r\nExcipiente e corantes q.s.p .................100,0 g </br>'),
+(5528, 410, 3, 'Indicado especialmente para o combate às bicheiras; tem ação residual durante 12 dias,\r\ncontra as larvas de moscas causadoras de miíases: Cochliomyia hominivorax,\r\nCochliomyia macellaria, em bovinos, equinos, suínos e caprinos. Miíases do pelo de\r\novinos, devidas ao gênero: Lucilia spp.\r\nPara o tratamento das miíases deve-se cobrir bem as cavidades e superfícies das feridas\r\ne até 2 cm de suas bordas externas. Nas feridas profundas, introduzir a pomada dentro\r\nda bicheira. Como preventivo, recomenda-se aplicar GALMETRIN®PLUS POMADA nas\r\nferidas ocasionadas por pancadas, marcação, castração, descorna, etc.\r\nO efeito residual do produto é prolongado, alcançando 12 dias. Na época de alta\r\nincidência de moscas, muita umidade e chuva, nas feridas muito extensas e sangrentas,\r\nlocalizadas nas articulações ou parte do corpo de onde a pomada possa ser eliminada,\r\nconvém repetir a aplicação, com intervalos de tempo mais curtos.\r\n'),
+(5529, 410, 9, '- Mantenha o produto fora do alcance de crianças e animais domésticos.</br>\r\n- Não armazenar o produto ou suas caixas junto de alimentos.</br>\r\n- Evitar beber, comer ou fumar durante a manipulação do produto ou o tratamento dos\r\nanimais.</br>\r\n- Sua ingestão pode provocar cefaleias, náuseas, vômitos, diarreias, lesões hepática ou\r\nrenal e, em casos severos, estado de colapso e/ou coma. Em caso de acidente, lavar a\r\npele com abundante água e sabão; no caso de contato com os olhos, lavar com água\r\npelo menos durante 15 minutos. Este produto contém organofosforado. Seu antídoto é\r\no Sulfato de Atropina. '),
+(5530, 410, 16, 'ABATE: 4 dias após a última aplicação.\r\nLEITE: 4 dias após a última aplicação.\r\n'),
+(5531, 410, 6, 'Frascos de 1 kg'),
+(5532, 411, 13, 'Larvicida de uso externo (spray)\r\nPara bovinos, equinos, caprinos, ovinos e suínos\r\n'),
+(5533, 411, 2, 'Cada 100 g contém: </br>\r\nCipermetrina .........................................2,0 g</br>\r\nDiclorvos ...............................................1,0 g</br>\r\nCorante e veículo q.s.p......................100,0 g\r\n</br>'),
+(5534, 411, 1, 'Indicado especialmente para combater as bicheiras (miíases), com ação residual\r\ndurante 12 dias, contra as larvas de mosca causadoras de miíases (Cochliomyia\r\nhominivorax). Para o tratamento de bicheiras, deve-se cobrir completamente as\r\ncavidades e superfícies das feridas, eliminando as larvas, ativando e facilitando a\r\ncicatrização.\r\n'),
+(5535, 411, 3, 'Aplicar na forma de jato o Galmetrin Plus Solução nas feridas por traumas, descorna,\r\ncastração etc. O efeito residual de Galmetrin Plus Solução é prolongado. Na época de\r\nmuita incidência de moscas, convém repetir o tratamento, com intervalos menores.\r\nApós o uso, retorne o gatilho para a posição off.'),
+(5536, 411, 9, '- Mantenha o produto fora do alcance de crianças e animais domésticos. </br>\r\n- Não armazenar o produto ou suas caixas junto de alimentos.</br>\r\n- Evitar beber, comer ou fumar durante a manipulação do produto ou o tratamento dos\r\nanimais.</br>\r\n- Sua ingestão pode provocar cefaleias, náuseas, vômitos, diarreias, lesões hepática ou\r\nrenal e, em casos severos, estado de colapso e/ou coma. Em caso de acidente, lavar a\r\npele com abundante água e sabão; no caso de contato com os olhos, lavar com água\r\npelo menos durante 15 minutos. Este produto contém organofosforado. Seu antídoto\r\né o Sulfato de Atropina'),
+(5537, 411, 16, 'ABATE: 4 dias após a última aplicação. </br>\r\nLEITE: 4 dias após a última aplicação.\r\n'),
+(5538, 411, 6, 'Frasco com 500 mL. ');
 
 -- --------------------------------------------------------
 
@@ -4544,12 +4571,12 @@ INSERT INTO `tbl_tag` (`id`, `name`, `count`, `user_id`) VALUES
 (5, 'inmunización', -14, 0),
 (6, 'Fiebre', -22, 0),
 (7, 'Aftosa.', -7, 0),
-(8, 'Indicaciones', 323, 0),
-(9, 'Composición', 333, 0),
-(10, 'Dosis y via de administración', 320, 0),
+(8, 'Indicaciones', 325, 0),
+(9, 'Composición', 336, 0),
+(10, 'Dosis y via de administración', 322, 0),
 (11, 'Esquema de vacunación sugerido', 50, 0),
 (12, 'Conservación', 84, 0),
-(13, 'Presentación', 281, 0),
+(13, 'Presentación', 284, 0),
 (14, 'Vacuna', -97, 0),
 (15, 'queratoconjuntivitis infecciosa bovina', -6, 0),
 (16, 'Herpesvirus bovino', -7, 0),
@@ -4571,7 +4598,7 @@ INSERT INTO `tbl_tag` (`id`, `name`, `count`, `user_id`) VALUES
 (32, 'prevención', -70, 0),
 (33, 'Hemoglobinuria', -5, 0),
 (34, 'Bacilar', -6, 0),
-(35, 'bovinos', -245, 0),
+(35, 'bovinos', -244, 0),
 (36, 'Mancha', -15, 0),
 (37, 'Gangrena', -5, 0),
 (38, 'Enterotoxemia', -9, 0),
@@ -4607,15 +4634,15 @@ INSERT INTO `tbl_tag` (`id`, `name`, `count`, `user_id`) VALUES
 (68, 'rabia paresiante', -8, 0),
 (69, 'bovinos.', -2, 0),
 (70, 'tag1', 0, 0),
-(71, 'Contraindicaciones', 26, 0),
+(71, 'Contraindicaciones', 27, 0),
 (72, 'Antiparasitario', -121, 0),
 (73, 'externo', -111, 0),
 (74, 'pour-on', -31, 0),
 (75, 'Fluazurón', -8, 0),
 (76, 'benzoilfenilureas', -8, 0),
 (77, 'garrapata', -8, 0),
-(78, 'Antiparasitarios Externos', -46, 0),
-(79, 'Precauciones', 43, 0),
+(78, 'Antiparasitarios Externos', -43, 0),
+(79, 'Precauciones', 46, 0),
 (80, 'Periodo de retiro', 247, 0),
 (81, 'rabia', -6, 0),
 (82, 'canina', -6, 0),
@@ -4666,7 +4693,7 @@ INSERT INTO `tbl_tag` (`id`, `name`, `count`, `user_id`) VALUES
 (127, 'antimiásico', -5, 0),
 (128, 'pomada', -4, 0),
 (129, 'antimiásica', -13, 0),
-(130, 'equinos', -52, 0),
+(130, 'equinos', -51, 0),
 (131, 'antimicrobiano', -7, 0),
 (132, 'cicatrizante', -7, 0),
 (133, 'aerosol', -7, 0),
@@ -4683,7 +4710,7 @@ INSERT INTO `tbl_tag` (`id`, `name`, `count`, `user_id`) VALUES
 (144, 'Endectocidas', -31, 0),
 (145, 'garrapaticida.', 1, 0),
 (146, 'vitaminizada.', 0, 0),
-(147, 'Descripción', 19, 0),
+(147, 'Descripción', 22, 0),
 (148, 'garrapatas', -24, 0),
 (149, 'ovinos. Solución inyectable', -6, 0),
 (150, 'Doramectina', -6, 0),
@@ -4825,10 +4852,10 @@ INSERT INTO `tbl_tag` (`id`, `name`, `count`, `user_id`) VALUES
 (286, 'líquido emulsionable', -7, 0),
 (287, 'CIPERSIN', -4, 0),
 (288, 'GALMETRIN PLUS POLVO', -6, 0),
-(289, 'GALMETRIN', -20, 0),
+(289, 'GALMETRIN', -19, 0),
 (290, 'PLUS', -16, 0),
 (291, 'GALMETRINPLUS', -6, 0),
-(292, 'GALMETRIN PLUS POMADA', -6, 0),
+(292, 'GALMETRIN PLUS POMADA', -5, 0),
 (293, 'GALMETRIN PLUS SOLUCIÓN', -6, 0),
 (294, 'GARRAMIX', 3, 0),
 (295, 'GALMETRIN PLUS SPRAY', -8, 0),
@@ -4914,7 +4941,7 @@ INSERT INTO `tbl_tag` (`id`, `name`, `count`, `user_id`) VALUES
 (375, 'code', 2, 0),
 (376, 'test', 0, 0),
 (377, 'Argentina', 59, 0),
-(378, 'Brasil', 32, 0),
+(378, 'Brasil', 35, 0),
 (379, 'pru', 0, 0),
 (380, 'AFTOGEN® ÓLEO', -8, 0),
 (381, 'BIOLÓGICO', -8, 0),
@@ -5111,7 +5138,7 @@ INSERT INTO `tbl_tag` (`id`, `name`, `count`, `user_id`) VALUES
 (572, 'garrota', 0, 0),
 (573, 'ivergen platinum', 2, 0),
 (574, 'bagomectina equina', 1, 0),
-(575, 'Instrucciones de uso', 7, 0),
+(575, 'Instrucciones de uso', 10, 0),
 (576, 'Seguridad', 4, 0),
 (577, 'estretopendiben 5.000.000 u.i.', 1, 0),
 (578, 'solvente', 1, 0),
@@ -5552,7 +5579,11 @@ INSERT INTO `tbl_tag` (`id`, `name`, `count`, `user_id`) VALUES
 (1013, 'Paraguay', 1, 0),
 (1014, 'suplemento mineral de cobre', 3, 0),
 (1015, 'manganeso', 3, 0),
-(1016, 'selenio', 3, 0);
+(1016, 'selenio', 3, 0),
+(1017, 'antiparatsitarios externos', 1, 0),
+(1018, 'galmetrin plus po', 1, 0),
+(1019, 'larvicina', 1, 0),
+(1020, 'larvicina de uso externo', 1, 0);
 
 -- --------------------------------------------------------
 
@@ -10998,7 +11029,43 @@ INSERT INTO `tbl_tag_producto` (`id`, `tag_id`, `producto_id`) VALUES
 (101931, 8, 408),
 (101932, 533, 408),
 (101933, 80, 408),
-(101934, 13, 408);
+(101934, 13, 408),
+(102013, 1017, 409),
+(102014, 1018, 409),
+(102015, 35, 409),
+(102016, 130, 409),
+(102017, 78, 409),
+(102018, 378, 409),
+(102019, 147, 409),
+(102020, 9, 409),
+(102021, 8, 409),
+(102022, 71, 409),
+(102023, 79, 409),
+(102024, 575, 409),
+(102025, 13, 409),
+(102083, 1019, 410),
+(102084, 78, 410),
+(102085, 292, 410),
+(102086, 78, 410),
+(102087, 378, 410),
+(102088, 147, 410),
+(102089, 9, 410),
+(102090, 10, 410),
+(102091, 79, 410),
+(102092, 575, 410),
+(102093, 13, 410),
+(102162, 289, 411),
+(102163, 78, 411),
+(102164, 1020, 411),
+(102165, 78, 411),
+(102166, 378, 411),
+(102167, 147, 411),
+(102168, 9, 411),
+(102169, 8, 411),
+(102170, 10, 411),
+(102171, 79, 411),
+(102172, 575, 411),
+(102173, 13, 411);
 
 -- --------------------------------------------------------
 
@@ -11748,7 +11815,7 @@ ALTER TABLE `tbl_establecimiento`
 -- AUTO_INCREMENT de la tabla `tbl_imagen_ref`
 --
 ALTER TABLE `tbl_imagen_ref`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=633;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=637;
 --
 -- AUTO_INCREMENT de la tabla `tbl_metatag`
 --
@@ -11788,12 +11855,12 @@ ALTER TABLE `tbl_ppartes_regionalizacion`
 -- AUTO_INCREMENT de la tabla `tbl_producto`
 --
 ALTER TABLE `tbl_producto`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=409;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=412;
 --
 -- AUTO_INCREMENT de la tabla `tbl_producto_contenido`
 --
 ALTER TABLE `tbl_producto_contenido`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5519;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5539;
 --
 -- AUTO_INCREMENT de la tabla `tbl_producto_partes`
 --
@@ -11823,12 +11890,12 @@ ALTER TABLE `tbl_seccion_regionalizacion`
 -- AUTO_INCREMENT de la tabla `tbl_tag`
 --
 ALTER TABLE `tbl_tag`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1017;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1021;
 --
 -- AUTO_INCREMENT de la tabla `tbl_tag_producto`
 --
 ALTER TABLE `tbl_tag_producto`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=101935;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=102174;
 --
 -- AUTO_INCREMENT de la tabla `tbl_textos`
 --
