@@ -201,7 +201,7 @@
 					
 						<img class="icn-ubicacion" src="<?php echo Yii::app()->request->baseUrl; ?>/img/icn-vacunas.png">
 					
-						<p style="margin-bottom:0;" id="nom-ref"> NAFMDVD</p>  <p style="font-size: 10px; padding-left: 18px;margin-bottom: 0px;"><?php echo Textos::model()->GetText(461); ?>  </p>  <p  style="font-size: 10px; padding-left: 18px;"><?php echo Textos::model()->GetText(462); ?> </p>
+						<p style="margin-bottom:0;" id="nom-ref"><?php echo Textos::model()->GetText(504); ?>  </p>  <p style="font-size: 10px; padding-left: 18px;margin-bottom: 0px;"><?php echo Textos::model()->GetText(462); ?>  </p>  <p  style="font-size: 10px; padding-left: 18px;">
 						
 					</div> <!-- Termina cada referencia -->
 					
@@ -670,7 +670,7 @@
 			
 					<h2 id="titulo-info-mapa"><img class="band-filiales" src="<?php echo Yii::app()->request->baseUrl; ?>/img/banderitas-01.png"/> Argentina </h2>
 	
-						<p id="sub-filiales"  class="h4-fil bio" >Casa Matriz Argentina</p>	
+						<p id="sub-filiales"  class="h4-fil bio" ><?php echo Textos::model()->GetText(505); ?></p>	
 						
 						<p  id="sub-filiales" class="h4-fil">Ruta Panamericana Km 38,5, Garín <br />Prov. de Bs. As. Argentina </p>
 						
@@ -1482,19 +1482,21 @@
 				<!-- TEXTO-->
 				<div id="whiteFiller"style="background-color:white;position:absolute;width:100%;height:400px;z-index:2;top:226px;"></div>
 				<div style="width:100%;position:relative;z-index:4; height: 100px;">
-				<p class="p-rrhh-home" style="width:50%;display:inline-block;margin:0;padding:0;" ><?php echo Textos::model()->GetText(112); ?></p>
+
+
+				<p class="p-rrhh-home" style="width:50%;display:inline-block;margin:0;padding:0; position: relative;" ><?php echo Textos::model()->GetText(112); ?></p>
 
 
 				<!-- ESTOS SON LOS TEXTOS QUE TIENE QUE APARECER Y DESAPARECCER EN RRHH DE LA HOME !-->
 
-				<ul  class="colg-lg-10" style="font-size: 13px; text-align: center; color: #359fbd;    width: 65%;  margin: auto; margin-top: 10px;" id="ul-rrhh-home" style="position:absolute;">
+				<ul  class="colg-lg-10" style="font-size: 15px; text-align: center; color: #359fbd;    width: 50%;  margin: auto; margin-top: 40px;" id="ul-rrhh-home" style="position:relative;">
 				
 					<li><?php echo Textos::model()->GetText(483); ?></li>
 				   <li><?php echo Textos::model()->GetText(484); ?></li>
 				   <li><?php echo Textos::model()->GetText(485); ?></li>
 				   <li><?php echo Textos::model()->GetText(486); ?></li>
 				   <li><?php echo Textos::model()->GetText(487); ?></li>
-				   <li style="line-height:17px;"><?php echo Textos::model()->GetText(488); ?></li>
+				   <li style="line-height:18px; margin-top: 8px;"><?php echo Textos::model()->GetText(488); ?></li>
 				</ul>
 
 				<!-- HASTA ACA !-->

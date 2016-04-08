@@ -7,7 +7,7 @@
 <?php $meses = array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"); ?>
 
 			<div class="header-layout-aftosa col-lg-12 col-md-12 col-sm-12 col-xs-12">
-				<div style="width:100%;position:absolute;"><h1 class="titulo-layout-aftosa" style="">RSE</h1></div>
+				<div style="width:100%;position:absolute;"><h1 class="titulo-layout-aftosa" style=" text-transform: uppercase;"><?php echo Textos::model()->GetText(431); ?></h1></div>
 				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/rse-oscura-01.png" style="width:100vw;" />	
 			</div>
 	
