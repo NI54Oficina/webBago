@@ -721,7 +721,7 @@
 						<p>gmoro@ciavet.com.py</p>				
 
 						<!-- LINEA SEPARADORA-->						
-						<div id="separador"></div>
+						<div id="separador-mayor"></div>
 						<p id="sub-filiales"  class="h4-fil bio" >Agroveterinaria Consult-Pec S.R.L.</p>
 						<p  id="sub-filiales" class="h4-fil">José D. López 200 c/teófilo Del Puerto, Asunción, Paraguay</p>				
 

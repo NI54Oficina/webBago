@@ -12,7 +12,9 @@
 		<div class="side-title">
 			
 			<div style="display:inline-block;">
-				<h2  class="h2-aftosa"><?php echo Textos::model()->GetText(347); ?></h2>	
+				<h2  class="h2-aftosa">
+					
+				</h2>	
 				<div id="barra-institucional"></div>
 			</div>
 			
