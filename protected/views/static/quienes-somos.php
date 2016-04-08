@@ -42,8 +42,13 @@
 			
            <h2 class="h2-aftosa" style="color:#02204C;"><?php echo Textos::model()->GetText(38); ?></h2>
            
-<div class="captchaContainer"><?php $this->widget('CCaptcha'); ?></div>
+
 		   <!-- CONTENIDO -->
+
+
+
+
+
            <p style="margin-top:1%;"><?php echo Textos::model()->GetText(39); ?></p>
            
 		   <!-- CUADRO -->

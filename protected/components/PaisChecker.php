@@ -19,6 +19,14 @@ class PaisChecker extends CApplicationComponent
 			$initUrl=substr($initUrl,1);
 		
 			$currentUrl=str_replace($webRoot,"",$initUrl);
+			/*if(!ctype_lower($currentUrl)){
+				$currentUrl=strtolower($currentUrl);
+				$toGo=$_SERVER['SERVER_NAME']."/".$webRoot.$currentUrl."/";
+				$toGo= str_replace("//","/",$toGo);
+				header("Location: http://".$toGo);
+				exit();
+			}*/
+			
 			$firstArg="";
 			if(strlen($currentUrl)>1){
 			
