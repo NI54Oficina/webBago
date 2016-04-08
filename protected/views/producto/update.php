@@ -110,11 +110,11 @@ $this->menu=array(
 <?php
 $id= $model->id;
 $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"id DESC"));
-
+	if($imagen){
 	?>
 	<img style="max-width:400px;max-height:400px;"src="<?php echo Yii::app()->getBaseUrl(true); ?>/imagen/view/<?php echo $imagen->id; ?>"><hr>
 	<?php
-
+	}	
 ?>
 			
 			<input type="text" class="required" name="Producto[imagen]" value="<?php echo $imagen->id; ?>" id="image_id" style="opacity:0;position:absolute;left:-999999px;">
