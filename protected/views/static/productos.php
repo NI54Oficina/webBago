@@ -199,8 +199,23 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 paises-registrados"  >
 
 			<div style=" width: 130px; ">
-              
-              <div >
+			
+			<?php 
+				$registros= RelRegistros::model()->findAllByAttributes(array('idProducto'=>$data->id));
+				if($registros){
+				foreach($registros as $registro){
+				$nombrePais=Pais::model()->findByPk($registro->idPais)->nombre; 
+			?>
+				<div >
+				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/<?php echo $nombrePais; ?>.png" class="imagen-pais" align="left" />
+				<p class="nombre-pais" align="center;" ><?php echo $nombrePais; ?></p>
+              </div>
+			<?php
+				}
+			}
+			?>
+              </div>
+              <!--<div >
               <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/argentina.png" class="imagen-pais" align="left" />
               <p class="nombre-pais" align="center;" >Argentina</p>
               </div>
@@ -215,7 +230,7 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
              <p class="nombre-pais">Brasil	</p>		
              </div>
 
-			 </div>
+			 </div>!-->
 
 
 
