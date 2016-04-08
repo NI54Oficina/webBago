@@ -111,7 +111,7 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 	
 		<p id="compartido"><?php echo Textos::model()->GetText(452); ?></p>
  		<p style="text-align:center;width:15%;margin:auto;margin-top:-2%; margin-bottom: 5px;" ></p>
- 		<p id="barra-superior-<?php echo $normalizado; ?>" class="col-xs-hidden col-sm-hidden"></p>
+ 		<p id="barra-superior-<?php echo $normalizado; ?>" class="hidden-xs hidden-sm"></p>
   		
   		<div id="barra-xs">
 			
@@ -141,7 +141,7 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 		<!--<p id="registrado"><?php echo Textos::model()->GetText(453);?></p>
 		<p id="barra-media-<?php echo $normalizado; ?>"></p>!-->
 		
-			<div id="targets-mobile" >
+			<div id="targets-mobile"  class="col-sm-12 col-xs-12">
 					<?php
 					$target= $data->target;
 					if($target[0]!=0){
@@ -198,7 +198,7 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 					?>
 					</div>
 
-		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 paises-registrados"  >
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 paises-registrados" style="display:none;" >
 
 			<div style=" width: 130px; ">
 			
@@ -239,13 +239,13 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 
 		</div>
 
-		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="contacto-mobile">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="contacto-mobile" style="padding-top:10px;">
 			
-			<a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//<?php echo $_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI']; ?>" class="col-lg-3 col-md-3 col-sm-6 col-xs-6 facebook" >
+			<a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//<?php echo $_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI']; ?>" class=" facebook"  style="width:40px;height:40px;">
 				
 			</a>
 			
-			<a class="col-lg-3 col-md-3 col-sm-6 col-xs-6 mail" >
+			<a class=" mail" style="width:40px;height:40px;">
 			</a>
 		</div>
 	</div>
