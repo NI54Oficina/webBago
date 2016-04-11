@@ -27,7 +27,7 @@ $(function() {
     //Close Dialogbox
     $(".closelink").click(function() {
 		showingBox=false;
-        $(this).closest(".box").remove();
+        $(this).closest(".box").fadeOut();
     });
 
 });
