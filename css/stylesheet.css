@@ -8763,3 +8763,20 @@ position:fixed;
     opacity: 1;
   }
 }
+
+
+.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
+    background-color: transparent;
+}
+
+
+.openlink{
+	color: #337ab7;
+		transition:all 0.3s ease;
+}
+
+.openlink:hover{
+	color: #034A74;
+	transition:all 0.3s ease;
+}
+
