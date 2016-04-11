@@ -121,7 +121,7 @@ $auxId=0;
 </div>
 
 
-<h2 class="titulo-vad titulo-<?php echo $normalizado; ?>"><?php echo $nombre; ?></h2>
+<h2 class="titulo-vad titulo-<?php echo $normalizado; ?>"><?php echo Textos::model()->GetText(506); ?></h2>
 
 <a href="<?php echo Yii::app()->getBaseUrl(true); ?>" onclick="goBack()" ><div class=" col-lg-3 col-md-3 col-sm-12 col-xs-12 volver hidden-sm hidden-xs">
 <p><?php echo Textos::model()->GetText(490); ?> </p>
