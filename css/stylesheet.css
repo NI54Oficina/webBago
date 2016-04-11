@@ -8740,3 +8740,26 @@ position:fixed;
  
 
 }
+
+#widget-animacion .item{
+	opacity:0;
+}
+
+@-webkit-keyframes fade-in-item {
+  0% {
+    display: block;
+    opacity: 0;
+  }
+  30% {
+    display: block;
+    opacity: .5;
+  }
+  60% {
+    display: block;
+    opacity: .8;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}

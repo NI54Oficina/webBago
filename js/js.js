@@ -488,3 +488,21 @@ if ($(this).scrollTop() >3850){
 	$('.move-x').css('animation','myfirst 3s ease-out forwards');
 
 }});
+
+
+
+$(window).scroll(function() {
+
+if ($(this).scrollTop() >200){  
+	$('.item.i01').css('animation','fade-in-item 1s .2s ease-out forwards');
+	$('.item.i02').css('animation','fade-in-item 1s .6s ease-out forwards');
+	$('.item.i03').css('animation','fade-in-item 1s 1s ease-out forwards');
+	$('.item.i04').css('animation','fade-in-item 1s 1.4s ease-out forwards');
+	$('.item.i05').css('animation','fade-in-item 1s 1.8s ease-out forwards');
+	$('.item.i06').css('animation','fade-in-item 1s 2.2s ease-out forwards');
+	$('.item.i07').css('animation','fade-in-item 1s 2.6s ease-out forwards');
+	$('.item.i08').css('animation','fade-in-item 1s 3s ease-out forwards');
+
+}});
+
+
