@@ -8734,5 +8734,9 @@ position:fixed;
 
 @media screen and (max-width: 435px){
 	.salud-animal{line-height: 50px !important; font-size: 40px !important;}
+	 .laevolucion{
+	font-size: 30px;
+ }
+ 
 
 }
