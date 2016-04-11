@@ -26,7 +26,7 @@
 						
 								<!-- 	QUIÉNES SOMOS -->
 								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional" hid="1" id="inst-quienes">
-									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/quienes-somos " target="_blank">	
+									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/quienes-somos " >	
 										<canvas class="" id="myCanvas" height="90px" width="100%"></canvas>
 										<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home-quienes.png" />
 										<div class="plus-container"><span  class=" glyphicon glyphicon-plus"></span></div>
@@ -40,7 +40,7 @@
 								
 								<!--	MISIÓN, VISIÓN Y VALORES -->
 								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional" hid="1" id="inst-mision">
-									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/mision-vision" target="_blank">
+									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/mision-vision" >
 										<canvas class="" id="myCanvas" height="90px" width="100%"></canvas>
 										<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home-mision.png" />
 										<div class="plus-container"><span  class=" glyphicon glyphicon-plus"></span></div>									
@@ -51,7 +51,7 @@
 								
 								<!--	LUCHA CONTRA AFTOSA -->
 								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional" hid="1">
-									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/lucha-contra-aftosa" target="_blank">
+									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/lucha-contra-aftosa" >
 										<canvas class="" id="myCanvas" height="90px" width="100%"></canvas>
 										<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home-aftosa.png" />
 										<div class="plus-container"><span  class=" glyphicon glyphicon-plus"></span></div>
@@ -62,7 +62,7 @@
 								
 								<!--	TRAYECTORIA - HITOS -->
 								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional" hid="1">
-									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/trayectoria-hitos" target="_blank">
+									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/trayectoria-hitos">
 										<canvas class="" id="myCanvas" height="90px" width="100%"></canvas>
 										<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home-trayectoria.png" />
 										<div class="plus-container"><span  class=" glyphicon glyphicon-plus"></span></div>
@@ -77,7 +77,7 @@
 						
 								<!--	NUESTRAS PLANTAS -->
 								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional" hid="1" >
-									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/nuestras-plantas" target="_blank">
+									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/nuestras-plantas" >
 										<canvas class="" id="myCanvas" height="90px" width="100%"></canvas>
 										<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home-plantas.png" />
 										<div class="plus-container"><span  class=" glyphicon glyphicon-plus"></span></div>
@@ -89,7 +89,7 @@
 								<?php if($_SESSION["lng"]!="pt"){ ?>
 								<!--	RSE - SUSTENTABILIDAD -->
 								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional" hid="1" >
-									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/rse" target="_blank">
+									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/rse" >
 										<canvas class="" id="myCanvas" height="90px" width="100%"></canvas>
 										<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home-rse.png" />	
 										<div class="plus-container"><span  class=" glyphicon glyphicon-plus"></span></div>									
@@ -102,7 +102,7 @@
 								<?php if($_SESSION["lng"]=="es"){ ?>
 								<!-- 	INFO PARA PROVEEDORES -->
 								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional" hid="1" >
-									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/proveedores" target="_blank">
+									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/proveedores">
 										<canvas class="" id="myCanvas" height="90px" width="100%"></canvas>
 										<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home-proveedores.png" />
 										<div class="plus-container"><span  class=" glyphicon glyphicon-plus"></span></div>
@@ -115,7 +115,7 @@
 								<!--	PRENSA -->
 								<?php if($_SESSION["lng"]=="es"){ ?>
 								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional" hid="1">
-									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/prensa" target="_blank">
+									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/prensa">
 										<canvas class="" id="myCanvas" height="90px" width="100%"></canvas>
 										<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home-prensa.png" />	
 										<div class="plus-container"><span  class=" glyphicon glyphicon-plus"></span></div>

@@ -6642,7 +6642,7 @@ figure.snip1156:hover .salud-ambiental{
 	}
   
 
- @media screen and (max-width: 414px){
+ @media screen and (max-width: 435px){
 
  	.tr, .tr-2{ color:#0C5582 !important; }
     
@@ -7235,7 +7235,7 @@ figure.snip1156 .d-a-2 h2{
 	background-color: rgba(0, 0, 0, 0.3);
 }
 
-@media screen and (max-width:414px){
+@media screen and (max-width:435px){
 
 	#descripcion {height: auto !important;}
 
@@ -8729,5 +8729,10 @@ position:fixed;
 #epigrafe-mobile{ text-align: center; }
 #epigrafe-mobile img {padding-right: 135px; }
 
+
+}  
+
+@media screen and (max-width: 435px){
+	.salud-animal{line-height: 50px !important; font-size: 40px !important;}
 
 }
