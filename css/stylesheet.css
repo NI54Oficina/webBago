@@ -390,7 +390,6 @@ font-size: 22px;
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: auto auto;
-		margin-top: 15%;
 	-webkit-transition: all 1s ease;
 		-moz-transition: all 1s ease;
 		-o-transition: all 1s ease;
@@ -413,7 +412,7 @@ font-size: 22px;
 		margin-top: 2.5%;
 		margin-left: 120px;
 		color: #B2B2B2;
-		font-size: 17px;
+		font-size: 17px !important;
 		font-family: 'arialregular';
 	-webkit-transition: all 1s ease;
 		-moz-transition: all 1s ease;
@@ -5143,12 +5142,11 @@ figure.snip1156:hover .salud-ambiental{
 	}
 	
 	.volver-mobile {
-    background-image: url(../img/volver-desactivado.png);
+    background-image: url(../img/volver-desactivado.png);    
     height: 42px;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 5%;
-    margin-top: 15%;
+    background-size: 7%;
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
     -o-transition: all 1s ease;
@@ -5250,8 +5248,7 @@ figure.snip1156:hover .salud-ambiental{
     height: 42px;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 5%;
-    margin-top: 15%;
+    background-size: 10%;
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
     -o-transition: all 1s ease;
@@ -6644,6 +6641,13 @@ figure.snip1156:hover .salud-ambiental{
 		color:#666;
 	}
   
+
+ @media screen and (max-width: 414px){
+
+ 	.tr, .tr-2{ color:#0C5582 !important; }
+    
+
+ }
 	.navbar-collapse.collapse{
 		display:none !important;
 		visibility:hidden !important;
@@ -6940,8 +6944,8 @@ figure.snip1156 .d-a-2 h2{
     height: 42px;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 5%;
-    margin-top: 15%;
+    background-size: 10%;
+    
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
     -o-transition: all 1s ease;
@@ -7296,13 +7300,13 @@ figure.snip1156 .d-a-2 h2{
 		padding-left: 0;
 	}
 	#descripcion {height: auto !important;border:none;}
+
 	.volver-mobile {
     background-image: url(../img/volver-desactivado.png);
     height: 42px;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 5%;
-    margin-top: 15%;
+    background-size: 7%;
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
     -o-transition: all 1s ease;

@@ -1497,8 +1497,8 @@
 				
 				<!-- TEXTO-->
 				<!-- TEXTO HEADER-->
-							<h3  class="tr move-x-1"><?php echo Textos::model()->GetText(110); ?></h3>
-							<h4 class="tr-2  move-x-2"><?php echo Textos::model()->GetText(478); ?></h4>
+							<h3 id="text-1" class="tr move-x-1"><?php echo Textos::model()->GetText(110); ?></h3>
+							<h4  id="text-2" class="tr-2  move-x-2"><?php echo Textos::model()->GetText(478); ?></h4>
 							
 							<a href="http://biogenesisbago.zonajobs.com.ar/" target="_blank" style="display:inline-block;"><div class="send-rrhh" style="color:white;border-radius: 5px;"><?php echo Textos::model()->GetText(111); ?></div></a>
 							
@@ -1539,7 +1539,7 @@
 				
 				<!-- ////////// TITULO ////////////// -->
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="display:inline-block;">
-					<h1 id="contacto" style="margin:0;padding-top: 45px;"><div id="cont-h1"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-bullet--.png"/> <?php echo Textos::model()->GetText(113); ?><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-bullet--.png" /></div></h1>
+					<h1 id="contacto" style="margin:0;padding-top: 45px;"><div id="cont-h1"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-bullet--.png"/> <?php echo Textos::model()->GetText(113);?> <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-bullet--.png" /></div></h1>
 					<!--<img style="width: 100%;position:relative;" class="hidden-lg hidden-md" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-home-abajo.png" alt="" />!-->
 					<img style="width: 100%;position:relative;top:-2px;" class="" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-home-abajo.png" alt="" />
 				</div>
