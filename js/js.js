@@ -28,8 +28,11 @@ $(function() {
     $(".closelink").click(function() {
 		showingBox=false;
         $(this).closest(".box").fadeOut();
+		
     });
 
+	
+	
 });
 
 $(function(){
