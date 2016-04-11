@@ -72,7 +72,7 @@ if($idSeccion==1&&Yii::app()->session['pais']==17){
 
 $productos =Producto::model()->findAllByAttributes(array('seccion'=>$data->id,"pais"=>$pais));;
 
-if($pais=17){
+if($pais==17){
 	$pais=8;
 }
 

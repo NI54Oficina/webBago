@@ -1360,7 +1360,7 @@
 							<p id="p-3"><?php echo  $primeraRevista->bajada; ?></p>
 		
 							<div class="btn-">
-								<a href="<?php echo Yii::app()->request->baseUrl; ?>/elmolino/<?php echo $primeraRevista->numero; ?>" target="_blank"><button type="button" id="btn-rev">Leer revista</button></a>
+								<a href="<?php echo Yii::app()->request->baseUrl; ?>/elmolino/<?php echo $primeraRevista->numero; ?>/index.html" target="_blank"><button type="button" id="btn-rev">Leer revista</button></a>
 							</div> <!--Termina btn-->
 		
 						</div> <!--Temrina info revista -->
@@ -1409,7 +1409,7 @@
 								<!-- ITEM REVISTA-->
 								<li id="revista-<?php echo $revista->id; ?>" class="col-lg-4 col-md-2 col-sm-2 col-xs-4 revista-slider-240">
 									
-									<a href="<?php echo Yii::app()->request->baseUrl; ?>/elmolino/<?php echo $revista->numero; ?>" target="_blank">
+									<a href="<?php echo Yii::app()->request->baseUrl; ?>/elmolino/<?php echo $revista->numero; ?>/index.html" target="_blank">
 									<!-- img -->
 									<div class="rev-30"> </div> 
 								

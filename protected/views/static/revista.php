@@ -33,9 +33,14 @@
 	
 		<?php
 					foreach($notas as $nota){
-				
+						if($nota->numero==30||$nota->numero==29||$nota->numero==28){
+							$link= Yii::app()->request->baseUrl."/elmolino/".$nota->numero."/index.html";
+						}else{
+							$link= Yii::app()->request->baseUrl."/uploads/molino/pdf/revista-".$nota->numero.".pdf";
+						}
+					
 				?>
-<a href="<?php echo Yii::app()->request->baseUrl; ?>/uploads/molino/pdf/revista-<?php echo $nota->numero; ?>.pdf" target="_blank">
+<a href="<?php echo $link; ?>" target="_blank">
 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 "  style="display:inline-block;text-align: center;" >
 					
 			<div class="container-nota-revista revista-fondo " style="border: 1px solid #359FBD;box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.45);width: 98%; display:inline-block;text-align: left;margin-bottom: 20px;">
@@ -64,7 +69,7 @@
 						
 							<div class="col-lg-12 col-md-12 col-sm-12" style="padding-top: 1%;background: #359FBD;">
 
-								<a style="margin-left: -8px;" class="leer-infotec-noticias" href="<?php echo Yii::app()->request->baseUrl; ?>/uploads/molino/pdf/revista-<?php echo $nota->numero; ?>.pdf" target="_blank"> Leer  más</a>
+								<a style="margin-left: -8px;" class="leer-infotec-noticias" href="<?php echo $link; ?>" target="_blank"> Leer  más</a>
 
 
 							</div>
