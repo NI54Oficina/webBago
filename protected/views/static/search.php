@@ -127,9 +127,7 @@ $auxId=0;
 <p><?php echo Textos::model()->GetText(490); ?> </p>
 </div></a>
 
-<a href="<?php echo Yii::app()->getBaseUrl(true); ?>"><div class=" col-lg-3 col-md-3 col-sm-12 col-xs-12 volver-mobile hidden-lg hidden-md">
-<p>Volver</p>
-</div></a>
+
 
 
 <div  class=" col-lg-9 col-md-9 col-sm-12 col-xs-12" style="display:inline-block;text-align:center;"  id="vademecum-loading">
