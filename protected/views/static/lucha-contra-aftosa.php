@@ -4,12 +4,14 @@
 				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/lucha-aftosa-oscura-01.png" style="width:100vw;" />	
 			</div>
 	
+<script src="<?php echo Yii::app()->getBaseUrl(true); ?>/js/jquery.boxloader.min.js"></script>	
 
+<div id="lucha-transicion">
 	<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 	<div class="side-title">
 		<div style="display:inline-block;">
 		<h2  class="h2-aftosa"><?php echo Textos::model()->GetText(347); ?></h2>	
-		<div id="barra-institucional""></div>
+		<div id="barra-institucional"></div>
 		</div>
 	</div>
 	</div>
@@ -99,5 +101,18 @@
 
 </div>	
 
-	
+</div>
 <?php include('widget.php'); ?>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+		$("#lucha-transicion").boxLoader({
+			direction:"x",
+			position: "-50%",
+			effect: "fadeIn",
+			duration: "3s",
+			windowarea: "50%"
+		}); 
+		
+		});
+	</script>

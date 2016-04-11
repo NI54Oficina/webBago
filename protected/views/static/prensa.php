@@ -6,6 +6,8 @@
 <?php }else{ ?>
 <?php $meses = array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"); ?>
 
+<script src="<?php echo Yii::app()->getBaseUrl(true); ?>/js/jquery.boxloader.min.js"></script>	
+
 			<div class="header-layout-aftosa col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
 				<div style="width:100%;position:absolute;"><h1 class="titulo-layout-aftosa" style=""><?php echo Textos::model()->GetText(20); ?></h1></div>
@@ -13,7 +15,7 @@
 
 			</div>
 			
-			
+<div id="prensa-transicion">			
 	<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 		<div class="side-title">
 			<div style="display:inline-block;">
@@ -68,6 +70,20 @@
 
 </div>
 
+</div>
+	<script type="text/javascript">
+		$(document).ready(function(){
+		$("#prensa-transicion").boxLoader({
+			direction:"x",
+			position: "-50%",
+			effect: "fadeIn",
+			duration: "3s",
+			windowarea: "50%"
+		}); 
+		
+		});
+	</script>
+	
 <?php include('widget.php'); ?>
 
 <?php } ?>

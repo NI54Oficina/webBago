@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-04-2016 a las 16:06:50
+-- Tiempo de generación: 11-04-2016 a las 15:25:59
 -- Versión del servidor: 10.1.9-MariaDB
 -- Versión de PHP: 5.5.30
 
@@ -120,19 +120,19 @@ INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (80, 'Vacunas más consistentes y efectivas', 'More consistent and effective vaccines', 'Vacinas mais consistentes e eficazes'),
 (81, 'Construimos una planta modelo, única por su tecnología y capacidad de producción. Con introducción de equipamiento de última generación, evolucionamos en nuevos sistemas de  producción, concentración y purificación de antígenos que, combinados con adyuvantes específicos, nos permiten formular las vacunas más potentes y eficaces.', 'We built a model manufacturing plant, unique because of its technology and production capability.  With the addition of next-generation equipment, we have been able to evolve in our new production systems, concentration and purification of antigens which, combined with specific adjuvants, allow us to formulate more potent and efficient vaccines.  ', 'Construímos uma planta modelo, única por sua tecnologia e capacidade de   produção. Com introdução de equipamentos de última geração, evoluímos em   sistemas de produção, concentração e purificação de antígenos que,   combinados com adjuvantes específicos, nos permitiram formular vacinas mais   potentes e eficazes.'),
 (82, 'Además de los métodos convencionales desarrollamos y patentamos una nueva tecnología de cultivo celular y de producción viral, para asegurar mayor calidad y  cantidad de antígenos en cada una de nuestras vacunas.', 'Furthermore, apart from conventional methods, we have developed and patented new technology in cell cultures and viral production, in order to ensure better quality and more quantity of antigens in each of our vaccines.  ', 'Além dos métodos convencionais desenvolvemos e patenteamos uma nova  tecnologia de cultivo celular e de produção viral, para garantir maior qualidade   e quantidade de antígenos em cada uma de nossas vacinas.'),
-(83, '•	<strong><font color="#26CBD4" >Unidad de producción de Vacuna contra la Fiebre Aftosa: </font></strong>200 millones de dosis anuales, bajo las más altas  normas de bioseguridad, nivel 4 (NBS 4 OIE).', '•	<strong><font color="#26CBD4" >Vaccine against Foot and Mouth Disease Production Unit:</font></strong> 200 million annual doses, under the highest biosafety norms, level 4 (NBS OIE).', '•	<strong><font color="#26CBD4" >Unidade de produção de Vacinas contra Febre Aftosa: </font></strong>200 milhões  de doses anuais, sob as mais rigorosas normas de biossegurança, nível   4 (NBS 4 OIE).'),
-(84, '•	<strong><font color="#26CBD4" >Unidad de producción de Biológicos ViBa:</font></strong> 100 millones de dosis anuales de vacuna combinada, destinadas a la prevención de enfermedades virales y bacterianas, bajo niveles de Bioseguridad 2 y 2+. ', '•	<strong><font color="#26CBD4" >Biological ViBa Production Unit:</font></strong> 100 million annual doses of the combined vaccine, destined to prevent viral and bacterial diseases, under biosafety levels 2 and 2+.  ', '•	<strong><font color="#26CBD4" >Unidade de produção de Biológicos ViBa:</font></strong>100 milhões de doses  anuais de vacina combinada, destinadas na prevenção de doenças   virais e bacterianas, sob níveis de segurança de biossegurança 2 e 2+.'),
-(85, '•	<strong><font color="#26CBD4" >Unidad de producción de Vacuna Antirrábica para bovinos, caninos y felinos:  </font></strong> 30 millones de dosis anuales,  elaboradas bajo niveles de bioseguridad 3 y  normas específicas de la OIE.', '•	<strong><font color="#26CBD4" >Dogs and Cats Rabies Vaccine Production Unit:</font></strong> 30 million annual doses, elaborated under biosafety level 3 and specific OIE norms.', '•	<strong><font color="#26CBD4" >Unidade de produção de Vacinas Antirrábicas para bovinos,  caninos e felinos:</font></strong>30 milhões de doses anuais, elaboradas sob níveis  de biossegurança 3 e normas específicas da OIE.'),
+(83, '<strong><font color="#26CBD4" >Unidad de producción de Vacuna contra la Fiebre Aftosa: </font></strong>200 millones de dosis anuales, bajo las más altas  normas de bioseguridad, nivel 4 (NBS 4 OIE).', '<strong><font color="#26CBD4" >Vaccine against Foot and Mouth Disease Production Unit:</font></strong> 200 million annual doses, under the highest biosafety norms, level 4 (NBS OIE).', '<strong><font color="#26CBD4" >Unidade de produção de Vacinas contra Febre Aftosa: </font></strong>200 milhões  de doses anuais, sob as mais rigorosas normas de biossegurança, nível   4 (NBS 4 OIE).'),
+(84, '<strong><font color="#26CBD4" >Unidad de producción de Biológicos ViBa:</font></strong> 100 millones de dosis anuales de vacuna combinada, destinadas a la prevención de enfermedades virales y bacterianas, bajo niveles de Bioseguridad 2 y 2+. ', '<strong><font color="#26CBD4" >Biological ViBa Production Unit:</font></strong> 100 million annual doses of the combined vaccine, destined to prevent viral and bacterial diseases, under biosafety levels 2 and 2+.  ', '<strong><font color="#26CBD4" >Unidade de produção de Biológicos ViBa:</font></strong>100 milhões de doses  anuais de vacina combinada, destinadas na prevenção de doenças   virais e bacterianas, sob níveis de segurança de biossegurança 2 e 2+.'),
+(85, '<strong><font color="#26CBD4" >Unidad de producción de Vacuna Antirrábica para bovinos, caninos y felinos:  </font></strong> 30 millones de dosis anuales,  elaboradas bajo niveles de bioseguridad 3 y  normas específicas de la OIE.', '<strong><font color="#26CBD4" >Dogs and Cats Rabies Vaccine Production Unit:</font></strong> 30 million annual doses, elaborated under biosafety level 3 and specific OIE norms.', '<strong><font color="#26CBD4" >Unidade de produção de Vacinas Antirrábicas para bovinos,  caninos e felinos:</font></strong>30 milhões de doses anuais, elaboradas sob níveis  de biossegurança 3 e normas específicas da OIE.'),
 (86, 'Planta Monte Grande- Buenos Aires, Argentina', 'Monte Grande Manufacturing Plant, Buenos Aires, Argentina:', 'Parque Industrial Monte Grande – Buenos Aires, Argentina'),
 (87, 'Soluciones para los principales problemas de la producción ganadera', 'Solutions for main problems in livestock production', 'Soluções para os principais problemas da produção pecuária'),
 (88, 'Aquí elaboramos nuestra línea de productos farmacéuticos para ofrecer planes sanitarios completos y eficaces, adaptados a las necesidades de la producción ganadera.', 'Here we elaborate our line of pharmaceutical products so as to offer complete and efficient sanitation plans, which are adapted to the needs of livestock production.', 'Aqui é elaborada nossa linha de produtos farmacêuticos para oferecer planos  sanitários completos e eficazes, adaptados as necessidades da produção   pecuária.'),
 (89, 'La planta cuenta con  <strong>6 unidades de producción</strong>, con una capacidad anual  <strong>de 3 millones de unidades al año:</strong>', 'The plant has <strong>6 production units</strong>, with an  <strong>annual capacity of 3 million units </strong>:', 'O Parque conta com <strong>6 unidades de produção</strong>, com capacidade anual de <strong>3   milhões de unidades por ano:</strong>'),
-(90, '•	Línea de Inyectables', '• Inyectable Line', '• Linha de injetáveis'),
-(91, '• Línea de orales', '• Oral Line', '• Linha de orais'),
-(92, '• Antibióticos ', '• Antibiotics', '• Antibióticos '),
-(93, '• Hormonales: Inyectables', '• Hormones: Inyectables', '• Hormonais: Injetáveis'),
-(94, '• Hormonales: sólido', '• Hormones: Solids', '• Hormonais:  Sólidos'),
-(95, '• Ectoparasiticidas', '• Ectoparasiticides', '• Ectoparasiticidas'),
+(90, 'Línea de Inyectables', 'Inyectable Line', 'Linha de injetáveis'),
+(91, 'Línea de orales', 'Oral Line', 'Linha de orais'),
+(92, 'Antibióticos ', 'Antibiotics', 'Antibióticos '),
+(93, 'Hormonales: Inyectables', 'Hormones: Inyectables', 'Hormonais: Injetáveis'),
+(94, 'Hormonales: sólido', 'Hormones: Solids', 'Hormonais:  Sólidos'),
+(95, 'Ectoparasiticidas', 'Ectoparasiticides', 'Ectoparasiticidas'),
 (96, 'Planta Arraçoiaba da Serra , Sao Paulo, Brasil', 'Arraçoiaba da Serra Manufacturing Plant, Sao Paulo, Brazil', 'Parque Industrial Arraçoiaba da Serra, São Paulo, Brasil'),
 (97, 'Más control sobre ectoparásitos', 'More control of ectoparasites', 'Mais controle sobre ectoparasitoses'),
 (98, 'Para brindar soluciones tecnológicas que cubran las necesidades específicas de la ganadería en Brasil, instalamos una planta dedicada a la producción de ectoparaciticidas.', 'In order to offer technological solutions to cover the specific needs of livestock in Brazil, we built a plant specialised in the production of ectoparasiticides.  ', 'Para fornecer soluções tecnológicas que atendam às necessidades específicas   da pecuária no Brasil, instalou-se uma fábrica dedicada à produção de   ectoparaciticidas.'),
@@ -523,18 +523,19 @@ INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (488, 'Trabajar con equipos de diferentes áreas y regiones te permitirá construir nuevos lazos con colaboradores y, a la vez, descubrir  otras posibilidades de desarrollo profesional. Apostamos al compromiso y la pasión de nuestros empleados como pilares indispensables para un sólido crecimiento de toda la compañía', 'Working with teams from different areas and regions will allow you to build new bonds with collaborators and, simultaneously, discover other possibilities for your professional growth. We bet on our employees commitment and passion as our indispensable pillars for a solid growth of our entire company', 'Trabalhar com equipes de diferentes áreas e regiões lhe permitirá construir novos laços com  colaboradores além de descobrir outras possibilidades de desenvolvimento profissional.   Apostamos no compromisso e paixão de nossos colaboradores como pilares indispensáveis   para um sólido crescimento de toda companhia'),
 (489, 'Copyright de Biogénesis Bagó®', '', ''),
 (490, 'Volver', 'Back', 'Retorno'),
-(493, 'Biogensis Bago', '', ''),
+(493, 'Biogénesis Bagó', '', ''),
 (494, 'Premio Animal Pharm', 'Animal Pharm Award', 'Prêmio Animal Pharm'),
 (495, 'como Mejor empresa Latinoamericana del Sector Veterinario', 'for the Best Company in Latin & South America', 'Melhor empresa do setor Veterinário da América Latina em 2014'),
 (497, 'Diario Clarin 2015', 'Clarin Award', 'Premio Clarín'),
 (498, 'Desarrollo empresarial', 'Business development', '"Prêmio trabalho e Trajectoria"'),
 (499, 'Premio Funprecit', 'Funprecit Award', 'Fumprecit'),
 (500, 'a la excelencia en desarrollos para la salud animal', 'to the excellence in Animal Health developments', '"Prêmio excelência no desenvolvimento de sanidade animal"'),
-(501, 'Nace', 'Creation of', 'Nace'),
+(501, 'Nace', 'Creation of', 'Nasce'),
 (502, 'laboratorios Bagó', 'Bagó laboratories', 'laboratorios Bagó'),
 (503, '<span class="border-celeste">FI</span>LIALES Y REP. COMERCIALES ', '<span class="border-celeste">AF</span>FILIATES AND SALES REPS', '<span class="border-celeste">CO</span>NTROLADAS E REP. COMERCIAL'),
 (504, 'NAFMDVD\n', 'NAFMDVB \n', ''),
-(505, 'Casa Matriz Argentina', 'Headquarters Argentina', '');
+(505, 'Casa Matriz Argentina', 'Headquarters Argentina', ''),
+(506, 'Búsqueda', 'Search', 'Pesquisa');
 
 --
 -- Índices para tablas volcadas
@@ -554,7 +555,7 @@ ALTER TABLE `tbl_textos`
 -- AUTO_INCREMENT de la tabla `tbl_textos`
 --
 ALTER TABLE `tbl_textos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=506;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=507;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -390,7 +390,6 @@ font-size: 22px;
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: auto auto;
-		margin-top: 15%;
 	-webkit-transition: all 1s ease;
 		-moz-transition: all 1s ease;
 		-o-transition: all 1s ease;
@@ -413,7 +412,7 @@ font-size: 22px;
 		margin-top: 2.5%;
 		margin-left: 120px;
 		color: #B2B2B2;
-		font-size: 17px;
+		font-size: 17px !important;
 		font-family: 'arialregular';
 	-webkit-transition: all 1s ease;
 		-moz-transition: all 1s ease;
@@ -638,6 +637,7 @@ font-size: 22px;
 	
 	/*************************** VADEMECUM*************************/
 	
+
 	.vademecum, .vademecum-producto{
 		color:#7F7F7F;
 		text-align:center;
@@ -4728,7 +4728,7 @@ figure.snip1156:hover .salud-ambiental{
 	
 	.dropdown-menu>li>a {
 		background:white;
-		padding: 3px 13px;
+		padding: 3px 10px;
 	}
 	
 	.ul-nav li ul {
@@ -5142,12 +5142,11 @@ figure.snip1156:hover .salud-ambiental{
 	}
 	
 	.volver-mobile {
-    background-image: url(../img/volver-desactivado.png);
+    background-image: url(../img/volver-desactivado.png);    
     height: 42px;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 5%;
-    margin-top: 15%;
+    background-size: 7%;
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
     -o-transition: all 1s ease;
@@ -5249,8 +5248,7 @@ figure.snip1156:hover .salud-ambiental{
     height: 42px;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 5%;
-    margin-top: 15%;
+    background-size: 10%;
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
     -o-transition: all 1s ease;
@@ -6643,6 +6641,13 @@ figure.snip1156:hover .salud-ambiental{
 		color:#666;
 	}
   
+
+ @media screen and (max-width: 435px){
+
+ 	.tr, .tr-2{ color:#0C5582 !important; }
+    
+
+ }
 	.navbar-collapse.collapse{
 		display:none !important;
 		visibility:hidden !important;
@@ -6939,8 +6944,8 @@ figure.snip1156 .d-a-2 h2{
     height: 42px;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 5%;
-    margin-top: 15%;
+    background-size: 10%;
+    
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
     -o-transition: all 1s ease;
@@ -7230,7 +7235,7 @@ figure.snip1156 .d-a-2 h2{
 	background-color: rgba(0, 0, 0, 0.3);
 }
 
-@media screen and (max-width:414px){
+@media screen and (max-width:435px){
 
 	#descripcion {height: auto !important;}
 
@@ -7295,13 +7300,13 @@ figure.snip1156 .d-a-2 h2{
 		padding-left: 0;
 	}
 	#descripcion {height: auto !important;border:none;}
+
 	.volver-mobile {
     background-image: url(../img/volver-desactivado.png);
     height: 42px;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 5%;
-    margin-top: 15%;
+    background-size: 7%;
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
     -o-transition: all 1s ease;
@@ -7714,7 +7719,7 @@ position:fixed;
 	}
 
 
-	 #titulo-vademecum {margin-top:15vh}
+	 #titulo-vademecum {margin-top:15%;}
 
 
 
@@ -8694,4 +8699,67 @@ position:fixed;
 	#descripcion{
 	border-right:0;
 	}
+}
+
+#epigrafe-paises {font-size: 11px;
+				font-family: 'arialregular'; 
+				color: white; 
+				font-weight: 700; 
+				display: inline-block; 
+				padding-top: 65px;
+				text-shadow: 0px 3px black;
+				margin: 0;
+				margin-left: 13px;}
+
+#epigrafe-mobile img {float:right; padding-right: 118px; padding-top: 29px;width:260px;}
+
+@media screen and (max-width: 600px){
+
+#epigrafe-paises {font-size: 11px;
+				font-family: 'arialregular'; 
+				color: white; 
+				font-weight: 700; 
+				display: inline-block; 
+				padding-top: 65px;
+				text-shadow: 0px 3px black;
+				text-align: center;
+				margin-left:0px;
+				}
+
+#epigrafe-mobile{ text-align: center; }
+#epigrafe-mobile img {padding-right: 135px; }
+
+
+}  
+
+@media screen and (max-width: 435px){
+	.salud-animal{line-height: 50px !important; font-size: 40px !important;}
+	 .laevolucion{
+	font-size: 30px;
+ }
+ 
+
+}
+
+#widget-animacion .item{
+	opacity:0;
+}
+
+@-webkit-keyframes fade-in-item {
+  0% {
+    display: block;
+    opacity: 0;
+  }
+  30% {
+    display: block;
+    opacity: .5;
+  }
+  60% {
+    display: block;
+    opacity: .8;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+  }
 }
