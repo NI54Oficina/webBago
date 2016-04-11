@@ -63,6 +63,10 @@ function sanear_string($string)
 
 $idSeccion=-1;
 $pais= Pais::model()->findByPk(Yii::app()->session['pais']);
+$isParaguay=false;
+if($pais->id==17){
+	$isParaguay=true;
+}
 if($pais->catalogo==1){
 	$pais=$pais->id;
 }else{
@@ -135,7 +139,7 @@ $auxId=0;
 	
 	<?php if(isset($productos)){ foreach($productos as $producto){
 		
-	if($producto->pais==$pais){
+	if(($producto->pais==$pais||($producto->pais==17&&$isParaguay))&&!($isParaguay&&$producto->id==279)){
 		$auxIndex++;
 	$id= $producto->id;
 	$imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"id DESC"));
@@ -146,7 +150,9 @@ $auxId=0;
 			<div>
 				<div class="inner-producto-vademecum">
 				<div class="producto-vademecum-top">
-				<img style="width:45%;display:inline-block;margin-top: 5%;margin-right:0;text-align:left;" class="img-cat-aft " src="<?php echo Yii::app()->getBaseUrl(true); ?>/vademecums/<?php echo $imagen->id; ?>.png" /> 
+				<?php if($imagen){ ?>
+				<img style="width:40%;display:inline-block;margin-top: 5%;margin-right:0;text-align:left;" class="img-cat-aft " src="<?php echo Yii::app()->getBaseUrl(true); ?>/vademecums/<?php echo $imagen->id; ?>.png" /> 
+				<?php } ?>
 				<div class="targets-vademecum">
 					<div class="columna-target">
 					<?php

@@ -35,7 +35,7 @@
 					foreach($notas as $nota){
 				
 				?>
-				
+<a href="<?php echo Yii::app()->request->baseUrl; ?>/uploads/molino/pdf/revista-<?php echo $nota->numero; ?>.pdf" target="_blank">
 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 "  style="display:inline-block;text-align: center;" >
 					
 			<div class="container-nota-revista revista-fondo " style="border: 1px solid #359FBD;box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.45);width: 98%; display:inline-block;text-align: left;margin-bottom: 20px;">
@@ -72,11 +72,12 @@
 			</div>
 
 		</div>
+		</a>
 					<?php } 
 					 ?>
 
 </div>
-					
+				
 	
 <?php
 }else{

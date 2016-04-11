@@ -1219,6 +1219,7 @@ font-size: 22px;
 		float:left;
 		color:#656565;
 		padding-left:1%;
+		min-height:80vh;
 	}
 	
 	.div-texto-aftosa p{
@@ -3303,21 +3304,21 @@ a.iprodev:hover {
 #header-rrhh{
 	background-color:white;
 	background-repeat:no-repeat;
-	background-position: bottom center;
-	background-size: auto 100%,100%  auto ;
+	background-position: center -30px;
+	background-image:url(../img/rrhh-02.png);
+	background-size: 100% auto;
 	width:100%;
-	transition: all 9s linear;
     z-index: -1;
 
 }
 
 #header-rrhh:hover{	
-	background-repeat:no-repeat;
+	/*background-repeat:no-repeat;
 	background-size: auto 100%;
 	width:100%;
 	transition: all 9s linear;
     z-index: -1;
-
+*/
 }
 
 
@@ -3336,6 +3337,9 @@ a.iprodev:hover {
 .d-rrhh-home{
 	z-index: 99999999;
 	padding-left: 1%;
+	background-size: 100% auto;
+	background-repeat:no-repeat;
+	background-position:center;
 }
 
 .send-rrhh{
@@ -3346,6 +3350,7 @@ a.iprodev:hover {
     z-index: 99999999;    
 	font-size: 15px;
 	transition: all 0.5s ease;
+	border:2px solid transparent;
 }
 
 #back-rrhh{ 
@@ -4028,13 +4033,13 @@ section{
 
 
 #ver-revista{
-    padding-left: 7%;
+    padding-left:5%;
 }
 
 
 #info-revista{
 	margin-top:2%;
-	margin-left:5%;
+	
 	color:#8c8c8c;
 }
 
@@ -5157,7 +5162,7 @@ figure.snip1156:hover .salud-ambiental{
 @media only screen 
   and (min-device-width: 325px) 
   and (max-device-width: 736px)
-  and (-webkit-min-device-pixel-ratio: 2) {
+  {
 	.h2-cd {
 		color: #B2B2B2;
 		font-weight: 700;
@@ -5495,7 +5500,7 @@ figure.snip1156:hover .salud-ambiental{
 	#img-rev {
 		width: auto;
 		box-shadow: 2px 2px 20px;
-		margin-left: 6%;
+		
 	}
 	
 	.desc-rev{
@@ -5618,7 +5623,7 @@ figure.snip1156:hover .salud-ambiental{
   and (min-device-width: 768px) 
   and (max-device-width: 1024px) 
   and (orientation: landscape) 
-  and (-webkit-min-device-pixel-ratio: 1) {
+  {
 	.bienvenidos {
 		margin: 0; 
 		margin-top: 7%;
@@ -5801,7 +5806,6 @@ figure.snip1156:hover .salud-ambiental{
 @media only screen 
   and (min-device-width: 325px) 
   and (max-device-width: 736px)
-  and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: landscape) {
 	.b-l{
 		width:90%;
@@ -5883,7 +5887,6 @@ figure.snip1156:hover .salud-ambiental{
 @media only screen 
   and (min-device-width: 325px) 
   and (max-device-width: 480px)
-  and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) {
 	.b-l{
 		width:100%;
@@ -5897,6 +5900,37 @@ figure.snip1156:hover .salud-ambiental{
 		width: 90%;
 		box-shadow: 2px 2px 20px;
 		margin-top: 2%;
+		margin-left:5%;
+	}
+	#ver-revista{
+		padding-left:0;
+	}
+	#info-revista{
+		margin-left:0;
+		padding:5%;
+	}
+	
+	#slider1 .overview li:nth-child(1),#slider1 .overview li:nth-child(2){
+	display:none;
+	}
+	
+	#btn-mas{
+		float:initial;
+	}
+	#slider1 .overview li{
+		text-align:center;
+		margin-right:0;	
+		float:initial;
+		display:inline-block;
+	}
+	
+	#slider1 .overview{
+		width:100vw !important;
+		text-align:center;
+	}
+	
+	#slider1{
+	padding:0;width:100vw !important;
 	}
 	
 	.border-tit {
@@ -5994,7 +6028,7 @@ figure.snip1156:hover .salud-ambiental{
 @media only screen 
   and (min-device-width: 325px) 
   and (max-device-width: 736px)
-  and (-webkit-min-device-pixel-ratio: 2) {
+  {
 
 	.logo-blanco {
 		width: 60%;
@@ -6585,6 +6619,30 @@ figure.snip1156:hover .salud-ambiental{
   and (orientation: portrait) 
   {
   
+	.d-rrhh-home{
+	background-image:none !important;
+	
+	
+	
+	}
+	#header-rrhh{
+		background-image:url(../img/rrhh-02.png) !important;
+		background-size: 100% auto !important;
+		background-position: center -3px !important;
+		background-repeat:no-repeat !important;
+		
+	}
+	
+	h3.tr.move-x-1{
+		width:50%;
+		display:inline-block;
+	}
+	
+	h4.tr-2.move-x-2{
+		padding-top:50px;
+		color:#666;
+	}
+  
 	.navbar-collapse.collapse{
 		display:none !important;
 		visibility:hidden !important;
@@ -6614,7 +6672,6 @@ figure.snip1156:hover .salud-ambiental{
 	
 	
 	}
- }
 /** fin fix ipad menu**/
 
 
@@ -6876,8 +6933,7 @@ figure.snip1156 .d-a-2 h2{
 
 @media only screen 
   and (min-device-width: 325px) 
-  and (max-device-width: 736px)
-  and (-webkit-min-device-pixel-ratio: 2) {
+  and (max-device-width: 736px) {
 .volver-mobile {
     background-image: url(../img/volver-desactivado.png);
     height: 42px;
@@ -7258,7 +7314,7 @@ figure.snip1156 .d-a-2 h2{
 @media only screen 
   and (min-device-width: 325px) 
   and (max-device-width: 736px)
-  and (-webkit-min-device-pixel-ratio: 2) {
+  {
 	.item-institucional .glyphicon{
 		display:none;
 	}
@@ -8621,3 +8677,21 @@ position:fixed;
 	#ul-rrhh-home{
 		color:#359fbd;
 	}
+	.mirrored{display:none !important;}
+@media only screen 
+  and (min-device-width: 200px) 
+   and (orientation: portrait) 
+{
+	.d-rrhh-home{
+	background-image:url(../img/rrhh-02.png);
+	background-size:auto 100%;
+	background-position:center -2px;
+	
+	}
+	#header-rrhh{
+		background:none;
+	}
+	#descripcion{
+	border-right:0;
+	}
+}

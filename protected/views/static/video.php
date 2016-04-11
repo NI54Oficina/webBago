@@ -11,7 +11,7 @@
 	
     <script>
 	    $(function() {
-            var BV = new $.BigVideo();
+            var BV = new $.BigVideo({useFlashForFirefox:false});
 			BV.init();
 			BV.show('<?php echo Yii::app()->getBaseUrl(true); ?>/video/home1.mp4',{ambient:true});
 	    });

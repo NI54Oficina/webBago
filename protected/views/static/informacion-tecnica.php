@@ -3,7 +3,7 @@
 			<div class="header-layout-aftosa col-lg-12 col-md-12 col-sm-12 col-xs-12 header-infotec-revista" >
 				<div class="col-lg-2 col-md-2 col-sm-2 col-xs-3" style="display:inline-block;z-index:3;padding-top:3%;">
 					
-					<a class="volver-infotec-revista" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/home"><div></div><p>Volver</p></a>
+					<a class="volver-infotec-revista" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/home/#inform-tec"><div></div><p>Volver</p></a>
 				
 				</div>
 				
@@ -34,7 +34,7 @@
 					foreach($notas as $nota){
 						
 					?>
-
+<a style="color:#666;" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/nota-tecnica/<?php echo $nota->id; ?>">
 	<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 "  style="display:inline-block;text-align: center;" >				
 					<div class="container-infotec-noticias  container-nota-revista" style="width: 98%; display:inline-block;text-align: left;margin-bottom: 20px;">
 						
@@ -51,6 +51,7 @@
 							
 					</div>
 			</div>		
+			</a>
 					<?php } 
 					} ?>
 			

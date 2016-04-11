@@ -27,7 +27,7 @@
 								<!-- 	QUIÉNES SOMOS -->
 								<div  class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item-institucional" hid="1" id="inst-quienes">
 									<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/quienes-somos " target="_blank">	
-
+										<canvas class="" id="myCanvas" height="90px" width="100%"></canvas>
 										<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home-quienes.png" />
 										<div class="plus-container"><span  class=" glyphicon glyphicon-plus"></span></div>
 										<h1 class="h1-1-home"><?php echo Textos::model()->GetText(6); ?></h1>
@@ -134,7 +134,7 @@
 		</div>
 		
 		<!--CURVA-->
-		<img style=" width: 100%;position:relative;margin-top:-2px;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-home-abajo.png" alt="" style="" />	
+		<img style=" width: 100%;position:relative;margin-top:-4px;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-home-abajo.png" alt="" style="" />	
 
 		<section class="special" data-scrollax-parent="true" style="background:transparent;width:100%;overflow-x:hidden;" id="mapa-filiales">
 		<!------------------------------------------------------------------ SECCION 2: FILIALES ------------------------------------------------------------------>			
@@ -1070,7 +1070,7 @@
 
 
 		</section>
-		<img style="width:100%;position:relative;margin-top:-1px;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-celeste-abajo.png" alt="" />	
+		<img style="width:100%;position:relative;top:-3px;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-celeste-abajo.png" alt="" />	
 	<?php } ?>
 		<!--CURVA-->	
 <!--   APLICAR LAS TRADUCCIONES AL PORTUGUES  -->
@@ -1294,8 +1294,8 @@
 							<div id="botonera-buscar" class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
 								<div class="input-group">
 									<span>
-										<form action="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/search" method="post">
-										<input class="input-vad" type="text" placeholder="">
+										<form action="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/search/" method="post">
+										<input class="input-vad" type="text" name="arg" placeholder="">
 									</span>	
 									<span class="input-group-btn">
 										<button class="btn btn-default" id="btn-buscar" type=""> </button>
@@ -1325,7 +1325,7 @@
 		
 		
 		<!--CURVA-->			
-		<img style="width: 100%;position:relative;margin-bottom:-2px;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-home.png" alt="" />
+		<img style="width: 100%;position:relative;top:2px;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-home.png" alt="" />
 		
 		<!------------------------------------------------------------------ SECCION 5: REVISTA EL MOLINO ------------------------------------------------------------------>	
 		<section class="special col-lg-12 col-md-12 col-sm-12 col-xs-12" data-scrollax-parent="true" style="background: rgba(0, 0, 0, 0.62);width:100%;overflow-x:hidden;padding-bottom:30px;">
@@ -1401,16 +1401,15 @@
 						<div class="viewport">
 						
 							<!-- LISTA REVISTAS -->
+							<!-- LISTA REVISTAS -->
 							<ul class="overview" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-								<?php foreach($revistas as $revista){ ?> 
+								<?php 
+								foreach($revistas as $revista){ ?> 
+								
 								<!-- ITEM REVISTA-->
-
 								<li id="revista-<?php echo $revista->id; ?>" class="col-lg-4 col-md-2 col-sm-2 col-xs-4 revista-slider-240">
-									<a href="<?php echo Yii::app()->request->baseUrl; ?>/uploads/molino/pdf/revista-<?php echo $revista->numero; ?>.pdf" target="_blank">
-
-								<li id="revista-<?php echo $revista->id; ?>" class="col-lg-4 col-md-2 col-sm-2 col-xs-4">
+									
 									<a href="<?php echo Yii::app()->request->baseUrl; ?>/elmolino/<?php echo $revista->numero; ?>" target="_blank">
-
 									<!-- img -->
 									<div class="rev-30"> </div> 
 								
@@ -1428,9 +1427,13 @@
 									<style>
 									#revista-<?php echo $revista->id; ?> .rev-30{
 										background-image:url(<?php echo Yii::app()->request->baseUrl; ?>/uploads/molino/img/portada-<?php echo $revista->numero; ?>-desaturada.png);
+										background-size:100% auto;
+										background-position:center center;
 									}
 									#revista-<?php echo $revista->id; ?> .rev-30:hover{
 										background-image:url(<?php echo Yii::app()->request->baseUrl; ?>/uploads/molino/img/portada-<?php echo $revista->numero; ?>.png);
+										background-size:100% auto;
+										background-position:center center;
 									}
 									</style>
 									</a>
@@ -1471,38 +1474,43 @@
 			<!--*************  CONTENEDOR PRINCIPAL *********** -->
 		
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  "  id="header-rrhh" style="z-index:10;text-align:center;height:auto;">     	
-				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/rrhh-02.png" style="position:absolute;z-index:-2;display:inline-block;width:100%;">
+				<!--<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/rrhh-02.png" style="position:absolute;z-index:-2;display:inline-block;width:100vw;top:-1px;left:-1px;">!-->
 				<!-- ////////////// HEADER //////////// -->
-				<div id="titulo-info" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-rrhh-home" style="height:25vh;position:relative;z-index:10;">
+				<div id="titulo-info" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-rrhh-home" style="position:relative;z-index:10;">
 					
 					
 						
 						<!-- TITULO-->
 						<div class="move-x-3"><img class="icono-menu right" src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-rrhh.png"><h2 id="titulo-vad" ><span class="border-vad-2">RRHH</span> </h2><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-rrhh.png" class="icono-menu left"></div>
 	
-							<!-- TEXTO HEADER-->
-							<h3  class="tr move-x-1"><?php echo Textos::model()->GetText(110); ?></h3>
-							<h4 class="tr-2  move-x-2"><?php echo Textos::model()->GetText(478); ?></h4>
-							<a href="http://biogenesisbago.zonajobs.com.ar/" target="_blank" style="display:inline-block;"><div class="send-rrhh" style="color:white;border-radius: 5px;"><?php echo Textos::model()->GetText(111); ?></div></a>
+							
+							
 
 						
 				</div>  <!-- termina header -->
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height:0;">
-				<img class="curva-rrhh" src="<?php echo Yii::app()->request->baseUrl; ?>/img/rrhh-01.png">
+				
+				<!--<img class="curva-rrhh" src="<?php echo Yii::app()->request->baseUrl; ?>/img/rrhh-01.png">!-->
 				</div>
 				
-				<div style="width:100%;display:inline-block;text-align:center;padding-bottom:10vh;margin-top:-2px;padding-top:40vh;position:relative;">
+				<div style="width:100%;display:inline-block;text-align:center;margin-top:-2px;position:relative;background-image:url(<?php echo Yii::app()->request->baseUrl; ?>/img/rrhh-01.png);background-size:100% auto;background-repeat:no-repeat;">
+				
 				<!-- TEXTO-->
-				<div id="whiteFiller"style="background-color:white;position:absolute;width:100%;height:400px;z-index:2;top:226px;"></div>
-				<div style="width:100%;position:relative;z-index:4; height: 100px;">
+				<!-- TEXTO HEADER-->
+							<h3  class="tr move-x-1"><?php echo Textos::model()->GetText(110); ?></h3>
+							<h4 class="tr-2  move-x-2"><?php echo Textos::model()->GetText(478); ?></h4>
+							
+							<a href="http://biogenesisbago.zonajobs.com.ar/" target="_blank" style="display:inline-block;"><div class="send-rrhh" style="color:white;border-radius: 5px;"><?php echo Textos::model()->GetText(111); ?></div></a>
+							
+				<div style="width:100%;position:relative;z-index:4;">
 
 
-				<p class="p-rrhh-home" style="width:50%;display:inline-block;margin:0;padding:0; position: relative;" ><?php echo Textos::model()->GetText(112); ?></p>
+				<p class="p-rrhh-home" style="width:50%;display:inline-block;margin:0;padding:0; position: relative;padding-top:15px;" ><?php echo Textos::model()->GetText(112); ?></p>
 
 
 				<!-- ESTOS SON LOS TEXTOS QUE TIENE QUE APARECER Y DESAPARECCER EN RRHH DE LA HOME !-->
 
-				<ul  class="colg-lg-10" style="" id="ul-rrhh-home" style="position:relative;">
+				<ul id="ul-rrhh-home" style="position:relative;display:inline-block;padding">
 				
 					<li><?php echo Textos::model()->GetText(483); ?></li>
 				   <li><?php echo Textos::model()->GetText(484); ?></li>
@@ -1526,14 +1534,14 @@
 
 
 		<!------------------------------------------------------------------ SECCION 7: CONTACTO ------------------------------------------------------------------>
-		<section class="special" data-scrollax-parent="true" style="width:100%;text-align:center;background-image:url(<?php echo Yii::app()->request->baseUrl; ?>/img/fondo-contacto.png);background-size:auto 100%;float:left;overflow:hidden;position:relative;"   id="section-contacto" >
+		<section class="special" data-scrollax-parent="true" style="width:100%;text-align:center;background-image:url(<?php echo Yii::app()->request->baseUrl; ?>/img/fondo-contacto.png);background-size:auto 100%;float:left;overflow:hidden;position:relative;top:-2px;"   id="section-contacto" >
 			<div id="contenido" style="display:inline-block;text-align:center;">
 				
 				<!-- ////////// TITULO ////////////// -->
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="display:inline-block;">
 					<h1 id="contacto" style="margin:0;padding-top: 45px;"><div id="cont-h1"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-bullet--.png"/> <?php echo Textos::model()->GetText(113); ?><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-bullet--.png" /></div></h1>
 					<!--<img style="width: 100%;position:relative;" class="hidden-lg hidden-md" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-home-abajo.png" alt="" />!-->
-					<img style="width: 100%;position:relative;" class="" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-home-abajo.png" alt="" />
+					<img style="width: 100%;position:relative;top:-2px;" class="" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-home-abajo.png" alt="" />
 				</div>
       
       
@@ -1748,8 +1756,8 @@
 	<script>
 	$(document).ready(function(){
 		//console.log("ready para arreglo rrhh");
-		$("#curva-rrhh").height();
-		$("#whiteFiller").css("top",$("#curva-rrhh").height());
+		/*$("#curva-rrhh").height();
+		$("#whiteFiller").css("top",$("#curva-rrhh").height());*/
 		
 		var textFade= $("#textoFade").text();
 		textFade= textFade.split("/");
