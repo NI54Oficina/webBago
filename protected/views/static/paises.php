@@ -26,8 +26,9 @@
     </script>
 
 	<!-- PAÍSES -->
-	<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo-blanco.png" style="float:right; padding-right: 118px; padding-top: 29px;width:260px;"/>
-	<p style="font-size: 11px;font-family: 'arialregular'; color: white; font-weight: 700; display: inline-block; padding-top: 65px;text-shadow: 0px 3px black;margin: 0;margin-left: 13px;">LA EVOLUCIÓN DE LA <span style="color:#79C8EE;text-align: center; line-height: 35px;">SALUD ANIMAL</span></p>
+	<div id="epigrafe-mobile"  class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><img  src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo-blanco.png" style=""/></div>
+	<p id="epigrafe-paises" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">LA EVOLUCIÓN DE LA <span style="color:#79C8EE;text-align: center; line-height: 35px;">SALUD ANIMAL</span></p>
+	
 	
 	<div class="col-lg-1"></div>
 	<div id="paises-home" class="col-lg-12 col-md-12 " style="color:white;margin-top:5%;">
