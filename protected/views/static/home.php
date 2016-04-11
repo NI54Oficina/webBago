@@ -1677,7 +1677,7 @@
 						 $("#form1").validate({
 							submitHandler: function(form) {
 								
-							$.post( "<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/web/contacto", $( "#form1" ).serialize() ).done(function(data){
+							$.post( "http://web-bago.testni54.com/br/web/contacto/", $( "#form1" ).serialize() ).done(function(data){
 								//console.log("exito!");
 								$("#enviando").fadeOut(100);
 								$("#enviado").fadeIn(100);
