@@ -638,6 +638,7 @@ font-size: 22px;
 	
 	/*************************** VADEMECUM*************************/
 	
+
 	.vademecum, .vademecum-producto{
 		color:#7F7F7F;
 		text-align:center;
@@ -4728,7 +4729,7 @@ figure.snip1156:hover .salud-ambiental{
 	
 	.dropdown-menu>li>a {
 		background:white;
-		padding: 3px 13px;
+		padding: 3px 10px;
 	}
 	
 	.ul-nav li ul {
