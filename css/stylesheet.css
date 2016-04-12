@@ -2502,13 +2502,6 @@ footer{
 }
 
 
-#btnmenu{
-    display: inline-block;
-    margin-top: -2%;
-    margin-right: 1%;
-    transition: all 0.5s ease;
-    float: right;
-}
 
 
 
@@ -7291,7 +7284,7 @@ figure.snip1156 .d-a-2 h2{
     height: 42px;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 7%;
+    background-size: 6%;
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
     -o-transition: all 1s ease;
@@ -8765,7 +8758,8 @@ position:fixed;
 	.h2-titulo{ display: none; }
 	.h3-rse {margin-top: 0px; font-size: 17px;}
 	.h2-rse {font-size: 15px;}
-	#text-1, #text-2 {color: black !important;}
+	h4.tr-2.move-x-2 {color: black !important;}
+	
 }
 
 
@@ -8785,3 +8779,23 @@ position:fixed;
     font-size: 16px;
     margin-bottom: 35px;
 }
+
+
+
+#btnmenu{
+    display: inline-block;
+    margin-top: -2%;
+    margin-right: 1%;
+    transition: all 0.5s ease;
+    float: right;
+}
+
+
+@media only screen (max-width: 768px;){
+
+	#btnmenu{margin-top: -7% !important;}
+}
+
+
+
+.redessociales-mobile {margin-bottom: 20%;}
