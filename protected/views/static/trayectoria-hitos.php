@@ -223,7 +223,7 @@
 	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 		<img class="img-cd" id="nace-biog-img" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo-antiguo-biogenesis.png"/>
 	</div>
-		<section id="cd-timeline" class="cd-container" style="margin-top: 8em;">
+		<section id="cd-timeline" class="cd-container ">
 
 		<div class="cd-timeline-block">
 			<div class="cd-timeline-img cd-picture">
