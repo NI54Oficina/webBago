@@ -8854,6 +8854,44 @@ position:fixed;
 	animation: text-inside 1.5s ease-out forwards;
 }
 
+.mision-transicion{
+	animation:fadein 2.5s;
+	animation: text-inside 1.5s;
+	animation: text-inside 1.5s ease-out forwards;
+}
+
+
+#rse-transicion{
+	animation:fadein 2.5s;
+	animation: text-inside 1.5s;
+	animation: text-inside 1.5s ease-out forwards;
+}
+
+
+#lucha-transicion{
+	animation:fadein 2.5s;
+	animation: text-inside 1.5s;
+	animation: text-inside 1.5s ease-out forwards;
+}
+
+#prensa-transicion{
+	animation:fadein 2.5s;
+	animation: text-inside 1.5s;
+	animation: text-inside 1.5s ease-out forwards;
+}
+
+#proveedores-transicion{
+	animation:fadein 2.5s;
+	animation: text-inside 1.5s;
+	animation: text-inside 1.5s ease-out forwards;
+}
+
+#plantas-transicion{
+	animation:fadein 2.5s;
+	animation: text-inside 1.5s;
+	animation: text-inside 1.5s ease-out forwards;
+}
+
 
 @-webkit-keyframes text-inside {
   0% {
@@ -8958,3 +8996,13 @@ position:fixed;
 	
   }
   
+.img-proveedores-download{
+	display:inline-block;
+}
+
+.p-proveedores-download{ 
+	display: inline-block;    
+	color: #337ab7; 
+	font-size: 13px;    
+	width: 80%;
+}
