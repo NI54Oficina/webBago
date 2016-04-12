@@ -4,6 +4,7 @@
 
 
 <body id="skrollable" style="width:100%;overflow-x:hidden;">
+<?php include_once("analytics.php") ?>
 <script src="<?php echo Yii::app()->getBaseUrl(true); ?>/js/jquery.boxloader.min.js"></script>	
 <!--COMENTARIO DE LINEA TEST -->
 
@@ -1677,7 +1678,7 @@
 						 $("#form1").validate({
 							submitHandler: function(form) {
 								
-							$.post( "http://web-bago.testni54.com/br/web/contacto/", $( "#form1" ).serialize() ).done(function(data){
+							$.post( "http://<?php echo $_SERVER['SERVER_NAME']; ?>/br/web/contacto/", $( "#form1" ).serialize() ).done(function(data){
 								//console.log("exito!");
 								$("#enviando").fadeOut(100);
 								$("#enviado").fadeIn(100);

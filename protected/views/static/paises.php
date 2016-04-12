@@ -4,16 +4,22 @@
     <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/style.css">
     <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/bower_components/BigVideo/css/bigvideo.css">
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/bower_components/modernizr/modernizr-2.5.3.min.js"></script>
-
-</head>
-   <!-- BigVideo Dependencies -->
-    <script src="<?php echo Yii::app()->request->baseUrl; ?>/bower_components/jquery-ui/ui/jquery-ui.js"></script>
+	<script src="<?php echo Yii::app()->request->baseUrl; ?>/bower_components/jquery-ui/ui/jquery-ui.js"></script>
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/bower_components/jquery-ui/ui/minified/jquery-ui.min.js"></script>
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/bower_components/video.js"></script>
-
-	<div style="width:100vw; height:100vh; z-index:10; position:relative;background-color:rgba(0,0,0,0.5)"> 
+	<script src="<?php echo Yii::app()->request->baseUrl; ?>/bower_components/BigVideo/lib/bigvideo.js"></script>
+</head>
+<body>
+<?php include_once("analytics.php") ?>
+   <!-- BigVideo Dependencies -->
+    
+	
+	<div class="overlay-video" style="z-index:0;">
+	
+	</div>
+	<div style="width:100vw; min-height:100vh; z-index:10; position:relative;"> 
     <!-- BigVideo -->
-    <script src="<?php echo Yii::app()->request->baseUrl; ?>/bower_components/BigVideo/lib/bigvideo.js"></script>
+    
 
     <!-- Demo -->
 
@@ -57,3 +63,4 @@
 	</div>
 </div>
 </div>	
+</body>
