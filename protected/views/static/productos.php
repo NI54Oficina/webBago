@@ -95,7 +95,7 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 
 <img id="gota-producto"  src="<?php echo Yii::app()->request->baseUrl; ?>/img/gota-<?php echo $normalizado; ?>.png"  /><?php echo Yii::app()->paisChecker->getSeccion($seccion->id);?></h2>
 
-<a href="<?php echo Yii::app()->request->baseUrl; ?>/vademecum/id<?php echo $seccion->id; ?>"><div class=" col-lg-3 col-md-3 col-sm-12 col-xs-12 volver" id="volver-producto">
+<a href="<?php echo Yii::app()->request->baseUrl; ?>/vademecum/id<?php echo $seccion->id; ?>"><div class=" col-lg-3 col-md-3 col-sm-6 col-xs-6 volver" id="volver-producto">
 <p><?php echo Textos::model()->GetText(490); ?></p>
 </div></a>
 

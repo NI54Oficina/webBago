@@ -6622,7 +6622,7 @@ figure.snip1156:hover .salud-ambiental{
 /** Fix menu ipad**/
 @media only screen 
   and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
+  and (max-device-width: 1025px) 
   and (orientation: portrait) 
   {
   
@@ -6649,7 +6649,7 @@ figure.snip1156:hover .salud-ambiental{
 		padding-top:50px;
 		color:#666;
 	}
-  
+ }
 
  @media screen and (max-width: 435px){
 
@@ -7933,9 +7933,10 @@ position:fixed;
   @media only screen 
   and (min-device-width: 325px) 
   and (max-device-width: 568px){
-  .border-celeste {
-    border-bottom: none;
-}
+	
+	.border-celeste {
+		border-bottom: none;
+	}
 
 	#ul-filiales-paises{
 		display:block;
@@ -8877,7 +8878,7 @@ position:fixed;
   and (orientation: portrait) {
   
 	#titulo-vademecum{margin-top:20px;}
-	.volver-mobile,.volver-mobile:hover{
+	.volver-mobile,.volver-mobile:hover,#volver-producto,#volver-producto:hover{
 		position:absolute;	
 		background-size:auto 95%;
 		background-position:left;
@@ -8893,7 +8894,7 @@ position:fixed;
 	
   }
 
-.redessociales-mobile {margin-bottom: 20%;}
+.redessociales-mobile {margin-bottom: 0;}
 
 
 .openlink, .link-menu{color: #337ab7}
