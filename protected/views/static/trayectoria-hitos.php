@@ -214,12 +214,14 @@
 		<div>
 			<p class="anios-1934-2006">2006</p>
 		</div>
-		
-		<p class="nace-linea-tiempo"><?php echo Textos::model()->GetText(501); ?></p> <p class="bago-linea-tiempo" style="color:#011E49;">Biogénesis Bagó</p>
+
+		<img class="" id="nace-biog-img-2" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo-antiguo-biogenesis.png"/>
+	
+		<span id="nace-p"><p class="nace-linea-tiempo"><?php echo Textos::model()->GetText(501); ?></p> <p class="bago-linea-tiempo" style="color:#011E49;">Biogénesis Bagó</p></span>
 
 	</div>
 	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-		<img class="img-cd" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo-antiguo-biogenesis.png"  style="width:150px;display: block; margin:auto;margin-top:3%"/>
+		<img class="img-cd" id="nace-biog-img" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo-antiguo-biogenesis.png"/>
 	</div>
 		<section id="cd-timeline" class="cd-container" style="margin-top: 8em;">
 
