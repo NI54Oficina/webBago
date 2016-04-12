@@ -43,13 +43,13 @@
 				
 				<h4  class="h2-rse" style="display:inline-block;"> <?php echo Textos::model()->GetText(455); ?> </h4>
 				
-<<<<<<< HEAD
+
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12   linea-rse"> </div>
 				<p style="margin-top:2%; margin-bottom: 2%;"><?php echo Textos::model()->GetText(66); ?> </p>
-=======
+
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hidden-xs hidden-sm linea-rse"> </div>
 				<p style="margin-top:2%; margin-bottom: 2%;margin-left: 0px;"><?php echo Textos::model()->GetText(66); ?> </p>
->>>>>>> origin/master
+
                 
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 linea-rse" style="margin-top:2%;" > </div>
 				
@@ -70,13 +70,13 @@
 				
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hidden-xs hidden-sm linea-rse" style="margin-top:2%;" > </div>
 				<h4  class="h2-rse" style="display:inline-block;"><?php echo Textos::model()->GetText(71); ?></h4>
-<<<<<<< HEAD
+
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  linea-rse"> </div>
 				<p style="margin-top:0%;">
-=======
+
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hidden-xs hidden-sm linea-rse"> </div>
 				<p style="margin-top:0%;margin-left: 0px;">
->>>>>>> origin/master
+
                 
                 <p style="margin-top:3% ;margin-bottom:0%;margin-left: 0px;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-bullet.png"  style="display:inline-block;" /> <?php echo Textos::model()->GetText(72); ?></p>
                 
