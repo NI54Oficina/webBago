@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 12-04-2016 a las 15:22:47
+-- Tiempo de generación: 12-04-2016 a las 17:27:00
 -- Versión del servidor: 10.1.9-MariaDB
 -- Versión de PHP: 5.5.30
 
@@ -389,7 +389,7 @@ INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (347, 'Institucional', 'Institutional', 'Institucional'),
 (348, 'Vademécum', 'Vademécum', 'Vademécum'),
 (349, 'No hay productos de este tipo en tu región.', 'No products available in your region', ''),
-(350, 'Actualmente Biogénesis Bagó se convirtió en la mayor empresa latinoamericana del sector para grandes animales y el mayor proveedor para las campañas regionales de Lucha, Control y Erradicación de la fiebre aftosa en el continente, fruto del esfuerzo e inversión en tecnología para la prevención. </br>\n			Sus productos son reconocidos a nivel mundial por su calidad y aporte estratégico en el control y erradicación de las enfermedades de mayor impacto en los principales estados productores de alimentos de origen animal.<br />\n			Actualmente, la compañía cuenta con oficinas en Brasil, Centroamérica, México, Bolivia y Uruguay, y su casa matriz se encuentra situada en Argentina.', '', 'Focada em soluções de saúde animal adaptadas e específicas para a região, desenvolvendo produtos e serviços veterinários com a mais alta tecnologia e cuidado na excelência do seu processo produtivo.  Atualmente, a empresa conta com escritórios no Brasil, América Central, México, Uruguai e sua matriz na Argentina.'),
+(350, 'Actualmente Biogénesis Bagó se convirtió en la mayor empresa latinoamericana del sector para grandes animales y el mayor proveedor para las campañas regionales de Lucha, Control y Erradicación de la Fiebre Aftosa en el continente, fruto del esfuerzo e inversión en tecnología para la prevención. </br>\n			Sus productos son reconocidos a nivel mundial por su calidad y aporte estratégico en el control y erradicación de las enfermedades de mayor impacto en los principales estados productores de alimentos de origen animal.<br />', '', 'Focada em soluções de saúde animal adaptadas e específicas para a região, desenvolvendo produtos e serviços veterinários com a mais alta tecnologia e cuidado na excelência do seu processo produtivo.'),
 (351, 'Nace Laboratorio San Jorge', 'Incorporation of San Jorge Laboratories', 'Nasce o Laboratório San Jorge'),
 (352, 'Chemotécnica registra 1er producto veterinario: ectoparasiticidas a base de Arsenicales', 'Chemotécnica registers the first veterinary product: an arsenic-base ectoparasiticide\n\n', 'Chemotécnica Registra 1º produto Veterinário: Ectoparasiticidas a base de Arsenicais'),
 (353, 'Nace Chemotécnica Sintyal', 'Incorporation of Chemotécnica Sintyal', 'Nasce a Chemotécnica Sintyal'),
