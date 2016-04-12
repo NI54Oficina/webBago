@@ -1,5 +1,11 @@
 <!DOCTYPE HTML>
-<html lang="en-US">
+<?php $lang="";
+	if(!isset($_SESSION["lng"])){
+		$lang="es";
+	}else{
+		$lang=  $_SESSION["lng"];
+	} ?>
+<html lang="<?php echo $lang; ?>">
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,12 +17,7 @@
 	
 	$metas= MetatagPage::model()->findAllByAttributes(array('idPage'=>$data));	
 	
-	$lang="";
-	if(!isset($_SESSION["lng"])){
-		$lang="es";
-	}else{
-		$lang=  $_SESSION["lng"];
-	}
+	
 	if($metas){
 	foreach($metas as $m){
 		$code= Metatag::model()->findByPk($m->idMetatag);

@@ -38,8 +38,8 @@
 						<p style="margin-top:2% ;margin-bottom:3.5%;"><?php echo Textos::model()->GetText(64); ?> </p>
 				
 					
-				<h4  class="h3-rse" style="display:inline-block; margin-bottom: 0%;"><?php echo Textos::model()->GetText(65); ?></h4>
-				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hidden-xs hidden-sm linea-rse" style="margin-top:2%;" > </div>
+				<h4  class="h3-rse" style="display:block; margin-bottom: 3%;"><?php echo Textos::model()->GetText(65); ?></h4>
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hidden-xs hidden-sm linea-rse" style="margin-top:2% margin-bottom:3%;" > </div>
 				
 				<h4  class="h2-rse" style="display:inline-block;"> <?php echo Textos::model()->GetText(455); ?> </h4>
 				
@@ -60,7 +60,7 @@
 				<h4  class="h2-rse" style="display:block;"><?php echo Textos::model()->GetText(457); ?></h4>
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hidden-xs hidden-sm linea-rse"> </div>
 
-				<p style="margin-top:5%; margin-bottom: 5%;"><?php echo Textos::model()->GetText(69); ?><?php echo Textos::model()->GetText(70); ?></p>
+				<p style="margin-top:5%; margin-bottom: 4%;"><?php echo Textos::model()->GetText(69); ?><?php echo Textos::model()->GetText(70); ?></p>
 
 				
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hidden-xs hidden-sm linea-rse" style="margin-top:2%;" > </div>

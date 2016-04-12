@@ -4,26 +4,88 @@
     <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/style.css">
     <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/bower_components/BigVideo/css/bigvideo.css">
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/bower_components/modernizr/modernizr-2.5.3.min.js"></script>
-
-</head>
-   <!-- BigVideo Dependencies -->
-    <script src="<?php echo Yii::app()->request->baseUrl; ?>/bower_components/jquery-ui/ui/jquery-ui.js"></script>
+	<script src="<?php echo Yii::app()->request->baseUrl; ?>/bower_components/jquery-ui/ui/jquery-ui.js"></script>
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/bower_components/jquery-ui/ui/minified/jquery-ui.min.js"></script>
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/bower_components/video.js"></script>
-
-	<div style="width:100vw; height:100vh; z-index:10; position:relative;background-color:rgba(0,0,0,0.5)"> 
+	<script src="<?php echo Yii::app()->request->baseUrl; ?>/bower_components/BigVideo/lib/bigvideo.js"></script>
+</head>
+<body>
+<?php include_once("analytics.php") ?>
+   <!-- BigVideo Dependencies -->
+    
+	
+	
+	<div style="width:100vw; min-height:100vh; z-index:10; position:relative;"> 
     <!-- BigVideo -->
-    <script src="<?php echo Yii::app()->request->baseUrl; ?>/bower_components/BigVideo/lib/bigvideo.js"></script>
+    
 
     <!-- Demo -->
 
-     <script>
+     <!--<script>
 	    $(function() {
             var BV = new $.BigVideo();
 			BV.init();
 			BV.show('<?php echo Yii::app()->getBaseUrl(true); ?>/video/home1.mp4',{ambient:true});
 	    });
-    </script>
+    </script>!-->
+	
+	<script>
+	var vid = document.getElementById("bgvid");
+var pauseButton = document.querySelector("#polina button");
+
+function vidFade() {
+  vid.classList.add("stopfade");
+}
+
+vid.addEventListener('ended', function()
+{
+// only functional if "loop" is removed 
+vid.pause();
+// to capture IE10
+vidFade();
+}); 
+
+
+pauseButton.addEventListener("click", function() {
+  vid.classList.toggle("stopfade");
+  if (vid.paused) {
+    vid.play();
+    pauseButton.innerHTML = "Pause";
+  } else {
+    vid.pause();
+    pauseButton.innerHTML = "Paused";
+  }
+})
+
+	</script>
+	
+	<style>
+	video { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    
+    transform: translateX(-50%) translateY(-50%);
+ /*background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;*/
+  background-size: cover;
+  transition: 1s opacity;
+}
+	</style>
+	
+	
+	<video autoplay  poster="<?php echo Yii::app()->getBaseUrl(true); ?>/video/home1.mp4" id="bgvid" loop>
+  <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
+<!--<source src="<?php echo Yii::app()->getBaseUrl(true); ?>/video/home1.mp4" type="video/webm">!-->
+<source src="<?php echo Yii::app()->getBaseUrl(true); ?>/video/home1.mp4" type="video/mp4">
+</video>
+
+<div class="overlay-video" style="z-index:0;">
+	
+	</div>
 
 	<!-- PAÍSES -->
 	<div id="epigrafe-mobile"  class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><img  src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo-blanco.png" style=""/></div>
@@ -57,3 +119,4 @@
 	</div>
 </div>
 </div>	
+</body>

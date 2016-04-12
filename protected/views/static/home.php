@@ -4,6 +4,7 @@
 
 
 <body id="skrollable" style="width:100%;overflow-x:hidden;">
+<?php include_once("analytics.php") ?>
 <script src="<?php echo Yii::app()->getBaseUrl(true); ?>/js/jquery.boxloader.min.js"></script>	
 <!--COMENTARIO DE LINEA TEST -->
 
@@ -1493,7 +1494,7 @@
 				<!--<img class="curva-rrhh" src="<?php echo Yii::app()->request->baseUrl; ?>/img/rrhh-01.png">!-->
 				</div>
 				
-				<div style="width:100%;display:inline-block;text-align:center;margin-top:-2px;position:relative;background-image:url(<?php echo Yii::app()->request->baseUrl; ?>/img/rrhh-01.png);background-size:100% auto;background-repeat:no-repeat;">
+				<div id="display-rrhh" style="width:100%;display:inline-block;text-align:center;margin-top:-2px;position:relative;background-image:url(<?php echo Yii::app()->request->baseUrl; ?>/img/rrhh-01.png);background-size:100% auto;background-repeat:no-repeat;">
 				
 				<!-- TEXTO-->
 				<!-- TEXTO HEADER-->
@@ -1677,7 +1678,7 @@
 						 $("#form1").validate({
 							submitHandler: function(form) {
 								
-							$.post( "<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/web/contacto", $( "#form1" ).serialize() ).done(function(data){
+							$.post( "http://<?php echo $_SERVER['SERVER_NAME']; ?>/br/web/contacto/", $( "#form1" ).serialize() ).done(function(data){
 								//console.log("exito!");
 								$("#enviando").fadeOut(100);
 								$("#enviado").fadeIn(100);

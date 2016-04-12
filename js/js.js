@@ -147,6 +147,7 @@ $(function(){
   
     });
 	jQuery(window).load(function () {
+		CheckDevice();
 		Header();
 		SameHeight();
 		$(".fadder").css('opacity',1);
@@ -174,12 +175,43 @@ $(function(){
 
 	
 	$( window ).resize(function() {
+		var lastOrientation= orientation;
+		CheckDevice();
+		
+		if(isIOS){
+			if(lastOrientation==orientation){
+				return;
+			}
+		}
 		Header();
 		ResetHeight();
 		SetDistanceHeader();
 		setTimeout(function(){
 		SameHeight()},1000);
 	});
+
+	var isMobile=false;
+	var isIOS=false;
+	var orientation="";
+	
+	function CheckDevice(){
+		if(window.innerHeight > window.innerWidth){
+			orientation= "portrait";
+		}else{
+			orientation= "landscape;"
+		}
+		
+		isMobile = /Android|mobi|iPad|Android|webOS|iPhone|iPod|pocket|psp|kindle|Kindle|avantgo|blazer|midori|Tablet|Palm|maemo|plucker|phone|symbian|IEMobile|mobile|ZuneWP7|Windows Phone|Opera Mini|BlackBerry/i.test(navigator.userAgent);
+		if(!isMobile){
+			isMobile=/iPhone|iPad|iPod/i.test(navigator.platform);
+		}
+		isIOS = /iPad|iPhone|iPod|Opera Mini/i.test(navigator.userAgent);
+		if(!isIOS){
+			isIOS=/iPhone|iPad|iPod/i.test(navigator.platform);
+		}
+		console.log(isMobile);
+		console.log(isIOS);
+	}
 	
 	function ResetHeight(){
 		var id=1;

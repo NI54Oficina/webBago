@@ -54,6 +54,7 @@ return array(
 			'rules'=>array(
 				
 				"paises"=>array("web/get/data/paises"	),
+				"contacto"=>array("web/contacto"),
 			
 				'<pais>/<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<pais>/<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
