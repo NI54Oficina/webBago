@@ -6841,6 +6841,8 @@ margin-right:auto;}
 figure.snip1156 figcaption > div:hover{
 	background:transparent;
 }
+
+
 /** hover caption **/
 figure.snip1156 figcaption:hover{
 
@@ -6960,7 +6962,6 @@ figure.snip1156 .d-a-2 h2{
 		transform: scale(1,1);
 		
 	}
-
 
 }
 
@@ -8825,7 +8826,7 @@ position:fixed;
 
 .openlink{
 	color: #337ab7;
-		transition:all 0.3s ease;
+	transition:all 0.3s ease;
 }
 
 .openlink:hover{
@@ -9036,12 +9037,12 @@ position:fixed;
 		box-shadow: 0 0 0 4px white, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
 	}
 	
-		#nace-biog-img-2 {
-    width: 97px;
-    display: inline-block;
-    margin: auto;
-    margin-top: -6%;
-    margin-left: 2%;
+	#nace-biog-img-2 {
+		width: 97px;
+		display: inline-block;
+		margin: auto;
+		margin-top: -6%;
+		margin-left: 2%;
 	}
 	
 	
@@ -9063,7 +9064,7 @@ position:fixed;
 	display: inline-block;    
 	color: #337ab7; 
 	font-size: 13px;    
-	width: 80%;
+	width: 75%;
 }
 
 #ver-revista {
@@ -9124,12 +9125,12 @@ position:fixed;
 		box-shadow: 0 0 0 4px white, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
 	}
 	
-			#nace-biog-img-2 {
-    width: 97px;
-    display: inline-block;
-    margin: auto;
-    margin-top: -6%;
-    margin-left: 2%;
+	#nace-biog-img-2 {
+		width: 97px;
+		display: inline-block;
+		margin: auto;
+		margin-top: -6%;
+		margin-left: 2%;
 	}
 	
 	
@@ -9146,14 +9147,22 @@ position:fixed;
 	#cd-timeline{
 		margin-top: 3em;
 	}
+	
+	.snip1156.image h3 {
+		display: none;
+		color: #b8b8b8;
+		font-size: 16px;
+		margin-left: 15px;
+		margin-right: 15px;
+		text-align: left;
+	}
+
+
   }
   
 .img-proveedores-download{
 	display:inline-block;
 }
-
-
-
 
 
 .glyphicon-menu-hamburger:before {
