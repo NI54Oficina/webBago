@@ -5791,7 +5791,7 @@ figure.snip1156:hover .salud-ambiental{
 
 /* Landscape */
 @media only screen 
-  and (min-device-width: 325px) 
+  and (min-device-width: 320px) 
   and (max-device-width: 736px)
   and (orientation: landscape) {
 	.b-l{
@@ -5872,7 +5872,7 @@ figure.snip1156:hover .salud-ambiental{
 
 /* Portrait */
 @media only screen 
-  and (min-device-width: 325px) 
+  and (min-device-width: 320px) 
   and (max-device-width: 480px)
   and (orientation: portrait) {
 	.b-l{
@@ -6013,7 +6013,7 @@ figure.snip1156:hover .salud-ambiental{
 
 
 @media only screen 
-  and (min-device-width: 325px) 
+  and (min-device-width: 320px) 
   and (max-device-width: 736px)
   {
 
@@ -6854,8 +6854,6 @@ background-color:rgba(0, 59, 93, 0.5);
 }
 
 
-
-
 figure.snip1156 figcaption > div{
 	margin:5%;
 	
@@ -6876,8 +6874,8 @@ figure.snip1156:hover .inner-producto-vademecum{
 
 figure.snip1156:hover .inner-producto-vademecum{
 	
-	-ms-transform: scale(1.5,1.5); /* IE 9 */
-    -webkit-transform: scale(1.5,1.5); /* Safari */
+	-ms-transform: scale(1.5,1.5); 
+    -webkit-transform: scale(1.5,1.5); 
     transform: scale(1.5,1.5);
 	
 }
@@ -6964,7 +6962,7 @@ figure.snip1156 .d-a-2 h2{
 
 	.logo-blanco {
 		width: 60%;
-		margin-top: -3%;
+		margin-top: 10%;
 	}
 	
 	.h1-home-ev {
@@ -7996,7 +7994,7 @@ position:fixed;
  
  @media only screen 
   and (min-device-width: 200px) 
-  and (max-device-width: 321px) 
+  and (max-device-width: 319px) 
   {
   
    .border-celeste {
@@ -9043,7 +9041,7 @@ position:fixed;
 
   
   @media only screen 
-  and (min-device-width: 350px) 
+  and (min-device-width: 240px) 
   and (max-device-width: 737px) 
   {
 	.titulo-layout-aftosa {
@@ -9142,7 +9140,7 @@ position:fixed;
 			position: initial;
 			margin: 0;
 			padding: 0;
-			width: 79.5vw;
+			width: 85vw;
 		}
 		
 		#nace-p {
@@ -9153,3 +9151,16 @@ position:fixed;
   
   }
 
+  
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+{
+
+	.bienvenidos {
+		font-size: 23px;
+	}
+
+}
+  
+  
