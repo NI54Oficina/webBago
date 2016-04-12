@@ -1,6 +1,6 @@
 
 <!---------------------------------------------------------------------------------------------      HEADER     --------------------------------------------------------------------------------------------->
-
+<!--<div id='logDiv' style='background:red;width:100vw;height:50vh;color:white;position:fixed;top:0;left:0;z-index:100000;'></div>!-->
 
 <header id="navbar-main" class="navbar navbar-inverse col-lg-12 col-md-12 col-sm-12 col-xs-12" style="width:100%;padding-bottom: 10px;background: -webkit-linear-gradient(left, rgba(255,255,255,1) 17%,rgba(255,255,255,1) 18%,rgba(255,255,255,0.98) 48%,rgba(255,255,255,0.99) 100%);
     background: linear-gradient(to right, rgba(255,255,255,1) 17%,rgba(255,255,255,1) 18%,rgba(255,255,255,0.98) 48%,rgba(255,255,255,0.99) 100%);

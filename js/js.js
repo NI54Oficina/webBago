@@ -175,11 +175,11 @@ $(function(){
 
 	
 	$( window ).resize(function() {
-		var lastOrientation= orientation;
+		var lastOrientation= currentOrientation;
 		CheckDevice();
 		
 		if(isIOS){
-			if(lastOrientation==orientation){
+			if(lastOrientation==currentOrientation){
 				return;
 			}
 		}
@@ -192,14 +192,17 @@ $(function(){
 
 	var isMobile=false;
 	var isIOS=false;
-	var orientation="";
+	var currentOrientation="";
+	
 	
 	function CheckDevice(){
 		if(window.innerHeight > window.innerWidth){
-			orientation= "portrait";
+			currentOrientation= "portrait";
+			
 		}else{
-			orientation= "landscape;"
+			currentOrientation= "landscape;"
 		}
+		//$("#logDiv").html("<div>"+currentOrientation+"</div>"+$("#logDiv").html());
 		
 		isMobile = /Android|mobi|iPad|Android|webOS|iPhone|iPod|pocket|psp|kindle|Kindle|avantgo|blazer|midori|Tablet|Palm|maemo|plucker|phone|symbian|IEMobile|mobile|ZuneWP7|Windows Phone|Opera Mini|BlackBerry/i.test(navigator.userAgent);
 		if(!isMobile){

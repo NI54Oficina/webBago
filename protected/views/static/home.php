@@ -795,7 +795,8 @@
 			?>
 	</section>
 	
-
+	
+	
 	<?php if($_SESSION["lng"]=="es"){ ?>
 	
 	<img style="width: 100%;position:relative;margin-bottom:-1px;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-celeste.png" alt="" />	
@@ -1082,12 +1083,18 @@
 			
 			<div id="contenido-vad" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" align="center">
 					
+					<?php if($_SESSION["lng"]=="en"){ ?>
+					<div id="vade" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+							<img class="icono-menu" src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-rrhh.png"><h2 id="titulo-vad">VADEMÉCUM</h2><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-rrhh.png" class="icono-menu">
+							<div class="border-vad"></div>
+					</div> <!--Termina título vademécum-->
+					<?php }else{ ?>
 					<!-- /////// TITULO  /////// -->
 					<div id="vade" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 							<img class="icono-menu" src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-rrhh.png"><h2 id="titulo-vad">VADEMÉCUM</h2><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-rrhh.png" class="icono-menu">
 							<div class="border-vad"></div>
 					</div> <!--Termina título vademécum-->
-					
+					<?php } ?>
 					
 					<!-- /////// VADEMÉCUM  /////// -->
 					<div class="col-lg-10 col-md-11 col-sm-12 col-xs-12" id="botones" >

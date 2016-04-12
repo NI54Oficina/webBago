@@ -7228,7 +7228,7 @@ figure.snip1156 .d-a-2 h2{
 	text-align:center;
 }
 
-.titulo-nutricion, {
+.titulo-nutricion {
 	color:#D18900;
 }	
 
@@ -7492,6 +7492,8 @@ h5{
 		margin-top: 5px !important;
 		display: block;
 	}
+	
+	
 }
 
 #navbar-main{
@@ -8723,8 +8725,8 @@ position:fixed;
 	.salud-animal{line-height: 50px !important; font-size: 40px !important;}
 	 .laevolucion{
 	font-size: 30px;
- }
- 
+	}
+	.redessociales-mobile {margin-bottom: 20%;} 
 
 }
 
@@ -8798,4 +8800,46 @@ position:fixed;
 
 
 
-.redessociales-mobile {margin-bottom: 20%;}
+
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+   {
+	.volver,.volver:hover{
+		position:absolute;
+		margin:0;
+		padding:0;
+		left: initial;
+		top:10vh;
+		margin-left:0;
+		background-position:left;
+		
+	}
+	.volver p,.volver:hover p{
+		margin-left:50px;
+	}
+}
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) {
+  
+	#titulo-vademecum{margin-top:20px;}
+	.volver-mobile,.volver-mobile:hover{
+		position:absolute;	
+		background-size:auto 95%;
+		background-position:left;
+		margin-left:0;
+		text-align:left;
+		top:8vh;
+		
+	}
+	#volver-p{
+		margin-left:50px;
+		margin-top:0;
+	}
+	
+  }
