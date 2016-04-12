@@ -8807,3 +8807,5 @@ position:fixed;
 
 .openlink, .link-menu{color: #337ab7}
 .openlink:hover {color:#215E92;}
+
+.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {background: transparent;}
