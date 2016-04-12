@@ -8904,8 +8904,8 @@ position:fixed;
 
 #quienes-transicion{
 	animation:fadein 2.5s;
-	animation: text-inside 1.5s;
-	animation: text-inside 1.5s ease-out forwards;
+	animation: text-inside 2.5s;
+	animation: text-inside 2.5s ease-out forwards;
 }
 
 .mision-transicion{
@@ -9019,7 +9019,7 @@ position:fixed;
 	
 	#nace-p{
 	    display: block;
-		padding-left: 112px;
+		padding-left: 105px;
 		margin-top: -52px;
 	}
 		
@@ -9094,6 +9094,12 @@ position:fixed;
 			margin: 0;
 			padding: 0;
 			width: 79.5vw;
+		}
+		
+		#nace-p {
+			display: block;
+			padding-left: 105px;
+			margin-top: -43px;
 		}
   
   }
