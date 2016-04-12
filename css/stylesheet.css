@@ -8763,3 +8763,12 @@ position:fixed;
     opacity: 1;
   }
 }
+
+
+
+@media screen and (max-width: 1050px){
+
+	.h2-titulo{ display: none; }
+	.h3-rse {margin-top: 0px; font-size: 17px;}
+	.h2-rse {font-size: 15px;}
+}
