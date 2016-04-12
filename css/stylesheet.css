@@ -9006,3 +9006,10 @@ position:fixed;
 	font-size: 13px;    
 	width: 80%;
 }
+
+
+
+.glyphicon-menu-hamburger:before {
+    content: "\e236";
+    font-size: 22px;
+}
