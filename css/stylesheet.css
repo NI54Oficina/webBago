@@ -5112,6 +5112,9 @@ figure.snip1156:hover .salud-ambiental{
   and (min-device-width: 768px) 
   and (max-device-width: 1024px) 
   {
+
+
+  	.h1-1-home { margin-top: 0px; }
 	.h2-cd {
 		color: #C8C6C6;
 		font-weight: 700;
@@ -8779,7 +8782,7 @@ position:fixed;
 
 @media screen and (max-width: 1050px) and (min-width: 150px;){
 
-	.h2-titulo{ display: none; }
+	.h2-titulo { display: none; }
 	.h3-rse {margin-top: 0px; font-size: 17px;}
 	.h2-rse {font-size: 15px;}
 	h4.tr-2.move-x-2 {color: #666!important;}

@@ -35,7 +35,7 @@
 			<div  class="tr  col-lg-12 col-md-12 col-sm-12 col-xs-12 inner-text container-prensa" style="text-shadow:none;padding-top:0;margin: 0;">			
 				<h2 class="h2-aftosa hidden-md hidden-lg h2-titulo" ><?php echo Textos::model()->GetText(347); ?><br /></h2>
 					<h3 class="h3-rse" style="margin-bottom: 0%"><?php echo Textos::model()->GetText(63); ?></h3>
-						<p style="margin-top:2% ;margin-bottom:3.5%;"><?php echo Textos::model()->GetText(64); ?> </p>
+						<p style="margin-top:2% ;margin-bottom:3.5%;margin-left: 0px;"><?php echo Textos::model()->GetText(64); ?> </p>
 				
 					
 				<h4  class="h3-rse" style="display:block; margin-bottom: 3%;"><?php echo Textos::model()->GetText(65); ?></h4>
@@ -44,14 +44,14 @@
 				<h4  class="h2-rse" style="display:inline-block;"> <?php echo Textos::model()->GetText(455); ?> </h4>
 				
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hidden-xs hidden-sm linea-rse"> </div>
-				<p style="margin-top:2%; margin-bottom: 2%;"><?php echo Textos::model()->GetText(66); ?> </p>
+				<p style="margin-top:2%; margin-bottom: 2%;margin-left: 0px;"><?php echo Textos::model()->GetText(66); ?> </p>
                 
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hidden-xs hidden-sm linea-rse" style="margin-top:2%;" > </div>
 				
 				<h4  class="h2-rse" style="display:inline-block;"><?php echo Textos::model()->GetText(456); ?></h4>
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hidden-xs hidden-sm linea-rse"> </div>
 
-                <p style="margin-top:2% ;margin-bottom:3.5%;"><?php echo Textos::model()->GetText(67); ?></p>
+                <p style="margin-top:2% ;margin-bottom:3.5%;margin-left: 0px;"><?php echo Textos::model()->GetText(67); ?></p>
 
 				<h4  class="h3-rse" style="display:inline-block; margin-bottom: 0%;"><?php echo Textos::model()->GetText(68); ?></h4>
 
@@ -60,19 +60,19 @@
 				<h4  class="h2-rse" style="display:block;"><?php echo Textos::model()->GetText(457); ?></h4>
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hidden-xs hidden-sm linea-rse"> </div>
 
-				<p style="margin-top:5%; margin-bottom: 4%;"><?php echo Textos::model()->GetText(69); ?><?php echo Textos::model()->GetText(70); ?></p>
+				<p style="margin-top:5%; margin-bottom: 4%;margin-left: 0px;"><?php echo Textos::model()->GetText(69); ?><?php echo Textos::model()->GetText(70); ?></p>
 
 				
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hidden-xs hidden-sm linea-rse" style="margin-top:2%;" > </div>
 				<h4  class="h2-rse" style="display:inline-block;"><?php echo Textos::model()->GetText(71); ?></h4>
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hidden-xs hidden-sm linea-rse"> </div>
-				<p style="margin-top:0%;">
+				<p style="margin-top:0%;margin-left: 0px;">
                 
-                <p style="margin-top:3% ;margin-bottom:0%;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-bullet.png"  style="display:inline-block;" /> <?php echo Textos::model()->GetText(72); ?></p>
+                <p style="margin-top:3% ;margin-bottom:0%;margin-left: 0px;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-bullet.png"  style="display:inline-block;" /> <?php echo Textos::model()->GetText(72); ?></p>
                 
-                <p style="margin-top: 3%;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-bullet.png"  style="display:inline-block;" /> <?php echo Textos::model()->GetText(73); ?></p>
+                <p style="margin-top: 3%;margin-left: 0px;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-bullet.png"  style="display:inline-block;" /> <?php echo Textos::model()->GetText(73); ?></p>
                 
-                <p style="margin-bottom: 5%; margin-top: 3%;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-bullet.png"  style="display:inline-block;" /> <?php echo Textos::model()->GetText(74); ?></p>
+                <p style="margin-bottom: 5%; margin-top: 3%;margin-left: 0px;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-bullet.png"  style="display:inline-block;" /> <?php echo Textos::model()->GetText(74); ?></p>
              
                 
                  </p>
