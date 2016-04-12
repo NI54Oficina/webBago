@@ -106,15 +106,15 @@
 			
 		<!-- +++++ LISTA VERSIONES +++++ -->
 		<ul class=" col-lg-6 col-md-6 col-sm-4 col-xs-12" id="ul-nav-2" style="color:#0C6594;float:right;    text-align: right;">
-				<li class="li-nav-2"><div id="links"><a class="openlink" href="javascript:void(0);"  style="float:left;padding: 10px 0px;color: #337ab7;"><?php echo Textos::model()->GetText(426); ?></a></div></li>
+				<li class="li-nav-2"><div id="links"><a class="openlink" href="javascript:void(0);"  style="float:left;padding: 10px 0px;"><?php echo Textos::model()->GetText(426); ?></a></div></li>
 				<?php if($_SESSION["lng"]!="es"){ ?>
-				<li class="li-nav-2"><a class="link-menu" href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/1/lng/es"style="float:left;padding: 10px 0px;color: #337ab7;"><?php echo Textos::model()->GetText(427); ?></a></li>
+				<li class="li-nav-2"><a class="link-menu" href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/1/lng/es"style="float:left;padding: 10px 0px;"><?php echo Textos::model()->GetText(427); ?></a></li>
 				<?php } ?>
 				<?php if($_SESSION["lng"]!="pt"){ ?>
-				<li class="li-nav-2"><a class="link-menu" href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/2/lng/pt"style="float:left;padding: 10px 0px;color: #337ab7;"><?php echo Textos::model()->GetText(428); ?></a></li>
+				<li class="li-nav-2"><a class="link-menu" href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/2/lng/pt"style="float:left;padding: 10px 0px;"><?php echo Textos::model()->GetText(428); ?></a></li>
 				<?php } ?>
 				<?php if($_SESSION["lng"]!="en"){ ?>
-				<li class="li-nav-2"><a class="link-menu" href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/9/lng/en"style="float:left;padding: 10px 0px;color: #337ab7;">English version</a></li>
+				<li class="li-nav-2"><a class="link-menu" href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/9/lng/en"style="float:left;padding: 10px 0px;">English version</a></li>
 				<?php } ?>
 				<?php if($_SESSION["lng"]=="es"){ ?>
 				<li class="li-nav-2">

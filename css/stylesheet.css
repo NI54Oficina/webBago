@@ -245,9 +245,12 @@ font-size: 22px;
 		color:#969696;
 	}
 	
-	.li-nav:hover{
-		transition: 0.4s all ease-in-out;
+	
+
+	.li-nav a:hover{
+		color:#202020;
 	}
+
 	
 	.a.nav:hover{
 		text-decoration:none;
@@ -271,6 +274,7 @@ font-size: 22px;
 	
 	.ul-nav .li-nav a:hover {
 		transition: 0.4s all ease-in-out;
+		color:#202020;
 	}
 	
 	.ul-nav li ul {
@@ -8799,3 +8803,7 @@ position:fixed;
 
 
 .redessociales-mobile {margin-bottom: 20%;}
+
+
+.openlink, .link-menu{color: #337ab7}
+.openlink:hover {color:#215E92;}
