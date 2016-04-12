@@ -6214,6 +6214,13 @@ figure.snip1156:hover .salud-ambiental{
   and (min-device-width: 1200px) 
   and (max-device-width: 2100px) 
    { 
+   
+   .p-proveedores-download{ 
+	display: inline-block;    
+	color: #337ab7; 
+	font-size: 13px;    
+	width: 80%;
+}
      	#nace-biog-img-2 {
 		display:none;
 	}
@@ -8972,6 +8979,13 @@ position:fixed;
 	#cd-timeline{
 		margin-top: 3em;
 	}
+	
+	   .p-proveedores-download{ 
+	display: inline-block;    
+	color: #337ab7; 
+	font-size: 13px;    
+	width: 80%;
+}
   }
   
 
@@ -8992,7 +9006,12 @@ position:fixed;
 		margin-top: 40px;
 	}
 	
-
+	.p-proveedores-download {
+		display: inline-block;
+		color: #337ab7;
+		font-size: 13px;
+		width: 70%;
+	}
 	
   }
   
@@ -9000,12 +9019,7 @@ position:fixed;
 	display:inline-block;
 }
 
-.p-proveedores-download{ 
-	display: inline-block;    
-	color: #337ab7; 
-	font-size: 13px;    
-	width: 80%;
-}
+
 
 
 
@@ -9013,3 +9027,20 @@ position:fixed;
     content: "\e236";
     font-size: 22px;
 }
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  {
+  
+		#ul-nav-principal {
+			height: auto;
+			text-align: right;
+			position: initial;
+			margin: 0;
+			padding: 0;
+			width: 79.5vw;
+		}
+  
+  }
