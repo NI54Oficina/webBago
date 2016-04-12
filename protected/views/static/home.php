@@ -1494,7 +1494,7 @@
 				<!--<img class="curva-rrhh" src="<?php echo Yii::app()->request->baseUrl; ?>/img/rrhh-01.png">!-->
 				</div>
 				
-				<div style="width:100%;display:inline-block;text-align:center;margin-top:-2px;position:relative;background-image:url(<?php echo Yii::app()->request->baseUrl; ?>/img/rrhh-01.png);background-size:100% auto;background-repeat:no-repeat;">
+				<div id="display-rrhh" style="width:100%;display:inline-block;text-align:center;margin-top:-2px;position:relative;background-image:url(<?php echo Yii::app()->request->baseUrl; ?>/img/rrhh-01.png);background-size:100% auto;background-repeat:no-repeat;">
 				
 				<!-- TEXTO-->
 				<!-- TEXTO HEADER-->
