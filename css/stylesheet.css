@@ -1,3 +1,13 @@
+@viewport{
+    zoom: 1.0;
+    width: device-width;
+}
+
+@-ms-viewport{
+    width: extend-to-zoom;
+    zoom: 1.0;
+}
+
 
 /*--------------------------------------------------------------------------------- CSS  LAYOUT E INTERIOR ------------------------------------------------------*/
 
@@ -5346,7 +5356,8 @@ figure.snip1156:hover .salud-ambiental{
 		width: 25%;
 		padding-top: 2%;
 		padding-bottom: 2%;
-		margin-left: 20px;
+		padding-left: 5%;
+		margin-left:0;	
 	}
 	
 	.li-paises {
@@ -6621,8 +6632,8 @@ figure.snip1156:hover .salud-ambiental{
 
 /** Fix menu ipad**/
 @media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1025px) 
+  and (min-device-width: 760px) 
+  and (max-device-width: 1100px) 
   and (orientation: portrait) 
   {
   
@@ -6659,6 +6670,7 @@ figure.snip1156:hover .salud-ambiental{
 		display:block !important;
 		visibility:visible !important;
 		z-index:0;
+		width:100%;
 	}
 	.navbar-nav .m-l{
 		margin-left:0;
@@ -6676,9 +6688,31 @@ figure.snip1156:hover .salud-ambiental{
 		position:relative;
 		z-index:100000;
 	}
-	
-	
+	header .ul-nav li ul {
+		margin-left:0;
 	}
+	header  .ul-nav li:hover > ul{
+		position:initial;
+	}
+	ul.dropdown-menu.dropdown-menu-right{
+		width:50%;
+	}
+	#navbarSecciones .container-fluid{
+		padding-left:0;padding-right:0;
+	}
+	#ul-nav-principal,#container-ul-nav-header{
+		width:100%;
+		/*height:auto;*/
+	}
+	.li-nav{
+		margin-right:0;width:96%;padding-left:2%;
+	}
+	.ul-nav li ul li{
+		background:transparent;
+	}
+	
+	
+}
 /** fin fix ipad menu**/
 
 @media screen and (max-width: 435px){

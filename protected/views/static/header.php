@@ -1,4 +1,13 @@
 
+<script>
+$("body").on("mousedown",".navbar-toggle",function(){
+	console.log("poyooo");
+	//$("body").css("background","red");
+});
+$("body").on("touchstart",".navbar-toggle",function(){
+	$(this).click();
+});
+</script>
 <!---------------------------------------------------------------------------------------------      HEADER     --------------------------------------------------------------------------------------------->
 <!--<div id='logDiv' style='background:red;width:100vw;height:50vh;color:white;position:fixed;top:0;left:0;z-index:100000;'></div>!-->
 
