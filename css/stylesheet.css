@@ -6649,14 +6649,7 @@ figure.snip1156:hover .salud-ambiental{
 		padding-top:50px;
 		color:#666;
 	}
- }
-
- @media screen and (max-width: 435px){
-
- 	.tr, .tr-2{ color:#0C5582 !important; }
-    
-
- }
+ 
 	.navbar-collapse.collapse{
 		display:none !important;
 		visibility:hidden !important;
@@ -6688,6 +6681,12 @@ figure.snip1156:hover .salud-ambiental{
 	}
 /** fin fix ipad menu**/
 
+@media screen and (max-width: 435px){
+
+ 	.tr, .tr-2{ color:#0C5582 !important; }
+    
+
+ }
 
 
 #barra-institucional{
