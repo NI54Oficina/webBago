@@ -64,7 +64,7 @@
 			direction:"x",
 			position: "-50%",
 			effect: "fadeIn",
-			duration: "3s",
+			duration: "4s",
 			windowarea: "50%"
 		}); 
 		

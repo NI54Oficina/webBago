@@ -8904,46 +8904,46 @@ position:fixed;
 
 #quienes-transicion{
 	animation:fadein 2.5s;
-	animation: text-inside 2.5s;
-	animation: text-inside 2.5s ease-out forwards;
+	animation: text-inside 4s;
+	animation: text-inside 4s ease-out forwards;
 }
 
 .mision-transicion{
 	animation:fadein 2.5s;
-	animation: text-inside 1.5s;
-	animation: text-inside 1.5s ease-out forwards;
+	animation: text-inside 4s;
+	animation: text-inside 4s ease-out forwards;
 }
 
 
 #rse-transicion{
 	animation:fadein 2.5s;
-	animation: text-inside 1.5s;
-	animation: text-inside 1.5s ease-out forwards;
+	animation: text-inside 4s;
+	animation: text-inside 4s ease-out forwards;
 }
 
 
 #lucha-transicion{
 	animation:fadein 2.5s;
-	animation: text-inside 1.5s;
-	animation: text-inside 1.5s ease-out forwards;
+	animation: text-inside 4s;
+	animation: text-inside 4s ease-out forwards;
 }
 
 #prensa-transicion{
 	animation:fadein 2.5s;
-	animation: text-inside 1.5s;
-	animation: text-inside 1.5s ease-out forwards;
+	animation: text-inside 4s;
+	animation: text-inside 4s ease-out forwards;
 }
 
 #proveedores-transicion{
 	animation:fadein 2.5s;
-	animation: text-inside 1.5s;
-	animation: text-inside 1.5s ease-out forwards;
+	animation: text-inside 4s;
+	animation: text-inside 4s ease-out forwards;
 }
 
 #plantas-transicion{
 	animation:fadein 2.5s;
-	animation: text-inside 1.5s;
-	animation: text-inside 1.5s ease-out forwards;
+	animation: text-inside 4s;
+	animation: text-inside 4s ease-out forwards;
 }
 
 
