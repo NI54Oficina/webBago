@@ -6246,6 +6246,12 @@ figure.snip1156:hover .salud-ambiental{
   and (max-device-width: 2100px) 
    { 
    
+	#volver-revista-p{
+		display:inline-block;
+		z-index:3;
+		padding-top:3%;
+	}
+	
 	.360-inside{
 		text-shadow:none;
 		padding-top:0;
@@ -7376,7 +7382,11 @@ figure.snip1156 .d-a-2 h2{
   and (max-device-width: 1024px) 
   and (orientation: portrait) 
   {
-  
+  	#volver-revista-p{
+		display:inline-block;
+		z-index:3;
+		padding-top:3%;
+	}
   	.360-inside{
 		text-shadow:none;
 		padding-top:0;
@@ -7659,7 +7669,12 @@ h5{
   and (max-device-width: 1024px) 
   and (orientation: landscape) 
    {
-   
+   	#volver-revista-p{
+		display:inline-block;
+		z-index:3;
+		padding-top:3%;
+	}
+	
    	#english-v-linea{
 		display: block;
 		border-top: 1px solid white;
@@ -9237,6 +9252,12 @@ position:fixed;
   and (min-device-width: 240px) 
   and (max-device-width: 737px) 
   {
+  
+  	#volver-revista-p{
+		display:inline-block;
+		z-index:3;
+		padding-top:5%;
+	}
   .titulo-vad-producto {
     text-align: center;
     font-size: 17px;
@@ -9249,7 +9270,10 @@ position:fixed;
     margin-bottom: 2.5%;
     margin-left: 7%!important;
 	}
-  
+  .volver-infotec-revista p {
+    display:none;
+}
+
 	#btnmenu {
 		display: inline-block;
 		margin-top: -6.5%;
