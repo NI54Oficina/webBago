@@ -13,7 +13,7 @@ $("body").on("touchstart",".navbar-toggle",function(){
 
 <header id="navbar-main" class="navbar navbar-inverse col-lg-12 col-md-12 col-sm-12 col-xs-12" style="width:100%;padding-bottom: 10px;background: -webkit-linear-gradient(left, rgba(255,255,255,1) 17%,rgba(255,255,255,1) 18%,rgba(255,255,255,0.98) 48%,rgba(255,255,255,0.99) 100%);
     background: linear-gradient(to right, rgba(255,255,255,1) 17%,rgba(255,255,255,1) 18%,rgba(255,255,255,0.98) 48%,rgba(255,255,255,0.99) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#b3ffffff',GradientType=1 );margin-bottom:0;top:0;">
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#b3ffffff',GradientType=1 );margin-bottom:0;top:0;border-radius:0;">
 		<!--+++++ LOGO BAGÓ MOBILE +++++ -->
 		<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>"><img id="logo-bago-mobile" class="col-lg-2 col-md-2 col-sm-12 col-xs-12" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo-bago.png" /></a>		
 		
@@ -79,7 +79,7 @@ $("body").on("touchstart",".navbar-toggle",function(){
 		</div>-->
 		
 		<!-- +++++ LISTA VERSIONES MOBILE+++++ -->
-		<ul class=" col-lg-2 col-md-2 col-sm-10 col-xs-12" id="ul-nav-2-mobile" style="color:#0C6594;border-bottom: 1px solid #359fbd;">
+		<ul class=" col-lg-2 col-md-2 col-sm-12 col-xs-12" id="ul-nav-2-mobile" style="color:#0C6594;border-bottom: 1px solid #359fbd;">
 				
 				<?php if($_SESSION["lng"]!="es"){ ?>
 				<li class="li-nav-2"><a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/pais/traduccion/id/1/lng/es"style="float:left;padding: 10px 0px;color: #337ab7;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-arg.png" /></a></li>
@@ -87,9 +87,11 @@ $("body").on("touchstart",".navbar-toggle",function(){
 				<?php if($_SESSION["lng"]!="pt"){ ?>
 				<li class="li-nav-2"><a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/pais/traduccion/id/2/lng/2"style="float:left;padding: 10px 0px;color: #337ab7;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-br.png" /></a></li>
 				<?php } ?>
-				<li class="li-nav-2 dropdown" data-toggle="collapse"><a  href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"  style="float:left;padding: 10px 0px;color: #337ab7;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/mas-paises.png"  /></a>
+				<li class="li-nav-2 dropdown" navbar-toggle collapsed" data-toggle="collapse" data-target="#ul-paises-nav" aria-expanded="false" aria-controls="navbar"   ><a  href="#"    style="float:left;padding: 10px 0px;color: #337ab7;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/mas-paises.png"  /></a>
 				
-					<ul class="dropdown-menu dropdown-menu-right lista-menu collapse" id="ul-paises-nav">
+					
+				</li>
+				<ul class="dropdown-menu dropdown-menu-right lista-menu collapse" id="ul-paises-nav">
 								<li class="li-paises-nav" ><a href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/1/lng/es" class="a-otros-paises-mobile link-menu"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-arg.png" /><?php echo Textos::model()->GetText(410); ?></a></li>
 								<li class="li-paises-nav" ><a href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/5/lng/es" class="a-otros-paises-mobile link-menu"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-bol.png" /><?php echo Textos::model()->GetText(411); ?></a></li>
 								<li class="li-paises-nav" ><a href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/2/lng/es" class="a-otros-paises-mobile link-menu"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-br.png" /><?php echo Textos::model()->GetText(412); ?></a></li>
@@ -107,8 +109,6 @@ $("body").on("touchstart",".navbar-toggle",function(){
 								<li class="li-paises-nav" ><a href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/20/lng/es" class="a-otros-paises-mobile link-menu"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-uru.png" /><?php echo Textos::model()->GetText(424); ?></a></li>
 								<li class="li-paises-nav" ><a href="<?php echo Yii::app()->getBaseUrl(true); ?>/pais/traduccion/id/21/lng/es" class="a-otros-paises-mobile link-menu"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-ven.png" /><?php echo Textos::model()->GetText(425); ?></a></li>
 					</ul>
-					
-				</li>
 		</ul> <!-- termina lista versiones -->			
 	
 

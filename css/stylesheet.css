@@ -5476,12 +5476,13 @@ figure.snip1156:hover .salud-ambiental{
 	    width: 100vw;
 		left: 0;
 		top: 20vh;
-		position: fixed;
+		position: initial;
 		min-height: 20vh;
 		transition: all 0.4s ease;
 		padding: 0;
 		margin:0;
 	}
+	
 	
   .b-l {
 		width: 73%;
@@ -6499,8 +6500,22 @@ figure.snip1156:hover .salud-ambiental{
 #enviando,#enviado,#errorEnvio{
 	display:none;
 	position:absolute;
+	padding-top:20%;
+	color:white;
+	width:100%;	
 }
 
+.linea-blanca-contacto{
+	width:30%;
+	max-width:60px;
+	border-top:1px white solid;
+	display:inline-block;
+	padding-top:10px;
+}
+#container-envio p{
+margin-left:0;
+margin-right:0;
+}
 
 
 .btn-mapa:focus{
@@ -6660,7 +6675,9 @@ figure.snip1156:hover .salud-ambiental{
 		padding-top:50px;
 		color:#666;
 	}
- 
+	#ul-nav-2-mobile{
+		transition: 0.4s;
+	}
 	.navbar-collapse.collapse{
 		display:none !important;
 		visibility:hidden !important;
@@ -9207,3 +9224,12 @@ position:fixed;
 }
   
   
+#container-envio{
+	background:#333333;
+	height:70%;
+	margin-top:10%;
+	width:90%;
+	margin-left:5%;
+	position:absolute;
+	display:none;
+}

@@ -1583,9 +1583,24 @@
 				
 					<!-- ////////// INFORMACIÓN ////////////// -->        
 					<div id="infodcha" class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="display:inline-block;float:left;text-align:center;" hid="2">        
-						<div id="enviando"><?php echo Textos::model()->GetText(481); ?></div>
-						<div id="enviado"><?php echo Textos::model()->GetText(480); ?></div>
-						<div id="errorEnvio"><?php echo Textos::model()->GetText(482); ?></div>
+						
+						<div id="container-envio" class="col-lg-12 col-md-12 col-xs-12" >
+							<div id="enviando" class="">
+								<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/enviando.gif"><br>
+								<div class="linea-blanca-contacto"></div>
+								<p>&#8226; <?php echo Textos::model()->GetText(481); ?> &#8226;</p>
+							</div>
+							<div id="enviado">
+								<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/sobres-enviado-02.png"><br>
+								<div class="linea-blanca-contacto"></div>
+								<p>&#8226; <?php echo Textos::model()->GetText(480); ?> &#8226;</p>
+							</div>
+							<div id="errorEnvio">
+								<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/sobres-enviado-01.png"><br>
+								<div class="linea-blanca-contacto"></div>
+								<p>&#8226; <?php echo Textos::model()->GetText(482); ?> &#8226;</p>
+							</div>
+						</div>
 						<form id="form1" class="col-lg-12 col-md-12 col-xs-12" style="float:initial;display:inline-block;text-align:center;">
 							
 							<!-- ******** NOMBRE ******** -->
@@ -1696,6 +1711,7 @@
 								$("#errorEnvio").fadeIn();
 							});
 							$("#form1").fadeOut(500);
+							$("#container-envio").fadeIn(500);
 							$("#enviando").fadeIn(500);
 							$("#enviado").hide();
 							$("#errorEnvio").hide();
