@@ -1753,7 +1753,7 @@ font-size: 22px;
 	.buscador {
 		background-color: #E8E6E6;
 		border:none;
-		width: 220px;
+		width:88%;
 		height: 30px;
 		margin-bottom: 15%;
 		padding-left: 4%;
@@ -2175,7 +2175,7 @@ font-size: 22px;
 	.buscador {
 		background-color: #E8E6E6;
 		border-radius: 5px;
-		width: 235px;
+		width:88%;
 		height: 30px;
 		margin-bottom: 15%;
 		padding-left: 4%;
@@ -5691,7 +5691,7 @@ figure.snip1156:hover .salud-ambiental{
 	
 	.buscador {
 		background-color: #E8E6E6;
-		width: 180px;
+		width:88%;
 		height: 25px;
 		margin-bottom: 15%;
 		padding-left: 4%;
@@ -7587,6 +7587,7 @@ position:fixed;
 	.imagenes-fundaciones {height: 280px}
 	#registrado {margin-top: 5% !important;}
 	#barra-xs {margin-top: 2% !important;}
+	#botonera-buscar {margin-left: 15%}
 }
 
 /*PAGINA PRODUCTOS PASADO A CLASES E ID*/

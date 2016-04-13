@@ -45,11 +45,7 @@
 				
 
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12   linea-rse"> </div>
-				<p style="margin-top:2%; margin-bottom: 2%;"><?php echo Textos::model()->GetText(66); ?> </p>
-
-				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hidden-xs hidden-sm linea-rse"> </div>
-				<p style="margin-top:2%; margin-bottom: 2%;margin-left: 0px;"><?php echo Textos::model()->GetText(66); ?> </p>
-
+				<p style="margin-top:2%; margin-bottom: 2%; margin-left: 0px;"><?php echo Textos::model()->GetText(66); ?> </p>
                 
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 linea-rse" style="margin-top:2%;" > </div>
 				
