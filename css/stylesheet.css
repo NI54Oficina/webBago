@@ -5635,6 +5635,11 @@ figure.snip1156:hover .salud-ambiental{
 		margin-top: 0%;
 	}	
  
+ 	.360-inside{
+		text-shadow:none;
+		padding-top:0;
+		margin-bottom:2.5%;
+	}
 	
 	
 	.div-inst{
@@ -6028,7 +6033,17 @@ figure.snip1156:hover .salud-ambiental{
   and (min-device-width: 320px) 
   and (max-device-width: 736px)
   {
-
+#list-menu li a {
+    background: rgba(255, 255, 255, 0.3);
+    color: #2988AF;
+    padding: 4px;
+    display: inline-block;
+    font-family: 'arialregular';
+    text-align: center;
+    transition: all 0.4s ease;
+    width: 95px;
+    line-height: 16px;
+}
 	.logo-blanco {
 		width: 60%;
 		margin-top: -3%;
@@ -6059,9 +6074,11 @@ figure.snip1156:hover .salud-ambiental{
 	}
 	
   #list-menu li a {
-    width: 82px;
+    width: 74px;
 }
-
+#list-menu {
+    margin-left: 20px;
+}
 	#titulo-mapa h1{
 		font-size: 38px;
 		margin: auto;
@@ -6226,6 +6243,24 @@ figure.snip1156:hover .salud-ambiental{
   and (min-device-width: 1200px) 
   and (max-device-width: 2100px) 
    { 
+   
+	.360-inside{
+		text-shadow:none;
+		padding-top:0;
+		margin-bottom:2.5%;
+	}
+	
+	#english-v-linea{
+		display: block;
+		border-top: 1px solid white;
+		width: 3%;
+	}
+	
+   #frase-final-trayectoria{
+		text-align:center;
+		color:#00173B;
+		font-size:23px;
+   }
    
    .p-proveedores-download{ 
 	display: inline-block;    
@@ -6980,6 +7015,7 @@ figure.snip1156 .d-a-2 h2{
 		
 	}
 
+	
 }
 
 
@@ -7319,10 +7355,30 @@ figure.snip1156 .d-a-2 h2{
   and (max-device-width: 1024px) 
   and (orientation: portrait) 
   {
+  
+  	.360-inside{
+		text-shadow:none;
+		padding-top:0;
+		margin-bottom:2.5%;
+	}
+  	#english-v-linea{
+		display: block;
+		border-top: 1px solid white;
+		width: 6%;
+	}
+	
 	#volver{ 
 	    margin-left: -250px;
 	}
 	
+	
+	   #frase-final-trayectoria{
+		text-align: left;
+		color: #00173B;
+		font-size: 23px;
+		padding-left: 52px;
+   }
+   
 	.paises-registrados {
 		margin-left: 42%;
 		margin-top: 8%;
@@ -7375,9 +7431,41 @@ figure.snip1156 .d-a-2 h2{
 }
 
 @media only screen 
-  and (min-device-width: 325px) 
+  and (min-device-width: 320px) 
   and (max-device-width: 736px)
   {
+  
+  
+  	#texto-btn-mas2{ 
+		text-align: center;
+		position: absolute;
+		margin-left: -8px;
+		padding-top: 10px;
+		font-family: 'arialregular';
+		font-size: 14px;
+	}
+	
+	#titulo{
+	    font-size: 26px;
+	}
+	
+	#ver-revista {
+		padding-left: 0;
+		padding-top: 7%;
+	}
+	
+  	#english-v-linea{
+		display: block;
+		border-top: 1px solid white;
+		width: 13%;
+	}
+	
+     #frase-final-trayectoria{
+		text-align: left;
+		color: #00173B;
+		font-size: 18px;
+		padding-left: 29px;
+   }
 	.item-institucional .glyphicon{
 		display:none;
 	}
@@ -7550,6 +7638,19 @@ h5{
   and (max-device-width: 1024px) 
   and (orientation: landscape) 
    {
+   
+   	#english-v-linea{
+		display: block;
+		border-top: 1px solid white;
+		width: 4%;
+	}
+	
+      #frase-final-trayectoria{
+		text-align: left;
+		color: #00173B;
+		font-size: 19px;
+		padding-left: 40px;
+   }
 	.icn-ubicacion {
 		width: 2%;
 		display: inline-block;
@@ -8165,6 +8266,19 @@ position:fixed;
 		padding-top: 0px;
 	}
 
+	
+	#list-menu li a {
+    background: rgba(255, 255, 255, 0.3);
+    color: #2988AF;
+    padding: 3px;
+    display: inline-block;
+    font-family: 'arialregular';
+    text-align: center;
+    transition: all 0.4s ease;
+    width: 56px;
+    line-height: 16px;
+    font-size: 11px;
+}
 	#flecha-submenu{
 		display:none;
 	}	
@@ -8281,12 +8395,7 @@ position:fixed;
 		margin-left: 0%;
 	}
 	
-	.infotec-240{
-	    width: 100%;
-		display: block;
-		margin-top: 4%;
-	}
-	
+
 	#botonera-buscar {
 		font-family: arialregular;
 		display: inline-block;
@@ -8797,7 +8906,7 @@ position:fixed;
 		margin-left:0px;
 	}
 
-	#epigrafe-mobile{ text-align: center; position:initial;}
+	#epigrafe-mobile{ text-align: center; position:relative;}
 	#epigrafe-mobile img {padding-right: 0; float:initial;}
 
 
@@ -9097,6 +9206,22 @@ position:fixed;
   and (min-device-width: 240px) 
   and (max-device-width: 737px) 
   {
+  
+  	#360-inside{
+    text-shadow: none;
+    padding-top: 0;
+    margin-bottom: 2.5%;
+    margin-left: 7%!important;
+	}
+  
+	#btnmenu {
+		display: inline-block;
+		margin-top: -6.5%;
+		margin-right: 2%;
+		transition: all 0.5s ease;
+		float: right;
+	}
+	
 	.titulo-layout-aftosa {
 		font-size: 23px;
 	}
@@ -9122,6 +9247,27 @@ position:fixed;
 		padding-left: 10px;
 	}
 	
+	#epigrafe-paises {
+    font-size: 11px;
+    font-family: 'arialregular';
+    color: white;
+    font-weight: 700;
+    display: inline-block;
+    padding-top: 0px;
+    text-shadow: 0px 3px black;
+    text-align: center;
+    margin-left: 0px;
+    padding-bottom: 20px;
+}
+
+#botonera-buscar {
+    font-family: arialregular;
+    display: inline-block;
+    text-align: center;
+    padding-top: 6%;
+    width: 39%;
+    margin-left: 0; 
+}
 	.container-anios-linea-tiempo div {
 		background: #011E49;
 		width: 100px;
@@ -9220,6 +9366,14 @@ position:fixed;
 
 	.bienvenidos {
 		font-size: 23px;
+	}
+	
+	  	.360-inside{
+		text-shadow: none!important;
+		padding-top: 0!important;
+		margin-bottom: 2.5%!important;
+		text-align: center!important;
+		padding-left: 10%!important;
 	}
 
 }

@@ -1299,8 +1299,8 @@
 		
 					<!-- ///////  BUSCADOR /////// -->	
 						<div id="buscar" style="">
-							<div id="botonera-buscar" class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
-								<div class="input-group">
+							<div id="botonera-buscar" class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+								<div class="input-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
 									<span>
 										<form action="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/search/" method="post">
 										<input class="input-vad" type="text" name="arg" placeholder="">

@@ -382,10 +382,10 @@
 		
 	</section> 
 	
-	<div class="col-lg-12" style=" margin: auto; text-align: center;">
+	<div class="col-lg-12" >
 		<!--<img style="width:230px;padding-bottom:20px;"  id="evolucion-logo" src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-evolucion-logo.png" />-->
 	</div>
-		<h2  style="text-align:center;color:#00173B;font-size:23px;"><?php echo Textos::model()->GetText(379); ?></h2>
+		<h2  id="frase-final-trayectoria"><?php echo Textos::model()->GetText(379); ?></h2>
 		
 		</div>
 	</div>

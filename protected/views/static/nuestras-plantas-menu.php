@@ -24,7 +24,7 @@
 		
 		
 	
-		<div  class="  col-lg-6 col-md-6 col-sm-12 col-xs-12 inner-text container-lista-360" style="text-shadow:none;padding-top:0;margin-bottom:2.5%;">	
+		<div  class="  col-lg-6 col-md-6 col-sm-12 col-xs-12 inner-text container-lista-360" style="text-shadow:none;padding-top:0;margin-bottom:2.5%;" id="360-inside">	
 			<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vista/exterior" target="_blank">
 				<img  src="<?php echo Yii::app()->request->baseUrl; ?>/img/imagen-360-exterior.png"  />
 			</a>
