@@ -7886,37 +7886,46 @@ position:fixed;
 	}
 	
 	.volver{
-    background-image: url(../img/volver-desactivado.png);
-    height: 42px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: auto auto;
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    -ms-transition: all 1s ease;
-    transition: all 1s ease;
-    margin-top: -4%;
-    text-align: left;
-    margin-left: -138px;
+		background-image: url(../img/volver-desactivado.png);
+		height: 42px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: auto auto;
+		-webkit-transition: all 1s ease;
+		-moz-transition: all 1s ease;
+		-o-transition: all 1s ease;
+		-ms-transition: all 1s ease;
+		transition: all 1s ease;
+		margin-top: -4%;
+		text-align: left;
+		margin-left: -138px;
 	}
 	
 	.volver:hover{
 		background-image: url(../img/volver-desactivado.png);
-    height: 42px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: auto auto;
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    -ms-transition: all 1s ease;
-    transition: all 1s ease;
-    margin-top: -4%;
-    text-align: left;
-    margin-left: -138px;
+		height: 42px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: auto auto;
+		-webkit-transition: all 1s ease;
+		-moz-transition: all 1s ease;
+		-o-transition: all 1s ease;
+		-ms-transition: all 1s ease;
+		transition: all 1s ease;
+		margin-top: -4%;
+		text-align: left;
+		margin-left: -138px;
 	}
-
+	
+	.volver-infotec-revista div {
+		background-image: url(../img/volver-info-tecnica.png);
+		background-repeat: no-repeat;
+		width: 42px;
+		height: 42px;
+		display: inline-block;
+		transition: all 0.3s ease;
+		background-size: auto 78%;
+	}
 
 	 #titulo-vademecum {margin-top:15%;}
 
@@ -8863,7 +8872,7 @@ position:fixed;
 	}
 	
 	
-		.volver{
+	.volver{
     background-image: url(../img/volver-desactivado.png);
     height: 42px;
     background-repeat: no-repeat;
