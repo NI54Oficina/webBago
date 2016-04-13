@@ -402,14 +402,15 @@ font-size: 22px;
 		background-image: url(../img/volver-desactivado.png);
 		height: 42px;
 		background-repeat: no-repeat;
-		background-position: center;
+		background-position: left;
 		background-size: auto auto;
 	-webkit-transition: all 1s ease;
 		-moz-transition: all 1s ease;
 		-o-transition: all 1s ease;
 		-ms-transition: all 1s ease;
 			transition: all 1s ease;
-		margin-left: -44%;
+
+		
 	}
 	
 	.volver-mobile:hover{
@@ -421,7 +422,7 @@ font-size: 22px;
 	}
 	
 	.volver-mobile p{
-		display:inline-block;
+		display:none;
 		vertical-align: middle;
 		margin-top: 2.5%;
 		margin-left: 120px;
@@ -2520,7 +2521,7 @@ footer{
 
 
 #form1 textarea{
-	width: 97%;
+	width: 100%;
     background: rgba(255,255,255,0.2);
     height: 15vh;
     margin-left: -15px;
@@ -2605,6 +2606,7 @@ footer{
 	width:100%;
 	margin-top:15px;
     margin-left: 10px;
+    max-width: 500px;
 }
 
 .ubicacion{
@@ -3338,7 +3340,7 @@ a.iprodev:hover {
     margin-left: 33%;
     color: #0C5582;
     font-size: 18px;
-    line-height: 35px;
+    line-height: 25px;
     letter-spacing: 1.5px;
 }
 
@@ -5696,7 +5698,7 @@ figure.snip1156:hover .salud-ambiental{
 	
 	.buscador {
 		background-color: #E8E6E6;
-		width:88%;
+		width:80%;
 		height: 25px;
 		margin-bottom: 15%;
 		padding-left: 4%;
@@ -6519,6 +6521,7 @@ figure.snip1156:hover .salud-ambiental{
 	.h2-titulo { 
 		margin-bottom: 0%; 
 		height: 20px; 
+		display: none;
 	}
 
 	
@@ -7037,7 +7040,7 @@ figure.snip1156 .d-a-2 h2{
     background-image: url(../img/volver-desactivado.png);
     height: 42px;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: left;
     background-size: 10%;
     
     -webkit-transition: all 1s ease;
@@ -7045,7 +7048,7 @@ figure.snip1156 .d-a-2 h2{
     -o-transition: all 1s ease;
     -ms-transition: all 1s ease;
     transition: all 1s ease;
-    margin-left: -44%;
+    
 }
 
 	.logo-blanco {
@@ -7688,7 +7691,8 @@ position:fixed;
 	.imagenes-fundaciones {height: 280px}
 	#registrado {margin-top: 5% !important;}
 	#barra-xs {margin-top: 2% !important;}
-	#botonera-buscar {margin-left: 15%}
+	#botonera-buscar {}
+	.buscador {width:80%;}
 }
 
 /*PAGINA PRODUCTOS PASADO A CLASES E ID*/
@@ -8012,16 +8016,20 @@ position:fixed;
 	color: #359fbd;    
 	width: 50%;  
 	margin: auto; 
-	margin-top: 40px;
+	margin-top: 25px;
 }
 
 
 @media screen and (max-width:768px){
-	#ul-rrhh-home li {width: 100% !important;
-		margin:0% !important;}
+	#ul-rrhh-home li {width: 100% !important; margin-top: 25px; line-height: 18px;
+		}
 
-  #ul-rrhh-home{margin:2%; padding: 0px;}
+  #ul-rrhh-home{margin:2%; padding: 0px; width: 600px;}
+
+
+		
 }
+
 
 
 
@@ -9228,7 +9236,7 @@ position:fixed;
   
   .h2-aftosa {
 		color: #02204C;
-		display: inline-block;
+		display: none;
 		font-size: 17px;		
 		font-family: 'arialregular';
 		margin-top: 40px;

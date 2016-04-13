@@ -1518,14 +1518,14 @@
 
 				<!-- ESTOS SON LOS TEXTOS QUE TIENE QUE APARECER Y DESAPARECCER EN RRHH DE LA HOME !-->
 
-				<ul id="ul-rrhh-home" style="position:relative;display:inline-block;padding">
+				<ul id="ul-rrhh-home" style="position:relative;display:inline-block;">
 				
-					<li><?php echo Textos::model()->GetText(483); ?></li>
-				   <li><?php echo Textos::model()->GetText(484); ?></li>
-				   <li><?php echo Textos::model()->GetText(485); ?></li>
-				   <li><?php echo Textos::model()->GetText(486); ?></li>
-				   <li><?php echo Textos::model()->GetText(487); ?></li>
-				   <li style="line-height:18px; margin-top: 8px;"><?php echo Textos::model()->GetText(488); ?></li>
+					<li ><?php echo Textos::model()->GetText(483); ?></li>
+				   <li ><?php echo Textos::model()->GetText(484); ?></li>
+				   <li ><?php echo Textos::model()->GetText(485); ?></li>
+				   <li ><?php echo Textos::model()->GetText(486); ?></li>
+				   <li ><?php echo Textos::model()->GetText(487); ?></li>
+				   <li><?php echo Textos::model()->GetText(488); ?></li>
 				</ul>
 
 				<!-- HASTA ACA !-->
