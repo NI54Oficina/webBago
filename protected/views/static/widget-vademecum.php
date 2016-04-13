@@ -3,7 +3,7 @@
 	
 	<form action="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/search/" method="post" style="float:right;width:96%;">
 
-	<input type="text" class="buscador" name="arg" style="width:88%;" />
+	<input type="text" class="buscador" name="arg" style="" />
 
 	<button  id="btn-buscador-vademecum" style="width:10%;margin-left:1%;background-size:90% auto; background-position:right; margin-top: -5px;">
 		

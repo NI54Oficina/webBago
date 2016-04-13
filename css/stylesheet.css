@@ -402,14 +402,15 @@ font-size: 22px;
 		background-image: url(../img/volver-desactivado.png);
 		height: 42px;
 		background-repeat: no-repeat;
-		background-position: center;
+		background-position: left;
 		background-size: auto auto;
 	-webkit-transition: all 1s ease;
 		-moz-transition: all 1s ease;
 		-o-transition: all 1s ease;
 		-ms-transition: all 1s ease;
 			transition: all 1s ease;
-		margin-left: -44%;
+
+		
 	}
 	
 	.volver-mobile:hover{
@@ -421,7 +422,7 @@ font-size: 22px;
 	}
 	
 	.volver-mobile p{
-		display:inline-block;
+		display:none;
 		vertical-align: middle;
 		margin-top: 2.5%;
 		margin-left: 120px;
@@ -7001,7 +7002,7 @@ figure.snip1156 .d-a-2 h2{
     background-image: url(../img/volver-desactivado.png);
     height: 42px;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: left;
     background-size: 10%;
     
     -webkit-transition: all 1s ease;
@@ -7009,7 +7010,7 @@ figure.snip1156 .d-a-2 h2{
     -o-transition: all 1s ease;
     -ms-transition: all 1s ease;
     transition: all 1s ease;
-    margin-left: -44%;
+    
 }
 
 	.logo-blanco {
@@ -7588,6 +7589,7 @@ position:fixed;
 	#registrado {margin-top: 5% !important;}
 	#barra-xs {margin-top: 2% !important;}
 	#botonera-buscar {margin-left: 15%}
+	.buscador {width:80%;}
 }
 
 /*PAGINA PRODUCTOS PASADO A CLASES E ID*/
