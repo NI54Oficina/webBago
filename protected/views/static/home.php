@@ -391,13 +391,13 @@
 						<!-- LINEA SEPARADORA-->						
 						<div id="separador"></div>
 
-						<h3  id="titulo-cont">  TEL  </h3> 	
+						<h3  id="titulo-cont">  <?php echo Textos::model()->GetText(466); ?>  </h3> 	
 						<p>506-2221-0104  / 0084</p>		
 						
 					<!-- LINEA SEPARADORA-->						
 						<div id="separador"></div>
 
-						<h3  id="titulo-cont">  CONTACTO  </h3> 	
+						<h3  id="titulo-cont">  <?php echo Textos::model()->GetText(113); ?> </h3> 	
 						<p> David Mora / Silvia Aguilar</p>		
 
 						<!-- LINEA SEPARADORA-->						
@@ -423,13 +423,13 @@
 						<!-- LINEA SEPARADORA-->						
 						<div id="separador"></div>
 
-						<h3  id="titulo-cont">  TEL  </h3> 	
+						<h3  id="titulo-cont"> <?php echo Textos::model()->GetText(466); ?>  </h3> 	
 						<p>593 2 3961200</p>		
 						
 					<!-- LINEA SEPARADORA-->						
 						<div id="separador"></div>
 
-						<h3  id="titulo-cont">  CONTACTO  </h3> 	
+						<h3  id="titulo-cont"> <?php echo Textos::model()->GetText(113); ?>  </h3> 	
 						<p>Sandra Collahuazo</p>		
 
 						<!-- LINEA SEPARADORA-->						
@@ -456,7 +456,7 @@
 						<!-- LINEA SEPARADORA-->						
 						<div id="separador"></div>
 
-						<h3  id="titulo-cont">  TEL  </h3> 	
+						<h3  id="titulo-cont">  <?php echo Textos::model()->GetText(466); ?>  </h3> 	
 						<p>(503) 2245-3388</p>		
 						
 					<!-- LINEA SEPARADORA-->						
@@ -482,13 +482,13 @@
 						<!-- LINEA SEPARADORA-->						
 						<div id="separador"></div>
 
-						<h3  id="titulo-cont">  TEL  </h3> 	
+						<h3  id="titulo-cont">  <?php echo Textos::model()->GetText(466); ?>  </h3> 	
 						<p>2329-5660 /2329-5643/ 2329-5642</p>		
 						
 					<!-- LINEA SEPARADORA-->						
 						<div id="separador"></div>
 
-						<h3  id="titulo-cont">  CONTACTO  </h3> 	
+						<h3  id="titulo-cont"> <?php echo Textos::model()->GetText(113); ?>  </h3> 	
 						<p>Silvia Fuentes  </p>		
 
 						<!-- LINEA SEPARADORA-->						
@@ -513,7 +513,7 @@
 						<!-- LINEA SEPARADORA-->						
 						<div id="separador"></div>
 
-						<h3  id="titulo-cont">  TEL  </h3> 	
+						<h3  id="titulo-cont">  <?php echo Textos::model()->GetText(466); ?>  </h3> 	
 						<p>504-232-3389/504-231-0850</p>		
 						
 						<!-- LINEA SEPARADORA-->						
@@ -525,7 +525,7 @@
 					<!-- LINEA SEPARADORA-->						
 						<div id="separador"></div>
 
-						<h3  id="titulo-cont">  CONTACTO  </h3> 	
+						<h3  id="titulo-cont">  <?php echo Textos::model()->GetText(113); ?>   </h3> 	
 						<p>Ing.Curt Eyl</p>		
 
 						<!-- LINEA SEPARADORA-->						
@@ -551,13 +551,13 @@
 						<!-- LINEA SEPARADORA-->						
 						<div id="separador"></div>
 
-						<h3  id="titulo-cont">  TEL  </h3> 	
+						<h3  id="titulo-cont">  <?php echo Textos::model()->GetText(466); ?>   </h3> 	
 						<p>2252-3073/1131/1046</p>				
 						
 					<!-- LINEA SEPARADORA-->						
 						<div id="separador"></div>
 
-						<h3  id="titulo-cont">  CONTACTO  </h3> 	
+						<h3  id="titulo-cont"> <?php echo Textos::model()->GetText(113); ?>  </h3> 	
 						<p>Mauricio Salgado/Arlen Torres  </p>		
 
 						<!-- LINEA SEPARADORA-->						
@@ -585,7 +585,7 @@
 						<!-- LINEA SEPARADORA-->						
 						<div id="separador"></div>
 
-						<h3  id="titulo-cont">TEL</h3> 	
+						<h3  id="titulo-cont"><?php echo Textos::model()->GetText(466); ?> </h3> 	
 						<p>507- 212 5512</p>				
 				
 				</div> <!-- Termina info-panama-->
@@ -720,13 +720,13 @@
 						<!-- LINEA SEPARADORA-->						
 						<div id="separador"></div>
 
-						<h3  id="titulo-cont">  TEL  </h3> 	
+						<h3  id="titulo-cont">  <?php echo Textos::model()->GetText(466); ?>  </h3> 	
 						<p>00595-21-201-893</p>		
 						
 					<!-- LINEA SEPARADORA-->						
 						<div id="separador"></div>
 
-						<h3  id="titulo-cont">  CONTACTO  </h3> 	
+						<h3  id="titulo-cont"> <?php echo Textos::model()->GetText(113); ?>  </h3> 	
 						<p>Dr. Silvio Moro, Giannina Moro </p>		
 
 						<!-- LINEA SEPARADORA-->						
@@ -743,13 +743,13 @@
 						<!-- LINEA SEPARADORA-->						
 						<div id="separador"></div>
 
-						<h3  id="titulo-cont">TEL</h3> 	
+						<h3  id="titulo-cont"><?php echo Textos::model()->GetText(466); ?> </h3> 	
 						<p>595-21-520-600</p>		
 						
 					<!-- LINEA SEPARADORA-->						
 						<div id="separador"></div>
 
-						<h3  id="titulo-cont">  CONTACTO  </h3> 	
+						<h3  id="titulo-cont">  <?php echo Textos::model()->GetText(113); ?>   </h3> 	
 						<p> Marcelo Serrati/ Sergio Zalazar</p>		
 
 						<!-- LINEA SEPARADORA-->						
