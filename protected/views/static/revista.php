@@ -53,14 +53,14 @@
 
 							</div>
 
-							<p  style="font-size: 12px; margin: 0;"><?php 
+							<p  style="font-size: 12px; margin: 0;    color: #BFBFBF;"><?php 
 												$timeStamp=strtotime($nota->fecha);												
 												echo date('d',$timeStamp)." de ".$meses[date('n',$timeStamp)-1]. " de ".date('Y',$timeStamp) ; ?></p>
 
 							<h1 class="h1-noticias-rse" style="color:#359FBD;margin-top:0;">MOLINO <?php echo $nota->numero; ?>
 							</h1>
 
-							<p style="font-size: 12px; margin: 0;line-height:20px;">
+							<p style="font-size: 12px; margin: 0;line-height:20px;    color: #BFBFBF;">
 							<?php echo $nota->titulo; ?> 
 
 							</p>
