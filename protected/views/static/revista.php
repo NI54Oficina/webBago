@@ -42,7 +42,7 @@
 				?>
 <a href="<?php echo $link; ?>" target="_blank">
 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 "  style="display:inline-block;text-align: center;" >
-					
+	
 			<div class="container-nota-revista revista-fondo " style="border: 1px solid #359FBD;box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.45);width: 98%; display:inline-block;text-align: left;margin-bottom: 20px;">
 
 						<div class="test" style="margin-top:0;padding:10px;" hid="1">
@@ -53,14 +53,14 @@
 
 							</div>
 
-							<p  style="font-size: 12px; margin: 0;    color: #BFBFBF;"><?php 
+							<p  style="font-size: 12px; margin: 0;color: #BFBFBF;"><?php 
 												$timeStamp=strtotime($nota->fecha);												
 												echo date('d',$timeStamp)." de ".$meses[date('n',$timeStamp)-1]. " de ".date('Y',$timeStamp) ; ?></p>
 
 							<h1 class="h1-noticias-rse" style="color:#359FBD;margin-top:0;">MOLINO <?php echo $nota->numero; ?>
 							</h1>
 
-							<p style="font-size: 12px; margin: 0;line-height:20px;    color: #BFBFBF;">
+							<p style="font-size: 12px; margin: 0;line-height:20px; color: #7B7A7A">
 							<?php echo $nota->titulo; ?> 
 
 							</p>

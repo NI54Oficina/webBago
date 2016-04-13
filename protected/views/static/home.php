@@ -1624,7 +1624,7 @@
 							<!-- ******** EMAIL ******** -->
 							<div class="col-lg-6  col-md-6 col-xs-12">
 								<div class="input-contacto">
-								<label for="exampleInputName2">EMAIL</label>
+								<label for="exampleInputName2"><p style="text-transform: uppercase;"><?php echo Textos::model()->GetText(116); ?></p></label>
 									<input class="form-inline required" name="email" type="email" value="">
 									</div>
 							</div>

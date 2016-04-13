@@ -64,8 +64,6 @@
 				<p style="margin-top:5%; margin-bottom: 4%;margin-left: 0px;"><?php echo Textos::model()->GetText(69); ?><?php echo Textos::model()->GetText(70); ?></p>
 
 
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 linea-rse" style="margin-top:2%;" > </div>
-
                 
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 linea-rse" style="margin-top:2%; margin-bottom: 1%;" > </div>
 
@@ -74,7 +72,7 @@
 				
 				
 
-				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hidden-xs hidden-sm linea-rse"> </div>
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  linea-rse"> </div>
 				
 
                 

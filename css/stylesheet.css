@@ -7476,6 +7476,10 @@ figure.snip1156 .d-a-2 h2{
 		font-size: 14px;
 	}
 	
+	.icn-ubicacion {
+    width: 3.5%;
+    display: inline-block;
+}
 	#titulo{
 	    font-size: 26px;
 	}
@@ -9252,7 +9256,50 @@ position:fixed;
   and (min-device-width: 240px) 
   and (max-device-width: 737px) 
   {
-  
+  .volver-mobile {
+    background-image: url(../img/volver-desactivado.png);
+    height: 42px;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: auto 90%;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+    margin-top: 20px;
+    position: absolute;
+}
+
+  .volver-mobile:hover {
+    background-image: url(../img/volver-desactivado.png);
+    height: 42px;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: auto 90%;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+    margin-top: 20px;
+    position: absolute;
+}
+	.volver-mobile p{
+		display:none;
+		vertical-align: middle;
+		margin-top: 2.5%;
+		margin-left: 120px;
+		color: #B2B2B2;
+		font-size: 17px !important;
+		font-family: 'arialregular';
+	-webkit-transition: all 1s ease;
+		-moz-transition: all 1s ease;
+		-o-transition: all 1s ease;
+		-ms-transition: all 1s ease;
+			transition: all 1s ease;
+	}
+	
   	#volver-revista-p{
 		display:inline-block;
 		z-index:3;
