@@ -2521,7 +2521,7 @@ footer{
 
 
 #form1 textarea{
-	width: 97%;
+	width: 100%;
     background: rgba(255,255,255,0.2);
     height: 15vh;
     margin-left: -15px;
@@ -2606,6 +2606,7 @@ footer{
 	width:100%;
 	margin-top:15px;
     margin-left: 10px;
+    max-width: 500px;
 }
 
 .ubicacion{
@@ -3339,7 +3340,7 @@ a.iprodev:hover {
     margin-left: 33%;
     color: #0C5582;
     font-size: 18px;
-    line-height: 35px;
+    line-height: 25px;
     letter-spacing: 1.5px;
 }
 
@@ -7918,10 +7919,10 @@ position:fixed;
 
 
 @media screen and (max-width:768px){
-	#ul-rrhh-home li {width: 100% !important;
-		margin:0% !important;}
+	#ul-rrhh-home li {width: 100% !important; margin-top: 8px;
+		}
 
-  #ul-rrhh-home{margin:2%; padding: 0px;}
+  #ul-rrhh-home{margin:2%; padding: 0px; width: 600px;}
 }
 
 
