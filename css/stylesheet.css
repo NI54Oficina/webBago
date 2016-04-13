@@ -2606,7 +2606,7 @@ footer{
 	width:100%;
 	margin-top:15px;
     margin-left: 10px;
-    max-width: 500px;
+    
 }
 
 .ubicacion{
@@ -7726,6 +7726,7 @@ position:fixed;
 	#barra-xs {margin-top: 2% !important;}
 	#botonera-buscar {}
 	.buscador {width:80%;}
+	.textarea-contacto{ max-width: 500px;}
 }
 
 /*PAGINA PRODUCTOS PASADO A CLASES E ID*/
@@ -7735,28 +7736,18 @@ position:fixed;
 
 #registrado {text-align:center;margin-top:50%; margin-bottom: 1.5%;}
 
-#barra-media
-#barra-media-aftosa {text-align:center;border-bottom:1px solid #0082C8;width:15%;margin:auto;}
-#barra-media-antibioticos {text-align:center;border-bottom:1px solid #FF0423;width:15%;margin:auto;}
-#barra-media-antiparasitarios-externos {text-align:center;border-bottom:1px solid #0D553F;width:15%;margin:auto;}
-#barra-media-antiparasitarios-internos {text-align:center;border-bottom:1px solid #00955F;width:15%;margin:auto;}
-#barra-media-biologicos {text-align:center;border-bottom:1px solid #646568;width:15%;margin:auto;}
-#barra-media-endectocidas  {text-align:center;border-bottom:1px solid #9B9501;width:15%;margin:auto;}	
-#barra-media-farmaceuticos {text-align:center;border-bottom:1px solid #6D3A5D;width:15%;margin:auto;}
-#barra-media-reproductivos {text-align:center;border-bottom:1px solid #FF671B;width:15%;margin:auto;}
-#barra-media-salud-ambiental {text-align:center;border-bottom:1px solid #26CBD4;width:15%;margin:auto;}
-#barra-media-vitaminicos-y-minerales {text-align:center;border-bottom:1px solid #003B5D;width:15%;margin:auto;}
 
-#barra-superior-aftosa {text-align:center;border-bottom:1px solid #0082C8;width:15%;margin:auto;}
-#barra-superior-antibioticos {text-align:center;border-bottom:1px solid #FF0423;width:15%;margin:auto;}
-#barra-superior-antiparasitarios-externos {text-align:center;border-bottom:1px solid #0D553F;width:15%;margin:auto;}
-#barra-superior-antiparasitarios-internos{text-align:center;border-bottom:1px solid #00955F;width:15%;margin:auto;}
-#barra-superior-biologicos {text-align:center;border-bottom:1px solid #646568;width:15%;margin:auto;} 
-#barra-superior-endectocidas  {text-align:center;border-bottom:1px solid #9B9501;width:15%;margin:auto;} 
-#barra-superior-farmaceuticos {text-align:center;border-bottom:1px solid #6D3A5D ;width:15%;margin:auto;} 
-#barra-superior-reproductivos {text-align:center;border-bottom:1px solid #FF671B;width:15%;margin:auto;}
-#barra-superior-salud-ambiental {text-align:center;border-bottom:1px solid #26CBD4;width:15%;margin:auto;}
-#barra-superior-vitaminicos-y-minerales {text-align:center;border-bottom:1px solid #003B5D;width:15%;margin:auto;}
+
+#barra-superior-aftosa {border-bottom:1px solid #0082C8}
+#barra-superior-antibioticos {border-bottom:1px solid #FF0423;}
+#barra-superior-antiparasitarios-externos {border-bottom:1px solid #0D553F;}
+#barra-superior-antiparasitarios-internos{border-bottom:1px solid #00955F;}
+#barra-superior-biologicos {border-bottom:1px solid #646568;} 
+#barra-superior-endectocidas  {border-bottom:1px solid #9B9501;} 
+#barra-superior-farmaceuticos {border-bottom:1px solid #6D3A5D ;} 
+#barra-superior-reproductivos {border-bottom:1px solid #FF671B;}
+#barra-superior-salud-ambiental {border-bottom:1px solid #26CBD4;}
+#barra-superior-vitaminicos-y-minerales {border-bottom:1px solid #003B5D;}
 
 
 #barra-paises {border-bottom:1px solid #CCC;  margin-bottom: 4%; width: 160px; }

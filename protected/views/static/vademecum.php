@@ -97,12 +97,12 @@ $auxId=0;
 
 <div id="titulo-vademecum" class="hidden-lg hidden-md">
 <h1 class="vademecum"> <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/punto-<?php echo $normalizado; ?>.png" /><?php echo Textos::model()->GetText(348); ?><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/punto-<?php echo $normalizado; ?>.png" /></h1>
-<p  style="text-align:center;border-bottom:1px solid #0082C8;width:3%;margin:auto;margin-top:0%;"></p>
+<p style="text-align:center;border-bottom:1px solid #0082C8;width:3%;margin:auto;margin-top:0%;"></p>
 </div>
 
 <div  class="hidden-xs hidden-sm">
 <h1 class="vademecum"> <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/punto-<?php echo $normalizado; ?>.png" /><?php echo Textos::model()->GetText(348); ?><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/punto-<?php echo $normalizado; ?>.png" /></h1>
-<p  style="text-align:center;border-bottom:1px solid #7F7F7F;width:3%;margin:auto;margin-top:0%;"></p>
+<p id="barra-superior-<?php echo $normalizado; ?>" style="text-align:center;width:3%;margin:auto;margin-top:0%;"></p>
 </div>
 
 
