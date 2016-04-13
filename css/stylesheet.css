@@ -7041,14 +7041,32 @@ figure.snip1156 .d-a-2 h2{
     height: 42px;
     background-repeat: no-repeat;
     background-position: left;
-    background-size: 10%;
-    
+    background-size: auto 90%;
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
     -o-transition: all 1s ease;
     -ms-transition: all 1s ease;
     transition: all 1s ease;
-    
+    margin-top: 10px;
+    position: absolute;
+  
+}
+
+.volver-mobile:hover {
+    background-image: url(../img/volver-desactivado.png);
+    height: 42px;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: auto 90%;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+    margin-top: 10px;
+    position: absolute;
+	opacity:0.5;
+  
 }
 
 	.logo-blanco {
@@ -8024,7 +8042,7 @@ position:fixed;
 	#ul-rrhh-home li {width: 100% !important; margin-top: 25px; line-height: 18px;
 		}
 
-  #ul-rrhh-home{margin:2%; padding: 0px; width: 600px;}
+  #ul-rrhh-home{margin:2%; padding: 0px; width: 600px; max-width:90%;}
 
 
 		
@@ -8721,7 +8739,12 @@ position:fixed;
   and (min-device-width: 200px) 
   and (max-device-width: 321px) 
    and (orientation: landscape) {
-
+.titulo-vad-producto {
+    text-align: center;
+    font-size: 17px;
+    margin-bottom: 0%;
+    margin-left: 0px;
+}
 	.scroll-down {
 		margin: 0;
 		border: 2px solid #fff;
@@ -9214,7 +9237,12 @@ position:fixed;
   and (min-device-width: 240px) 
   and (max-device-width: 737px) 
   {
-  
+  .titulo-vad-producto {
+    text-align: center;
+    font-size: 17px;
+    margin-bottom: 0%;
+    margin-left: 0px;
+}
   	#360-inside{
     text-shadow: none;
     padding-top: 0;

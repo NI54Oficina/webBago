@@ -94,9 +94,8 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 <h2 class="titulo-vad-producto titulo-<?php echo $normalizado; ?>">
 
 <img id="gota-producto"  src="<?php echo Yii::app()->request->baseUrl; ?>/img/gota-<?php echo $normalizado; ?>.png"  /><?php echo Yii::app()->paisChecker->getSeccion($seccion->id);?></h2>
-
-<a href="<?php echo Yii::app()->request->baseUrl; ?>/vademecum/id<?php echo $seccion->id; ?>"><div class=" col-lg-3 col-md-3 col-sm-6 col-xs-6 volver" id="volver-producto">
-<p><?php echo Textos::model()->GetText(490); ?></p>
+<a  style="z-index:3333;"href="<?php echo Yii::app()->request->baseUrl; ?>/vademecum/id<?php echo $seccion->id; ?>"><div class=" col-lg-3 col-md-3 col-sm-6 col-xs-6 volver-mobile hidden-lg hidden-md">
+<p id="volver-p"><?php echo Textos::model()->GetText(490); ?></p>
 </div></a>
 
 
@@ -104,7 +103,7 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 
 <!-- BARRA IZQUIERDA A MODIFICAR -->
 
-<div  class=" col-lg-3 col-md-3 col-sm-12 col-xs-12 imagen-producto">
+<div  class=" col-lg-3 col-md-3 col-sm-12 col-xs-12 imagen-producto" style="z-index:-1;">
 		<?php if($imagen){ ?>
 		<img  src="<?php echo Yii::app()->getBaseUrl(true); ?>/vademecums/<?php echo $imagen->id; ?>.png" align="center" />
 	<?php } ?>
