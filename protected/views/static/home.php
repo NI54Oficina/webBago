@@ -1521,11 +1521,11 @@
 				<ul id="ul-rrhh-home" style="position:relative;display:inline-block;">
 				
 					<li ><?php echo Textos::model()->GetText(483); ?></li>
-				   <li style="line-height:18px;"><?php echo Textos::model()->GetText(484); ?></li>
-				   <li style="margin-top: 8px;"><?php echo Textos::model()->GetText(485); ?></li>
-				   <li style="margin-top: 8px;"><?php echo Textos::model()->GetText(486); ?></li>
-				   <li style="margin-top: 8px;"><?php echo Textos::model()->GetText(487); ?></li>
-				   <li style="line-height:18px; margin-top: 8px;"><?php echo Textos::model()->GetText(488); ?></li>
+				   <li ><?php echo Textos::model()->GetText(484); ?></li>
+				   <li ><?php echo Textos::model()->GetText(485); ?></li>
+				   <li ><?php echo Textos::model()->GetText(486); ?></li>
+				   <li ><?php echo Textos::model()->GetText(487); ?></li>
+				   <li><?php echo Textos::model()->GetText(488); ?></li>
 				</ul>
 
 				<!-- HASTA ACA !-->

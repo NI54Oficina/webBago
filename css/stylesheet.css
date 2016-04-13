@@ -6486,6 +6486,7 @@ figure.snip1156:hover .salud-ambiental{
 	.h2-titulo { 
 		margin-bottom: 0%; 
 		height: 20px; 
+		display: none;
 	}
 
 	
@@ -7589,7 +7590,7 @@ position:fixed;
 	.imagenes-fundaciones {height: 280px}
 	#registrado {margin-top: 5% !important;}
 	#barra-xs {margin-top: 2% !important;}
-	#botonera-buscar {margin-left: 15%}
+	#botonera-buscar {}
 	.buscador {width:80%;}
 }
 
@@ -7914,16 +7915,20 @@ position:fixed;
 	color: #359fbd;    
 	width: 50%;  
 	margin: auto; 
-	margin-top: 40px;
+	margin-top: 25px;
 }
 
 
 @media screen and (max-width:768px){
-	#ul-rrhh-home li {width: 100% !important; margin-top: 8px;
+	#ul-rrhh-home li {width: 100% !important; margin-top: 25px; line-height: 18px;
 		}
 
   #ul-rrhh-home{margin:2%; padding: 0px; width: 600px;}
+
+
+		
 }
+
 
 
 
@@ -9106,7 +9111,7 @@ position:fixed;
   
   .h2-aftosa {
 		color: #02204C;
-		display: inline-block;
+		display: none;
 		font-size: 17px;		
 		font-family: 'arialregular';
 		margin-top: 40px;
