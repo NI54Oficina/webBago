@@ -14,6 +14,10 @@
 
 /****************************************
 ************** GENERAL **************/
+
+
+.col-xs-3 {
+    width: auto; }
 html{
 	margin:0;
 	padding:0;
@@ -5048,7 +5052,9 @@ figure.snip1156:hover .salud-ambiental{
   and (min-device-width: 768px) 
   and (max-device-width: 1024px) 
   {
-
+   #barra-vademecum-aftosa, #barra-vademecum-antibioticos,#barra-vademecum-vitaminicos-y-minerales,#barra-vademecum-salud-ambiental,
+#barra-vademecum-reproductivos, #barra-vademecum-farmaceuticos, #barra-vademecum-endectocidas, #barra-vademecum-biologicos,
+#barra-vademecum-antiparasitarios-internos, #barra-vademecum-antiparasitarios-externos {display: none !important;}
 
   	.h1-1-home { margin-top: 0px; }
 	.h2-cd {
@@ -6440,11 +6446,7 @@ figure.snip1156:hover .salud-ambiental{
 		display:none !important;
     }
 	
-	
-
-/* ¨.TARGET-INNER SON IMAGENES BORRADAS DE VAQUITAS PORQUE FALTA MODIFICARLES LA UBICACION*/
-
-	
+		
 
 	.h2-titulo { 
 		margin-bottom: 0%; 
@@ -6452,6 +6454,9 @@ figure.snip1156:hover .salud-ambiental{
 		display: none;
 	}
 
+#barra-vademecum-aftosa, #barra-vademecum-antibioticos,#barra-vademecum-vitaminicos-y-minerales,#barra-vademecum-salud-ambiental,
+#barra-vademecum-reproductivos, #barra-vademecum-farmaceuticos, #barra-vademecum-endectocidas, #barra-vademecum-biologicos,
+#barra-vademecum-antiparasitarios-internos, #barra-vademecum-antiparasitarios-externos {display: none !important;}
 	
 } 				  
 
@@ -6617,6 +6622,7 @@ margin-right:0;
   and (max-device-width: 1100px) 
   and (orientation: portrait) 
   {
+
   
 	.d-rrhh-home{
 	background-image:none !important;
@@ -7663,7 +7669,10 @@ position:fixed;
 
 #registrado {text-align:center;margin-top:50%; margin-bottom: 1.5%;}
 
-#barra-vademecum-aftosa, #barra-superior-aftosa{border-bottom:1px solid #0082C8}
+
+
+
+#barra-vademecum-aftosa, #barra-superior-aftosa{border-bottom:1px solid #0082C8; }
 #barra-vademecum-antibioticos, #barra-superior-antibioticos  {border-bottom:1px solid #FF0423;}
 #barra-vademecum-antiparasitarios-externos, #barra-superior-antiparasitarios-externos {border-bottom:1px solid #0D553F;}
 #barra-vademecum-antiparasitarios-internos, #barra-superior-antiparasitarios-internos{border-bottom:1px solid #00955F;}
@@ -7688,7 +7697,7 @@ position:fixed;
 
 #barra-paises {border-bottom:1px solid #CCC;  margin-bottom: 4%; width: 160px; }
 
-#barra-vademecum {text-align:center;border-bottom:1px solid #7F7F7F;width:3%;margin:auto;margin-top:0%;}
+
 #targets-mobile img {width:auto;
 	max-width:58px;display: none !important;}
 
@@ -8976,7 +8985,7 @@ position:fixed;
 
 #btnmenu{
     display: inline-block;
-    margin-top: -2%;
+    margin-top: 2%;
     margin-right: 1%;
     transition: all 0.5s ease;
     float: right;
@@ -8986,6 +8995,9 @@ position:fixed;
 @media only screen (max-width: 768px;){
 
 	#btnmenu{margin-top: -7% !important;}
+	
+	
+
 }
 
 
@@ -9025,7 +9037,7 @@ position:fixed;
 		background-position:left;
 		margin-left:0;
 		text-align:left;
-		top:8vh;
+		top:1vh;
 		
 	}
 	#volver-p{
@@ -9238,7 +9250,7 @@ position:fixed;
 		padding-top:5%;
 	}
   .titulo-vad-producto {
-    text-align: center;
+    text-align: right;
     font-size: 17px;
     margin-bottom: 0%;
     margin-left: 0px;
