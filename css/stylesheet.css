@@ -1890,84 +1890,6 @@ font-size: 22px;
 	
 	
 	
-	.h4-aftosa{
-		color:#0082C8;
-	}
-	
-	.titulo-endectocida{
-		color:#9B9501;
-	}
-	
-	.h4-endectocida{
-		color:#9B9501;
-	}
-	
-	.titulo-antibioticos {
-		color:#FF0423;
-	}
-	
-	.h4-antibioticos{
-		color:#FF0423;
-	}
-	
-	.titulo-antiparasitarios-externos {
-		color:#0D553F;
-	}
-	
-	.h4-antiparasitarios-externos{
-		color:#0D553F;
-	}
-	
-	.titulo-antiparasitarios-internos{
-		color:#00955F;
-	}
-	
-	.h4-antiparasitarios-internos{
-		color:#00955F;
-	}
-	
-	.titulo-biologicos{
-		color:#646568;
-	}
-	
-	.h4-biologicos{
-		color:#646568;
-	}
-	
-	
-	.titulo-far, {
-		color:#6D3A5D;
-	}
-	
-	.h4-far{
-		color:#6D3A5D;
-	}
-	
-	.titulo-rep, {
-		color:#FF671B;
-	}
-	
-	.h4-rep{
-		color:#FF671B;
-	}
-	
-	
-	.titulo-sal,{
-		color:#26CBD4;
-	}
-	
-	.h4-sal{
-		color:#26CBD4;
-	}
-	
-	
-	.titulo-vit, {
-		color:#003B5D;
-	}
-	
-	.h4-vit{
-		color:#003B5D;
-	}
 	figure.snip1156:hover .d-a-2 {
 		width: 90%;
 		height: 90%;
@@ -7740,18 +7662,27 @@ position:fixed;
 
 #registrado {text-align:center;margin-top:50%; margin-bottom: 1.5%;}
 
+#barra-vademecum-aftosa, #barra-superior-aftosa{border-bottom:1px solid #0082C8}
+#barra-vademecum-antibioticos, #barra-superior-antibioticos  {border-bottom:1px solid #FF0423;}
+#barra-vademecum-antiparasitarios-externos, #barra-superior-antiparasitarios-externos {border-bottom:1px solid #0D553F;}
+#barra-vademecum-antiparasitarios-internos, #barra-superior-antiparasitarios-internos{border-bottom:1px solid #00955F;}
+#barra-vademecum-biologicos, #barra-superior-biologicos {border-bottom:1px solid #646568;} 
+#barra-vademecum-endectocidas, #barra-superior-endectocidas  {border-bottom:1px solid #9B9501;} 
+#barra-vademecum-farmaceuticos, #barra-superior-farmaceuticos  {border-bottom:1px solid #6D3A5D ;} 
+#barra-vademecum-reproductivos, #barra-superior-reproductivos {border-bottom:1px solid #FF671B;}
+#barra-vademecum-salud-ambiental, #barra-superior-salud-ambiental {border-bottom:1px solid #26CBD4;}
+#barra-vademecum-vitaminicos-y-minerales, #barra-superior-vitaminicos-y-minerales {border-bottom:1px solid #003B5D;}
 
-
-#barra-superior-aftosa {border-bottom:1px solid #0082C8}
-#barra-superior-antibioticos {border-bottom:1px solid #FF0423;}
-#barra-superior-antiparasitarios-externos {border-bottom:1px solid #0D553F;}
-#barra-superior-antiparasitarios-internos{border-bottom:1px solid #00955F;}
-#barra-superior-biologicos {border-bottom:1px solid #646568;} 
-#barra-superior-endectocidas  {border-bottom:1px solid #9B9501;} 
-#barra-superior-farmaceuticos {border-bottom:1px solid #6D3A5D ;} 
-#barra-superior-reproductivos {border-bottom:1px solid #FF671B;}
-#barra-superior-salud-ambiental {border-bottom:1px solid #26CBD4;}
-#barra-superior-vitaminicos-y-minerales {border-bottom:1px solid #003B5D;}
+ {border-bottom:1px solid #0082C8}
+{text-align:center;width:15%;margin:auto;border-bottom:1px solid #FF0423;}
+ {text-align:center;width:15%;margin:auto;border-bottom:1px solid #0D553F;}
+{text-align:center;width:15%;margin:auto;border-bottom:1px solid #00955F;}
+ {text-align:center;width:15%;margin:auto;border-bottom:1px solid #646568;} 
+  {text-align:center;width:15%;margin:auto;border-bottom:1px solid #9B9501;} 
+{text-align:center;width:15%;margin:auto;border-bottom:1px solid #6D3A5D ;} 
+ {text-align:center;width:15%;margin:auto;border-bottom:1px solid #FF671B;}
+ {text-align:center;width:15%;margin:auto;border-bottom:1px solid #26CBD4;}
+ {text-align:center;width:15%;margin:auto;border-bottom:1px solid #003B5D;}
 
 
 #barra-paises {border-bottom:1px solid #CCC;  margin-bottom: 4%; width: 160px; }
@@ -9495,3 +9426,86 @@ position:fixed;
 	position:absolute;
 	display:none;
 }
+
+
+	.titulo-antiparasitarios-externos {
+		color:#0D553F;
+	}
+	
+	.h4-antiparasitarios-externos{
+		color:#0D553F;
+	}
+	
+	.titulo-antiparasitarios-internos{
+		color:#00955F;
+	}
+	
+	.h4-antiparasitarios-internos{
+		color:#00955F;
+	}
+
+	
+	.h4-aftosa{
+		color:#0082C8;
+	}
+	
+	.titulo-endectocida{
+		color:#9B9501;
+	}
+	
+	.h4-endectocida{
+		color:#9B9501;
+	}
+	
+	.titulo-antibioticos {
+		color:#FF0423;
+	}
+	
+	.h4-antibioticos{
+		color:#FF0423;
+	}
+	
+
+	
+	.titulo-biologicos{
+		color:#646568;
+	}
+	
+	.h4-biologicos{
+		color:#646568;
+	}
+	
+	
+	.titulo-far, {
+		color:#6D3A5D;
+	}
+	
+	.h4-far{
+		color:#6D3A5D;
+	}
+	
+	.titulo-rep, {
+		color:#FF671B;
+	}
+	
+	.h4-rep{
+		color:#FF671B;
+	}
+	
+	
+	.titulo-sal,{
+		color:#26CBD4;
+	}
+	
+	.h4-sal{
+		color:#26CBD4;
+	}
+	
+	
+	.titulo-vit, {
+		color:#003B5D;
+	}
+	
+	.h4-vit{
+		color:#003B5D;
+	}

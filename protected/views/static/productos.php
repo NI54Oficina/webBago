@@ -90,7 +90,7 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 
 
 
-<p id="barra-vademecum" ></p>
+<p id="barra-vademecum-<?php echo $normalizado; ?>" style="text-align:center;width:3%;margin:auto;margin-top:0%;"></p>
 <h2 class="titulo-vad-producto titulo-<?php echo $normalizado; ?>">
 
 <img id="gota-producto"  src="<?php echo Yii::app()->request->baseUrl; ?>/img/gota-<?php echo $normalizado; ?>.png"  /><?php echo Yii::app()->paisChecker->getSeccion($seccion->id);?></h2>
@@ -110,7 +110,7 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 	
 		<p id="compartido"><?php echo Textos::model()->GetText(452); ?></p>
  		<p style="text-align:center;width:15%;margin:auto;margin-top:-2%; margin-bottom: 5px;" ></p>
- 		<p id="barra-superior-<?php echo $normalizado; ?>" class="hidden-xs hidden-sm"></p>
+ 		<p id="barra-superior-<?php echo $normalizado; ?>" class="hidden-xs hidden-sm" style="text-align:center;width:15%;margin:auto;"></p>
   		
   		<div id="barra-xs">
 			
