@@ -557,7 +557,7 @@ font-size: 22px;
 	}
 	
 	p{
-		margin-left:1%;
+		
 	}
 	
 	/**************************************************
@@ -614,7 +614,7 @@ font-size: 22px;
 	***********************************/
 	.h3-rse{
 		color:#02204C;
-		font-size:4vw;
+		font-size:19px;
 		font-family:'arialregular';
 		font-weight:700;
 		margin-bottom: 10px;
@@ -9420,7 +9420,7 @@ position:fixed;
 	}
 	
 	.snip1156.image h3 {
-		display: none;
+		display: initial;
 		color: #b8b8b8;
 		font-size: 16px;
 		margin-left: 15px;

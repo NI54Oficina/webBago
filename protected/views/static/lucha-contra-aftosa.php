@@ -30,7 +30,7 @@
 
 				</p>
 				
-				<p style=""><?php echo Textos::model()->GetText(53); ?>
+				<p style="font-weight: bold;"><?php echo Textos::model()->GetText(53); ?>
 				</p>
 		</div>
 	
