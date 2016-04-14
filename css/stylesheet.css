@@ -8896,9 +8896,9 @@ position:fixed;
 
 
 @media screen and (max-width: 435px){
-	.salud-animal{line-height: 50px !important; font-size: 40px !important;}
+	.salud-animal{line-height: 50px !important; font-size: 35px !important;}
 	 .laevolucion{
-	font-size: 30px;
+	font-size: 20px;
 	}
 	.redessociales-mobile {margin-bottom: 20%;} 
 
@@ -9512,3 +9512,5 @@ position:fixed;
 	}
 
 	.nota-tecnica-container  h2 {color: #66CCED; font-size: 18px;}
+
+
