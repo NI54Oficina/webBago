@@ -7013,7 +7013,7 @@ figure.snip1156 .d-a-2 h2{
 
 	.salud-animal {
 		color: #79C8EE;
-		font-size: 80px;
+		font-size: 40px;
 		margin-top: -1%;
 		font-weight: bold;
 	}
@@ -7090,6 +7090,7 @@ figure.snip1156 .d-a-2 h2{
   90% {
     opacity: 0;
   }
+
   100% {
     opacity: 0;
     background-position: bottom;
@@ -8773,7 +8774,7 @@ position:fixed;
 .nota-tecnica-container h1{
 	color: #66CCED !important;
 	margin-left:0;
-	font-size: 30px;
+	font-size: 18px;
 	    line-height: 30px;
 }
 
@@ -9444,7 +9445,7 @@ position:fixed;
 		color:#00955F;
 	}
 
-	
+
 	.h4-aftosa{
 		color:#0082C8;
 	}
@@ -9509,3 +9510,5 @@ position:fixed;
 	.h4-vit{
 		color:#003B5D;
 	}
+
+	.nota-tecnica-container  h2 {color: #66CCED; font-size: 18px;}
