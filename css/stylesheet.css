@@ -9715,6 +9715,7 @@ position:fixed;
 .infotec-240 a{ width: 90%; }
 
 
+<<<<<<< HEAD
  @media only screen 
   and (min-device-width: 200px) 
   and (max-device-width: 320px) 
@@ -10145,3 +10146,26 @@ position:fixed;
 	}
 	
 }
+=======
+
+
+/*EDICION MODAL*/
+
+#modal {background-color: rgba(0,0,0,.8)}
+
+#menu-modal { width: 500px; 
+				height: 500px; 
+				position: fixed; 
+				margin: auto;  
+			border:1px solid #00CDD0;
+	 		display:none;
+	 		background-color: white;}
+
+
+#modal-1 { background-color:#00CDD0;
+			margin: 0;
+		    }
+#modal-1 p, #modal-1 img {text-align: center;}
+
+
+>>>>>>> origin/master
