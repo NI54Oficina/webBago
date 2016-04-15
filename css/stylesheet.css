@@ -16,8 +16,6 @@
 ************** GENERAL **************/
 
 
-.col-xs-3 {
-    width: auto; }
 html{
 	margin:0;
 	padding:0;
@@ -602,6 +600,9 @@ font-size: 22px;
 		margin-top: 1.5%;
 	}
 	
+
+
+
 	.tabla-aftosa p{
 		line-height: 29px;
 		font-size: 15.5px;
@@ -2822,12 +2823,12 @@ p{
 
 
 #opcion2{
-	margin-left:15px;
+	/*margin-left:15px;*/
 }
 
 
 #opcion3{
-	margin-left:15px;
+	/*margin-left:15px;*/
 }
 fH
 
@@ -2957,7 +2958,7 @@ fH
 	margin-left:-4%;
 	margin-top:-2%;
 	width:62%;
-	font-size:20px;
+	font-size:15px;
 	letter-spacing:1px;
 }
 
@@ -7288,6 +7289,7 @@ figure.snip1156 .d-a-2 h2{
 @media screen and (max-width:435px){
 
 	#descripcion {height: auto !important;}
+	#titulo-vademecum {margin-top:5% !important; }
 
 }
 
@@ -7311,6 +7313,7 @@ figure.snip1156 .d-a-2 h2{
   and (max-device-width: 1024px) 
   and (orientation: portrait) 
   {
+
   	#volver-revista-p{
 		display:inline-block;
 		z-index:3;
@@ -7429,6 +7432,7 @@ figure.snip1156 .d-a-2 h2{
 		color: #00173B;
 		font-size: 18px;
 		padding-left: 29px;
+		line-height: 25px;
    }
 	.item-institucional .glyphicon{
 		display:none;
@@ -7837,7 +7841,7 @@ position:fixed;
 		margin-left: -138px;
 	}
 	
-	.volver:hover{
+	/*.volver:hover{
 		background-image: url(../img/volver-desactivado.png);
 		height: 42px;
 		background-repeat: no-repeat;
@@ -7852,7 +7856,7 @@ position:fixed;
 		text-align: left;
 		margin-left: -138px;
 	}
-	
+	*/
 	.volver-infotec-revista div {
 		background-image: url(../img/volver-info-tecnica.png);
 		background-repeat: no-repeat;
@@ -7870,6 +7874,7 @@ position:fixed;
 	 @media screen and (min-device-width:1024px)
 	 {
 	 	.img-fundaciones-1{margin-top: 37%;}
+
 	 }
 	 
 .fadder{
@@ -8819,12 +8824,12 @@ position:fixed;
     -o-transition: all 1s ease;
     -ms-transition: all 1s ease;
     transition: all 1s ease;
-    margin-top: -4%;
+    
     text-align: left;
     margin-left: -11%;
 	}
 	
-	.volver:hover{
+	/*.volver:hover{
 		background-image: url(../img/volver-desactivado.png);
     height: 42px;
     background-repeat: no-repeat;
@@ -8840,7 +8845,7 @@ position:fixed;
     margin-left: -11%;
 	opacity:0.5;
 	}
-	
+	*/
 	
 	#ul-rrhh-home{
 		color:#359fbd;
@@ -9015,12 +9020,12 @@ position:fixed;
 		margin:0;
 		padding:0;
 		left: initial;
-		top:10vh;
+		
 		margin-left:0;
 		background-position:left;
 		
 	}
-	.volver p,.volver:hover p{
+	.volver p,{
 		margin-left:50px;
 	}
 }
@@ -9211,7 +9216,7 @@ position:fixed;
     -o-transition: all 1s ease;
     -ms-transition: all 1s ease;
     transition: all 1s ease;
-    margin-top: 20px;
+    
     position: absolute;
 }
 
@@ -9392,6 +9397,8 @@ position:fixed;
   and (orientation: landscape) 
   {
   
+  .volver p {display: none;}
+
 		#ul-nav-principal {
 			height: auto;
 			text-align: right;
@@ -9538,3 +9545,14 @@ position:fixed;
 
 	.salud-animal { font-size: 30px; }				
 }
+
+
+@media screen and (max-width:875px){
+
+	
+	#titulo-vademecum {margin-top:5% !important; }
+
+}
+
+
+.infotec-240 a{ width: 90%; }

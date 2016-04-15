@@ -91,9 +91,17 @@ $auxId=0;
 <div style="width:100%;">
 <div  class="tabla-aftosa col-lg-12 col-md-12 col-sm-12 col-xs-12 fadder" style="margin-top:4%; margin-bottom:25vh;padding:0 5%;"> 
 
+<a href="<?php echo Yii::app()->request->baseUrl;?>/home#contenido-vad">
+<div class=" col-lg-3 col-md-3 col-sm-12 col-xs-12 volver hidden-sm hidden-xs">
+<p><?php echo Textos::model()->GetText(490); ?></p>
+</div>
+</a>
+
 <a  style="z-index:3333;padding-top:3%;"href="<?php echo Yii::app()->getBaseUrl(true); ?>"><div class=" col-lg-3 col-md-3 col-sm-6 col-xs-6 volver-mobile hidden-lg hidden-md">
 <p id="volver-p"><?php echo Textos::model()->GetText(490); ?></p>
 </div></a>
+
+
 
 <div id="titulo-vademecum" class="hidden-lg hidden-md">
 <h1 class="vademecum"> <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/punto-<?php echo $normalizado; ?>.png" /><?php echo Textos::model()->GetText(348); ?><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/punto-<?php echo $normalizado; ?>.png" /></h1>
@@ -114,11 +122,7 @@ $auxId=0;
 
  <!-- ACA ESTA EL TITULO CON LA GOTA -->
 
-<a href="<?php echo Yii::app()->request->baseUrl;?>/home#contenido-vad">
-<div class=" col-lg-3 col-md-3 col-sm-12 col-xs-12 volver hidden-sm hidden-xs">
-<p><?php echo Textos::model()->GetText(490); ?></p>
-</div>
-</a>
+
 
 
 
