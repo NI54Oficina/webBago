@@ -3413,7 +3413,7 @@ section{
 	width: 11vw;
     background: rgba(255,255,255,0.2);
     display: inline-block;
-    height: 20px;
+    height: 35px;
     border: 1px solid white;
 	padding-left:5%;
 	font-family:'arialregular';
@@ -5172,6 +5172,41 @@ figure.snip1156:hover .salud-ambiental{
   and (max-device-width: 1024px) 
   and (orientation: portrait) 
    {
+   #form1 textarea {
+    width: 99%;
+    background: rgba(255,255,255,0.2);
+    height: 15vh;
+    margin-left: -11px;
+}
+
+#btn-buscar {
+    background-image: url(../img/lupa-2-01.png);
+    width: 39px;
+    height: 48px;
+    border: none;
+    background-color: transparent;
+    margin-top: 10px;
+    margin-left: -7px;
+    display: block;
+}
+.input-vad {
+    width: 120%;
+    background: rgba(255,255,255,0.2);
+    display: inline-block;
+    height: 35px;
+    border: 1px solid white;
+    padding-left: 5%;
+    font-family: 'arialregular';
+    color: white;
+    letter-spacing: 2px;
+}
+
+
+.input-group-btn {
+    display: block;
+    text-align: center;
+    margin: auto;
+}
 .volver-mobile {
     background-image: url(../img/volver-desactivado.png);
     height: 42px;
@@ -6175,6 +6210,16 @@ figure.snip1156:hover .salud-ambiental{
   and (max-device-width: 2100px) 
    { 
    
+   
+	.vad-prod-background{
+		background-color:#f5f5f5;
+		display:inline-block;
+		width:96%;
+		height:96%;
+		margin:2%;
+	}
+	
+	
 	#volver-revista-p{
 		display:inline-block;
 		z-index:3;
@@ -7313,7 +7358,15 @@ figure.snip1156 .d-a-2 h2{
   and (max-device-width: 1024px) 
   and (orientation: portrait) 
   {
-
+	.vad-prod-background{
+		background-color:#f5f5f5;
+		display:inline-block;
+		width:96%;
+		height:96%;
+		margin:2%;
+	}
+	
+	
   	#volver-revista-p{
 		display:inline-block;
 		z-index:3;
@@ -7606,6 +7659,15 @@ h5{
   and (max-device-width: 1024px) 
   and (orientation: landscape) 
    {
+   
+   	.vad-prod-background{
+		background-color:#f5f5f5;
+		display:inline-block;
+		width:96%;
+		height:96%;
+		margin:2%;
+	}
+	
    	#volver-revista-p{
 		display:inline-block;
 		z-index:3;
@@ -8180,21 +8242,7 @@ position:fixed;
 		font-weight: bold;
 	}
 	
-	.scroll-down {
-		margin: 0;
-		border: 2px solid #fff;
-		-moz-border-radius: 100px;
-		-webkit-border-radius: 100px;
-		border-radius: 100px;
-		position: absolute;
-		top: 77%;
-		width: 50px;
-		height: 50px;
-		margin-top: 0px;
-		z-index: 2;
-		margin-left: -25px;
-	}
-  
+
  	#logo-bago{
 		display:none;
 	}
@@ -9025,8 +9073,14 @@ position:fixed;
 		background-position:left;
 		
 	}
-	.volver p,{
+	.volver p{
 		margin-left:50px;
+	}
+	
+	.tabla-aftosa .p-widget-v {
+		font-size: 9px;
+		text-transform: uppercase;
+		margin-left: 2%;
 	}
 }
 
@@ -9127,6 +9181,24 @@ position:fixed;
   and (min-device-width: 768px) 
   and (max-device-width: 1024px) 
   {
+  
+	.snip1156.image h3 {
+		display: block;
+		color: #b8b8b8;
+		font-size: 16px;
+		margin-left: 15px;
+		margin-right: 15px;
+		text-align: left;
+	}
+	
+	#btnmenu {
+		display: inline-block;
+		margin-top: -3.5%;
+		margin-right: 1%;
+		transition: all 0.5s ease;
+		float: right;
+	}
+	
 	.titulo-layout-aftosa {
 		font-size: 40px;
 	}
@@ -9205,6 +9277,22 @@ position:fixed;
   and (min-device-width: 240px) 
   and (max-device-width: 737px) 
   {
+  
+  	.vad-prod-background{
+		background-color:#f5f5f5;
+		display:inline-block;
+		width:96%;
+		height:96%;
+		margin:2%;
+	}
+	
+	#form1 input {
+		width: 100%;
+		background: rgba(255,255,255,0.2);
+		display: inherit;
+		border: none;
+		height: 4.5vh;
+	}
   .volver-mobile {
     background-image: url(../img/volver-desactivado.png);
     height: 42px;
@@ -9216,10 +9304,37 @@ position:fixed;
     -o-transition: all 1s ease;
     -ms-transition: all 1s ease;
     transition: all 1s ease;
-    
     position: absolute;
 }
 
+#btn-buscar {
+    background-image: url(../img/lupa-2-01.png);
+    width: 38px;
+    height: 48px;
+    border: none;
+    background-color: transparent;
+    margin-top: 10px;
+    margin-left: 0px;
+}
+
+.input-group-btn {
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+.input-vad {
+    width: 100%;
+    background: rgba(255,255,255,0.2);
+    display: inline-block;
+    height: 33px;
+    border: 1px solid white;
+    padding-left: 5%;
+    font-family: 'arialregular';
+    color: white;
+    letter-spacing: 2px;
+    margin-left: 22px;
+}
   .volver-mobile:hover {
     background-image: url(../img/volver-desactivado.png);
     height: 42px;
@@ -9376,7 +9491,15 @@ position:fixed;
 		margin-right: 15px;
 		text-align: left;
 	}
-
+	
+	.snip1156.image h3 {
+		display: block;
+		color: #b8b8b8;
+		font-size: 16px;
+		margin-left: 15px;
+		margin-right: 15px;
+		text-align: left;
+	}
 
   }
   
@@ -9397,6 +9520,40 @@ position:fixed;
   and (orientation: landscape) 
   {
   
+	#text-2{
+      padding-top: 14%;
+		color: white;
+		letter-spacing: 1px;
+		line-height: 25px;
+		font-size: 16px;
+		margin-bottom: 35px;
+		color:#666;
+	}
+	
+	
+	#form1 textarea {
+		width: 97%;
+		background: rgba(255,255,255,0.2);
+		height: 15vh;
+		margin-left: -18px;
+	}
+
+	#btnmenu {
+		display: inline-block;
+		margin-top: -2.8%;
+		margin-right: 1%;
+		transition: all 0.5s ease;
+		float: right;
+	}
+	.snip1156.image h3 {
+		display: block;
+		color: #b8b8b8;
+		font-size: 16px;
+		margin-left: 15px;
+		margin-right: 15px;
+		text-align: left;
+	}
+	
   .volver p {display: none;}
 
 		#ul-nav-principal {
@@ -9556,3 +9713,435 @@ position:fixed;
 
 
 .infotec-240 a{ width: 90%; }
+
+
+ @media only screen 
+  and (min-device-width: 200px) 
+  and (max-device-width: 320px) 
+  {
+  	.scroll-down {
+		margin: 0;
+		border: 2px solid #fff;
+		-moz-border-radius: 100px;
+		-webkit-border-radius: 100px;
+		border-radius: 100px;
+		position: absolute;
+		top: 77%;
+		width: 40px;
+		height: 40px;
+		margin-top: 0px;
+		z-index: 2;
+		margin-left: -25px;
+	}
+	
+	.laevolucion {
+		font-size: 19px;
+	}
+  
+  
+	.salud-animal {
+		line-height: 50px !important;
+		font-size: 24px !important;
+	}
+  
+  }
+  
+  
+ @media only screen 
+  and (min-device-width: 200px) 
+  and (max-device-width: 320px) 
+  and (orientation: landscape){
+  
+	.border-tit {
+		border-bottom: none;
+	}
+	
+	#info-revista h1 {
+		margin: 0;
+		margin-bottom: 3%;
+		font-size: 35px;
+		padding: 15px;
+	}
+	
+	#info-revista p {
+		margin-left: 0%;
+		padding:15px;
+	}
+	
+	#h2-1 {
+		font-size: 20px;
+		padding: 15px;
+	}
+	
+	#btn-rev {
+		width: 72%;
+		margin-left: 13%;
+	}
+	
+	#form1 input {
+		width: 100%;
+		background: rgba(255,255,255,0.2);
+		display: inherit;
+		border: none;
+		height: 12.5vh;
+	}
+	
+	#form1 textarea {
+		width: 100%;
+		background: rgba(255,255,255,0.2);
+		height: 30vh;
+		margin-left: -15px;
+	}
+	
+	#logo-bago-mobile {
+		display: inline-block;
+		width: 35%;
+		padding-top: 2%;
+		padding-bottom: 2%;
+		margin-left: 10px;
+	}
+	
+	.logo-blanco {
+		width: 37%;
+	}
+
+	.border-video {
+		margin-bottom: 20px;
+		margin-top: 3px;
+	}
+	
+	.scroll-down {
+		margin: 0;
+		border: 2px solid #fff;
+		-moz-border-radius: 100px;
+		-webkit-border-radius: 100px;
+		border-radius: 100px;
+		position: absolute;
+		top: 77%;
+		width: 40px;
+		height: 40px;
+		margin-top: 11px;
+		z-index: 2;
+		margin-left: -25px;
+	}
+	
+	.bienvenidos {
+		margin: 0;
+		margin-top: 7%;
+		text-align: left;
+		margin-left: 10px;
+	}
+	
+	.border-inst {
+		border: 2px solid white;
+		width: 25%;
+		margin-top: -1%;
+		display: inline-block;
+	}
+	
+	.h1-1-home {
+		font-size: 11px;
+		color: #00173B;
+		/* margin-top: 15%; */
+		font-family: 'arialregular';
+		font-weight: 700;
+	}
+
+	.item-institucional img {
+		display: inline-block;
+		text-align: center;
+		width: 45px;
+		height: 45px;
+	}
+	
+	#btnmenu {
+		display: inline-block;
+		margin-top: -8.5%;
+		margin-right: 2%;
+		transition: all 0.5s ease;
+		float: right;
+	}
+}
+ 
+ 
+ @media only screen 
+  and (min-device-width: 200px) 
+  and (max-device-width: 320px) 
+  and (orientation: portrait){
+  
+	.titulo-layout-aftosa {
+		font-size: 18px;
+	}
+	
+	.dropdown-menu>li>a {
+		background: white;
+		color: #b6b6b6;
+		display: block;
+		padding: 0px 1px;
+		clear: both;
+		font-weight: 400;
+		line-height: 3.428571;
+		white-space: nowrap;
+	}
+
+	.header-infotec-revista {
+		background: #66CCED;
+		padding-bottom: 4%;
+		margin-bottom: 5vh;
+	}
+	
+	.h1-infotec-noticias2 {
+		color: white;
+		font-family: 'arialregular';
+		margin: 0;
+		padding-top: 10%;
+		text-align: center;
+		font-size: 15px;
+		display: inline-block;
+	}
+	
+	.dot-infotec-noticias{
+		display:none;
+	}
+	
+	.h1-infotec-noticias2 {
+		color: white;
+		font-family: 'arialregular';
+		margin: 0;
+		padding-top: 10%;
+		text-align: center;
+		font-size: 15px;
+		display: inline-block;
+		margin-top: 5%;
+		margin-left: -12%;
+	}
+	
+	.h1-infotec-noticias {
+		color: white;
+		font-family: 'arialregular';
+		margin: 0;
+		padding-top: 5%;
+		text-align: center;
+		font-size: 18px;
+		display: inline-block;
+		margin-top: 11%;
+		margin-left: -6%;
+	}
+	
+	.border-infotec-noticias {
+		border-top: 1px solid white;
+		width: 50px;
+		margin: auto;
+		margin-top: 10px;
+		margin-left: 54px;
+	}
+	
+	.volver-infotec-revista div {
+		background-image: url(../img/volver-info-tecnica.png);
+		background-repeat: no-repeat;
+		width: 42px;
+		height: 42px;
+		display: inline-block;
+		transition: all 0.3s ease;
+		background-size: auto 78%;
+		margin-top: 10px;
+	}
+
+	#mapa-total h1 {
+		color: #8BCDE0;
+		font-family: 'arialregular';
+		margin-top: -9%;
+		margin-bottom: 7%;
+		margin-bottom: 5%;
+		font-size: 26px;
+	}
+	#info-revista h1 {
+		margin: 0;
+		margin-bottom: 3%;
+		font-size: 26px;
+		margin-left: -1px;
+		padding-top: 6%;
+	}
+	
+	#img-rev {
+		width: 61%;
+		box-shadow: 2px 2px 20px;
+		margin-right: 7%;
+	}
+	
+	
+	#info-revista p {
+		margin-left: -1%;
+		font-size: 13px;
+		width: 57%;
+		padding-top: 6%;
+	}
+	
+	
+	#h2-1 {
+		font-size: 20px;
+		margin-left: -2.8px;
+	}
+	
+	
+  	#titulo {
+		font-size: 15px;
+	}
+	
+	
+	.border {
+		border-bottom: 2px solid white;
+		padding-bottom: 1%;
+		margin-left: 44%;
+		width: 10%;
+		margin-top: -7px;
+		margin-bottom: 4%;
+	}
+
+  .border-video {
+		margin-bottom: 20px;
+		margin-top: 9px;
+	}
+  
+	.logo-blanco {
+		width: 44%;
+	}
+  
+	.border-inst {
+		border: 2px solid white;
+		width: 28%;
+		margin-top: -1%;
+		display: inline-block;
+	}
+	
+	.item-institucional img {
+		display: inline-block;
+		text-align: center;
+		width: 45px;
+		height: 45px;
+	}
+	
+	.border-vad {
+		border-bottom: 2px solid #FFFFFF;
+		padding-bottom: 0.5%;
+		width: 20%;
+		margin-left: 40%;
+	}
+	
+	#btnmenu {
+		display: inline-block;
+		margin-top: -1.5%;
+		margin-right: 2%;
+		transition: all 0.5s ease;
+		float: right;
+	}
+	
+	#btn-buscar {
+		background-image: url(../img/lupa-2-01.png);
+		width: 38px;
+		height: 48px;
+		border: none;
+		background-color: transparent;
+		margin-top: 10px;
+		margin-left: -7px;
+	}
+	
+	.input-vad {
+		width: 86vw;
+		background: rgba(255,255,255,0.2);
+		display: inline-block;
+		height: 33px;
+		border: 1px solid white;
+		padding-left: 5%;
+		font-family: 'arialregular';
+		color: white;
+		letter-spacing: 2px;
+		margin-left: 22px;
+	}
+	
+	.volver-mobile {
+		background-image: url(../img/volver-desactivado.png);
+		height: 42px;
+		background-repeat: no-repeat;
+		background-position: left;
+		background-size: auto 73%;
+		-webkit-transition: all 1s ease;
+		-moz-transition: all 1s ease;
+		-o-transition: all 1s ease;
+		-ms-transition: all 1s ease;
+		transition: all 1s ease;
+		position: absolute;
+	}	
+	
+	#form1 input {
+		width: 100%;
+		background: rgba(255,255,255,0.2);
+		display: inherit;
+		border: none;
+		height: 9.5vh;
+	}
+}
+ 
+ 
+  @media only screen 
+  and (min-device-width: 240px) 
+  and (max-device-width: 737px) 
+  and (orientation: landscape){
+	
+	#logo-bago-mobile {
+		display: inline-block;
+		width: 20%;
+		padding-top: 2%;
+		padding-bottom: 2%;
+		margin-left: 10px;
+	}
+	
+	.vad-prod-background{
+		background-color:#f5f5f5;
+		display:inline-block;
+		width:55%;
+		height:92%;
+		margin:2%;
+	}
+	 
+  
+ }
+ 
+ 
+@media only screen 
+  and (min-device-width: 200px) 
+  and (max-device-width: 320px) 
+  and (orientation: landscape){
+  
+  
+	#logo-bago-mobile {
+		display: inline-block;
+		width: 35%;
+		padding-top: 2%;
+		padding-bottom: 2%;
+		margin-left: 10px;
+	}
+	
+	.bienvenidos {
+		margin: 0;
+		margin-top: 15%;
+		text-align: left;
+		margin-left: 10px;
+	}
+	
+	.bienvenidos {
+		font-size: 19px;
+	}
+	
+	.border {
+		border-bottom: 2px solid white;
+		padding-bottom: 0%;
+		margin-left: 44%;
+		width: 10%;
+	}
+	
+	#titulo {
+		font-size: 22px;
+	}
+	
+}

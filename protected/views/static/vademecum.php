@@ -136,7 +136,7 @@ $auxId=0;
 	$imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"id DESC"));
 	?>
 	<div class=" col-lg-4 col-md-4 col-sm-6 col-xs-12 div-img-aft same-height" hid="1" style="">
-		<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/productos/id<?php echo $producto->id; ?>" style="background-color:#f5f5f5;display:inline-block;width:96%;height:96%;margin:2%;">
+		<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/productos/id<?php echo $producto->id; ?>" class="vad-prod-background">
 		<figure class="snip1156 image">
 			<div>
 				<div class="inner-producto-vademecum">
