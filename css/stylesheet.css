@@ -8201,7 +8201,7 @@ position:fixed;
  
  @media only screen 
   and (min-device-width: 200px) 
-  and (max-device-width: 319px) 
+  and (max-device-width: 320px) 
   {
   
    .border-celeste {
@@ -9278,6 +9278,13 @@ position:fixed;
   and (max-device-width: 737px) 
   {
   
+  #form1 textarea {
+    width: 93%;
+    background: rgba(255,255,255,0.2);
+    height: 15vh;
+    margin-left: -20px;
+}
+
   	.vad-prod-background{
 		background-color:#f5f5f5;
 		display:inline-block;
@@ -9772,6 +9779,7 @@ position:fixed;
 	#h2-1 {
 		font-size: 20px;
 		padding: 15px;
+		margin:0;
 	}
 	
 	#btn-rev {
@@ -9868,7 +9876,8 @@ position:fixed;
  @media only screen 
   and (min-device-width: 200px) 
   and (max-device-width: 320px) 
-  and (orientation: portrait){
+  and (orientation: portrait)
+  {
   
 	.titulo-layout-aftosa {
 		font-size: 18px;
@@ -10104,8 +10113,7 @@ position:fixed;
 		height:92%;
 		margin:2%;
 	}
-	 
-  
+	
  }
  
  
@@ -10113,8 +10121,6 @@ position:fixed;
   and (min-device-width: 200px) 
   and (max-device-width: 320px) 
   and (orientation: landscape){
-  
-  
 	#logo-bago-mobile {
 		display: inline-block;
 		width: 35%;
@@ -10146,6 +10152,7 @@ position:fixed;
 	}
 	
 }
+
 
 
 /*EDICION MODAL*/
