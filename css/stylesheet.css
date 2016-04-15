@@ -7365,7 +7365,13 @@ figure.snip1156 .d-a-2 h2{
   and (max-device-width: 1024px) 
   and (orientation: portrait) 
   {
-  
+  .titulo-vad-producto {
+    text-align: center;
+    font-size: 17px;
+    margin-bottom: 0%;
+    margin-left: 44px;
+}
+
 	.band-filiales {
 		margin-top: -2%;
 		width: 5%;
@@ -7671,7 +7677,12 @@ h5{
   and (max-device-width: 1024px) 
   and (orientation: landscape) 
    {
-   
+   .titulo-vad-producto {
+    text-align: center;
+    font-size: 17px;
+    margin-bottom: 0%;
+    margin-left: 44px;
+}
 	#infodcha div.error {
 		color: #ffcf5c;
 		position: absolute;
@@ -9082,6 +9093,13 @@ position:fixed;
   and (max-device-width: 1024px) 
   and (orientation: landscape) 
    {
+   
+   .titulo-vad-producto {
+    text-align: center;
+    font-size: 17px;
+    margin-bottom: 0%;
+    margin-left: 44px;
+}
 	.volver,.volver:hover{
 		position:absolute;
 		margin:0;
@@ -9122,7 +9140,35 @@ position:fixed;
 		margin-left:50px;
 		margin-top:0;
 	}
-	
+	.titulo-vad-producto {
+    text-align: center;
+    font-size: 17px;
+    margin-bottom: 0%;
+    margin-left: 44px;
+}
+
+.facebook {
+    background-image: url(../img/facebook-desactivado.png);
+    height: 35px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto auto;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+    /* float: none; */
+    display: block;
+    margin: auto;
+    /* border-top: 1px solid #ccc; */
+    width: 100vw;
+}
+
+#compartido {
+    text-align: center;
+    padding-bottom: 1.5%;
+}
   }
 
 .redessociales-mobile {margin-bottom: 0;}
@@ -9277,31 +9323,36 @@ position:fixed;
 		margin-top: 3em;
 	}
 	
-	   .p-proveedores-download{ 
-	display: inline-block;    
-	color: #337ab7; 
-	font-size: 13px;    
-	width: 75%;
-}
+	.p-proveedores-download{ 
+		display: inline-block;    
+		color: #337ab7; 
+		font-size: 13px;    
+		width: 75%;
+	}
 
-#ver-revista {
-    padding-left: 5%;
-    padding-top: 50px;
+	#ver-revista {
+		padding-left: 5%;
+		padding-top: 50px;
+	}
 }
-  }
   
 
   
-  @media only screen 
+@media only screen 
   and (min-device-width: 240px) 
   and (max-device-width: 737px) 
   {
   
-  #form1 textarea {
-    width: 93%;
-    background: rgba(255,255,255,0.2);
-    height: 15vh;
-    margin-left: -20px;
+	#form1 textarea {
+		width: 93%;
+		background: rgba(255,255,255,0.2);
+		height: 15vh;
+		margin-left: -20px;
+	}
+
+#contacto-mobile {
+    display: inline-block !important;
+    text-align: center;
 }
 
   	.vad-prod-background{
