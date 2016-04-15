@@ -9562,24 +9562,20 @@ position:fixed;
 
 /*EDICION MODAL*/
 
+#modal {background-color: rgba(0,0,0,.8)}
 
 #menu-modal { width: 500px; 
-				height: 50px; 
+				height: 500px; 
 				position: fixed; 
 				margin: auto;  
 			border:1px solid #00CDD0;
-	 		display:none;}
-
-
-#menu-modal { width: 500px; 
-				height: 50px; 
-				position: fixed; 
-				margin: auto;  
-			border:1px solid #00CDD0;
-	 		display:none;}
+	 		display:none;
+	 		background-color: white;}
 
 
 #modal-1 { background-color:#00CDD0;
 			margin: 0;
 		    }
 #modal-1 p, #modal-1 img {text-align: center;}
+
+

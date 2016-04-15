@@ -1,3 +1,6 @@
+<div id="modal">
+	
+
 <div id="menu-modal">
 
  <div id="modal-1"> 
@@ -21,6 +24,9 @@
 
  </div>
 	
+
+</div>
+
 
 </div>
 
