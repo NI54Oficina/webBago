@@ -9506,17 +9506,17 @@ position:fixed;
 	}
 	
 	#epigrafe-paises {
-    font-size: 11px;
-    font-family: 'arialregular';
-    color: white;
-    font-weight: 700;
-    display: inline-block;
-    padding-top: 0px;
-    text-shadow: 0px 3px black;
-    text-align: center;
-    margin-left: 0px;
-    padding-bottom: 20px;
-}
+		font-size: 11px;
+		font-family: 'arialregular';
+		color: white;
+		font-weight: 700;
+		display: inline-block;
+		padding-top: 0px;
+		text-shadow: 0px 3px black;
+		text-align: center;
+		margin-left: 0px;
+		padding-bottom: 20px;
+	}
 
 #botonera-buscar {
     font-family: arialregular;
@@ -9675,7 +9675,7 @@ position:fixed;
 		font-size: 23px;
 	}
 	
-	  	.360-inside{
+	.360-inside{
 		text-shadow: none!important;
 		padding-top: 0!important;
 		margin-bottom: 2.5%!important;
@@ -9963,8 +9963,6 @@ position:fixed;
   and (max-device-width: 320px) 
   and (orientation: portrait)
   {
-  
-  
 	.band-filiales {
 		margin-top: -2%;
 		width: 11%;
@@ -10131,13 +10129,13 @@ position:fixed;
 	
 	.item-institucional img {
 		display: inline-block;
-		text-align: center;
+		text-align:center;
 		width: 45px;
 		height:45px;
 	}
 	
 	.border-vad {
-		border-bottom: 2px solid #FFFFFF;
+		border-bottom: 2px solid #FFF;
 		padding-bottom: 0.5%;
 		width: 20%;
 		margin-left: 40%;
@@ -10257,7 +10255,6 @@ position:fixed;
 	}
 	
 }
-
 
 
 /*EDICION MODAL*/

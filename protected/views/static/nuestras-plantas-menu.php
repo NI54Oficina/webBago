@@ -5,6 +5,7 @@
 			
 <script src="<?php echo Yii::app()->getBaseUrl(true); ?>/js/jquery.boxloader.min.js"></script>	
 <div id="plantas-transicion">
+
 <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 	<div  class="side-title">
 		<div style="display:inline-block;">
@@ -32,14 +33,14 @@
 	
 		<div  class="col-lg-6 col-md-6 col-sm-12 col-xs-12 inner-text container-lista-360" style="text-shadow:none;padding-top:0;margin-bottom:2.5%;">	
 			<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vista/camara" target="_blank">
-				<img   src="<?php echo Yii::app()->request->baseUrl; ?>/img/imagen-360-camara.png"  />
+				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/imagen-360-camara.png"  />
 			</a>
 		</div>
 
 		<div  class="col-lg-6 col-md-6 col-sm-12 col-xs-12 inner-text container-lista-360" style="text-shadow:none;padding-top:0;margin-bottom:2.5%;">	
 			<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vista/empaque" target="_blank">
-				<img  src="<?php echo Yii::app()->request->baseUrl; ?>/img/imagen-360-empaque.png"  />
-			</a>
+				<img  src="<?php echo Yii::app()->request->baseUrl; ?>/img/imagen-360-empaque.png"/>
+			|
 		</div>
 
 		<div  class="col-lg-6 col-md-6 col-sm-12 col-xs-12 inner-text container-lista-360" style="text-shadow:none;padding-top:0;margin-bottom:2.5%;">	
