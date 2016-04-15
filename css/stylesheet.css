@@ -9342,7 +9342,14 @@ position:fixed;
   and (min-device-width: 240px) 
   and (max-device-width: 737px) 
   {
-  
+  .h1-1-home {
+    font-size: 13px;
+    color: #00173B;
+    /* margin-top: 15%; */
+    font-family: 'arialregular';
+    font-weight: 700;
+}
+
 	#form1 textarea {
 		width: 93%;
 		background: rgba(255,255,255,0.2);
@@ -10124,7 +10131,7 @@ position:fixed;
 		display: inline-block;
 		text-align: center;
 		width: 45px;
-		height: 45px;
+		height:45px;
 	}
 	
 	.border-vad {
@@ -10162,7 +10169,7 @@ position:fixed;
 		font-family: 'arialregular';
 		color: white;
 		letter-spacing: 2px;
-		margin-left: 22px;
+		margin-left: 2px;
 	}
 	
 	.volver-mobile {
@@ -10255,18 +10262,22 @@ position:fixed;
 
 #modal {background-color: rgba(0,0,0,.8)}
 
-#menu-modal { width: 500px; 
-				height: 500px; 
-				position: fixed; 
-				margin: auto;  
-			border:1px solid #00CDD0;
-	 		display:none;
-	 		background-color: white;}
+#menu-modal { 
+	width: 500px; 
+	height: 500px; 
+	position: fixed; 
+	margin: auto;  
+	border:1px solid #00CDD0;
+	display:none;
+	background-color: white;
+}
 
 
-#modal-1 { background-color:#00CDD0;
-			margin: 0;
-		    }
+#modal-1 { 
+	background-color:#00CDD0;
+	margin: 0;
+}
+
 #modal-1 p, #modal-1 img {text-align: center;}
 
 
@@ -10275,7 +10286,6 @@ position:fixed;
   and (min-device-width: 320px) 
   and (max-device-width: 533px) 
   and (orientation: portrait){
-  
 	#form1 input {
 		width: 100%;
 		background: rgba(255,255,255,0.2);
