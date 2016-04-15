@@ -9785,8 +9785,10 @@ position:fixed;
 @media screen and (max-width: 736px) and (max-height: 709px){
 
 
-	.border-video {margin-bottom: 20px; margin-top: 20px;
-					}
+	.border-video {
+		margin-bottom: 20px; 
+		margin-top: 20px;
+	}
 
 	.logo-blanco {width: 40%;}
 	
