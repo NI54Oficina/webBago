@@ -257,13 +257,19 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="contacto-mobile" style="padding-top:10px;">
 			
-			<a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//<?php echo $_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI']; ?>" class=" facebook"  style="width:40px;height:40px;">
+			<a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//<?php echo $_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI']; ?>" class="facebook"  style="width:40px;height:40px;">
 				
 			</a>
 			
 			<!--<a class=" mail" style="width:40px;height:40px;">
 			</a>!-->
 		</div>
+
+
+
+
+
+
 	</div>
 
 
