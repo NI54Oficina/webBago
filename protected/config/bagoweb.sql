@@ -1,20 +1,20 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
+-- version 3.5.1
 -- http://www.phpmyadmin.net
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 18-04-2016 a las 15:08:20
--- Versión del servidor: 10.1.9-MariaDB
--- Versión de PHP: 5.5.30
+-- Servidor: localhost
+-- Tiempo de generación: 18-04-2016 a las 14:48:57
+-- Versión del servidor: 5.5.24
+-- Versión de PHP: 5.4.45
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40101 SET NAMES utf8 */;
 
 --
 -- Base de datos: `bagoweb`
@@ -26,11 +26,12 @@ SET time_zone = "+00:00";
 -- Estructura de tabla para la tabla `authassignment`
 --
 
-CREATE TABLE `authassignment` (
+CREATE TABLE IF NOT EXISTS `authassignment` (
   `itemname` varchar(64) NOT NULL,
   `userid` varchar(64) NOT NULL,
   `bizrule` text,
-  `data` text
+  `data` text,
+  PRIMARY KEY (`itemname`,`userid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -52,12 +53,13 @@ INSERT INTO `authassignment` (`itemname`, `userid`, `bizrule`, `data`) VALUES
 -- Estructura de tabla para la tabla `authitem`
 --
 
-CREATE TABLE `authitem` (
+CREATE TABLE IF NOT EXISTS `authitem` (
   `name` varchar(64) NOT NULL,
   `type` int(11) NOT NULL,
   `description` text,
   `bizrule` text,
-  `data` text
+  `data` text,
+  PRIMARY KEY (`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -103,9 +105,11 @@ INSERT INTO `authitem` (`name`, `type`, `description`, `bizrule`, `data`) VALUES
 -- Estructura de tabla para la tabla `authitemchild`
 --
 
-CREATE TABLE `authitemchild` (
+CREATE TABLE IF NOT EXISTS `authitemchild` (
   `parent` varchar(64) NOT NULL,
-  `child` varchar(64) NOT NULL
+  `child` varchar(64) NOT NULL,
+  PRIMARY KEY (`parent`,`child`),
+  KEY `child` (`child`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -114,43 +118,43 @@ CREATE TABLE `authitemchild` (
 
 INSERT INTO `authitemchild` (`parent`, `child`) VALUES
 ('admin', 'adminAccess'),
-('admin', 'adminImagenes'),
-('admin', 'adminProducto'),
-('admin', 'adminSeccion'),
-('admin', 'createEstablecimiento'),
-('admin', 'createPost'),
-('admin', 'createProducto'),
-('admin', 'createRole'),
-('admin', 'createUser'),
-('admin', 'deletePost'),
-('admin', 'deleteProducto'),
-('admin', 'deleteUsers'),
-('admin', 'editPost'),
-('admin', 'editUsers'),
-('admin', 'updateEstablecimiento'),
-('admin', 'updateProducto'),
-('admin', 'vademecum'),
-('author', 'createPost'),
 ('poyo', 'adminAccess'),
+('admin', 'adminImagenes'),
 ('poyo', 'adminImagenes'),
+('admin', 'adminProducto'),
 ('poyo', 'adminProducto'),
+('admin', 'adminSeccion'),
 ('poyo', 'adminSeccion'),
+('admin', 'createEstablecimiento'),
 ('poyo', 'createEstablecimiento'),
+('admin', 'createPost'),
+('author', 'createPost'),
 ('poyo', 'createPost'),
-('poyo', 'createProducto'),
-('poyo', 'createRole'),
-('poyo', 'createUser'),
-('poyo', 'deletePost'),
-('poyo', 'deleteProducto'),
-('poyo', 'deleteUsers'),
-('poyo', 'editPost'),
-('poyo', 'editUsers'),
-('poyo', 'updateEstablecimiento'),
-('poyo', 'updateProducto'),
-('poyo', 'vademecum'),
 ('poyoyo', 'createPost'),
+('admin', 'createProducto'),
+('poyo', 'createProducto'),
+('admin', 'createRole'),
+('poyo', 'createRole'),
+('admin', 'createUser'),
+('poyo', 'createUser'),
 ('poyoyo', 'createUser'),
-('poyoyo', 'editUsers');
+('admin', 'deletePost'),
+('poyo', 'deletePost'),
+('admin', 'deleteProducto'),
+('poyo', 'deleteProducto'),
+('admin', 'deleteUsers'),
+('poyo', 'deleteUsers'),
+('admin', 'editPost'),
+('poyo', 'editPost'),
+('admin', 'editUsers'),
+('poyo', 'editUsers'),
+('poyoyo', 'editUsers'),
+('admin', 'updateEstablecimiento'),
+('poyo', 'updateEstablecimiento'),
+('admin', 'updateProducto'),
+('poyo', 'updateProducto'),
+('admin', 'vademecum'),
+('poyo', 'vademecum');
 
 -- --------------------------------------------------------
 
@@ -158,12 +162,13 @@ INSERT INTO `authitemchild` (`parent`, `child`) VALUES
 -- Estructura de tabla para la tabla `tbl_error`
 --
 
-CREATE TABLE `tbl_error` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_error` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `codigo` int(3) NOT NULL,
   `idoma` varchar(4) NOT NULL,
-  `texto` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `texto` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
 -- Volcado de datos para la tabla `tbl_error`
@@ -180,14 +185,15 @@ INSERT INTO `tbl_error` (`id`, `codigo`, `idoma`, `texto`) VALUES
 -- Estructura de tabla para la tabla `tbl_establecimiento`
 --
 
-CREATE TABLE `tbl_establecimiento` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_establecimiento` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(200) NOT NULL,
   `latitud` varchar(100) NOT NULL,
   `longitud` varchar(100) NOT NULL,
   `descripcion` text NOT NULL,
-  `pais` int(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `pais` int(10) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -195,10 +201,11 @@ CREATE TABLE `tbl_establecimiento` (
 -- Estructura de tabla para la tabla `tbl_imagen_ref`
 --
 
-CREATE TABLE `tbl_imagen_ref` (
-  `id` int(11) NOT NULL,
-  `producto_id` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+CREATE TABLE IF NOT EXISTS `tbl_imagen_ref` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `producto_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=634 ;
 
 --
 -- Volcado de datos para la tabla `tbl_imagen_ref`
@@ -788,11 +795,12 @@ INSERT INTO `tbl_imagen_ref` (`id`, `producto_id`) VALUES
 -- Estructura de tabla para la tabla `tbl_metatag`
 --
 
-CREATE TABLE `tbl_metatag` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_metatag` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(300) NOT NULL,
-  `code` text NOT NULL COMMENT 'colocar [variable] donde va la parte seteable de la tag'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `code` text NOT NULL COMMENT 'colocar [variable] donde va la parte seteable de la tag',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 --
 -- Volcado de datos para la tabla `tbl_metatag`
@@ -807,12 +815,13 @@ INSERT INTO `tbl_metatag` (`id`, `nombre`, `code`) VALUES
 -- Estructura de tabla para la tabla `tbl_metatag_page`
 --
 
-CREATE TABLE `tbl_metatag_page` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_metatag_page` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `idPage` int(11) NOT NULL,
   `idMetatag` int(11) NOT NULL,
-  `dat` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `dat` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 --
 -- Volcado de datos para la tabla `tbl_metatag_page`
@@ -827,10 +836,11 @@ INSERT INTO `tbl_metatag_page` (`id`, `idPage`, `idMetatag`, `dat`) VALUES
 -- Estructura de tabla para la tabla `tbl_miscelaneo`
 --
 
-CREATE TABLE `tbl_miscelaneo` (
+CREATE TABLE IF NOT EXISTS `tbl_miscelaneo` (
   `id` int(11) NOT NULL,
   `key` varchar(100) NOT NULL,
-  `value` text NOT NULL
+  `value` text NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -839,16 +849,17 @@ CREATE TABLE `tbl_miscelaneo` (
 -- Estructura de tabla para la tabla `tbl_notas`
 --
 
-CREATE TABLE `tbl_notas` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_notas` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `fecha` date NOT NULL,
   `titulo` varchar(300) NOT NULL,
   `bajada` text NOT NULL,
   `extra` text NOT NULL,
   `texto` text NOT NULL,
   `seccion` varchar(50) NOT NULL,
-  `pais` varchar(4) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `pais` varchar(4) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=122 ;
 
 --
 -- Volcado de datos para la tabla `tbl_notas`
@@ -882,9 +893,9 @@ INSERT INTO `tbl_notas` (`id`, `fecha`, `titulo`, `bajada`, `extra`, `texto`, `s
 (24, '2014-07-23', 'Cómo prevenir el impacto de las zoonosis en las personas y en la actividad rural', 'Biogénesis Bagó acompañó en el marco de la 128° exposición Rural a la Fundación Mundo Sano que trabaja en la prevención, diagnóstico y tratamiento de diversas enfermedades desatendidas, entre ellas la enfermedad de Chagas, la hidatidosis y la leishmaniosis. \n', '', 'Las zoonosis constituyen un grupo de enfermedades comunes al hombre y a los animales: Pueden ser de transmisión directa -a través de algún fluido corporal como orina o saliva- o de transmisión mediada, a través de un insecto. \n<br> <br> Las zoonosis constituyen un grupo de enfermedades comunes al hombre y a los animales: Pueden ser de transmisión directa -a través de algún fluido corporal como orina o saliva- o de transmisión mediada, a través de un insecto. También pueden ser contraídas por consumo de alimentos de origen animal que no cuentan con los controles sanitarios correspondientes, o por consumo de frutas y verduras crudas mal lavadas. Las zoonosis pueden ser causadas por diferentes agentes, como parásitos, virus o bacterias.\n<br> \n<br>La brucelosis, la fiebre amarilla, la fiebre hemorrágica argentina, la gripe aviar, el hantavirus, la hidatidosis, la leishmaniasis visceral, la leptospirosis, la rabia, la sarna, el síndrome urémico hemolítico, la toxoplasmosis, la triquinosis y la tuberculosis bovina son algunas de las zoonosis que se encuentran en el país.\n<br> \n<br>Varias de las zoonosis se enmarcan dentro de las enfermedades desatendidas: un conjunto de enfermedades que afectan a las poblaciones más vulnerables, con bajos ingresos, en viviendas precarias, sin acceso a servicios básicos como agua potable o redes cloacales y con bajo nivel educativo. Se las conoce como generadoras de pobreza por su impacto negativo en la salud y por sus consecuencias significativas sobre la capacidad de trabajo de los afectados.\n<br> \n<br>Para la atención y promoción de la salud respecto de estas enfermedades, lo más importante es actuar preventivamente en tres niveles elementales: proteger la salud humana, proteger la salud animal (de los animales de producción, compañía y fauna silvestre beneficiosa) y cuidar el ambiente de residencia habitual o trabajo.\n<br> \n<br>Mundo Sano trabaja en varios programas de hidatidosis, una zoonosis que puede afectar gravemente al ser humano, y hasta causarle la muerte, presente en zonas rurales y en especial a quienes se dedican a la ganadería. Se trata de una enfermedad parasitaria provocada por el Echinococcus granulosus, un parásito que se aloja en el intestino delgado de los perros y produce quistes en órganos y tejidos del hombre, entre ellos hígado, pulmón y corazón. El ciclo de la enfermedad se inicia en el hábito de alimentar a los perros con vísceras crudas -o mal cocidas- provenientes de pequeños rumiantes o de cerdos faenados domésticamente. En la Argentina, donde entre 2006 y 2010 se reportaron 1.833 casos al Sistema Nacional de Vigilancia de la Salud, se estima que hay cerca de 4 millones de habitantes rurales en riesgo potencial de contraer la enfermedad.\n<br> \n<br>Como parte del programa de diagnóstico y prevención de la hidatidosis que se viene desarrollando en la provincia de Buenos Aires —una iniciativa conjunta de Mundo Sano, la Dirección de Zoonosis Rurales de la Provincia de Buenos Aires y el Servicio de Zoonosis del Hospital Muñiz de Buenos Aires—, se desarrollaron tareas en el área rural la ciudad de Azul y en la zona de Carmen de Patagones. También en el área rural de Pampa del Indio, Chaco, donde con el apoyo del hospital local Dante Tardelli se realizaron ecografías para la detección de quistes hidatídicos en la población.\n<br> \n<br>Sobre el impacto de las enfermedades desatendidas, la Dra. Silvia Gold, presidenta de Mundo Sano, señaló que “son enfermedades de alta prevalencia, que afectan a poblaciones pobres y lo que determina su condición de injustas fundamentalmente es que pueden ser evitadas. Estas enfermedades que comprenden una lista más o menos extensa según quien las defina afectan solo en América latina a aproximadamente el 40% de los más de 550 millones de habitantes de la región. El modelo público-privado que aplicamos en la investigación, prevención, diagnóstico y tratamiento de estas enfermedades busca paliar esta situación que perjudica a los sectores menos favorecidos”.\n<br> \n<br>La problemática fue tratada en el marco de la 128ª edición de la Exposición de Ganadería, Agricultura e Industria Internacional que se celebra en Palermo. Allí, el miércoles 23, la Fundación Mundo Sano y Biogénesis Bagó presentaron la conferencia “Enfermedades desatendidas: su impacto en la salud de las personas y la actividad rural”.\n<br> \n<br>Participaron de la charla Marcelo Abril, director de Programas y Proyectos de Mundo Sano, quien hizo una presentación de la Fundación, se refirió a las principales enfermedades zoonóticas y la experiencia de Mundo Sano e introdujo el concepto de “One Health”, un enfoque multidisciplinario de las enfermedades que toma en cuenta la salud humana, la salud animal y el medio ambiente; Esteban Turic, director de Innovación y Marketing Estratégico de Biogénesis Bagó, se refirió a los cambios que atravesaron las comunidades rurales, la evolución de la producción rural, los riesgos a los que están expuestos los microfundistas y el esfuerzo que hace Biogénesis Bagó para desarrollar soluciones para una parte de esos problemas, y Jorge Bolpe, de la División de Zoonosis Rurales del Ministerio de Salud de la provincia de Buenos Aires, reseñó las enfermedades zoonóticas presentes en la región, sus características, los modos de prevenirlas y los recaudos ambientales.\n<br>        ', 'prensa', 'es'),
 (25, '2014-07-18', '“Aftosan Night” de Biogénesis Bagó y Ciavet', 'El pasado miércoles 16 de Julio se llevó a cabo el evento denominado “Aftosan Night” organizado por Biogénesis Bagó y Ciavet en el marco de la “XXXIII Expo Feria Internacional de Ganadería, Industria, Agricultura, Comercio y Servicios y la LXIX Exposición Nacional de Ganadería” en el predio Mariano Roque Alonso. <br>', '', 'Contó con la asistencia de aproximadamente 90 participantes entre productores, asesores  y medios de prensa, que compartieron un grato momento en compañía del personal de Ciavet y Biogénesis Bagó.\n<br>El objetivo del evento fue mostrar la importancia de mantener el status sanitario de la región a través de los Planes Oficiales de vacunación contra la Fiebre Aftosa, que permitirá mercados más competitivos para el abastecimiento de una población mundial en constante crecimiento, la cual demandará más y mejores alimentos.	\n<br>', 'prensa', 'es'),
 (26, '2014-07-01', 'La Academia Nacional de Agronomía y Veterinaria (ANAV) y Biogénesis Bagó entregaron su premio.', 'La edición 2013 del Premio Biogénesis Bagó al mejor trabajo en adopción de tecnología para una mayor eficiencia productiva en ganadería. \n', '', 'La Academia Nacional de Agronomía y Veterinaria y Biogénesis Bagó entregaron hoy, en la sede de la academia, el Premio Biogénesis Bagó - edición 2013 al mejor trabajo, realizado en el país, sobre “Adopción de tecnología para una producción eficiente en ganadería intensiva y extensiva de carne y leche, que aborde aspectos sanitarios, reproductivos o de manejo”.\n<br>El trabajo ganador, elegido por el honorable jurado, integrado por los Dres. Eduardo Palma, Bernardo Carrillo, Jorge Errecalde y Ramón Noseda (en representación de la academia) y el Dr. Esteban Turic (en representación del laboratorio) fue para el proyecto "Nueva vacuna marcadora contra Herpes Virus Bovino 1. ", presentada por los Dres. Alejandra Romera, Ana M. Sadir, Mariana Puntel, Patricia Zamorano, Valeria Quatrocchi, Paula Del Médico y Javier Blanco Viera, todos ellos de INTA Castelar. \n<br>Además, y debido a la excelente calidad y cantidad de los trabajos presentados, el jurado definió –de manera excepcional– dos Premios Mención, que fueron otorgados a los Dres. Laura V. Madoz y Luis Fazzio por los trabajos: “Endometritis subclínica en vacas de tambo: diagnóstico, prevalencia e impacto sobre la eficiencia productiva” y “Consecuencias reproductivas de la hipocuprosis bovina: un avance hacia su diagnóstico y prevención en rodeos de Argentina”.\n<br>\n<br>El Dr. Carlos Scoppa en relación al premio expresó:… “El trabajo realizado por nuestros premiados son siempre modelo de argumentación intelectual, método, ilustración, coherencia, claridad y de trascendencia los resultados obtenidos. Ellos  están animados solamente por una vigorosa vocación y  permanente actitud de servicio para y con sus conciudadanos; lo que es en definitiva expresión de auténtico patriotismo”.\n<br>\n<br>El Premio ANAV- Biogénesis Bagó se realiza cada 2 años desde el año 2011 y busca promover el uso de tecnologías que permitan expandir la frontera de la productividad en ganadería. Objetivos que son más fáciles de lograr a través de un trabajo conjunto entre los ámbitos académicos, empresariales y del ejercicio de la profesión veterinaria generando sinergias entre el sector público y privado,  acciones fundamentales que siempre promueve la compañía.\n<br>La convocatoria estuvo abierta a profesionales veterinarios o equipos de profesionales en el área agropecuaria que hayan desarrollado actividades de adopción de tecnología en los segmentos anteriormente mencionados y cuyo impacto haya sido verificado y adecuadamente documentado. \n<br>El Premio a la innovación para una mayor eficiencia productiva, consistió en un Diploma de la ANAV y la suma de $ 20.000 pesos en efectivo al equipo ganador. Los dos Premios Mención  recibieron, además del diploma, la suma de $ 5.000 cada uno.\n<br>', 'prensa', 'es'),
-(27, '2014-04-22', 'Biogénesis Bagó presenta Revervac®, una nueva plataforma tecnológica basada en el concepto de Ingeniería Reversa. ', 'Tomando como base su misión y visión corporativa, que la convoca a liderar la evolución de la salud animal a través de la innovación, Biogénesis Bagó presenta Revervac®, una Plataforma Tecnológica basada en el concepto de Ingeniería Reversa, que tendrá un impacto directo en salud animal y a través de ella, en toda la cadena de alimentos. \n', '', 'El concepto de Ingeniería Reversa \n<br>La Ingeniería Reversa (IR) es el proceso que nos permite redescubrir los principios tecnológicos de un dispositivo, objeto o sistema mediante el análisis de su estructura, funcionamiento y operación. Consiste en el desarme o desmontaje de dispositivos electrónicos, mecánicos, software e incluso materiales biológicos o químicos, con el objetivo final de realizar una mejora o la creación de algo nuevo que lo supere en calidad y funcionalidad. \n<br>Este concepto nace durante la Segunda Guerra Mundial cuando los ejércitos incautaban aviones y armas de tropas enemigas para realizar un análisis exhaustivo de los mismos, conocer sus puntos fuertes y débiles y mejorar así los propios. \n<br>A través de los años, los campos de aplicación conceptuales se fueron expandiendo hasta alcanzar diferentes industrias, como automovilística, electrónica, computación y otras. \n<br>En el campo de la biología, fue el Profesor Rino Rappuoli, PhD en Ciencias Biológicas de la Universidad de Siena, Italia, quien tomó el concepto de Ingeniería Reversa y lo aplico al desarrollo de una vacuna contra el Meningococo grupo B, un patógeno con el cual no se había logrado ningún avance en cuatro décadas. A diferencia de otros meningococos, sus antígenos de superficie generan muy poca inmunidad por ser muy similares a los de las células de varios tejidos del cuerpo Información de Prensa \n<br>humano. El uso de la ingeniería reversa le permitió al profesor Rappuoli agrupar diferentes antígenos y fusionarlos, para entonces poder contar con vesículas de antígenos de mayor potencia y desarrollar así una nueva y eficaz vacuna contra esta enfermedad. \n<br>Revervac®: un nuevo enfoque racional, integral e innovador en el desarrollo de vacunas. \n<br>Revervac® es un cambio técnico evolutivo en la forma de producir ciertas vacunas para uso animal, aplicando el concepto de Ingeniería Reversa a la investigación y desarrollo de nuevas vacunas que permitan combatir enfermedades de difícil control, presentes en nuestros rodeos. \n<br>Este innovador enfoque consiste en revisar el método convencional para el desarrollo de biológicos, profundizando en el estudio del agente etiológico, su epidemiologia, diagnóstico, respuesta inmune, prácticas de manejo; y al mismo tiempo incorporando nuevas herramientas y disciplinas como genómica y proteómica. \n<br>La intensificación de los sistemas productivos es un fenómeno irreversible que no sólo genera una mayor circulación de agentes infecciosos sino también una tasa de mutación y adaptación de los mismos al nuevo entorno. Esto nos demanda mejorar los métodos de diagnóstico y profundizar el estudio de los agentes infecciosos emergentes mediante la incorporación de técnicas de biología molecular y nuevos métodos analíticos. \n<br>Revervac®, innovación para el desarrollo de vacunas más eficaces que permitirán mejorar la sanidad de nuestros rodeos. Información de Prensa \n<br>Revervac® Hemoglobinuria: la herramienta más segura para prevenir la Hemoglobinuria Bacilar \n<br>En el marco de la presentación de la Plataforma Revervac®, Biogénesis Bagó lanza Revervac® Hemoglobinuria, una nueva y eficaz herramienta para la prevención de la Hemoglobinuria Bacilar en bovinos, la cual fue diseñada por ingeniería reversa, la nueva plataforma de desarrollo que aplica tecnología de última generación. \n<br>La Hemoglobinuria Bacilar es una enfermedad infecciosa causada por una bacteria conocida como Clostridium haemolyticum o Clostridium novyi tipo D que afecta principalmente al ganado bovino. Este clostridio se encuentra presente en el suelo de determinadas regiones geográficas, como la precordillera patagónica, campos bajos del Litoral y en la Cuenca del Salado. \n<br>La población de riesgo de estas zonas se estima en 4,1 millones de cabezas y considerando que la morbilidad promedio es del 1% y su letalidad del 100%, las pérdidas económicas se estima podrían alcanzar los 18,5 millones de dólares por año. \n<br>La enfermedad tiene una patogenia compleja, la sola presencia del clostridio es condición necesaria pero no suficiente para su presentación. El daño hepático causado por las larvas migrantes del parásito Fasciola hepática continúa siendo el principal factor que predispone al cuadro clínico. Pero otros factores predisponentes como la compresión que ejerce el feto sobre el hígado materno en gestaciones avanzadas, la acidosis ruminal producto de alteraciones bruscas y/o errores en la dieta y la presencia de micotoxinas en los alimentos pueden lesionar el hígado y también desencadenar la enfermedad \n<br>Estos mecanismos de lesión hepática generan zonas de baja tensión de oxigeno que favorecen la germinación de esporos de este microorganismo anaerobio estricto. La bacteria se multiplica y libera su toxina necrotizante y hemolítica, provocando una necrosis en el parénquima hepático (“infarto”(“orina con sangre”)), signo patognomónico de esta enfermedad. La destrucción masiva de glóbulos rojos provoca además, una anemia severa, ictericia y hemoglobinuria , signos que caracterizan la enfermedad.Información de Prensa \n<br>El aumento de casos no resueltos en rodeos previamente inmunizados con vacunas convencionales nos impulsó a desarrollar Revervac® Hemoglobinuria. \n<br>El Clostridium haemolyticum es un anaerobio estricto de difícil aislamiento y cultivo in vitro. Biogénesis Bagó desarrolló nuevos métodos y medios de cultivo que permitieron obtener varios aislamientos en diferentes regiones. \n<br>Bajo el enfoque Revervac®, se estudiaron fenotípica y genotípicamente las cepas aisladas, logrando la identificación de los genes que codifican la producción de la toxina utilizando la técnica de PCR. Verificamos la virulencia y capacidad toxigénica de las cepas aisladas, comprobando el sinergismo del soma bacteriano y el toxoide para la generación de una respuesta inmune superior. \n<br>Dado que la inmunidad vacunal para el Clostridium haemolyticum es de corta duración, sugerimos incorporar Revervac® Hemoglobinuria en el Plan Sanitario de las regiones problema, una vacuna monovalente con alta potencia antigénica para el control de esta enfermedad. Se recomienda la aplicación de dos dosis en casos de primovacunación y de un refuerzo cada cuatro a seis meses según criterio del Médico Veterinario. \n<br>Revervac® Hemoglobinuria es sinónimo de evolución en la prevención de Hemoglobinuria Bacilar en su rodeo, con el respaldo y la tecnología de Biogénesis Bagó. \n<br> \n<br>', 'prensa', 'es'),
-(28, '2014-03-25', 'Biogénesis Bagó lanzó en Paraguay FLOK®, doramectina con MABS, un antiparasitario interno y externo con un sistema exclusivo de liberación. ', 'FLOK®, es una solución inyectable de doramectina formulada con MABS, un sistema de liberación único, diseñado y desarrollado para un mejor control de parásitos internos y externos del bovino y ovino.\n', '', 'El evento se llevó a cabo el pasado martes 25 de marzo en las oficinas comerciales de Ciavet en conjunto con los directivos de Ciavet,  Dres. Silvio Moro y Alfonso Massó y la presencia  de clientes y productores.\n<br>\n<br>El Dr. Guillermo Elordi, Director Comercial de Cono Sur, dio la bienvenida y presentó institucionalmente al laboratorio que ya lleva casi 30 años acompañando la cadena agroalimentaria del mercado paraguayo.\n<br>\n<br>"El lanzamiento de FLOK® responde al gran interés de Biogénesis Bagó por colaborar con la sanidad y la productividad de la región y atender las necesidades de los productores ganaderos. En línea con ese objetivo, destinamos gran parte de nuestros recursos humanos al área de Innovación, Investigación y Desarrollo, Control de Calidad y Servicio Técnico".\n<br>\n<br>Por su parte el Dr. Enrique Villar (Gerente Técnico Cono Sur) hizo la presentación del producto FLOK, destacando que con su exclusivo sistema Modificador de Absorción -  MABs - ; desarrollado y patentado  por Biogénesis Bagó;  brinda un efecto inmediato y duradero,  una  mayor eficiencia en el control de los parásitos gastrointestinales, ura, bicheras y un alto poder de volteo contra garrapatas;  asegurando animales más limpios en menor tiempo, “FLOK®, viene a dar una importante solución a la ganadería subtropical”.\n<br>', 'prensa', 'es');
+(27, '2014-04-22', 'Biogénesis Bagó presenta Revervac®, una nueva plataforma tecnológica basada en el concepto de Ingeniería Reversa. ', 'Tomando como base su misión y visión corporativa, que la convoca a liderar la evolución de la salud animal a través de la innovación, Biogénesis Bagó presenta Revervac®, una Plataforma Tecnológica basada en el concepto de Ingeniería Reversa, que tendrá un impacto directo en salud animal y a través de ella, en toda la cadena de alimentos. \n', '', 'El concepto de Ingeniería Reversa \n<br>La Ingeniería Reversa (IR) es el proceso que nos permite redescubrir los principios tecnológicos de un dispositivo, objeto o sistema mediante el análisis de su estructura, funcionamiento y operación. Consiste en el desarme o desmontaje de dispositivos electrónicos, mecánicos, software e incluso materiales biológicos o químicos, con el objetivo final de realizar una mejora o la creación de algo nuevo que lo supere en calidad y funcionalidad. \n<br>Este concepto nace durante la Segunda Guerra Mundial cuando los ejércitos incautaban aviones y armas de tropas enemigas para realizar un análisis exhaustivo de los mismos, conocer sus puntos fuertes y débiles y mejorar así los propios. \n<br>A través de los años, los campos de aplicación conceptuales se fueron expandiendo hasta alcanzar diferentes industrias, como automovilística, electrónica, computación y otras. \n<br>En el campo de la biología, fue el Profesor Rino Rappuoli, PhD en Ciencias Biológicas de la Universidad de Siena, Italia, quien tomó el concepto de Ingeniería Reversa y lo aplico al desarrollo de una vacuna contra el Meningococo grupo B, un patógeno con el cual no se había logrado ningún avance en cuatro décadas. A diferencia de otros meningococos, sus antígenos de superficie generan muy poca inmunidad por ser muy similares a los de las células de varios tejidos del cuerpo Información de Prensa \n<br>humano. El uso de la ingeniería reversa le permitió al profesor Rappuoli agrupar diferentes antígenos y fusionarlos, para entonces poder contar con vesículas de antígenos de mayor potencia y desarrollar así una nueva y eficaz vacuna contra esta enfermedad. \n<br>Revervac®: un nuevo enfoque racional, integral e innovador en el desarrollo de vacunas. \n<br>Revervac® es un cambio técnico evolutivo en la forma de producir ciertas vacunas para uso animal, aplicando el concepto de Ingeniería Reversa a la investigación y desarrollo de nuevas vacunas que permitan combatir enfermedades de difícil control, presentes en nuestros rodeos. \n<br>Este innovador enfoque consiste en revisar el método convencional para el desarrollo de biológicos, profundizando en el estudio del agente etiológico, su epidemiologia, diagnóstico, respuesta inmune, prácticas de manejo; y al mismo tiempo incorporando nuevas herramientas y disciplinas como genómica y proteómica. \n<br>La intensificación de los sistemas productivos es un fenómeno irreversible que no sólo genera una mayor circulación de agentes infecciosos sino también una tasa de mutación y adaptación de los mismos al nuevo entorno. Esto nos demanda mejorar los métodos de diagnóstico y profundizar el estudio de los agentes infecciosos emergentes mediante la incorporación de técnicas de biología molecular y nuevos métodos analíticos. \n<br>Revervac®, innovación para el desarrollo de vacunas más eficaces que permitirán mejorar la sanidad de nuestros rodeos. Información de Prensa \n<br>Revervac® Hemoglobinuria: la herramienta más segura para prevenir la Hemoglobinuria Bacilar \n<br>En el marco de la presentación de la Plataforma Revervac®, Biogénesis Bagó lanza Revervac® Hemoglobinuria, una nueva y eficaz herramienta para la prevención de la Hemoglobinuria Bacilar en bovinos, la cual fue diseñada por ingeniería reversa, la nueva plataforma de desarrollo que aplica tecnología de última generación. \n<br>La Hemoglobinuria Bacilar es una enfermedad infecciosa causada por una bacteria conocida como Clostridium haemolyticum o Clostridium novyi tipo D que afecta principalmente al ganado bovino. Este clostridio se encuentra presente en el suelo de determinadas regiones geográficas, como la precordillera patagónica, campos bajos del Litoral y en la Cuenca del Salado. \n<br>La población de riesgo de estas zonas se estima en 4,1 millones de cabezas y considerando que la morbilidad promedio es del 1% y su letalidad del 100%, las pérdidas económicas se estima podrían alcanzar los 18,5 millones de dólares por año. \n<br>La enfermedad tiene una patogenia compleja, la sola presencia del clostridio es condición necesaria pero no suficiente para su presentación. El daño hepático causado por las larvas migrantes del parásito Fasciola hepática continúa siendo el principal factor que predispone al cuadro clínico. Pero otros factores predisponentes como la compresión que ejerce el feto sobre el hígado materno en gestaciones avanzadas, la acidosis ruminal producto de alteraciones bruscas y/o errores en la dieta y la presencia de micotoxinas en los alimentos pueden lesionar el hígado y también desencadenar la enfermedad \n<br>Estos mecanismos de lesión hepática generan zonas de baja tensión de oxigeno que favorecen la germinación de esporos de este microorganismo anaerobio estricto. La bacteria se multiplica y libera su toxina necrotizante y hemolítica, provocando una necrosis en el parénquima hepático (“infarto”(“orina con sangre”)), signo patognomónico de esta enfermedad. La destrucción masiva de glóbulos rojos provoca además, una anemia severa, ictericia y hemoglobinuria , signos que caracterizan la enfermedad.Información de Prensa \n<br>El aumento de casos no resueltos en rodeos previamente inmunizados con vacunas convencionales nos impulsó a desarrollar Revervac® Hemoglobinuria. \n<br>El Clostridium haemolyticum es un anaerobio estricto de difícil aislamiento y cultivo in vitro. Biogénesis Bagó desarrolló nuevos métodos y medios de cultivo que permitieron obtener varios aislamientos en diferentes regiones. \n<br>Bajo el enfoque Revervac®, se estudiaron fenotípica y genotípicamente las cepas aisladas, logrando la identificación de los genes que codifican la producción de la toxina utilizando la técnica de PCR. Verificamos la virulencia y capacidad toxigénica de las cepas aisladas, comprobando el sinergismo del soma bacteriano y el toxoide para la generación de una respuesta inmune superior. \n<br>Dado que la inmunidad vacunal para el Clostridium haemolyticum es de corta duración, sugerimos incorporar Revervac® Hemoglobinuria en el Plan Sanitario de las regiones problema, una vacuna monovalente con alta potencia antigénica para el control de esta enfermedad. Se recomienda la aplicación de dos dosis en casos de primovacunación y de un refuerzo cada cuatro a seis meses según criterio del Médico Veterinario. \n<br>Revervac® Hemoglobinuria es sinónimo de evolución en la prevención de Hemoglobinuria Bacilar en su rodeo, con el respaldo y la tecnología de Biogénesis Bagó. \n<br> \n<br>', 'prensa', 'es');
 INSERT INTO `tbl_notas` (`id`, `fecha`, `titulo`, `bajada`, `extra`, `texto`, `seccion`, `pais`) VALUES
+(28, '2014-03-25', 'Biogénesis Bagó lanzó en Paraguay FLOK®, doramectina con MABS, un antiparasitario interno y externo con un sistema exclusivo de liberación. ', 'FLOK®, es una solución inyectable de doramectina formulada con MABS, un sistema de liberación único, diseñado y desarrollado para un mejor control de parásitos internos y externos del bovino y ovino.\n', '', 'El evento se llevó a cabo el pasado martes 25 de marzo en las oficinas comerciales de Ciavet en conjunto con los directivos de Ciavet,  Dres. Silvio Moro y Alfonso Massó y la presencia  de clientes y productores.\n<br>\n<br>El Dr. Guillermo Elordi, Director Comercial de Cono Sur, dio la bienvenida y presentó institucionalmente al laboratorio que ya lleva casi 30 años acompañando la cadena agroalimentaria del mercado paraguayo.\n<br>\n<br>"El lanzamiento de FLOK® responde al gran interés de Biogénesis Bagó por colaborar con la sanidad y la productividad de la región y atender las necesidades de los productores ganaderos. En línea con ese objetivo, destinamos gran parte de nuestros recursos humanos al área de Innovación, Investigación y Desarrollo, Control de Calidad y Servicio Técnico".\n<br>\n<br>Por su parte el Dr. Enrique Villar (Gerente Técnico Cono Sur) hizo la presentación del producto FLOK, destacando que con su exclusivo sistema Modificador de Absorción -  MABs - ; desarrollado y patentado  por Biogénesis Bagó;  brinda un efecto inmediato y duradero,  una  mayor eficiencia en el control de los parásitos gastrointestinales, ura, bicheras y un alto poder de volteo contra garrapatas;  asegurando animales más limpios en menor tiempo, “FLOK®, viene a dar una importante solución a la ganadería subtropical”.\n<br>', 'prensa', 'es'),
 (29, '2014-03-13', 'Regata Oceánica Buenos Aires Río de Janeiro \n', 'La Regata Buenos Aires – Rio de Janeiro es uno de los eventos náuticos más antiguos y tradicionales del continente y sin duda el de mayor importancia para veleros, no sólo por la cantidad de participantes sino también por su exigencia.\n', '', 'Manila Biogénesis Bagó, apostó nuevamente a liderar la categoría de tripulaciones en dobles en la  XXIV Regata Oceánica de 1123 millas náuticas (2222km) que une Buenos Aires con Río de Janeiro. El pasado 15 de febrero de 2014 fue la fecha de largada de la regata más importante del continente para veleros, organizado por el Yacht Club Argentino junto con el Iate Clube do Río de Janeiro, lugar donde el 28 de febrero se efectuó la entrega de premios, obteniendo el tercer puesto. \n<br>\n<br>La Regata Buenos Aires – Rio de Janeiro es uno de los eventos náuticos más antiguos y tradicionales del continente y sin duda el de mayor importancia para veleros, no sólo por la cantidad de participantes sino también por su exigencia.\n<br>\n<br>Actualmente se lleva a cabo cada tres años. Comenzó a disputarse en 1947 y es un clásico del ambiente náutico sudamericano con gran reconocimiento a nivel internacional, comparable con las místicas Fastnet (Inglaterra), Sydney-Hobart (Australia) o Middle Sea Race (Italia y Malta).\n<br>\n<br>\n<br>El desafío, la pasión y espíritu de trabajo en equipo se renuevan cada vez que una tripulación decide subirse a una aventura transatlántica, es así que bajo esos valores la tripulación de Manila Biogénesis Bagó ya está en carrera.\n<br>\n<br>La categoría en Dobles se comenzó a correr en el año 2002, implica a diferencia de las regatas clásicas en las que van tripulaciones de 7 a 15 tripulantes aproximadamente, en esta categoría solo van dos tripulantes a bordo, lo que afina los cálculos y hacen mayor el desafío de adopción de tácticas y estrategias con el mejor uso de la carta náutica para lograr el objetivo trazado.\n<br>En el año 2002 el Manila-Biogénesis Bagó, culminó al frente en la categoría de Tripulaciones en Dobles por tiempo corregido. En esa ocasión compitieron con 8 embarcaciones, de las cuales siete eran de origen Argentino y una Brasilera.\n<br>En 2005, el Manila-Biogénesis Bagó también llegó primero en la categoría dobles. En aquel momento, Carlos Cámpora, Capitán del equipo se mostraba realmente aliviado por haber finalizado la regata dentro del límite reglamentario.\n<br>Desde 2002, cualquier equipo que participe en la categoría de Tripulaciones en Dobles que la gane tres veces consecutivamente se queda en propiedad de la copa “VENDAVAL” y el Manila-Biogénesis Bagó la ha levantado en 2002 y 2005: “Ya la ganamos dos veces, y si en esta ocasión clasificamos primeros, nos la llevamos en propiedad”, comenta Carlos Cámpora.\n<br>Por su parte, Guillermo Mattioli, Director general de Biogénesis Bagó  expresó: “Hace años acompañamos la regata porque compartimos los valores de integridad, camaradería, pasión, respeto por el otro y por la naturaleza y el compromiso por alcanzar el objetivo, que motivan a los capitanes y sus equipos a lanzarse a este nuevo desafío y lo hacemos porque estos son los mismos valores que representan a nuestra compañía”.  Nos enorgullece poder participar de un evento de tal magnitud que une a todos los países vecinos en integración del espíritu deportivo.	', 'prensa', 'es'),
 (30, '2014-03-13', 'Campaña de Aftosa \n', 'Biogénesis Bagó, la empresa líder mundial en producción de la vacuna antiaftosa, acompañando al productor en esta nueva campaña \n', '', 'Biogénesis Bagó, la empresa de biotecnología especializada en el desarrollo, producción y comercialización de productos para la sanidad y productividad animal y una de las empresas líderes a nivel mundial en la producción de la vacuna antiaftosa, refuerza –en el inicio de la campaña 2014– su compromiso por contribuir a la erradicación de la fiebre aftosa en la región. \n<br>Gracias a altos estándares internacionales de calidad, alineados a los requerimientos de la Organización Mundial de Salud Animal (OIE),  tres de cada diez vacunas aplicadas en la región son producidas por Biogénesis Bagó (bajo las marcas Bioaftogen y Aftogen Óleo), lo que demuestra un producto de clase mundial y la capacidad de abastecer a los mercados más exigentes de la región y del mundo de vacuna antiaftosa multivalente.\n<br>Biogénesis Bagó y el respaldo de calidad de su vacuna antiaftosa:\n<br> 	*La vacuna antiaftosa de Biogénesis Bagó es la única vacuna de la región que posee licencia aprobada en todos los países que aplican la vacuna en Sudamérica.\n<br> 	*Biogénesis Bago es la planta que detenta la mayor antigüedad en la región con habilitación bajo Normas de Bioseguridad Nivel 4 OIE, operando en estas condiciones desde el año 1996. Ha sido reconocida como una de las mejores y más seguras a nivel global, recibiendo auditorías constantes de autoridades locales: SENASA; regionales: PANAFTOSA, Comisión Sudamericana de Bioseguridad, PAMA, autoridades sanitarias de varios países donde se comercializa la vacuna antiaftosa, entre ellos Brasil y Colombia y auditorías de parte de Estados Unidos, Canadá  y de la OIE.\n<br> 	*Biogénesis Bagó es, desde el año 2006, proveedora de antígenos para vacuna antiaftosa para el Banco Norteamericano de Vacunas de Fiebre Aftosa. Es la primera vez en la historia que una empresa localizada fuera del continente Europeo logra este estatus.\n<br> 	*En 2011, Biogénesis Bagó obtuvo el registro de su vacuna Bioaftogen en EEUU, siendo el primer registro de comercialización de vacuna aftosa en ese país ante una emergencia sanitaria.\n<br> 	*Biogénesis Bagó está certificada por el SENASA bajo normas de Buenas Prácticas de Manufactura desde el años 2006, así mismo ha logrado también la aprobación como elaborador por parte de la comisión de Buenas Prácticas de Manufactura del Brasil y de las autoridades de APHIS – USDA de EEUU, y la Canadian Food Inspection Service de Canadá.\n<br> 	*Biogénesis Bagó es la única empresa veterinaria del continente, que elabora Vacuna antiaftosa bajo normas, ISO 14.001; ISO 9001, Buenas Prácticas de Manufactura y Normas de Bioseguridad P 4 OIE; dando así los máximos estándares de: cuidado ambiental, gestión de sus procesos, calidad de producto y Bioseguridad, \n<br> 	*Biogénesis Bagó posee una performance impecable como proveedor de vacuna antiaftosa en el continente, siendo el mayor proveedor de toda la vacuna que se aplica en el continente en los últimos 5 años.\n<br> 	*La vacuna antiaftosa de Biogénesis Bagó posee los más altos atributos de calidad, potencia y seguridad, demostrados a lo largo del uso de la misma y la performance de la historia de los diferentes controles oficiales a los que es sometida. \n<br> 	*En el 2013, ha sido seleccionada para ser parte de un Joint Venture en China junto a la empresa local  “HILE Biotechnology”, destinado a elaborar y comercializar vacuna antiaftosa,  ha dado lugar a la creación de la  nueva empresa “Yangling JINHAI Biotechnology Co”, Transformándose así Biogénesis Bagó en la primer empresa extranjera, a nivel global, en proveer tecnología para producir vacuna antiaftosa en China.', 'prensa', 'es'),
 (31, '2013-11-16', 'FLOK®, Doramectina con MABS , \n', 'Comunicación en medios', '', 'El lanzamiento de FLOK®, fue acompañado con una campaña de comunicación en medios, gráficos y radiales, centrada en el concepto de <b>“tecnología a su disposición”.  </b>	  ', 'prensa', 'es'),
@@ -902,9 +913,9 @@ INSERT INTO `tbl_notas` (`id`, `fecha`, `titulo`, `bajada`, `extra`, `texto`, `s
 (43, '2011-08-01', 'Obtención de la certificación ISO 14001:2004', 'Nuestro compromiso es hacer sustentable el lugar donde vivimos.', '', 'Biogénesis Bagó siempre desarrolló sus operaciones con un alto grado de compromiso ambiental, hace un tiempo la Dirección decidió que este compromiso se desarrolle por medio de un Sistema de Gestión Internacional Ambiental con el objetivo de incrementar la eco-eficiencia de sus procesos y adoptar niveles internacionales. Fue así que se implementó el Sistema de Gestión Ambiental basado en las Normas ISO 14000. \n<br>\n<br>Biogenésis Bagó ha obtenido la certificación ISO 14001:2004, a través de la entidad certificadora TÜV Rheinland Argentina S.A., por un período de certificación que será desde el 28-04-2011 al 27-04-2014. La entidad certificadora realizará auditorías anuales de seguimiento como suelen ser habituales. \n<br>\n<br>La Norma ISO 14001:2004 especifica los requisitos para un sistema de gestión ambiental, destinados a permitir que se desarrolle e implemente una política que tenga en cuenta los requisitos legales y otros requisitos que la organización suscriba, y la información relativa a los aspectos ambientales significativos. Se aplica a aquellos aspectos ambientales que la organización identifica que puede controlar y sobre aquellos sobre los que puede tener influencia. \n<br>\n<br>\n<br>ISO (Organización Internacional de Normalización) es una Federación mundial de organismos nacionales de normalización. Las Normas Internacionales sobre gestión ambiental tienen como finalidad proporcionar a las organizaciones los elementos de un sistema de gestión ambiental (SGA) eficaz que puedan ser integrados con otros requisitos de gestión, permitiendo desarrollar e implementar una política y unos objetivos que tengan en cuenta los requisitos legales y la información sobre los aspectos ambientales significativos. El éxito del sistema depende del compromiso de todos los niveles y funciones de la organización y especialmente de la alta dirección. \n<br>\n<br>La gestión ambiental abarca una serie completa de temas, incluidos aquellos con implicaciones estratégicas y competitivas. El demostrar que esta Norma Internacional se ha implementado con éxito significa que la Organización garantiza a las partes interesadas que cuenta con un sistema de gestión ambiental apropiado. \n<br>	', 'prensa', 'es'),
 (44, '2011-07-19', 'El impacto socio-económico de la ganadería en la región \n', 'BIOGENESIS - BAGO, la Sociedad Rural Argentina y La Rural Predio Ferial organizaron la jornada “Miradas 2011. Una Mirada Regional de la Producción Ganadera”.\n', '', 'Ante un auditorio de más de 400 personas, entre los que se encontraron autoridades nacionales e internacionales; productores; médicos veterinarios; empresarios; medios de comunicación; los productores ganaderos Ing. Fernando Fortuny (Vicepresidente de Las Lajitas S.A.-Argentina); Ing. Luis Saavedra (Propietario de Hacienda Nelorí- Bolivia); Ing. Luciano Vacari (Superintendente de ACRIMAT- Asociación de Criadores del Mato Grosso-Brasil); Ing. Carlos Pedretti (Gerente General de Ganadera Alborada-Paraguay) y el Ing. José Bonica (Presidente de la Asociación Rural de Uruguay) dieron un panorama de la producción ganadera en sus países y reflejaron el impacto que tiene el sector pecuario en la economía y en toda la sociedad a nivel nacional y regional. \n<br>\n<br>Los cinco productores coincidieron en el potencial que posee la región para consolidarse como principal productor de proteína animal para el mundo, destacando la necesidad de producir de manera sustentable; de incorporar tecnología; de eliminar las barreras sanitarias (erradicación de fiebre aftosa en todo el continente) y de desarrollar un compromiso social, destacando los beneficios que genera el sector para el conjunto de la sociedad, entre otros aspectos clave. \n<br>\n<br><i>"En el marco de la 125 edición de una exposición que es el principal espacio de encuentro del sector y de vinculación entre el campo y la ciudad, desde BIOGENESIS BAGO, una empresa regional, de más de 70 años de trayectoria en salud y productividad animal, y junto a la Sociedad Rural Argentina y La Rural Predio Ferial, concebimos, en el año 2007 este espacio denominado Miradas del Campo. Este año, motivados por el contexto actual en el que la región de América del Sur es la productora de carnes de calidad número uno del mundo y continúa consolidándose como tal, decidimos darle a esas Miradas un enfoque regional"</i>, comentó Guillermo Mattioli, Director de BIOGENESIS BAGO. \n<br>\n<br>Para iniciar la jornada, el Ingeniero Agrónomo José Bonica, Presidente de la Asociación Rural de Uruguay, administrador de empresas arroceras - ganaderas y consultor privado, expresó <i>"sentimos que la sociedad no valora lo que representa el sector". </i>Luego, presentó datos de la producción agropecuaria uruguaya, destacando que en los últimos 8 años, tuvo un crecimiento del 36%. A su vez habló del efecto difusión del sector sobre las economías del interior del país, haciendo referencia a que "si al campo le va bien, a la sociedad también". <i>"El sector agropecuario es el que presenta mayores efectos difusión sobre la economía en su conjunto en comparación con el resto de las actividades productivas". </i>Además, señaló que este efecto también se refleja en la generación de empleos directos e indirectos y que los multiplicadores del sector agropecuario, considerado en su etapa primaria, son algo superiores al de otros sectores de la economía. <i>"Es decir que por cada unidad demandada en el sector, se multiplica tres veces la producción en la economía". </i>\n<br>\n<br>Los casos de Paraguay y Bolivia \n<br>Luego, el Ing. Carlos Pedretti, Gerente General de Ganadera Alborada y Presidente de la Asociación Rural del Paraguay, compartió datos sobre la producción ganadera en Paraguay, un país con un stock vacuno de 12, 6 millones de cabezas, una participación del 12% en el PIB y con la posición número 9 como exportador mundial de carne. \n<br>\n<br>Como productor, describió su esquema productivo, haciendo hincapié en el modelo de integración agrícola- ganadera que implementa donde considera las características del ecosistema; se utilizan apropiadamente los recursos naturales y las mejores tecnologías disponibles y se realizan cultivos seleccionados bajo buenas prácticas, lo que da origen a una producción de granos y forrajes conservados de alta calidad de forma sustentable y eficiente. \n<br><i>"Los avances que estamos logrando en nuestra ganadería, fue obtenida en base a la aplicación de tecnologías adaptadas al ecosistema que caracteriza cada zona", </i>señaló. \n<br>\n<br>Luego, habló de su política de recursos humanos y de responsabilidad social. Ganadera Alborada emplea en forma directa a 170 funcionarios y cuenta con 30 contratistas que emplean a más de 100 personas para diversas tareas tercerizadas. Su integración con la comunidad se refleja mediante programas con líderes campesinos para promover el cultivo de maíz y impulsar el deporte. \n<br>\n<br>Por su parte, el Ing. Luis Saavedra, Propietario de Hacienda Nelorí, Presidente de la Federación de empresarios privados de Santa Cruz y de la Fundación de Educación IDEA, demostró el potencial ganadero de un país con enormes áreas de vocación pecuaria, con un stock de 6.5 millones de cabezas y una población de 10 millones de habitantes. <i>"La agricultura y ganadería son soporte de la economía boliviana"</i>, señaló. Luego planteó desafíos para la producción como erradicar la fiebre aftosa; lograr una productividad y competitividad -tarea conjunta de los sectores público y privado-; generar mercados externos y considerar la sostenibilidad ambiental. \n<br>\n<br>Uno de los ejes del éxito de su emprendimiento Hacienda Nelorí es su modelo de gestión estratégica que traspoló de otros negocios de los que proviene, que se basa en producir carnes de calidad a bajo costo, considerando aspectos como: definir misión y visión y una estrategia competitiva; transformarlas en objetivos globales y estratégicos; establecer responsabilidades; fijar los indicadores de desempeño; definir políticas y herramientas de gestión; revisar las acciones estratégicas; monitorear el entorno para anticiparse a los cambios. <i>"Siempre guiados por mantener a los empleados motivados, capacitados y comprometidos, con procesos fluidos y clientes satisfechos; estableciendo indicadores que permitan medir la productividad y eficiencia y teniendo una gerencia participativa". </i>\n<br>\n<br>Las experiencias de Brasil y Argentina \n<br>El Ing. Luciano Vacari, Superintendente de ACRIMAT, planteó la necesidad de armonizar la producción con el ambiente, afirmando <i>"hay que producir más con menos". </i>Inició su presentación realizando una reseña historia de la evolución de la ganadería brasilera, hasta convertirse en lo que es hoy; un actividad modelo para el mundo. En cuanto a Brasil, habló de crecimiento del stock vacuno que fue de un 25 % en los últimos 5 años (stock 2008: 200 millones de cabezas), y de un 3 % del área de pasturas. Agregó que esto se logró por la incorporación de tecnología a los sistemas productivos, respetando el medio ambiente. \n<br>\n<br>También el Ing. Vacari desafíos para la producción ganadera brasilera: el primero, la sustentabilidad. En este sentido, describió las áreas de reserva legal que existen hoy en Brasil, las cuales se deben respetar a la hora de producir. <i>"Un país que produce el volumen que produce no puede ser acusado de no cumplir con las pautas sustentables", </i>señaló. Otro desafío que planteó es el de mantener la renta para poder adquirir tecnología, mejorar la genética, recuperar pasturas y transformar estructuras. Por último, hizo referencia a un desafío para toda la región que es erradicar la fiebre aftosa, a través de medidas públicas de control y vigilancia y de herramientas como la vacunación. <i>"En Brasil, por la gran producción, tenemos barreras proteccionistas disfrazadas de sanitarias. Debemos solucionar esto para poder acceder a nuevos mercados", </i>sostuvo. \n<br>\n<br>El cierre de la jornada estuvo a cargo del productor argentino, Ing. Fernando Fortuny, Vicepresidente de Las Lajitas SA, una empresa agropecuaria familiar de más de 25 años; Presidente de la Sociedad Rural Salteña y Director de las Asociaciones de Braford y Brangus. El Ingeniero Fortuny se refirió la zona donde produce, el noroeste argentino, describiéndola como una región con un mercado que hoy cubre el 70% de sus necesidades con importaciones extra-regionales; con capacidades internas ociosas, que eroga recursos en desmedro de dinamizar economías regionales y necesita los puestos de trabajo de la cadena productiva y de servicios y con un esquema productivo agrícola que será más sustentable concretando el potencial ganadero de la región. \n<br>\n<br>A su vez, manifestó que existen nichos, socio ambiental y productivo -regional, así también capacidades (la agricultura, que posibilita el crecimiento y perfeccionamiento tecnológico en los sistemas, genera capacidad de inversión y ofrece estabilidad; los recursos humanos y la propuesta tecnológica) y que está la tecnología para desarrollar la actividad ganadera en el NOA. \n<br>\n<br>Luego se refirió al planteo productivo en su establecimiento, Las Lajitas S.A. destacando las prácticas de inversión, incorporación de tecnología y de integración con la comunidad. Por último, apeló a todo el sector: "los empresarios de la región tenemos una ineludible e impostergable responsabilidad social y ambiental, porque la sustentabilidad de la región tiene tres patas: social, ambiental y económica). Por todo esto, debemos trabajar mancomunadamente empresarios, entidades intermedias, instituciones académicas y de investigación, sumando a los gobiernos provinciales y nacional, para que entre todos construyamos una Argentina más federal, más justa y con un nivel de desarrollo armónico en lo social, en lo económico, en lo impositivo y en infraestructura", culminó Fortuny.', 'prensa', 'es'),
 (45, '2011-04-22', 'Ranking de Imágen “Mejor empresa en el rubro Agronegocios” \n', 'La Revista Apertura (especializada en economía y negocios), presenta todos los años en Marzo los resultados de su ranking de las 100 empresas con mejor imagen de nuestro país. \n', '', 'Lo presenta con un Ranking General (el ranking de las 100) y  un Ranking Sectorial (las mejores 10 de ese rubro). La encuesta la lleva a cabo una consultora especializada y para obtener los resultados, encuestan a 202 líderes de opinión (empresarios, consultores de empresas y periodistas especializados en negocios).\n<br>En la edición 2011 Biogénesis Bagó se ubica en el puesto 8° en  Ranking del Rubro Agronegocios,  entre los destacados también se encuentran: El Tejar (9°) y AGD (10°);  Los Grobo, Monsanto, Syngenta, Cargill, Biosidus, Nidera y Profértil.\n<br>El ranking se construye sobre las empresas con mejor imagen en general y por los siguientes atributos: Innovación y Creatividad; Inversión y Producción en el país; Ética y Transparencia en su negocio; Confiabilidad de sus Productos/Servicios; Cuidados de su RR y generación de Empleos, Responsabilidad Social Empresaria, Trayectoria y Permanencia en el País; Desarrollo de Estrategia de Largo Plazo; Solvencia Económica Financiera; Calidad del Management; Publicidad y Acciones de Comunicación.\n<br>\n<br>Para Biogénesis Bagó  es una  gran satisfacción que nos hayan destacado de ésta forma dentro de todas las empresas del rubro agropecuario del país.\n<br>\n<br>\n<br>Durante los últimos  5 años:\n<br>Primeros en elección, imagen de marca y calidad de productos (Encuesta a Productores Mora &amp; Araujo 2007)\n<br>Primeros en el ranking  "Las mejores marcas en Imagen del rubro veterinario" (Revista Chacra 2008). \n<br>Primeros en recordación, imagen de marca y calidad de productos (Encuesta a Explotaciones de Engorde a Corral Mora &amp; Araujo 2009).\n<br>Único laboratorio de Sanidad Animal  dentro de las 10 mejores empresas del rubro Agronegocios (Ranking de Imagen Revista Apertura años 2010 y 2011). \n<br>\n<br>\n<br>Para quienes trabajamos en Biogénesis Bagó, es un orgullo seguir trabajando como lo venimos haciendo y con ganas de seguir superándonos y seguir adelante.  Muchas gracias\n<br>', 'prensa', 'es'),
-(46, '2011-04-18', 'Biogénesis Bagó lanza al mercado Ceftiomax \n', 'Ceftiomax® (Clorihidrato de ceftiofur 5%). Un antibiótico de amplio espectro para bovinos y porcinos. Indicado para Enfermedades Respiratorias y tratamiento de Pietín en bovinos y las enfermedades respiratorias del Porcino.\n', '', 'Una nueva herramienta para los productores, ofreciendo un  producto seguro con tolerancia local excelente en Bovinos y Porcinos.\n<br>Ceftiomax®, está formulado en base a Clorhidrato de Ceftiofur en suspensión oleosa lista para usar. El Ceftiofur es una cefalosporina de última generación y es de la familia de los betaláctamicos, diferenciándose de las penicilinas comunes por una cinética superior que hace que disponga de un espectro más amplio, se metaboliza en menor tiempo y no deja residuos en los tejidos comestibles y leche para uso humano.\n<br>El Ceftiofur posee la vida media de eliminación en plasma más larga conocida entre las Cefalosporinas, que le otorga a esta presentación, lista para usar, una prolongada acción frente a los principales organismos Gram negativos y positivos de los bovinos y porcinos. Su rápida eliminación de la leche permite su uso en ganado lechero en producción con descarte cero en leche.\n<br>Sin espera previa a la faena para el consumo humano.\n<br>', 'prensa', 'es'),
-(47, '2011-04-15', 'Lanzamiento: Ceftiomax® \n', 'Biogénesis Bagó lanza al mercado Ceftiomax® (Clorihidrato de ceftiofur 5%). Un antibiótico de amplio espectro para bovinos y porcinos. Indicado para Enfermedades Respiratorias y tratamiento de Pietín en bovinos y las Enfermedades Respiratorias del Porcino. \nEstá indicado en las infecciones bacterianas más comunes causada por organismos Gram negativos y positivos. \n', '', 'Una nueva herramienta para los productores, ofreciendo un  producto seguro con tolerancia local excelente en Bovinos y Porcinos. \n<br>Ceftiomax®, está formulado en base a Clorhidrato de Ceftiofur en suspensión oleosa lista para usar. El Ceftiofur es una cefalosporina de última generación y es de la familia de los betaláctamicos, diferenciándose de las penicilinas comunes por una cinética superior que hace que disponga de un espectro más amplio, se metaboliza en menor tiempo y no deja residuos en los tejidos comestibles y leche para uso humano. \n<br>El Ceftiofur posee la vida media de eliminación en plasma más larga conocida entre las Cefalosporinas, que le otorga a esta presentación, lista para usar, una prolongada acción frente a los principales organismos Gram negativos y positivos de los bovinos y porcinos. Su rápida eliminación de la leche permite su uso en ganado lechero en producción con descarte cero en leche. \n<br>Sin espera previa a la faena para el consumo humano. \n<br> \n<br>Las pruebas de Bioequivalencia son la forma mas eficaz de comparar biodisponibilidades de preparados supuestamente similares. En un estudio realizado por el Dr. Errecalde J. y Mestorino N.  de la Facultad de Cs. Veterinarias de La Plata llegaron a la conclusión que existe Bioequivalencia entre Ceftiomax y una formulación de Ceftiofur suspensión (Grafico 1), no encontrando diferencias en los parámetros de bioequivalencia ni en los parámetros que  evalúan la permanencia de la molécula en el organismo y la eliminación de la misma. \n<br>Esto nos permite resaltar las cualidades de CEFTIOMAX:  \n<br>• Alta Eficacia \n<br>• Practicidad en el uso \n<br>• Baja toxicidad \n<br>• Carencia de tiempo de retirada \n<br> ', 'prensa', 'es');
+(46, '2011-04-18', 'Biogénesis Bagó lanza al mercado Ceftiomax \n', 'Ceftiomax® (Clorihidrato de ceftiofur 5%). Un antibiótico de amplio espectro para bovinos y porcinos. Indicado para Enfermedades Respiratorias y tratamiento de Pietín en bovinos y las enfermedades respiratorias del Porcino.\n', '', 'Una nueva herramienta para los productores, ofreciendo un  producto seguro con tolerancia local excelente en Bovinos y Porcinos.\n<br>Ceftiomax®, está formulado en base a Clorhidrato de Ceftiofur en suspensión oleosa lista para usar. El Ceftiofur es una cefalosporina de última generación y es de la familia de los betaláctamicos, diferenciándose de las penicilinas comunes por una cinética superior que hace que disponga de un espectro más amplio, se metaboliza en menor tiempo y no deja residuos en los tejidos comestibles y leche para uso humano.\n<br>El Ceftiofur posee la vida media de eliminación en plasma más larga conocida entre las Cefalosporinas, que le otorga a esta presentación, lista para usar, una prolongada acción frente a los principales organismos Gram negativos y positivos de los bovinos y porcinos. Su rápida eliminación de la leche permite su uso en ganado lechero en producción con descarte cero en leche.\n<br>Sin espera previa a la faena para el consumo humano.\n<br>', 'prensa', 'es');
 INSERT INTO `tbl_notas` (`id`, `fecha`, `titulo`, `bajada`, `extra`, `texto`, `seccion`, `pais`) VALUES
+(47, '2011-04-15', 'Lanzamiento: Ceftiomax® \n', 'Biogénesis Bagó lanza al mercado Ceftiomax® (Clorihidrato de ceftiofur 5%). Un antibiótico de amplio espectro para bovinos y porcinos. Indicado para Enfermedades Respiratorias y tratamiento de Pietín en bovinos y las Enfermedades Respiratorias del Porcino. \nEstá indicado en las infecciones bacterianas más comunes causada por organismos Gram negativos y positivos. \n', '', 'Una nueva herramienta para los productores, ofreciendo un  producto seguro con tolerancia local excelente en Bovinos y Porcinos. \n<br>Ceftiomax®, está formulado en base a Clorhidrato de Ceftiofur en suspensión oleosa lista para usar. El Ceftiofur es una cefalosporina de última generación y es de la familia de los betaláctamicos, diferenciándose de las penicilinas comunes por una cinética superior que hace que disponga de un espectro más amplio, se metaboliza en menor tiempo y no deja residuos en los tejidos comestibles y leche para uso humano. \n<br>El Ceftiofur posee la vida media de eliminación en plasma más larga conocida entre las Cefalosporinas, que le otorga a esta presentación, lista para usar, una prolongada acción frente a los principales organismos Gram negativos y positivos de los bovinos y porcinos. Su rápida eliminación de la leche permite su uso en ganado lechero en producción con descarte cero en leche. \n<br>Sin espera previa a la faena para el consumo humano. \n<br> \n<br>Las pruebas de Bioequivalencia son la forma mas eficaz de comparar biodisponibilidades de preparados supuestamente similares. En un estudio realizado por el Dr. Errecalde J. y Mestorino N.  de la Facultad de Cs. Veterinarias de La Plata llegaron a la conclusión que existe Bioequivalencia entre Ceftiomax y una formulación de Ceftiofur suspensión (Grafico 1), no encontrando diferencias en los parámetros de bioequivalencia ni en los parámetros que  evalúan la permanencia de la molécula en el organismo y la eliminación de la misma. \n<br>Esto nos permite resaltar las cualidades de CEFTIOMAX:  \n<br>• Alta Eficacia \n<br>• Practicidad en el uso \n<br>• Baja toxicidad \n<br>• Carencia de tiempo de retirada \n<br> ', 'prensa', 'es'),
 (48, '2010-12-10', 'Biogénesis Bagó anunció los ganadores del Concurso para Periodistas \n', 'Creamos este concurso con el objetivo de difundir conceptos clave del sector agropecuario y reflejar el rol económico y social de la actividad, destacando el papel de los distintos actores de la cadena y para premiar el importante rol de los periodistas en este proceso, comentó Paola Ferrari, Gerente de Marketing de Biogénesis Bagó.\n', '', '<b>El ganador de la 2º etapa del Concurso para Periodistas. </b>\n<br>\n<br>El ganador de la mejor nota periodística sobre el rol económico y social de la actividad pecuaria, dirigida a los sectores no pecuarios, redactada a partir de los conceptos investigados en el período previo del concurso, fue el periodista Fernando Bertello de LA NACION, Suplemento Campo. \n<br>\n<br>La nota fue elegida por un Jurado compuesto por el Ing. Agr. Marcelo Regúnaga de la Unidad de Agronegocios e Industria Alimenticia del Centro de Educación Empresaria de la Universidad de San Andrés; el Ing. Daniel Rearte del INTA; Rafael Llorente de CREA; el Ing. Agr. Alberto De Las Carreras de la Academia de Agronomía y Veterinaria; el Ing. Agr. Alejandro Lotti de la Subsecretaría de Ganadería y Carlos Curci González del Círculo Argentino de El Concurso “Viva la Ganadería, juntos por más terneros”, del que participaron más de 100 periodistas de todo el país, tuvo el objetivo de difundir conceptos clave del sector agropecuario y reflejar el rol económico y social de la actividad, destacando el papel de los distintos actores de la cadena. \n<br>\n<br><b>Nota Ganadora: </b>\n<br>La ganadería, el pulmón que hace respirar a todo un pueblo. \n<br>\n<br>En Rauch, una ciudad bonaerense de 14 mil habitantes, se refleja a escala local la importancia que tiene la actividad a nivel nacional Por Fernando Bertello \n<br>\n<br>En Rauch, una ciudad de 14.000 habitantes ubicada a 300 kilómetros al centro sur de Buenos Aires, la ganadería es el pulmón del pueblo. En Rauch hay olor y gusto a ganadería por todas partes. Es que alrededor de esta actividad se estructura su vida económica y social. Enclavado en la Cuenca del Salado, con sus 430 mil hectáreas Rauch es un partido criador por excelencia. \n<br>\n<br>Es un fuerte productor de terneros, el primer eslabón que recorre la cadena cárnica en el largo camino hasta el bife. \n<br>\n<br>Una serie de datos, por demás contundentes, permiten trazar un paralelismo, aunque a una escala más chica, con lo que ocurre a nivel nacional con el impacto de la ganadería. Es decir, se puede trazar una cierta comparación entre Rauch y la realidad pecuaria nacional. \n<br>\n<br>Según un trabajo realizado sobre las cadenas agroindustriales por Marcelo Regúnaga, Hugo Cetrángolo y Gustavo Mozeris, de la Unidad de Agronegocios e Industria Alimenticia del Centro de Educación Empresaria de la Universidad de San Andrés, la actividad pecuaria se caracteriza por su atomización y por una fuerte participación de pymes. De hecho, según datos a 2010 del Servicio Nacional de Sanidad y Calidad Agroalimentaria (Senasa), hay en el país 210 mil establecimientos con ganado bovino. \n<br>\n<br>En Rauch, de acuerdo a los últimos datos de vacunación de la campaña antiaftosa, provistos por la Sociedad Rural de esa ciudad, este año se contabilizan 998 establecimientos y 1226 productores. Son datos que reflejan una caída respecto de lo que ocurría en 2007 y que tendría su explicación en la crisis de los últimos años de la actividad. En rigor, en 2007 allí se contabilizaban 1031 establecimientos y 1321 productores. \n<br>\n<br>En esta ciudad también se puede observar una fuerte participación de las pymes en la actividad. A modo de ejemplo, entre otro datos, aquí hay 103 establecimientos que tienen entre 1 y 50 animales; 120 con un rango de 51 a 100; 191 con de 101 a 200 animales y 310 establecimientos que poseen entre 201 y 500 vacunos. Sobre los 1031 establecimiento que hay en total, sólo hay 101 que tienen más de 1000 animales en sus explotaciones. \n<br>\n<br>Como se ve, es una actividad con fuerte predominio de establecimientos de chicos a medianos. “Hoy el promedio de cabezas por productor es de 367; se trata de productores medianos”, dijo José Luis Etchanchú, ex presidente de la Sociedad Rural de Rauch. \n<br>\n<br>Rauch cuenta hoy con un rodeo total de 449.908 vacunos. Se trata de una cifra 16% menor al stock de 2007, cuando se contabilizaban, según los datos de vacunación de ese entonces, 522.926 cabezas. \n<br>\n<br>Mientras tanto, a nivel nacional el stock vacuno asciende a 48,9 millones de cabezas, según datos del Senasa. Esa cifra significa una merma del 15% del stock en los últimos dos años, ocasionada por la liquidación de hacienda por los bajos precios y la sequía. Con este número, el stock nacional volvió al nivel de 2001 y hoy hay casi una cabeza vacuna por habitante, cuando a mediados de los sesenta la relación era 2,2 cabezas por habitante. \n<br>\n<br>¿Cuántas personas sobre los 14 mil habitantes del pueblo de Rauch están vinculadas de manera directa o indirecta con la actividad ganadera? \n<br>Según el trabajo de Regúnaga, Cetrángolo y Mozeris, a nivel país la cadena pecuaria emplea a más de 364 mil personas en forma directa en las etapas primaria y de procesamientos de carnes, lácteos y curtidos de cueros. \n<br>\n<br>Además, contando la comercialización esa cifra trepa a los 763.000 puestos de trabajo. Pero el círculo no termina allí: según la investigación, sumando el rubro de provisión de insumos el empleo total asciende a un millón de puestos de trabajo. “Esto es el 6,4% del total de ocupados del país”, dice un comunicado de Biogénesis Bagó sobre los alcances del trabajo de esos especialistas. \n<br>\n<br>Para comparar con otra actividad, la industria automotriz a 2008 ocupaba 26 mil personas en forma directa en las terminales y 48 mil en las empresas autopartistas. Se trata, en total, de menos de la cuarta parte del empleo directo motorizado por las cadenas de carnes y lácteos sin contar el rubro curtiembres. Es un dato del Ministerio de Industria que aparece en el trabajo de investigación que difundió Biogénesis Bagó. \n<br>\n<br>En Rauch dicen que “la gran mayoría en forma directa o indirecta” de sus habitantes tiene una vinculación laboral con el campo. “La ganadería es la base principal del sostén de esta ciudad”, afirman desde la Rural local. \n<br>En efecto, sin fábricas industriales de gran calibre, allí estiman que el peso que la actividad tiene en la economía del pueblo ronda el 90%, “por ser una zona netamente ganadera”. \n<br>En esta ciudad hay 10 casas veterinarias, 6 feedlots declarados ante el \n<br>Senasa, 4 consignatarias que realizan remates en forma mensual y 8 firmas particulares que funcionan como representantes en esta actividad de otras empresas. \n<br>\n<br>Repercusión de prensa: \n<br>Arturo Romero, un veterinario que tras participar activamente como autoconvocado en el conflicto del campo con el Gobierno en 2008 saltó a la política local y fue electo concejal el año pasado, aportó más datos sobre la importancia de esta actividad en Rauch. \n<br>\n<br>Según dijo, además de las 10 casas veterinarias, son 27 los veterinarios que allí están desempeñando su actividad profesional. “Gente vinculada directa o indirectamente somos todos. Todos nosotros, médicos, abogados, almaceneros, peluqueros, carniceros, panaderos vivimos del campo y lo sabemos porque cuando el campo anda mal se reduce la actividad en más del 60%”, comentó. \n<br>\n<br>Para Romero, sin contar los empleos indirectos, al menos el 35% de la masa laboral está ligada a esta actividad. “Este distrito vive gracias al campo; no existe otra actividad que genere ingresos de divisas en forma genuinas que se quedan en nuestro partido”, afirmó. \n<br>\n<br>Por qué ganadería: \n<br>Más datos ayudan a comprender la importancia de la actividad en este pueblo que tiene un 80% de superficie ganadera y 20% exclusivamente agrícola. \n<br>\n<br>¿Qué significa esto? En materia de agricultura, las ventas de cereales y granos oleaginosos en Rauch significan a valores actuales un aporte de 166 millones de pesos a la economía local. \n<br>Por el contrario, según comentó Romero a partir de los datos de esa ciudad, la actividad ganadera representa una inyección de dinero más importante. Concretamente, las ventas anuales de hacienda totalizan a precios actuales 671,5 millones de pesos por año. \n<br>\n<br>Si se compara con el presupuesto municipal, que es de 35 millones de pesos, esa cifra de ventas ganaderas equivale a 19 veces el presupuesto municipal. \n<br>\n<br>Sólo para citar una categoría de hacienda, la venta de terneros, que asciende a unos 200 mil animales por año, mueve 240 millones de pesos. La soja, en tanto, aquí significa 77,2 millones de pesos. \n<br>\n<br>Para recordar con lo que ocurre a nivel nacional, según el trabajo de Regúnaga, Cetrángolo y Mozeris el sector pecuario (carnes, lácteos, fiambres y alimentos de origen) es el segundo en el valor de la producción, luego de la cadena de granos oleaginosos, con un monto de 14.800 millones de dólares a 2009. \n<br>\n<br>Por lo que se ve en Rauch, con sus ventas por 671,5 millones de pesos la ganadería ocupa el primer lugar del podio en este pueblo. \n<br>\n<br>Pero, además de la importancia por las ventas que genera en Rauch, la actividad aporta mucho en impuestos a la economía. Sólo por tasa rural, guías y señales contribuye con 8 millones de pesos por año.', 'prensa', 'es'),
 (49, '2010-12-03', 'Lanzamiento de Viba \n', 'Biogénesis Bagó, por un bicentenario productivo. Considerando la situación actual de la ganadería, y con el fin de contribuir a producir más terneros para el país, Biogénesis Bagó, una compañía de biotecnología de alcance nacional, regional e internacional con más de 70 años de trayectoria, presenta su planta para la producción de vacunas virales y bacterianas (ViBa) y lanza el slogan “Juntos por más terneros”, que se desarrolla en el marco de la campaña VIVA LA GANADERÍA, invocando a un bicentenario más productivo.\n', '', 'Ante un escenario de caída del stock vacuno (según la RIAN -Red de Información Agropecuaria Nacional, el total de cabezas de la actualidad es de 50.800 millones vs. 55.429 del 2009) y falta de vientres (en 2010 se registraron 21.100.00, en 2009 22.5 millones y en 2007 24 millones), la sanidad representa un factor clave para poder producir más terneros. \n<br>\n<br>“Hoy el desafío es aumentar la producción de terneros, con las vacas disponibles, o sea, ser más eficientes en los índices de destete. Esto se puede lograr trabajando juntos los veterinarios, productores e ingenieros agrónomos; aplicando tecnología en todos los órdenes. \n<br>\n<br>Nuestro nuevo slogan `Juntos por más terneros’, la campaña VIVA LA GANADERÍA y la inversión en esta nueva planta, son aportes concretos para seguir poniendo a disposición del médico veterinario y productor pecuario la tecnología sanitaria necesaria para lograr una mayor producción animal”. \n<br>\n<br>Según CAPROVE, Cámara Argentina de la Industria de Productos Veterinarios, a través de la sanidad, evitando pérdidas por enfermedades y manteniendo el mismo stock de madres, se puede lograr un incremento de la tasa de extracción de 4 puntos (del 25 al 29%) y aumentar 10 puntos el índice de destete (pasar del 60 actual – 2008- al 70 %), para producir los 3.000.000 de terneros más necesarios para cubrir la creciente demanda interna y externa de carne.\n<br>\n<br>En ese importante acto visitó la planta  La Presidente Cristina Fernández quien estuvo acompañada por directivos y autoridades gubernamentales, entre los que podemos destacar a los accionistas de Biogénesis-Bagó, Dr. Hugo Sigman y Señora; Dr. Juan Carlos Bagó y el Lic. Sebastian Bagó; el gobernador bonaerense, Daniel Scioli; el intendente de Escobar, Sandro Guzmán; el Ministro de Salud, Juan Manzur; el Ministro de Agricultura, Ganadería y Pesca, Julián Domínguez y el Ministro de Ciencia,  Tecnología e Innovación Productiva, Dr. José Lino Barañao.\n<br>\n<br>Con una inversión de 15.000.000 millones de dólares, la nueva planta cuenta con una superficie de 15.000 metros cuadrados, con la más alta tecnología y estándares de calidad internacionales, donde se puede manejar un volumen de producción de 100 millones de dosis multivalentes por año, para la prevención de enfermedades virales y bacterianas. “Esta planta nos permite aumentar la capacidad de producción, ofrecer más productos con valor agregado para mejorar la productividad animal, mantener el liderazgo en Argentina y consolidarnos en la región”, agregó el Dr. Alejandro Gil, Director General de Biogénesis Bagó.', 'prensa', 'es'),
 (50, '2010-12-01', 'Fundación Exportar \n', 'Biogénesis Bagó premiada por ser el mayor exportador veterinario.\n', '', 'Buenos Aires, diciembre de 2010. La compañía de biotecnología Biogénesis-Bagó fue premiada esta semana por Fundación Exportar por ser líder en la exportación de productos veterinarios argentinos hacia el mundo. \n<br><br>\nSe trata del mayor exportador del país en este rubro. En 2010, Argentina exportará productos veterinarios por un total de 99 millones de dólares, de los cuales 27,5 millones corresponden a Biogénesis-Bagó. \n<br><br>\nDesde hace más de 20 años, la compañía exporta productos veterinarios a países ganaderos de la región y el mundo como Brasil, México, Uruguay, Bolivia, Chile, Colombia, Costa Rica, Ecuador, Paraguay, Perú, Venezuela, Taiwán, Sudáfrica, los Países Árabes y Rusia, entre otros. Además, es proveedor del Banco Norteamericano de Antígeno y Vacunas contra la Fiebre Aftosa (NAFMDVB). “Este premio demuestra que las inversiones de largo plazo en el país con máxima tecnología tienen una proyección hacia los mercados del mundo”, aseguró Hugo Sigman, CEO del Grupo Insud y accionista de Biogénesis- Bagó junto a las familias Bagó y Gold. \n<br><br>\nEn la ceremonia, realizada el 21 de diciembre en el Palacio San Martín, estuvieron presentes el Ministro de Relaciones Exteriores, Comercio Internacional y Culto, Héctor Timerman, el Subsecretario de Comercio Internacional, Ariel Schale, el Secretario de Comercio Internacional, Luis María Kreckler, y el Presidente del Consejo de la Fundación Export.Ar, Miguel Acevedo, entre otras autoridades. Los Premios Exportar reconocen públicamente los esfuerzos y logros de las empresas argentinas  por la  inserción de sus productos en el mercado internacional incentivando, entre otros,  el crecimiento, la generación de empleo genuino y la diversificación de las exportaciones y mercados. \n', 'prensa', 'es'),
@@ -927,12 +938,12 @@ INSERT INTO `tbl_notas` (`id`, `fecha`, `titulo`, `bajada`, `extra`, `texto`, `s
 (67, '2009-10-02', 'Lanzamiento Desmopresina Biogénesis Bagó \n', 'El día 10 de septiembre se lanzó Desmopresina Biogénesis Bagó, una solución inyectable hemostática perioperatoria para el tratamiento del cáncer de mama en hembras caninas.\n', '', 'El día 10 de septiembre de 2009, con la presencia del Ministro de Ciencia, Tecnología e Innovación Productiva, Dr. José Lino Barañao, y de más de 250 profesionales veterinarios especializados en animales de compa, Biogénesis Bagó lanzó Desmopresina Biogénesis Bagó. Se trata de una solución inyectable hemostática perioperatoria para el tratamiento del cáncer de mama en hembras caninas que, aplicada antes y después de una mastectomía, reduce el riesgo de metástasis, prolongando la sobrevida del animal. Este nuevo producto es el resultado del trabajo conjunto de investigación y desarrollo de Biogénesis Bagó con la Universidad de Quilmes y la empresa Romikin.\n<br>\n<br>"Este lanzamiento representa nuestra apuesta al desarrollo del segmento de animales de compañía y refleja, a su vez, el trabajo de investigación que realizamos permanentemente con entidades científicas, académicas y privadas en pos de mejorar la sanidad animal y la calidad de vida de nuestras mascotas”, comentó Esteban Turic, Gerente Técnico de Planeamiento Estratégico de Biogénesis Bagó.\n<br>\n<br>La Desmopresina es un análogo sintético de la hormona antidiurética vasopresina. Ha sido empleada en animales con Diabetes Insipidus y en ciertos desórdenes sanguíneos, siendo un agente hemostático seguro y efectivo en cirugías de alto riesgo de sangrado. En numerosos ensayos realizados con Desmopresina Biogénesis Bagó en hembras caninas, con tumores mamarios, se han demostrado propiedades antitumorales significativas al ser aplicada por vía endovenosa como adyuvante perioperatorio durante la extirpación de la masa tumoral.', 'prensa', 'es'),
 (68, '2009-10-02', 'Gira Lanzamiento Arrasa Ovinos \n', '', '', 'La gira se realizó en las ciudades de Comodoro Rivadavia, Esquel, Río Gallegos y Trelew.', 'prensa', 'es'),
 (69, '2009-06-27', 'Biogénesis Bagó presente en la Conferencia Global sobre la Fiebre Aftosa \n', 'Del 21 al 26 de junio, Biogénesis Bagó estuvo presente en la Conferencia Global sobre la Fiebre Aftosa:', '', 'Hacia el control de la enfermedad a nivel mundial, la cual se llevo a cabo en el Hotel Resort Casino yacht y Golf Club Paraguayo de la ciudad de Asuncion de Paraguay. <br>\n<br>\nLa misma conto con la particiación de más de 500 personas entre representantes de la OIE/FAO, organizaciones internacionales socias, donantes mundiales clave, entidades gubernamentales y no gubernamentales.<br>\n<br>', 'prensa', 'es'),
-(70, '2009-05-14', 'Biogénesis Bagó concretó la primera exportación de antígenos \n', 'Biogénesis Bagó concretó la primera exportación de antígenos\nEl día 28 de abril de este año, Biogénesis Bagó realizó la primera exportación de gran escala de antígenos concentrados hacia el Banco Norteamericano de Anfígeno y Vacunas contra la Fiebre Aftosa (NAFMDVB) después de aprobar controles de seguridad, pureza y potencia frente al desafío con virus activo, realizados en EEUU.\n', '', 'Éste es el primer embarque solicitado  en la licitación de este banco.\n<br>\n<br>Estos antígenos concentrados quedarán en custodia en Plum Island, EEUU. En caso de existir un brote de aftosa en cualquiera de los países que conforman el Banco (EEUU, México o Canadá) serán remitidos a Biogénesis Bagó para la formulación de la vacuna , que deberá ser enviada en un plazo no mayor a las 72 horas.\n<br>\n<br>En Septiembre del año 2006,  Biogénesis Bagó  fue adjudicatario de la licitación Internacional, para proveer al Banco Norteamericano de Antígenos y Vacunas contra la Fiebre Aftosa NAFMDVB (North American Foot – and - Mouth Disease Vaccine Bank), de EEUU, México y Canadá.\n<br>\n<br>Este gran logro, resultado de años de trabajo  de científicos locales, pone  a la Argentina a la vanguardia de América Latina, además de significar un reconocimiento a las autoridades sanitarias, ya que el  SENASA tuvo un rol fundamental  al dar las garantías suficientes, para que un producto elaborado en la Argentina, pudiera ser utilizado en los países de Norteamérica. \n<br>\n<br>Biogénesis Bagó, refuerza una vez mas su compromiso para erradicar la Fiebre Aftosa, invirtiendo recursos en tecnología aplicada a este fin, empleando mano de obra local y trabajando con los mejores especialistas en la materia a nivel mundial, con el objetivo de poner a disposición de las autoridades sanitarias y ganaderos un producto de excelencia, reconocido por los centros de investigación y servicios oficiales de salud animal  mas exigentes del mundo.', 'prensa', 'es'),
+(70, '2009-05-14', 'Biogénesis Bagó concretó la primera exportación de antígenos \n', 'Biogénesis Bagó concretó la primera exportación de antígenos\nEl día 28 de abril de este año, Biogénesis Bagó realizó la primera exportación de gran escala de antígenos concentrados hacia el Banco Norteamericano de Anfígeno y Vacunas contra la Fiebre Aftosa (NAFMDVB) después de aprobar controles de seguridad, pureza y potencia frente al desafío con virus activo, realizados en EEUU.\n', '', 'Éste es el primer embarque solicitado  en la licitación de este banco.\n<br>\n<br>Estos antígenos concentrados quedarán en custodia en Plum Island, EEUU. En caso de existir un brote de aftosa en cualquiera de los países que conforman el Banco (EEUU, México o Canadá) serán remitidos a Biogénesis Bagó para la formulación de la vacuna , que deberá ser enviada en un plazo no mayor a las 72 horas.\n<br>\n<br>En Septiembre del año 2006,  Biogénesis Bagó  fue adjudicatario de la licitación Internacional, para proveer al Banco Norteamericano de Antígenos y Vacunas contra la Fiebre Aftosa NAFMDVB (North American Foot – and - Mouth Disease Vaccine Bank), de EEUU, México y Canadá.\n<br>\n<br>Este gran logro, resultado de años de trabajo  de científicos locales, pone  a la Argentina a la vanguardia de América Latina, además de significar un reconocimiento a las autoridades sanitarias, ya que el  SENASA tuvo un rol fundamental  al dar las garantías suficientes, para que un producto elaborado en la Argentina, pudiera ser utilizado en los países de Norteamérica. \n<br>\n<br>Biogénesis Bagó, refuerza una vez mas su compromiso para erradicar la Fiebre Aftosa, invirtiendo recursos en tecnología aplicada a este fin, empleando mano de obra local y trabajando con los mejores especialistas en la materia a nivel mundial, con el objetivo de poner a disposición de las autoridades sanitarias y ganaderos un producto de excelencia, reconocido por los centros de investigación y servicios oficiales de salud animal  mas exigentes del mundo.', 'prensa', 'es');
+INSERT INTO `tbl_notas` (`id`, `fecha`, `titulo`, `bajada`, `extra`, `texto`, `seccion`, `pais`) VALUES
 (71, '2008-12-10', 'Ultimo encuentro del Programa UniTe', 'Finalizó con gran éxito el primer año del Programa UniTe - Universidad y Tecnología.', '', 'Con la presencia de 60 alumnos de las facultades de veterinaria de ls UBA, La Plata, Esperanza, La Pampa, Centro de la Pcia. de Bs. As., Corrientes y Casilda, se llevó a cabo el último encuentro del Programa UniTe - Universidad y Tecnología. ´La etapa final se desarrolló en las instalaciones del Laboratorio Biogénesis Bagó, donde los alumnos contaron con charlas brindadas por profesionales y una visita guiada por toda la planta de este laboratorio.\n<br>\n<br>El programa contó con 4 etapas, la 1º y la 2º fue en las instalaciones de cada facultad, donde se presentó el temario de actividades y hubo diferentes charlas de profesionales del sector. La 3º etapa se desarrollo en el marco de la Exposición de Palermo 2008 con gran participación de los estudiantes.\n<br>\n<br>Ya esta previsto para el 2009, continuar con la 2º edición del programa.', 'prensa', 'es'),
 (72, '2008-10-21', 'Biogénesis Bagó presente en el 31º Congreso de Producción Animal', 'Organizado por AAPA (Asociación Argentina de Producción Animal), se llevó a cabo el 31º Congreso de Producción Animal - Potrero de los Funes.\n', '', 'El mismo tuvo lugar en el Hotel Internacional de dicha ciudad en la Pcia. de San Luis y contó con la presencia de 550 asistentes, superando apliamente su anterior edición. \n<br><br>\nBiogénesis Bagó estuvo presente con un stand donde veterinarios del laboratorio respondian a las dudas de los interesados en su amplia línea de productos.<br>', 'prensa', 'es'),
 (73, '2008-05-30', 'UniTe - Universidad y Tecnología \n', 'Finalizó con éxito la 1º Etapa del Programa UniTe para alumnos del ultimo año de la carrera de Cs. veterinarias.', '', 'Tras la última jornada llevada a cabo en la Facultad de Ciencias Veterinarias - Universidad Nordeste de la ciudad de Corrientes, finalizó con éxito la 1º etapa del programa UniTe - Universidad y Tecnología. \n<br><br>\nUniTe, programa que consiste en vincular alumnos de facultades de ciencias veterinarias, médicos veterinarios, productores ganaderos y Biogénesis Bagó, consta de tres etapas, donde en la primera, que se desarrolló en las facultades de ciencias veterinarias de Buenos Aires, La Plata, Tandil, Río Cuarto, Gral. Pico, Casilda, Esperanza y por último Corrientes, los estudiantes del último año de esta carrera participaron de una jornada - taller con participación de veterinarios de la actividad privada referentes de cada zona, un productor de la zona de influencia que cuente con un asesoramiento veterinario permanente y asesores técnicos de BIOGÉNESIS BAGÓ, se trataron temas como: La situacion actual y proyección futura de la ganadería de carne y leche; y Que esperamos los productores de nuestro asesor veterinario, etc.', 'prensa', 'es'),
-(74, '2008-05-30', 'Lanzamiento de Suplenut', 'Durante los meses de abril y mayo, en las ciudades de Mar del Plata y Santa Fe respectivamente, se llevó a cabo la presentación de un nuevo producto desarrollado por Biogénesis Bagó.', '', 'Suplenut, producto para revertir la carencia de cobre y zinc de cada rodeo.\n<br>\n<br>Con la participación como disertantes de Guillermo Mattiolli, MV egresado de Universidad de La Plata, director del Laboratorio de Butricion Mineral de Fisiología Reproductiva de la Facultad de Cs. Veterinarias (UNLP) y de Esteban Turic, MV y Jefe de Investigación y Desarrollo del Laboratorio Biogénesis Bagó.\n<br>\n<br>Ambas reuniones tuvieron gran convocatoria entre e los veterinarios de cada zona, quienes tuvieron un rol muy participativos en las mismas. Al finalizar la disertacion de los profesionales se formaron mesas redondas donde los veterinarios contestaban un cuestionario a modo de taller.          ', 'prensa', 'es');
-INSERT INTO `tbl_notas` (`id`, `fecha`, `titulo`, `bajada`, `extra`, `texto`, `seccion`, `pais`) VALUES
+(74, '2008-05-30', 'Lanzamiento de Suplenut', 'Durante los meses de abril y mayo, en las ciudades de Mar del Plata y Santa Fe respectivamente, se llevó a cabo la presentación de un nuevo producto desarrollado por Biogénesis Bagó.', '', 'Suplenut, producto para revertir la carencia de cobre y zinc de cada rodeo.\n<br>\n<br>Con la participación como disertantes de Guillermo Mattiolli, MV egresado de Universidad de La Plata, director del Laboratorio de Butricion Mineral de Fisiología Reproductiva de la Facultad de Cs. Veterinarias (UNLP) y de Esteban Turic, MV y Jefe de Investigación y Desarrollo del Laboratorio Biogénesis Bagó.\n<br>\n<br>Ambas reuniones tuvieron gran convocatoria entre e los veterinarios de cada zona, quienes tuvieron un rol muy participativos en las mismas. Al finalizar la disertacion de los profesionales se formaron mesas redondas donde los veterinarios contestaban un cuestionario a modo de taller.          ', 'prensa', 'es'),
 (75, '2008-01-09', 'Curso en Reproducción e Inseminación Artificial en Goyaike \n', 'Realizado por Biogénesis Bagó junto al Centro de Biotecnología de la Reproducción Goyaike.', '', 'Durante los meses de enero, febrero y marzo de 2008 Biogénesis Bagó junto al Centro de Biotecnología de la Reproducción Goyaike, ofrece a veterinarios y usuarios del dispositivo Cronipres de todo el país el Curso Práctico de Ultrasonografía Transrectal del Tracto Reproductivo Bovino y el Curso en Inseminación Artificial a Tiempo Fijo en la ciudad bonaerense de  Carmen de Areco.\n<br>\n<br>A través de módulos teóricos y prácticos, los cursos – de una duración de tres días consecutivos- buscan capacitar a cerca de 50 profesionales en el área reproductiva, en la correcta utilización del ecógrafo logrando conocer el sexado del feto, diagnósticos de preñez temprana y reconocimiento de estructuras ováricas, entre otras cosas.\n<br>\n<br>El curso es dictado en la Estancia San Joaquín y participan, por parte de Biogénesis Bagó, los médicos veterinarios Matias Nardello, Sebastián Crudeli, Carolina Werthein, Jesús Pesoa, Gustavo Lagioia, y Guillermo Cledou.', 'prensa', 'es'),
 (76, '2007-12-26', 'Sorteo Final de la Promoción de Bovifort y Bagomectina AD3E Forte', 'El día 14 de Diciembre se realizó el sorteo de la Promoción: Con Bovifort y Bagomectina AD3E Forte, la mejor fórmula te lleva a la Formula 1, por tres viajes a ver el Gran Premio de España de Formula 1 que se correrá en Barcelona el día 27 de abril de 2008.', '', 'El día 14 de Diciembre se realizó el sorteo de la Promoción: Con Bovifort y Bagomectina AD3E Forte, la mejor fórmula te lleva a la Formula 1, por tres viajes a ver el Gran Premio de España de Formula 1 que se correrá en Barcelona el día 27 de abril de 2008.\n<br>\n<br>Los cupones para el sorteo venían con los frascos de 500 ml de Bovifort y Bagomectina AD3E Forte, junto con una raspadita que otorgaba premios instantáneos que consistieron en Jarros térmicos, chombas de competición, relojes digitales, relojes pulsera, paraguas de competición, camisas Formula 1, sillas Outdoor Spinning y frascos x 50 ml de Bovifort y Bagomectina AD3E Forte.. \n<br>\n<br>Los ganadores de los viajes al GP de España son: Guillermo Tanco, Medico Veterinario de Coronel Suárez - Provincia de Buenos Aires y Ariel Aguirre, administrador de un establecimiento en Camarones - Provincia de Chubut, quien viajará con un acompañante.\n<br>\n<br>Bovifort y Bagomectina AD3E Forte son endectocidas de la línea de productos de Biogenesis Bagó. Los dos son productos de elección para grandes desafíos parasitarios como garrapatas, sarna, piojos parásitos internos de Bovinos y Ovinos y en el caso de la Bagomectina AD3E Forte, el agregado de vitaminas, optimiza la producción de carne, leche y lana. \n<br>\n<br>Bovifort y Bagomectina AD3E Forte son de Biogénesis Bagó, Para un Trabajo Bien Hecho.', 'prensa', 'es'),
 (77, '2007-11-08', 'Planta de Vacuna Antiaftosa', 'Biogénesis Bagó concretó importantes obras de ampliación y expansión tecnológica. \n', '', 'La empresa Biogénesis Bagó anunció la concreción de obras de actualización y expasión tecnológica en los sistemas de boseguridad y producción, en su planta elaboradora de vacuna antiaftosa.\n<br><br>\n La obra, que se terminó en un año, permitirá al laboratorio operar con la tecnología mas avanzada a nivel mundial en materia de Bioseguridad, constituyendo un aporte sustancial e indispensable para la seguridad y garantía sanitaria del país y la región. \n<br><br>\nLa planta ha sido tecnificada y actualizada en forma periódica, acorde la evolución y exigencias mundiales, tecnología de producción y tecnología para la bioseguridad. De hecho, en los años 2002, 2003 y 2004, se actualizaron las áreas de purificación y cuarentena, medios de cultivos y envases respectivamente. \n<br><br>\nLas actualizaciones realizadas. \nCon esta nueva actualización se instalo tecnología de punta en todos los sistemas de bioseguridad, instrumentación, tratamiento de efluentes, software, automatismos, tratamiento de aire, nuevo equipamiento y se construyó un nuevo laboratorio de control de calidad. \n<br><br>\nEn lo inherente a bioseguridad se destacan los nuevos sistemas de persianas neumáticas de origen alemán que dan hermeticidad absoluta e instantánea a los sistemas de aire ante cualquier falla. ', 'prensa', 'es'),
@@ -987,11 +998,12 @@ INSERT INTO `tbl_notas` (`id`, `fecha`, `titulo`, `bajada`, `extra`, `texto`, `s
 -- Estructura de tabla para la tabla `tbl_page`
 --
 
-CREATE TABLE `tbl_page` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_page` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `titulo` varchar(255) NOT NULL,
-  `url` varchar(300) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `url` varchar(300) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 --
 -- Volcado de datos para la tabla `tbl_page`
@@ -1006,15 +1018,16 @@ INSERT INTO `tbl_page` (`id`, `titulo`, `url`) VALUES
 -- Estructura de tabla para la tabla `tbl_pais`
 --
 
-CREATE TABLE `tbl_pais` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_pais` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(130) NOT NULL,
   `icon` int(11) NOT NULL,
   `url` varchar(100) NOT NULL,
   `short` varchar(2) NOT NULL,
   `lng` varchar(5) NOT NULL,
-  `catalogo` int(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `catalogo` int(1) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=23 ;
 
 --
 -- Volcado de datos para la tabla `tbl_pais`
@@ -1048,11 +1061,12 @@ INSERT INTO `tbl_pais` (`id`, `nombre`, `icon`, `url`, `short`, `lng`, `catalogo
 -- Estructura de tabla para la tabla `tbl_permission`
 --
 
-CREATE TABLE `tbl_permission` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_permission` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `operation` varchar(150) NOT NULL,
-  `url` varchar(150) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `url` varchar(150) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=52 ;
 
 --
 -- Volcado de datos para la tabla `tbl_permission`
@@ -1108,12 +1122,13 @@ INSERT INTO `tbl_permission` (`id`, `operation`, `url`) VALUES
 -- Estructura de tabla para la tabla `tbl_ppartes_regionalizacion`
 --
 
-CREATE TABLE `tbl_ppartes_regionalizacion` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_ppartes_regionalizacion` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `idParte` int(11) NOT NULL,
   `pais` int(11) NOT NULL,
-  `nombre` varchar(140) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `nombre` varchar(140) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=31 ;
 
 --
 -- Volcado de datos para la tabla `tbl_ppartes_regionalizacion`
@@ -1155,8 +1170,8 @@ INSERT INTO `tbl_ppartes_regionalizacion` (`id`, `idParte`, `pais`, `nombre`) VA
 -- Estructura de tabla para la tabla `tbl_producto`
 --
 
-CREATE TABLE `tbl_producto` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_producto` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(150) NOT NULL,
   `seccion` int(11) NOT NULL,
   `target` varchar(10) NOT NULL,
@@ -1167,8 +1182,11 @@ CREATE TABLE `tbl_producto` (
   `fullTags` text NOT NULL,
   `codeContent` int(1) NOT NULL,
   `pais` varchar(100) NOT NULL,
-  `user_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `user_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `id` (`id`),
+  KEY `seccion` (`seccion`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=411 ;
 
 --
 -- Volcado de datos para la tabla `tbl_producto`
@@ -1188,7 +1206,7 @@ INSERT INTO `tbl_producto` (`id`, `nombre`, `seccion`, `target`, `link`, `descri
 (11, 'ROTATEC J5®', 2, '0000000001', '', '', '2015-11-23 16:28:23', 'Vacuna, prevención, síndrome, diarrea, neonatal, ternero, Rotavirus, bovino, bacterias, Gram, negativas, endotoxemias, secundarias, mastitis,ROTATEC, J5,ROTATEC J5\r\n', 'Vacuna,prevención,síndrome,diarrea,neonatal,ternero,Rotavirus,bovino,bacterias,Gram,negativas,endotoxemias,secundarias,mastitis,ROTATEC,J5,ROTATEC J5,Biológicos,Argentina', 0, '1', 0),
 (12, 'BIO-CARBOGEN® 2', 2, '1110000101', '', '', '2015-11-23 16:28:19', 'Vacuna, prevención, Carbunclo Bacteridiano, bovinos, ovinos, porcinos, caprinos, equinos, BIO-CARBOGEN 2, CARBOGEN', 'Vacuna,prevención,Carbunclo Bacteridiano,bovinos,ovinos,porcinos,caprinos,equinos,BIO-CARBOGEN 2,CARBOGEN,Biológicos,Argentina', 0, '1', 0),
 (13, 'RABIA PARESIANTE', 2, '0000000001', '', '', '2015-11-23 16:28:15', 'Vacuna, inactivada, prevención, rabia paresiante, bovinos, RABIA, PARESIANTE', 'Vacuna,inactivada,prevención,rabia paresiante,bovinos,RABIA,PARESIANTE,Biológicos,Argentina', 0, '1', 0),
-(51, 'FORBOX®', 3, '0000000001', '', '', '2015-11-23 16:28:11', 'Antiparasitario, externo, pour-on, bovinos, Fluazurón, benzoilfenilureas, garrapata, FORBOX', 'Antiparasitario,externo,pour-on,bovinos,Fluazurón,benzoilfenilureas,garrapata,FORBOX,Antiparasitarios Externos,Argentina', 0, '-1', 0),
+(51, 'FORBOX®', 3, '0000000001', '', '', '2015-11-23 16:28:11', 'Antiparasitario, externo, pour-on, bovinos, Fluazurón, benzoilfenilureas, garrapata, FORBOX', 'Antiparasitario,externo,pour-on,bovinos,Fluazurón,benzoilfenilureas,garrapata,FORBOX,Antiparasitarios Externos,Argentina', 0, '1', 0),
 (52, 'BAGOVAC RABIA', 2, '0000011000', '', '', '2015-11-23 16:28:09', 'Vacuna, rabia, canina, felina, BAGOVAC, RABIA,BAGOVAC RABIA', 'Vacuna,rabia,canina,felina,BAGOVAC,RABIA,BAGOVAC RABIA,Biológicos,Argentina', 0, '1', 0),
 (53, 'FOSFAMISOL® MV', 4, '0000000001', '', '', '2015-11-23 16:28:03', 'Antiparasitario, interno, inyectable, amplio espectro, bovinos, FOSFAMISOL MV, FOSFAMISOL', 'Antiparasitario,interno,inyectable,amplio espectro,bovinos,FOSFAMISOL MV,FOSFAMISOL,Antiparasitarios Internos,Argentina', 0, '1', 0),
 (54, 'PARAXANE® INYECTABLE ', 4, '0000000001', '', '', '2015-11-23 16:27:59', 'Antiparasitario, interno, inyectable, ovicida, bovinos, PARAXANE INYECTABLE , PARAXANE, INYECTABLE ', 'Antiparasitario,interno,inyectable,ovicida,bovinos,PARAXANE INYECTABLE,PARAXANE,INYECTABLE,Antiparasitarios Internos,Argentina', 0, '1', 0),
@@ -1233,8 +1251,8 @@ INSERT INTO `tbl_producto` (`id`, `nombre`, `seccion`, `target`, `link`, `descri
 (94, 'ESTREPTOCARBOCAFTIAZOL®', 9, '1110011101', '', '', '2015-11-23 16:22:40', 'Antidiarréico, antiséptico, carminativo, normalizador de la flora intestinal, equinos, bovinos, ovinos, caprinos, porcinos, caninos, felinos. Suspensión, oral, ESTREPTOCARBOCAFTIAZOL, ESTREPTO, CARBO, CAFTIAZOL', 'Antidiarréico,antiséptico,carminativo,normalizador de la flora intestinal,equinos,bovinos,ovinos,caprinos,porcinos,caninos,felinos. Suspensión,oral,ESTREPTOCARBOCAFTIAZOL,ESTREPTO,CARBO,CAFTIAZOL,Farmacéuticos,Argentina', 0, '1', 0),
 (95, 'BAGODRYL®', 10, '0000000000', '', '', '2015-11-23 16:22:35', 'Antiséptico, desinfectante, germicida, de superficie, BAGODRYL', 'Antiséptico,desinfectante,germicida,de superficie,BAGODRYL,Salud Ambiental,Argentina', 0, '1', 0),
 (96, 'BIOX® ', 10, '1110011101', '', '', '2015-11-23 16:22:32', 'Desinfectante, biodegradable, amplio espectro, superficies, instalaciones, equipos, bacterias, Gram positivas, Gram negativas, Aerobias, anaerobias, esporas, hongos, mohos, levaduras, virus, BIOX', 'Desinfectante,biodegradable,amplio espectro,superficies,instalaciones,equipos,bacterias,Gram positivas,Gram negativas,Aerobias,anaerobias,esporas,hongos,mohos,levaduras,virus,BIOX,Salud Ambiental,Argentina', 0, '1', 0),
-(97, 'ASPERSIN®', 3, '0000000001', '', '', '2015-11-23 16:22:28', 'antiparasitario, externo, garrapatas, bovino, bovinos, antiparasitarios, ASPERSIN®, aspersin, baño, inmersion, cipermetrina, clorpirifos,', 'antiparasitario,externo,garrapatas,bovino,bovinos,antiparasitarios,ASPERSIN®,aspersin,baño,inmersion,cipermetrina,clorpirifos,Antiparasitarios Externos,Argentina', 0, '-1', 0),
-(98, 'BAGOMECTINA STAR ', 5, '0000000001', '', '', '2015-11-23 16:22:23', 'Bagomecticina, star, antiparasitario, interno, externo, garrapaticida, bovinos, parásitos, gastrointestinales, pulmonares, garrapatas, miasis, cutáneas, moscas, piojos, solución, inyectable, Ivermectina', 'Bagomecticina,star,antiparasitario,interno,externo,garrapaticida,bovinos,parásitos,gastrointestinales,pulmonares,garrapatas,miasis,cutáneas,moscas,piojos,solución,inyectable,Ivermectina,Endectocidas,Argentina', 0, '-1', 0),
+(97, 'ASPERSIN®', 3, '0000000001', '', '', '2015-11-23 16:22:28', 'antiparasitario, externo, garrapatas, bovino, bovinos, antiparasitarios, ASPERSIN®, aspersin, baño, inmersion, cipermetrina, clorpirifos,', 'antiparasitario,externo,garrapatas,bovino,bovinos,antiparasitarios,ASPERSIN®,aspersin,baño,inmersion,cipermetrina,clorpirifos,Antiparasitarios Externos,Argentina', 0, '1', 0),
+(98, 'BAGOMECTINA STAR ', 5, '0000000001', '', '', '2015-11-23 16:22:23', 'Bagomecticina, star, antiparasitario, interno, externo, garrapaticida, bovinos, parásitos, gastrointestinales, pulmonares, garrapatas, miasis, cutáneas, moscas, piojos, solución, inyectable, Ivermectina', 'Bagomecticina,star,antiparasitario,interno,externo,garrapaticida,bovinos,parásitos,gastrointestinales,pulmonares,garrapatas,miasis,cutáneas,moscas,piojos,solución,inyectable,Ivermectina,Endectocidas,Argentina', 0, '1', 0),
 (101, 'Code', 12, '0000000000', '', '', '2015-09-28 09:21:07', 'Code', 'Code', 1, '', 0),
 (117, 'AFTOGEN® ÓLEO', 2, '0000000001', '', '', '2015-11-30 14:52:06', 'AFTOGEN® ÓLEO, BIOLÓGICO, Febre Aftosa', 'AFTOGEN® ÓLEO,BIOLÓGICO,Febre Aftosa,Biológicos,Brasil', 0, '2', 0),
 (118, 'BIOPOLIGEN® HS', 2, '0000000001', '', '', '2015-11-30 14:52:45', 'BIOPOLIGEN HS, Síndrome Respiratória dos Bovinos', 'BIOPOLIGEN HS,Síndrome Respiratória dos Bovinos,Biológicos,Brasil', 0, '2', 0),
@@ -1327,10 +1345,10 @@ INSERT INTO `tbl_producto` (`id`, `nombre`, `seccion`, `target`, `link`, `descri
 (212, 'BIOESTROGEN®', 7, '1010011101', '', '', '2016-03-09 07:55:33', 'bioestrogen, bovino, ovino, equino, porcino, canino, felino, afecciones tocoginecológicas, partos distócicos, retenciones placentarias, abortos, metritis, piómetras, tratamiento de pseudopreñez,  tratamiento del anestro', 'bioestrogen,bovino,ovino,equino,porcino,canino,felino,afecciones tocoginecológicas,partos distócicos,retenciones placentarias,abortos,metritis,piómetras,tratamiento de pseudopreñez,tratamiento del anestro,Reproductivos,Uruguay', 0, '7', 0),
 (213, 'CAMISAS CRONIPRES® MONODOSIS', 7, '0000000001', '', '', '2016-03-09 01:39:32', 'camisas, cronipres monodosis, bovino, control del ciclo estral, inseminación artificial a tiempo fijo, inseminación artificial sistemática, acortamiento del período parto-concepción, acortamiento del ciclo estral de la estación reproductiva, transplantes de embriones, tratamientos reproductivos', 'camisas,cronipres monodosis,bovino,control del ciclo estral,inseminación artificial a tiempo fijo,inseminación artificial sistemática,acortamiento del período parto-concepción,acortamiento del ciclo estral de la estación reproductiva,transplantes de embriones,tratamientos reproductivos,Antibióticos,Uruguay', 0, '7', 0),
 (214, 'BIOGÓN® PLUS', 7, '1010011101', 'BIOGN-PLUS', '', '2016-03-03 09:44:39', 'biogon, plus, bovino, ovino, equino, porcino, felino, canino, Inducción de celos, sincronización de celos, induccion de ovulación, induccion de superovulación', 'biogon,plus,bovino,ovino,equino,porcino,felino,canino,Inducción de celos,sincronización de celos,induccion de ovulación,induccion de superovulación,Reproductivos,Uruguay', 0, '7', 0),
-(215, 'ENZAPROST DC', 7, '0010000001', 'ENZAPROST-DC', '', '2016-03-03 09:49:34', 'enzaprost dc, bovino, porcino, Sincronización de celos, inducción de celos, sincronización del ciclo estral, inducción al parto, desórdenes funcionales de los ovarios, celos silenciosos por anestro post-servicio, post-parto, ciclos irregulares, ciclos anovulatorios, cuerpo lúteo persistente, quistes lúteos, endometritis, piómetras. abortos terapéuticos ', 'enzaprost dc,bovino,porcino,Sincronización de celos,inducción de celos,sincronización del ciclo estral,inducción al parto,desórdenes funcionales de los ovarios,celos silenciosos por anestro post-servicio,post-parto,ciclos irregulares,ciclos anovulatorios,cuerpo lúteo persistente,quistes lúteos,endometritis,piómetras. abortos terapéuticos,Reproductivos,Uruguay', 0, '7', 0),
-(216, 'GONAXAL®', 7, '1000000001', 'GONAXAL', '', '2016-03-03 09:55:51', 'gonaxal, bovino, equino, trastornos reproductivos, inseminación Artificial, mejoramiento de los parámetros de concepción, aciclia, ovulación retardada, atresia folicular,  desarrollo folicular, consecuente ovulación, quistes ováricos, sincronización del celo, Celos prolongados, celos permanentes', 'gonaxal,bovino,equino,trastornos reproductivos,inseminación Artificial,mejoramiento de los parámetros de concepción,aciclia,ovulación retardada,atresia folicular,desarrollo folicular,consecuente ovulación,quistes ováricos,sincronización del celo,Celos prolongados,celos permanentes,Reproductivos,Uruguay', 0, '7', 0),
-(217, 'BAGÓ AD3E', 8, '1010000101', 'BAG-AD3E', '', '2016-03-03 09:59:21', 'ad3e, bovino, ovino, equino, porcino, raquitismo, osteomalacia, hipocalcemia, tratamientos antiinfecciosos, tratamiento antiparasitarios, fuente vitaminica', 'ad3e,bovino,ovino,equino,porcino,raquitismo,osteomalacia,hipocalcemia,tratamientos antiinfecciosos,tratamiento antiparasitarios,fuente vitaminica,Vitamínicos y Minerales,Uruguay', 0, '7', 0);
+(215, 'ENZAPROST DC', 7, '0010000001', 'ENZAPROST-DC', '', '2016-03-03 09:49:34', 'enzaprost dc, bovino, porcino, Sincronización de celos, inducción de celos, sincronización del ciclo estral, inducción al parto, desórdenes funcionales de los ovarios, celos silenciosos por anestro post-servicio, post-parto, ciclos irregulares, ciclos anovulatorios, cuerpo lúteo persistente, quistes lúteos, endometritis, piómetras. abortos terapéuticos ', 'enzaprost dc,bovino,porcino,Sincronización de celos,inducción de celos,sincronización del ciclo estral,inducción al parto,desórdenes funcionales de los ovarios,celos silenciosos por anestro post-servicio,post-parto,ciclos irregulares,ciclos anovulatorios,cuerpo lúteo persistente,quistes lúteos,endometritis,piómetras. abortos terapéuticos,Reproductivos,Uruguay', 0, '7', 0);
 INSERT INTO `tbl_producto` (`id`, `nombre`, `seccion`, `target`, `link`, `descripcion`, `fecha`, `tags`, `fullTags`, `codeContent`, `pais`, `user_id`) VALUES
+(216, 'GONAXAL®', 7, '1000000001', 'GONAXAL', '', '2016-03-03 09:55:51', 'gonaxal, bovino, equino, trastornos reproductivos, inseminación Artificial, mejoramiento de los parámetros de concepción, aciclia, ovulación retardada, atresia folicular,  desarrollo folicular, consecuente ovulación, quistes ováricos, sincronización del celo, Celos prolongados, celos permanentes', 'gonaxal,bovino,equino,trastornos reproductivos,inseminación Artificial,mejoramiento de los parámetros de concepción,aciclia,ovulación retardada,atresia folicular,desarrollo folicular,consecuente ovulación,quistes ováricos,sincronización del celo,Celos prolongados,celos permanentes,Reproductivos,Uruguay', 0, '7', 0),
+(217, 'BAGÓ AD3E', 8, '1010000101', 'BAG-AD3E', '', '2016-03-03 09:59:21', 'ad3e, bovino, ovino, equino, porcino, raquitismo, osteomalacia, hipocalcemia, tratamientos antiinfecciosos, tratamiento antiparasitarios, fuente vitaminica', 'ad3e,bovino,ovino,equino,porcino,raquitismo,osteomalacia,hipocalcemia,tratamientos antiinfecciosos,tratamiento antiparasitarios,fuente vitaminica,Vitamínicos y Minerales,Uruguay', 0, '7', 0),
 (218, 'ESTREPTOCARBOCAFTIAZOL®', 9, '1110011101', '', '', '2016-03-09 01:43:58', 'ESTREPTOCARBOCAFTIAZOL, bovino, ovino, equino, caprino, porcino, felino, canino, diarreas polimicrobianas, colibacilosis, enteritis, gastroenteritis, infecciones alimentarias', 'ESTREPTOCARBOCAFTIAZOL,bovino,ovino,equino,caprino,porcino,felino,canino,diarreas polimicrobianas,colibacilosis,enteritis,gastroenteritis,infecciones alimentarias,Farmacéuticos,Uruguay', 0, '7', 0),
 (219, 'BIOAFTOGEN', 1, '0000000001', '', '', '2016-03-03 12:37:44', 'bioaftogen, bovino, fiebre aftosa', 'bioaftogen,bovino,fiebre aftosa,Aftosa,Bolivia', 0, '5', 0),
 (220, 'BIOLEPTOGEN', 2, '0010000001', '', '', '2016-03-09 09:06:10', 'bioleptogen, bovino, porcino, leptospirosis', 'bioleptogen,bovino,porcino,leptospirosis,Biológicos,Bolivia', 0, '5', 0),
@@ -1485,13 +1503,13 @@ INSERT INTO `tbl_producto` (`id`, `nombre`, `seccion`, `target`, `link`, `descri
 (369, 'CIPERSIN®', 3, '0000000101', 'CIPERSIN', '', '2016-03-09 12:10:41', 'CIPERSIN®,CIPERSIN,Tickicide for cattle; insecticide,melophaguicide,sheep,Emulsiiable liquid,', 'CIPERSIN®,CIPERSIN,Tickicide for cattle; insecticide,melophaguicide,sheep,Emulsiiable liquid,Antiparasitarios Externos,USA', 0, '9', 0),
 (370, 'GALMETRIN® PLUS POLVO', 3, '1110000101', 'GALMETRIN-PLUS-POLVO', '', '2016-03-09 12:12:57', 'External, larvicide,Anti-myiasis, powder,cattle, Sheep, swine, goats,GALMETRIN® PLUS POLVO,GALMETRIN,PLUS,POLVO', 'External,larvicide,Anti-myiasis,powder,cattle,Sheep,swine,goats,GALMETRIN® PLUS POLVO,GALMETRIN,PLUS,POLVO,Antiparasitarios Externos,USA', 0, '9', 0),
 (371, 'GALMETRIN® PLUS POMADA', 3, '1110000101', 'GALMETRIN-PLUS-POMADA', '', '2016-03-09 12:14:47', 'GALMETRIN® PLUS POMADA,GALMETRIN,PLUS,POMADA,External,larvicide,anti-myiasis,pomade,cattle,sheep, goats, horses, swine.', 'GALMETRIN® PLUS POMADA,GALMETRIN,PLUS,POMADA,External,larvicide,anti-myiasis,pomade,cattle,sheep,goats,horses,swine.,Antiparasitarios Externos,USA', 0, '9', 0),
-(372, 'GALMETRIN® PLUS SOLUCIÓN', 3, '1110000101', 'GALMETRIN-PLUS-SOLUCIN', '', '2016-03-09 12:16:42', 'GALMETRIN® PLUS SOLUCIÓN,GALMETRIN,PLUS,SOLUCIÓN,External,larvicide,anti-myiasis,solution,cattle, sheep, goats, horses ,swine.', 'GALMETRIN® PLUS SOLUCIÓN,GALMETRIN,PLUS,SOLUCIÓN,External,larvicide,anti-myiasis,solution,cattle,sheep,goats,horses,swine.,Antiparasitarios Externos,USA', 0, '9', 0),
+(372, 'GALMETRIN® PLUS SOLUCIÓN', 3, '1110000101', 'GALMETRIN-PLUS-SOLUCIN', '', '2016-03-09 12:16:42', 'GALMETRIN® PLUS SOLUCIÓN,GALMETRIN,PLUS,SOLUCIÓN,External,larvicide,anti-myiasis,solution,cattle, sheep, goats, horses ,swine.', 'GALMETRIN® PLUS SOLUCIÓN,GALMETRIN,PLUS,SOLUCIÓN,External,larvicide,anti-myiasis,solution,cattle,sheep,goats,horses,swine.,Antiparasitarios Externos,USA', 0, '9', 0);
+INSERT INTO `tbl_producto` (`id`, `nombre`, `seccion`, `target`, `link`, `descripcion`, `fecha`, `tags`, `fullTags`, `codeContent`, `pais`, `user_id`) VALUES
 (373, 'GALMETRIN® PLUS SPRAY', 3, '1110010101', 'GALMETRIN-PLUS-SPRAY', '', '2016-03-09 12:20:25', 'External,antiparasitic,spray,larvicide, repellant, contains,antibiotics,cattle, swine, sheep, goats,canines,GALMETRIN® PLUS SPRAY,GALMETRIN,PLUS,SPRAY', 'External,antiparasitic,spray,larvicide,repellant,contains,antibiotics,cattle,swine,sheep,goats,canines,GALMETRIN® PLUS SPRAY,GALMETRIN,PLUS,SPRAY,Antiparasitarios Externos,USA', 0, '9', 0),
 (374, 'GARRAMIX®', 3, '0000000001', 'GARRAMIX', '', '2016-03-09 12:22:50', 'GARRAMIX®, GARRAMIX,Ectoparasiticide,Tickicide, parasiticide, dip,cattle.', 'GARRAMIX®,GARRAMIX,Ectoparasiticide,Tickicide,parasiticide,dip,cattle.,Antiparasitarios Externos,USA', 0, '9', 0),
 (375, 'BAGOMECTINA®', 5, '0010000101', 'BAGOMECTINA', '', '2016-03-09 12:29:27', 'BAGOMECTINA®,BAGOMECTINA,Ecto, endo,parasiticide, cattle, sheep,swine, control gastrointestinal, lung parasites, mange, lice, ura, myiasis, 1%, Ivermectin,injectable,solution.', 'BAGOMECTINA®,BAGOMECTINA,Ecto,endo,parasiticide,cattle,sheep,swine,control gastrointestinal,lung parasites,mange,lice,ura,myiasis,1%,Ivermectin,injectable,solution.,Endectocidas,USA', 0, '9', 0),
 (376, 'BOVIFORT®', 5, '0010000101', 'BOVIFORT', '', '2016-03-09 12:33:25', 'BOVIFORT®,BOVIFORT,Ecto, endo, parasiticide,cattle, sheep, swine, Parasiticide', 'BOVIFORT®,BOVIFORT,Ecto,endo,parasiticide,cattle,sheep,swine,Parasiticide,Endectocidas,USA', 0, '9', 0),
-(377, 'BAGOMECTINA® AD3E FORTE', 5, '0000000101', 'BAGOMECTINA-AD3E-FORTE', '', '2016-03-09 12:40:44', 'Ecto,endoparasiticide,Tickicide,cattle,Parasiticide,sheep,Injectable,oil, emulsion,Ivermectin,1%,vitamins.', 'Ecto,endoparasiticide,Tickicide,cattle,Parasiticide,sheep,Injectable,oil,emulsion,Ivermectin,1%,vitamins.,Endectocidas,USA', 0, '9', 0);
-INSERT INTO `tbl_producto` (`id`, `nombre`, `seccion`, `target`, `link`, `descripcion`, `fecha`, `tags`, `fullTags`, `codeContent`, `pais`, `user_id`) VALUES
+(377, 'BAGOMECTINA® AD3E FORTE', 5, '0000000101', 'BAGOMECTINA-AD3E-FORTE', '', '2016-03-09 12:40:44', 'Ecto,endoparasiticide,Tickicide,cattle,Parasiticide,sheep,Injectable,oil, emulsion,Ivermectin,1%,vitamins.', 'Ecto,endoparasiticide,Tickicide,cattle,Parasiticide,sheep,Injectable,oil,emulsion,Ivermectin,1%,vitamins.,Endectocidas,USA', 0, '9', 0),
 (378, 'IVERGEN® PLATINUM 3,15 ', 5, '0000000001', 'IVERGEN-PLATINUM-315-', '', '2016-03-09 14:08:15', 'IVERGEN® PLATINUM 3.15 ,IVERGEN, PLATINUM, 3.15 ,Injectable, parasiticide, endectocide,ivermectin, cattle.', 'IVERGEN® PLATINUM 3.15,IVERGEN,PLATINUM,3.15,Injectable,parasiticide,endectocide,ivermectin,cattle.,Endectocidas,USA', 0, '9', 0),
 (379, 'BAGOMECTINA® 3,15 LA  AD3E', 5, '0000000101', 'BAGOMECTINA-315-LA-AD3E', '', '2016-03-09 14:12:35', 'BAGOMECTINA® 3.15 LA  AD3E, BAGOMECTINA, AD3E, Ecto , endoparasiticide,ivermectin, cattle ,sheep.', 'BAGOMECTINA® 3.15 LA  AD3E,BAGOMECTINA,AD3E,Ecto,endoparasiticide,ivermectin,cattle,sheep.,Endectocidas,USA', 0, '9', 0),
 (380, 'FLOK®', 5, '0000000101', 'FLOK', '', '2016-03-09 14:19:02', 'FLOK®,FLOK,External ,internal ,anti parasitic, ,treat gastrointestinal ,pulmonary, parasites, myiasis ,ticks ,cattle ,sheep. Inyectable, solution ,Doramectin ,1.1% ', 'FLOK®,FLOK,External,internal,anti parasitic,,treat gastrointestinal,pulmonary,parasites,myiasis,ticks,cattle,sheep. Inyectable,solution,Doramectin,1.1%,Endectocidas,USA', 0, '9', 0),
@@ -1530,12 +1548,15 @@ INSERT INTO `tbl_producto` (`id`, `nombre`, `seccion`, `target`, `link`, `descri
 -- Estructura de tabla para la tabla `tbl_producto_contenido`
 --
 
-CREATE TABLE `tbl_producto_contenido` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_producto_contenido` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `producto_id` int(11) NOT NULL,
   `parte` int(11) NOT NULL,
-  `text` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `text` text NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `producto_id` (`producto_id`),
+  KEY `parte` (`parte`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5537 ;
 
 --
 -- Volcado de datos para la tabla `tbl_producto_contenido`
@@ -3690,10 +3711,11 @@ INSERT INTO `tbl_producto_contenido` (`id`, `producto_id`, `parte`, `text`) VALU
 -- Estructura de tabla para la tabla `tbl_producto_partes`
 --
 
-CREATE TABLE `tbl_producto_partes` (
-  `id` int(11) NOT NULL,
-  `nombre` varchar(150) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE IF NOT EXISTS `tbl_producto_partes` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(150) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=20 ;
 
 --
 -- Volcado de datos para la tabla `tbl_producto_partes`
@@ -3726,7 +3748,7 @@ INSERT INTO `tbl_producto_partes` (`id`, `nombre`) VALUES
 -- Estructura de tabla para la tabla `tbl_registros`
 --
 
-CREATE TABLE `tbl_registros` (
+CREATE TABLE IF NOT EXISTS `tbl_registros` (
   `id` int(11) NOT NULL,
   `tipo` varchar(3) NOT NULL,
   `familia` varchar(150) NOT NULL,
@@ -4218,7 +4240,8 @@ INSERT INTO `tbl_registros` (`id`, `tipo`, `familia`, `senasa`, `pais`, `comerci
 (475, 'F', 'Antiparasitario', 'Stand Up (Solución inyectable)', 'Panamá', 'Stand Up'),
 (476, 'F', 'Vitamínico/Minerales', 'Suplenut (Solución inyectable)', 'Panamá', 'Suplenut'),
 (477, 'F', 'Antiparasitario', 'Aciendel (Solución pour-on)', 'Paraguay', 'Aciendel'),
-(478, 'F', 'Antiparasitario', 'Aciendel Plus (Solución pour-on)', 'Paraguay', 'Aciendel Plus'),
+(478, 'F', 'Antiparasitario', 'Aciendel Plus (Solución pour-on)', 'Paraguay', 'Aciendel Plus');
+INSERT INTO `tbl_registros` (`id`, `tipo`, `familia`, `senasa`, `pais`, `comercial`) VALUES
 (479, 'F', 'Vitamínico/Minerales', 'Adaptador Min (solución inyectable)', 'Paraguay', 'Adaptador Min '),
 (480, 'F', 'Vitamínico/Minerales', 'Adaptador Vit (solución inyectable)', 'Paraguay', 'Adaptador Vit '),
 (481, 'B', 'Biológico/Aftosa', 'Aftosan (Emulsión inyectable w/o)', 'Paraguay', 'Aftosan'),
@@ -4227,8 +4250,7 @@ INSERT INTO `tbl_registros` (`id`, `tipo`, `familia`, `senasa`, `pais`, `comerci
 (484, 'F', 'Vitamínico/Minerales', 'Bago AD3E (Solución inyectable)', 'Paraguay', 'Bagó AD3E'),
 (485, 'F', 'Varios', 'Bagodryl (Solución para administración tópica)', 'Paraguay', 'Bagodryl'),
 (486, 'F', 'Endectocida', 'Bagomectina (Solución inyectable)', 'Paraguay', 'Bagomectina'),
-(487, 'F', 'Endectocida', 'Bagomectina Equina (Gel para administración oral)', 'Paraguay', 'Bagomectina equina');
-INSERT INTO `tbl_registros` (`id`, `tipo`, `familia`, `senasa`, `pais`, `comercial`) VALUES
+(487, 'F', 'Endectocida', 'Bagomectina Equina (Gel para administración oral)', 'Paraguay', 'Bagomectina equina'),
 (488, 'F', 'Endectocida', 'Bagomectina LA AD3E (Solución inyectable)', 'Paraguay', 'Bagomectina LA AD3E'),
 (489, 'F', 'Endectocida', 'Bagomectina LA STAR (Exportación) (Solución inyectable)', 'Paraguay', 'Ivergen Platinum 3,15'),
 (490, 'F', 'Endectocida', 'Bagomectina Star L.A. AD3E Vitaminada (Exportación)(Solución inyectable)', 'Paraguay', 'BAGOMECTINA 3,15 LA AD3E'),
@@ -4417,11 +4439,12 @@ INSERT INTO `tbl_registros` (`id`, `tipo`, `familia`, `senasa`, `pais`, `comerci
 -- Estructura de tabla para la tabla `tbl_rel_registros`
 --
 
-CREATE TABLE `tbl_rel_registros` (
-  `id` int(10) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_rel_registros` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
   `idProducto` int(10) NOT NULL,
-  `idPais` int(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `idPais` int(10) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
 -- Volcado de datos para la tabla `tbl_rel_registros`
@@ -4438,14 +4461,15 @@ INSERT INTO `tbl_rel_registros` (`id`, `idProducto`, `idPais`) VALUES
 -- Estructura de tabla para la tabla `tbl_revista`
 --
 
-CREATE TABLE `tbl_revista` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_revista` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `numero` int(4) NOT NULL,
   `fecha` date NOT NULL,
   `titulo` varchar(300) NOT NULL,
   `bajada` text NOT NULL,
-  `lng` varchar(3) NOT NULL DEFAULT 'es'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `lng` varchar(3) NOT NULL DEFAULT 'es',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=17 ;
 
 --
 -- Volcado de datos para la tabla `tbl_revista`
@@ -4475,12 +4499,13 @@ INSERT INTO `tbl_revista` (`id`, `numero`, `fecha`, `titulo`, `bajada`, `lng`) V
 -- Estructura de tabla para la tabla `tbl_seccion`
 --
 
-CREATE TABLE `tbl_seccion` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_seccion` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(150) NOT NULL,
   `url` varchar(100) NOT NULL,
-  `icon` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `icon` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=15 ;
 
 --
 -- Volcado de datos para la tabla `tbl_seccion`
@@ -4508,12 +4533,13 @@ INSERT INTO `tbl_seccion` (`id`, `nombre`, `url`, `icon`) VALUES
 -- Estructura de tabla para la tabla `tbl_seccion_regionalizacion`
 --
 
-CREATE TABLE `tbl_seccion_regionalizacion` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_seccion_regionalizacion` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `idCategoria` int(11) NOT NULL,
   `pais` int(11) NOT NULL,
-  `nombre` varchar(140) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `nombre` varchar(140) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=25 ;
 
 --
 -- Volcado de datos para la tabla `tbl_seccion_regionalizacion`
@@ -4546,12 +4572,13 @@ INSERT INTO `tbl_seccion_regionalizacion` (`id`, `idCategoria`, `pais`, `nombre`
 -- Estructura de tabla para la tabla `tbl_tag`
 --
 
-CREATE TABLE `tbl_tag` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_tag` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(150) NOT NULL,
   `count` int(11) NOT NULL,
-  `user_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `user_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1019 ;
 
 --
 -- Volcado de datos para la tabla `tbl_tag`
@@ -5583,11 +5610,14 @@ INSERT INTO `tbl_tag` (`id`, `name`, `count`, `user_id`) VALUES
 -- Estructura de tabla para la tabla `tbl_tag_producto`
 --
 
-CREATE TABLE `tbl_tag_producto` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_tag_producto` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `tag_id` int(11) NOT NULL,
-  `producto_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `producto_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `tag_id` (`tag_id`),
+  KEY `producto_id` (`producto_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=102227 ;
 
 --
 -- Volcado de datos para la tabla `tbl_tag_producto`
@@ -11061,12 +11091,13 @@ INSERT INTO `tbl_tag_producto` (`id`, `tag_id`, `producto_id`) VALUES
 -- Estructura de tabla para la tabla `tbl_textos`
 --
 
-CREATE TABLE `tbl_textos` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_textos` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `es` text NOT NULL COMMENT 'español',
   `en` text NOT NULL COMMENT 'ingles',
-  `pt` text NOT NULL COMMENT 'portugues'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `pt` text NOT NULL COMMENT 'portugues',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=507 ;
 
 --
 -- Volcado de datos para la tabla `tbl_textos`
@@ -11271,13 +11302,13 @@ INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (195, 'Con relación a la producción de leche, se observó que las vacas no vacunadas (J5Vcont) presentaban una media de producción de leche inferior (p<0,05) que las vacas del grupo vacunado (J5V) en los primeros 100 días de lactancia (cuadro 5). En este periodo, la media de producción de las vacas no vacunadas (J5Vcont) fue de 21,26 kg de leche/vaca/día, mientras que las vacunadas (J5V) presentaron una media  de producción de 22,79 kg de leche/vaca/día, o sea, el grupo no vacunado produjo 1,53 kg de leche/vaca/día menos comparado con el grupo vacunado. Un estudio realizado por Wilson et al. (2008) describe que la vacunación con E. coli J5 está asociada a una menor reducción de la producción de leche después de la ocurrencia de casos clínicos de mastitis en vacas vacunadas comparadas con las control. Vacas vacunadas presentaron una producción diaria de leche de 7 a 16 kg mayor que vacas no vacunadas aproximadamente tres semanas después de la manifestación del caso clínico de mastitis, con inicio en los primeros 50 días de lactancia, y aproximadamente 2 kg más de leche durante toda la lactancia. Estos resultados concuerdan con los aquí expuestos, en los cuales la inmunización con E. coli J5 estuvo asociada a una  mayor producción de leche en los primeros tres meses de lactancia.', '', ''),
 (196, 'Los resultados aquí presentados, coincidentes con los resultados de Wilson et al. (2007, 2008), indican que la inmunización con E. coli J5 está relacionada con un retorno más rápido a la producción de leche después del caso clínico, una vez que se reduce la intensidad de los signos clínicos, permitiendo el restablecimiento de las funciones de producción de la glándula mamaria, con menores efectos perjudiciales en la producción de leche durante la lactancia.', '', ''),
 (197, 'Conclusiones', '', ''),
-(198, 'La vacunación con Escherichia coli J5 demostró ser eficaz en reducir la prevalencia de infecciones intramamarias en el post parto, así como en la ocurrencia e intensidad de los casos clínicos de mastitis causados por E. coli en los primeros 100 días de lactancia.', '', ''),
+(198, 'La vacunación con Escherichia coli J5 demostró ser eficaz en reducir la prevalencia de infecciones intramamarias en el post parto, así como en la ocurrencia e intensidad de los casos clínicos de mastitis causados por E. coli en los primeros 100 días de lactancia.', '', '');
+INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (199, 'El conteo de células somáticas (CCS) no fue alterado por la utilización de la vacuna conteniendo E. coli J5 y las vacas inmunizadas con E. coli J5 producen más leche en los primeros 100 días de lactancia. 	', '', ''),
 (200, 'REFERENCIAS', '', ''),
 (201, 'Bradley A.J. & Green M.J. 2000. A study of the incidence an significance of intramammary enterobacteriacel infections acquired during the dry period. J. Dairy Sci. 83:1957-1965.', '', ''),
 (202, 'Bradley A.J. & Green M.J. 2001. An investigation of the impact of intramammary antibiotic dry      cow therapy on clinical mastitis. J. Dairy Sci. 84:1632-1639.', '', ''),
-(203, 'Bradley A.J. & Green M.J. 2004. The importance of nonlacting period in the epidemiology of intramammary infection and strategies for prevention. Vet. Clin. Food. Anim. 20:547-568.', '', '');
-INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
+(203, 'Bradley A.J. & Green M.J. 2004. The importance of nonlacting period in the epidemiology of intramammary infection and strategies for prevention. Vet. Clin. Food. Anim. 20:547-568.', '', ''),
 (204, 'Brito M.A.V.P. & Brito J.R.F. 1999. Diagnostico microbiológico da mastite.', '', ''),
 (205, 'Embrapa Gado de Leite, Juiz de Fora, 55:26.', '', ''),
 (206, 'Burton J.L. & Erskine R.J. 2003. Immunity and mastitits some new ideas for an old disease. Vet. Clin. North Am. Food Anim. Pract. 19:1-45.', '', ''),
@@ -11429,12 +11460,12 @@ INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (352, 'Chemotécnica registra 1er producto veterinario: ectoparasiticidas a base de Arsenicales', 'Chemotécnica registers the first veterinary product: an arsenic-base ectoparasiticide\n\n', 'Chemotécnica Registra 1º produto Veterinário: Ectoparasiticidas a base de Arsenicais'),
 (353, 'Nace Chemotécnica Sintyal', 'Incorporation of Chemotécnica Sintyal', 'Nasce a Chemotécnica Sintyal'),
 (354, '1er registro de VACUNA ANTIAFTOSA en Argentina', '1st Registration of FMD vaccine in Argentina', '   	  	Traducciones  Otras consultas  		   Explorar  1º Registro de VACINA ANTIAFTOSA na Argentina.'),
-(355, 'Introduce la vacuna en la región, contribuyendo a <strong>erradicar la enfermedad </strong>y a exportar al mundo la producción pecuaria americana.', 'It introduces the vaccine in the region contributing to <strong> eradicate the disease </strong> and to export American livestock production all around the world', 'Introduz a vacina na região, contribuindo para erradicar doenças e para exportar ao mundo a produção pecaráia americana'),
+(355, 'Introduce la vacuna en la región, contribuyendo a <strong>erradicar la enfermedad </strong>y a exportar al mundo la producción pecuaria americana.', 'It introduces the vaccine in the region contributing to <strong> eradicate the disease </strong> and to export American livestock production all around the world', 'Introduz a vacina na região, contribuindo para erradicar doenças e para exportar ao mundo a produção pecaráia americana');
+INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (356, 'Lanzamiento Rotatec, la 1º vacuna para prevenir la diarrea viral bovina.', 'Launching of Rotatec, the first vaccine to prevent viral diarrhea in cattle', 'Lançamento Rotatec a 1º vacina para prevenir a diarreia viral bovina'),
 (357, 'En la década del 80, junto a reconocidas entidades científicas de Latinoamérica, comienza a desarrollar las primeras vacunas específicas para las enfermedades que más afecta a la producción pecuaria', 'During the 80’s, together with well-known Latin American scientific entities, the first specific vaccines for diseases that affect livestock production were developed', 'Na década de 80, junto a riconhecidas entidades científicas da América Latina, começa a desenvolver as primeiras vacinas específicas para as doenças que mais afetam a produção pecuária'),
 (358, 'Lanza la 1º Ivermectina genérica, a nivel global', 'Launching of the first generic Ivermectin at global level', 'Lanca, mundialmente, a 1ª ivermectina genérica'),
-(359, 'Nace Biogénesis Sintyal (Fusión chemotécnica Sintyal + Biogénesis)', 'Incorporation of Biogénesis Sintyal (merger of Chemotécnica Sintyal and Biogénesis)', 'Nasce a Biogénesis Sintyal (fusão Chemotécnica Sintyal + Biogénesis) ');
-INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
+(359, 'Nace Biogénesis Sintyal (Fusión chemotécnica Sintyal + Biogénesis)', 'Incorporation of Biogénesis Sintyal (merger of Chemotécnica Sintyal and Biogénesis)', 'Nasce a Biogénesis Sintyal (fusão Chemotécnica Sintyal + Biogénesis) '),
 (360, 'Certifica su planta de producción vacuna anti Aftosa bajo normas de <strong>Bioseguridad 4 OIE</strong>', 'Certification of its production plant FMD vaccine produced under <strong> Biosafety level 4 OIE </strong>', 'Certifica sua planta industrial de produção da vacina antiaftosa sob as normas de Biosegurança 4 OIE.'),
 (361, '1º exportación de la Vacuna Antiaftosa a Sudamérica y Taiwán', 'First export of FMD vaccine to South America and Taiwan', '1º exportação da vacina antiaftosa para Taiwan'),
 (362, 'Inaugura filial en Uruguay', 'Opening of Uruguay subsidiary', 'Inaugura sede no Uruguai'),
@@ -11578,12 +11609,13 @@ INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 -- Estructura de tabla para la tabla `tbl_user`
 --
 
-CREATE TABLE `tbl_user` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(128) NOT NULL,
   `password` varchar(128) NOT NULL,
-  `email` varchar(128) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `email` varchar(128) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
 
 --
 -- Volcado de datos para la tabla `tbl_user`
@@ -11605,10 +11637,11 @@ INSERT INTO `tbl_user` (`id`, `username`, `password`, `email`) VALUES
 -- Estructura de tabla para la tabla `tbl_user_role`
 --
 
-CREATE TABLE `tbl_user_role` (
-  `id` int(11) NOT NULL,
-  `nombre` varchar(140) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE IF NOT EXISTS `tbl_user_role` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(140) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
 -- Volcado de datos para la tabla `tbl_user_role`
@@ -11619,287 +11652,6 @@ INSERT INTO `tbl_user_role` (`id`, `nombre`) VALUES
 (2, 'asdas'),
 (4, 'admin');
 
---
--- Índices para tablas volcadas
---
-
---
--- Indices de la tabla `authassignment`
---
-ALTER TABLE `authassignment`
-  ADD PRIMARY KEY (`itemname`,`userid`);
-
---
--- Indices de la tabla `authitem`
---
-ALTER TABLE `authitem`
-  ADD PRIMARY KEY (`name`);
-
---
--- Indices de la tabla `authitemchild`
---
-ALTER TABLE `authitemchild`
-  ADD PRIMARY KEY (`parent`,`child`),
-  ADD KEY `child` (`child`);
-
---
--- Indices de la tabla `tbl_error`
---
-ALTER TABLE `tbl_error`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `tbl_establecimiento`
---
-ALTER TABLE `tbl_establecimiento`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `tbl_imagen_ref`
---
-ALTER TABLE `tbl_imagen_ref`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `tbl_metatag`
---
-ALTER TABLE `tbl_metatag`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `tbl_metatag_page`
---
-ALTER TABLE `tbl_metatag_page`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `tbl_miscelaneo`
---
-ALTER TABLE `tbl_miscelaneo`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `tbl_notas`
---
-ALTER TABLE `tbl_notas`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `tbl_page`
---
-ALTER TABLE `tbl_page`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `tbl_pais`
---
-ALTER TABLE `tbl_pais`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `tbl_permission`
---
-ALTER TABLE `tbl_permission`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `tbl_ppartes_regionalizacion`
---
-ALTER TABLE `tbl_ppartes_regionalizacion`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `tbl_producto`
---
-ALTER TABLE `tbl_producto`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `id` (`id`),
-  ADD KEY `seccion` (`seccion`);
-
---
--- Indices de la tabla `tbl_producto_contenido`
---
-ALTER TABLE `tbl_producto_contenido`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `producto_id` (`producto_id`),
-  ADD KEY `parte` (`parte`);
-
---
--- Indices de la tabla `tbl_producto_partes`
---
-ALTER TABLE `tbl_producto_partes`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `tbl_rel_registros`
---
-ALTER TABLE `tbl_rel_registros`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `tbl_revista`
---
-ALTER TABLE `tbl_revista`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `tbl_seccion`
---
-ALTER TABLE `tbl_seccion`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `tbl_seccion_regionalizacion`
---
-ALTER TABLE `tbl_seccion_regionalizacion`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `tbl_tag`
---
-ALTER TABLE `tbl_tag`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `tbl_tag_producto`
---
-ALTER TABLE `tbl_tag_producto`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `tag_id` (`tag_id`),
-  ADD KEY `producto_id` (`producto_id`);
-
---
--- Indices de la tabla `tbl_textos`
---
-ALTER TABLE `tbl_textos`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `tbl_user`
---
-ALTER TABLE `tbl_user`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `tbl_user_role`
---
-ALTER TABLE `tbl_user_role`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT de las tablas volcadas
---
-
---
--- AUTO_INCREMENT de la tabla `tbl_error`
---
-ALTER TABLE `tbl_error`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
---
--- AUTO_INCREMENT de la tabla `tbl_establecimiento`
---
-ALTER TABLE `tbl_establecimiento`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT de la tabla `tbl_imagen_ref`
---
-ALTER TABLE `tbl_imagen_ref`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=634;
---
--- AUTO_INCREMENT de la tabla `tbl_metatag`
---
-ALTER TABLE `tbl_metatag`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
---
--- AUTO_INCREMENT de la tabla `tbl_metatag_page`
---
-ALTER TABLE `tbl_metatag_page`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
---
--- AUTO_INCREMENT de la tabla `tbl_notas`
---
-ALTER TABLE `tbl_notas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=122;
---
--- AUTO_INCREMENT de la tabla `tbl_page`
---
-ALTER TABLE `tbl_page`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
---
--- AUTO_INCREMENT de la tabla `tbl_pais`
---
-ALTER TABLE `tbl_pais`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
---
--- AUTO_INCREMENT de la tabla `tbl_permission`
---
-ALTER TABLE `tbl_permission`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
---
--- AUTO_INCREMENT de la tabla `tbl_ppartes_regionalizacion`
---
-ALTER TABLE `tbl_ppartes_regionalizacion`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
---
--- AUTO_INCREMENT de la tabla `tbl_producto`
---
-ALTER TABLE `tbl_producto`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=411;
---
--- AUTO_INCREMENT de la tabla `tbl_producto_contenido`
---
-ALTER TABLE `tbl_producto_contenido`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5537;
---
--- AUTO_INCREMENT de la tabla `tbl_producto_partes`
---
-ALTER TABLE `tbl_producto_partes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
---
--- AUTO_INCREMENT de la tabla `tbl_rel_registros`
---
-ALTER TABLE `tbl_rel_registros`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
---
--- AUTO_INCREMENT de la tabla `tbl_revista`
---
-ALTER TABLE `tbl_revista`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
---
--- AUTO_INCREMENT de la tabla `tbl_seccion`
---
-ALTER TABLE `tbl_seccion`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
---
--- AUTO_INCREMENT de la tabla `tbl_seccion_regionalizacion`
---
-ALTER TABLE `tbl_seccion_regionalizacion`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
---
--- AUTO_INCREMENT de la tabla `tbl_tag`
---
-ALTER TABLE `tbl_tag`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1019;
---
--- AUTO_INCREMENT de la tabla `tbl_tag_producto`
---
-ALTER TABLE `tbl_tag_producto`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=102227;
---
--- AUTO_INCREMENT de la tabla `tbl_textos`
---
-ALTER TABLE `tbl_textos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=507;
---
--- AUTO_INCREMENT de la tabla `tbl_user`
---
-ALTER TABLE `tbl_user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
---
--- AUTO_INCREMENT de la tabla `tbl_user_role`
---
-ALTER TABLE `tbl_user_role`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- Restricciones para tablas volcadas
 --

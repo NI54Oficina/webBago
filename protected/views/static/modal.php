@@ -42,7 +42,7 @@
 			{modal.style.display="none";
 			}
 	}
-
+ 	open.onclick =function(){modal.style.display="block";}
 
 </script>
 
