@@ -5703,6 +5703,7 @@ figure.snip1156:hover .salud-ambiental{
     
     .img-fundaciones-7{
 		width:50%;
+		float: left;
 	}
 
 	
@@ -6359,7 +6360,12 @@ figure.snip1156:hover .salud-ambiental{
 	.img-fundaciones-6{
 		width:75%;
 	}
-	
+	.img-fundaciones-7{
+		width:75%;
+		
+	}
+
+
 	.h2-cd {
 		margin-top:0;
 	}
