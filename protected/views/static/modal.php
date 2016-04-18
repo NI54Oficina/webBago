@@ -8,7 +8,7 @@
  	<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/mail-modal.png">
  	<p>Formulario de consulta</p>
 
- 	</div>
+ </div>
 
  <div id="modal-2">
  	
@@ -19,7 +19,6 @@
  	<p>MENSAJE</p> 	
  	<input name="mensaje" type="text"></input>
  	<button type="submit"> ENVIAR</button>
- 		
  	</form>
 
  </div>

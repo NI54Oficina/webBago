@@ -135,7 +135,7 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 				
 			</a>
 			
-			<a href="#modal" class="col-lg-3 col-md-3 col-sm-6 col-xs-6 mail" >
+			<a href="" class="col-lg-3 col-md-3 col-sm-6 col-xs-6 mail" >
 			</a>
 		</div>
 		

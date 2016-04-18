@@ -10279,7 +10279,8 @@ position:fixed;
   		opacity:0;
   		pointer-events:none;
   	transition: all 1s;
-  	z-index:1;}
+  	z-index:1;
+  	display: none;}
 
 #modal:target{
   opacity:1;
@@ -10292,7 +10293,7 @@ position:fixed;
 	position: relative; 
 	margin: auto;  
 	border:1px solid #00CDD0;
-	display:none;
+	display:block;
 	background-color: white;
 }
 
