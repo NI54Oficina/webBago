@@ -3262,13 +3262,14 @@ a.iprodev:hover {
 
 
 .p-rrhh-home{
-	margin-top: 5%;
-    width: 38%;
-    margin-left: 33%;
+	
     color: #0C5582;
     font-size: 18px;
     line-height: 25px;
     letter-spacing: 1.5px;
+	max-width:50%;
+	margin:0;
+	padding-top:100px;
 }
 
 
@@ -6702,6 +6703,10 @@ margin-right:0;
 		
 	}
 	
+	#display-rrhh{
+		padding-top:20px;
+	}
+	
 	h3.tr.move-x-1{
 		width:50%;
 		display:inline-block;
@@ -6766,6 +6771,9 @@ margin-right:0;
 	
 	
 }
+
+
+
 /** fin fix ipad menu**/
 
 @media screen and (max-width: 435px){
@@ -8096,13 +8104,13 @@ position:fixed;
 
 
 #ul-rrhh-home li{
-	line-height:30px;
+	line-height:20px;
 	font-size: 15px; 
 	text-align: center; 
 	color: #359fbd;    
 	width: 50%;  
 	margin: auto; 
-	margin-top: 25px;
+	margin-top: 20px;
 }
 
 
@@ -9068,11 +9076,15 @@ position:fixed;
 }
 
 .tr-2{
-    padding-top: 2%;
+    padding-top: 10px;
     color: white;
     letter-spacing: 1px;line-height: 25px;
     font-size: 16px;
     margin-bottom: 35px;
+	padding-left:5%;
+	padding-right:5%;
+	max-width:100%;
+	
 }
 
 
@@ -9130,6 +9142,7 @@ position:fixed;
 		text-transform: uppercase;
 		margin-left: 2%;
 	}
+	
 }
 
 @media only screen 
@@ -10306,6 +10319,25 @@ position:fixed;
   
 }
 
+@media only screen 
+  and (min-device-width: 300px) 
+  and (max-device-width: 600px) 
+  and (orientation: portrait){
+
+	.d-rrhh-home{
+		background:none;
+	}
+	#header-rrhh{
+		background-color:white;
+		background-repeat:no-repeat;
+		background-position: center 0;
+		background-image:url(../img/rrhh-02.png);
+		background-size: 100% auto;
+		width:100%;
+		z-index: -1;
+	}
+  }
+
 .container-background-home{
 	position:fixed;
 	top:0;
@@ -10317,3 +10349,127 @@ position:fixed;
 	background-position:center;
 	transition:3s;
 }
+
+#ul-rrhh-home{
+	padding-left:0;
+}
+@media only screen 
+  and (max-device-width: 900px) 
+  and (orientation: portrait){
+  #display-rrhh{
+  padding-top:40px;
+  
+  }
+  .tr{
+	font-size:24px;
+  }
+  .p-rrhh-home{
+	max-width:90%;
+	
+	border-top: solid 1px #359fbd;
+	border-bottom: solid 1px #359fbd;
+	padding-top:0;
+	padding:5px 0;
+	margin-top:40px;
+  }
+  
+}
+
+@media only screen 
+  and (max-width: 650px) 
+  and (orientation: portrait) 
+{
+		.tr{
+			width:50%;
+		}
+		
+		.d-rrhh-home{
+	background-image:none !important;
+	
+	
+	
+	}
+	#header-rrhh{
+		background-image:url(../img/rrhh-02.png) !important;
+		background-size: 100% auto !important;
+		background-position: center -3px !important;
+		background-repeat:no-repeat !important;
+		
+	}
+	
+	#display-rrhh{
+		padding-top:0;
+	}
+	
+	h3.tr.move-x-1{
+		width:90%;
+		display:inline-block;
+	}
+	
+	h4.tr-2.move-x-2{
+		padding-top:20px;
+		color:#666;
+	}
+}
+
+@media only screen 
+  and (max-width: 640px) 
+  and (orientation: portrait) {
+  
+  #display-rrhh{
+	padding-top:100px;
+  }
+  .tr{
+	color: #0C5582 !important;
+  }
+  
+}
+
+@media only screen 
+  and (max-width: 640px) 
+  and (orientation: landscape) {
+	#text-1{
+		width:60%;
+		margin-left:20%;
+		font-size:24px;
+	}
+	h4.tr-2.move-x-2{
+		padding-top:40px;
+		color:#666;
+	}
+  }
+  
+ @media only screen 
+  and (max-width: 540px) 
+  and (orientation: landscape) {
+	  #text-1{
+		font-size:20px;
+	  }
+  }
+  @media only screen 
+  and (max-width: 670px) 
+  and (orientation: landscape) {
+	#text-1{
+		width:60%;
+		margin-left:20%;
+		font-size:24px;
+	}
+	h4.tr-2.move-x-2{
+		padding-top:40px;
+		color:#666;
+	}
+  }
+  
+  @media only screen 
+  and (max-width: 737px) 
+  and (orientation: landscape) {
+	#text-1{
+		width:60%;
+		margin-left:20%;
+		font-size:24px;
+	}
+	h4.tr-2.move-x-2{
+		padding-top:50px;
+		color:#666;
+	}
+  }

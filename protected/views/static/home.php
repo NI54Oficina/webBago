@@ -1513,7 +1513,7 @@
 				<div style="width:100%;position:relative;z-index:4;">
 
 
-				<p class="p-rrhh-home" style="width:50%;display:inline-block;margin:0;padding:0; position: relative;padding-top:15px;" ><?php echo Textos::model()->GetText(112); ?></p>
+				<p class="p-rrhh-home" style="display:inline-block;position: relative;" ><?php echo Textos::model()->GetText(112); ?></p>
 
 
 				<!-- ESTOS SON LOS TEXTOS QUE TIENE QUE APARECER Y DESAPARECCER EN RRHH DE LA HOME !-->

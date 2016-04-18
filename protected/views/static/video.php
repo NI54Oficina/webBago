@@ -40,16 +40,16 @@
 	
 	function ScrollHome(){
 		if(isMobile){
-			if (checkVisible($('#titulo-mapa h1'))) {
+			if (checkVisible($('#titulo-mapa h1'))||checkVisible($('#info-mapa'))) {
 				//$('#wrapper').css("background-color", "#4f4");
 				console.log("visible");
 				$(".container-background-home").css("background-image","url('<?php echo Yii::app()->getBaseUrl(true); ?>/img/fondo-filiales.jpg')");
 			} else if (checkVisible($('.h1-inst-home'))||checkVisible($('.bienvenidos'))){
 				$(".container-background-home").css("background-image","url('<?php echo Yii::app()->getBaseUrl(true); ?>/img/fondo-bienvenidos.jpg')");
-			} else if (checkVisible($('#titulo-vad'))){
+			} else if (checkVisible($('#titulo-vad'))||checkVisible($('.input-vad'))){
 				$(".container-background-home").css("background-image","url('<?php echo Yii::app()->getBaseUrl(true); ?>/img/fondo-vademecum.jpg')");
-			} else if (checkVisible($('#titulo-vad'))){
-				$(".container-background-home").css("background-image","url('<?php echo Yii::app()->getBaseUrl(true); ?>/img/fondo-vademecum.jpg')");
+			} else if (checkVisible($('#btn-rev'))){
+				$(".container-background-home").css("background-image","url('<?php echo Yii::app()->getBaseUrl(true); ?>/img/fondo-revista.jpg')");
 			}
 		}
 		
@@ -60,7 +60,7 @@
 	<div class="container-background-home">
 	
 	</div>
-	<div>
+	<div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 content-home" style="display:inline-block;">
 	<div class="overlay-video" style="z-index:0;">
 	
 	</div>
@@ -91,15 +91,15 @@
 		</div>
 
 
-		<div class="content-home" style="position:relative;padding-top:20px;">
+		<div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12" style="position:relative;padding-top:20px;">
 			<h1 class="h1-home-ev row laevolucion" style="text-transform: uppercase;margin-right:0;margin-left:0;margin-top:0;"><?php echo Textos::model()->GetText(2); ?></h1>
 			<h1 class="h1-home-ev salud-animal row" style="text-transform: uppercase;margin-right:0;margin-left:0;"><?php echo Textos::model()->GetText(3); ?></h1>
 		</div>
 		
 		<!-- FLECHA -->
 		
-		<div style="width:100%;text-align:center;"><p id="arrowdown" class="scroll-down" style="display:inline-block;"><a href="#complements" class="animate"></a></p></div>
-		
+		<div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align:center;position:absolute;bottom:0;"><p id="arrowdown" class="scroll-down" style="display:inline-block;"><a href="#complements" class="animate"></a></p></div>
+		</div>
 		<!-- TEXTO  PRIMERA SECCION-->
 		<script>
 		isHome=true;
@@ -119,7 +119,7 @@
 			
 		</div>
 
-	</div>
+	
 	
 	
 <!-- <img   class="img-punto-home" src="<?php echo Yii::app()->getBaseUrl(true); ?>/img/punto-home.png"  /> -->
