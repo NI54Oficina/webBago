@@ -646,6 +646,8 @@ font-size: 22px;
 	
 	.linea-rse{
 		border:1px solid #D1D1D1;
+		margin-top: -1.2%;
+
 	}
 	
 	/*************************** ICONOS *****************************/
@@ -2441,6 +2443,7 @@ footer{
 	font-family:'arialregular';
 	color: white;
 	letter-spacing:1px;
+	font-size:12px;
 }
 
 
@@ -7380,7 +7383,6 @@ figure.snip1156 .d-a-2 h2{
     text-align: center;
     font-size: 17px;
     margin-bottom: 0%;
-    margin-left: 44px;
 }
 
 	.band-filiales {
@@ -7692,7 +7694,6 @@ h5{
     text-align: center;
     font-size: 17px;
     margin-bottom: 0%;
-    margin-left: 44px;
 }
 	#infodcha div.error {
 		color: #ffcf5c;
@@ -8169,7 +8170,6 @@ position:fixed;
     text-align: right;
     font-size: 17px;
     margin-bottom: 0%;
-    margin-left: 44px;
 }
 
   }
@@ -9109,7 +9109,6 @@ position:fixed;
     text-align: center;
     font-size: 17px;
     margin-bottom: 0%;
-    margin-left: 44px;
 }
 	.volver,.volver:hover{
 		position:absolute;
@@ -9155,7 +9154,6 @@ position:fixed;
     text-align: center;
     font-size: 17px;
     margin-bottom: 0%;
-    margin-left: 44px;
 }
 
 .facebook {
@@ -9170,10 +9168,11 @@ position:fixed;
     -ms-transition: all 1s ease;
     transition: all 1s ease;
     /* float: none; */
-    display: block;
+    display: inline-block;
     margin: auto;
     /* border-top: 1px solid #ccc; */
     width: 100vw;
+	text-align:right;
 }
 
 #compartido {
@@ -9282,6 +9281,7 @@ position:fixed;
   .linea-rse {
 		border: 1px solid #D1D1D1;
 		display:block;
+		margin-top: -0.7%;
 	}
 	
 	.container-anios-linea-tiempo {
@@ -9429,6 +9429,7 @@ position:fixed;
     color: white;
     letter-spacing: 2px;
     margin-left: 22px;
+	margin-top: 3%;
 }
   .volver-mobile:hover {
     background-image: url(../img/volver-desactivado.png);
