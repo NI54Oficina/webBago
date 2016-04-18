@@ -154,7 +154,7 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 			</a>
 		</div>!-->
 		
-		 <!--<p id="registrado"><?php echo Textos::model()->GetText(453);?></p>
+		<!--<p id="registrado"><?php echo Textos::model()->GetText(453);?></p>
 		<p id="barra-media-<?php echo $normalizado; ?>"></p>!-->
 		
 			<div id="targets-mobile"  class="col-sm-12 col-xs-12">
@@ -267,7 +267,6 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 	</div>
 
 
-
 <!-- BARRA IZQUIERDA A MODIFICAR -->
 
 
@@ -365,7 +364,6 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 			
 			<h4 class="h4-vad h4-aftosa">PRESENTACIÓN</h4>
 			<p class="p-vad">Frascos por 60 y 125 dosis de 2 mL.</p>!-->
-			</div>
 		</div>
 	</div>
 
