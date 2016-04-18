@@ -10280,30 +10280,33 @@ position:fixed;
   		pointer-events:none;
   	transition: all 1s;
   	z-index:1;
-  	display: none;}
+  	display: none;
+  	height:100%, width: 100%;}
 
-#modal:target{
-  opacity:1;
-  pointer-events:auto;
-}
+
 
 #menu-modal { 
-	width: 500px; 
-	height: 500px; 
+	width: 400px; 
+	height: 400px; 
 	position: relative; 
 	margin: auto;  
 	border:1px solid #00CDD0;
 	display:block;
 	background-color: white;
+	margin-top:15%; vertical-align: middle; text-align: center;
 }
-
 
 #modal-1 { 
 	background-color:#00CDD0;
+	height: 100px;
 	margin: 0;
+	font-family: arial
 }
 
-#modal-1 p, #modal-1 img {text-align: center;}
+
+
+#modal-1 p, #modal-2 p, #modal-1 img {text-align: center; 
+	font-family: arial;
 
 /*HASTA ACA EDICION MODAL*/
 
