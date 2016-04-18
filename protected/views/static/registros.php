@@ -28,7 +28,9 @@ foreach($list as $item){
 		<strong>Nombre:</strong> <?php echo $item["senasa"]; ?><br>
 		<!--<strong>id:</strong> <?php echo $item["id"]; ?><br>!-->
 		<strong>Pais:</strong> <?php echo $item["pais"]; ?>
+		<?php if(Pais::model()->findByAttributes(array("nombre"=>$item["pais"]))){ ?>
 		<strong>Id:</strong> <?php echo Pais::model()->findByAttributes(array("nombre"=>$item["pais"]))->id; ?>
+		<?php } ?>
 		
 	</div>
 	<hr>
