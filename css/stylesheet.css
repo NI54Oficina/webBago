@@ -5700,6 +5700,12 @@ figure.snip1156:hover .salud-ambiental{
 	.img-fundaciones-6{
 		width:75%;
 	}	
+    
+    .img-fundaciones-7{
+		width:50%;
+		float: left;
+	}
+
 	
 	
 	#container-error{
@@ -6354,7 +6360,12 @@ figure.snip1156:hover .salud-ambiental{
 	.img-fundaciones-6{
 		width:75%;
 	}
-	
+	.img-fundaciones-7{
+		width:75%;
+		
+	}
+
+
 	.h2-cd {
 		margin-top:0;
 	}
@@ -7803,7 +7814,7 @@ position:fixed;
 
 @media screen and (max-width: 800px) {
 
-	#registrado ,#compartido, #barra-media, #barra-paises, #barra-superior, #barra-xs, #targets-inner img,  .facebook, .mail, #barra-vademecum, .vademecum-producto {display: none;}
+	#registrado ,#compartido, #barra-media, #barra-paises, #barra-superior, #barra-xs, #targets-inner img, .mail, #barra-vademecum, .vademecum-producto {display: none;}
 	#volver-producto {float: left; text-align: left; margin-top: -10% !important;}
 	.titulo-vad-producto {text-align: right; font-size: 17px; margin-bottom: 0%;}
 	
@@ -7813,7 +7824,7 @@ position:fixed;
    .paises-registrados {margin:5% 0% 5% 0%; float: left; width: 50%;}
    .cuerpo-producto {margin-top: -20%;}
    #contacto-mobile{display: inline-block !important;  text-align: right; /*margin-left:20%; position: relative; margin-top: -16%;*/}
-   	.facebook {background-position: right!important;  }
+   	
    	.mail {}
    	#volver-producto {background-position: left;     background-size: 10%; }
    	#volver-producto p {margin-left: 12%;

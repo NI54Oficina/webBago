@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 15-04-2016 a las 17:58:49
+-- Tiempo de generación: 18-04-2016 a las 15:08:20
 -- Versión del servidor: 10.1.9-MariaDB
 -- Versión de PHP: 5.5.30
 
@@ -1520,7 +1520,9 @@ INSERT INTO `tbl_producto` (`id`, `nombre`, `seccion`, `target`, `link`, `descri
 (403, 'BAGODRYL® ', 10, '0000000000', 'BAGODRYL-', '', '2016-03-09 17:18:12', 'BAGODRYL® , BAGODRYL, Antiseptic, disinfectant ,surface ,germicide.', 'BAGODRYL®,BAGODRYL,Antiseptic,disinfectant,surface,germicide.,Salud Ambiental,USA', 0, '9', 0),
 (404, 'BIOX® ', 10, '1110011101', 'BIOX-', '', '2016-03-09 17:25:05', 'BIOX, BIOX® ,', 'BIOX,BIOX®,Salud Ambiental,USA', 0, '9', 0),
 (405, 'AFTOSAN®', 1, '0000000001', 'AFTOSAN', '', '2016-04-08 11:35:08', 'aftosan, fiebre aftosa, biogenesis, bovinos', 'aftosan,fiebre aftosa,biogenesis,bovinos,Aftosa,Paraguay', 0, '17', 0),
-(408, 'ADAPTADOR MIN', 8, '0000000001', 'ADAPTADOR-MIN', '', '2016-04-08 12:11:56', 'adaptador min, vitaminicos y minerales, suplemento mineral de cobre, zinc, manganeso, selenio', 'adaptador min,vitaminicos y minerales,suplemento mineral de cobre,zinc,manganeso,selenio,Vitamínicos y Minerales,Bolivia', 0, '5', 0);
+(408, 'ADAPTADOR MIN', 8, '0000000001', 'ADAPTADOR-MIN', '', '2016-04-08 12:11:56', 'adaptador min, vitaminicos y minerales, suplemento mineral de cobre, zinc, manganeso, selenio', 'adaptador min,vitaminicos y minerales,suplemento mineral de cobre,zinc,manganeso,selenio,Vitamínicos y Minerales,Bolivia', 0, '5', 0),
+(409, 'AFTOGEN® OLEO', 1, '0000000001', 'AFTOGEN-OLEO', '', '2016-04-18 09:57:07', 'vacuna, aftosan, aftogen oleo, fiebre aftosa', 'vacuna,aftosan,aftogen oleo,fiebre aftosa,Aftosa,Uruguay', 0, '20', 0),
+(410, 'AFTOSAN 3 ', 1, '0000000001', 'AFTOSAN-3-', '', '2016-04-18 10:03:56', 'aftosan, aftosa, fiebre aftosa, venezuela, vacuna', 'aftosan,aftosa,fiebre aftosa,venezuela,vacuna,Aftosa,Venezuela', 0, '21', 0);
 
 -- --------------------------------------------------------
 
@@ -1832,7 +1834,7 @@ INSERT INTO `tbl_producto_contenido` (`id`, `producto_id`, `parte`, `text`) VALU
 (1688, 12, 4, '<p><strong>Primovacunaci&oacute;n: </strong>Se debe vacunar a todo bovino mayor de los 3 (tres) meses de vida. La vacunaci&oacute;n de ovinos, caprinos y porcinos debe ser considerada al convivir con los rodeos de bovinos donde se manifiestan los casos de carbunclo, vacunando s&oacute;lo a los adultos.</p>\r\n\r\n<p><strong>Vacunaciones siguientes: </strong>Revacunar a los 6 (seis) meses o 12 (doce) meses seg&uacute;n la prevalencia de la enfermedad en el establecimiento. Para casos de los llamados &ldquo;campos malditos&rdquo; (alta infecci&oacute;n tel&uacute;rica), la revacunaci&oacute;n debe ser repetida a los 6 meses. La fecha de vacunaci&oacute;n debe ser estrat&eacute;gica en relaci&oacute;n a la mayor casu&iacute;stica que ocurre en verano; se recomienda por ende la vacunaci&oacute;n en primavera.</p>\r\n'),
 (1689, 12, 5, '<p>Mantener entre 2 &ordm;C y 8 &ordm;C al resguardo de la luz.<br />\r\nNo congelar.</p>\r\n'),
 (1690, 12, 6, '<p>Frascos de 100 y 200 mL</p>\r\n'),
-(1691, 11, 1, '<p>Vacuna para la prevenci&oacute;n del s&iacute;ndrome de la diarrea neonatal del ternero causado por Rotavirus bovino y bacterias Gram negativas; endotoxemias secundarias a infecciones por bacterias Gram negativas y m&aacute;stitis por coliformes en vacas de tambo.</p>\r\n\r\n<p>&nbsp;</p>\r\n'),
+(1691, 11, 1, '<p>Vacuna para la prevenci&oacute;n del s&iacute;ndrome de la diarrea neonatal del ternero causado por Rotavirus bovino y bacterias Gram negativas; endotoxemias secundarias a infecciones por bacterias Gram negativas y m&aacute;stitis por coliformes en vacas de tambo.</p>\n\n<p>&nbsp;</p>\n'),
 (1692, 11, 2, '<p>Emulsi&oacute;n oleosa inactivada de Rotavirus bovino serotipos 6 y 10 y Escherichia coli J5.</p>\r\n'),
 (1693, 11, 3, '<p>3 mL por v&iacute;a subcut&aacute;nea o intramuscular, en la tabla del cuello o detr&aacute;s de la paleta.</p>\r\n'),
 (1694, 11, 4, '<p><strong>Primovacunaci&oacute;n (cualquier categor&iacute;a que recibe esta vacuna por primera vez): </strong>2 dosis con intervalo de 21 a 35 d&iacute;as.</p>\r\n\r\n<p><strong>Rodeos de cr&iacute;a:</strong><br />\r\nVacas y Vaquillonas (primovacunaci&oacute;n): Primera dosis: 7&ordm; mes de pre&ntilde;ez; Segunda dosis: 8&ordm; mes de pre&ntilde;ez.</p>\r\n\r\n<p><strong>Vacas y Vaquillonas (revacunaci&oacute;n): </strong>Aplicar una dosis al 8&ordm; mes de pre&ntilde;ez. Se sugiere en zonas de alta incidencia dar una tercer dosis a las vacas cola de parici&oacute;n.</p>\r\n\r\n<p><strong>Tambo:<br />\r\nVacas y Vaquillonas (primovacunaci&oacute;n): </strong>Primera dosis: 7&ordm; mes de pre&ntilde;ez; Segunda dosis: 8&ordm; mes de pre&ntilde;ez.</p>\r\n\r\n<p><strong>Vacas y&nbsp; Vaquillonas (revacunaci&oacute;n): </strong>Primera dosis: secado; Segunda dosis: pre parto. Para prevenci&oacute;n de m&aacute;stitis coliforme aplicar una tercera dosis al parto.</p>\r\n\r\n<p>&nbsp;</p>\r\n'),
@@ -3662,7 +3664,25 @@ INSERT INTO `tbl_producto_contenido` (`id`, `producto_id`, `parte`, `text`) VALU
 (5515, 408, 1, 'ADAPTADOR MIN es una solución inyectable\r\nde microelementos que está indicada para la prevención\r\ny control del estrés oxidativo en terneros al destete, al inicio\r\nde un plan de inmunización y al ingreso de animales al\r\nfeedlot; así como otras situaciones que pudiesen generar\r\nla formación de radicales superóxido, como por ejemplo\r\nel transporte. ADAPTADOR MIN también está indicado\r\npara la prevención y tratamiento de las carencias de\r\nlos microelementos que ésta solución contiene (Cobre,\r\nZinc, Selenio y Manganeso). Los microelementos de\r\nADAPTADOR MIN y las vitaminas de ADAPTADOR VIT\r\nrepresentan en forma conjunta o aislada factores esenciales\r\npara la defensa antioxidante del organismo.'),
 (5516, 408, 14, 'La dosis aconsejada de ADAPTADOR MIN, es de 1 mL\r\ncada 50 kg de p.v. El intervalo entre dosis no debe ser\r\ninferior a 30 días. Animales jóvenes (terneros/as) hasta\r\n200 kg: 1 mL cada 50 kg de p.v. Animales en recría\r\n(novillos y vaquillonas): 4 mL por animal como dosis total.\r\nAnimales Adultos: Vacas: 5 mL por animal como dosis\r\ntotal. Toros: 6 mL por animal como dosis total. </br>\r\nAplicar por vía subcutánea con agujas 12 x 18.\r\nSe recomienda generar reserva hepática fetal tratando\r\na las vacas con ADAPTADOR MIN en el último tercio\r\nde la gestación, evitando de esa forma las deficiencias\r\nde Cu y Zn en el ternero al pie de corta edad, al ser difícil\r\nel tratamiento en esta categoría.'),
 (5517, 408, 8, 'No posee.'),
-(5518, 408, 6, 'Frascos por 500 mL.</br>\r\nKit compuesto por 1 frasco de ADAPTADOR MIN por\r\n500 mL y 1 frasco de ADAPTADOR VIT por 500 mL.');
+(5518, 408, 6, 'Frascos por 500 mL.</br>\r\nKit compuesto por 1 frasco de ADAPTADOR MIN por\r\n500 mL y 1 frasco de ADAPTADOR VIT por 500 mL.'),
+(5519, 409, 13, 'Vacuna oleosa para la inmunización contra la Fiebre Aftosa'),
+(5520, 409, 3, 'Bovinos: 2 mL por vía intramuscular o subcutánea.'),
+(5521, 409, 19, 'El esquema de vacunación puede ser modificado siguiendo los lineamientos de los planes diseñados por la Autoridad Sanitaria de cada país. La recomendación es revacunar sistemáticamente cada seis meses.'),
+(5522, 409, 7, 'Vacuna para la prevención de la Fiebre Aftosa'),
+(5523, 409, 1, 'Para la prevención de la Fiebre Aftosa'),
+(5524, 409, 2, 'Vacuna oleosa bivalente con virus de Fiebre Aftosa tipos O1 Campos y A24 Cruzeiro obtenidos en culticvos de células BHK e inactivados con BEI. '),
+(5525, 409, 6, '20 mL (10 dosis), 50 mL (25 dosis), 120 mL (60 dosis), 250 mL (125 dosis)'),
+(5526, 409, 5, 'Mantener entre 2°C y 8°C al resguardo de la luz. NO CONGELAR.'),
+(5527, 409, 14, 'Inyectable'),
+(5528, 410, 13, 'Vacuna bivalente inactivada oleosa contra la Fiebre Aftosa del ganado.\r\n'),
+(5529, 410, 3, 'Bovinos y porcinos: 3 ml por vía IM profunda o SC\r\nOvinos y Caprinos: 2ml por vía IM o SC'),
+(5530, 410, 19, 'El esquema de vacunación puede ser modificado siguiendo los lineamientos de los planes diseñados por la Autoridad Sanitaria de cada país. La recomendación es revacunar sistemáticamente cada seis meses.'),
+(5531, 410, 7, 'Vacuna para la prevención de la Fiebre Aftosa '),
+(5532, 410, 1, 'Para la inmunización activa de animales sanos y suceptibles a la enfermedad de la Fiebre Aftosa.'),
+(5533, 410, 2, 'Cepas de cirus de Fiebre Aftosa A24 Cruzeiro, y O1 Campos replicados en cultivos de células BHK en suspensión, inactivados con-BEI-).'),
+(5534, 410, 6, 'Frascos de 40 y 80 dosis de 3 mL.'),
+(5535, 410, 5, 'Mantener entre 2°C y 8°C al resguardo de la luz. NO CONGELAR.'),
+(5536, 410, 14, 'Inyectable');
 
 -- --------------------------------------------------------
 
@@ -4539,19 +4559,19 @@ CREATE TABLE `tbl_tag` (
 
 INSERT INTO `tbl_tag` (`id`, `name`, `count`, `user_id`) VALUES
 (1, 'prueba', -5, 0),
-(2, 'Aftosa', 14, 0),
-(3, 'Acción', 246, 0),
+(2, 'Aftosa', 16, 0),
+(3, 'Acción', 248, 0),
 (4, 'Vacuna inactivada', -7, 0),
 (5, 'inmunización', -14, 0),
 (6, 'Fiebre', -22, 0),
 (7, 'Aftosa.', -7, 0),
-(8, 'Indicaciones', 323, 0),
-(9, 'Composición', 333, 0),
-(10, 'Dosis y via de administración', 320, 0),
+(8, 'Indicaciones', 325, 0),
+(9, 'Composición', 335, 0),
+(10, 'Dosis y via de administración', 322, 0),
 (11, 'Esquema de vacunación sugerido', 50, 0),
-(12, 'Conservación', 84, 0),
-(13, 'Presentación', 281, 0),
-(14, 'Vacuna', -97, 0),
+(12, 'Conservación', 86, 0),
+(13, 'Presentación', 283, 0),
+(14, 'Vacuna', -95, 0),
 (15, 'queratoconjuntivitis infecciosa bovina', -6, 0),
 (16, 'Herpesvirus bovino', -7, 0),
 (17, 'Moraxella bovis', -7, 0),
@@ -4684,7 +4704,7 @@ INSERT INTO `tbl_tag` (`id`, `name`, `count`, `user_id`) VALUES
 (144, 'Endectocidas', -31, 0),
 (145, 'garrapaticida.', 1, 0),
 (146, 'vitaminizada.', 0, 0),
-(147, 'Descripción', 19, 0),
+(147, 'Descripción', 21, 0),
 (148, 'garrapatas', -24, 0),
 (149, 'ovinos. Solución inyectable', -6, 0),
 (150, 'Doramectina', -6, 0),
@@ -5070,11 +5090,11 @@ INSERT INTO `tbl_tag` (`id`, `name`, `count`, `user_id`) VALUES
 (530, 'bago pell', 1, 0),
 (531, 'anabólico', 3, 0),
 (532, 'aumentar ganancia', 1, 0),
-(533, 'Vía y forma de administración y aplicación', 8, 0),
+(533, 'Vía y forma de administración y aplicación', 10, 0),
 (534, 'liquido', 2, 0),
 (535, 'aftogen', 1, 0),
-(536, 'fiebre aftosa', 3, 0),
-(537, 'Uruguay', 49, 0),
+(536, 'fiebre aftosa', 5, 0),
+(537, 'Uruguay', 50, 0),
 (538, 'bioqueratogen oleo', 1, 0),
 (539, 'prevención de la queratoconjuntivitis infecciosa', 1, 0),
 (540, 'prevención de síndrome respiratorio', 1, 0),
@@ -5220,7 +5240,7 @@ INSERT INTO `tbl_tag` (`id`, `name`, `count`, `user_id`) VALUES
 (680, 'conejos', 1, 0),
 (681, 'camisas cronipres', 1, 0),
 (682, 'Indicaciones generales de las Camisas Cronipres® MONODOSIS', 1, 0),
-(683, 'Esquema de inmunización sugerido', 1, 0),
+(683, 'Esquema de inmunización sugerido', 3, 0),
 (684, 'piojos masticadores', 3, 0),
 (685, 'insectos hematófagos perjudiciales', 1, 0),
 (686, 'kitamoski', 2, 0),
@@ -5548,12 +5568,14 @@ INSERT INTO `tbl_tag` (`id`, `name`, `count`, `user_id`) VALUES
 (1008, 'disinfectant', 1, 0),
 (1009, 'surface', 1, 0),
 (1010, 'germicide.', 1, 0),
-(1011, 'aftosan', 1, 0),
+(1011, 'aftosan', 3, 0),
 (1012, 'biogenesis', 1, 0),
 (1013, 'Paraguay', 1, 0),
 (1014, 'suplemento mineral de cobre', 3, 0),
 (1015, 'manganeso', 3, 0),
-(1016, 'selenio', 3, 0);
+(1016, 'selenio', 3, 0),
+(1017, 'aftogen oleo', 1, 0),
+(1018, 'venezuela', 1, 0);
 
 -- --------------------------------------------------------
 
@@ -11000,7 +11022,38 @@ INSERT INTO `tbl_tag_producto` (`id`, `tag_id`, `producto_id`) VALUES
 (101970, 11, 1),
 (101971, 12, 1),
 (101972, 13, 1),
-(101973, 2, 1);
+(101973, 2, 1),
+(102079, 14, 409),
+(102080, 1011, 409),
+(102081, 1017, 409),
+(102082, 536, 409),
+(102083, 2, 409),
+(102084, 537, 409),
+(102085, 147, 409),
+(102086, 10, 409),
+(102087, 683, 409),
+(102088, 3, 409),
+(102089, 8, 409),
+(102090, 9, 409),
+(102091, 13, 409),
+(102092, 12, 409),
+(102093, 533, 409),
+(102211, 1011, 410),
+(102212, 2, 410),
+(102213, 536, 410),
+(102214, 1018, 410),
+(102215, 14, 410),
+(102216, 2, 410),
+(102217, 1018, 410),
+(102218, 147, 410),
+(102219, 10, 410),
+(102220, 683, 410),
+(102221, 3, 410),
+(102222, 8, 410),
+(102223, 9, 410),
+(102224, 13, 410),
+(102225, 12, 410),
+(102226, 533, 410);
 
 -- --------------------------------------------------------
 
@@ -11791,12 +11844,12 @@ ALTER TABLE `tbl_ppartes_regionalizacion`
 -- AUTO_INCREMENT de la tabla `tbl_producto`
 --
 ALTER TABLE `tbl_producto`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=409;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=411;
 --
 -- AUTO_INCREMENT de la tabla `tbl_producto_contenido`
 --
 ALTER TABLE `tbl_producto_contenido`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5519;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5537;
 --
 -- AUTO_INCREMENT de la tabla `tbl_producto_partes`
 --
@@ -11826,12 +11879,12 @@ ALTER TABLE `tbl_seccion_regionalizacion`
 -- AUTO_INCREMENT de la tabla `tbl_tag`
 --
 ALTER TABLE `tbl_tag`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1017;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1019;
 --
 -- AUTO_INCREMENT de la tabla `tbl_tag_producto`
 --
 ALTER TABLE `tbl_tag_producto`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=101974;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=102227;
 --
 -- AUTO_INCREMENT de la tabla `tbl_textos`
 --

@@ -90,18 +90,25 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 </a>
 
 
-<h1 class="vademecum-producto"> <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/punto-<?php echo $normalizado; ?>.png" /><?php echo Textos::model()->GetText(348);?><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/punto-<?php echo $normalizado; ?>.png" /></h1>
-<a  style="z-index:3333;"href="<?php echo Yii::app()->request->baseUrl; ?>/vademecum/id<?php echo $seccion->id; ?>"><div class=" col-lg-3 col-md-3 col-sm-6 col-xs-6 volver-mobile hidden-lg hidden-md">
-<p id="volver-p"><?php echo Textos::model()->GetText(490); ?></p>
-</div></a>
+<h1 class="vademecum-producto"> <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/punto-<?php echo $normalizado; ?>.png" /><?php echo Textos::model()->GetText(348);?><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/punto-<?php echo $normalizado; ?>.png" />
+</h1>
+<a  style="z-index:3333;"href="<?php echo Yii::app()->request->baseUrl; ?>/vademecum/id<?php echo $seccion->id; ?>">
+	<div class=" col-lg-3 col-md-3 col-sm-6 col-xs-6 volver-mobile hidden-lg hidden-md">
+		<p id="volver-p"><?php echo Textos::model()->GetText(490); ?></p>
+	</div>
+</a>
 
 
 
 
-<p id="barra-vademecum-<?php echo $normalizado; ?>" style="text-align:center;width:3%;margin:auto;margin-top:0%;"></p>
+<p id="barra-vademecum-<?php echo $normalizado; ?>" style="text-align:center;width:3%;margin:auto;margin-top:0%;">
+</p>
+
 <h2 class="titulo-vad-producto titulo-<?php echo $normalizado; ?>">
 
-<img id="gota-producto"  src="<?php echo Yii::app()->request->baseUrl; ?>/img/gota-<?php echo $normalizado; ?>.png"  /><?php echo Yii::app()->paisChecker->getSeccion($seccion->id);?></h2>
+	<img id="gota-producto"  src="<?php echo Yii::app()->request->baseUrl; ?>/img/gota-<?php echo $normalizado; ?>.png"  />
+	<?php echo Yii::app()->paisChecker->getSeccion($seccion->id);?>
+</h2>
 
 
 
@@ -114,8 +121,13 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 	<?php } ?>
 	
 		<p id="compartido"><?php echo Textos::model()->GetText(452); ?></p>
- 		<p style="text-align:center;width:15%;margin:auto;margin-top:-2%; margin-bottom: 5px;" ></p>
- 		<p id="barra-superior-<?php echo $normalizado; ?>" class="hidden-xs hidden-sm" style="text-align:center;width:15%;margin:auto;"></p>
+
+ 		<p style="text-align:center;width:15%;margin:auto;margin-top:-2%; margin-bottom: 5px;" >
+ 			
+ 		</p>
+
+ 		<p id="barra-superior-<?php echo $normalizado; ?>" class="hidden-xs hidden-sm" style="text-align:center;width:15%;margin:auto;">
+ 		</p>
   		
   		<div id="barra-xs">
 			
@@ -142,7 +154,7 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 			</a>
 		</div>!-->
 		
-		<!--<p id="registrado"><?php echo Textos::model()->GetText(453);?></p>
+		 <!--<p id="registrado"><?php echo Textos::model()->GetText(453);?></p>
 		<p id="barra-media-<?php echo $normalizado; ?>"></p>!-->
 		
 			<div id="targets-mobile"  class="col-sm-12 col-xs-12">
@@ -353,6 +365,7 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 			
 			<h4 class="h4-vad h4-aftosa">PRESENTACIÓN</h4>
 			<p class="p-vad">Frascos por 60 y 125 dosis de 2 mL.</p>!-->
+			</div>
 		</div>
 	</div>
 
