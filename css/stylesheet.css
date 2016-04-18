@@ -646,6 +646,8 @@ font-size: 22px;
 	
 	.linea-rse{
 		border:1px solid #D1D1D1;
+		margin-top: -1.2%;
+
 	}
 	
 	/*************************** ICONOS *****************************/
@@ -2441,6 +2443,7 @@ footer{
 	font-family:'arialregular';
 	color: white;
 	letter-spacing:1px;
+	font-size:12px;
 }
 
 
@@ -7388,7 +7391,6 @@ figure.snip1156 .d-a-2 h2{
     text-align: center;
     font-size: 17px;
     margin-bottom: 0%;
-    margin-left: 44px;
 }
 
 	.band-filiales {
@@ -7700,7 +7702,6 @@ h5{
     text-align: center;
     font-size: 17px;
     margin-bottom: 0%;
-    margin-left: 44px;
 }
 	#infodcha div.error {
 		color: #ffcf5c;
@@ -8177,7 +8178,6 @@ position:fixed;
     text-align: right;
     font-size: 17px;
     margin-bottom: 0%;
-    margin-left: 44px;
 }
 
   }
@@ -8621,7 +8621,7 @@ position:fixed;
 		-moz-border-radius: 5px 5px 5px 5px;
 		-webkit-border-radius: 5px 5px 5px 5px;
 		border: none;
-		height: 10vh;
+		height: 14vh;
 		color: #fff;
 		width: 100%;
 		margin-top: 4%;
@@ -9121,7 +9121,6 @@ position:fixed;
     text-align: center;
     font-size: 17px;
     margin-bottom: 0%;
-    margin-left: 44px;
 }
 	.volver,.volver:hover{
 		position:absolute;
@@ -9168,7 +9167,6 @@ position:fixed;
     text-align: center;
     font-size: 17px;
     margin-bottom: 0%;
-    margin-left: 44px;
 }
 
 .facebook {
@@ -9183,10 +9181,11 @@ position:fixed;
     -ms-transition: all 1s ease;
     transition: all 1s ease;
     /* float: none; */
-    display: block;
+    display: inline-block;
     margin: auto;
     /* border-top: 1px solid #ccc; */
     width: 100vw;
+	text-align:right;
 }
 
 #compartido {
@@ -9295,6 +9294,7 @@ position:fixed;
   .linea-rse {
 		border: 1px solid #D1D1D1;
 		display:block;
+		margin-top: -0.7%;
 	}
 	
 	.container-anios-linea-tiempo {
@@ -9442,6 +9442,7 @@ position:fixed;
     color: white;
     letter-spacing: 2px;
     margin-left: 22px;
+	margin-top: 3%;
 }
   .volver-mobile:hover {
     background-image: url(../img/volver-desactivado.png);
@@ -10146,7 +10147,7 @@ position:fixed;
   
 	.border-inst {
 		border: 2px solid white;
-		width: 28%;
+		width: 20%;
 		margin-top: -1%;
 		display: inline-block;
 	}
@@ -10167,7 +10168,7 @@ position:fixed;
 	
 	#btnmenu {
 		display: inline-block;
-		margin-top: -1.5%;
+		margin-top: 1.5%;
 		margin-right: 2%;
 		transition: all 0.5s ease;
 		float: right;
@@ -10193,7 +10194,7 @@ position:fixed;
 		font-family: 'arialregular';
 		color: white;
 		letter-spacing: 2px;
-		margin-left: 2px;
+		margin-left: 16px;
 	}
 	
 	.volver-mobile {
@@ -10283,26 +10284,46 @@ position:fixed;
 
 /*EDICION MODAL*/
 
-#modal {background-color: rgba(0,0,0,.8)}
-
-#menu-modal { 
-	width: 500px; 
-	height: 500px; 
-	position: fixed; 
-	margin: auto;  
-	border:1px solid #00CDD0;
-	display:none;
-	background-color: white;
+#modal {
+	background-color: rgba(0,0,0,.5);
+  	position:fixed;
+ 	top:0;
+  	right:0;
+  	bottom:0;
+  	left:0;
+  	opacity:0;
+  	pointer-events:none;
+  	transition: all 1s;
+  	z-index:1;
+  	display: none;
+  	height:100%, width: 100%;
 }
 
+
+
+#menu-modal { 
+	width: 400px; 
+	height: 400px; 
+	position: relative; 
+	margin: auto;  
+	border:1px solid #00CDD0;
+	display:block;
+	background-color: white;
+	margin-top:15%; vertical-align: middle; text-align: center;
+}
 
 #modal-1 { 
 	background-color:#00CDD0;
+	height: 100px;
 	margin: 0;
+	font-family: arial
 }
 
-#modal-1 p, #modal-1 img {text-align: center;}
 
+
+#modal-1 p, #modal-2 p, #modal-1 img {text-align: center; font-family: arial;} 
+
+/*HASTA ACA EDICION MODAL*/
 
 
 @media only screen 
@@ -10316,6 +10337,26 @@ position:fixed;
 		border: none;
 		height: 5.5vh;
 	}
+	
+	
+	#form1 #enviar {
+		background: #359FBD;
+		opacity: 1;
+		border-radius: 5px 5px 5px 5px;
+		-moz-border-radius: 5px 5px 5px 5px;
+		-webkit-border-radius: 5px 5px 5px 5px;
+		border: none;
+		height: 9vh;
+		color: #fff;
+		width: 100%;
+		margin-top: 4%;
+		font-size: 17px;
+		letter-spacing: 1px;
+		font-family: 'arialregular';
+		transition: all 0.5s ease;
+		display: inline-block;
+		max-width: 284px;
+}
   
 }
 
@@ -10350,6 +10391,7 @@ position:fixed;
 	transition:3s;
 }
 
+<<<<<<< HEAD
 #ul-rrhh-home{
 	padding-left:0;
 }
@@ -10473,3 +10515,80 @@ position:fixed;
 		color:#666;
 	}
   }
+=======
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 668px) 
+  and (orientation: portrait){
+  #form1 #enviar {
+    background: #359FBD;
+    opacity: 1;
+    border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border: none;
+    height: 7vh;
+    color: #fff;
+    width: 100%;
+    margin-top: 4%;
+    font-size: 17px;
+    letter-spacing: 1px;
+    font-family: 'arialregular';
+    transition: all 0.5s ease;
+    display: inline-block;
+    max-width: 314px;
+}
+
+}
+
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (orientation: portrait){
+	#form1 #enviar {
+		background: #359FBD;
+		opacity: 1;
+		border-radius: 5px 5px 5px 5px;
+		-moz-border-radius: 5px 5px 5px 5px;
+		-webkit-border-radius: 5px 5px 5px 5px;
+		border: none;
+		height: 7vh;
+		color: #fff;
+		width: 100%;
+		margin-top: 4%;
+		font-size: 17px;
+		letter-spacing: 1px;
+		font-family: 'arialregular';
+		transition: all 0.5s ease;
+		display: inline-block;
+		max-width: 347px;
+	}
+
+}
+
+
+@media only screen 
+  and (min-device-width: 360px) 
+  and (max-device-width: 640px) 
+  and (orientation: portrait){
+	#form1 #enviar {
+		background: #359FBD;
+		opacity: 1;
+		border-radius: 5px 5px 5px 5px;
+		-moz-border-radius: 5px 5px 5px 5px;
+		-webkit-border-radius: 5px 5px 5px 5px;
+		border: none;
+		height: 7vh;
+		color: #fff;
+		width: 100%;
+		margin-top: 4%;
+		font-size: 17px;
+		letter-spacing: 1px;
+		font-family: 'arialregular';
+		transition: all 0.5s ease;
+		display: inline-block;
+		max-width: 300px;
+	}
+
+}
+>>>>>>> origin/master

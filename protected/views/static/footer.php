@@ -7,7 +7,7 @@
  </div> 
 
  </div>
-	<div class="copyright col-lg-12 col-md-12 col-sm-12 col-xs-12"><p style="display: inline-block;text-align: center;margin: auto; margin-left: 3%;"><?php echo Textos::model()->GetText(489); ?></p>    
+	<div class="copyright col-lg-12 col-md-12 col-sm-12 col-xs-12"><p style="display: inline-block;text-align: center;margin: auto;font-size:12px;"><?php echo Textos::model()->GetText(489); ?></p>    
 	<a href="#" role="button"><img id="btnmenu" src="<?php echo Yii::app()->request->baseUrl; ?>/img/flecha-menu-arriba.png" style="margin-top:1.5%;"></a>
 	</div>
 

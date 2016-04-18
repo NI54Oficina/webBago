@@ -19,7 +19,6 @@
  	<p>MENSAJE</p> 	
  	<input name="mensaje" type="text"></input>
  	<button type="submit"> ENVIAR</button>
- 		
  	</form>
 
  </div>
@@ -30,6 +29,21 @@
 
 </div>
 
+
+<script>
+	
+	var modal = document.getElementById("modal");
+
+	var open = document.getElementByClassName("mail");
+
+	windows.onclick =function(event){
+		if (even.target == modal)
+			{modal.style.display="none";
+			}
+	}
+ 	open.onclick =function(){modal.style.display="block";}
+
+</script>
 
 <!-- back ground color #00CDD0 -->
 

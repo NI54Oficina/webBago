@@ -115,7 +115,7 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 
 <!-- BARRA IZQUIERDA A MODIFICAR -->
 
-<div  class=" col-lg-3 col-md-3 col-sm-12 col-xs-12 imagen-producto" style="z-index:-1;">
+<div  class=" col-lg-3 col-md-3 col-sm-12 col-xs-12 imagen-producto" >
 		<?php if($imagen){ ?>
 		<img  src="<?php echo Yii::app()->getBaseUrl(true); ?>/vademecums/<?php echo $imagen->id; ?>.png" align="center" />
 	<?php } ?>
@@ -135,8 +135,8 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 				
 			</a>
 			
-			<!--<a <class="col-lg-3 col-md-3 col-sm-6 col-xs-6 mail" >
-			</a>!-->
+			<a href="#modal"  id="mail" class="col-lg-3 col-md-3 col-sm-6 col-xs-6 mail" >
+			</a>
 		</div>
 		
 		<!--<img class="col-lg-8 col-md-8 col-sm-12 col-xs-12" style=" width: 50%;  margin-top: 4%;float:initial;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-compartir.png"/>
@@ -261,8 +261,8 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 				
 			</a>
 			
-			<!--<a class=" mail" style="width:40px;height:40px;">
-			</a>!-->
+			<a href="#modal" id="mail" class="mail" style="width:40px;height:40px;">
+			</a>
 		</div>
 
 
@@ -372,6 +372,10 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 			<p class="p-vad">Frascos por 60 y 125 dosis de 2 mL.</p>!-->
 		</div>
 	</div>
+
+
+
+
 
 <?php include('modal.php'); ?>
 <?php include('widget-vademecum.php'); ?>
