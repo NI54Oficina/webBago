@@ -8,7 +8,7 @@
  	<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/mail-modal.png">
  	<p>Formulario de consulta</p>
 
- </div>
+ 	</div>
 
  <div id="modal-2">
  	
@@ -30,6 +30,21 @@
 
 </div>
 
+
+<script>
+	
+	var modal = document.getElementById("modal");
+
+	var open = document.getElementByClassName("mail");
+
+	windows.onclick =function(event){
+		if (even.target == modal)
+			{modal.style.display="none";
+			}
+	}
+
+
+</script>
 
 <!-- back ground color #00CDD0 -->
 

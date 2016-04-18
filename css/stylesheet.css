@@ -10270,12 +10270,26 @@ position:fixed;
 
 /*EDICION MODAL*/
 
-#modal {background-color: rgba(0,0,0,.8)}
+#modal {background-color: rgba(0,0,0,.5);
+  		position:fixed;
+ 		 top:0;
+  		right:0;
+  		bottom:0;
+  		left:0;
+  		opacity:0;
+  		pointer-events:none;
+  	transition: all 1s;
+  	z-index:1;}
+
+#modal:target{
+  opacity:1;
+  pointer-events:auto;
+}
 
 #menu-modal { 
 	width: 500px; 
 	height: 500px; 
-	position: fixed; 
+	position: relative; 
 	margin: auto;  
 	border:1px solid #00CDD0;
 	display:none;
@@ -10290,6 +10304,7 @@ position:fixed;
 
 #modal-1 p, #modal-1 img {text-align: center;}
 
+/*HASTA ACA EDICION MODAL*/
 
 
 @media only screen 
