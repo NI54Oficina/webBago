@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 18-04-2016 a las 14:48:57
+-- Tiempo de generación: 18-04-2016 a las 15:37:21
 -- Versión del servidor: 5.5.24
 -- Versión de PHP: 5.4.45
 
@@ -1038,7 +1038,7 @@ INSERT INTO `tbl_pais` (`id`, `nombre`, `icon`, `url`, `short`, `lng`, `catalogo
 (2, 'Brasil', 0, 'brasil', 'br', 'pt', 1),
 (5, 'Bolivia', 0, 'Bolivia', 'bo', 'es', 1),
 (6, 'México', 0, 'Mxico', 'mx', 'es', 1),
-(7, 'Uruguay', 0, 'Uruguay', 'uy', 'es', 0),
+(7, 'Uruguay', 0, 'Uruguay', 'uy', 'es', 1),
 (8, 'General', 0, 'General', 'xx', 'es', 0),
 (9, 'Estados Unidos', 0, 'USA', 'en', 'en', 1),
 (10, 'Costa Rica', 0, 'Costa Rica', 'cr', 'es', 0),

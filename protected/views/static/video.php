@@ -48,6 +48,8 @@
 				$(".container-background-home").css("background-image","url('<?php echo Yii::app()->getBaseUrl(true); ?>/img/fondo-bienvenidos.jpg')");
 			} else if (checkVisible($('#titulo-vad'))){
 				$(".container-background-home").css("background-image","url('<?php echo Yii::app()->getBaseUrl(true); ?>/img/fondo-vademecum.jpg')");
+			} else if (checkVisible($('#titulo-vad'))){
+				$(".container-background-home").css("background-image","url('<?php echo Yii::app()->getBaseUrl(true); ?>/img/fondo-vademecum.jpg')");
 			}
 		}
 		
