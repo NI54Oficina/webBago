@@ -10,13 +10,55 @@
     <!-- Demo -->
 	
     <script>
+		CheckDevice();
 	    $(function() {
-            var BV = new $.BigVideo({useFlashForFirefox:false});
-			BV.init();
-			BV.show('<?php echo Yii::app()->getBaseUrl(true); ?>/video/home1.mp4',{ambient:true});
+			if(!isMobile){
+				var BV = new $.BigVideo({useFlashForFirefox:false});
+				BV.init();
+				BV.show('<?php echo Yii::app()->getBaseUrl(true); ?>/video/home1.mp4',{ambient:true});
+			}else{
+				//$(".container-background-home").css("background-image","url('<?php echo Yii::app()->getBaseUrl(true); ?>/img/fondo-bienvenidos.jpg')");
+				ScrollHome();
+				
+			}
 	    });
+		function checkVisible( elm, evalType ) {
+    evalType = evalType || "visible";
+
+    var vpH = $(window).height(), // Viewport Height
+        st = $(window).scrollTop(), // Scroll Top
+        y = $(elm).offset().top,
+        elementHeight = $(elm).height();
+
+    if (evalType === "visible") return ((y < (vpH + st)) && (y > (st - elementHeight)));
+    if (evalType === "above") return ((y < (vpH + st)));
+	}
+	
+	$(window).scroll(function() {
+		ScrollHome();
+	});
+	
+	function ScrollHome(){
+		if(isMobile){
+			if (checkVisible($('#titulo-mapa h1'))) {
+				//$('#wrapper').css("background-color", "#4f4");
+				console.log("visible");
+				$(".container-background-home").css("background-image","url('<?php echo Yii::app()->getBaseUrl(true); ?>/img/fondo-filiales.jpg')");
+			} else if (checkVisible($('.h1-inst-home'))||checkVisible($('.bienvenidos'))){
+				$(".container-background-home").css("background-image","url('<?php echo Yii::app()->getBaseUrl(true); ?>/img/fondo-bienvenidos.jpg')");
+			} else if (checkVisible($('#titulo-vad'))){
+				$(".container-background-home").css("background-image","url('<?php echo Yii::app()->getBaseUrl(true); ?>/img/fondo-vademecum.jpg')");
+			}
+		}
+		
+	}
+	
+		
     </script>
-	<div >
+	<div class="container-background-home">
+	
+	</div>
+	<div>
 	<div class="overlay-video" style="z-index:0;">
 	
 	</div>
@@ -47,8 +89,8 @@
 		</div>
 
 
-		<div class="content-home" style="position:relative;">
-			<h1 class="h1-home-ev row laevolucion" style="text-transform: uppercase;margin-right:0;margin-left:0;"><?php echo Textos::model()->GetText(2); ?></h1>
+		<div class="content-home" style="position:relative;padding-top:20px;">
+			<h1 class="h1-home-ev row laevolucion" style="text-transform: uppercase;margin-right:0;margin-left:0;margin-top:0;"><?php echo Textos::model()->GetText(2); ?></h1>
 			<h1 class="h1-home-ev salud-animal row" style="text-transform: uppercase;margin-right:0;margin-left:0;"><?php echo Textos::model()->GetText(3); ?></h1>
 		</div>
 		
