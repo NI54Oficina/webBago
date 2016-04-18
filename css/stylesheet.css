@@ -8613,7 +8613,7 @@ position:fixed;
 		-moz-border-radius: 5px 5px 5px 5px;
 		-webkit-border-radius: 5px 5px 5px 5px;
 		border: none;
-		height: 10vh;
+		height: 14vh;
 		color: #fff;
 		width: 100%;
 		margin-top: 4%;
@@ -10133,7 +10133,7 @@ position:fixed;
   
 	.border-inst {
 		border: 2px solid white;
-		width: 28%;
+		width: 20%;
 		margin-top: -1%;
 		display: inline-block;
 	}
@@ -10180,7 +10180,7 @@ position:fixed;
 		font-family: 'arialregular';
 		color: white;
 		letter-spacing: 2px;
-		margin-left: 2px;
+		margin-left: 16px;
 	}
 	
 	.volver-mobile {
