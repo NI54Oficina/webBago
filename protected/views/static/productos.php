@@ -135,7 +135,7 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 				
 			</a>
 			
-			<a href="#modal" class="col-lg-3 col-md-3 col-sm-6 col-xs-6 mail" >
+			<a href="#modal"  id="mail" class="col-lg-3 col-md-3 col-sm-6 col-xs-6 mail" >
 			</a>
 		</div>
 		
@@ -261,7 +261,7 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 				
 			</a>
 			
-			<a class="mail" style="width:40px;height:40px;">
+			<a href="#modal" id="mail" class="mail" style="width:40px;height:40px;">
 			</a>
 		</div>
 
@@ -372,6 +372,10 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 			<p class="p-vad">Frascos por 60 y 125 dosis de 2 mL.</p>!-->
 		</div>
 	</div>
+
+
+
+
 
 <?php include('modal.php'); ?>
 <?php include('widget-vademecum.php'); ?>
