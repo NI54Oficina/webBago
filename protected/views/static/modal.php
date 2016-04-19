@@ -1,7 +1,7 @@
 
 <div id="modal" class="modal">
 
-  <!--contenido-->
+
   <div class="menu-modal">
 
   <div class="modal-1"> 
@@ -26,7 +26,8 @@
     <label>
  	<p id="mensaje-complete" ><?php echo Textos::model()->GetText(122);?></p> 
  	</label>
- 	<input name="mensaje" type="text"></input></br>
+  <textarea name="mensaje" type="text"></textarea></br>
+ 	
  	</div>
  	<button id="boton-mail" type="submit"> <p><?php echo Textos::model()->GetText(123);?></p></button>
  	</form>
@@ -43,26 +44,28 @@
 
 
 <script>
-//REFERENCIA MODAL
+
 var modal = document.getElementById('modal');
 
-//REFERENCIA QAL BOTON QUE ABRE
 var boton = document.getElementById("mail");
+var botonmobile = document.getElementById("mail-mobile");
 
-//REFERENCIA AL SPAN
 var span = document.getElementsByClassName("cerrar")[0];
 
-//CLICK EN MAIL PARA ABRIR EL MODAL
 boton.onclick = function() {
     modal.style.display = "block";
 }
 
-// CIERRA EL MODAL EN X
+botonmobile.onclick = function() {
+    modal.style.display = "block";
+}
+
+
 span.onclick = function() {
     modal.style.display = "none";
 }
 
-//CERRAR FUERA DE LA VENTANA 
+
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
@@ -70,11 +73,3 @@ window.onclick = function(event) {
 }
 </script>
 
-<!-- back ground color #00CDD0 -->
-
-
-<!-- 
-
--AGREGAR A BASE DE DATOS
-
--->

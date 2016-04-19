@@ -10328,13 +10328,14 @@ position:fixed;
 
 .menu-modal {
     width: 500px; 
+    max-width: 80%;
 	height: 400px; 
 	position: relative;
     margin: 15% auto; 
     border:2px solid #00CDD0;
 	display:block;
 	background-color: white;
-	margin-top:15%; vertical-align: middle; text-align: center;
+	margin-top:25%; vertical-align: middle; text-align: center;
 }
 
 
@@ -10363,7 +10364,7 @@ position:fixed;
 	box-shadow: 0px 4px 10px #969595;
 }
 
-.modal-1 p, .modal-1 img {text-align: center; font-family: arial; font-size: 21px; color: white; margin-top: 10px;} 
+.modal-1 p, .modal-1 img {line-height: 18px;text-align: center; font-family: arial; font-size: 21px; color: white; margin-top: 10px;} 
 .modal-1 img{ width: 40px; }
 #mensaje-complete, #email-complete {text-align: left;font-family: arial; color: #696868; font-size: 12px; font-weight:normal; text-transform: uppercase;}
 .modal-2 {padding-left: 30px; padding-right: 30px; padding-top: 15px;}
@@ -10372,13 +10373,16 @@ position:fixed;
     width: 140px; float: right; margin-top: 25px; }
 #modal-2 input {margin-top: 5px; margin-bottom: 5px;}    
 
-#input-modal-email input, #input-modal-mensaje input { width: 100%;background-color: transparent;
+#input-modal-email input, #input-modal-mensaje textarea { width: 100%;background-color: transparent;
     border: 1px solid #EAE1E1;}
 #input-modal-email label, #input-modal-mensaje label {width: 100%;}    
 
-#input-modal-mensaje input{height: 100px;}
+#input-modal-mensaje textarea {height: 100px;}
 
-</style>
+
+
+
+
 /*HASTA ACA EDICION MODAL*/
 
 
