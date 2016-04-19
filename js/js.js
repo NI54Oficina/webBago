@@ -223,6 +223,13 @@ $(function(){
 		if(!isIOS){
 			isIOS=/iPhone|iPad|iPod/i.test(navigator.platform);
 		}
+		if(isMobile){
+			$("header").addClass("headerMobile");
+			$("header").removeClass("headerDesktop");
+		}else{
+			$("header").removeClass("headerMobile");
+			$("header").addClass("headerDesktop");
+		}
 		console.log(isMobile);
 		console.log(isIOS);
 	}
@@ -286,16 +293,36 @@ $(function(){
    $(document).ready(function(){
 
    					
-   					$("body").on("mousedown",".btn-mapa",function(){
-   						
-   						$(".info-mapa").hide();
-						var info=$(this).attr("info");
-   						
-   						$("#"+ $(this).attr("info")).show();
-   					});
-					
-					
-				});
+		$("body").on("mousedown",".btn-mapa",function(){
+			console.log("entra down");
+			$(".info-mapa").hide();
+			var info=$(this).attr("info");
+			
+			$("#"+ $(this).attr("info")).show();
+		});
+		
+		$("body").on("touchstart",".btn-mapa",function(){
+			console.log("entra start");
+			$(this).click();
+		});
+		
+		$("body").on("mousedown",".toggle-dropdown-header",function(){
+			if(isMobile){
+				var target= $(this).attr("target");
+				console.log($(this).attr("target"));
+				console.log($(target));
+				if(!$(target).hasClass("opened")){
+					$(target).addClass("opened");
+				}else{
+					$(target).removeClass("opened");
+				}
+				//$(target).css("max-height","10000000px");
+			}
+		});
+		$("body").on("mousedown",".toggle-dropdown-header",function(){
+			$(this).click();
+		});
+	});
 
 				
 jQuery(document).ready(function($) {
