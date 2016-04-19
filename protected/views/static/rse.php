@@ -42,41 +42,55 @@
 				
 					
 				<h4  class="h3-rse" style="display:block; margin-bottom: 3%;"><?php echo Textos::model()->GetText(65); ?></h4>
-				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  linea-rse" style="margin-top:2% margin-bottom:3%;" > </div>
 				
-				<h4  class="h2-rse" style="display:inline-block;"> <?php echo Textos::model()->GetText(455); ?> </h4>
+				<!--Nuestro rol social en emergencias-->
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  linea-rse"> </div>
 				
-
+					<h4  class="h2-rse" style="display:inline-block;"> <?php echo Textos::model()->GetText(455); ?> </h4>
+					
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12   linea-rse"> </div>
-				<p style="margin-top:2%; margin-bottom: 2%; margin-left: 0px;"><?php echo Textos::model()->GetText(66); ?> </p>
-                
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 linea-rse" style="margin-top:2%;" > </div>
 				
-				<h4  class="h2-rse" style="display:inline-block;"><?php echo Textos::model()->GetText(456); ?></h4>
+				
+				<p style="margin-top:2%; margin-bottom: 2%; margin-left: 0px;"><?php echo Textos::model()->GetText(66); ?> </p>
+                <!--termina-->
+				
+				
+				<!--Cuidado del medio ambiente-->
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 linea-rse"> </div>
+		
+					<h4  class="h2-rse" style="display:inline-block;"><?php echo Textos::model()->GetText(456); ?></h4>
+					
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 linea-rse"> </div>
 
                 <p style="margin-top:2% ;margin-bottom:3.5%;margin-left: 0px;"><?php echo Textos::model()->GetText(67); ?></p>
 
-				<h4  class="h3-rse" style="display:inline-block; margin-bottom: 0%;"><?php echo Textos::model()->GetText(68); ?></h4>
-
-				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 linea-rse" style="margin-top:2%; margin-bottom: 3%;" > </div>
+				<!-- termina -->
 				
-				<h4  class="h2-rse" style="display:block;"><?php echo Textos::model()->GetText(457); ?></h4>
+				
+				<h4  class="h3-rse" style="display:inline-block;"><?php echo Textos::model()->GetText(68); ?></h4>
+
+				
+				<!--Encuentros Biosolidarios -->
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 linea-rse" style="" > </div>
+				
+					<h4  class="h2-rse" style="display:block;"><?php echo Textos::model()->GetText(457); ?></h4>
+					
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  linea-rse"> </div>
 
 				<p style="margin-top:5%; margin-bottom: 4%;margin-left: 0px;"><?php echo Textos::model()->GetText(69); ?><?php echo Textos::model()->GetText(70); ?></p>
 
-
+				<!--termina-->
+				
+				
+				<!--Salud, educación y desarrollo humano-->
                 
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 linea-rse" style="margin-top:2%; margin-bottom: 1%;" > </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 linea-rse" style="" > </div>
 
-				<h4  class="h2-rse" style="display:inline-block;"><?php echo Textos::model()->GetText(71); ?></h4>
-
-				
-				
+					<h4  class="h2-rse" style="display:inline-block;"><?php echo Textos::model()->GetText(71); ?></h4>
 
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  linea-rse"> </div>
 				
+				<!-- termina-->
 
                 
                 <p style="margin-top:3% ;margin-bottom:0%;margin-left: 0px;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-bullet.png"  style="display:inline-block;" /> <?php echo Textos::model()->GetText(72); ?></p>
