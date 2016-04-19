@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.3.11
+-- version 4.5.1
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 18-04-2016 a las 23:51:03
--- Versión del servidor: 5.6.24
--- Versión de PHP: 5.6.8
+-- Tiempo de generación: 19-04-2016 a las 16:58:45
+-- Versión del servidor: 10.1.9-MariaDB
+-- Versión de PHP: 5.5.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -14,7 +14,7 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
 -- Base de datos: `bagoweb`
@@ -26,7 +26,7 @@ SET time_zone = "+00:00";
 -- Estructura de tabla para la tabla `authassignment`
 --
 
-CREATE TABLE IF NOT EXISTS `authassignment` (
+CREATE TABLE `authassignment` (
   `itemname` varchar(64) NOT NULL,
   `userid` varchar(64) NOT NULL,
   `bizrule` text,
@@ -52,7 +52,7 @@ INSERT INTO `authassignment` (`itemname`, `userid`, `bizrule`, `data`) VALUES
 -- Estructura de tabla para la tabla `authitem`
 --
 
-CREATE TABLE IF NOT EXISTS `authitem` (
+CREATE TABLE `authitem` (
   `name` varchar(64) NOT NULL,
   `type` int(11) NOT NULL,
   `description` text,
@@ -103,7 +103,7 @@ INSERT INTO `authitem` (`name`, `type`, `description`, `bizrule`, `data`) VALUES
 -- Estructura de tabla para la tabla `authitemchild`
 --
 
-CREATE TABLE IF NOT EXISTS `authitemchild` (
+CREATE TABLE `authitemchild` (
   `parent` varchar(64) NOT NULL,
   `child` varchar(64) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -114,43 +114,43 @@ CREATE TABLE IF NOT EXISTS `authitemchild` (
 
 INSERT INTO `authitemchild` (`parent`, `child`) VALUES
 ('admin', 'adminAccess'),
-('poyo', 'adminAccess'),
 ('admin', 'adminImagenes'),
-('poyo', 'adminImagenes'),
 ('admin', 'adminProducto'),
-('poyo', 'adminProducto'),
 ('admin', 'adminSeccion'),
-('poyo', 'adminSeccion'),
 ('admin', 'createEstablecimiento'),
-('poyo', 'createEstablecimiento'),
 ('admin', 'createPost'),
-('author', 'createPost'),
-('poyo', 'createPost'),
-('poyoyo', 'createPost'),
 ('admin', 'createProducto'),
-('poyo', 'createProducto'),
 ('admin', 'createRole'),
-('poyo', 'createRole'),
 ('admin', 'createUser'),
-('poyo', 'createUser'),
-('poyoyo', 'createUser'),
 ('admin', 'deletePost'),
-('poyo', 'deletePost'),
 ('admin', 'deleteProducto'),
-('poyo', 'deleteProducto'),
 ('admin', 'deleteUsers'),
-('poyo', 'deleteUsers'),
 ('admin', 'editPost'),
-('poyo', 'editPost'),
 ('admin', 'editUsers'),
-('poyo', 'editUsers'),
-('poyoyo', 'editUsers'),
 ('admin', 'updateEstablecimiento'),
-('poyo', 'updateEstablecimiento'),
 ('admin', 'updateProducto'),
-('poyo', 'updateProducto'),
 ('admin', 'vademecum'),
-('poyo', 'vademecum');
+('author', 'createPost'),
+('poyo', 'adminAccess'),
+('poyo', 'adminImagenes'),
+('poyo', 'adminProducto'),
+('poyo', 'adminSeccion'),
+('poyo', 'createEstablecimiento'),
+('poyo', 'createPost'),
+('poyo', 'createProducto'),
+('poyo', 'createRole'),
+('poyo', 'createUser'),
+('poyo', 'deletePost'),
+('poyo', 'deleteProducto'),
+('poyo', 'deleteUsers'),
+('poyo', 'editPost'),
+('poyo', 'editUsers'),
+('poyo', 'updateEstablecimiento'),
+('poyo', 'updateProducto'),
+('poyo', 'vademecum'),
+('poyoyo', 'createPost'),
+('poyoyo', 'createUser'),
+('poyoyo', 'editUsers');
 
 -- --------------------------------------------------------
 
@@ -158,12 +158,12 @@ INSERT INTO `authitemchild` (`parent`, `child`) VALUES
 -- Estructura de tabla para la tabla `tbl_error`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_error` (
+CREATE TABLE `tbl_error` (
   `id` int(11) NOT NULL,
   `codigo` int(3) NOT NULL,
   `idoma` varchar(4) NOT NULL,
   `texto` text NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tbl_error`
@@ -180,7 +180,7 @@ INSERT INTO `tbl_error` (`id`, `codigo`, `idoma`, `texto`) VALUES
 -- Estructura de tabla para la tabla `tbl_establecimiento`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_establecimiento` (
+CREATE TABLE `tbl_establecimiento` (
   `id` int(11) NOT NULL,
   `nombre` varchar(200) NOT NULL,
   `latitud` varchar(100) NOT NULL,
@@ -195,10 +195,10 @@ CREATE TABLE IF NOT EXISTS `tbl_establecimiento` (
 -- Estructura de tabla para la tabla `tbl_imagen_ref`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_imagen_ref` (
+CREATE TABLE `tbl_imagen_ref` (
   `id` int(11) NOT NULL,
   `producto_id` int(11) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=634 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tbl_imagen_ref`
@@ -788,11 +788,11 @@ INSERT INTO `tbl_imagen_ref` (`id`, `producto_id`) VALUES
 -- Estructura de tabla para la tabla `tbl_metatag`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_metatag` (
+CREATE TABLE `tbl_metatag` (
   `id` int(11) NOT NULL,
   `nombre` varchar(300) NOT NULL,
   `code` text NOT NULL COMMENT 'colocar [variable] donde va la parte seteable de la tag'
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tbl_metatag`
@@ -807,12 +807,12 @@ INSERT INTO `tbl_metatag` (`id`, `nombre`, `code`) VALUES
 -- Estructura de tabla para la tabla `tbl_metatag_page`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_metatag_page` (
+CREATE TABLE `tbl_metatag_page` (
   `id` int(11) NOT NULL,
   `idPage` int(11) NOT NULL,
   `idMetatag` int(11) NOT NULL,
   `dat` text NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tbl_metatag_page`
@@ -827,7 +827,7 @@ INSERT INTO `tbl_metatag_page` (`id`, `idPage`, `idMetatag`, `dat`) VALUES
 -- Estructura de tabla para la tabla `tbl_miscelaneo`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_miscelaneo` (
+CREATE TABLE `tbl_miscelaneo` (
   `id` int(11) NOT NULL,
   `key` varchar(100) NOT NULL,
   `value` text NOT NULL
@@ -839,7 +839,7 @@ CREATE TABLE IF NOT EXISTS `tbl_miscelaneo` (
 -- Estructura de tabla para la tabla `tbl_notas`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_notas` (
+CREATE TABLE `tbl_notas` (
   `id` int(11) NOT NULL,
   `fecha` date NOT NULL,
   `titulo` varchar(300) NOT NULL,
@@ -848,7 +848,7 @@ CREATE TABLE IF NOT EXISTS `tbl_notas` (
   `texto` text NOT NULL,
   `seccion` varchar(50) NOT NULL,
   `pais` varchar(4) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=122 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tbl_notas`
@@ -987,11 +987,11 @@ INSERT INTO `tbl_notas` (`id`, `fecha`, `titulo`, `bajada`, `extra`, `texto`, `s
 -- Estructura de tabla para la tabla `tbl_page`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_page` (
+CREATE TABLE `tbl_page` (
   `id` int(11) NOT NULL,
   `titulo` varchar(255) NOT NULL,
   `url` varchar(300) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tbl_page`
@@ -1006,7 +1006,7 @@ INSERT INTO `tbl_page` (`id`, `titulo`, `url`) VALUES
 -- Estructura de tabla para la tabla `tbl_pais`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_pais` (
+CREATE TABLE `tbl_pais` (
   `id` int(11) NOT NULL,
   `nombre` varchar(130) NOT NULL,
   `icon` int(11) NOT NULL,
@@ -1014,7 +1014,7 @@ CREATE TABLE IF NOT EXISTS `tbl_pais` (
   `short` varchar(2) NOT NULL,
   `lng` varchar(5) NOT NULL,
   `catalogo` int(1) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tbl_pais`
@@ -1050,11 +1050,11 @@ INSERT INTO `tbl_pais` (`id`, `nombre`, `icon`, `url`, `short`, `lng`, `catalogo
 -- Estructura de tabla para la tabla `tbl_permission`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_permission` (
+CREATE TABLE `tbl_permission` (
   `id` int(11) NOT NULL,
   `operation` varchar(150) NOT NULL,
   `url` varchar(150) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=52 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tbl_permission`
@@ -1110,12 +1110,12 @@ INSERT INTO `tbl_permission` (`id`, `operation`, `url`) VALUES
 -- Estructura de tabla para la tabla `tbl_ppartes_regionalizacion`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_ppartes_regionalizacion` (
+CREATE TABLE `tbl_ppartes_regionalizacion` (
   `id` int(11) NOT NULL,
   `idParte` int(11) NOT NULL,
   `pais` int(11) NOT NULL,
   `nombre` varchar(140) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tbl_ppartes_regionalizacion`
@@ -1157,7 +1157,7 @@ INSERT INTO `tbl_ppartes_regionalizacion` (`id`, `idParte`, `pais`, `nombre`) VA
 -- Estructura de tabla para la tabla `tbl_producto`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_producto` (
+CREATE TABLE `tbl_producto` (
   `id` int(11) NOT NULL,
   `nombre` varchar(150) NOT NULL,
   `seccion` int(11) NOT NULL,
@@ -1170,7 +1170,7 @@ CREATE TABLE IF NOT EXISTS `tbl_producto` (
   `codeContent` int(1) NOT NULL,
   `pais` varchar(100) NOT NULL,
   `user_id` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=411 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tbl_producto`
@@ -1532,12 +1532,12 @@ INSERT INTO `tbl_producto` (`id`, `nombre`, `seccion`, `target`, `link`, `descri
 -- Estructura de tabla para la tabla `tbl_producto_contenido`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_producto_contenido` (
+CREATE TABLE `tbl_producto_contenido` (
   `id` int(11) NOT NULL,
   `producto_id` int(11) NOT NULL,
   `parte` int(11) NOT NULL,
   `text` text NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=5537 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tbl_producto_contenido`
@@ -3692,10 +3692,10 @@ INSERT INTO `tbl_producto_contenido` (`id`, `producto_id`, `parte`, `text`) VALU
 -- Estructura de tabla para la tabla `tbl_producto_partes`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_producto_partes` (
+CREATE TABLE `tbl_producto_partes` (
   `id` int(11) NOT NULL,
   `nombre` varchar(150) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tbl_producto_partes`
@@ -3728,7 +3728,7 @@ INSERT INTO `tbl_producto_partes` (`id`, `nombre`) VALUES
 -- Estructura de tabla para la tabla `tbl_registros`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_registros` (
+CREATE TABLE `tbl_registros` (
   `id` int(11) NOT NULL,
   `tipo` varchar(3) NOT NULL,
   `familia` varchar(150) NOT NULL,
@@ -4419,11 +4419,11 @@ INSERT INTO `tbl_registros` (`id`, `tipo`, `familia`, `senasa`, `pais`, `comerci
 -- Estructura de tabla para la tabla `tbl_rel_registros`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_rel_registros` (
+CREATE TABLE `tbl_rel_registros` (
   `id` int(10) NOT NULL,
   `idProducto` varchar(100) NOT NULL,
   `idPais` varchar(100) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=103 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tbl_rel_registros`
@@ -4505,14 +4505,14 @@ INSERT INTO `tbl_rel_registros` (`id`, `idProducto`, `idPais`) VALUES
 -- Estructura de tabla para la tabla `tbl_revista`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_revista` (
+CREATE TABLE `tbl_revista` (
   `id` int(11) NOT NULL,
   `numero` int(4) NOT NULL,
   `fecha` date NOT NULL,
   `titulo` varchar(300) NOT NULL,
   `bajada` text NOT NULL,
   `lng` varchar(3) NOT NULL DEFAULT 'es'
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tbl_revista`
@@ -4542,12 +4542,12 @@ INSERT INTO `tbl_revista` (`id`, `numero`, `fecha`, `titulo`, `bajada`, `lng`) V
 -- Estructura de tabla para la tabla `tbl_seccion`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_seccion` (
+CREATE TABLE `tbl_seccion` (
   `id` int(11) NOT NULL,
   `nombre` varchar(150) NOT NULL,
   `url` varchar(100) NOT NULL,
   `icon` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tbl_seccion`
@@ -4575,12 +4575,12 @@ INSERT INTO `tbl_seccion` (`id`, `nombre`, `url`, `icon`) VALUES
 -- Estructura de tabla para la tabla `tbl_seccion_regionalizacion`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_seccion_regionalizacion` (
+CREATE TABLE `tbl_seccion_regionalizacion` (
   `id` int(11) NOT NULL,
   `idCategoria` int(11) NOT NULL,
   `pais` int(11) NOT NULL,
   `nombre` varchar(140) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tbl_seccion_regionalizacion`
@@ -4613,12 +4613,12 @@ INSERT INTO `tbl_seccion_regionalizacion` (`id`, `idCategoria`, `pais`, `nombre`
 -- Estructura de tabla para la tabla `tbl_tag`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_tag` (
+CREATE TABLE `tbl_tag` (
   `id` int(11) NOT NULL,
   `name` varchar(150) NOT NULL,
   `count` int(11) NOT NULL,
   `user_id` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=1019 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tbl_tag`
@@ -5650,11 +5650,11 @@ INSERT INTO `tbl_tag` (`id`, `name`, `count`, `user_id`) VALUES
 -- Estructura de tabla para la tabla `tbl_tag_producto`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_tag_producto` (
+CREATE TABLE `tbl_tag_producto` (
   `id` int(11) NOT NULL,
   `tag_id` int(11) NOT NULL,
   `producto_id` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=102227 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tbl_tag_producto`
@@ -11128,12 +11128,12 @@ INSERT INTO `tbl_tag_producto` (`id`, `tag_id`, `producto_id`) VALUES
 -- Estructura de tabla para la tabla `tbl_textos`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_textos` (
+CREATE TABLE `tbl_textos` (
   `id` int(11) NOT NULL,
   `es` text NOT NULL COMMENT 'español',
   `en` text NOT NULL COMMENT 'ingles',
   `pt` text NOT NULL COMMENT 'portugues'
-) ENGINE=InnoDB AUTO_INCREMENT=507 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tbl_textos`
@@ -11253,15 +11253,15 @@ INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (111, 'Envianos tu cv', 'Send your CV', 'Envie seu CV'),
 (112, '¿Por qué Biogénesis Bagó es un buen lugar para trabajar?', 'Why is Biogénesis Bagó a good place to work?', 'Por quê Biogénesis Bagó é um excelente lugar para trabalhar?'),
 (113, 'CONTACTO', 'CONTACT', 'CONTATO'),
-(114, 'Nombre', 'Name', ''),
-(115, 'Apellido', 'Surname', ''),
-(116, 'e-mail', 'e-mail', ''),
-(117, 'Teléfono', 'Phone', ''),
-(118, 'Empresa', 'Company', ''),
-(119, 'Cargo', 'Position', ''),
-(120, 'Dirección', 'Address', ''),
-(121, 'Departamento', 'Country', ''),
-(122, 'Mensaje', 'Message', ''),
+(114, 'Nombre', 'Name', 'Nome'),
+(115, 'Apellido', 'Surname', 'Sobrenombre'),
+(116, 'e-mail', 'e-mail', 'e-mail'),
+(117, 'Teléfono', 'Phone', 'Telefone'),
+(118, 'Empresa', 'Company', 'Empresa'),
+(119, 'Cargo', 'Position', 'Cargo'),
+(120, 'Dirección', 'Address', 'Endereco'),
+(121, 'Departamento', 'Country', 'Departámento'),
+(122, 'Mensaje', 'Message', 'Mensagem'),
 (123, 'Enviar', 'Send', ''),
 (124, '', '', ''),
 (125, 'USO DE VACUNAS BIOABORTOGEN H Y BIOLEPTOGEN REDUCE LA PERDIDA DE PREÑEZ ENTRE 30 Y 60 DIAS EN VAQUILLONAS DE CARNE', '', ''),
@@ -11586,7 +11586,7 @@ INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (449, 'rrhh', 'rrhh', ''),
 (450, 'contacto', 'contact', 'contato'),
 (451, 'revista el molino', 'magazine el molino', ''),
-(452, 'Compartir en', 'Share', ''),
+(452, 'Compartir en', 'Share', 'Compartilhar'),
 (453, 'Registrado en ', 'Registred', ''),
 (454, 'Versión ingles', 'English version', ''),
 (455, '<strong>Nuestro rol social en emergencias</strong> ', '<strong>Our social role in emergencies</strong> ', '<strong>Nosso rol social para emergências </strong>'),
@@ -11637,7 +11637,8 @@ INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (503, '<span class="border-celeste">FI</span>LIALES Y REP. COMERCIALES ', '<span class="border-celeste">AF</span>FILIATES AND SALES REPS', '<span class="border-celeste">CO</span>NTROLADAS E REP. COMERCIAL'),
 (504, 'NAFMDVD\n', 'NAFMDVB \n', ''),
 (505, 'Casa Matriz Argentina', 'Headquarters Argentina', ''),
-(506, 'Búsqueda', 'Search', 'Pesquisa');
+(506, 'Búsqueda', 'Search', 'Pesquisa'),
+(507, 'Formulario de consulta', '', '');
 
 -- --------------------------------------------------------
 
@@ -11645,12 +11646,12 @@ INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 -- Estructura de tabla para la tabla `tbl_user`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_user` (
+CREATE TABLE `tbl_user` (
   `id` int(11) NOT NULL,
   `username` varchar(128) NOT NULL,
   `password` varchar(128) NOT NULL,
   `email` varchar(128) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tbl_user`
@@ -11672,10 +11673,10 @@ INSERT INTO `tbl_user` (`id`, `username`, `password`, `email`) VALUES
 -- Estructura de tabla para la tabla `tbl_user_role`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_user_role` (
+CREATE TABLE `tbl_user_role` (
   `id` int(11) NOT NULL,
   `nombre` varchar(140) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tbl_user_role`
@@ -11706,7 +11707,8 @@ ALTER TABLE `authitem`
 -- Indices de la tabla `authitemchild`
 --
 ALTER TABLE `authitemchild`
-  ADD PRIMARY KEY (`parent`,`child`), ADD KEY `child` (`child`);
+  ADD PRIMARY KEY (`parent`,`child`),
+  ADD KEY `child` (`child`);
 
 --
 -- Indices de la tabla `tbl_error`
@@ -11778,13 +11780,17 @@ ALTER TABLE `tbl_ppartes_regionalizacion`
 -- Indices de la tabla `tbl_producto`
 --
 ALTER TABLE `tbl_producto`
-  ADD PRIMARY KEY (`id`), ADD KEY `id` (`id`), ADD KEY `seccion` (`seccion`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id` (`id`),
+  ADD KEY `seccion` (`seccion`);
 
 --
 -- Indices de la tabla `tbl_producto_contenido`
 --
 ALTER TABLE `tbl_producto_contenido`
-  ADD PRIMARY KEY (`id`), ADD KEY `producto_id` (`producto_id`), ADD KEY `parte` (`parte`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `producto_id` (`producto_id`),
+  ADD KEY `parte` (`parte`);
 
 --
 -- Indices de la tabla `tbl_producto_partes`
@@ -11826,7 +11832,9 @@ ALTER TABLE `tbl_tag`
 -- Indices de la tabla `tbl_tag_producto`
 --
 ALTER TABLE `tbl_tag_producto`
-  ADD PRIMARY KEY (`id`), ADD KEY `tag_id` (`tag_id`), ADD KEY `producto_id` (`producto_id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `tag_id` (`tag_id`),
+  ADD KEY `producto_id` (`producto_id`);
 
 --
 -- Indices de la tabla `tbl_textos`
@@ -11854,7 +11862,7 @@ ALTER TABLE `tbl_user_role`
 -- AUTO_INCREMENT de la tabla `tbl_error`
 --
 ALTER TABLE `tbl_error`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT de la tabla `tbl_establecimiento`
 --
@@ -11864,102 +11872,102 @@ ALTER TABLE `tbl_establecimiento`
 -- AUTO_INCREMENT de la tabla `tbl_imagen_ref`
 --
 ALTER TABLE `tbl_imagen_ref`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=634;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=634;
 --
 -- AUTO_INCREMENT de la tabla `tbl_metatag`
 --
 ALTER TABLE `tbl_metatag`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT de la tabla `tbl_metatag_page`
 --
 ALTER TABLE `tbl_metatag_page`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT de la tabla `tbl_notas`
 --
 ALTER TABLE `tbl_notas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=122;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=122;
 --
 -- AUTO_INCREMENT de la tabla `tbl_page`
 --
 ALTER TABLE `tbl_page`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT de la tabla `tbl_pais`
 --
 ALTER TABLE `tbl_pais`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=26;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 --
 -- AUTO_INCREMENT de la tabla `tbl_permission`
 --
 ALTER TABLE `tbl_permission`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=52;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 --
 -- AUTO_INCREMENT de la tabla `tbl_ppartes_regionalizacion`
 --
 ALTER TABLE `tbl_ppartes_regionalizacion`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=31;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 --
 -- AUTO_INCREMENT de la tabla `tbl_producto`
 --
 ALTER TABLE `tbl_producto`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=411;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=411;
 --
 -- AUTO_INCREMENT de la tabla `tbl_producto_contenido`
 --
 ALTER TABLE `tbl_producto_contenido`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5537;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5537;
 --
 -- AUTO_INCREMENT de la tabla `tbl_producto_partes`
 --
 ALTER TABLE `tbl_producto_partes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 --
 -- AUTO_INCREMENT de la tabla `tbl_rel_registros`
 --
 ALTER TABLE `tbl_rel_registros`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=103;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=103;
 --
 -- AUTO_INCREMENT de la tabla `tbl_revista`
 --
 ALTER TABLE `tbl_revista`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 --
 -- AUTO_INCREMENT de la tabla `tbl_seccion`
 --
 ALTER TABLE `tbl_seccion`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 --
 -- AUTO_INCREMENT de la tabla `tbl_seccion_regionalizacion`
 --
 ALTER TABLE `tbl_seccion_regionalizacion`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=25;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 --
 -- AUTO_INCREMENT de la tabla `tbl_tag`
 --
 ALTER TABLE `tbl_tag`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=1019;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1019;
 --
 -- AUTO_INCREMENT de la tabla `tbl_tag_producto`
 --
 ALTER TABLE `tbl_tag_producto`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=102227;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=102227;
 --
 -- AUTO_INCREMENT de la tabla `tbl_textos`
 --
 ALTER TABLE `tbl_textos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=507;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=508;
 --
 -- AUTO_INCREMENT de la tabla `tbl_user`
 --
 ALTER TABLE `tbl_user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT de la tabla `tbl_user_role`
 --
 ALTER TABLE `tbl_user_role`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- Restricciones para tablas volcadas
 --
@@ -11968,14 +11976,14 @@ ALTER TABLE `tbl_user_role`
 -- Filtros para la tabla `authassignment`
 --
 ALTER TABLE `authassignment`
-ADD CONSTRAINT `authassignment_ibfk_1` FOREIGN KEY (`itemname`) REFERENCES `authitem` (`name`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `authassignment_ibfk_1` FOREIGN KEY (`itemname`) REFERENCES `authitem` (`name`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `authitemchild`
 --
 ALTER TABLE `authitemchild`
-ADD CONSTRAINT `authitemchild_ibfk_1` FOREIGN KEY (`parent`) REFERENCES `authitem` (`name`) ON DELETE CASCADE ON UPDATE CASCADE,
-ADD CONSTRAINT `authitemchild_ibfk_2` FOREIGN KEY (`child`) REFERENCES `authitem` (`name`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `authitemchild_ibfk_1` FOREIGN KEY (`parent`) REFERENCES `authitem` (`name`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `authitemchild_ibfk_2` FOREIGN KEY (`child`) REFERENCES `authitem` (`name`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
