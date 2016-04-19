@@ -57,11 +57,11 @@
 	
 		
     </script>
-	<div class="container-background-home">
 	
-	</div>
+	<div class="container-background-home" vpelement="1" vphelement="100"></div>
+	
 	<div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 content-home" style="display:inline-block;">
-	<div class="overlay-video" style="z-index:0;">
+	<div class="overlay-video" style="z-index:0;" vpelement="1" vphelement="100" >
 	
 	</div>
 	<div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">

@@ -17,71 +17,27 @@
 	
 	<div style="width:100vw; min-height:100vh; z-index:10; position:relative;"> 
     <!-- BigVideo -->
-    
+    <div class="container-background-home" vpelement="1" vphelement="100"></div>
 
     <!-- Demo -->
 
-     <!--<script>
+     <script>
+	 CheckDevice();
 	    $(function() {
-            var BV = new $.BigVideo();
-			BV.init();
-			BV.show('<?php echo Yii::app()->getBaseUrl(true); ?>/video/home1.mp4',{ambient:true});
+            if(!isMobile){
+				var BV = new $.BigVideo({useFlashForFirefox:false});
+				BV.init();
+				BV.show('<?php echo Yii::app()->getBaseUrl(); ?>/video/home1.mp4',{ambient:true});
+			}else{
+				$(".container-background-home").css("background-image","url('<?php echo Yii::app()->getBaseUrl(true); ?>/img/fondo-bienvenidos.jpg')");
+				//ScrollHome();
+				
+			}
 	    });
-    </script>!-->
-	
-	<script>
-	var vid = document.getElementById("bgvid");
-var pauseButton = document.querySelector("#polina button");
-
-function vidFade() {
-  vid.classList.add("stopfade");
-}
-
-vid.addEventListener('ended', function()
-{
-// only functional if "loop" is removed 
-vid.pause();
-// to capture IE10
-vidFade();
-}); 
-
-
-pauseButton.addEventListener("click", function() {
-  vid.classList.toggle("stopfade");
-  if (vid.paused) {
-    vid.play();
-    pauseButton.innerHTML = "Pause";
-  } else {
-    vid.pause();
-    pauseButton.innerHTML = "Paused";
-  }
-})
-
-	</script>
-	
+    </script>
 	<style>
-	video { 
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    
-    transform: translateX(-50%) translateY(-50%);
- /*background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;*/
-  background-size: cover;
-  transition: 1s opacity;
-}
+	video{width:100% !important;}
 	</style>
-	
-	
-	<video autoplay  poster="<?php echo Yii::app()->getBaseUrl(true); ?>/video/home1.mp4" id="bgvid" loop>
-  <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
-<!--<source src="<?php echo Yii::app()->getBaseUrl(true); ?>/video/home1.mp4" type="video/webm">!-->
-<source src="<?php echo Yii::app()->getBaseUrl(true); ?>/video/home1.mp4" type="video/mp4">
-</video>
 
 <div class="overlay-video" style="z-index:0;">
 	

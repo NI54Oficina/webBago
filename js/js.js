@@ -150,6 +150,7 @@ $(function(){
 		CheckDevice();
 		Header();
 		SameHeight();
+		ResizeViewportElements();
 		$(".fadder").css('opacity',1);
 		$("#vademecum-loading").hide();
 		$("#vademecum-loading").css('right','initial');
@@ -186,9 +187,19 @@ $(function(){
 		Header();
 		ResetHeight();
 		SetDistanceHeader();
+		ResizeViewportElements();
 		setTimeout(function(){
 		SameHeight()},1000);
 	});
+	
+	function ResizeViewportElements(){
+		if(isMobile){
+			$("[vpelement=1]").each(function(){
+				var vph=parseInt($(this).attr("vphelement"))/100;
+				$(this).height(screen.height*vph);
+			});
+		}
+	}
 
 	var isMobile=false;
 	var isIOS=false;
