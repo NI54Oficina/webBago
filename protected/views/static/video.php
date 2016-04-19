@@ -91,14 +91,14 @@
 		</div>
 
 
-		<div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12" style="position:relative;padding-top:20px;">
+		<div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 container-h1-home" style="">
 			<h1 class="h1-home-ev row laevolucion" style="text-transform: uppercase;margin-right:0;margin-left:0;margin-top:0;"><?php echo Textos::model()->GetText(2); ?></h1>
 			<h1 class="h1-home-ev salud-animal row" style="text-transform: uppercase;margin-right:0;margin-left:0;"><?php echo Textos::model()->GetText(3); ?></h1>
 		</div>
 		
 		<!-- FLECHA -->
 		
-		<div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align:center;position:absolute;bottom:0;"><p id="arrowdown" class="scroll-down" style="display:inline-block;"><a href="#complements" class="animate"></a></p></div>
+		<div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 container-flecha" style=""><p id="arrowdown" class="scroll-down" style="display:inline-block;"><a href="#complements" class="animate"></a></p></div>
 		</div>
 		<!-- TEXTO  PRIMERA SECCION-->
 		<script>
