@@ -237,12 +237,12 @@
         
 				<ul id="ul-filiales-paises" class="col-sm-12 col-xs-12">
 					
-					<li class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a href="javascript:void(0);" id="mex"><?php echo Textos::model()->GetText(418); ?> </li></a>
-					<li class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a href="javascript:void(0);" id="centroam"> <?php echo Textos::model()->GetText(463); ?> </li></a>
-					<li class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a href="javascript:void(0);" id="br"> <?php echo Textos::model()->GetText(412); ?> </li></a>
-					<li class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a href="javascript:void(0);" id="bol"> <?php echo Textos::model()->GetText(411); ?> </li></a>
-					<li class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a href="javascript:void(0);" id="uru"> <?php echo Textos::model()->GetText(424); ?> </li></a>
-					<li class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a href="javascript:void(0);" id="arg"><?php echo Textos::model()->GetText(410); ?> </li></a>
+					<li class="col-lg-6 col-md-6 col-sm-6 col-xs-6 btn-mapa"  info="infoMexico"><a href="javascript:void(0);" ><?php echo Textos::model()->GetText(418); ?> </li></a>
+					<li class="col-lg-6 col-md-6 col-sm-6 col-xs-6 btn-mapa"  info="infoCenAm"><a href="javascript:void(0);" > <?php echo Textos::model()->GetText(463); ?> </li></a>
+					<li class="col-lg-6 col-md-6 col-sm-6 col-xs-6 btn-mapa"  info="infoBrasil"><a href="javascript:void(0);" > <?php echo Textos::model()->GetText(412); ?> </li></a>
+					<li class="col-lg-6 col-md-6 col-sm-6 col-xs-6 btn-mapa"  info="infoBolivia"><a href="javascript:void(0);" > <?php echo Textos::model()->GetText(411); ?> </li></a>
+					<li class="col-lg-6 col-md-6 col-sm-6 col-xs-6 btn-mapa"  info="infoUruguay"><a href="javascript:void(0);" > <?php echo Textos::model()->GetText(424); ?> </li></a>
+					<li class="col-lg-6 col-md-6 col-sm-6 col-xs-6 btn-mapa"  info="infoArgentina"><a href="javascript:void(0);" ><?php echo Textos::model()->GetText(410); ?> </li></a>
 					
 				</ul>
 			

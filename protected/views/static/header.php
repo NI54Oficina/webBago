@@ -21,7 +21,7 @@ $("body").on("touchstart",".navbar-toggle",function(){
 	
 	<div class="div-nav-2"><a href="http://www.fronterasproductivas.com/" target="_blank" style="float:left;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/fronteras-50x50-01.png" /></a></div>
 	<!-- ////////////////BARA DE NAVEGACIÓN //////////////////-->
-	<nav  id="navbarSecciones" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 collapse navbar-collapse" data-toggle="collapse">
+	<nav  id="navbarSecciones" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 collapse navbar-collapse" data-toggle="collapse" style="padding:0 30px;">
 		
 		<div class="container-fluid" style="padding:0;">
 			<div id="boxes" style="text-align:left;">
@@ -87,7 +87,7 @@ $("body").on("touchstart",".navbar-toggle",function(){
 				<?php if($_SESSION["lng"]!="pt"){ ?>
 				<li class="li-nav-2"><a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/pais/traduccion/id/2/lng/2"style="float:left;padding: 10px 0px;color: #337ab7;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/band-br.png" /></a></li>
 				<?php } ?>
-				<li class="li-nav-2 dropdown" navbar-toggle collapsed" data-toggle="collapse" data-target="#ul-paises-nav" aria-expanded="false" aria-controls="navbar"   ><a  href="#"    style="float:left;padding: 10px 0px;color: #337ab7;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/mas-paises.png"  /></a>
+				<li class="li-nav-2 dropdown" data-toggle="collapse" data-target="#ul-paises-nav" aria-expanded="false" aria-controls="navbar"   ><a  href="#"    style="float:left;padding: 10px 0px;color: #337ab7;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/mas-paises.png"  /></a>
 				
 					
 				</li>
@@ -139,9 +139,9 @@ $("body").on("touchstart",".navbar-toggle",function(){
 			
 			
 			<!-- INSTITUCIONAL -->
-			<li class="li-nav dropdown"><a  href="#" class="a-nav dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo Textos::model()->GetText(347); ?><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/flecha-menu.png" /> </a>
+			<li class="li-header" ><p  class="toggle-dropdown-header" target="#dropInsti" ><?php echo Textos::model()->GetText(347); ?><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/flecha-menu.png" /> </p>
 				
-				<ul class="dropdown-menu dropdown-menu-right">
+				<ul id="dropInsti" class="dropdown-header-nav">
 						<img  id="flecha-submenu" src="<?php echo Yii::app()->request->baseUrl; ?>/img/flecha-submenu.png" />
 							<li style="margin-top:-5px;"><a class="a-sub link-menu"  href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/quienes-somos"><?php echo Textos::model()->GetText(6); ?></a></li>
 							<li><a class="a-sub link-menu"	href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/mision-vision"><?php echo Textos::model()->GetText(8); ?></a></li>
@@ -162,26 +162,26 @@ $("body").on("touchstart",".navbar-toggle",function(){
 			</li>
 			
 			<!-- FILIALES -->
-			<li class="li-nav"><a class="a-nav link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/home/#mapa-filiales"><?php echo Textos::model()->GetText(432); ?></a></li>
+			<li class="li-header"><p class="link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/home/#mapa-filiales"><?php echo Textos::model()->GetText(432); ?></p></li>
 			
 			<?php if($_SESSION["lng"]=="es"){ ?>
 			<!-- INFO TÉCNICA -->
-			<li class="li-nav  dropdown"><a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/informacion-tecnica" class="a-nav dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo Textos::model()->GetText(433); ?> <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/flecha-menu.png" /></a>
+			<li class="li-header"><p class="toggle-dropdown-header" target="#dropTecnica" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/informacion-tecnica" class="" ><?php echo Textos::model()->GetText(433); ?> <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/flecha-menu.png" /></p>
 				
-				<ul class="dropdown-menu dropdown-menu-right">
+				<ul id="dropTecnica" class="dropdown-header-nav">
 							<img id="flecha-submenu" src="<?php echo Yii::app()->request->baseUrl; ?>/img/flecha-submenu.png" />
 								<li style="margin-top:-5px;"><a class="link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/home/#inform-tec" down="sessionStorage.sub='sanitarios';"><?php echo Textos::model()->GetText(434); ?></a></li>
 								<li><a class="link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/home/#inform-tec" down="sessionStorage.sub='planillas';"><?php echo Textos::model()->GetText(435); ?></a></li>
 								<li><a class="link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/home/#inform-tec" down="sessionStorage.sub='tecnico';"><?php echo Textos::model()->GetText(436); ?></a></li>
-					</ul>
+				</ul>
 					
 			</li>
 			<?php } ?>
 			
 			<!-- VADEMÉCUM -->
-			<li class="li-nav  dropdown"><a href="#" class="a-nav dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo Textos::model()->GetText(348); ?> <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/flecha-menu.png" /></a>
+			<li class="li-header"><p class="toggle-dropdown-header" target="#dropVedemecum"><?php echo Textos::model()->GetText(348); ?> <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/flecha-menu.png" /></p>
 				
-				<ul class="dropdown-menu dropdown-menu-right">
+				<ul id="dropVedemecum" class="dropdown-header-nav">
 					
 					<img id="flecha-submenu" src="<?php echo Yii::app()->request->baseUrl; ?>/img/flecha-submenu.png" />
 						<?php
@@ -222,15 +222,15 @@ $("body").on("touchstart",".navbar-toggle",function(){
 			
 			<?php if($_SESSION["lng"]=="es"){ ?>
 			<!-- REVISTA EL MOLINO  -->
-			<li class="li-nav"><a class="a-nav link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/revista"><?php echo Textos::model()->GetText(451); ?></a></li>
+			<li class="li-header"><p class="link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/revista"><?php echo Textos::model()->GetText(451); ?></p></li>
 			<?php } ?>
 		
 			<!-- RRHH -->
-			<li class="li-nav"><a class="a-nav link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/home#header-rrhh"><?php echo Textos::model()->GetText(449); ?></a></li>
+			<li class="li-header"><p class="link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/home#header-rrhh"><?php echo Textos::model()->GetText(449); ?></p></li>
 			
 			
 			<!-- CONTACTO -->
-			<li class="li-nav"><a class="a-nav link-menu" href="<?php echo Yii::app()->request->baseUrl; ?>/home#section-contacto"><?php echo Textos::model()->GetText(450); ?></a></li>
+			<li class="li-header"><p class="link-menu" href="<?php echo Yii::app()->request->baseUrl; ?>/home#section-contacto"><?php echo Textos::model()->GetText(450); ?></p></li>
 			
 		</ul> <!-- termina botonera -->
 		
