@@ -12,12 +12,17 @@
 transition:0.5s;
 }
 
+a:focus{
+	text-decoration:none;
+}
+
 
 /*--------------------------------------------------------------------------------- CSS  LAYOUT E INTERIOR ------------------------------------------------------*/
 
 
 /****************************************
 ************** GENERAL **************/
+
 
 
 html{
@@ -2837,7 +2842,7 @@ p{
 #opcion3{
 	/*margin-left:15px;*/
 }
-fH
+
 
 #border-menu img{
 	width:73%;
@@ -2845,7 +2850,7 @@ fH
 
 
 #noticias-trabajos{
-	padding-left:4%;
+	padding:0 15px;
 }
 
 #noticias-planes{
@@ -3972,6 +3977,7 @@ section{
 	margin-top:2%;
 	
 	color:#8c8c8c;
+	padding:0 30px;
 }
 
 #info-revista p{
@@ -7144,6 +7150,36 @@ figure.snip1156 .d-a-2 h2{
 	
 	.div-inst{
 		/*padding-top: 255px;;*/
+	}
+	
+	#slider1 .overview li:nth-child(1),#slider1 .overview li:nth-child(2){
+	display:none;
+	}
+	
+	#btn-mas{
+		float:initial;
+	}
+	#slider1 .overview li{
+		text-align:center;
+		margin-right:0;	
+		float:initial;
+		display:inline-block;
+	}
+	
+	#slider1 .overview{
+		width:100vw !important;
+		text-align:center;
+	}
+	
+	#slider1{
+	padding:0;width:100vw !important;
+	}
+	
+	.border-tit {
+		border-bottom: none;
+	}
+	#descripcion{
+		height:auto !important;
 	}
 	
 }
@@ -10680,7 +10716,7 @@ position:fixed;
   and (orientation: landscape){
 	
 	.content-home{
-		padding-top:5vh;
+		padding-top:15px;
 	}
 	
   

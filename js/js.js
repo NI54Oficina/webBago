@@ -193,12 +193,12 @@ $(function(){
 	});
 	
 	function ResizeViewportElements(){
-		if(isMobile){
+		//if(isMobile){
 			$("[vpelement=1]").each(function(){
 				var vph=parseInt($(this).attr("vphelement"))/100;
 				$(this).height(screen.height*vph);
 			});
-		}
+		//}
 	}
 
 	var isMobile=false;

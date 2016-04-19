@@ -108,6 +108,7 @@
 		#navbar-main{
 			display:none;
 		}
+		video{width:100% !important;}
 		</style>
 		<?php include('header.php'); ?>
 		<div class="general-texto-home-header div-inst" id="complements">
