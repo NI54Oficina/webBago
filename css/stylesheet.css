@@ -10715,8 +10715,6 @@ position:fixed;
 
 }
 
-<<<<<<< HEAD
-=======
  @media only screen 
   and (min-device-width: 360px) 
   and (max-device-width: 640px) 
@@ -10738,7 +10736,7 @@ position:fixed;
 .container-h1-home{
 	position:relative;padding-top:20px;
 }
->>>>>>> origin/master
+
 
 @media only screen 
   and (min-device-width: 900px) 
