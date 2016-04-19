@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 14-04-2016 a las 17:03:37
+-- Tiempo de generación: 19-04-2016 a las 15:50:10
 -- Versión del servidor: 10.1.9-MariaDB
 -- Versión de PHP: 5.5.30
 
@@ -151,15 +151,15 @@ INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (111, 'Envianos tu cv', 'Send your CV', 'Envie seu CV'),
 (112, '¿Por qué Biogénesis Bagó es un buen lugar para trabajar?', 'Why is Biogénesis Bagó a good place to work?', 'Por quê Biogénesis Bagó é um excelente lugar para trabalhar?'),
 (113, 'CONTACTO', 'CONTACT', 'CONTATO'),
-(114, 'Nombre', 'Name', ''),
-(115, 'Apellido', 'Surname', ''),
-(116, 'e-mail', 'e-mail', ''),
-(117, 'Teléfono', 'Phone', ''),
-(118, 'Empresa', 'Company', ''),
-(119, 'Cargo', 'Position', ''),
-(120, 'Dirección', 'Address', ''),
-(121, 'Departamento', 'Country', ''),
-(122, 'Mensaje', 'Message', ''),
+(114, 'Nombre', 'Name', 'Nome'),
+(115, 'Apellido', 'Surname', 'Sobrenombre'),
+(116, 'e-mail', 'e-mail', 'e-mail'),
+(117, 'Teléfono', 'Phone', 'Telefone'),
+(118, 'Empresa', 'Company', 'Empresa'),
+(119, 'Cargo', 'Position', 'Cargo'),
+(120, 'Dirección', 'Address', 'Endereco'),
+(121, 'Departamento', 'Country', 'Departámento'),
+(122, 'Mensaje', 'Message', 'Mensagem'),
 (123, 'Enviar', 'Send', ''),
 (124, '', '', ''),
 (125, 'USO DE VACUNAS BIOABORTOGEN H Y BIOLEPTOGEN REDUCE LA PERDIDA DE PREÑEZ ENTRE 30 Y 60 DIAS EN VAQUILLONAS DE CARNE', '', ''),
@@ -484,7 +484,7 @@ INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (449, 'rrhh', 'rrhh', ''),
 (450, 'contacto', 'contact', 'contato'),
 (451, 'revista el molino', 'magazine el molino', ''),
-(452, 'Compartir en', 'Share', ''),
+(452, 'Compartir en', 'Share', 'Compartilhar'),
 (453, 'Registrado en ', 'Registred', ''),
 (454, 'Versión ingles', 'English version', ''),
 (455, '<strong>Nuestro rol social en emergencias</strong> ', '<strong>Our social role in emergencies</strong> ', '<strong>Nosso rol social para emergências </strong>'),
@@ -535,7 +535,8 @@ INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (503, '<span class="border-celeste">FI</span>LIALES Y REP. COMERCIALES ', '<span class="border-celeste">AF</span>FILIATES AND SALES REPS', '<span class="border-celeste">CO</span>NTROLADAS E REP. COMERCIAL'),
 (504, 'NAFMDVD\n', 'NAFMDVB \n', ''),
 (505, 'Casa Matriz Argentina', 'Headquarters Argentina', ''),
-(506, 'Búsqueda', 'Search', 'Pesquisa');
+(506, 'Búsqueda', 'Search', 'Pesquisa'),
+(507, 'Formulario de consulta', '', '');
 
 --
 -- Índices para tablas volcadas
@@ -555,7 +556,7 @@ ALTER TABLE `tbl_textos`
 -- AUTO_INCREMENT de la tabla `tbl_textos`
 --
 ALTER TABLE `tbl_textos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=507;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=508;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
