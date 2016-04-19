@@ -7,11 +7,15 @@
  </div> 
 
  </div>
-	<div class="copyright col-lg-12 col-md-12 col-sm-12 col-xs-12"><p style="display: inline-block;text-align: center;margin: auto;font-size:12px;"><?php echo Textos::model()->GetText(489); ?></p>    
+		<!--<div class="copyright col-lg-12 col-md-12 col-sm-12 col-xs-12"><p style="display: inline-block;text-align: center;margin: auto;font-size:12px;"><?php echo Textos::model()->GetText(489); ?></p>    
 	<a href="#" role="button"> <img id="btnmenu-general" src="<?php echo Yii::app()->request->baseUrl; ?>/img/flecha-menu-arriba.png"></a>
-	</div>
+	</div> -->
 
-	
+
+	            <div class="copy col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height:auto;width:100%;position:relative;background:#122551;">
+					<p style="text-align:center; padding-top:1%;padding-bottom:1%;"><?php echo Textos::model()->GetText(489); ?></p>
+					<a href="#" role="button"  target="_blank"><img id="btnmenu" src="<?php echo Yii::app()->getBaseUrl(true); ?>/img/flecha-menu-arriba.png" style="margin-top: -9%;"></a>
+               </div>
 	</footer>
 
 </body>
