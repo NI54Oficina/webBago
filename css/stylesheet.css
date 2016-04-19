@@ -8025,23 +8025,7 @@ position:fixed;
 		text-align: left;
 		margin-left: -138px;
 	}
-	
-	/*.volver:hover{
-		background-image: url(../img/volver-desactivado.png);
-		height: 42px;
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: auto auto;
-		-webkit-transition: all 1s ease;
-		-moz-transition: all 1s ease;
-		-o-transition: all 1s ease;
-		-ms-transition: all 1s ease;
-		transition: all 1s ease;
-		margin-top: -4%;
-		text-align: left;
-		margin-left: -138px;
-	}
-	*/
+
 	.volver-infotec-revista div {
 		background-image: url(../img/volver-info-tecnica.png);
 		background-repeat: no-repeat;
@@ -8052,12 +8036,11 @@ position:fixed;
 		background-size: auto 78%;
 	}
 
-	 #titulo-vademecum {margin-top:15%;}
+	#titulo-vademecum {margin-top:15%;}
 
 
 
-	 @media screen and (min-device-width:1024px)
-	 {
+	 @media screen and (min-device-width:1024px) {
 	 	.img-fundaciones-1{margin-top: 37%;}
 
 	 }
@@ -8174,7 +8157,7 @@ position:fixed;
 
 .marker {color: red;}
 
-.pre { font-size: 10px; padding: 5px; margin-bottom: 50x;}
+.pre { font-size: 10px; padding: 5px; margin-bottom: 50px;}
 
 
 #ul-rrhh-home li{
@@ -8194,8 +8177,6 @@ position:fixed;
 
   #ul-rrhh-home{margin:2%; padding: 0px; width: 600px; max-width:90%;}
 
-
-		
 }
 
 
@@ -8234,12 +8215,12 @@ position:fixed;
 
 	
 	.h2-cd {
-    color: #B2B2B2;
-    font-weight: 700;
-    font-family: 'arialregular';
-    font-size: 18px;
-    margin-top: 0;
-}
+		color: #B2B2B2;
+		font-weight: 700;
+		font-family: 'arialregular';
+		font-size: 18px;
+		margin-top: 0;
+	}
 
 .cd-timeline-block {
     position: relative;
