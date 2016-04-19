@@ -10702,6 +10702,20 @@ position:fixed;
 
 }
 
+ @media only screen 
+  and (min-device-width: 360px) 
+  and (max-device-width: 640px) 
+  and (orientation: portrait){
+	#btnmenu {
+		display: inline-block;
+		margin-top: -7%;
+		margin-right: 2%;
+		transition: all 0.5s ease;
+		float: right;
+	}
+  
+  }
+
 .container-flecha{
 	text-align:center;position:absolute;bottom:100px;
 }
