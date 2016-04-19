@@ -6866,6 +6866,7 @@ margin-right:0;
 	.img-fundaciones-4{float: left;width:100%;margin:0% auto 0% auto;}
 	.img-fundaciones-5{float: left;width:100%;margin:0% 5% 0% 7%;  }
 	.img-fundaciones-6{float: left;width:100%; margin:0% auto 0% auto;  } 
+    .img-fundaciones-7{float: left;width:100%; margin:0% auto 0% auto;  }  
    .imagenes-fundaciones{ height: 150px; }
 
 	
@@ -10481,7 +10482,7 @@ position:fixed;
   and (max-width: 650px) 
   and (orientation: portrait) 
 {
-		.tr{
+		#back-rrhh .tr{
 			width:50%;
 		}
 		
@@ -10503,12 +10504,12 @@ position:fixed;
 		padding-top:0;
 	}
 	
-	h3.tr.move-x-1{
+	 #back-rrhh h3.tr.move-x-1{
 		width:90%;
 		display:inline-block;
 	}
 	
-	h4.tr-2.move-x-2{
+	 #back-rrhh h4.tr-2.move-x-2{
 		padding-top:20px;
 		color:#666;
 	}
