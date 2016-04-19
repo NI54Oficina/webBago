@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 19-04-2016 a las 16:58:45
+-- Tiempo de generación: 19-04-2016 a las 18:51:41
 -- Versión del servidor: 10.1.9-MariaDB
 -- Versión de PHP: 5.5.30
 
@@ -11151,7 +11151,7 @@ INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (9, 'Nuestros principales compromisos para ayudar a producir las crecientes demandas de alimentos de calidad que el mundo necesita.', 'Our main commitment is to help produce high quality food to comply with the growing demands of the world today.  ', 'Nosso principal compromisso é ajudar a produzir\nmais para atender a crescente demanda de alimentos de qualidade que o \nmundo necessita.'),
 (10, 'Lucha contra la  Aftosa', 'Fight against Foot and Mouth Disease  ', 'Luta Contra a Febre Aftosa'),
 (11, 'Por la calidad de nuestra vacuna, somos un referente mundial en la lucha contra la Fiebre Aftosa. Aportamos más de 2000 millones de dosis para campañas oficiales.', 'Due to the quality of our vaccine, we are a world renowned referent in the fight against Foot and Mouth Disease.  We supply over 2000 million doses for official campaigns.  ', 'Pela qualidade de nossas vacinas, somos uma referencia mundial na luta contra a Febre Aftosa. Contribuímos com mais de 2 bilhões de doses para campanhas oficiais.'),
-(12, 'Trayectoria - hitos', 'Milestone Trajectory', 'Marcos'),
+(12, 'Trayectoria - hitos', 'Milestone Trajectory', 'Destaques'),
 (13, 'Un recorrido que demuestra el espíritu innovador y la permanente evolución de la compañía en la búsqueda de soluciones para una producción más eficiente.', 'A path that shows the innovative spirit and the permanent evolution of the company whilst searching for solutions to a more efficient production.  ', 'Um caminho que mostra o espírito inovador e a constante evolução  da empresa na busca de soluções para uma produção mais eficiente.'),
 (14, 'Nuestras plantas', 'Our Manufacturing Plants', 'Nossos Parques Industriais'),
 (15, 'Avanzada tecnología y  altos estándares de calidad respaldan  todo el proceso de producción en nuestras plantas modelos instaladas en Argentina.', 'Advanced technology and high quality standards support the entire production process in our model manufacturing plants in Argentina', 'Avançada tecnologia e altos padrões de qualidade são os pilares do processo de produção em nossas industriais instaladas na Argentina, Brasil e China.'),
@@ -11495,14 +11495,14 @@ INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (351, 'Nace Laboratorio San Jorge', 'Incorporation of San Jorge Laboratories', 'Nasce o Laboratório San Jorge'),
 (352, 'Chemotécnica registra 1er producto veterinario: ectoparasiticidas a base de Arsenicales', 'Chemotécnica registers the first veterinary product: an arsenic-base ectoparasiticide\n\n', 'Chemotécnica Registra 1º produto Veterinário: Ectoparasiticidas a base de Arsenicais'),
 (353, 'Nace Chemotécnica Sintyal', 'Incorporation of Chemotécnica Sintyal', 'Nasce a Chemotécnica Sintyal'),
-(354, '1er registro de VACUNA ANTIAFTOSA en Argentina', '1st Registration of FMD vaccine in Argentina', '   	  	Traducciones  Otras consultas  		   Explorar  1º Registro de VACINA ANTIAFTOSA na Argentina.'),
-(355, 'Introduce la vacuna en la región, contribuyendo a <strong>erradicar la enfermedad </strong>y a exportar al mundo la producción pecuaria americana.', 'It introduces the vaccine in the region contributing to <strong> eradicate the disease </strong> and to export American livestock production all around the world', 'Introduz a vacina na região, contribuindo para erradicar doenças e para exportar ao mundo a produção pecaráia americana'),
-(356, 'Lanzamiento Rotatec, la 1º vacuna para prevenir la diarrea viral bovina.', 'Launching of Rotatec, the first vaccine to prevent viral diarrhea in cattle', 'Lançamento Rotatec a 1º vacina para prevenir a diarreia viral bovina'),
-(357, 'En la década del 80, junto a reconocidas entidades científicas de Latinoamérica, comienza a desarrollar las primeras vacunas específicas para las enfermedades que más afecta a la producción pecuaria', 'During the 80’s, together with well-known Latin American scientific entities, the first specific vaccines for diseases that affect livestock production were developed', 'Na década de 80, junto a riconhecidas entidades científicas da América Latina, começa a desenvolver as primeiras vacinas específicas para as doenças que mais afetam a produção pecuária'),
-(358, 'Lanza la 1º Ivermectina genérica, a nivel global', 'Launching of the first generic Ivermectin at global level', 'Lanca, mundialmente, a 1ª ivermectina genérica'),
-(359, 'Nace Biogénesis Sintyal (Fusión chemotécnica Sintyal + Biogénesis)', 'Incorporation of Biogénesis Sintyal (merger of Chemotécnica Sintyal and Biogénesis)', 'Nasce a Biogénesis Sintyal (fusão Chemotécnica Sintyal + Biogénesis) ');
+(354, '1er registro de VACUNA ANTIAFTOSA en Argentina', '1st Registration of FMD vaccine in Argentina', '1º Registro de vacina antiaftosa na Argentina'),
+(355, 'Introduce la vacuna en la región, contribuyendo a <strong>erradicar la enfermedad </strong>y a exportar al mundo la producción pecuaria americana.', 'It introduces the vaccine in the region contributing to <strong> eradicate the disease </strong> and to export American livestock production all around the world', 'Introdução da vacina na região contribuindo para erradicar enfermidades e exportar para o mundo a produção pecuária americana'),
+(356, 'Lanzamiento Rotatec, la 1º vacuna para prevenir la diarrea viral bovina.', 'Launching of Rotatec, the first vaccine to prevent viral diarrhea in cattle', 'Lançamento Rotatec a 1º vacina para prevenir diarreia neonatal bovina'),
+(357, 'En la década del 80, junto a reconocidas entidades científicas de Latinoamérica, comienza a desarrollar las primeras vacunas específicas para las enfermedades que más afecta a la producción pecuaria', 'During the 80’s, together with well-known Latin American scientific entities, the first specific vaccines for diseases that affect livestock production were developed', 'Na década de 80, junto a reconhecidas entidades científicas da América Latina, começa a desenvolver as primeiras vacinas específicas para as doenças que mais afetam a produção pecuária'),
+(358, 'Lanza la 1º Ivermectina genérica, a nivel global', 'Launching of the first generic Ivermectin at global level', 'Lança, mundialmente, a 1ª ivermectina genérica'),
+(359, 'Nace Biogénesis Sintyal (Fusión chemotécnica Sintyal + Biogénesis)', 'Incorporation of Biogénesis Sintyal (merger of Chemotécnica Sintyal and Biogénesis)', 'Nasce a Biogénesis Sintyal (fusão Chemotécnica Sintyal + Biogénesis) '),
+(360, 'Certifica su planta de producción vacuna anti Aftosa bajo normas de <strong>Bioseguridad 4 OIE</strong>', 'Certification of its production plant FMD vaccine produced under <strong> Biosafety level 4 OIE </strong>', 'Certifica sua planta industrial de produção da vacina antiaftosa sob as normas de Biosegurança 4 OIE.');
 INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
-(360, 'Certifica su planta de producción vacuna anti Aftosa bajo normas de <strong>Bioseguridad 4 OIE</strong>', 'Certification of its production plant FMD vaccine produced under <strong> Biosafety level 4 OIE </strong>', 'Certifica sua planta industrial de produção da vacina antiaftosa sob as normas de Biosegurança 4 OIE.'),
 (361, '1º exportación de la Vacuna Antiaftosa a Sudamérica y Taiwán', 'First export of FMD vaccine to South America and Taiwan', '1º exportação da vacina antiaftosa para Taiwan'),
 (362, 'Inaugura filial en Uruguay', 'Opening of Uruguay subsidiary', 'Inaugura sede no Uruguai'),
 (363, 'Inaugura filial en Brasil', 'Opening of Brazil subsidiary', 'Inaugura sede no Brasil'),
@@ -11561,13 +11561,13 @@ INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (423, 'Rep. Dominicana', '', ''),
 (424, 'Uruguay', '', ''),
 (425, 'Venezuela', '', ''),
-(426, 'Otros países', 'Other countries', ''),
-(427, 'Versión español', 'Spanish version', ''),
+(426, 'Otros países', 'Other countries', 'Outros Países'),
+(427, 'Versión español', 'Spanish version', 'Versão em Espanhol'),
 (428, 'Versión portugués', 'Portuguese version', ''),
 (429, 'Trayectoria', 'Trajectory', 'Trajetória'),
 (430, 'Info para proveedores', 'Supliers', 'Provedores'),
 (431, 'Rse', 'Csr', 'Rse'),
-(432, 'Filiales y rep. comerciales', 'Affiliates and Sales Reps', 'Controladas e Rep. Comercial '),
+(432, 'Filiales y rep. comerciales', 'Affiliates and Sales Reps', 'Filiais e Distribuidoras'),
 (433, 'info técnica', '', 'info técnica'),
 (434, 'Planes sanitarios', '', 'Planos sanitários produtivos'),
 (435, 'Planillas de trabajo', '', ''),
@@ -11583,12 +11583,12 @@ INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (445, 'Reproductivos', 'Reproductive', 'Reprodutiva'),
 (446, 'Salud ambiental', 'Environmental health', 'Saúde Ambiental'),
 (447, 'Vitaminas y minerales', 'Vitamins & minerals', ''),
-(449, 'rrhh', 'rrhh', ''),
+(449, 'rrhh', 'rrhh', 'Recursos Humanos'),
 (450, 'contacto', 'contact', 'contato'),
 (451, 'revista el molino', 'magazine el molino', ''),
 (452, 'Compartir en', 'Share', 'Compartilhar'),
 (453, 'Registrado en ', 'Registred', ''),
-(454, 'Versión ingles', 'English version', ''),
+(454, 'Versión ingles', 'English version', 'Versão em Inglês'),
 (455, '<strong>Nuestro rol social en emergencias</strong> ', '<strong>Our social role in emergencies</strong> ', '<strong>Nosso rol social para emergências </strong>'),
 (456, '<strong>Cuidado del medio ambiente</strong> ', '<strong>Taking Care of the Environment</strong>', '<strong>Cuidado com o meio ambiente</strong> '),
 (457, '<strong>Encuentros Biosolidarios </strong>', '<strong>Solidarity Meetings</strong>', '<strong> Encontros Biosolidários</strong>'),
@@ -11633,7 +11633,7 @@ INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (499, 'Premio Funprecit', 'Funprecit Award', 'Fumprecit'),
 (500, 'a la excelencia en desarrollos para la salud animal', 'to the excellence in Animal Health developments', '"Prêmio excelência no desenvolvimento de sanidade animal"'),
 (501, 'Nace', 'Creation of', 'Nasce'),
-(502, 'laboratorios Bagó', 'Bagó laboratories', 'laboratorios Bagó'),
+(502, 'laboratorios Bagó', 'Bagó laboratories', 'Laboratorios Bagó'),
 (503, '<span class="border-celeste">FI</span>LIALES Y REP. COMERCIALES ', '<span class="border-celeste">AF</span>FILIATES AND SALES REPS', '<span class="border-celeste">CO</span>NTROLADAS E REP. COMERCIAL'),
 (504, 'NAFMDVD\n', 'NAFMDVB \n', ''),
 (505, 'Casa Matriz Argentina', 'Headquarters Argentina', ''),
