@@ -7,7 +7,7 @@
   <div class="modal-1"> 
   	<span class="cerrar"></span>
  	<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/mail-modal.png" >
- 	<p>Formulario de consulta</p>
+ 	<p><?php echo Textos::model()->GetText(507);?></p>
 
  </div>
 
@@ -24,11 +24,11 @@
 
     <div id="input-modal-mensaje">
     <label>
- 	<p id="mensaje-complete" >MENSAJE</p> 
+ 	<p id="mensaje-complete" ><?php echo Textos::model()->GetText(122);?></p> 
  	</label>
  	<input name="mensaje" type="text"></input></br>
  	</div>
- 	<button id="boton-mail" type="submit"> <p>Enviar</p></button>
+ 	<button id="boton-mail" type="submit"> <p><?php echo Textos::model()->GetText(123);?></p></button>
  	</form>
 
  </div>
