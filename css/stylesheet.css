@@ -9195,9 +9195,9 @@ position:fixed;
     margin-top: 1%;
     
 }
-   .titulo-vad-producto {
+.titulo-vad-producto {
     text-align: center;
-    font-size: 17px;
+    font-size: 30px;
     margin-bottom: 0%;
 }
 	.volver,.volver:hover{
@@ -9242,7 +9242,7 @@ position:fixed;
 		margin-top:0;
 	}
 	.titulo-vad-producto {
-    text-align: center;
+    text-align: right;
     font-size: 17px;
     margin-bottom: 0%;
 }
