@@ -233,6 +233,15 @@ font-size: 22px;
 }
 
 
+.container-flecha{
+	text-align:center;position:absolute;bottom:60px;
+}
+
+.container-h1-home{
+	position:relative;padding-top:20px;
+}
+
+
 @media screen and (min-width: 300px) {
 
 	/***************************************************
@@ -9908,7 +9917,7 @@ position:fixed;
 		height: 40px;
 		margin-top: 0px;
 		z-index: 2;
-		margin-left: -25px;
+		margin-left: -20px;
 	}
 	
 	.laevolucion {
@@ -10496,7 +10505,7 @@ position:fixed;
   and (orientation: portrait){
   
   .content-home{
-	padding-top:15vh;
+	padding-top:10vh;
   }
   
   #display-rrhh{
@@ -10640,6 +10649,10 @@ position:fixed;
     max-width: 314px;
 }
 
+.container-flecha{
+	bottom:150px;
+}
+
 }
 
 @media only screen 
@@ -10692,7 +10705,7 @@ position:fixed;
 	}
 	
 	body .content-home{
-		padding-top:10vh;
+		padding-top:7vh;
 	}
 	
 	.logo-blanco{
@@ -10702,13 +10715,6 @@ position:fixed;
 
 }
 
-.container-flecha{
-	text-align:center;position:absolute;bottom:100px;
-}
-
-.container-h1-home{
-	position:relative;padding-top:20px;
-}
 
 @media only screen 
   and (min-device-width: 900px) 
@@ -10732,4 +10738,6 @@ position:fixed;
   
   }
   
-  
+ .navbar-collapse.collapse.in{
+	background-color:#f2f2f2;
+ }
