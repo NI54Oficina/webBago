@@ -9115,16 +9115,28 @@ position:fixed;
 
 #btnmenu{
     display: inline-block;
-    margin-top: 2%;
+    margin-top: -2%;
     margin-right: 1%;
     transition: all 0.5s ease;
     float: right;
 }
 
+#btnmenu-general{
+    display: inline-block;
+    margin-top: 0%;
+    margin-right: 1%;
+    transition: all 0.5s ease;
+    float: right;
+}
 
 @media only screen (max-width: 768px;){
 
-	#btnmenu{margin-top: -7% !important;}
+	#btnmenu-general{
+    
+    margin-top: 2%;
+    
+}
+
 	
 	
 
