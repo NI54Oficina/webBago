@@ -82,7 +82,7 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 ?>
 <style>body{background-color:white;}</style>
 <div style="width:100%;">
-<div  class="tabla-aftosa col-lg-12 col-md-12 col-sm-11 col-xs-11" style="margin-top:4%;margin-bottom:25vh;text-align:center;display:inline-block;float:initial;padding:0 5%;">
+<div  class="tabla-aftosa col-lg-12 col-md-12 col-sm-11 col-xs-11" style="margin-top:6%;margin-bottom:25vh;text-align:center;display:inline-block;float:initial;padding:0 5%;">
 <a href="<?php echo Yii::app()->request->baseUrl;?>/home#contenido-vad">
 <div class=" col-lg-3 col-md-3 col-sm-12 col-xs-12 volver hidden-sm hidden-xs">
 <p><?php echo Textos::model()->GetText(490); ?></p>
