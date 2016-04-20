@@ -6,6 +6,18 @@ $("body").on("mousedown",".navbar-toggle",function(){
 });
 $("body").on("touchstart",".navbar-toggle",function(){
 	$(this).click();
+	if(isIOS){
+		setTimeout(function(){
+			if($("#navbarSecciones").hasClass("in")){
+				$("header").css("position","absolute");
+				$(".fadder").fadeOut(1000);
+			}else{
+				$("header").css("position","fixed");
+				$(".fadder").fadeIn(1000);
+			}
+			
+		},500);
+	}
 	
 });
 </script>
