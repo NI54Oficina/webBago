@@ -4675,9 +4675,9 @@ figure.snip1156:hover .salud-ambiental{
 	}
 	
 	#ul-nav-principal{
-		height:100vh;
+		height:auto;
 		display: inline-block;
-		width: 100vw;
+		width: 100%;
 		position: initial;
 		float: initial !important;
 	}
@@ -4707,9 +4707,9 @@ figure.snip1156:hover .salud-ambiental{
 	}
 	
 	#container-ul-nav-header{
-		height:80vh;
+		height:auto;
 		overflow: auto;
-		width: 100vw;
+		width: 100%;
 	}
 	
 	
@@ -5393,7 +5393,7 @@ figure.snip1156:hover .salud-ambiental{
 	}
 	
 	#ul-nav-principal{
-		height:100vh;
+		height:auto;
 		display: inline-block;
 		width: 100vw;
 		position: initial;
@@ -6764,6 +6764,86 @@ and (max-device-width: 2100px) {
 	
 	
 }
+
+@media only screen 
+  and (min-device-width: 760px) 
+  and (max-device-width: 1100px) 
+  and (orientation: landscape) 
+  {
+	#ul-nav-2-mobile{
+		transition: 0.4s;
+	}
+	
+	.navbar-collapse.collapse{
+		display:none !important;
+		visibility:hidden !important;
+		z-index:0;
+	}
+	
+	.navbar-collapse.collapse.in{
+		display:block !important;
+		visibility:visible !important;
+		z-index:0;
+		width:100%;
+	}
+	
+	
+	.navbar-nav .m-l{
+		margin-left:0;
+	}
+	
+	.navbar-nav > li > .dropdown-menu{
+		width:100vw;
+		position:initial;
+		background-color:transparent;
+	}
+	
+	.navbar-nav{
+		float:initial;
+	}
+	
+	.navbar-toggle{
+		display:inline-block;
+		position:relative;
+		z-index:100000;
+	}
+	
+	header .ul-nav li ul {
+		margin-left:0;
+	}
+	
+	header  .ul-nav li:hover > ul{
+		position:initial;
+	}
+	
+	ul.dropdown-menu.dropdown-menu-right{
+		width:50%;
+	}
+	
+	#navbarSecciones .container-fluid{
+		padding-left:0;padding-right:0;
+	}
+	
+	#ul-nav-principal,#container-ul-nav-header{
+		width:100%;
+	}
+	
+	.li-nav{
+		margin-right:0;width:96%;padding-left:2%;
+	}
+	
+	.ul-nav li ul li{
+		background:transparent;
+	}
+	.div-nav-2{
+		display:block;
+	}
+	#logo-bago-mobile{
+		display:block;
+		width:15%;
+	}
+	
+  }
 
 
 
@@ -8430,9 +8510,9 @@ position:fixed;
 	}
 	
 	#ul-nav-principal{
-		height:100vh;
+		height:auto;
 		display: inline-block;
-		width: 100vw;
+		width: 100%;
 		position: initial;
 		float: initial !important;
 	}
@@ -8454,7 +8534,7 @@ position:fixed;
 		width: auto;
 		display: inline-block;
 		float: right;
-		padding-right: 10px;
+		padding-right: 10vh;
 	}
 	
 	.main{
@@ -8464,7 +8544,8 @@ position:fixed;
 	#container-ul-nav-header{
 		height:80vh;
 		overflow: auto;
-		width: 100vw;
+		width: 100%;
+		padding-bottom:30px;
 	}
 	
 	
@@ -10807,10 +10888,10 @@ and (orientation: landscape){
   
 }
   
- .navbar-collapse.collapse.in{
+ .headerMobile .navbar-collapse{
 	background-color:#f2f2f2;
 	width:100vw;
-	
+	height:100vh;
  }
  
  .navbar-collapse.collapse.in .li-nav{
@@ -10845,13 +10926,18 @@ and (orientation: landscape){
 	transition:2s;
  }
  .headerMobile .li-header{
-	font-size:1.5em;
-	line-height:1.5em;
+	font-size:1em;
+	line-height:1.2em;
 	color:#0C6796;
 	text-transform:uppercase;
-	border-bottom:3px white solid;
-	padding-bottom:10px;
-	padding-top:10px;
+	border-bottom:1px white solid;
+	padding-bottom:15px;
+	padding-top:15px;
+	
+ }
+ .headerMobile .li-header > p{
+	line-height:1.2em;
+	margin-bottom:0;
  }
  
  .headerMobile .li-header img{
@@ -10866,6 +10952,7 @@ and (orientation: landscape){
 	 transition: max-height 0.3s ease-out;
 	display:block;
 	overflow:hidden;
+	position:initial;
  }
  
  .headerMobile .dropdown-header-nav li a{
@@ -10875,16 +10962,23 @@ and (orientation: landscape){
  .headerMobile .dropdown-header-nav li {
 	margin-top:0;
 	margin-bottom:0;
-	padding-top:15px;
-	padding-bottom:15px;
+	padding-top:10px;
+	padding-bottom:10px;
  }
  
  .headerMobile .dropdown-header-nav.opened{
 	max-height: 50000px;
 	 transition: max-height 0.3s ease-in;
+	 padding-left:0;
+	 margin:0;
  }
- 
- 
+ .headerMobile .li-header .glyphicon{
+	float:right;
+	padding-top:0.3em;
+ }
+ .headerMobile .ul-nav li ul li{
+	background-color:transparent;	
+ }
 .link-menu{
 	cursor:pointer;
 }
@@ -10892,8 +10986,22 @@ and (orientation: landscape){
 .headerDesktop .li-header{
 	display:inline-block;
 	margin-right:2%;
+	cursor:pointer;
+	color:#666;
 }
 .headerDesktop .li-header p{
-	line-height:20px;display:inline;
+font-size:12px;
+	line-height:0;display:inline;
 	width:auto;
+	text-transform:uppercase;
+	white-space:initial;
+	letter-spacing:0;
+	margin-left:0;
+	margin-bottom:0;
+}
+
+.headerDesktop #dropInsti,.headerDesktop #dropTecnica,.headerDesktop #dropVedemecum{
+	margin-left:-43px;
+	margin-top:-5px;
+	
 }

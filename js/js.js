@@ -178,13 +178,13 @@ $(function(){
 	$( window ).resize(function() {
 		var lastOrientation= currentOrientation;
 		CheckDevice();
-		
+		Header();
 		if(isIOS){
 			if(lastOrientation==currentOrientation){
 				return;
 			}
 		}
-		Header();
+		
 		ResetHeight();
 		SetDistanceHeader();
 		ResizeViewportElements();
@@ -265,10 +265,12 @@ $(function(){
 	}
 	
 	function Header(){
+		console.log("entra");
 		if(!isHome){
 			
 			$("body").css("padding-top",$("#navbar-main").height()+"px");
 		}
+		
 	}
 	
 	function SetDistanceHeader(){
@@ -308,7 +310,20 @@ $(function(){
 		
 		$("body").on("mousedown",".toggle-dropdown-header",function(){
 			if(isMobile){
-				var target= $(this).attr("target");
+				/*var target= $(this).attr("target");
+				console.log($(this).attr("target"));
+				console.log($(target));
+				if(!$(target).hasClass("opened")){
+					$(target).addClass("opened");
+				}else{
+					$(target).removeClass("opened");
+				}*/
+				//$(target).css("max-height","10000000px");
+			}
+		});
+		$("body").on("touchstart",".toggle-dropdown-header",function(){
+			//$(this).click();
+			var target= $(this).attr("target");
 				console.log($(this).attr("target"));
 				console.log($(target));
 				if(!$(target).hasClass("opened")){
@@ -316,11 +331,6 @@ $(function(){
 				}else{
 					$(target).removeClass("opened");
 				}
-				//$(target).css("max-height","10000000px");
-			}
-		});
-		$("body").on("mousedown",".toggle-dropdown-header",function(){
-			$(this).click();
 		});
 	});
 
