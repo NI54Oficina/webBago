@@ -10871,7 +10871,7 @@ and (orientation: landscape) {
   and (orientation: portrait){
 	#btnmenu {
 		display: inline-block;
-		margin-top: -7%;
+		margin-top: -9%;
 		margin-right: 2%;
 		transition: all 0.5s ease;
 		float: right;
