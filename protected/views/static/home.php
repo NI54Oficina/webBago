@@ -1606,7 +1606,7 @@
 							<!-- ******** NOMBRE ******** -->
 							<div class="col-lg-6  col-md-6  col-xs-12">
 								<div class="input-contacto">
-								<label for="exampleInputName2"><p style="text-transform: uppercase;"><?php echo Textos::model()->GetText(114); ?></p></label>
+								<label for="exampleInputName2"><p style="text-transform: uppercase; margin: 0;"><?php echo Textos::model()->GetText(114); ?></p></label>
 									<input class="form-inline required" name="nombre" type="text" value="">
 								</div>
 							</div>
@@ -1615,7 +1615,7 @@
 							<!-- ******** APELLIDO ******** -->
 							<div class="col-lg-6  col-md-6 col-xs-12">
 								<div class="input-contacto">
-									<label for="exampleInputName2"><p style="text-transform: uppercase;"><?php echo Textos::model()->GetText(115); ?></p></label>
+									<label for="exampleInputName2"><p style="text-transform: uppercase; margin: 0;"><?php echo Textos::model()->GetText(115); ?></p></label>
 									<input class="form-inline" name="apellido" type="text" value="">
 								</div>
 							</div>
@@ -1624,7 +1624,7 @@
 							<!-- ******** EMAIL ******** -->
 							<div class="col-lg-6  col-md-6 col-xs-12">
 								<div class="input-contacto">
-								<label for="exampleInputName2"><p style="text-transform: uppercase;"><?php echo Textos::model()->GetText(116); ?></p></label>
+								<label for="exampleInputName2"><p style="text-transform: uppercase; margin: 0;"><?php echo Textos::model()->GetText(116); ?></p></label>
 									<input class="form-inline required" name="email" type="email" value="">
 									</div>
 							</div>
@@ -1633,7 +1633,7 @@
 							<!-- ******** TELÉFONO ******** -->
 							<div class="col-lg-6  col-md-6 col-xs-12">
 								<div class="input-contacto">
-								<label for="exampleInputName2"><p style="text-transform: uppercase;"><?php echo Textos::model()->GetText(117); ?></p></label>
+								<label for="exampleInputName2"><p style="text-transform: uppercase; margin: 0;"><?php echo Textos::model()->GetText(117); ?></p></label>
 									<input class="form-inline" name="telefono" type="text" value="">
 									</div>
 							</div>
@@ -1642,7 +1642,7 @@
 							<!-- ******** EMPRESA ******** -->
 							<div class="col-lg-6  col-md-6 col-xs-12">
 								<div class="input-contacto">
-								<label for="exampleInputName2"><p style="text-transform: uppercase;"><?php echo Textos::model()->GetText(118); ?></p></label>
+								<label for="exampleInputName2"><p style="text-transform: uppercase; margin: 0;"><?php echo Textos::model()->GetText(118); ?></p></label>
 									<input class="form-inline" name="empresa" type="text" value="">
 									</div>
 							</div>
@@ -1651,7 +1651,7 @@
 							<!-- ******** CARGO ******** -->
 							<div class="col-lg-6  col-md-6 col-xs-12">
 							<div class="input-contacto">
-								<label for="exampleInputName2"><p style="text-transform: uppercase;"><?php echo Textos::model()->GetText(119); ?></p></label>
+								<label for="exampleInputName2"><p style="text-transform: uppercase; margin: 0;"><?php echo Textos::model()->GetText(119); ?></p></label>
 									<input class="form-inline" name="cargo" type="text" value="">
 									</div>
 							</div>
@@ -1660,7 +1660,7 @@
 							<!-- ******** DIRECCIÓN ******** -->
 							<div class="col-lg-6  col-md-6 col-xs-12">
 								<div class="input-contacto">
-									<label for="exampleInputName2"><p style="text-transform: uppercase;"><?php echo Textos::model()->GetText(120); ?></p></label>
+									<label for="exampleInputName2"><p style="text-transform: uppercase; margin: 0;"><?php echo Textos::model()->GetText(120); ?></p></label>
 									<input class="form-inline" name="direccion" type="text" value="">
 								</div>
 							</div>
@@ -1669,7 +1669,7 @@
 							<!-- ******** DEPARTAMENTO ******** -->
 							<div class="col-lg-6  col-md-6 col-xs-12">
 							<div class="input-contacto">
-									<label for="exampleInputName2"><p style="text-transform: uppercase;"><?php echo Textos::model()->GetText(121); ?></p></label>
+									<label for="exampleInputName2"><p style="text-transform: uppercase; margin: 0;"><?php echo Textos::model()->GetText(121); ?></p></label>
 										<input class="form-inline" name="departamento" type="text" value="">
 										</div>
 							</div>
@@ -1678,7 +1678,7 @@
 							<!-- ******** MENSAJE ******** -->
 							<div class="col-md-12 col-md-12 col-sm-12 col-xs-12">
 								<div class="textarea-contacto">
-								<label id="textarea-label" for="exampleInputName2"><p style="text-transform: uppercase;"><?php echo Textos::model()->GetText(122); ?></p></label> 
+								<label id="textarea-label" for="exampleInputName2"><p style="text-transform: uppercase; margin: 0;"><?php echo Textos::model()->GetText(122); ?></p></label> 
 									<textarea rows="3" id="textarea" name="mensaje" class="required"></textarea>
 									</div>
 							</div>  <!--termina form textarea-->
@@ -1756,7 +1756,7 @@
 						
 						<?php include('redes-sociales-home-mobile.php');?>
 					
-			</div>
+					</div>
 
 				
 				<!-- /////////////// REDES SOCIALES  ///////////////  -->
