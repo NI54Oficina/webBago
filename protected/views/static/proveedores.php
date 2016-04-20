@@ -38,6 +38,8 @@
 					<li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 proveedores-li"><a style="font-size: 13px;" href="<?php echo Yii::app()->request->baseUrl; ?>/uploads/proveedores/Constancia-de-Inscripcion-IIBB.pdf" download="Constancia de Inscripción IIBB"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-descarga.png"  class="img-proveedores-download" /><p class="p-proveedores-download"  style="color: #337ab7; font-size: 13px;"><?php echo Textos::model()->GetText(382); ?></p></a></li>
 					
 					<li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 proveedores-li"><a style="font-size: 13px;" href="<?php echo Yii::app()->request->baseUrl; ?>/uploads/proveedores/Convenio-Multilateral.pdf" download="Convenio Multilateral"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-descarga.png"  class="img-proveedores-download" /><p class="p-proveedores-download"  style="color: #337ab7; font-size: 13px;"><?php echo Textos::model()->GetText(383); ?></p></a></li>
+
+					<li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 proveedores-li"><a style="font-size: 13px;" href="<?php echo Yii::app()->request->baseUrl; ?>/uploads/proveedores/Formulario-alta-proveedores.xlsx" download="Formulario Alta proveedores"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-descarga.png"  class="img-proveedores-download" /><p class="p-proveedores-download"  style="color: #337ab7; font-size: 13px;"><?php echo Textos::model()->GetText(511); ?></p></a></li>
 				</ul>		
 	</div>
 	</div>

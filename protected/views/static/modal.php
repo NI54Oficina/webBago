@@ -84,17 +84,17 @@ window.onclick = function(event) {
    
 }
 
-//  $("body").on("touchstart",".modal",function(){
-//   modal.style.display="block";
-//   if(isMobile){   
-//     ClickModal();
-//  }
-   
-// });
+$("body").on("touchstart",".modal",function(){
 
-//  function ClickModal(){
-//   modal.style.display="block";
-// }
+if(isMobile){   
+ClickModal();
+} 
+   
+});
+
+function ClickModal(){
+ 
+}
 
 
 
