@@ -6,37 +6,46 @@
 
   <div class="modal-1"> 
   	<span class="cerrar"></span>
- 	<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/mail-modal.png" >
- 	<p><?php echo Textos::model()->GetText(507);?></p>
-
- </div>
+ 	  <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/mail-modal.png" >
+  	<p><?php echo Textos::model()->GetText(508);?></p>
+  </div>
 
  <div class="modal-2">
  	
  	<form action="">
 
  	<div id="input-modal-email">
- 	<label>
- 	<p id="email-complete">E-MAIL</p> 
- 	</label>
- 	<input name="email" type="text"></input> </br>
-    </div>
+ 	  <label>
+ 	    <p id="email-complete"><?php echo Textos::model()->GetText(509);?>
+      </p> 
+ 	  </label>
+ 	  <input name="email" type="text"></input> </br>
+  </div>
+  
+  <div id="input-modal-email">
+   <label>
+      <p id="email-complete"><?php echo Textos::model()->GetText(510);?></p> 
+   </label>
+   <input name="email" type="text"></input> </br>
+  </div>
 
-    <div id="input-modal-mensaje">
+  <div id="input-modal-mensaje">
     <label>
- 	<p id="mensaje-complete" ><?php echo Textos::model()->GetText(122);?></p> 
- 	</label>
-  <textarea name="mensaje" type="text"></textarea></br>
- 	
+ 	    <p id="mensaje-complete" ><?php echo Textos::model()->GetText(122);?></p> 
+ 	  </label>
+    <textarea name="mensaje" type="text"></textarea></br>
  	</div>
- 	<button id="boton-mail" type="submit"> <p><?php echo Textos::model()->GetText(123);?></p></button>
+  
+  <button id="boton-mail" type="submit"> 
+    <p><?php echo Textos::model()->GetText(123);?>
+    </p>
+  </button>
+
  	</form>
 
  </div>
     
-    
-
-  </div>
+</div>
 
 </div>
 

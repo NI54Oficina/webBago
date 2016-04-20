@@ -1,17 +1,18 @@
 
 <script>
 $("body").on("mousedown",".navbar-toggle",function(){
-	console.log("poyooo");
+	
 	//$("body").css("background","red");
 });
 $("body").on("touchstart",".navbar-toggle",function(){
 	$(this).click();
+	
 });
 </script>
 <!---------------------------------------------------------------------------------------------      HEADER     --------------------------------------------------------------------------------------------->
 <!--<div id='logDiv' style='background:red;width:100vw;height:50vh;color:white;position:fixed;top:0;left:0;z-index:100000;'></div>!-->
 
-<header id="navbar-main" class="navbar navbar-inverse col-lg-12 col-md-12 col-sm-12 col-xs-12" style="width:100%;padding-bottom: 10px;background: -webkit-linear-gradient(left, rgba(255,255,255,1) 17%,rgba(255,255,255,1) 18%,rgba(255,255,255,0.98) 48%,rgba(255,255,255,0.99) 100%);
+<header id="navbar-main" class="navbar navbar-inverse col-lg-12 col-md-12 col-sm-12 col-xs-12 headerDesktop" style="width:100%;padding-bottom: 10px;background: -webkit-linear-gradient(left, rgba(255,255,255,1) 17%,rgba(255,255,255,1) 18%,rgba(255,255,255,0.98) 48%,rgba(255,255,255,0.99) 100%);
     background: linear-gradient(to right, rgba(255,255,255,1) 17%,rgba(255,255,255,1) 18%,rgba(255,255,255,0.98) 48%,rgba(255,255,255,0.99) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#b3ffffff',GradientType=1 );margin-bottom:0;top:0;border-radius:0;border:none;">
 		<!--+++++ LOGO BAGÓ MOBILE +++++ -->
@@ -21,7 +22,7 @@ $("body").on("touchstart",".navbar-toggle",function(){
 	
 	<div class="div-nav-2"><a href="http://www.fronterasproductivas.com/" target="_blank" style="float:left;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/fronteras-50x50-01.png" /></a></div>
 	<!-- ////////////////BARA DE NAVEGACIÓN //////////////////-->
-	<nav  id="navbarSecciones" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 collapse navbar-collapse" data-toggle="collapse" style="padding:0 30px;">
+	<nav  id="navbarSecciones" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 collapse navbar-collapse" data-toggle="collapse" style="">
 		
 		<div class="container-fluid" style="padding:0;">
 			<div id="boxes" style="text-align:left;">
@@ -139,7 +140,7 @@ $("body").on("touchstart",".navbar-toggle",function(){
 			
 			
 			<!-- INSTITUCIONAL -->
-			<li class="li-header" ><p  class="toggle-dropdown-header" target="#dropInsti" ><?php echo Textos::model()->GetText(347); ?><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/flecha-menu.png" /> </p>
+			<li class="li-header " ><p  class="toggle-dropdown-header" target="#dropInsti" ><?php echo Textos::model()->GetText(347); ?><span class="glyphicon glyphicon-chevron-down"></span></p>
 				
 				<ul id="dropInsti" class="dropdown-header-nav">
 						<img  id="flecha-submenu" src="<?php echo Yii::app()->request->baseUrl; ?>/img/flecha-submenu.png" />
@@ -166,20 +167,20 @@ $("body").on("touchstart",".navbar-toggle",function(){
 			
 			<?php if($_SESSION["lng"]=="es"){ ?>
 			<!-- INFO TÉCNICA -->
-			<li class="li-header"><p class="toggle-dropdown-header" target="#dropTecnica" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/informacion-tecnica" class="" ><?php echo Textos::model()->GetText(433); ?> <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/flecha-menu.png" /></p>
+			<li class="li-header"><p class="toggle-dropdown-header" target="#dropTecnica" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/informacion-tecnica" class="" ><?php echo Textos::model()->GetText(433); ?> <span class="glyphicon glyphicon-chevron-down"></span></p>
 				
 				<ul id="dropTecnica" class="dropdown-header-nav">
 							<img id="flecha-submenu" src="<?php echo Yii::app()->request->baseUrl; ?>/img/flecha-submenu.png" />
-								<li style="margin-top:-5px;"><a class="link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/home/#inform-tec" down="sessionStorage.sub='sanitarios';"><?php echo Textos::model()->GetText(434); ?></a></li>
-								<li><a class="link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/home/#inform-tec" down="sessionStorage.sub='planillas';"><?php echo Textos::model()->GetText(435); ?></a></li>
-								<li><a class="link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/home/#inform-tec" down="sessionStorage.sub='tecnico';"><?php echo Textos::model()->GetText(436); ?></a></li>
+								<li style="margin-top:-5px;"><a class="a-sub link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/home/#inform-tec" down="sessionStorage.sub='sanitarios';"><?php echo Textos::model()->GetText(434); ?></a></li>
+								<li><a class="a-sub link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/home/#inform-tec" down="sessionStorage.sub='planillas';"><?php echo Textos::model()->GetText(435); ?></a></li>
+								<li><a class="a-sub link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/home/#inform-tec" down="sessionStorage.sub='tecnico';"><?php echo Textos::model()->GetText(436); ?></a></li>
 				</ul>
 					
 			</li>
 			<?php } ?>
 			
 			<!-- VADEMÉCUM -->
-			<li class="li-header"><p class="toggle-dropdown-header" target="#dropVedemecum"><?php echo Textos::model()->GetText(348); ?> <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/flecha-menu.png" /></p>
+			<li class="li-header"><p class="toggle-dropdown-header" target="#dropVedemecum"><?php echo Textos::model()->GetText(348); ?> <span class="glyphicon glyphicon-chevron-down"></span></p>
 				
 				<ul id="dropVedemecum" class="dropdown-header-nav">
 					
@@ -200,7 +201,7 @@ $("body").on("touchstart",".navbar-toggle",function(){
 									
 								
 								?>
-						<li style="margin-top:-5px;"><a class="link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id<?php echo $value; ?>"><?php echo Yii::app()->paisChecker->getSeccion($value); ?></a></li>
+						<li style="margin-top:-5px;"><a class="a-sub link-menu" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/vademecum/id<?php echo $value; ?>"><?php echo Yii::app()->paisChecker->getSeccion($value); ?></a></li>
 						<?php 
 							} }
 						?>
