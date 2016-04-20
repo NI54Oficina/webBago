@@ -270,6 +270,11 @@ $(function(){
 			
 			$("body").css("padding-top",$("#navbar-main").height()+"px");
 		}
+		if(isMobile){
+			if(!$(".headerMobile .navbar-collapse").hasClass("in")){
+				$(".headerMobile .navbar-collapse").height(0);
+			}
+		}
 		
 	}
 	
