@@ -266,14 +266,21 @@ $(function(){
 	
 	function Header(){
 		console.log("entra");
+		var auxH=$("#logo-bago-mobile").outerHeight()+10;
 		if(!isHome){
 			
-			$("body").css("padding-top",$("#navbar-main").height()+"px");
+			//$("body").css("padding-top",$("#navbar-main").height()+"px");
+			$("body").css("padding-top",auxH+"px");
 		}
 		if(isMobile){
-			if(!$(".headerMobile .navbar-collapse").hasClass("in")){
-				$(".headerMobile .navbar-collapse").height(0);
+			if(!$("#navbarSecciones").hasClass("in")){
+				$("#navbarSecciones").height(0);
 			}
+			var rule = getStyleRule('.headerMobile .navbar-collapse.in');
+			//var auxH= screen.height-$("#navbar-main").height();
+			auxH= screen.height-auxH+10;
+			rule.height= auxH+"px";
+			console.log(rule.height);;
 		}
 		
 	}
@@ -597,3 +604,13 @@ if ($(this).scrollTop() >200){
 }});
 
 
+function getStyleRule(name) {
+	for(var i=0; i<document.styleSheets.length; i++) {
+		var ix, sheet = document.styleSheets[i];
+		for (ix=0; ix<sheet.cssRules.length; ix++) {
+			if (sheet.cssRules[ix].selectorText === name)
+				return sheet.cssRules[ix].style;
+		}
+	}
+	return null;
+}

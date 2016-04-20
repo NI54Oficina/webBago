@@ -109,6 +109,10 @@ p{
 font-size: 22px;
 }
 
+/**test fran menu mobile **/
+.headerMobile .navbar-collapse.in{
+	height:100vh !important;
+}
 
 
 /****************** HOME  VIDEO *******************/
@@ -4726,11 +4730,11 @@ figure.snip1156:hover .salud-ambiental{
 	}
 	
 	#ul-paises-nav{
-	    width: 100vw;
+	    width: 100%;
 		left: 0;
 		top: 20vh;
-		position: fixed;
-		min-height: 80vh;
+		position: initial;
+		background:transparent;
 		transition: all 0.4s ease;
 		padding: 0;
 		margin:0;
