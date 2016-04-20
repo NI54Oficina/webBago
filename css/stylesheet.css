@@ -10672,7 +10672,6 @@ and (orientation: landscape) {
   and (min-device-width: 375px) 
   and (max-device-width: 668px) 
   and (orientation: portrait){
-	
 	#form1 #enviar {
 		background: #359FBD;
 		opacity: 1;
@@ -10701,8 +10700,7 @@ and (orientation: landscape) {
 @media only screen 
   and (min-device-width: 414px) 
   and (max-device-width: 736px) 
-  and (orientation: portrait){
-	
+  and (orientation: portrait){	
 	#form1 #enviar {
 		background: #359FBD;
 		opacity: 1;
@@ -10801,6 +10799,7 @@ and (orientation: landscape) {
 and (min-device-width: 320px) 
 and (max-device-width: 533px) 
 and (orientation: landscape){
+
 	.container-flecha{
 		bottom:60px;
 	}
