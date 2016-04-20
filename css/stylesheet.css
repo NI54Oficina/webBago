@@ -10462,29 +10462,17 @@ position:fixed;
     max-width: 80%;
 	height: 480px; 
 	position: relative;
-    margin: 15% auto; 
+    margin: 20% auto; 
     border:2px solid #00CDD0;
 	display:block;
 	background-color: white;
-	margin-top:25%; 
+	
 	vertical-align: middle; 
 	text-align: center;
 }
 
 
-.cerrar {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
 
-
-.cerrar:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
 
 .modal-1 { 
 	background-color:#00CDD0;
@@ -10525,13 +10513,6 @@ position:fixed;
 	padding-top: 20px;
 }
 
-#boton-mail p {
-	text-align: center; 
-	font-family: arial; 
-	font-size: 18px; 
-	color: white;
-}
-
 #boton-mail { 
 	background-color: #00CDD0; 
 	border-radius: 2px; 
@@ -10541,6 +10522,20 @@ position:fixed;
     width: 140px;
 	float: right; 
 	margin-top: 25px; 
+	position: relative;
+	color: white;
+	text-align: center; 
+	font-family: arial; 
+	font-size: 18px; 
+}
+
+#boton-mail:hover { 
+	background-color: white; 
+	border-radius: 2px; 
+	color:  #00CDD0; 
+	border: 2px solid #00CDD0; 
+	transition: all 0.6s ease;
+
 }
 
 #modal-2 input {
