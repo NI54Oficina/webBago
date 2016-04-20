@@ -109,6 +109,10 @@ p{
 font-size: 22px;
 }
 
+/**test fran menu mobile **/
+.headerMobile .navbar-collapse.in{
+	height:100vh !important;
+}
 
 
 /****************** HOME  VIDEO *******************/
@@ -4712,11 +4716,11 @@ figure.snip1156:hover .salud-ambiental{
 	}
 	
 	#ul-paises-nav{
-	    width: 100vw;
+	    width: 100%;
 		left: 0;
 		top: 20vh;
-		position: fixed;
-		min-height: 80vh;
+		position: initial;
+		background:transparent;
 		transition: all 0.4s ease;
 		padding: 0;
 		margin:0;
@@ -10432,13 +10436,14 @@ position:fixed;
 }
 
 
+
 .menu-modal {
 
     width: 500px; 
     max-width: 80%;
-	height: 480px; 
+	height: auto; 
 	position: relative;
-    margin: 20% auto; 
+    margin: 30% auto; 
     border:2px solid #00CDD0;
 	display:block;
 	background-color: white;
@@ -10484,10 +10489,12 @@ position:fixed;
 }
 
 .modal-2 {
-	padding-left: 30px; 
-	padding-right: 30px; 
-	padding-top: 20px;
+	
+	padding: 25px 30px;
+
 }
+
+#testing {width: 100%; text-align: right;}
 
 #boton-mail { 
 	background-color: #00CDD0; 
@@ -10496,13 +10503,14 @@ position:fixed;
 	border: none; 
 	height: 35px;
     width: 140px;
-	float: right; 
+	/*float: right; */
 	margin-top: 25px; 
 	position: relative;
 	color: white;
 	text-align: center; 
 	font-family: arial; 
 	font-size: 18px; 
+	max-width: 80%;
 }
 
 #boton-mail:hover { 
@@ -10823,7 +10831,7 @@ and (orientation: landscape) {
 		font-family: 'arialregular';
 		transition: all 0.5s ease;
 		display: inline-block;
-		max-width: 300px;
+		max-width: 400px;
 	}
 	
 	body .content-home{
@@ -10843,7 +10851,7 @@ and (orientation: landscape) {
   and (orientation: portrait){
 	#btnmenu {
 		display: inline-block;
-		margin-top: -7%;
+		margin-top: -9%;
 		margin-right: 2%;
 		transition: all 0.5s ease;
 		float: right;
