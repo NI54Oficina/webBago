@@ -167,7 +167,7 @@ $("body").on("touchstart",".navbar-toggle",function(){
 			
 			<?php if($_SESSION["lng"]=="es"){ ?>
 			<!-- INFO TÉCNICA -->
-			<li class="li-header"><p class="toggle-dropdown-header" target="#dropTecnica" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/informacion-tecnica" class="" ><?php echo Textos::model()->GetText(433); ?> <span class="glyphicon glyphicon-chevron-down"></span></p>
+			<li class="li-header"><p class="toggle-dropdown-header" target="#dropTecnica"  class="" ><?php echo Textos::model()->GetText(433); ?> <span class="glyphicon glyphicon-chevron-down"></span></p>
 				
 				<ul id="dropTecnica" class="dropdown-header-nav">
 							<img id="flecha-submenu" src="<?php echo Yii::app()->request->baseUrl; ?>/img/flecha-submenu.png" />

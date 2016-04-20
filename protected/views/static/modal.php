@@ -37,8 +37,7 @@
  	</div>
   
   <button id="boton-mail" type="submit"> 
-    <p><?php echo Textos::model()->GetText(123);?>
-    </p>
+    <?php echo Textos::model()->GetText(123);?>
   </button>
 
  	</form>
@@ -61,13 +60,13 @@ var botonmobile = document.getElementById("mail-mobile");
 
 var span = document.getElementsByClassName("cerrar")[0];
 
-boton.onclick = function() {
-    modal.style.display = "block";
-}
+// boton.onclick = function() {
+//     modal.style.display = "block";
+// }
 
-botonmobile.onclick = function() {
-    modal.style.display = "block";
-}
+// botonmobile.onclick = function() {
+//     modal.style.display = "block";
+// }
 
 
 span.onclick = function() {
@@ -79,6 +78,22 @@ window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
+
+   
 }
+$("body").on("touchstart",".modal",function(){
+  if(isMobile){   
+   ClickModal();
+  }
+   
+});
+
+function ClickModal(){
+  modal.style.display="block";
+}
+
+ 
+
+
 </script>
 
