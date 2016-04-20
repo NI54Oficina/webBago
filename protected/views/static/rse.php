@@ -23,7 +23,7 @@
 				<div  class="imagenes-fundaciones col-lg-12 col-md-12 col-sm-6 col-xs-6"><img class="img-fundaciones-4" src="<?php echo Yii::app()->request->baseUrl; ?>/img/rse-misiones-rurales.png"  /></div>
 				<div  class="imagenes-fundaciones col-lg-12 col-md-12 col-sm-6 col-xs-6"><img class="img-fundaciones-5" src="<?php echo Yii::app()->request->baseUrl; ?>/img/rse-solidagro.png"  /></div>
 				<div  class="imagenes-fundaciones col-lg-12 col-md-12 col-sm-6 col-xs-6"><img class="img-fundaciones-6" src="<?php echo Yii::app()->request->baseUrl; ?>/img/rse-fernandez.png"  /></div>
-				<div  class="imagenes-fundaciones col-lg-12 col-md-12 col-sm-6 col-xs-6"><img class="img-fundaciones-7" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo-gutierrez-2.jpeg"  /></div>
+				<div  class="imagenes-fundaciones col-lg-12 col-md-12 col-sm-6 col-xs-6"><img class="img-fundaciones-7" src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo-gutierrez.png"  /></div>
 
 
 			</div>	
