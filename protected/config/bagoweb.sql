@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
+-- version 4.3.11
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 20-04-2016 a las 20:07:12
--- Versión del servidor: 10.1.9-MariaDB
--- Versión de PHP: 5.5.30
+-- Tiempo de generación: 20-04-2016 a las 21:36:22
+-- Versión del servidor: 5.6.24
+-- Versión de PHP: 5.6.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -14,7 +14,7 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40101 SET NAMES utf8 */;
 
 --
 -- Base de datos: `bagoweb`
@@ -26,7 +26,7 @@ SET time_zone = "+00:00";
 -- Estructura de tabla para la tabla `authassignment`
 --
 
-CREATE TABLE `authassignment` (
+CREATE TABLE IF NOT EXISTS `authassignment` (
   `itemname` varchar(64) NOT NULL,
   `userid` varchar(64) NOT NULL,
   `bizrule` text,
@@ -52,7 +52,7 @@ INSERT INTO `authassignment` (`itemname`, `userid`, `bizrule`, `data`) VALUES
 -- Estructura de tabla para la tabla `authitem`
 --
 
-CREATE TABLE `authitem` (
+CREATE TABLE IF NOT EXISTS `authitem` (
   `name` varchar(64) NOT NULL,
   `type` int(11) NOT NULL,
   `description` text,
@@ -103,7 +103,7 @@ INSERT INTO `authitem` (`name`, `type`, `description`, `bizrule`, `data`) VALUES
 -- Estructura de tabla para la tabla `authitemchild`
 --
 
-CREATE TABLE `authitemchild` (
+CREATE TABLE IF NOT EXISTS `authitemchild` (
   `parent` varchar(64) NOT NULL,
   `child` varchar(64) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -114,43 +114,43 @@ CREATE TABLE `authitemchild` (
 
 INSERT INTO `authitemchild` (`parent`, `child`) VALUES
 ('admin', 'adminAccess'),
-('admin', 'adminImagenes'),
-('admin', 'adminProducto'),
-('admin', 'adminSeccion'),
-('admin', 'createEstablecimiento'),
-('admin', 'createPost'),
-('admin', 'createProducto'),
-('admin', 'createRole'),
-('admin', 'createUser'),
-('admin', 'deletePost'),
-('admin', 'deleteProducto'),
-('admin', 'deleteUsers'),
-('admin', 'editPost'),
-('admin', 'editUsers'),
-('admin', 'updateEstablecimiento'),
-('admin', 'updateProducto'),
-('admin', 'vademecum'),
-('author', 'createPost'),
 ('poyo', 'adminAccess'),
+('admin', 'adminImagenes'),
 ('poyo', 'adminImagenes'),
+('admin', 'adminProducto'),
 ('poyo', 'adminProducto'),
+('admin', 'adminSeccion'),
 ('poyo', 'adminSeccion'),
+('admin', 'createEstablecimiento'),
 ('poyo', 'createEstablecimiento'),
+('admin', 'createPost'),
+('author', 'createPost'),
 ('poyo', 'createPost'),
-('poyo', 'createProducto'),
-('poyo', 'createRole'),
-('poyo', 'createUser'),
-('poyo', 'deletePost'),
-('poyo', 'deleteProducto'),
-('poyo', 'deleteUsers'),
-('poyo', 'editPost'),
-('poyo', 'editUsers'),
-('poyo', 'updateEstablecimiento'),
-('poyo', 'updateProducto'),
-('poyo', 'vademecum'),
 ('poyoyo', 'createPost'),
+('admin', 'createProducto'),
+('poyo', 'createProducto'),
+('admin', 'createRole'),
+('poyo', 'createRole'),
+('admin', 'createUser'),
+('poyo', 'createUser'),
 ('poyoyo', 'createUser'),
-('poyoyo', 'editUsers');
+('admin', 'deletePost'),
+('poyo', 'deletePost'),
+('admin', 'deleteProducto'),
+('poyo', 'deleteProducto'),
+('admin', 'deleteUsers'),
+('poyo', 'deleteUsers'),
+('admin', 'editPost'),
+('poyo', 'editPost'),
+('admin', 'editUsers'),
+('poyo', 'editUsers'),
+('poyoyo', 'editUsers'),
+('admin', 'updateEstablecimiento'),
+('poyo', 'updateEstablecimiento'),
+('admin', 'updateProducto'),
+('poyo', 'updateProducto'),
+('admin', 'vademecum'),
+('poyo', 'vademecum');
 
 -- --------------------------------------------------------
 
@@ -158,12 +158,12 @@ INSERT INTO `authitemchild` (`parent`, `child`) VALUES
 -- Estructura de tabla para la tabla `tbl_error`
 --
 
-CREATE TABLE `tbl_error` (
+CREATE TABLE IF NOT EXISTS `tbl_error` (
   `id` int(11) NOT NULL,
   `codigo` int(3) NOT NULL,
   `idoma` varchar(4) NOT NULL,
   `texto` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tbl_error`
@@ -180,7 +180,7 @@ INSERT INTO `tbl_error` (`id`, `codigo`, `idoma`, `texto`) VALUES
 -- Estructura de tabla para la tabla `tbl_establecimiento`
 --
 
-CREATE TABLE `tbl_establecimiento` (
+CREATE TABLE IF NOT EXISTS `tbl_establecimiento` (
   `id` int(11) NOT NULL,
   `nombre` varchar(200) NOT NULL,
   `latitud` varchar(100) NOT NULL,
@@ -195,10 +195,10 @@ CREATE TABLE `tbl_establecimiento` (
 -- Estructura de tabla para la tabla `tbl_imagen_ref`
 --
 
-CREATE TABLE `tbl_imagen_ref` (
+CREATE TABLE IF NOT EXISTS `tbl_imagen_ref` (
   `id` int(11) NOT NULL,
   `producto_id` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=634 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tbl_imagen_ref`
@@ -788,11 +788,11 @@ INSERT INTO `tbl_imagen_ref` (`id`, `producto_id`) VALUES
 -- Estructura de tabla para la tabla `tbl_metatag`
 --
 
-CREATE TABLE `tbl_metatag` (
+CREATE TABLE IF NOT EXISTS `tbl_metatag` (
   `id` int(11) NOT NULL,
   `nombre` varchar(300) NOT NULL,
   `code` text NOT NULL COMMENT 'colocar [variable] donde va la parte seteable de la tag'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tbl_metatag`
@@ -807,12 +807,12 @@ INSERT INTO `tbl_metatag` (`id`, `nombre`, `code`) VALUES
 -- Estructura de tabla para la tabla `tbl_metatag_page`
 --
 
-CREATE TABLE `tbl_metatag_page` (
+CREATE TABLE IF NOT EXISTS `tbl_metatag_page` (
   `id` int(11) NOT NULL,
   `idPage` int(11) NOT NULL,
   `idMetatag` int(11) NOT NULL,
   `dat` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tbl_metatag_page`
@@ -827,7 +827,7 @@ INSERT INTO `tbl_metatag_page` (`id`, `idPage`, `idMetatag`, `dat`) VALUES
 -- Estructura de tabla para la tabla `tbl_miscelaneo`
 --
 
-CREATE TABLE `tbl_miscelaneo` (
+CREATE TABLE IF NOT EXISTS `tbl_miscelaneo` (
   `id` int(11) NOT NULL,
   `key` varchar(100) NOT NULL,
   `value` text NOT NULL
@@ -839,7 +839,7 @@ CREATE TABLE `tbl_miscelaneo` (
 -- Estructura de tabla para la tabla `tbl_notas`
 --
 
-CREATE TABLE `tbl_notas` (
+CREATE TABLE IF NOT EXISTS `tbl_notas` (
   `id` int(11) NOT NULL,
   `fecha` date NOT NULL,
   `titulo` varchar(300) NOT NULL,
@@ -848,7 +848,7 @@ CREATE TABLE `tbl_notas` (
   `texto` text NOT NULL,
   `seccion` varchar(50) NOT NULL,
   `pais` varchar(4) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=124 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tbl_notas`
@@ -980,6 +980,9 @@ INSERT INTO `tbl_notas` (`id`, `fecha`, `titulo`, `bajada`, `extra`, `texto`, `s
 (119, '2016-02-17', 'Sincronización de las ovulaciones con cipionato de estradiol en vaquillonas tratadas con un dispositivo intravaginal con progesterona*', 'El objetivo del trabajo fue evaluarel efecto delcipionato de estradiol (CPE)en vaquillonas tratadas con un dispositivo intravaginal con progesterona (DISP) sobre la distribución de las', 'Rodríguez Pérsico1, J.M.; Esperanza2, G.; Russo2, S.N.; Callejas3, S.S.\n1Laboratorio Biogénesis Bagó. 2Actividad privada. 3Área de Reproducción. FISFARVET.\nFac. Cs. Vet. UNCPBA. Tandil. Bs. As. Email: callejas@vet.unicen.edu.ar', '<p>El objetivo del trabajo fue evaluarel efecto delcipionato de estradiol (CPE)en vaquillonas tratadas con un dispositivo intravaginal con progesterona (DISP) sobre la distribuci&oacute;n de las ovulaciones. Se utilizaron 31vaquillonas Angus y Angus x Hereford (caretas),con una edad de 18 a 19 meses y una condici&oacute;n corporal promedio (&plusmn; desv&iacute;o est&aacute;ndar) de 2,6&plusmn;0,3 (escala 1 a 5; 1: emaciada y 5: obesa). El 74,2% de las mismas ten&iacute;an un cuerpo l&uacute;teo (CL) al inicio del tratamiento. La alimentaci&oacute;n se bas&oacute; en campo natural con buena oferta forrajera. Adem&aacute;s, recibieron un balanceado molido (12% de prote&iacute;na bruta), comenzando 14 d&iacute;as antes de colocar los DISP. La suplementaci&oacute;n se realiz&oacute; incrementando en forma progresiva el suplemento durante 5 d&iacute;as hasta llegar a un consumo del 1% del peso vivo. A partir de este momento, se racion&oacute; a raz&oacute;n de 3,2 kg/cabeza/d&iacute;a hasta el final del estudio de din&aacute;mica folicular. En el d&iacute;a -7, se coloc&oacute; un DISP con 0,558 g de progesterona (Cronipres &reg; M24, Biog&eacute;nesis Bag&oacute;, Argentina) m&aacute;s una inyecci&oacute;n, im, de 2 mg de benzoato de estradiol (Bioestrogen&reg;, Biog&eacute;nesis Bag&oacute;, Argentina). El d&iacute;a 0 se retir&oacute; el DISP, se administr&oacute; 0,150 mg de D-Cloprostenol (Enzaprost &reg; D-C, Biog&eacute;nesis Bag&oacute;, Argentina) y las hembras fueron distribuidas en forma aleatoria a 2 grupos que recibieron los siguientes tratamientos: <strong>1) CPE (n=16</strong>): una inyecci&oacute;n, im, de 0,5 mg (1 ml) de CPE (Croni-Cip&reg;, Biog&eacute;nesis Bag&oacute;, Argentina). <strong>2) PLACEBO (n=15)</strong>: una inyecci&oacute;n, im, de 1 ml de la soluci&oacute;n de los excipientes del CPE. Desde eld&iacute;a 0 (hora 0, retiro del DISP) hasta la hora 48 se realizaron ecograf&iacute;as cada 12 horas, posteriormente cada 8 horas hasta la hora 120 para determinar el momento de la ovulaci&oacute;n (Honda HS 101V - 5 MHz). Se consider&oacute; que el animal hab&iacute;a ovulado cuando desapareci&oacute; el fol&iacute;culo dominante (FD) y en su lugar apareci&oacute; un CLen el d&iacute;a 14 postDISP. La h de ovulaci&oacute;n se determin&oacute; como el promedio entre la hora de medici&oacute;n del FD por &uacute;ltima vez y la hora en que este desapareci&oacute;.Los datos se analizaron por SAS. Hasta la hora 116, el 80,6 % de las vaquillonas ovularon en respuesta al tratamiento, tendiendo a ser mayor en el grupo CPE (P=0,08). Este afect&oacute; la distribuci&oacute;n en que las mismas ocurrieron (P&lt;0,05, Tabla 1). El intervalo retiro DISP &ndash; ovulaci&oacute;n tendi&oacute; a ser menor en el grupo CPE (P=0,06; CPE: 65,3&plusmn;12,3 h.; PLACEBO: 74,4&plusmn;9,8 h.).Cuatro vacas ovularon luego de la hora 116 (12,9%) determinado por la presencia de un CL en el d&iacute;a14 (CPE: 1 y PLACEBO: 3).</p>\r\n\r\n<p>\r\nTabla 1. Porcentaje y distribuci&oacute;n de ovulaciones en vaquillonas que recibieron un dispositivo intravaginal con progesterona e inyectadas o no con cipionato de estradiol al retiro. </p>\r\n\r\n<img class="imagen-nota-tecnica" src="/uploads/tecnica/119-poster6.png"  />\r\n\r\n<p  class="pre" style="font-size: 12px; line-height:15px;">\r\nValores con super&iacute;ndices diferentesen una misma columna difieren:a,b:P&lt;0,05; x,y:P=0,08</p>\r\n\r\n<p>Se concluye que el CPE inyectado al retirar un DISP tiende a aumentar el porcentaje de ovulaci&oacute;n que ocurre hasta la hora 116 luego de su administraci&oacute;n; generando adem&aacute;s, un cambio en la distribuci&oacute;n en que ocurren las mismas.</p>\r\n\r\n<p><strong>Palabras clave</strong>: Cipionato de estradiol, progesterona, dispositivo intravaginal, ovulaci&oacute;n.</p>\r\n\r\n<p><strong>Key words: </strong>Estradiol cypionate, progesterone, intravaginal device, ovulation.</p>\r\n\r\n<p class="pre" style="font-size: 12px; line-height:15px;">\r\n*Proyecto Comisi&oacute;n de Investigaci&oacute;n Cient&iacute;ficas Bs. As., convocatoria 2013.\r\n\r\n</p>\r\n', 'tecnica', 'es'),
 (120, '2016-02-17', 'Efecto de la eCG administrada en vacas con cría tratadas con un dispositivo intravaginal  con progesterona sobre la dinámica folicular, ovulación y área del cuerpo lúteo ', 'El uso de dispositivos intravaginales con progesterona (DISP) combinado con benzoato de estradiol (BE) administrado en el momento de colocar el DISP y a las 24 horas de retirado el', 'Callejas1, S.S.; De la Mata2, J.J.; Rodríguez Pérsico3, J.M. y Gonzalez Chaves2, S.\n1Área de Reproducción. FISFARVET. Facultad de Ciencias Veterinarias. UNCPBA. (7000)\nTandil. Buenos Aires. Argentina. 2Actividad privada. 3Biogénesis Bagó, Ruta Panamericana Km\n38,5 (1619) Garín. Buenos Aires. Argentina. sscallejas@gmail.com ', '<h2>Abstract</h2>\r\n\r\n<p>Effect of eCG on ovarian follicular dynamic, ovulation and corpus luteum area in anestrous suckled beef cows treated with progesterone based protocol. The objective of the study was to evaluate the effect of i.m. administration of equine chorionic gonadotropin (eCG) on ovarian follicular dynamic, ovulation and corpus luteum (CL) area in anestrous suckled beef cows. Ultrasonography examinations were performed on Day 0 (progesterone intravaginal device insert - PID), 8, 9 and posteriori every 12 h. until day 12. One last ultrasound was performed on day 21. The cows (post partum: &ge; 50 days; body condition score: 2,3&plusmn;0,3 - 1-5 scale) received a PID (1 g) on day 0 plus 2 mg estradiol benzoate (EB) i.m. On Day 8, the PID was removed and 150 &micro;g D-Cloprostenol was administered. Cows were assigned to receive 400 IU of eCG (eCG Group; n=12 ) or not receive (Control Group; n=12). On day 9, 1 mg EB was injected. The effect of treatment on ovulation rate, follicle dominant diameter on day 8, ovulatory follicle growth rate and its diameter, and CL area were evaluated (SAS). eCG increased growth rate of ovulatory follicle and its diameter, and CL area P&le;0,05). No difference were observed in the other variable (P&gt;0,05). In conclusion, eCG produce the following changes at the ovarian level: increases the growth rate of the ovulatory follicle and its diameters, and increases the area of the CL.</p>\r\n\r\n<h2>Introducción</h2>\r\n\r\n<p>El uso de dispositivos intravaginales con progesterona (DISP) combinado con benzoato de estradiol (BE) administrado en el momento de colocar el DISP y a las 24 horas de retirado el mismo, sumado a una inyecci&oacute;n de un agente luteol&iacute;tico en el final del tratamiento ha permitido implementar programas de inseminaci&oacute;n artificial a tiempo fijo (IATF; Callejas, 2005). Este tratamiento, se lo ha combinado con la Gonadotrofina Cori&oacute;nica equina (eCG) para mejorar las tasas de pre&ntilde;ez que se obtienen en vacas en anestro con pobre condici&oacute;n corporal. En consecuencia, para estudiar las causas que expliquen dicha mejora, se plante&oacute; el objetivo de evaluar el efecto de la eCG administrada al retirar un DISP sobre la din&aacute;mica folicular, ovulaci&oacute;n y &aacute;rea del cuerpo l&uacute;teo (CL) en vacas con cr&iacute;a en anestro.</p>\r\n\r\n<h2>Materiales y métodos</h2>\r\n\r\n<p>El trabajo se realiz&oacute; en un Establecimiento comercial (Pila, Bs. As., Argentina), utilizando 24 vacas con cr&iacute;a, Angus negras (post parto &ge; a 50 d&iacute;as), una condici&oacute;n corporal de 2,3&plusmn;0,3 (rango: 2-3; escala 1 a 5, 1: emaciada y 5: obesa) en anestro (sin CL y ausencia de celo). La alimentaci&oacute;n de las vacas se bas&oacute; en campo natural.</p>\r\n\r\n<p>En el d&iacute;a 0, se coloc&oacute; un DISP (1 g de P4, Cronipres&reg; Tres Usos, Biog&eacute;nesis Bag&oacute;) m&aacute;s 2 mg de BE, i.m. (Bioestrogen&reg;, Biog&eacute;nesis Bag&oacute;). El d&iacute;a 8 se retir&oacute; el DISP, se administr&oacute; 0,150 mg de D-Cloprostenol (Enzaprost &reg; D-C, Biog&eacute;nesis Bag&oacute;) y las vacas fueron distribuidas en forma aleatoria a: 1) Grupo eCG (n=12): 400 UI de eCG, i.m. (Ecegon&reg;, Biog&eacute;nesis Bag&oacute;). 2) Grupo Control (n=12): Sin eCG. El d&iacute;a 9 las vacas de ambos grupos recibieron 1 mg de BE.</p>\r\n\r\n<p>Los d&iacute;as 8, 9 y a posteri cada 12 h. hasta el d&iacute;a 12 se realizaron ecograf&iacute;as para determinar la evoluci&oacute;n del fol&iacute;culo dominante (FD) presente al d&iacute;a 8. El d&iacute;a 21 se midi&oacute; el &aacute;rea del CL. Se consider&oacute; ovulaci&oacute;n cuando el FD desapareci&oacute; y en su lugar apareci&oacute; un CL (FD preovulatorio - FDP). El momento de ovulaci&oacute;n fue definido como el tiempo promedio (h.) entre la &uacute;ltima observaci&oacute;n del FDP y aquel en el que el FDP desapareci&oacute;. La tasa de crecimiento del FDP (mm/12 horas) fue determinado para cada uno de los FDP mediante regresi&oacute;n lineal (Proc REG, SAS), utilizando el d&iacute;a como variable independiente y el di&aacute;metro como variable dependiente. Se evaluaron los efectos del tratamiento sobre: porcentaje de ovulaci&oacute;n, di&aacute;metro del FD al d&iacute;a 8, tasa de crecimiento del FDP, di&aacute;metro del FDP, intervalo retiro del DISP - ovulaci&oacute;n y &aacute;rea del CL. Las variables continuas fueron analizadas por ANOVA (Proc. GLM, SAS). El di&aacute;metro del FDP no cumpli&oacute; con el supuesto de homogeneidad de variancia (test de Barttlet) por lo cual se utiliz&oacute; el t-test de Welch (SAS). El intervalo a la ovulaci&oacute;n no cumpli&oacute; con el supuesto de normalidad (test de Kolmogorov-Smirnov) por lo que se utiliz&oacute; el test de Kruskal Wallis (SAS). Para comparar el porcentaje de ovulaci&oacute;n se utiliz&oacute; la prueba exacta de Fisher. Se consideraron diferencias significativas a P&le;0,05. Los resultados se expresan como la media&plusmn;d.e.</p>\r\n\r\n<h2>Resultados</h2>\r\n\r\n<p>En la Tabla 1 se describen los resultados obtenidos.</p>\r\n\r\n<p>\r\nTabla 1. Variables respuesta a nivel ov&aacute;rico en vacas con cr&iacute;a tratado con un dispositivo 63 intravaginal con 1 g de progesterona seg&uacute;n recibieron eCG o no (Control)</p>\r\n\r\n<img class="imagen-nota-tecnica" src="/uploads/tecnica/120-poster7.png"  />\r\n\r\n<h2>Discusión</h2>\r\n\r\n<p>El aumento en la tasa de crecimiento del FDP, en su di&aacute;metro y en el &aacute;rea del CL dan base para explicar las causas por las cual se aumenta la pre&ntilde;ez al utilizar eCG en vacas con cr&iacute;a en anestro post parto y en pobre condici&oacute;n corporal (Sa Filho y cols., 2010). La mayor &aacute;rea del CL se reflejar&iacute;a en una mayor concentraci&oacute;n de progesterona, tal cual fue observado por M&aacute;rquez y cols. (2003), generando mejores condiciones para mantener la gestaci&oacute;n.</p>\r\n\r\n<h2>Conclusiones</h2>\r\n\r\n<p>El uso de eCG produce un aumento en la tasa de crecimiento y del di&aacute;metro del FDP y aumenta el &aacute;rea del cuerpo l&uacute;teo registrado en el d&iacute;a 21 (D&Iacute;A 0: inicio del tratamiento).</p>\r\n\r\n<h2>Fuentes de financiamiento</h2>\r\n\r\n<p>El presente proyecto fue financiado por el Laboratorio Biog&eacute;nesis Bag&oacute; y la Comisi&oacute;n de Investigaciones Cient&iacute;ficas de la Provincia de Buenos Aires (Proyecto CIC, convocatoria 2013).</p>\r\n\r\n<h2>Referencias</h2>\r\n\r\n<ul>\r\n	<li>Callejas S. 2005. Control farmacol&oacute;gico del ciclo estral bovino: bases fisiol&oacute;gicas, protocolos y resultados. Parte II. Rev. Taurus 25: 16-35.</li>\r\n	<li>Marquez, M.O.; Reis, E.L.; Campo Filho, EP. y Baruselli, P.S. 2003. Efeito da administracao de eCG e de benzoato de estradiol para sincronizacao da ovulacao em vacas Bos taurus taurus x Bos taurusus indicus no periodo pos-parto. Res&uacute;menes V Simposio Internacional de Reproducci&oacute;n Animal. Pag. 392.</li>\r\n	<li>S&aacute; Filho, M.F.; Ayres, H.; Ferreira, R.M.; Marques, M.O.; Reis, E.L.; Silva, R.C.P.; Rodrigues, C.A.; Madureira, E.H.; B&oacute;, G.A. and Baruselli, P.S. 2010. Equine Chorionica Gonadotropin and gonadotropin-releasing hormone enhance fertility in a norgestomet-based, timed artificial insemination protocol in suckled Nelore (Bos indicus) cows. Theriogenology 73: 651-658.</li>\r\n</ul>\r\n', 'tecnica', 'es'),
 (121, '2016-02-17', 'Efecto de la eCG administrada en vacas en anestro sin cría al pie tratadas con un  dispositivo intravaginal con progesterona sobre el porcentaje de preñez a la IATF', 'En los rodeos de cría, la eficiencia reproductiva constituye el principal factor que afecta la rentabilidad de los mismos. Dentro de esta, la duración del anestro post parto es el principal', 'Rodríguez Pérsico1, J.M.; Esperanza, G.2; Aragón, M.A.2 y Callejas, S.S.3 3\n1Biogénesis Bagó, Ruta Panamericana Km 38,5 (1619) Garín. Buenos Aires. Argentina.\n2Actividad privada. 3Área de Reproducción. FISFARVET. Facultad de Ciencias Veterinarias.\nUNCPBA. Tandil. Buenos Aires. Argentina. sscallejas@gmail.com', '<h2>Abstract</h2>\r\n\r\n<p>Effect of eCG on pregnancy rate to timed artificial insemination with progesterone based protocol in weaned anestrous beef cows. The objective of the study was to evaluate the effect of i.m. administration of equine chorionic gonadotropin (eCG) on pregnancy rate in anestrous weaned cows receiving fixed-time artificial insemination (FTAI) while grazing natural pastures. Ultrasonography examinations were performed on Day 0 in order to determine the absence of a CL (anestrous). Thus, two hundred 90-days-weaned Braford cows were selected and received a progesterone (P4) intravaginal device (0,558 g P4) plus 2 mg estradiol benzoate i.m. On Day 8, the intravaginal device was removed and 150 &micro;g D-Cloprostenol plus 1 mg estradiol cipionate were both i.m. administrated. Cows were homogenously assigned (according to follicular diameter on Day 0 and body condition score, BCS) to receive 400 IU of eCG (eCG Group; n=100) or not receive (Control Group; n=100). FTAI were performed on Day 10 between 49 and 54 hours after intravaginal device removal. BCS was scored (1-9 scale) on Day 0 and at Day 49, both times by the same veterinarian. Twelve cows were excluded from the analysis. The effect of treatment on pregnancy rate within each category of evolution of the BCS (maintained or gain body condition) was evaluated (SAS). eCG treatment increased fertility (P=0,03) in cows that maintained BCS, 65,1% (n=63) vs. 45,9% (n=61), eCG vs. Control, respectively. No effect was found on pregnancy (P&gt;0,05) when cows gain BCS [69,0% (n=29) vs. 71,4% (n=35), eCG vs. Control, respectively]. In conclusion, pregnancy rate at FTAI can be improved in anestrous weaned cows that maintained their BCS while grazing natural pastures.</p>\r\n\r\n<h2>Introducción</h2>\r\n\r\n<p>En los rodeos de cr&iacute;a, la eficiencia reproductiva constituye el principal factor que afecta la rentabilidad de los mismos. Dentro de esta, la duraci&oacute;n del anestro post parto es el principal aspecto a considerar, ya que este debe ser lo m&aacute;s corto posible si se pretende lograr una buena producci&oacute;n de kg carne / hect&aacute;rea. Para resolver la situaci&oacute;n del anestro post parto, se ha recurrido al uso de dispositivos intravaginales con progesterona (DISP) combinado con sales de estr&oacute;genos y un agente luteol&iacute;tico; permitiendo esto implementar una inseminaci&oacute;n artificial a tiempo fijo (IATF; Callejas, 2005).</p>\r\n\r\n<p>Para estimular la maduraci&oacute;n final del fol&iacute;culo dominante en animales en anestro se utiliza la gonadotrofina cori&oacute;nica equina (eCG). Resultado positivos se observan en vacas con cr&iacute;a que tienen una condici&oacute;n corporal (CC) comprometida y no presentan un cuerpo l&uacute;teo (Callejas, 2005). En vacas sin cr&iacute;a al pie en anestro, el cual estar&iacute;a dado por causas nutricionales, no hay trabajos que documenten el efecto de la eCG sobre la eficiencia reproductiva; en consecuencia, el objetivo del presente trabajo fue evaluar el efecto de la eCG sobre el porcentaje de pre&ntilde;ez luego de realizar una IATF en vacas en anestro sin cr&iacute;a al pie tratadas con un dispositivo intravaginal con 0,558 g de progesterona seg&uacute;n ganen o mantengan su CC.</p>\r\n\r\n<h2>Materiales y métodos</h2>\r\n\r\n<p>El trabajo se realiz&oacute; en un establecimiento comercial (Departamento de Concepci&oacute;n, Corrientes, Argentina), utilizando 200 vacas sin cr&iacute;a (CC = 4,0&plusmn;0,3 -escala 1 a 9, 1: emaciada y 9: obesa), Braford, destetadas 3 meses antes de comenzar con el tratamiento. El 73,6% de las vacas presentaron fol&iacute;culos &ge; a 10 mm de di&aacute;metro. Las restantes, fol&iacute;culos menores (Honda HS 101 V, transductor transrectal de 5 MHz). La alimentaci&oacute;n fue en base a campo natural.</p>\r\n\r\n<p>En el d&iacute;a 0, se coloc&oacute; un DISP (0,558 g de P4; Cronipres M24 Biog&eacute;nesis Bag&oacute;, Argentina) m&aacute;s 2 mg de BE, im (Bioestrogen, Biog&eacute;nesis Bag&oacute;, Argentina). El d&iacute;a 8 se retir&oacute; el DISP, se administr&oacute; 0,150 mg de D-Cloprostenol (Enzaprost D-C, Biog&eacute;nesis Bag&oacute;, Argentina), 1 mg de Cipionato de estradiol (Croni-Cip, Biog&eacute;nesis Bag&oacute;, Argentina) y las vacas fueron distribuidas homog&eacute;neamente a: 1) Grupo eCG (n=100): 400 UI de eCG, im (Ecegon, Biog&eacute;nesis Bag&oacute;, Argentina); y 2) Grupo Control (n=100): Sin eCG. El d&iacute;a 10 (49-54 horas post retiro de DISP) se realiz&oacute; IATF, con 1 toro de probada fertilidad y un solo inseminador. El diagn&oacute;stico de gestaci&oacute;n se realiz&oacute; por ecograf&iacute;a (39 d&iacute;as post IATF).</p>\r\n\r\n<p>Dado que el factor nutricional es la causa principal que afecta la duraci&oacute;n del anestro posparto (vacas sin cr&iacute;a); las vacas se agruparon seg&uacute;n perdieron (P), mantuvieron (M) o ganaron (G) CC (P=2,1% - n=4-; M=64,6% - n=124-y G=33,3% - n=64). Doce animales fueron excluidos de la prueba (1 perdi&oacute; el dispositivo, 7 no se pudo determinar gestaci&oacute;n y 4 P su CC). Dentro de G o M, se estudi&oacute; el efecto del tratamiento sobre el porcentaje de pre&ntilde;ez. Se utiliz&oacute; el Proc CATMOD (SAS), fijando un nivel de confianza del 95%.</p>\r\n\r\n<h2>Resultados</h2>\r\n\r\n<p>En los animales que M su CC, el uso de la eCG mejor&oacute; significativamente el porcentaje de pre&ntilde;ez (eCG= 65,1%; Control= 45,9%; P=0,03). Por el contrario, en los que G en CC no se observaron diferencias en dicho porcentaje (eCG= 69,0% y Control= 71,4%; P&gt;0,05).</p>\r\n\r\n<h2>Discusión</h2>\r\n\r\n<p>En el presente trabajo la ausencia de cuerpo l&uacute;teo fue asumida como estado de anestro; este se deber&iacute;a a razones nutricionales dado que las mismas no estaban amamantando. Adem&aacute;s, se puede plantear que el mayor porcentaje de ellas tendr&iacute;a un anestro superficial determinado por la presencia de fol&iacute;culos iguales o mayores a 10 mm de di&aacute;metro.</p>\r\n\r\n<p>El estado nutricional afecta la eficiencia reproductiva (Dunn y Kaltenbach, 1980). En el presente trabajo, la CC de las vacas al inicio del tratamiento fue en promedio de 4 la cual se considera limite desde el punto de vista reproductivo (Staringher, 2010). As&iacute;, se observ&oacute; que los animales que G su CC no se necesit&oacute; de un est&iacute;mulo externo (eCG) para mejorar el porcentaje de pre&ntilde;ez. Por el contrario, dentro del grupo de vacas que M su CC (el 96,8% ten&iacute;a una CC de 4), la administraci&oacute;n de eCG mejor&oacute; significativamente dicho porcentaje. Esto ser&iacute;a consecuencia del efecto estimulatorio que tiene dicha hormona tiene sobre la tasa de ovulaci&oacute;n, el di&aacute;metro del fol&iacute;culo dominante ovulatorio y el &aacute;rea del cuerpo l&uacute;teo (Nu&ntilde;ez et al., 2014).</p>\r\n\r\n<h2>Conclusiones</h2>\r\n\r\n<p>En las condiciones del presente trabajo, la administraci&oacute;n de eCG al retirar un DISP permite mejorar el porcentaje de pre&ntilde;ez en vacas sin cr&iacute;a al pie, que no tienen cuerpo l&uacute;teo y mantiene su CC (96,8% = 4; escala 1 a 9). Por el contrario, no se requiere de dicha hormona si las vacas mejoran dicha condici&oacute;n.</p>\r\n\r\n<h2>Fuente de financiamiento</h2>\r\n\r\n<p>El presente proyecto fue financiado por el Laboratorio Biog&eacute;nesis Bag&oacute; y la Comisi&oacute;n de Investigaciones Cient&iacute;ficas de la Provincia de Buenos Aires (Proyecto CIC, convocatoria 2013).</p>\r\n\r\n<h2>Referencias</h2>\r\n\r\n<ul>\r\n	<li>Callejas S.2005. Control farmacol&oacute;gico del ciclo estral bovino: bases fisiol&oacute;gicas, protocolos y resultados. Parte II. Rev. Taurus 25: 16-35.</li>\r\n	<li>Dunn, T.G. y Kaltenbach, C.C. 1980. Nutrition and the postpartum interval of the ewe, sow and cow. J. Anim. Sci. 51 (Supl. II): 29-39.</li>\r\n	<li>Nu&ntilde;ez,-Olivera, R.; De Castro, T.; Garc&iacute;a-Pintos, C.; B&oacute;, G; Piaggio, J and Menchaca. Ovulatory response and luteal function after eCG administration at the en of a progesterone and estradiol based treatment in postpartum anestrous beef cattle. Anim. Reprod. Sci. 146: 111-116.</li>\r\n	<li>Staringher, R.C. 2010. Estrategias reproductivas para lograr un servicio exitoso en Rodeos de Cr&iacute;a. Memorias V Jornadas de Reproducci&oacute;n Bovina. Pag. 18-27.</li>\r\n</ul>\r\n', 'tecnica', 'es');
+INSERT INTO `tbl_notas` (`id`, `fecha`, `titulo`, `bajada`, `extra`, `texto`, `seccion`, `pais`) VALUES
+(122, '2016-04-01', 'Las enfermedades respiratorias hay que prevenirlas', '', '', '<h2>INTRODUCCIÓN</h2>\r\n\r\nEn nuestro país por las características de producción de carne \r\n\r\nen esta época del año, se lleva adelante el destete de gran parte \r\n\r\nde los terneros que nacieron en la primavera pasada. Toda esa \r\n\r\nproducción que alcanza una suma de 11 millones de terneros \r\n\r\naproximadamente a nivel país, ingresa a las Invernadas\r\n\r\npastoriles con o sin suplementación y una gran parte entra en el \r\n\r\nproceso de engorde a corral (Feed lot) con ciclos más cortos \r\n\r\nllegando antes al peso de faena.<br />\r\n\r\nPor la época del año, con una mayor predisposición a las lluvias, \r\n\r\nlas noches frías y los días con altas temperaturas provoca un \r\n\r\nestrés en los animales que favorece la aparición de algunas \r\n\r\nenfermedades características de la edad y la época del año. <br />\r\n\r\nSumado a esto, la interrupción madre-ternero, conocido como \r\n\r\nDestete incrementa las causas de aparición de Enfermedades \r\n\r\nEstacionales.<br />\r\n\r\n<h2>SÍNDROME RESPIRATORIO</h2>\r\n\r\nDentro de las enfermedades que afectan a los bovinos desde los \r\n\r\nprimeros meses de vida hasta los 2 años de edad, se encuentra \r\n\r\nel Síndrome Respiratorio (S.R) también llamada Enfermedad \r\n\r\nRespiratoria Bovina, que se presenta en animales que son \r\n\r\nsometidos a una situación de estrés, producidos por cambios de \r\n\r\nmanejo como ser el destete, encierre en corrales \r\n\r\n(hacinamiento), cambios climáticos, transporte, etc, provocando \r\n\r\nuna alta morbilidad y alta mortalidad. Esto se traduce en una \r\n\r\npérdida de animales y de kilos debido a que el cuadro persiste \r\n\r\npor varios días y los animales enfermos nunca llegan a \r\n\r\nrecuperarse totalmente. El pico de incidencia de enfermedades\r\n\r\nrespiratorias se presenta entre 1 y 3 semanas de la llegada de \r\n\r\nlos terneros a los campos de invernada o feedlot. La morbilidad \r\n\r\nvaría entre el 15 y el 45 % y la mortalidad entre el 1 y el 5%.\r\n\r\nEl Síndrome Respiratorio se caracteriza clínicamente por la \r\n\r\npresencia de disnea, tos, secreción nasal, depresión, anorexia, \r\n\r\nfiebre y una respuesta variable al tratamiento. Como signo inicial \r\n\r\ndel proceso se pueden producir algunas muertes repentinas \r\n\r\nobservándose a la necropsia lesiones en el tracto respiratorio.<br /> \r\n\r\nLa combinación de una infección viral, sobre todo por HerpesVirus\r\n\r\nBovino 1 (BHV1, virus de la IBR o Rinotraqueítis InfecciosaBovina),\r\n\r\nvirus de la Diarrea Vírica Bovina (DVB) o el virus de Parainfluenza 3\r\n\r\n(PI-3) (que barren con las defensas primarias y producen un estado\r\n\r\nde inmunosupresión), con factores estresantes como el transporte,\r\n\r\ndestete, fluctuaciones bruscas de temperatura ambiental, la mezcla\r\n\r\nde animales de diferente procedencia, etc. hacen que bacterias\r\n\r\ncomo la Pasteurella haemolitica (Mannheimia haemolytica), P.\r\n\r\nmultocida o el Haemophilus somnus (Histophilus somni) se\r\n\r\nincrementan en número y en virulencia e invadan áreas del tracto\r\n\r\nrespiratorioinferioryeliminantoxinascausandobronconeumonía.<br />\r\n\r\n<h2>LAS CATEGORÍAS MÁS EXPUESTAS SON:</h2>\r\n\r\n• Terneros al pie hasta novillitos y vaquillonas de 2 años y en \r\n\r\ntodas las regiones de nuestro país, constituyendo su prevención \r\n\r\ny control, una de los principales precauciones a tener en cuenta a la \r\n\r\nhora de realizar una ganadería intensiva.<br />\r\n\r\n• Terneros de Destete.<br />\r\n\r\n• Ingreso a Invernadas o Feedlot.<br />\r\n\r\n<h2>AGENTES CAUSALES:</h2>\r\n\r\nEl agente causal de neumonía más frecuente es Pasteurella haemolitica (Mannheimia haemolytica) siendo Pasteurella \r\n\r\nmultocida causa ocasional de esta enfermedad respiratoria. Estas bacterias son la causa final de la neumonía, y pudiendo \r\n\r\nlos virus tener un efecto sinérgico que estimule la patogenicidad de las bacterias. Cuando se expone al animal a la acción de \r\n\r\nlos virus y/o, a los cambios de manejo, se puede producir una colonización explosiva de las Pasteurellas en el tracto \r\n\r\nrespiratorio superior y utilizando factores de virulencia como las fimbrias y la cápsula descienden hasta el tracto inferior. Una \r\n\r\nvez colonizado el pulmón, es allí en donde produce lesión del tejido a través de endotoxinas (lipopolisacarido) y exotoxinas \r\n\r\n(leucotoxinas), llevando esto al edema pulmonar, necrosis, hipoxia y shock endotóxico seguido de muerte.\r\n\r\nEl Haemophilus somnus (Histophilus somni), es un patógeno que se aísla cada vez con más frecuencia de animales \r\n\r\nafectados por neumonías. Su capacidad de adherencia a los distintos tejidos, hace que pueda colonizar tanto el tracto \r\n\r\nrespiratorio superior, produciendo laringitis y traqueítis, como el tracto respiratorio inferior en donde bloquea los capilares \r\n\r\nalveolares e interrumpe el flujo sanguíneo, provocando la muerte celular. El virus de la IBR infecta la cavidad nasal y el tracto \r\n\r\nrespiratorio superior, provocando rinitis, laringitis y traqueítis. Existe una gran pérdida de cilios en la tráquea que causan \r\n\r\nefectos adversos sobre los mecanismos de defensa del tracto respiratorio. Probablemente se produzca una diseminación \r\n\r\ndel virus desde la cavidad nasal a los tejidos oculares a través del tejido lagrimal, causando conjuntivitis con edema de \r\n\r\npárpado y tumefacción de la conjuntiva, formación de numerosas placas sobre la conjuntiva, edema corneal periférico y una \r\n\r\nvascularización profunda; por lo tanto es común observar animales con sintomatología clínica ocular previamente a la \r\n\r\nenfermedad respiratoria. El BVDv tiene un rol particular en el S.R, provocando una inmunosupresión (alteración de linfocitos, \r\n\r\nmacrófagos y neutrófilos) que predispone a los animales en ese estado a ser mucho más vulnerables a las infecciones por \r\n\r\nlas bacterias detalladas. El virus de PI3, causa por lo general una neumonía viral subclínica, que sin complicaciones \r\n\r\nbacterianas secundarias tiene poca importancia; sin embargo puede observarse un cuadro caracterizado por tos, secreción \r\n\r\nnasal, fiebre y recuperación en pocos días. Causa una alteración de los mecanismos de defensas naturales del aparato \r\n\r\nrespiratorio: destrucción de cilios, alteración de las membranas mucosas respiratorias y afectan los procesos de inmunidad \r\n\r\nlocal a nivel alveolar. La infección de terneros por el Virus Sincicial Respiratorio Bovino (BRSV) causa rinitis, traqueítis, \r\n\r\nbronquitis y bronquiolitis proliferativa y exudativa. Los cambios que ocurren en el tejido pulmonar pueden afectar al \r\n\r\nmecanismo de eliminación pulmonar y predisponer a una infección bacteriana secundaria y a inflamación.<br />\r\n\r\n<h2>IMPACTOECONÓMICO:</h2>\r\n\r\n• Pérdida de productividad (aprox. 10-20 kg al comparar ganancias de peso vivo de animales con S.R con respecto a animales\r\n\r\nsanos);<br />\r\n\r\n•Tratamientos(antibióticosdeúltimageneración);<br />\r\n\r\n•Pérdidadeanimalespormuertes;<br />\r\n\r\n•Manodeobra,tiempoasignadoalaatencióndeanimalesenfermos,etc.<br />\r\n\r\n<h2>PREVENCIÓN Y CONTROL:</h2>\r\n\r\n• Reducir el grado de exposición de las categorías susceptibles a los factores predisponentes:<br />\r\n\r\n1. Evitar el hacinamiento y los cambios bruscos de manejo<br />\r\n\r\n2. Separar del rodeo a los animales que demuestren síntomas iniciales de enfermedad respiratoria.<br />\r\n\r\n3. Realizar el diagnóstico serológico y el envío de muestras de necropsia del/los animales muertos con síntomas \r\n\r\nrespiratorios<br />\r\n\r\n• Proporcionar resistencia no específica: máxima a través de un adecuado nivel nutricional, sanitario y manejo.<br />\r\n\r\n• Aumentar la resistencia específica de las categorías susceptibles: mediante un adecuado Programa de Inmunización, que \r\n\r\ncontemple la vacunación de los terneros al pie de la madre entre los 45 y 15 días previos al destete excepto en aquellos \r\n\r\nestablecimientos en los que existan antecedentes de enf. respiratorias en los terneros al pie de la madre, en cuyo caso se \r\n\r\ndeberá anticipar la vacunación a la época de aparición habitual o vacunar a las madres para que traspasen inmunidad por \r\n\r\nmedio del calostro.<br />\r\n\r\n• Si se inmunizan por primera vez en los campos de invernada o en el Feed-lot, los animales deben mantenerse apartados \r\n\r\nhasta completar su inmunización: aplicar la primer dosis de vacuna a los 2-3 días del arribo y la segunda dosis 20-25 días \r\n\r\ndespués, pudiendo juntar los lotes unos 10-15 días posteriores a la aplicación de la segunda dosis.En todos los casos se \r\n\r\nrecomienda administrar una dosis de refuerzo a los 6 meses de la primera inmunización.', 'tecnica', 'es'),
+(123, '2016-04-02', 'Agonía y ... ¿Despertar de la sarna?', '', '', 'Cierto es que la enfermedad conocida como Sarna no\r\nes precisamente nueva. Las primeras referencias se\r\nremontan al 1200 A.C. en época de Moisés, y se cita\r\nen la Biblia, prohibiéndose expresamente la ofrenda\r\nde animales “roñosos” en alusión a sarnosos.<br />\r\nTambién\r\nes cierto que, en nuestro país, desde 1969-70 la\r\ncantidad de brotes fueron haciéndose más numerosos\r\ny frecuentes alcanzando durante la década del 80 su\r\nmáxima intensidad. Aunque que en los últimos años se ha observado una notable disminución, de la\r\npresentación atribuible al uso de mosquicidas en\r\nverano, y de la gravedad por cuestiones climáticas\r\n(inviernos secos y benignos). También es cierto que la situación en el presente año\r\nes diferente, y el aumento de casos invernales podría\r\nexplicarse por la combinación de los dos factores\r\ncitados anteriormente\r\nPara poder intentar alguna explicación a esta “casi\r\ndesaparición de la sarna”, al menos de la sarna\r\nbovina, debemos dejar claras algunas características\r\nsobresalientes del ácaro causal\r\n(Psoroptes bovis).<br />\r\nEn primer lugar se trata de un parásito obligado, lo\r\nque indica que pasa toda su vida sobre el animal lo\r\nconvierte en un blanco fácil (si las cosas se hacen\r\ncomo es debido) al momento d\r\ne la\r\na\r\nplic\r\na\r\nció\r\nn\r\nd\r\nel a\r\nn\r\ntis\r\ná\r\nr\r\nnic\r\no,\r\ncareciendo de importancia la sobrevivencia fuera del\r\nhuesped , y que no supera los 10-12 días, tiempo\r\nbastante inferior al tiempo de protección brindado por\r\ncualquier antisárnico. Por lo tanto las “fallas” de los antisárnicos son producidas en una abrumadora mayoría por deficiente manejo (animales que no reciben tratamiento, problemas de aplicación, desentendimiento de las características técnicas de los\r\nproductos, tiempo transcurrido desde la aplicación\r\nhasta la eficacia total, etc.)\r\nEn segundo lugar, se podrían considerar dos tipos de\r\nsarna. Una sarna clínica que se presenta en otoñoinvierno\r\ny principios de primavera, con el cuadro por\r\ntodos conocido que comienza con “picaduras” en la\r\ncruz y base de la cola y termina con caída de pelo que\r\ndejan en evidencia “lesiones húmedas” que eliminan \r\nun líquido ámbar que luego constituirá las costras.<br />\r\nPero también se produce otro tipo de sarna que no se ve, y que con frecuencia induce a pensar en una curación\r\nespontánea de la enfermedad. Se trata de la sarna de verano o “sarna latente”, donde se produce una\r\ndisminución del número de parásitos, PERO NO LA ELIMINACIÓN. En verano los ácaros se ubican en zonas\r\ncorporales protegidas de la radiación solar como son la parte interna de las orejas, los pliegues inguinales, o el\r\nespacio interdigital (entre las pezuñas), pero siempre sobre el animal.\r\nEN UNA SITUACIÓN INTERMEDIA A LAS DOS PLANTEADAS ANTERIORMENTE, SE HAOBSERVADO\r\nrecientemente lo que se podría definir como “un nuevo cuadro clínico de la sarna”, que se presenta con cierta\r\nfrecuencia en animales de encierre a corral. Lo destacable del cuadro clínico es que la intensidad y gravedad\r\nde las lesiones es llamativamente menor al cuadro de campo. En éste caso, se observan depilaciones de alguna\r\nforma similares a las de las piojeras, en el sentido que se observa prurito con depilaciones y enrojecimiento de la\r\npiel sin llegar a constituir una lesión “húmeda” típica de la sarna a campo. Donde la presencia de gruesas costras\r\nse reemplaza por una descamación blanquecina que en muchos casos se asocia a algún desbalance en la\r\ndieta. En definitiva, un cuadro complicado de diagnosticar/diferenciar desde la observación clínica de las\r\nlesiones, en el que es necesario proceder al raspaje de piel y la observación microscópica del agente causal. La\r\ncondición casi subclínica de ésta presentación se vería favorecida por el escaso tiempo que los animales\r\npermanecen en corrales de engorde y por la utilización sistemática de Ivermectina en ellos.<br />\r\nEsta particular forma de presentación se ve favorecida por el hacinamiento, que predispone al contagio de los\r\nectoparásitos obligados (sarna y piojeras). Sin embargo, todos los animales que ingresan a corral son\r\ndesparasitados de rutina con lactonas macrocíclicas, especialmente Ivermectina, (en distintas\r\nconcentraciones, 1% Bagomectina 1%, vehículos, Bovifort 1% con modificador de absorción y combinadas,\r\nBagomectina AD3E Forte y Bagomectina 3,15 AD3E), como preventivo de la sarna (y piojos chupadores).<br />\r\nPero también es cierto que “el movimiento de animales” en los corrales es constante, con incorporación\r\npermanente de animales, y allí estaría la clave de la supuesta falla de los tratamientos. Cierto es, que la eficacia\r\ntotal sobre Psoroptes bovis se alcanza alrededor de los 14 días postratamiento, lo que obligaría a mantener los\r\nanimales desparasitados con Ivermectina al ingreso al establecimiento aislados durante 2 semanas antes de\r\nmezclarlos con los ingresados anteriormente. De manera que, el no respetar esta condición significará la\r\ninfestación de los animales que entraron anteriormente y ya no tengan droga activa en su organismo como para\r\nevitar el contagio de aquellos. También hay otras alternativas en el control de la sarna en lo que se refiere a\r\ntratamientos a través de los baños por aspersión (Aspersin). La ventaja es lo económico que resulta en cuanto\r\na la dosis. El inconveniente de este método son las instalaciones que se deben tener para realizar un buen\r\ntratamiento y que requiere de un 2º tratamiento a los 10días del 1º para realizar un buen control del ciclo del\r\nparásito.<br />\r\n<h2>DE TAL MANERAQUE MANTENIENDO LAANTERIOR PREMISA:</h2><br />\r\n? Solo un tratamiento con Ivermectina, ajustando la dosis al animal más pesado, es suficiente para controlar la\r\nsarna bovina.<br />\r\n? Los ácaros fuera del animal (rascaderos) sobreviven por un tiempo (10-12 días) menor al del principio activo,\r\nno representando un riesgo de reinfección.<br />\r\n? Ineludiblemente, se debe desparasitar la totalidad del rodeo. Un solo animal que no reciba el tratamiento o sea\r\ninsuficientemente dosificado mantendrá la infección y contagiará al resto luego de un mes.<br />\r\n? Hoy más que nunca mantiene vigencia la frase: “La casi totalidad de las fallas de tratamientos antisárnicos son\r\ndebidas a problemas de manejo” (Dr. Jorge Nuñez,1987)', 'tecnica', 'es');
 
 -- --------------------------------------------------------
 
@@ -987,11 +990,11 @@ INSERT INTO `tbl_notas` (`id`, `fecha`, `titulo`, `bajada`, `extra`, `texto`, `s
 -- Estructura de tabla para la tabla `tbl_page`
 --
 
-CREATE TABLE `tbl_page` (
+CREATE TABLE IF NOT EXISTS `tbl_page` (
   `id` int(11) NOT NULL,
   `titulo` varchar(255) NOT NULL,
   `url` varchar(300) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tbl_page`
@@ -1006,7 +1009,7 @@ INSERT INTO `tbl_page` (`id`, `titulo`, `url`) VALUES
 -- Estructura de tabla para la tabla `tbl_pais`
 --
 
-CREATE TABLE `tbl_pais` (
+CREATE TABLE IF NOT EXISTS `tbl_pais` (
   `id` int(11) NOT NULL,
   `nombre` varchar(130) NOT NULL,
   `icon` int(11) NOT NULL,
@@ -1014,7 +1017,7 @@ CREATE TABLE `tbl_pais` (
   `short` varchar(2) NOT NULL,
   `lng` varchar(5) NOT NULL,
   `catalogo` int(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tbl_pais`
@@ -1050,11 +1053,11 @@ INSERT INTO `tbl_pais` (`id`, `nombre`, `icon`, `url`, `short`, `lng`, `catalogo
 -- Estructura de tabla para la tabla `tbl_permission`
 --
 
-CREATE TABLE `tbl_permission` (
+CREATE TABLE IF NOT EXISTS `tbl_permission` (
   `id` int(11) NOT NULL,
   `operation` varchar(150) NOT NULL,
   `url` varchar(150) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=52 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tbl_permission`
@@ -1110,12 +1113,12 @@ INSERT INTO `tbl_permission` (`id`, `operation`, `url`) VALUES
 -- Estructura de tabla para la tabla `tbl_ppartes_regionalizacion`
 --
 
-CREATE TABLE `tbl_ppartes_regionalizacion` (
+CREATE TABLE IF NOT EXISTS `tbl_ppartes_regionalizacion` (
   `id` int(11) NOT NULL,
   `idParte` int(11) NOT NULL,
   `pais` int(11) NOT NULL,
   `nombre` varchar(140) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tbl_ppartes_regionalizacion`
@@ -1157,7 +1160,7 @@ INSERT INTO `tbl_ppartes_regionalizacion` (`id`, `idParte`, `pais`, `nombre`) VA
 -- Estructura de tabla para la tabla `tbl_producto`
 --
 
-CREATE TABLE `tbl_producto` (
+CREATE TABLE IF NOT EXISTS `tbl_producto` (
   `id` int(11) NOT NULL,
   `nombre` varchar(150) NOT NULL,
   `seccion` int(11) NOT NULL,
@@ -1170,7 +1173,7 @@ CREATE TABLE `tbl_producto` (
   `codeContent` int(1) NOT NULL,
   `pais` varchar(100) NOT NULL,
   `user_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=411 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tbl_producto`
@@ -1532,12 +1535,12 @@ INSERT INTO `tbl_producto` (`id`, `nombre`, `seccion`, `target`, `link`, `descri
 -- Estructura de tabla para la tabla `tbl_producto_contenido`
 --
 
-CREATE TABLE `tbl_producto_contenido` (
+CREATE TABLE IF NOT EXISTS `tbl_producto_contenido` (
   `id` int(11) NOT NULL,
   `producto_id` int(11) NOT NULL,
   `parte` int(11) NOT NULL,
   `text` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5537 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tbl_producto_contenido`
@@ -3692,10 +3695,10 @@ INSERT INTO `tbl_producto_contenido` (`id`, `producto_id`, `parte`, `text`) VALU
 -- Estructura de tabla para la tabla `tbl_producto_partes`
 --
 
-CREATE TABLE `tbl_producto_partes` (
+CREATE TABLE IF NOT EXISTS `tbl_producto_partes` (
   `id` int(11) NOT NULL,
   `nombre` varchar(150) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tbl_producto_partes`
@@ -3728,7 +3731,7 @@ INSERT INTO `tbl_producto_partes` (`id`, `nombre`) VALUES
 -- Estructura de tabla para la tabla `tbl_registros`
 --
 
-CREATE TABLE `tbl_registros` (
+CREATE TABLE IF NOT EXISTS `tbl_registros` (
   `id` int(11) NOT NULL,
   `tipo` varchar(3) NOT NULL,
   `familia` varchar(150) NOT NULL,
@@ -4419,11 +4422,11 @@ INSERT INTO `tbl_registros` (`id`, `tipo`, `familia`, `senasa`, `pais`, `comerci
 -- Estructura de tabla para la tabla `tbl_rel_registros`
 --
 
-CREATE TABLE `tbl_rel_registros` (
+CREATE TABLE IF NOT EXISTS `tbl_rel_registros` (
   `id` int(10) NOT NULL,
   `idProducto` varchar(100) NOT NULL,
   `idPais` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=110 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tbl_rel_registros`
@@ -4511,14 +4514,14 @@ INSERT INTO `tbl_rel_registros` (`id`, `idProducto`, `idPais`) VALUES
 -- Estructura de tabla para la tabla `tbl_revista`
 --
 
-CREATE TABLE `tbl_revista` (
+CREATE TABLE IF NOT EXISTS `tbl_revista` (
   `id` int(11) NOT NULL,
   `numero` int(4) NOT NULL,
   `fecha` date NOT NULL,
   `titulo` varchar(300) NOT NULL,
   `bajada` text NOT NULL,
   `lng` varchar(3) NOT NULL DEFAULT 'es'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tbl_revista`
@@ -4548,12 +4551,12 @@ INSERT INTO `tbl_revista` (`id`, `numero`, `fecha`, `titulo`, `bajada`, `lng`) V
 -- Estructura de tabla para la tabla `tbl_seccion`
 --
 
-CREATE TABLE `tbl_seccion` (
+CREATE TABLE IF NOT EXISTS `tbl_seccion` (
   `id` int(11) NOT NULL,
   `nombre` varchar(150) NOT NULL,
   `url` varchar(100) NOT NULL,
   `icon` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tbl_seccion`
@@ -4581,12 +4584,12 @@ INSERT INTO `tbl_seccion` (`id`, `nombre`, `url`, `icon`) VALUES
 -- Estructura de tabla para la tabla `tbl_seccion_regionalizacion`
 --
 
-CREATE TABLE `tbl_seccion_regionalizacion` (
+CREATE TABLE IF NOT EXISTS `tbl_seccion_regionalizacion` (
   `id` int(11) NOT NULL,
   `idCategoria` int(11) NOT NULL,
   `pais` int(11) NOT NULL,
   `nombre` varchar(140) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tbl_seccion_regionalizacion`
@@ -4619,12 +4622,12 @@ INSERT INTO `tbl_seccion_regionalizacion` (`id`, `idCategoria`, `pais`, `nombre`
 -- Estructura de tabla para la tabla `tbl_tag`
 --
 
-CREATE TABLE `tbl_tag` (
+CREATE TABLE IF NOT EXISTS `tbl_tag` (
   `id` int(11) NOT NULL,
   `name` varchar(150) NOT NULL,
   `count` int(11) NOT NULL,
   `user_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1019 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tbl_tag`
@@ -5656,11 +5659,11 @@ INSERT INTO `tbl_tag` (`id`, `name`, `count`, `user_id`) VALUES
 -- Estructura de tabla para la tabla `tbl_tag_producto`
 --
 
-CREATE TABLE `tbl_tag_producto` (
+CREATE TABLE IF NOT EXISTS `tbl_tag_producto` (
   `id` int(11) NOT NULL,
   `tag_id` int(11) NOT NULL,
   `producto_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=102227 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tbl_tag_producto`
@@ -11134,12 +11137,12 @@ INSERT INTO `tbl_tag_producto` (`id`, `tag_id`, `producto_id`) VALUES
 -- Estructura de tabla para la tabla `tbl_textos`
 --
 
-CREATE TABLE `tbl_textos` (
+CREATE TABLE IF NOT EXISTS `tbl_textos` (
   `id` int(11) NOT NULL,
   `es` text NOT NULL COMMENT 'español',
   `en` text NOT NULL COMMENT 'ingles',
   `pt` text NOT NULL COMMENT 'portugues'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=511 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tbl_textos`
@@ -11654,12 +11657,12 @@ INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 -- Estructura de tabla para la tabla `tbl_user`
 --
 
-CREATE TABLE `tbl_user` (
+CREATE TABLE IF NOT EXISTS `tbl_user` (
   `id` int(11) NOT NULL,
   `username` varchar(128) NOT NULL,
   `password` varchar(128) NOT NULL,
   `email` varchar(128) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tbl_user`
@@ -11681,10 +11684,10 @@ INSERT INTO `tbl_user` (`id`, `username`, `password`, `email`) VALUES
 -- Estructura de tabla para la tabla `tbl_user_role`
 --
 
-CREATE TABLE `tbl_user_role` (
+CREATE TABLE IF NOT EXISTS `tbl_user_role` (
   `id` int(11) NOT NULL,
   `nombre` varchar(140) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tbl_user_role`
@@ -11715,8 +11718,7 @@ ALTER TABLE `authitem`
 -- Indices de la tabla `authitemchild`
 --
 ALTER TABLE `authitemchild`
-  ADD PRIMARY KEY (`parent`,`child`),
-  ADD KEY `child` (`child`);
+  ADD PRIMARY KEY (`parent`,`child`), ADD KEY `child` (`child`);
 
 --
 -- Indices de la tabla `tbl_error`
@@ -11788,17 +11790,13 @@ ALTER TABLE `tbl_ppartes_regionalizacion`
 -- Indices de la tabla `tbl_producto`
 --
 ALTER TABLE `tbl_producto`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `id` (`id`),
-  ADD KEY `seccion` (`seccion`);
+  ADD PRIMARY KEY (`id`), ADD KEY `id` (`id`), ADD KEY `seccion` (`seccion`);
 
 --
 -- Indices de la tabla `tbl_producto_contenido`
 --
 ALTER TABLE `tbl_producto_contenido`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `producto_id` (`producto_id`),
-  ADD KEY `parte` (`parte`);
+  ADD PRIMARY KEY (`id`), ADD KEY `producto_id` (`producto_id`), ADD KEY `parte` (`parte`);
 
 --
 -- Indices de la tabla `tbl_producto_partes`
@@ -11840,9 +11838,7 @@ ALTER TABLE `tbl_tag`
 -- Indices de la tabla `tbl_tag_producto`
 --
 ALTER TABLE `tbl_tag_producto`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `tag_id` (`tag_id`),
-  ADD KEY `producto_id` (`producto_id`);
+  ADD PRIMARY KEY (`id`), ADD KEY `tag_id` (`tag_id`), ADD KEY `producto_id` (`producto_id`);
 
 --
 -- Indices de la tabla `tbl_textos`
@@ -11870,7 +11866,7 @@ ALTER TABLE `tbl_user_role`
 -- AUTO_INCREMENT de la tabla `tbl_error`
 --
 ALTER TABLE `tbl_error`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT de la tabla `tbl_establecimiento`
 --
@@ -11880,102 +11876,102 @@ ALTER TABLE `tbl_establecimiento`
 -- AUTO_INCREMENT de la tabla `tbl_imagen_ref`
 --
 ALTER TABLE `tbl_imagen_ref`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=634;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=634;
 --
 -- AUTO_INCREMENT de la tabla `tbl_metatag`
 --
 ALTER TABLE `tbl_metatag`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT de la tabla `tbl_metatag_page`
 --
 ALTER TABLE `tbl_metatag_page`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT de la tabla `tbl_notas`
 --
 ALTER TABLE `tbl_notas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=122;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=124;
 --
 -- AUTO_INCREMENT de la tabla `tbl_page`
 --
 ALTER TABLE `tbl_page`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT de la tabla `tbl_pais`
 --
 ALTER TABLE `tbl_pais`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=26;
 --
 -- AUTO_INCREMENT de la tabla `tbl_permission`
 --
 ALTER TABLE `tbl_permission`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=52;
 --
 -- AUTO_INCREMENT de la tabla `tbl_ppartes_regionalizacion`
 --
 ALTER TABLE `tbl_ppartes_regionalizacion`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=31;
 --
 -- AUTO_INCREMENT de la tabla `tbl_producto`
 --
 ALTER TABLE `tbl_producto`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=411;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=411;
 --
 -- AUTO_INCREMENT de la tabla `tbl_producto_contenido`
 --
 ALTER TABLE `tbl_producto_contenido`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5537;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5537;
 --
 -- AUTO_INCREMENT de la tabla `tbl_producto_partes`
 --
 ALTER TABLE `tbl_producto_partes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=20;
 --
 -- AUTO_INCREMENT de la tabla `tbl_rel_registros`
 --
 ALTER TABLE `tbl_rel_registros`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=110;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=110;
 --
 -- AUTO_INCREMENT de la tabla `tbl_revista`
 --
 ALTER TABLE `tbl_revista`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=17;
 --
 -- AUTO_INCREMENT de la tabla `tbl_seccion`
 --
 ALTER TABLE `tbl_seccion`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=15;
 --
 -- AUTO_INCREMENT de la tabla `tbl_seccion_regionalizacion`
 --
 ALTER TABLE `tbl_seccion_regionalizacion`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=25;
 --
 -- AUTO_INCREMENT de la tabla `tbl_tag`
 --
 ALTER TABLE `tbl_tag`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1019;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=1019;
 --
 -- AUTO_INCREMENT de la tabla `tbl_tag_producto`
 --
 ALTER TABLE `tbl_tag_producto`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=102227;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=102227;
 --
 -- AUTO_INCREMENT de la tabla `tbl_textos`
 --
 ALTER TABLE `tbl_textos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=511;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=511;
 --
 -- AUTO_INCREMENT de la tabla `tbl_user`
 --
 ALTER TABLE `tbl_user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT de la tabla `tbl_user_role`
 --
 ALTER TABLE `tbl_user_role`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
 -- Restricciones para tablas volcadas
 --
@@ -11984,14 +11980,14 @@ ALTER TABLE `tbl_user_role`
 -- Filtros para la tabla `authassignment`
 --
 ALTER TABLE `authassignment`
-  ADD CONSTRAINT `authassignment_ibfk_1` FOREIGN KEY (`itemname`) REFERENCES `authitem` (`name`) ON DELETE CASCADE ON UPDATE CASCADE;
+ADD CONSTRAINT `authassignment_ibfk_1` FOREIGN KEY (`itemname`) REFERENCES `authitem` (`name`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `authitemchild`
 --
 ALTER TABLE `authitemchild`
-  ADD CONSTRAINT `authitemchild_ibfk_1` FOREIGN KEY (`parent`) REFERENCES `authitem` (`name`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `authitemchild_ibfk_2` FOREIGN KEY (`child`) REFERENCES `authitem` (`name`) ON DELETE CASCADE ON UPDATE CASCADE;
+ADD CONSTRAINT `authitemchild_ibfk_1` FOREIGN KEY (`parent`) REFERENCES `authitem` (`name`) ON DELETE CASCADE ON UPDATE CASCADE,
+ADD CONSTRAINT `authitemchild_ibfk_2` FOREIGN KEY (`child`) REFERENCES `authitem` (`name`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
