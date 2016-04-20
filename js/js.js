@@ -270,7 +270,11 @@ $(function(){
 		if(!isHome){
 			
 			//$("body").css("padding-top",$("#navbar-main").height()+"px");
-			$("body").css("padding-top",auxH+"px");
+			if(isMobile){
+				$("body").css("padding-top",auxH+"px");
+			}else{
+				$("body").css("padding-top",$("#navbar-main").height()+"px");
+			}
 		}
 		if(isMobile){
 			if(!$("#navbarSecciones").hasClass("in")){
