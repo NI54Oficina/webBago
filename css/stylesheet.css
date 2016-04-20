@@ -10997,8 +10997,9 @@ and (orientation: landscape){
 	cursor:pointer;
 	color:#666;
 }
+
 .headerDesktop .li-header p{
-font-size:12px;
+	font-size:12px;
 	line-height:0;display:inline;
 	width:auto;
 	text-transform:uppercase;

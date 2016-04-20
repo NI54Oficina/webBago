@@ -17,7 +17,7 @@
 		<div id="barra-institucional"></div>
 		</div>
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
-				<div class="imagenes-fundaciones col-lg-12 col-md-12 col-sm-6 col-xs-6"><img class="img-fundaciones-1" src="<?php echo Yii::app()->request->baseUrl; ?>/img/rse-prosaia.png"  /></div>
+				<div  class="imagenes-fundaciones col-lg-12 col-md-12 col-sm-6 col-xs-6"><img class="img-fundaciones-1" src="<?php echo Yii::app()->request->baseUrl; ?>/img/rse-prosaia.png"  /></div>
 				<div  class="imagenes-fundaciones col-lg-12 col-md-12 col-sm-6 col-xs-6"><img class="img-fundaciones-2" src="<?php echo Yii::app()->request->baseUrl; ?>/img/rse-garrahan.png"  /></div>
 				<div  class="imagenes-fundaciones col-lg-12 col-md-12 col-sm-6 col-xs-6"><img class="img-fundaciones-3" src="<?php echo Yii::app()->request->baseUrl; ?>/img/rse-mundo-sano.png"  /></div>
 				<div  class="imagenes-fundaciones col-lg-12 col-md-12 col-sm-6 col-xs-6"><img class="img-fundaciones-4" src="<?php echo Yii::app()->request->baseUrl; ?>/img/rse-misiones-rurales.png"  /></div>
@@ -44,7 +44,7 @@
 				<h4  class="h3-rse" style="display:block; margin-bottom: 3%;"><?php echo Textos::model()->GetText(65); ?></h4>
 				
 				<!--Nuestro rol social en emergencias-->
-				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  linea-rse"> </div>
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 linea-rse"> </div>
 				
 					<h4  class="h2-rse" style="display:inline-block;"> <?php echo Textos::model()->GetText(455); ?> </h4>
 					
@@ -71,7 +71,7 @@
 
 				
 				<!--Encuentros Biosolidarios -->
-				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 linea-rse" style="" > </div>
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 linea-rse"> </div>
 				
 					<h4  class="h2-rse" style="display:block;"><?php echo Textos::model()->GetText(457); ?></h4>
 					
@@ -109,7 +109,7 @@
 					$notas =Notas::model()->findAllByAttributes(array('seccion'=>"rse"),"YEAR(fecha)=".$year."");
 					if(count($notas)>0){
 				?>
-				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 animateCollapse" style="margin-top:0; ">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 animateCollapse" style="margin-top:0;">
 					<div class="btn">
 						<div class="toggleIcon"></div>
 							
