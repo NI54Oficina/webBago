@@ -10456,13 +10456,14 @@ position:fixed;
 }
 
 
+
 .menu-modal {
 
     width: 500px; 
     max-width: 80%;
-	height: 480px; 
+	height: auto; 
 	position: relative;
-    margin: 20% auto; 
+    margin: 30% auto; 
     border:2px solid #00CDD0;
 	display:block;
 	background-color: white;
@@ -10508,10 +10509,12 @@ position:fixed;
 }
 
 .modal-2 {
-	padding-left: 30px; 
-	padding-right: 30px; 
-	padding-top: 20px;
+	
+	padding: 25px 30px;
+
 }
+
+#testing {width: 100%; text-align: right;}
 
 #boton-mail { 
 	background-color: #00CDD0; 
@@ -10520,13 +10523,14 @@ position:fixed;
 	border: none; 
 	height: 35px;
     width: 140px;
-	float: right; 
+	/*float: right; */
 	margin-top: 25px; 
 	position: relative;
 	color: white;
 	text-align: center; 
 	font-family: arial; 
 	font-size: 18px; 
+	max-width: 80%;
 }
 
 #boton-mail:hover { 
@@ -10847,7 +10851,7 @@ and (orientation: landscape) {
 		font-family: 'arialregular';
 		transition: all 0.5s ease;
 		display: inline-block;
-		max-width: 300px;
+		max-width: 400px;
 	}
 	
 	body .content-home{
