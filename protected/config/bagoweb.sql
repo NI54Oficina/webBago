@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 21-04-2016 a las 14:21:51
+-- Tiempo de generación: 21-04-2016 a las 14:54:54
 -- Versión del servidor: 10.1.9-MariaDB
 -- Versión de PHP: 5.5.30
 
@@ -4614,7 +4614,9 @@ INSERT INTO `tbl_seccion_regionalizacion` (`id`, `idCategoria`, `pais`, `nombre`
 (21, 7, 9, 'Reproductive'),
 (22, 8, 9, 'Vitamins and Minerals'),
 (23, 9, 9, 'Pharmaceutical'),
-(24, 10, 9, 'Environmental Health');
+(24, 10, 9, 'Environmental Health'),
+(25, 11, 2, 'Nutrição'),
+(26, 10, 2, 'Saúde Ambiental');
 
 -- --------------------------------------------------------
 
@@ -11499,7 +11501,7 @@ INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (346, 'TYLER, J.W.; CULLOR, J.S.; OSBURN, B.I.; BUSHNELL, R.B; Relationship between serologic recognition of Escherichia coli O111:B4 (J5) and clinical coliform mastitis in cattle. American Journal of Veterinary Research, v. 49, p.1950-1954, 1998.', '', ''),
 (347, 'Institucional', 'Institutional', 'Institucional'),
 (348, 'Vademécum', 'Vademécum', 'Vademécum'),
-(349, 'No hay productos de este tipo en tu región.', 'No products available in your region', ''),
+(349, 'No hay productos de este tipo en tu región.', 'No products available in your region.', 'Não há produto nessa categoria para a região.'),
 (350, 'Actualmente Biogénesis Bagó se convirtió en la mayor empresa latinoamericana del sector para grandes animales y el mayor proveedor para las campañas regionales de Lucha, Control y Erradicación de la Fiebre Aftosa en el continente, fruto del esfuerzo e inversión en tecnología para la prevención. </br>\n			Sus productos son reconocidos a nivel mundial por su calidad y aporte estratégico en el control y erradicación de las enfermedades de mayor impacto en los principales estados productores de alimentos de origen animal.<br />', '', 'Focada em soluções de saúde animal adaptadas e específicas para a região, desenvolvendo produtos e serviços veterinários com a mais alta tecnologia e cuidado na excelência do seu processo produtivo.'),
 (351, 'Nace Laboratorio San Jorge', 'Incorporation of San Jorge Laboratories', 'Nasce o Laboratório San Jorge'),
 (352, 'Chemotécnica registra 1er producto veterinario: ectoparasiticidas a base de Arsenicales', 'Chemotécnica registers the first veterinary product: an arsenic-base ectoparasiticide\n\n', 'Chemotécnica Registra 1º produto Veterinário: Ectoparasiticidas a base de Arsenicais'),
@@ -11509,9 +11511,9 @@ INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (356, 'Lanzamiento Rotatec, la 1º vacuna para prevenir la diarrea viral bovina.', 'Launching of Rotatec, the first vaccine to prevent viral diarrhea in cattle', 'Lançamento Rotatec a 1º vacina para prevenir diarreia neonatal bovina'),
 (357, 'En la década del 80, junto a reconocidas entidades científicas de Latinoamérica, comienza a desarrollar las primeras vacunas específicas para las enfermedades que más afecta a la producción pecuaria', 'During the 80’s, together with well-known Latin American scientific entities, the first specific vaccines for diseases that affect livestock production were developed', 'Na década de 80, junto a reconhecidas entidades científicas da América Latina, começa a desenvolver as primeiras vacinas específicas para as doenças que mais afetam a produção pecuária'),
 (358, 'Lanza la 1º Ivermectina genérica, a nivel global', 'Launching of the first generic Ivermectin at global level', 'Lança, mundialmente, a 1ª ivermectina genérica'),
-(359, 'Nace Biogénesis Sintyal (Fusión chemotécnica Sintyal + Biogénesis)', 'Incorporation of Biogénesis Sintyal (merger of Chemotécnica Sintyal and Biogénesis)', 'Nasce a Biogénesis Sintyal (fusão Chemotécnica Sintyal + Biogénesis) '),
-(360, 'Certifica su planta de producción vacuna anti Aftosa bajo normas de <strong>Bioseguridad 4 OIE</strong>', 'Certification of its production plant FMD vaccine produced under <strong> Biosafety level 4 OIE </strong>', 'Certifica sua planta industrial de produção da vacina antiaftosa sob as normas de Biosegurança 4 OIE.');
+(359, 'Nace Biogénesis Sintyal (Fusión chemotécnica Sintyal + Biogénesis)', 'Incorporation of Biogénesis Sintyal (merger of Chemotécnica Sintyal and Biogénesis)', 'Nasce a Biogénesis Sintyal (fusão Chemotécnica Sintyal + Biogénesis) ');
 INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
+(360, 'Certifica su planta de producción vacuna anti Aftosa bajo normas de <strong>Bioseguridad 4 OIE</strong>', 'Certification of its production plant FMD vaccine produced under <strong> Biosafety level 4 OIE </strong>', 'Certifica sua planta industrial de produção da vacina antiaftosa sob as normas de Biosegurança 4 OIE.'),
 (361, '1º exportación de la Vacuna Antiaftosa a Sudamérica y Taiwán', 'First export of FMD vaccine to South America and Taiwan', '1º exportação da vacina antiaftosa para Taiwan'),
 (362, 'Inaugura filial en Uruguay', 'Opening of Uruguay subsidiary', 'Inaugura sede no Uruguai'),
 (363, 'Inaugura filial en Brasil', 'Opening of Brazil subsidiary', 'Inaugura sede no Brasil'),
@@ -11588,7 +11590,7 @@ INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (441, 'Biólogicos', 'Biological', 'Biológica'),
 (442, 'Endectocidas', 'Endectocides', ''),
 (443, 'Farmacéuticos', 'Pharmaceutical', 'Farmacêuticos '),
-(444, 'Nutrición', 'Nutrition', ''),
+(444, 'Nutrición', 'Nutrition', 'Nutrição'),
 (445, 'Reproductivos', 'Reproductive', 'Reprodutiva'),
 (446, 'Salud ambiental', 'Environmental health', 'Saúde Ambiental'),
 (447, 'Vitaminas y minerales', 'Vitamins & minerals', ''),
@@ -11954,7 +11956,7 @@ ALTER TABLE `tbl_seccion`
 -- AUTO_INCREMENT de la tabla `tbl_seccion_regionalizacion`
 --
 ALTER TABLE `tbl_seccion_regionalizacion`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 --
 -- AUTO_INCREMENT de la tabla `tbl_tag`
 --
