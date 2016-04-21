@@ -10153,6 +10153,14 @@ h5{
 		width: 11%;
 	}
 	
+	.content-home>.container-flecha{
+		bottom:60px;
+	}
+	
+	.content-home>.container-h1-home{
+		padding-top:0;
+	}
+	
 	#form1 textarea {
 		width: 100%;
 		background: rgba(255,255,255,0.2);
@@ -10409,6 +10417,12 @@ h5{
 		margin:2%;
 	}
 	
+	.content-home>.container-h1-home{
+		padding-top:0;
+	}
+	.content-home .border-video{
+		margin-bottom:10px;
+	}
  }
  
  
@@ -10610,7 +10624,12 @@ h5{
 		display: inline-block;
 		max-width: 284px;
 	}
-  
+	.content-home>.container-h1-home{
+		padding-top:20px;
+	}
+	.logo-blanco{
+	padding-top:50px;
+	}
 }
 
 @media only screen 

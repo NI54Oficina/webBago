@@ -62,27 +62,24 @@ var botonmobile = document.getElementById("mail-mobile");
 
 var span = document.getElementsByClassName("cerrar")[0];
 
-boton.onclick = function() {
-    modal.style.display = "block";
-}
+$("body").on("onclick","#mail",function(){
+	modal.style.display = "block";
+});
 
-botonmobile.onclick = function() {
-    modal.style.display = "block";
-}
+$("body").on("onclick","#mail-mobile",function(){
+	modal.style.display = "block";
+});
 
+$("body").on("onclick",".cerrar",function(){
+	modal.style.display = "none";
+});
 
-span.onclick = function() {
-    modal.style.display = "none";
-}
+$("body").on("onclick","#modal",function(){
 
-
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-
-   
-}
+	ClickModal();
+        
+    
+});
 
 $("body").on("touchstart",".modal",function(){
 
@@ -93,7 +90,7 @@ ClickModal();
 });
 
 function ClickModal(){
- 
+ modal.style.display = "none";
 }
 
 
