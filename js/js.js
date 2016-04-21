@@ -152,7 +152,9 @@ $(function(){
 		SameHeight();
 		ResizeViewportElements();
 		//if(!isHome){
+			
 			$(".fadder").css('opacity',1);
+			$(".fadder").css('animation-play-state',"running");
 		//}
 		$("#vademecum-loading").hide();
 		$("#vademecum-loading").css('right','initial');
