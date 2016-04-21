@@ -620,6 +620,8 @@ function checkVisible( elm, evalType ) {
 		return false;
 	}
 	
+	
+	
 	evalType = evalType || "visible";
 
 	var vpH = $(window).height(), // Viewport Height
