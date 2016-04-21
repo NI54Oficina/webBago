@@ -616,9 +616,10 @@ function getStyleRule(name) {
 	return null;
 }
 function checkVisible( elm, evalType ) {
-	if (elm === undefined || elm === null) {
+	if (typeof elm === "undefined"|| typeof $(elm) === "undefined"|| $(elm).length<=0) {
 		return false;
 	}
+	
 	evalType = evalType || "visible";
 
 	var vpH = $(window).height(), // Viewport Height
