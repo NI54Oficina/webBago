@@ -7,7 +7,7 @@
 
 
 	
-<div id="quienes-transicion" class="fadder">
+<div id="quienes-transicion" class="fadder" >
 	<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 	<div class="side-title">
 		<div style="display:inline-block;">
@@ -104,13 +104,14 @@
 
 		<script type="text/javascript">
 		$(document).ready(function(){
-		$("#quienes-transicion").boxLoader({
+		/*$("#quienes-transicion").boxLoader({
 			direction:"x",
 			position: "-50%",
 			effect: "fadeIn",
 			duration: "4s",
 			windowarea: "50%"
-		}); 
+		}); */
+
 		
 		});
 	</script>

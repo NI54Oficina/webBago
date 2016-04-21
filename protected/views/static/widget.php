@@ -1,5 +1,5 @@
 
-<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 visible-desktop hidden-sm hidden-xs" id="table" style="text-align:left;padding-left:0;">
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 visible-desktop hidden-sm hidden-xs fadder" id="table" style="text-align:left;padding-left:0;">
 	<div class="col-lg-11 col-md-11 col-sm-12 col-xs-12" style="float:right;">
 	
 	

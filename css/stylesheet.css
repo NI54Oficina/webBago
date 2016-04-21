@@ -8148,6 +8148,7 @@ h5{
 .fadder{
 	opacity:0;
 	transition:0.5s;
+	
 }
 
 .contenido-producto ul,.contenido-producto ol,.contenido-producto li{
@@ -9352,15 +9353,20 @@ h5{
 
 
 #quienes-transicion{
+	 -ms-transform: translateX(-50%); /* IE 9 */
+    -webkit-transform: translateX(-50%); /* Chrome, Safari, Opera */
+    transform: translateX(-50%);
 	animation:fadein 2.5s;
-	animation: text-inside 4s;
-	animation: text-inside 4s ease-out forwards;
+	animation: text-inside 3s;
+	animation: text-inside 2s ease-out forwards;
+	animation-play-state:paused;
 }
 
 .mision-transicion{
 	animation:fadein 2.5s;
 	animation: text-inside 4s;
 	animation: text-inside 4s ease-out forwards;
+	animation-play-state:paused;
 }
 
 
@@ -9368,6 +9374,7 @@ h5{
 	animation:fadein 2.5s;
 	animation: text-inside 4s;
 	animation: text-inside 4s ease-out forwards;
+	animation-play-state:paused;
 }
 
 
@@ -9375,24 +9382,28 @@ h5{
 	animation:fadein 2.5s;
 	animation: text-inside 4s;
 	animation: text-inside 4s ease-out forwards;
+	animation-play-state:paused;
 }
 
 #prensa-transicion{
 	animation:fadein 2.5s;
 	animation: text-inside 4s;
 	animation: text-inside 4s ease-out forwards;
+	animation-play-state:paused;
 }
 
 #proveedores-transicion{
 	animation:fadein 2.5s;
 	animation: text-inside 4s;
 	animation: text-inside 4s ease-out forwards;
+	animation-play-state:paused;
 }
 
 #plantas-transicion{
 	animation:fadein 2.5s;
 	animation: text-inside 4s;
 	animation: text-inside 4s ease-out forwards;
+	animation-play-state:paused;
 }
 
 
