@@ -37,7 +37,7 @@ $(function() {
 
 $(function(){
     $('.animate .btn').click(function(){
-        				$(this).parent("div").toggleClass("after");
+			$(this).parent("div").toggleClass("after");
     });
 });
 
@@ -200,6 +200,7 @@ $(function(){
 				var vph=parseInt($(this).attr("vphelement"))/100;
 				$(this).height(screen.height*vph);
 			});
+
 		//}
 	}
 

@@ -8,7 +8,7 @@ var scrollTop;
 $("body").on("touchstart",".navbar-toggle",function(){
 	$(this).click();
 	
-	if(isIOS){
+	if(isMobile){
 		setTimeout(function(){
 			if($("#navbarSecciones").hasClass("in")){
 				scrollTop= $(document).scrollTop();
