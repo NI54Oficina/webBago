@@ -151,7 +151,9 @@ $(function(){
 		Header();
 		SameHeight();
 		ResizeViewportElements();
-		$(".fadder").css('opacity',1);
+		//if(!isHome){
+			$(".fadder").css('opacity',1);
+		//}
 		$("#vademecum-loading").hide();
 		$("#vademecum-loading").css('right','initial');
 		$.each($("#vademecum-loading .div-img-aft img"), function(index,value){
@@ -307,8 +309,10 @@ $(function(){
 					//console.log("aparece");
 			   
 			} else {
+				if(!$("#navbarSecciones").hasClass("in")){
 					$("#navbar-main").fadeOut();
 					//console.log("se oculta");
+				}
 			}
 		}
     });

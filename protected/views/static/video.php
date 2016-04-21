@@ -58,9 +58,9 @@
 		
     </script>
 	
-	<div class="container-background-home" vpelement="1" vphelement="100"></div>
+	<div class="container-background-home fadder" vpelement="1" vphelement="100"></div>
 	
-	<div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 content-home" style="display:inline-block;">
+	<div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 content-home fadder" style="display:inline-block;">
 	<div class="overlay-video" style="z-index:0;" vpelement="1" vphelement="100" >
 	
 	</div>
@@ -111,7 +111,7 @@
 		video{width:100% !important;}
 		</style>
 		<?php include('header.php'); ?>
-		<div class="general-texto-home-header div-inst" id="complements">
+		<div class="general-texto-home-header div-inst fadder" id="complements">
 
 			<h1  class="h1-inst-home" ><img class="img-punto-home" src="<?php echo Yii::app()->request->baseUrl; ?>/img/punto-home.png"  style="margin-right:8px;text-transform: uppercase;"/><?php echo Textos::model()->GetText(5);?></h1>
 			<img   class="img-punto-home" src="<?php echo Yii::app()->getBaseUrl(true); ?>/img/punto-home.png"  /><br>

@@ -8,9 +8,9 @@
     zoom: 1.0;
 }
 
-*{
+/**{
 transition:0.5s;
-}
+}*/
 
 a:focus{
 	text-decoration:none;

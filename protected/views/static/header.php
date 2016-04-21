@@ -4,16 +4,27 @@ $("body").on("mousedown",".navbar-toggle",function(){
 	
 	//$("body").css("background","red");
 });
+var scrollTop;
 $("body").on("touchstart",".navbar-toggle",function(){
 	$(this).click();
+	
 	if(isIOS){
 		setTimeout(function(){
 			if($("#navbarSecciones").hasClass("in")){
+				scrollTop= $(document).scrollTop();
 				$("header").css("position","absolute");
-				$(".fadder").fadeOut(1000);
+				$("header").css("display","block");
+				$(".fadder").hide();
+				$(document).scrollTop(0)
+				//$(".fadder").fadeOut(1000);
 			}else{
 				$("header").css("position","fixed");
-				$(".fadder").fadeIn(1000);
+				$(".fadder").css("opacity",0);
+				$(".fadder").show();
+				$(document).scrollTop(scrollTop);
+				setTimeout(function(){ $(".fadder").css("opacity",1); },500);
+				
+				//$(".fadder").fadeIn(1000);
 			}
 			
 		},500);

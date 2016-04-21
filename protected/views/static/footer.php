@@ -1,4 +1,4 @@
-	<footer class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+	<footer class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fadder">
 	
 	<img class="col-lg-12 col-md-12 col-sm-12 col-xs-12" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-footer.png" style="position:relative;top:1px;"/><div class="redes-footer col-lg-12 col-md-12 col-sm-12 col-xs-12"><div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 row" style="margin-bottom:3%; height: 50px;margin-right: auto; margin-left: auto;"><?php if($_SESSION["lng"]!="pt"){ ?><a   target="_blank"href="https://www.facebook.com/BiogenesisBago/"> <img id="facebook" src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-fcbk.png" alt="" /></a><?php }else{ ?><a target="_blank" href="https://www.facebook.com/biogenesisbagobr/"> <img id="facebook" src="<?php echo Yii::app()->getBaseUrl(true); ?>/img/icono-fcbk.png" alt="" /></a>	
 	<?php } ?>
