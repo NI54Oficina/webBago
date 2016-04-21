@@ -549,40 +549,32 @@ $(document).ready(function(){
 
 $(window).scroll(function() {
 
-if (checkVisible($("#curvaSuperiorInsti")) || checkVisible($("#curvaInferiorInsti"))){  
+if (checkVisible($("#curvaSuperiorInsti")) || checkVisible($("#curvaInferiorInsti")) ){  
 
 	$('#iconos-institucional div').each(function(i) {
-	$(this).delay((i++) * 200).fadeTo(1000, 1); })
-
-
+	$(this).delay((i++) * 200).fadeTo(1000, 1); });
+	
 }});
 
 
 $(window).scroll(function() {
 
-if ($(this).scrollTop() >200){  
-
-	$('#table .tr-widget').each(function(i) {
-	$(this).delay((i++) * 200).fadeTo(1000, 1); })
-
-
-}});
-
-
-
-$(window).scroll(function() {
-
-if ($(this).scrollTop() >2450){  
-
+if (checkVisible($("#titulo-info")) ){  
+	
 	$('#info-tec #texto').each(function(i) {
 	$(this).delay((i++) * 400).fadeTo(1000, 1); })
+
+
 }});
 
 
 
 
+
+
 $(window).scroll(function() {
-if ($(this).scrollTop() >2730){  
+
+if (checkVisible($("#vade")) ){  
 
 
 	$('#botones div').each(function(i) {
@@ -595,14 +587,6 @@ if ($(this).scrollTop() >2730){
 }});
 
 
-$(window).scroll(function() {
-
-if ($(this).scrollTop() >3850){  
-	$('.move-x').css('animation','fadein 2s');
-	$('.move-x').css('animation','myfirst 3s');
-	$('.move-x').css('animation','myfirst 3s ease-out forwards');
-
-}});
 
 
 
