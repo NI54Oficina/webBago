@@ -16,7 +16,7 @@ $("body").on("touchstart",".navbar-toggle",function(){
 				//$("#navbarSecciones").css("height","auto");
 				$("header").css("display","block");
 				$(".fadder").hide();
-				$(document).scrollTop(0)
+				$(document).scrollTop(0);
 				//$(".fadder").fadeOut(1000);
 			}else{
 				$("header").css("position","fixed");
