@@ -152,7 +152,7 @@ $("body").on("touchstart",".navbar-toggle",function(){
 			
 			
 			<!-- INSTITUCIONAL -->
-			<li class="li-header " ><p  class="toggle-dropdown-header" target="#dropInsti" ><?php echo Textos::model()->GetText(347); ?><span class="glyphicon glyphicon-chevron-down"></span></p>
+			<li class="li-header " ><p  class="toggle-dropdown-header" target="#dropInsti" ><?php echo Textos::model()->GetText(347); ?> <span class="glyphicon glyphicon-chevron-down"></span></p>
 				
 				<ul id="dropInsti" class="dropdown-header-nav">
 						<img  id="flecha-submenu" src="<?php echo Yii::app()->request->baseUrl; ?>/img/flecha-submenu.png" />
