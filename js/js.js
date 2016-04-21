@@ -178,13 +178,13 @@ $(function(){
 	$( window ).resize(function() {
 		var lastOrientation= currentOrientation;
 		CheckDevice();
-		Header();
+		
 		if(isIOS){
 			if(lastOrientation==currentOrientation){
 				return;
 			}
 		}
-		
+		Header();
 		ResetHeight();
 		SetDistanceHeader();
 		ResizeViewportElements();
@@ -230,6 +230,11 @@ $(function(){
 			$("header").removeClass("headerMobile");
 			$("header").addClass("headerDesktop");
 		}
+		/*if(isIOS){
+			$("header").css("position","absolute");
+		}else{
+			$("header").css("position","fixed");
+		}*/
 		console.log(isMobile);
 		console.log(isIOS);
 	}
@@ -270,7 +275,11 @@ $(function(){
 		if(!isHome){
 			
 			//$("body").css("padding-top",$("#navbar-main").height()+"px");
-			$("body").css("padding-top",auxH+"px");
+			if(isMobile){
+				$("body").css("padding-top",auxH+"px");
+			}else{
+				$("body").css("padding-top",$("#navbar-main").height()+"px");
+			}
 		}
 		if(isMobile){
 			if(!$("#navbarSecciones").hasClass("in")){
