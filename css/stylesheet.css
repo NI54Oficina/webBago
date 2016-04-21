@@ -6789,6 +6789,10 @@ and (max-device-width: 2100px) {
 		width:100%;
 	}
 	
+	.img-widget {
+		background-position: 100% center;
+		background-size: 100% auto;
+	}
 	
 	.navbar-nav .m-l{
 		margin-left:0;
@@ -11042,12 +11046,27 @@ and (orientation: landscape){
 	height:auto;
 }
 
-<<<<<<< HEAD
+
 
 #input-modal-mensaje textarea:focus {
     outline:none;
 }
-=======
+
+ @media only screen 
+  and (min-device-width: 240px) 
+  and (max-device-width: 1024px) 
+{
+  
+  .inner-text-2 {
+    width: 96%!important;
+    padding-left: 9%!important;
+	}
+	
+	.
+  
+  
+ }
+
 /*FILIALES MOBILE*/
 
 #casamatriz-mobile{ background-color: rgba(9,23,68, .5); width }
@@ -11076,4 +11095,4 @@ and (orientation: landscape){
 	
 /*FILIALES MOBILE*/
 
->>>>>>> origin/master
+
