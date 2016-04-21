@@ -71,26 +71,4 @@
 		});
 		
 		
-		$(document).ready(function(){
-		$(".mision-2").boxLoader({
-			direction:"x",
-			position: "-100%",
-			effect: "fadeIn",
-			duration: "2s",
-			windowarea: "50%"
-		}); 
-		});
-		
-		$(document).ready(function(){
-		$(".mision-1").boxLoader({
-			direction:"x",
-			position: "-130%",
-			effect: "fadeIn",
-			duration: "2s",
-			windowarea: "50%"
-			}); 
-		}); 		
-		
-
-		
 	</script>

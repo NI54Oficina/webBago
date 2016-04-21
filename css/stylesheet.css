@@ -9426,7 +9426,6 @@ h5{
   and (min-device-width: 768px) 
   and (max-device-width: 1024px) 
   {
-  
 	.snip1156.image h3 {
 		display: block;
 		color: #b8b8b8;
@@ -11039,4 +11038,9 @@ and (orientation: landscape){
 }
 .headerMobile#navbarSecciones{
 	height:auto;
+}
+
+
+#input-modal-mensaje textarea:focus {
+    outline:none;
 }
