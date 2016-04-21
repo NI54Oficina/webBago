@@ -112,6 +112,7 @@ font-size: 22px;
 /**test fran menu mobile **/
 .headerMobile .navbar-collapse.in{
 	height:100vh !important;
+	min-height:100vh !important;
 }
 
 
@@ -11032,4 +11033,7 @@ and (orientation: landscape){
 
 .headerMobile .ul-nav li ul li:nth-child(2){
 	padding-top:30px !important;
+}
+#navbarSecciones{
+	height:auto;
 }

@@ -13,6 +13,7 @@ $("body").on("touchstart",".navbar-toggle",function(){
 			if($("#navbarSecciones").hasClass("in")){
 				scrollTop= $(document).scrollTop();
 				$("header").css("position","absolute");
+				//$("#navbarSecciones").css("height","auto");
 				$("header").css("display","block");
 				$(".fadder").hide();
 				$(document).scrollTop(0)

@@ -180,13 +180,13 @@ $(function(){
 	$( window ).resize(function() {
 		var lastOrientation= currentOrientation;
 		CheckDevice();
-		
+		Header();
 		if(isIOS){
 			if(lastOrientation==currentOrientation){
 				return;
 			}
 		}
-		Header();
+		
 		ResetHeight();
 		SetDistanceHeader();
 		ResizeViewportElements();
@@ -291,6 +291,7 @@ $(function(){
 			//var auxH= screen.height-$("#navbar-main").height();
 			auxH= screen.height-auxH+10;
 			rule.height= auxH+"px";
+			rule['min-height']= auxH+"px";
 			console.log(rule.height);;
 		}
 		
