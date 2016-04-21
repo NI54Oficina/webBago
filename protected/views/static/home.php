@@ -19,7 +19,7 @@
 
 			<!--CURVA-->
 		
-			<img style="width: 100%;margin-bottom:-1px;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-arriba-home.png" alt="" /><section class="special" data-scrollax-parent="true" style="background:white;width:100%;text-align:center;">
+			<img id="curvaSuperiorInsti" style="width: 100%;margin-bottom:-1px;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-arriba-home.png" alt="" /><section class="special" data-scrollax-parent="true" style="background:white;width:100%;text-align:center;">
 		
 			<div id="iconos-institucional" style="display:inline-block;background:white;width:98%;padding-top:0px;">
 					
@@ -135,7 +135,7 @@
 		</div>
 		
 		<!--CURVA-->
-		<img class="fadder" style=" width: 100%;position:relative;margin-top:-4px;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-home-abajo.png" alt="" style="" />	
+		<img id="curvaInferiorInsti"class="fadder" style=" width: 100%;position:relative;margin-top:-4px;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-home-abajo.png" alt="" style="" />	
 
 		<section class="special fadder" data-scrollax-parent="true" style="background:transparent;width:100%;overflow-x:hidden;" id="mapa-filiales">
 		<!------------------------------------------------------------------ SECCION 2: FILIALES ------------------------------------------------------------------>			

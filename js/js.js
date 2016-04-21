@@ -549,7 +549,7 @@ $(document).ready(function(){
 
 $(window).scroll(function() {
 
-if ($(this).scrollTop() >100){  
+if (checkVisible($("#curvaSuperiorInsti")) || checkVisible($("#curvaInferiorInsti"))){  
 
 	$('#iconos-institucional div').each(function(i) {
 	$(this).delay((i++) * 200).fadeTo(1000, 1); })
@@ -630,4 +630,15 @@ function getStyleRule(name) {
 		}
 	}
 	return null;
+}
+function checkVisible( elm, evalType ) {
+	evalType = evalType || "visible";
+
+	var vpH = $(window).height(), // Viewport Height
+		st = $(window).scrollTop(), // Scroll Top
+		y = $(elm).offset().top,
+		elementHeight = $(elm).height();
+
+	if (evalType === "visible") return ((y < (vpH + st)) && (y > (st - elementHeight)));
+	if (evalType === "above") return ((y < (vpH + st)));
 }
