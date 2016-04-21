@@ -293,7 +293,7 @@ $(function(){
 			var rule = getStyleRule('.headerMobile .navbar-collapse.in');
 			//var auxH= screen.height-$("#navbar-main").height();
 			auxH= screen.height-auxH+10;
-			rule.height= auxH+"px";
+			rule.height= "auto";
 			rule['min-height']= auxH+"px";
 			console.log(rule.height);;
 		}
@@ -332,7 +332,7 @@ $(function(){
 			$("#"+ $(this).attr("info")).show();
 		});
 		
-		$("body").on("touchstart",".btn-mapa",function(){
+		$("body").on("touchend",".btn-mapa",function(){
 			console.log("entra start");
 			$(this).click();
 		});
@@ -350,7 +350,7 @@ $(function(){
 				//$(target).css("max-height","10000000px");
 			}
 		});
-		$("body").on("touchstart",".toggle-dropdown-header",function(){
+		$("body").on("touchend",".toggle-dropdown-header",function(){
 			//$(this).click();
 			var target= $(this).attr("target");
 				console.log($(this).attr("target"));
@@ -616,6 +616,9 @@ function getStyleRule(name) {
 	return null;
 }
 function checkVisible( elm, evalType ) {
+	if (elm === undefined || elm === null) {
+		return false;
+	}
 	evalType = evalType || "visible";
 
 	var vpH = $(window).height(), // Viewport Height
