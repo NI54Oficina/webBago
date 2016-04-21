@@ -6058,8 +6058,8 @@ and (orientation: landscape)
 	}
 	
 	#ul-filiales-paises{
-		padding-left:7%;
-		padding-top:5%;
+		/*padding-left:7%;
+		padding-top:5%;*/
 	}
 	
 	#ul-filiales-paises li{
@@ -6070,7 +6070,7 @@ and (orientation: landscape)
 	
 	#ul-filiales-paises li a{
 		color:white;
-		font-weight:700;
+		
 		letter-spacing:1px;
 	}
 	
@@ -8296,10 +8296,7 @@ h5{
 	#ul-filiales-paises{
 		display:block;
 	}
-	#ul-filiales-paises{
-		padding-left:7%;
-		padding-top:5%;
-	}
+
 	
 	#ul-filiales-paises li{
 		display:inline-block;
@@ -8309,7 +8306,7 @@ h5{
 	
 	#ul-filiales-paises li a{
 		color:white;
-		font-weight:700;
+		
 	}
 	
 		.cd-timeline-content .cd-date{
@@ -8351,20 +8348,14 @@ h5{
 	#ul-filiales-paises{
 		display:block;
 	}
-	#ul-filiales-paises{
-		padding-left:7%;
-		padding-top:5%;
-	}
 	
-	#ul-filiales-paises li{
-		display:inline-block;
-		padding-top:5%;
+	
 	}
 	
 	
 	#ul-filiales-paises li a{
 		color:white;
-		font-weight:700;
+		
 	}
 	
 	.cd-timeline-content .cd-date{
@@ -8600,8 +8591,8 @@ h5{
 		display:block;
 	}
 	#ul-filiales-paises{
-		padding-left:7%;
-		padding-top:5%;
+		/*padding-left:7%;
+		padding-top:5%;*/
 	}
 	
 	#ul-filiales-paises li{
@@ -8612,7 +8603,7 @@ h5{
 	
 	#ul-filiales-paises li a{
 		color:white;
-		font-weight:700;
+		
 		letter-spacing:1px;
 	}
 	
@@ -11040,7 +11031,38 @@ and (orientation: landscape){
 	height:auto;
 }
 
+<<<<<<< HEAD
 
 #input-modal-mensaje textarea:focus {
     outline:none;
 }
+=======
+/*FILIALES MOBILE*/
+
+#casamatriz-mobile{ background-color: rgba(9,23,68, .5); width }
+#filial-mobile{background-color: rgba(96,167,195, .5);}
+#banco-mobile{background-color: rgba(131,130,134, .2);}
+#distribuidoras-mobile{background-color: rgba(255,164,22, .5);}
+#banco-china {background-color: rgba(131,130,134, .5);}
+#banco-y-filiales {background: -webkit-linear-gradient(left, rgba(131,130,134, .2), rgba(131,130,134, .2) 50%, rgba(96,167,195, .5) 50%, rgba(96,167,195, .5));}
+
+
+#ul-filiales-paises li{
+		display:inline-block;
+
+    padding: 5px 10px;
+   
+
+    width: 40%;
+    
+    text-align: center;
+    margin: 1% 2%;
+}
+
+#ul-filiales-paises{
+		
+	}
+	
+/*FILIALES MOBILE*/
+
+>>>>>>> origin/master

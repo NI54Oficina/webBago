@@ -151,7 +151,7 @@
                 
 							</div> <!-- Termina titulo-mapa -->
  
-						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="mapa" style="position:relative;z-index:5;">
+						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hidden-xs hidden-sm " id="mapa" style="position:relative;z-index:5;">
 						
 							<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/mapa-png.png" usemap="#img-mapaMap" id="img-mapa" />
 						
@@ -175,11 +175,12 @@
 
 			
 			<!---------- REFERENCIAS ------------------>
-				<div id="referencias" class="col-lg-12 col-md-12 col-sm-8 col-xs-8" style="cursor:default;position:relative;z-index:1; margin: auto;">
+				<div id="referencias" class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="cursor:default;position:relative;z-index:1; margin: auto;">
 					
 				
-					<!--- REFERENCIA -->			  
-					<div id="ref-unica">
+					<!--- REFERENCIA -->	
+					 
+					<div id="ref-unica" >
 					
 						<img class="icn-ubicacion" src="<?php echo Yii::app()->request->baseUrl; ?>/img/icn-casa-matriz.png">
 					
@@ -190,7 +191,7 @@
 					
 					
 					<!--- REFERENCIA -->
-					<div id="ref-unica">
+					<div id="ref-unica" >
 					
 						<img class="icn-ubicacion" src="<?php echo Yii::app()->request->baseUrl; ?>/img/icn-filiales.png">
 					
@@ -201,7 +202,7 @@
 				
 						
 					<!--- REFERENCIA -->
-					<div id="ref-unica">
+					<div id="ref-unica" >
 					
 						<img class="icn-ubicacion" src="<?php echo Yii::app()->request->baseUrl; ?>/img/icono-naranja-distribuidoras.png">
 					
@@ -209,43 +210,61 @@
 						
 					</div> <!-- Termina cada referencia -->
 				
-				
+				   
 					
-					<!--- REFERENCIA -->				
-					<div id="ref-unica">
+					<!--- REFERENCIA -->	
+							
+					<div id="ref-unica" >
 					
 						<img class="icn-ubicacion" src="<?php echo Yii::app()->request->baseUrl; ?>/img/icn-vacunas.png">
 					
-						<p style="margin-bottom:0;" id="nom-ref"><?php echo Textos::model()->GetText(504); ?>  </p>  <p style="font-size: 10px; padding-left: 18px;margin-bottom: 0px;"><?php echo Textos::model()->GetText(462); ?>  </p>  <p  style="font-size: 10px; padding-left: 18px;">
+						<p style="margin-bottom:0;" id="nom-ref"><?php echo Textos::model()->GetText(504); ?>  </p>  <p style="font-size: 10px; padding-left: 18px;margin-bottom: 0px;"><?php echo Textos::model()->GetText(462); ?>  </p>  
+
+						<p class="hidden-lg hidden-md" style="padding-left: 18px;">Canadá</p>
+						<p class="hidden-lg hidden-md" style="padding-left: 18px;">Estados Unidos</p>
 						
 					</div> <!-- Termina cada referencia -->
 					
 					
 					<!--- REFERENCIA -->				
-					<div id="ref-unica">
+					<div id="ref-unica" >
 					
 						<img class="icn-ubicacion" src="<?php echo Yii::app()->request->baseUrl; ?>/img/icn-janh.png">
 					
 						<p id="nom-ref"> Jinhai Biotechnology Co., Ltd. </p>
+						<p class="hidden-lg hidden-md" style="padding-left: 18px;">China</p>
 						
 					</div> <!-- Termina cada referencia -->
 					
 					
 				</div> <!-- Termina total referencias -->
+				<div  > <!-- comienza mobile -->
+				<ul id="ul-filiales-paises">
+					
+					<li class="c btn-mapa"  info="infoArgentina" id="casamatriz-mobile"><a href="javascript:void(0);" ><?php echo Textos::model()->GetText(410); ?> </li></a>
+
+					<li class=" btn-mapa"  info="infoParaguay" id="distribuidoras-mobile"><a href="javascript:void(0);" > <?php echo Textos::model()->GetText(421); ?> </li></a>
+
+					<li class="btn-mapa"  info="infoBolivia" id="filial-mobile"><a href="javascript:void(0);" > <?php echo Textos::model()->GetText(411); ?> </li></a>
+					<li class=" btn-mapa"  info="infoCenAm" id="distribuidoras-mobile"><a href="javascript:void(0);" > <?php echo Textos::model()->GetText(463); ?> </li></a>
+					<li class=" btn-mapa"  info="infoBrasil" id="filial-mobile"><a href="javascript:void(0);" > <?php echo Textos::model()->GetText(412); ?> </li></a>
+					<li class="btn-mapa"  info="infoMexico" id="banco-y-filiales"><a href="javascript:void(0);" ><?php echo Textos::model()->GetText(418); ?> </li></a>
+					<li class="btn-mapa"  info="infoUruguay" id="filial-mobile"><a href="javascript:void(0);" > <?php echo Textos::model()->GetText(424); ?> </li></a>
+
+				<!-- 	<li class="col-lg-6 col-md-6 col-sm-6 col-xs-6 btn-mapa"  info="#" id="banco-mobile"><a href="javascript:void(0);" > Canadá </li></a>
+					<li class="col-lg-6 col-md-6 col-sm-6 col-xs-6 btn-mapa"  info="#" id="banco-china"><a href="javascript:void(0);" > China </li></a>
+					<li class="col-lg-6 col-md-6 col-sm-6 col-xs-6 btn-mapa"  info="#" id="banco-mobile"><a href="javascript:void(0);" > Estados Unidos </li></a> -->
+				
+				</ul>
+				</div> <!-- cosas mobiles -->
+			
             
 			</div> <!-- Termina mapa-total -->
         
-				<ul id="ul-filiales-paises" class="col-sm-12 col-xs-12">
-					
-					<li class="col-lg-6 col-md-6 col-sm-6 col-xs-6 btn-mapa"  info="infoMexico"><a href="javascript:void(0);" ><?php echo Textos::model()->GetText(418); ?> </li></a>
-					<li class="col-lg-6 col-md-6 col-sm-6 col-xs-6 btn-mapa"  info="infoCenAm"><a href="javascript:void(0);" > <?php echo Textos::model()->GetText(463); ?> </li></a>
-					<li class="col-lg-6 col-md-6 col-sm-6 col-xs-6 btn-mapa"  info="infoBrasil"><a href="javascript:void(0);" > <?php echo Textos::model()->GetText(412); ?> </li></a>
-					<li class="col-lg-6 col-md-6 col-sm-6 col-xs-6 btn-mapa"  info="infoBolivia"><a href="javascript:void(0);" > <?php echo Textos::model()->GetText(411); ?> </li></a>
-					<li class="col-lg-6 col-md-6 col-sm-6 col-xs-6 btn-mapa"  info="infoUruguay"><a href="javascript:void(0);" > <?php echo Textos::model()->GetText(424); ?> </li></a>
-					<li class="col-lg-6 col-md-6 col-sm-6 col-xs-6 btn-mapa"  info="infoArgentina"><a href="javascript:void(0);" ><?php echo Textos::model()->GetText(410); ?> </li></a>
-					
-				</ul>
-			
+				
+
+
+
 		<!--------------------------- INFORMACIÓN PAÍSES -------------------------------->
 			<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" id="info-mapa">
 			
