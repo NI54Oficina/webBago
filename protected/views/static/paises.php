@@ -71,7 +71,7 @@
 			
 			<div  class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-top: 25px; padding-left: 70px;">
 				<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" id="english-v-linea"></div>
-				<a style="color:white;font-family:'arialregular';" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>en"><p style="display: inline-block;margin: 0;margin-top: 13px; margin-left: -40px; font-size: 15px; padding-bottom: 20px;">English version</p></a>
+				<a style="color:white;font-family:'arialregular';" href="<?php echo Yii::app()->getBaseUrl(true); ?>/en"><p style="display: inline-block;margin: 0;margin-top: 13px; margin-left: -40px; font-size: 15px; padding-bottom: 20px;">English version</p></a>
 	</div>
 </div>
 </div>	

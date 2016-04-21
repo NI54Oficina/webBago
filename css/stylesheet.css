@@ -9117,7 +9117,7 @@ h5{
 	padding-top: 65px;
 	text-shadow: 0px 3px black;
 	margin: 0;
-	padding-left: 13px;
+	padding-left: 70px;
 }
 
 #epigrafe-mobile img {float:right; padding-right: 118px; padding-top: 29px;width:260px;max-width:50vw;}
@@ -9139,6 +9139,7 @@ h5{
 		text-shadow: 0px 3px black;
 		text-align: center;
 		margin-left:0px;
+		padding-left: 0;
 	}
 
 	#epigrafe-mobile{ 
