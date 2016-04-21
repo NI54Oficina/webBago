@@ -5,6 +5,11 @@
 	<a href="https://www.facebook.com/biogenesisbagobr/" target="_blank"> <img id="facebook" src="<?php echo Yii::app()->getBaseUrl(true); ?>/img/icono-fcbk.png" alt="" /></a>
 	<?php } ?>
 	<!--<a href=""> <img id="gmail" src="img/icono-g.png" alt="" /></a>!-->
-	<a href="https://www.youtube.com/user/BiogenesisBago"  target="_blank"> <img id="youtube" src="<?php echo Yii::app()->getBaseUrl(true); ?>/img/icono-ytb.png" alt="" /></a>
+	<?php if($_SESSION["lng"]!="pt"){ ?>
+	<a href="https://www.youtube.com/user/BiogenesisBago/"  target="_blank"> <img id="youtube" src="<?php echo Yii::app()->getBaseUrl(true); ?>/img/icono-ytb.png" alt="" /></a>
+	<?php }else{ ?>
+	<a href="https://www.youtube.com/user/BiogenesisBagoBR"  target="_blank"> <img id="youtube" src="<?php echo Yii::app()->getBaseUrl(true); ?>/img/icono-ytb.png" alt="" /></a>
+	<?php } ?>
+
 </div>
 
