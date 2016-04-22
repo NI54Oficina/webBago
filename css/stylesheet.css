@@ -8737,7 +8737,7 @@ h5{
 		padding: 1px;
 		height: 182px;
 		border: 1px solid #359FBD;
-		width: 70%;
+		width: 100%;
 		max-width: 100%;
 		margin-top: -52px;
 	}
@@ -11142,8 +11142,22 @@ and (orientation: landscape){
 
 #leermasprensa {float: right;padding-right: 7%;" style="float: right;padding-right: 7%;}
 #mas-imagenes-prov {margin-top: -10%;margin-left: 0;position:relative;z-index:100;}
-@media screen and (max-width:240px){
+@media screen and (max-width:320px){
  #leermasprensa {padding: 0;}
  #mas-imagenes-prov {margin-top: -20%}
+ #btnmenu {margin-top: 0;}
+ #text-1 {
+    margin-top: 15%;}
+ #display-rrhh {
+    padding-top: 0;}   
 
-}
+#texto-btn-mas2 {width: 100%;}
+#btn-mas {width: auto;}
+
+
+/*}
+
+@media screen and (max-width:320px) and (max-height: 240px){
+
+	#slider1 .overview li {margin-left: -10px;}
+}*/
