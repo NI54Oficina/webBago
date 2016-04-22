@@ -2398,7 +2398,7 @@ p{
 
 #textarea{
 	color:#FFF;
-	backgruound:rgba(255,255,255,0.5);
+	background:rgba(255,255,255,0.5);
 }
 
 
@@ -2417,7 +2417,7 @@ p{
 	-moz-border-radius: 5px 5px 5px 5px;
 	-webkit-border-radius: 5px 5px 5px 5px;
 	border:none;
-    height: 5vh;
+    height: 40px;
     color: #fff;
     width: 30%;
     margin-top: 4%;
@@ -2473,7 +2473,7 @@ footer{
 #form1 textarea{
 	width: 100%;
     background: rgba(255,255,255,0.2);
-    height: 15vh;
+    height: 130px;
     /*margin-left: -15px;*/
 }
 
@@ -2484,7 +2484,7 @@ footer{
 	background: rgba(255,255,255,0.2);
     display: inherit;
 	border:none;
-	height:3.5vh;
+	height:25px;
 	
 }
 
@@ -9575,7 +9575,7 @@ h5{
 		background: rgba(255,255,255,0.2);
 		display: inherit;
 		border: none;
-		height: 4.5vh;
+		height: 25px;
 	}
  
 	.volver-mobile {
@@ -9609,7 +9609,7 @@ h5{
 }
 
 .input-vad {
-    width:86vw;
+    width:auto;
     background: rgba(255,255,255,0.2);
     display: inline-block;
     height: 33px;
@@ -10379,7 +10379,7 @@ h5{
 		font-family: 'arialregular';
 		color: white;
 		letter-spacing: 2px;
-		margin-left: 16px;
+		
 	}
 	
 	.volver-mobile {
@@ -11142,7 +11142,9 @@ and (orientation: landscape){
 
 #leermasprensa {float: right;padding-right: 7%;" style="float: right;padding-right: 7%;}
 #mas-imagenes-prov {margin-top: -10%;margin-left: 0;position:relative;z-index:100;}
+
 @media screen and (max-width:320px){
+
  #leermasprensa {padding: 0;}
  #mas-imagenes-prov {margin-top: -20%}
  #btnmenu {margin-top: 0;}
@@ -11151,6 +11153,9 @@ and (orientation: landscape){
  #display-rrhh {
     padding-top: 100px;   
 
-#list-menu
 }
 
+@media only screen and  (max-width:320px) and (max-height: 240px){
+
+	.input-vad {width: 86vw;}
+}
