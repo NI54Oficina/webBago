@@ -1469,7 +1469,7 @@
 								<?php } ?>
 								
 								
-									<li class="col-lg-4  col-md-2 col-sm-2 col-xs-4" style="border:none;">
+									<li class="col-lg-4  col-md-2 col-sm-2 col-xs-2" style="border:none;">
 									<div id="btn-mas" class="col-lg-12 col-md-12 col-sm-3 col-xs-3"  style="cursor:pointer; padding-top: 59px;">
 										<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/revista">
 											<img id="img-btn-mas" src="<?php echo Yii::app()->request->baseUrl; ?>/img/mas-ediciones-01.png" style="    position: inherit;">
