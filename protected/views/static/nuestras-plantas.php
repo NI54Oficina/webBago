@@ -1,4 +1,4 @@
-			<div class="header-layout-aftosa col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<div class="header-layout-aftosa col-lg-12 col-md-12 col-sm-12 col-xs-12 fadder">
 				<div style="width:100%;position:absolute;"><h1 class="titulo-layout-aftosa" style=""><?php echo Textos::model()->GetText(14); ?></h1></div>
 				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/nuestras-plantas-oscura-01.png" style="width:100vw;" />	
 			</div>
@@ -8,7 +8,7 @@
 	</div>!-->
 <script src="<?php echo Yii::app()->getBaseUrl(true); ?>/js/jquery.boxloader.min.js"></script>		
 	
-<div id="plantas-transicion">
+<div id="plantas-transicion" class="fadder">
 	<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 	<div id="sidePlantas" class="side-title">
 		<div style="display:inline-block;">

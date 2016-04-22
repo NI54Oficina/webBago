@@ -1,12 +1,12 @@
 
-			<div class="header-layout-aftosa col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<div class="header-layout-aftosa col-lg-12 col-md-12 col-sm-12 col-xs-12 fadder">
 				<div style="width:100%;position:absolute;"><h1 class="titulo-layout-aftosa" style=""><?php echo Textos::model()->GetText(8); ?></h1></div>
 				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/mision-vision-oscura-01.png" style="width:100vw;" />	
 			</div>
-	</section>
+
 	<script src="<?php echo Yii::app()->getBaseUrl(true); ?>/js/jquery.boxloader.min.js"></script>	
 
-<div class="mision-transicion">
+<div class="mision-transicion fadder">
 	<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 	<div class="side-title">
 		<div style="display:inline-block;">
@@ -16,7 +16,7 @@
 		</div>
 	</div>
 	</div>
-</div>	
+	
 	
 <div class="div-texto-aftosa col-lg-6 col-md-6 col-sm-12 col-xs-12" style="text-align: left;">
 		
@@ -24,7 +24,7 @@
 
 		<div  class="tr  col-lg-12 col-md-12 col-sm-12 col-xs-12 inner-text" style="text-shadow:none;padding-top:0;">		
 
-		<div class="mision-transicion">
+		<div>
 				<h2 style="color:#00255B;  text-shadow: none;margin-bottom:20; margin-top: 0%; font-size:20px;"><?php echo Textos::model()->GetText(385); ?></h2>
 				<p><?php echo Textos::model()->GetText(386); ?></p>
 
@@ -53,13 +53,13 @@
 	</div>
 
 </div>	
-
+</div>
 
 <?php include('widget.php'); ?>
 
 
 		<script type="text/javascript">
-		$(document).ready(function(){
+		/*$(document).ready(function(){
 		$(".mision-transicion").boxLoader({
 			direction:"x",
 			position: "-50%",
@@ -68,29 +68,7 @@
 			windowarea: "50%"
 		}); 
 		
-		});
+		});*/
 		
-		
-		$(document).ready(function(){
-		$(".mision-2").boxLoader({
-			direction:"x",
-			position: "-100%",
-			effect: "fadeIn",
-			duration: "2s",
-			windowarea: "50%"
-		}); 
-		});
-		
-		$(document).ready(function(){
-		$(".mision-1").boxLoader({
-			direction:"x",
-			position: "-130%",
-			effect: "fadeIn",
-			duration: "2s",
-			windowarea: "50%"
-			}); 
-		}); 		
-		
-
 		
 	</script>

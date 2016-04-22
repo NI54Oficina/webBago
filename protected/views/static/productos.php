@@ -135,8 +135,8 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 				
 			</a>
 			
-			<div id="mail" class="col-lg-3 col-md-3 col-sm-6 col-xs-6 mail" >
-			</div> 
+			<!--<div id="mail" class="col-lg-3 col-md-3 col-sm-6 col-xs-6 mail" >
+			</div> !-->
 		</div>
 		
 		<!--<img class="col-lg-8 col-md-8 col-sm-12 col-xs-12" style=" width: 50%;  margin-top: 4%;float:initial;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-compartir.png"/>
@@ -261,8 +261,8 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 				
 			</a>
 			
-			<div id="mail-mobile" class="mail" style="width:40px;height:40px;">
-			</div> 
+			<!--<div id="mail-mobile" class="mail" style="width:40px;height:40px;">
+			</div> !-->
 			
 		</div>
 

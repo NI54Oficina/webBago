@@ -113,6 +113,7 @@ font-size: 22px;
 .headerMobile .navbar-collapse.in{
 	/*height:100vh !important;*/
 	min-height:100vh !important;
+	overflow:visible;
 }
 
 
@@ -4640,8 +4641,9 @@ figure.snip1156:hover .salud-ambiental{
 		text-align: left;
 	}
 	
+	
 	.dropdown-menu>li>a {
-		background:white;
+		background:transparent;
 		padding: 3px 10px;
 	}
 	
@@ -4716,7 +4718,6 @@ figure.snip1156:hover .salud-ambiental{
 	#ul-paises-nav{
 	    width: 100%;
 		left: 0;
-		top: 20vh;
 		position: initial;
 		background:transparent;
 		transition: all 0.4s ease;
@@ -5878,6 +5879,10 @@ and (orientation: landscape)
 		padding:5%;
 	}
 	
+	.navbar-collapse.collapse.in .dropdown-menu>li>a>img{
+		width:40px;
+	}
+	
 	#slider1 .overview li:nth-child(1),#slider1 .overview li:nth-child(2){
 	display:none;
 	}
@@ -6789,6 +6794,10 @@ and (max-device-width: 2100px) {
 		width:100%;
 	}
 	
+	.img-widget {
+		background-position: 100% center;
+		background-size: 100% auto;
+	}
 	
 	.navbar-nav .m-l{
 		margin-left:0;
@@ -8148,6 +8157,7 @@ h5{
 .fadder{
 	opacity:0;
 	transition:0.5s;
+	
 }
 
 .contenido-producto ul,.contenido-producto ol,.contenido-producto li{
@@ -8557,12 +8567,15 @@ h5{
 	}
 	
 	#container-ul-nav-header{
-		height:80vh;
-		overflow: auto;
+		height:auto;
+		overflow: visible;
 		width: 100%;
 		padding-bottom:30px;
 	}
 	
+	header{
+		box-shadow:0px 0px 17px #131313;
+	}	
 	
 	#box-desktop{
 		display:none;
@@ -8577,11 +8590,9 @@ h5{
 	}
 	
 	#ul-paises-nav{
-	    width: 100vw;
+	    width: 100%;
 		left: 0;
-		top: 20vh;
-		position: fixed;
-		min-height: 80vh;
+		position: initial;
 		transition: all 0.4s ease;
 		padding: 0;
 		margin:0;
@@ -8838,10 +8849,9 @@ h5{
 	}
 	
 	#ul-paises-nav {
-		width: 100vw;
+		width: 100%;
 		left: 0;
-		top: 33vh;
-		position: fixed;
+		position: initial;
 		min-height: 38vh;
 		transition: all 0.4s ease;
 		padding: 0;
@@ -9352,15 +9362,20 @@ h5{
 
 
 #quienes-transicion{
+	 -ms-transform: translateX(-50%); /* IE 9 */
+    -webkit-transform: translateX(-50%); /* Chrome, Safari, Opera */
+    transform: translateX(-50%);
 	animation:fadein 2.5s;
-	animation: text-inside 4s;
-	animation: text-inside 4s ease-out forwards;
+	animation: text-inside 3s;
+	animation: text-inside 2s ease-out forwards;
+	animation-play-state:paused;
 }
 
 .mision-transicion{
 	animation:fadein 2.5s;
 	animation: text-inside 4s;
 	animation: text-inside 4s ease-out forwards;
+	animation-play-state:paused;
 }
 
 
@@ -9368,6 +9383,7 @@ h5{
 	animation:fadein 2.5s;
 	animation: text-inside 4s;
 	animation: text-inside 4s ease-out forwards;
+	animation-play-state:paused;
 }
 
 
@@ -9375,24 +9391,28 @@ h5{
 	animation:fadein 2.5s;
 	animation: text-inside 4s;
 	animation: text-inside 4s ease-out forwards;
+	animation-play-state:paused;
 }
 
 #prensa-transicion{
 	animation:fadein 2.5s;
 	animation: text-inside 4s;
 	animation: text-inside 4s ease-out forwards;
+	animation-play-state:paused;
 }
 
 #proveedores-transicion{
 	animation:fadein 2.5s;
 	animation: text-inside 4s;
 	animation: text-inside 4s ease-out forwards;
+	animation-play-state:paused;
 }
 
 #plantas-transicion{
 	animation:fadein 2.5s;
 	animation: text-inside 4s;
 	animation: text-inside 4s ease-out forwards;
+	animation-play-state:paused;
 }
 
 
@@ -9417,7 +9437,6 @@ h5{
   and (min-device-width: 768px) 
   and (max-device-width: 1024px) 
   {
-  
 	.snip1156.image h3 {
 		display: block;
 		color: #b8b8b8;
@@ -10134,6 +10153,14 @@ h5{
 		width: 11%;
 	}
 	
+	.content-home>.container-flecha{
+		bottom:60px;
+	}
+	
+	.content-home>.container-h1-home{
+		padding-top:0;
+	}
+	
 	#form1 textarea {
 		width: 100%;
 		background: rgba(255,255,255,0.2);
@@ -10153,7 +10180,7 @@ h5{
 	}
 	
 	.dropdown-menu>li>a {
-		background: white;
+		background: transparent;
 		color: #b6b6b6;
 		display: block;
 		padding: 0px 1px;
@@ -10161,6 +10188,13 @@ h5{
 		font-weight: 400;
 		line-height: 3.428571;
 		white-space: nowrap;
+		font-size:7px;
+	}
+	.dropdown-menu>li>a>img{
+	width:40px;
+	}
+	.dropdown-menu{
+		background:transparent;
 	}
 
 	.header-infotec-revista {
@@ -10383,6 +10417,12 @@ h5{
 		margin:2%;
 	}
 	
+	.content-home>.container-h1-home{
+		padding-top:0;
+	}
+	.content-home .border-video{
+		margin-bottom:10px;
+	}
  }
  
  
@@ -10584,7 +10624,12 @@ h5{
 		display: inline-block;
 		max-width: 284px;
 	}
-  
+	.content-home>.container-h1-home{
+		padding-top:20px;
+	}
+	.logo-blanco{
+	padding-top:50px;
+	}
 }
 
 @media only screen 
@@ -11032,6 +11077,27 @@ and (orientation: landscape){
 	height:auto;
 }
 
+
+
+#input-modal-mensaje textarea:focus {
+    outline:none;
+}
+
+ @media only screen 
+  and (min-device-width: 240px) 
+  and (max-device-width: 1024px) 
+{
+  
+  .inner-text-2 {
+    width: 96%!important;
+    padding-left: 9%!important;
+	}
+	
+	.
+  
+  
+ }
+
 /*FILIALES MOBILE*/
 
 #casamatriz-mobile{ background-color: rgba(9,23,68, .5); width }
@@ -11059,4 +11125,5 @@ and (orientation: landscape){
 	}
 	
 /*FILIALES MOBILE*/
+
 

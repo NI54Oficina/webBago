@@ -1,3 +1,4 @@
+
 var isHome=false;
 $(function() {
     var boxClone;
@@ -152,7 +153,9 @@ $(function(){
 		SameHeight();
 		ResizeViewportElements();
 		//if(!isHome){
+			
 			$(".fadder").css('opacity',1);
+			$(".fadder").css('animation-play-state',"running");
 		//}
 		$("#vademecum-loading").hide();
 		$("#vademecum-loading").css('right','initial');
@@ -291,7 +294,7 @@ $(function(){
 			var rule = getStyleRule('.headerMobile .navbar-collapse.in');
 			//var auxH= screen.height-$("#navbar-main").height();
 			auxH= screen.height-auxH+10;
-			rule.height= auxH+"px";
+			rule.height= "auto";
 			rule['min-height']= auxH+"px";
 			console.log(rule.height);;
 		}
@@ -330,7 +333,7 @@ $(function(){
 			$("#"+ $(this).attr("info")).show();
 		});
 		
-		$("body").on("touchstart",".btn-mapa",function(){
+		$("body").on("touchend",".btn-mapa",function(){
 			console.log("entra start");
 			$(this).click();
 		});
@@ -348,7 +351,7 @@ $(function(){
 				//$(target).css("max-height","10000000px");
 			}
 		});
-		$("body").on("touchstart",".toggle-dropdown-header",function(){
+		$("body").on("touchend",".toggle-dropdown-header",function(){
 			//$(this).click();
 			var target= $(this).attr("target");
 				console.log($(this).attr("target"));
@@ -547,40 +550,32 @@ $(document).ready(function(){
 
 $(window).scroll(function() {
 
-if ($(this).scrollTop() >100){  
+if (checkVisible($("#curvaSuperiorInsti")) || checkVisible($("#curvaInferiorInsti")) ){  
 
 	$('#iconos-institucional div').each(function(i) {
-	$(this).delay((i++) * 200).fadeTo(1000, 1); })
-
-
+	$(this).delay((i++) * 200).fadeTo(1000, 1); });
+	
 }});
 
 
 $(window).scroll(function() {
 
-if ($(this).scrollTop() >200){  
-
-	$('#table .tr-widget').each(function(i) {
-	$(this).delay((i++) * 200).fadeTo(1000, 1); })
-
-
-}});
-
-
-
-$(window).scroll(function() {
-
-if ($(this).scrollTop() >2450){  
-
+if (checkVisible($("#titulo-info")) ){  
+	
 	$('#info-tec #texto').each(function(i) {
 	$(this).delay((i++) * 400).fadeTo(1000, 1); })
+
+
 }});
 
 
 
 
+
+
 $(window).scroll(function() {
-if ($(this).scrollTop() >2730){  
+
+if (checkVisible($("#vade")) ){  
 
 
 	$('#botones div').each(function(i) {
@@ -593,14 +588,6 @@ if ($(this).scrollTop() >2730){
 }});
 
 
-$(window).scroll(function() {
-
-if ($(this).scrollTop() >3850){  
-	$('.move-x').css('animation','fadein 2s');
-	$('.move-x').css('animation','myfirst 3s');
-	$('.move-x').css('animation','myfirst 3s ease-out forwards');
-
-}});
 
 
 
@@ -628,4 +615,21 @@ function getStyleRule(name) {
 		}
 	}
 	return null;
+}
+function checkVisible( elm, evalType ) {
+	if (typeof elm === "undefined"|| typeof $(elm) === "undefined"|| $(elm).length<=0) {
+		return false;
+	}
+	
+	
+	
+	evalType = evalType || "visible";
+
+	var vpH = $(window).height(), // Viewport Height
+		st = $(window).scrollTop(), // Scroll Top
+		y = $(elm).offset().top,
+		elementHeight = $(elm).height();
+
+	if (evalType === "visible") return ((y < (vpH + st)) && (y > (st - elementHeight)));
+	if (evalType === "above") return ((y < (vpH + st)));
 }
