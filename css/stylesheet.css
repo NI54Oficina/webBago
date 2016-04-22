@@ -2593,8 +2593,7 @@ footer{
 /************ ESTILOS ***********/
 #referencias {
     font-family: 'arialregular';
-    margin-left: 7%;
-    margin-top: 20%;
+    margin:auto;
     color: white;
 }
 
@@ -2660,8 +2659,7 @@ footer{
 
 #referencias{
 	font-family: 'arialregular';
-	margin-left: 0%;
-	margin-top: -8%;
+	margin:auto;
 }
 
 
@@ -7544,6 +7542,8 @@ figure.snip1156 .d-a-2 h2{
   and (max-device-width: 1024px) 
   and (orientation: portrait) 
   {
+
+  	#referencias { margin-left: 6%; }
   	#btnmenu {
 		display: inline-block;
 		margin-top: -5%;
@@ -11120,10 +11120,13 @@ and (orientation: landscape){
     margin: 1% 2%;
 }
 
-#ul-filiales-paises{
-		
-	}
-	
+@media screen and (max-width: 768px)
+{
+
+#referencias { margin-left: 6%;
+}
+
+}	
 /*FILIALES MOBILE*/
 
 

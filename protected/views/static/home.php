@@ -175,7 +175,7 @@
 
 			
 			<!---------- REFERENCIAS ------------------>
-				<div id="referencias" class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="cursor:default;position:relative;z-index:1; margin: auto;">
+				<div id="referencias" class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="cursor:default;position:relative;z-index:1;">
 					
 				
 					<!--- REFERENCIA -->	
@@ -238,7 +238,7 @@
 					
 					
 				</div> <!-- Termina total referencias -->
-				<div  > <!-- comienza mobile -->
+				<div  class="hidden-lg hidden-md"> <!-- comienza mobile -->
 				<ul id="ul-filiales-paises">
 					
 					<li class="c btn-mapa"  info="infoArgentina" id="casamatriz-mobile"><a href="javascript:void(0);" ><?php echo Textos::model()->GetText(410); ?> </li></a>
