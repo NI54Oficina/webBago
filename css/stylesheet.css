@@ -11141,8 +11141,9 @@ and (orientation: landscape){
 
 
 #leermasprensa {float: right;padding-right: 7%;" style="float: right;padding-right: 7%;}
-
+#mas-imagenes-prov {margin-top: -10%;margin-left: 0;position:relative;z-index:100;}
 @media screen and (max-width:240px){
  #leermasprensa {padding: 0;}
+ #mas-imagenes-prov {margin-top: -20%}
 
 }
