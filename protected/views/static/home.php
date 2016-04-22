@@ -1697,7 +1697,10 @@
 							<!-- ******** MENSAJE ******** -->
 							<div class="col-md-12 col-md-12 col-sm-12 col-xs-12">
 								<div class="textarea-contacto">
-								<label id="textarea-label" for="exampleInputName2"><p style="text-transform: uppercase; margin: 0;"><?php echo Textos::model()->GetText(122); ?></p></label> 
+								<label id="textarea-label" for="exampleInputName2">
+								<p style="text-transform: uppercase; margin: 0 auto;"><?php echo Textos::model()->GetText(122); ?>
+								</p>
+								</label> 
 									<textarea rows="3" id="textarea" name="mensaje" class="required"></textarea>
 									</div>
 							</div>  <!--termina form textarea-->

@@ -2471,10 +2471,10 @@ footer{
 
 
 #form1 textarea{
-	width: 97%;
+	width: 100%;
     background: rgba(255,255,255,0.2);
     height: 15vh;
-    margin-left: -15px;
+    /*margin-left: -15px;*/
 }
 
 
@@ -2555,7 +2555,7 @@ footer{
 	margin:0;
 	width:100%;
 	margin-top:15px;
-    margin-left: 10px;
+    /*margin-left: 10px;*/
     
 }
 
@@ -3954,6 +3954,11 @@ section{
 	padding:0 30px;
 }
 
+@media screen and (max-width: 883px)
+{#info-revista{
+	padding-left:0;}
+}
+
 #info-revista p{
     margin-left: 0%;
     font-size: 13px;
@@ -5170,7 +5175,7 @@ figure.snip1156:hover .salud-ambiental{
 		width: 99%;
 		background: rgba(255,255,255,0.2);
 		height: 15vh;
-		margin-left: -11px;
+		/*margin-left: -11px;*/
 	}
 
 	#btn-buscar {
@@ -8772,7 +8777,7 @@ h5{
 		width: 97%;
 		background: rgba(255,255,255,0.2);
 		height: 27vh;
-		margin-left: -15px;
+		/*margin-left: -15px;*/
 	}
 	
 	#form1 #enviar {
@@ -9527,11 +9532,16 @@ h5{
 	}
 }
   
-
+@media only screen 
+  and (min-device-width: 380px) 
+  and (max-device-width: 737px) {
+  	 #textarea-label p {width: 93%;}
+}
   
 @media only screen 
   and (min-device-width: 240px) 
   and (max-device-width: 737px) {
+  	 
 
 	.h1-1-home {
 		font-size: 13px;
@@ -9544,7 +9554,7 @@ h5{
 		width: 93%;
 		background: rgba(255,255,255,0.2);
 		height: 15vh;
-		margin-left: -20px;
+		/*margin-left: -20px;*/
 	}
 
 	#contacto-mobile {
@@ -9599,7 +9609,7 @@ h5{
 }
 
 .input-vad {
-    width: 100%;
+    width:86vw;
     background: rgba(255,255,255,0.2);
     display: inline-block;
     height: 33px;
@@ -9815,10 +9825,10 @@ h5{
 	
 	
 	#form1 textarea {
-		width: 97%;
+		width: 100%;
 		background: rgba(255,255,255,0.2);
 		height: 15vh;
-		margin-left: -18px;
+		/*margin-left: -18px;*/
 	}
 
 	#btnmenu {
@@ -10070,7 +10080,7 @@ h5{
 		width: 100%;
 		background: rgba(255,255,255,0.2);
 		height: 30vh;
-		margin-left: -15px;
+		/*margin-left: -15px;*/
 	}
 	
 	#logo-bago-mobile {
@@ -10165,7 +10175,7 @@ h5{
 		width: 100%;
 		background: rgba(255,255,255,0.2);
 		height: 24vh;
-		margin-left: -20px;
+		/*margin-left: -20px;*/
 	}
 	
 	.titulo-layout-aftosa {
@@ -11130,3 +11140,9 @@ and (orientation: landscape){
 /*FILIALES MOBILE*/
 
 
+#leermasprensa {float: right;padding-right: 7%;" style="float: right;padding-right: 7%;}
+
+@media screen and (max-width:240px){
+ #leermasprensa {padding: 0;}
+
+}
