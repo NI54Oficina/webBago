@@ -8643,12 +8643,12 @@ h5{
 		width: 93%;
 	}
 	
-	#list-menu {
+	/*#list-menu {
 		list-style: none;
 		margin-top: 2%;
 		margin-left: 0%;
 	}
-	
+	*/
 
 	#botonera-buscar {
 		font-family: arialregular;
@@ -8737,7 +8737,7 @@ h5{
 		padding: 1px;
 		height: 182px;
 		border: 1px solid #359FBD;
-		width: 100%;
+		width: 70%;
 		max-width: 100%;
 		margin-top: -52px;
 	}
@@ -11149,15 +11149,8 @@ and (orientation: landscape){
  #text-1 {
     margin-top: 15%;}
  #display-rrhh {
-    padding-top: 0;}   
+    padding-top: 100px;   
 
-#texto-btn-mas2 {width: 100%;}
-#btn-mas {width: auto;}
+#list-menu
+}
 
-
-/*}
-
-@media screen and (max-width:320px) and (max-height: 240px){
-
-	#slider1 .overview li {margin-left: -10px;}
-}*/
