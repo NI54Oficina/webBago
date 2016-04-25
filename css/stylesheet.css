@@ -11123,7 +11123,7 @@ and (orientation: landscape){
 
 /*FILIALES MOBILE*/
 
-#casamatriz-mobile{ background-color: rgba(9,23,68, .5); width }
+#casamatriz-mobile{ background-color: rgba(9,23,68, .5); }
 #filial-mobile{background-color: rgba(96,167,195, .5);}
 #banco-mobile{background-color: rgba(131,130,134, .2);}
 #distribuidoras-mobile{background-color: rgba(255,164,22, .5);}
@@ -11153,7 +11153,6 @@ and (orientation: landscape){
 /*FILIALES MOBILE*/
 
 
-<<<<<<< HEAD
 
 .notransition {
   -webkit-transition: 0.5s !important;
@@ -11163,7 +11162,8 @@ and (orientation: landscape){
   transition: 0.5s !important;
   opacity:1 !important;
   transform: initial !important;
-=======
+}
+
 #leermasprensa {float: right;padding-right: 7%;" style="float: right;padding-right: 7%;}
 #mas-imagenes-prov {margin-top: -10%;margin-left: 0;position:relative;z-index:100;}
 
@@ -11177,10 +11177,11 @@ and (orientation: landscape){
  #display-rrhh {
     padding-top: 100px;   
 
+	}
 }
 
 @media only screen and  (max-width:320px) and (max-height: 240px){
 
 	.input-vad {width: 86vw;}
->>>>>>> origin/master
+
 }
