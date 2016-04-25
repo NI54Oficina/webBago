@@ -52,7 +52,7 @@
 							<li><a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/nota-prensa/<?php echo $nota->id; ?>"><p><?php 
 							$timeStamp=strtotime($nota->fecha);	
 							echo date('d',$timeStamp)." de ".$meses[date('n',$timeStamp)-1];
-							?><a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/nota-prensa/<?php echo $nota->id; ?>" style="float: right;padding-right: 7%;" style="float: right;padding-right: 7%;">Leer  más</a><div class="linea-rse-not"></div></p><h1 class="h1-noticias-rse"><?php echo $nota->titulo; ?> </h1></a></li>
+							?><a id="leermasprensa" href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/nota-prensa/<?php echo $nota->id; ?>" style="">Leer  más</a><div class="linea-rse-not"></div></p><h1 class="h1-noticias-rse"><?php echo $nota->titulo; ?> </h1></a></li>
 						</ul>
 					<?php } ?>
 				</div>

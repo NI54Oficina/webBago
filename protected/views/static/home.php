@@ -175,7 +175,7 @@
 
 			
 			<!---------- REFERENCIAS ------------------>
-				<div id="referencias" class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="cursor:default;position:relative;z-index:1; margin: auto;">
+				<div id="referencias" class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="cursor:default;position:relative;z-index:1;">
 					
 				
 					<!--- REFERENCIA -->	
@@ -238,7 +238,7 @@
 					
 					
 				</div> <!-- Termina total referencias -->
-				<div  > <!-- comienza mobile -->
+				<div  class="hidden-lg hidden-md"> <!-- comienza mobile -->
 				<ul id="ul-filiales-paises">
 					
 					<li class="c btn-mapa"  info="infoArgentina" id="casamatriz-mobile"><a href="javascript:void(0);" ><?php echo Textos::model()->GetText(410); ?> </li></a>
@@ -1471,7 +1471,7 @@
 								<?php } ?>
 								
 								
-									<li class="col-lg-4  col-md-2 col-sm-2 col-xs-4" style="border:none;">
+									<li class="col-lg-4  col-md-2 col-sm-2 col-xs-2" style="border:none;">
 									<div id="btn-mas" class="col-lg-12 col-md-12 col-sm-3 col-xs-3"  style="cursor:pointer; padding-top: 59px;">
 										<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/revista">
 											<img id="img-btn-mas" src="<?php echo Yii::app()->request->baseUrl; ?>/img/mas-ediciones-01.png" style="    position: inherit;">
@@ -1699,7 +1699,10 @@
 							<!-- ******** MENSAJE ******** -->
 							<div class="col-md-12 col-md-12 col-sm-12 col-xs-12">
 								<div class="textarea-contacto">
-								<label id="textarea-label" for="exampleInputName2"><p style="text-transform: uppercase; margin: 0;"><?php echo Textos::model()->GetText(122); ?></p></label> 
+								<label id="textarea-label" for="exampleInputName2">
+								<p style="text-transform: uppercase; margin: 0 auto;"><?php echo Textos::model()->GetText(122); ?>
+								</p>
+								</label> 
 									<textarea rows="3" id="textarea" name="mensaje" class="required"></textarea>
 									</div>
 							</div>  <!--termina form textarea-->
