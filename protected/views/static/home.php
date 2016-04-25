@@ -15,7 +15,7 @@
 
 
 	
-		<div style="" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fadder">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fadder" style="opacity:1;">
 
 			<!--CURVA-->
 		
@@ -135,9 +135,9 @@
 		</div>
 		
 		<!--CURVA-->
-		<img id="curvaInferiorInsti"class="fadder" style=" width: 100%;position:relative;margin-top:-4px;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-home-abajo.png" alt="" style="" />	
+		<img id="curvaInferiorInsti"class="fadder" style="opacity:1; width: 100%;position:relative;margin-top:-4px;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-home-abajo.png" alt="" style="" />	
 
-		<section class="special fadder" data-scrollax-parent="true" style="background:transparent;width:100%;overflow-x:hidden;" id="mapa-filiales">
+		<section class="special fadder" data-scrollax-parent="true" style="opacity:1;background:transparent;width:100%;overflow-x:hidden;" id="mapa-filiales">
 		<!------------------------------------------------------------------ SECCION 2: FILIALES ------------------------------------------------------------------>			
 			
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-bottom:30px;padding-left:2%;" id="map">
@@ -818,9 +818,9 @@
 	
 	<?php if($_SESSION["lng"]=="es"){ ?>
 	
-	<img class="fadder" style="width: 100%;position:relative;margin-bottom:-1px;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-celeste.png" alt="" />	
+	<img class="fadder" style="width: 100%;position:relative;margin-bottom:-1px;opacity:1;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-celeste.png" alt="" />	
 	
-	<section class="special fadder" data-scrollax-parent="true" style="background: rgb(129, 206, 231);width:100%;overflow-x:hidden;position:relative;" id="inform-tec">
+	<section class="special fadder" data-scrollax-parent="true" style="opacity:1;background: rgb(129, 206, 231);width:100%;overflow-x:hidden;position:relative;" id="inform-tec">
 
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"  id="info-tec" style="overflow:hidden;padding-bottom:30px;">
 
@@ -1091,12 +1091,12 @@
 
 
 		</section>
-		<img class="fadder" style="width:100%;position:relative;top:-3px;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-celeste-abajo.png" alt="" />	
+		<img class="fadder" style="opacity:1;width:100%;position:relative;top:-3px;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-celeste-abajo.png" alt="" />	
 	<?php } ?>
 		<!--CURVA-->	
 <!--   APLICAR LAS TRADUCCIONES AL PORTUGUES  -->
 		
-		<section class="special col-lg-12 col-md-12 col-sm-12 col-xs-12 fadder" data-scrollax-parent="true" style="width:100%;">
+		<section class="special col-lg-12 col-md-12 col-sm-12 col-xs-12 fadder" data-scrollax-parent="true" style="opacity:1;width:100%;">
 				
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
 			
@@ -1352,10 +1352,10 @@
 		
 		
 		<!--CURVA-->			
-		<img class="fadder" style="width: 100%;position:relative;top:2px;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-home.png" alt="" />
+		<img class="fadder" style="opacity:1;width: 100%;position:relative;top:2px;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-home.png" alt="" />
 		
 		<!------------------------------------------------------------------ SECCION 5: REVISTA EL MOLINO ------------------------------------------------------------------>	
-		<section class="special col-lg-12 col-md-12 col-sm-12 col-xs-12 fadder" data-scrollax-parent="true" style="background: rgba(0, 0, 0, 0.62);width:100%;overflow-x:hidden;padding-bottom:30px;">
+		<section class="special col-lg-12 col-md-12 col-sm-12 col-xs-12 fadder" data-scrollax-parent="true" style="opacity:1;background: rgba(0, 0, 0, 0.62);width:100%;overflow-x:hidden;padding-bottom:30px;">
 
 			
 	
@@ -1396,24 +1396,26 @@
 					
 					
 						<script type="text/javascript">
+							$(document).ready(function(){
+								if(!isMobile){
+								$("#img-rev").boxLoader({
+									direction:"x",
+									position: "-50%",
+									effect: "fadeIn",
+									duration: "2s",
+									windowarea: "50%"
+								}); 
 							
-							$("#img-rev").boxLoader({
-								direction:"x",
-								position: "-50%",
-								effect: "fadeIn",
-								duration: "2s",
-								windowarea: "50%"
-							}); 
-						
-							
-							$("#info-revista").boxLoader({
-								direction:"x",
-								position: "50%",
-								effect: "fadeIn",
-								duration: "2s",
-								windowarea: "50%"
-							}); 
-							
+								
+								$("#info-revista").boxLoader({
+									direction:"x",
+									position: "50%",
+									effect: "fadeIn",
+									duration: "2s",
+									windowarea: "50%"
+								}); 
+								}
+							});
 						</script>
 	
 					<!-- //////// CARROUSEL //////// -->
@@ -1496,7 +1498,7 @@
 		<?php } ?>
 		<!------------------------------------------------------------------ SECCION 6: RRHH ------------------------------------------------------------------>
 		
-		<section class="special col-lg-12 col-md-12 col-sm-12 col-xs-12 fadder" data-scrollax-parent="true" style="width:100%;background-color: white;overflow:hidden;height:auto;"  id="back-rrhh">
+		<section class="special col-lg-12 col-md-12 col-sm-12 col-xs-12 fadder" data-scrollax-parent="true" style="opacity:1;width:100%;background-color: white;overflow:hidden;height:auto;"  id="back-rrhh">
 	
 			<!--*************  CONTENEDOR PRINCIPAL *********** -->
 		
@@ -1561,7 +1563,7 @@
 
 
 		<!------------------------------------------------------------------ SECCION 7: CONTACTO ------------------------------------------------------------------>
-		<section class="special fadder" data-scrollax-parent="true" style="width:100%;text-align:center;background-image:url(<?php echo Yii::app()->request->baseUrl; ?>/img/fondo-contacto.png);background-size:auto 100%;float:left;overflow:hidden;position:relative;top:-2px;"   id="section-contacto" >
+		<section class="special fadder" data-scrollax-parent="true" style="opacity:1;width:100%;text-align:center;background-image:url(<?php echo Yii::app()->request->baseUrl; ?>/img/fondo-contacto.png);background-size:auto 100%;float:left;overflow:hidden;position:relative;top:-2px;"   id="section-contacto" >
 			<div id="contenido" style="display:inline-block;text-align:center;">
 				
 				<!-- ////////// TITULO ////////////// -->
@@ -1826,6 +1828,7 @@
     
 	<script type="text/javascript">
 		$(document).ready(function(){
+			if(!isMobile){
 		$("#mapa").boxLoader({
 			direction:"x",
 			position: "-50%",
@@ -1908,6 +1911,7 @@
 			duration: "2s",
 			windowarea: "50%"
 		}); 
+			}
 		});
 	</script>
 </body>
