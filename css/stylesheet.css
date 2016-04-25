@@ -328,6 +328,10 @@ font-size: 22px;
 		transition:0.4s all ease-in-out;
 		color:#656565;
 	}
+	.headerDesktop .glyphicon{
+		color: #1B6F9B;
+		font-size:9px;
+	}
 	
 	.ul-nav li ul li {
 		background-color:white;
@@ -2847,7 +2851,7 @@ p{
 
 
 #noticias-trabajos{
-	padding:0 15px;
+	padding:0 3%;
 }
 
 #noticias-planes{
@@ -2870,6 +2874,8 @@ p{
     margin-right: 0;
     text-align: left;
 	padding:10px;
+	padding-left:0;
+	padding-right:20px;
 }
 
 
@@ -8128,16 +8134,17 @@ h5{
 		background-image: url(../img/volver-desactivado.png);
 		height: 42px;
 		background-repeat: no-repeat;
-		background-position: center;
+		background-position: left;
 		background-size: auto auto;
 		-webkit-transition: all 1s ease;
 		-moz-transition: all 1s ease;
 		-o-transition: all 1s ease;
 		-ms-transition: all 1s ease;
 		transition: all 1s ease;
-		margin-top: -4%;
+		margin-top: 0;
 		text-align: left;
-		margin-left: -138px;
+		position:absolute;
+		
 	}
 
 	.volver-infotec-revista div {
@@ -8364,6 +8371,13 @@ h5{
 		display:block;
 	}
 	
+	.titulo-vad-producto {
+		text-align: right;
+		font-size: 17px;
+		margin-bottom: 0%;
+		margin-left: 44px;
+	}
+	
 	
 	}
 	
@@ -8392,12 +8406,7 @@ h5{
 		margin-top: 8%;
 	}
 
-	.titulo-vad-producto {
-		text-align: right;
-		font-size: 17px;
-		margin-bottom: 0%;
-		margin-left: 44px;
-	}
+	
 
 	#list-menu li a {
 		width: 77px;
@@ -9062,7 +9071,7 @@ h5{
 	display: inline-block;
     vertical-align: middle;
     margin-top: 3%;
-    margin-left: 184px;
+    margin-left: 60px;
     color: #B2B2B2;
     font-size: 17px;
     font-family: 'arialregular';
@@ -9075,7 +9084,7 @@ h5{
 	}
 	
 	
-	.volver{
+	/*.volver{
 		background-image: url(../img/volver-desactivado.png);
 		height: 42px;
 		background-repeat: no-repeat;
@@ -9088,7 +9097,8 @@ h5{
 		transition: all 1s ease;
 		text-align: left;
 		margin-left: -8%;
-	}
+		margin-top:0;
+	}*/
 	
 	#ul-rrhh-home{
 		color:#359fbd;
@@ -9121,7 +9131,7 @@ h5{
 	font-weight: 700; 
 	display: inline-block; 
 	padding-top: 65px;
-	text-shadow: 0px 3px black;
+	text-shadow: 0px 2px black;
 	margin: 0;
 	padding-left: 70px;
 }
@@ -9142,7 +9152,7 @@ h5{
 		font-weight: 700; 
 		display: inline-block; 
 		padding-top: 20px;
-		text-shadow: 0px 3px black;
+		text-shadow: 0px 2px black;
 		text-align: center;
 		margin-left:0px;
 		padding-left: 0;
@@ -9714,7 +9724,7 @@ h5{
 		font-weight: 700;
 		display: inline-block;
 		padding-top: 0px;
-		text-shadow: 0px 3px black;
+		text-shadow: 0px 2px black;
 		text-align: center;
 		margin-left: 0px;
 		padding-bottom: 20px;
@@ -10919,7 +10929,7 @@ and (orientation: landscape) {
 .container-flecha{
 	text-align:center;
 	position:absolute;
-	bottom:100px;
+	bottom:80px;
 }
 
 .container-h1-home{
@@ -11113,7 +11123,7 @@ and (orientation: landscape){
 
 /*FILIALES MOBILE*/
 
-#casamatriz-mobile{ background-color: rgba(9,23,68, .5); width }
+#casamatriz-mobile{ background-color: rgba(9,23,68, .5); }
 #filial-mobile{background-color: rgba(96,167,195, .5);}
 #banco-mobile{background-color: rgba(131,130,134, .2);}
 #distribuidoras-mobile{background-color: rgba(255,164,22, .5);}
@@ -11144,6 +11154,20 @@ and (orientation: landscape){
 
 
 
+<<<<<<< HEAD
+.notransition {
+  -webkit-transition: 0.5s !important;
+  -moz-transition: 0.5s !important;
+  -o-transition: 0.5s !important;
+  -ms-transition: 0.5s !important;
+  transition: 0.5s !important;
+  opacity:1 !important;
+  transform: initial !important;
+}
+
+#leermasprensa {float: right;padding-right: 7%;" style="float: right;padding-right: 7%;}
+#mas-imagenes-prov {margin-top: -10%;margin-left: 0;position:relative;z-index:100;}
+=======
 /*FILIALES MOBILE*/
 #leermasprensa {
 	float: right;
@@ -11158,6 +11182,7 @@ and (orientation: landscape){
 	position:relative;
 	z-index:100;
 }
+>>>>>>> origin/master
 
 @media screen and (max-width:320px){
 
@@ -11165,12 +11190,16 @@ and (orientation: landscape){
  
 	#mas-imagenes-prov {margin-top: -20%}
 
+<<<<<<< HEAD
+	}
+=======
 	#btnmenu {margin-top: 0;}
  
 	#text-1 {margin-top: 15%;}
  
 	#display-rrhh {padding-top: 100px; }
 	
+>>>>>>> origin/master
 }
 
 
@@ -11178,6 +11207,8 @@ and (orientation: landscape){
 	
 	.input-vad {width: 86vw;}
 
+<<<<<<< HEAD
+=======
 }
 
 
@@ -11230,4 +11261,5 @@ and (orientation: landscape){
 		transition: all 0.6s ease;
 		margin-left: 82px!important;
 	}
+>>>>>>> origin/master
 }

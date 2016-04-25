@@ -152,11 +152,43 @@ $(function(){
 		Header();
 		SameHeight();
 		ResizeViewportElements();
-		//if(!isHome){
+		if(!isHome){
 			
 			$(".fadder").css('opacity',1);
 			$(".fadder").css('animation-play-state',"running");
-		//}
+		}
+		if(isMobile){
+			  
+
+			$('#iconos-institucional div').each(function(i) {
+				$(this).addClass('notransition'); 
+				
+				
+			});
+			
+			$('#info-tec #texto').each(function(i) {
+				$(this).addClass('notransition'); 
+				
+			})
+
+			$('#botones div').each(function(i) {
+				$(this).addClass('notransition'); 
+				
+			})
+				
+			$('#nom-btn').addClass('notransition');
+			
+			$('.item.i01').addClass('notransition');
+			$('.item.i02').addClass('notransition');
+			$('.item.i03').addClass('notransition');
+			$('.item.i04').addClass('notransition');
+			$('.item.i05').addClass('notransition');
+			$('.item.i06').addClass('notransition');
+			$('.item.i07').addClass('notransition');
+			$('.item.i08').addClass('notransition');
+			
+		}
+		
 		$("#vademecum-loading").hide();
 		$("#vademecum-loading").css('right','initial');
 		$.each($("#vademecum-loading .div-img-aft img"), function(index,value){
@@ -475,28 +507,7 @@ $(document).ready(function(){
 		
 	});
 });
- //this is where we apply opacity to the arrow
-$(window).scroll( function(){
-
-  //get scroll position
-  var topWindow = $(window).scrollTop();
-  //multipl by 1.5 so the arrow will become transparent half-way up the page
-  var topWindow = topWindow * 1.5;
-  
-  //get height of window
-  var windowHeight = $(window).height();
-      
-  //set position as percentage of how far the user has scrolled 
-  var position = topWindow / windowHeight;
-  //invert the percentage
-  position = 1 - position;
-
-  //define arrow opacity as based on how far up the page the user has scrolled
-  //no scrolling = 1, half-way up the page = 0
-  $('.scroll-down').css('opacity', position);
-
-});
-
+ 
 
 
 
@@ -549,61 +560,66 @@ $(document).ready(function(){
 });
 
 $(window).scroll(function() {
+	if(!isMobile){
+	if (checkVisible($("#curvaSuperiorInsti")) || checkVisible($("#curvaInferiorInsti")) ){  
 
-if (checkVisible($("#curvaSuperiorInsti")) || checkVisible($("#curvaInferiorInsti")) ){  
+		$('#iconos-institucional div').each(function(i) {
+		$(this).delay((i++) * 200).fadeTo(1000, 1); });
+		
+	}
 
-	$('#iconos-institucional div').each(function(i) {
-	$(this).delay((i++) * 200).fadeTo(1000, 1); });
-	
-}});
-
-
-$(window).scroll(function() {
-
-if (checkVisible($("#titulo-info")) ){  
-	
-	$('#info-tec #texto').each(function(i) {
-	$(this).delay((i++) * 400).fadeTo(1000, 1); })
+	if (checkVisible($("#titulo-info")) ){  
+		
+		$('#info-tec #texto').each(function(i) {
+		$(this).delay((i++) * 400).fadeTo(1000, 1); })
 
 
-}});
+	}
+
+	if (checkVisible($("#vade")) ){  
 
 
+		$('#botones div').each(function(i) {
+		$(this).delay((i++) * 150).fadeTo(1000, 1); })
+		
+		$('#nom-btn').css('animation','fadein 2s');
+		$('#nom-btn').css('animation','myfirst 3s');
+		$('#nom-btn').css('animation','myfirst 3s ease-out forwards');
+		
+	}
 
+	if ($(this).scrollTop() >200){  
+		$('.item.i01').css('animation','fade-in-item 1s .2s ease-out forwards');
+		$('.item.i02').css('animation','fade-in-item 1s .6s ease-out forwards');
+		$('.item.i03').css('animation','fade-in-item 1s 1s ease-out forwards');
+		$('.item.i04').css('animation','fade-in-item 1s 1.4s ease-out forwards');
+		$('.item.i05').css('animation','fade-in-item 1s 1.8s ease-out forwards');
+		$('.item.i06').css('animation','fade-in-item 1s 2.2s ease-out forwards');
+		$('.item.i07').css('animation','fade-in-item 1s 2.6s ease-out forwards');
+		$('.item.i08').css('animation','fade-in-item 1s 3s ease-out forwards');
 
+	}
 
+if(isHome){
+	//get scroll position
+  var topWindow = $(window).scrollTop();
+  //multipl by 1.5 so the arrow will become transparent half-way up the page
+  var topWindow = topWindow * 1.5;
+  
+  //get height of window
+  var windowHeight = $(window).height();
+      
+  //set position as percentage of how far the user has scrolled 
+  var position = topWindow / windowHeight;
+  //invert the percentage
+  position = 1 - position;
 
-$(window).scroll(function() {
-
-if (checkVisible($("#vade")) ){  
-
-
-	$('#botones div').each(function(i) {
-	$(this).delay((i++) * 150).fadeTo(1000, 1); })
-	
-	$('#nom-btn').css('animation','fadein 2s');
-	$('#nom-btn').css('animation','myfirst 3s');
-	$('#nom-btn').css('animation','myfirst 3s ease-out forwards');
-	
-}});
-
-
-
-
-
-$(window).scroll(function() {
-
-if ($(this).scrollTop() >200){  
-	$('.item.i01').css('animation','fade-in-item 1s .2s ease-out forwards');
-	$('.item.i02').css('animation','fade-in-item 1s .6s ease-out forwards');
-	$('.item.i03').css('animation','fade-in-item 1s 1s ease-out forwards');
-	$('.item.i04').css('animation','fade-in-item 1s 1.4s ease-out forwards');
-	$('.item.i05').css('animation','fade-in-item 1s 1.8s ease-out forwards');
-	$('.item.i06').css('animation','fade-in-item 1s 2.2s ease-out forwards');
-	$('.item.i07').css('animation','fade-in-item 1s 2.6s ease-out forwards');
-	$('.item.i08').css('animation','fade-in-item 1s 3s ease-out forwards');
-
-}});
+  //define arrow opacity as based on how far up the page the user has scrolled
+  //no scrolling = 1, half-way up the page = 0
+  $('.scroll-down').css('opacity', position);
+}
+	}
+});
 
 
 function getStyleRule(name) {
@@ -617,7 +633,9 @@ function getStyleRule(name) {
 	return null;
 }
 function checkVisible( elm, evalType ) {
+
 	if (typeof elm === "undefined"|| typeof $(elm) === "undefined"|| $(elm).length<=0) {
+		
 		return false;
 	}
 	
@@ -633,3 +651,4 @@ function checkVisible( elm, evalType ) {
 	if (evalType === "visible") return ((y < (vpH + st)) && (y > (st - elementHeight)));
 	if (evalType === "above") return ((y < (vpH + st)));
 }
+
