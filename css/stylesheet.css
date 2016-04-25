@@ -10803,7 +10803,7 @@ and (orientation: landscape) {
 	#text-1{
 		width:60%;
 		margin-left:20%;
-		font-size:24px;
+		font-size:18px;
 	}
 	
 	h4.tr-2.move-x-2{
@@ -10991,7 +10991,7 @@ and (orientation: landscape){
  }
  
  .headerMobile .li-header{
-	font-size:1em;
+	font-size::1em;
 	line-height:1.2em;
 	color:#0C6796;
 	text-transform:uppercase;
@@ -11136,29 +11136,98 @@ and (orientation: landscape){
 @media screen and (max-width: 768px)
 {
 
-#referencias { margin-left: 6%;
-}
+	#referencias { 
+		margin-left: 6%;
+	}
 
 }	
+
+
+
 /*FILIALES MOBILE*/
+#leermasprensa {
+	float: right;
+	padding-right: 7%; 
+	float: right;
+	padding-right: 7%;
+}
 
-
-#leermasprensa {float: right;padding-right: 7%;" style="float: right;padding-right: 7%;}
-#mas-imagenes-prov {margin-top: -10%;margin-left: 0;position:relative;z-index:100;}
+#mas-imagenes-prov {
+	margin-top: -10%;
+	margin-left: 0;
+	position:relative;
+	z-index:100;
+}
 
 @media screen and (max-width:320px){
 
- #leermasprensa {padding: 0;}
- #mas-imagenes-prov {margin-top: -20%}
- #btnmenu {margin-top: 0;}
- #text-1 {
-    margin-top: 15%;}
- #display-rrhh {
-    padding-top: 100px;   
+	#leermasprensa {padding: 0;}
+ 
+	#mas-imagenes-prov {margin-top: -20%}
+
+	#btnmenu {margin-top: 0;}
+ 
+	#text-1 {margin-top: 15%;}
+ 
+	#display-rrhh {padding-top: 100px; }
+	
+}
+
+
+@media only screen and  (max-width:320px) and (max-height: 240px){
+	
+	.input-vad {width: 86vw;}
 
 }
 
-@media only screen and  (max-width:320px) and (max-height: 240px){
 
-	.input-vad {width: 86vw;}
+@media only screen 
+  and (min-device-width:414px) 
+  and (max-device-width: 736px) 
+  and (orientation: portrait){
+  
+	#btnmenu {
+		display: inline-block;
+		margin-top: -7%;
+		margin-right: 2%;
+		transition: all 0.5s ease;
+		float: right;
+	}
+}
+
+
+@media only screen 
+  and (min-device-width:414px) 
+  and (max-device-width: 736px) 
+  and (orientation: landscape){
+  
+	#btnmenu {
+		display: inline-block;
+		margin-top: -4%;
+		margin-right: 2%;
+		transition: all 0.5s ease;
+		float: right;
+	}
+}
+
+@media only screen 
+  and (min-device-width:320px) 
+  and (max-device-width: 568px) 
+  and (orientation: portrait){
+  
+	.btn-mas-revistas {
+		transition: all 0.6s ease;
+		margin-left: 82px!important;
+	}
+}
+
+@media only screen 
+  and (min-device-width:240px) 
+  and (max-device-width: 320px) 
+  and (orientation: portrait){
+  
+	.btn-mas-revistas {
+		transition: all 0.6s ease;
+		margin-left: 82px!important;
+	}
 }
