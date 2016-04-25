@@ -3881,7 +3881,7 @@ section{
     position: absolute;
     padding: 0;
     margin: 0;
-    width: 240px;
+    width: 100%;
     left: 0;
 	top: 50px;
 }
@@ -3892,7 +3892,7 @@ section{
     padding: 1px;
     height: 190px;
     border: 1px solid #359FBD;
-    width: 405px;
+    /*width: 405px;*/
 	max-width:67vw;
  }
  
@@ -7636,7 +7636,7 @@ figure.snip1156 .d-a-2 h2{
 		padding: 0px;
 		height: 190px;
 		border: 1px solid #359FBD;
-		width: 285px;
+		/*width: 285px;*/
 		max-width: 67vw;
 	}
 	
@@ -7932,7 +7932,7 @@ h5{
 		padding: 1px;
 		height: 190px;
 		border: 1px solid #359FBD;
-		width: 335px;
+		/*width: 335px;*/
 		max-width: 67vw;
 	}
 	
@@ -8755,6 +8755,7 @@ h5{
 		min-height: 150px;
 		overflow: hidden;
 		position: relative;
+		width:100%;
 	}
 	
 	#contacto {
@@ -11154,7 +11155,7 @@ and (orientation: landscape){
 
 
 
-<<<<<<< HEAD
+
 .notransition {
   -webkit-transition: 0.5s !important;
   -moz-transition: 0.5s !important;
@@ -11167,7 +11168,7 @@ and (orientation: landscape){
 
 #leermasprensa {float: right;padding-right: 7%;" style="float: right;padding-right: 7%;}
 #mas-imagenes-prov {margin-top: -10%;margin-left: 0;position:relative;z-index:100;}
-=======
+
 /*FILIALES MOBILE*/
 #leermasprensa {
 	float: right;
@@ -11182,7 +11183,7 @@ and (orientation: landscape){
 	position:relative;
 	z-index:100;
 }
->>>>>>> origin/master
+
 
 @media screen and (max-width:320px){
 
@@ -11190,16 +11191,13 @@ and (orientation: landscape){
  
 	#mas-imagenes-prov {margin-top: -20%}
 
-<<<<<<< HEAD
-	}
-=======
+
 	#btnmenu {margin-top: 0;}
  
 	#text-1 {margin-top: 15%;}
  
 	#display-rrhh {padding-top: 100px; }
 	
->>>>>>> origin/master
 }
 
 
@@ -11207,8 +11205,6 @@ and (orientation: landscape){
 	
 	.input-vad {width: 86vw;}
 
-<<<<<<< HEAD
-=======
 }
 
 
@@ -11261,5 +11257,5 @@ and (orientation: landscape){
 		transition: all 0.6s ease;
 		margin-left: 82px!important;
 	}
->>>>>>> origin/master
+
 }

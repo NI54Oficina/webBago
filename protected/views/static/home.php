@@ -1342,7 +1342,7 @@
 		
 		<!-- SCRIPT CARROUSEL -->
 	
-		<?php include('carrousel.php'); ?>
+		<?php //include('carrousel.php'); ?>
 		
 	
 		<?php $revistas= Revista::model()->findAllByAttributes(array('lng'=>$_SESSION["lng"]),array('order'=>'fecha DESC','limit' => 3)); 
@@ -1427,16 +1427,16 @@
 						
 						
 						<!--******* CONTENEDOR ****** -->
-						<div class="viewport">
+						<div class="viewport" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 						
 							<!-- LISTA REVISTAS -->
 							<!-- LISTA REVISTAS -->
-							<ul class="overview" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+							<ul class="overview col-lg-12 col-md-12 col-sm-12 col-xs-12">
 								<?php 
 								foreach($revistas as $revista){ ?> 
 								
 								<!-- ITEM REVISTA-->
-								<li id="revista-<?php echo $revista->id; ?>" class="col-lg-4 col-md-2 col-sm-2 col-xs-4 revista-slider-240">
+								<li id="revista-<?php echo $revista->id; ?>" class="col-lg-4 col-md-4 col-sm-4 col-xs-4 revista-slider-240">
 									
 									<a href="<?php echo Yii::app()->request->baseUrl; ?>/elmolino/<?php echo $revista->numero; ?>/index.html" target="_blank">
 									<!-- img -->
@@ -1471,7 +1471,7 @@
 								<?php } ?>
 								
 								
-									<li class="col-lg-4  col-md-2 col-sm-2 col-xs-6" style="border:none;">
+									<li class="col-lg-3  col-md-3 col-sm-3 col-xs-6" style="border:none;">
 									<div id="btn-mas" class="col-lg-12 col-md-12 col-sm-3 col-xs-3 btn-mas-revistas"  style="cursor:pointer; padding-top: 59px;">
 										<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/revista">
 											<img id="img-btn-mas" src="<?php echo Yii::app()->request->baseUrl; ?>/img/mas-ediciones-01.png" style="    position: inherit;">
@@ -1589,7 +1589,11 @@
 						<!--<div class="mapa"></div>!-->
 						
 						<!--<iframe class="" style="width:89%;height:50vh;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3276.321995531876!2d-58.47311858426047!3d-34.79784007530322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcd1838f6768bf%3A0x1fe233fc9fc7b0d0!2sBiogenesis+-+Bago!5e0!3m2!1ses!2sar!4v1454509545701" width="600" height="450" frameborder="0" style="border:0" allowfullscreen ></iframe>!-->
-						<?php if($_SESSION["lng"]=="pt"){ ?>
+						<?php if($_SESSION["short"]=="uy"){ ?>
+						<p>Francisco Acuña de Figueroa 2119 (detrás del Anexo del Palacio Legislativo), Montevideo, Uruguay</p>	
+							
+						<iframe  style="width:89%;height:50vh;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1880.736399717866!2d-56.18992946565908!3d-34.89305606680838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f803b02150c53%3A0x9c68c7eafc49ee1a!2sFrancisco+Acu%C3%B1a+de+Figueroa%2C+Montevideo+11800%2C+Uruguay!5e0!3m2!1ses-419!2sar!4v1461616531446" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+						<?php }else if($_SESSION["lng"]=="pt"){ ?>
 						<p>Av. Manoel Ribas, 985 - Mercês</p>
                         <iframe style="width:89%;height:50vh;"  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3603.4664824665533!2d-49.29041138444461!3d-25.422663438829932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce3f946aac7ff%3A0xbdbd9765e14046d2!2sAv.+Manoel+Ribas%2C+985+-+Merc%C3%AAs%2C+Curitiba+-+PR%2C+Brasil!5e0!3m2!1ses!2sar!4v1460127317366" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
 						<?php }else{ ?>
