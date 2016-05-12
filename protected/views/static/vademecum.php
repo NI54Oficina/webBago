@@ -60,19 +60,24 @@ function sanear_string($string)
 ?>
 <?php
 $pais= Pais::model()->findByPk(Yii::app()->session['pais']);
+$isException=false;
 if($pais->catalogo==1){
+	$pais=$pais->id;
+}else if($pais->catalogo==2){
+	$isException=true;
 	$pais=$pais->id;
 }else{
 	$pais=8;
 }
+
 $idSeccion= $data->id;
-if($idSeccion==1&&Yii::app()->session['pais']==17){
-	$pais=17;
+
+$productos = Producto::model()->findAllByAttributes(array('seccion'=>$data->id,"pais"=>$pais));
+if($isException&&!$productos&&count($productos)<=0){
+	Producto::model()->findAllByAttributes(array('seccion'=>$data->id,"pais"=>8));
 }
 
-$productos =Producto::model()->findAllByAttributes(array('seccion'=>$data->id,"pais"=>$pais));;
-
-if($pais==17){
+if($isException){
 	$pais=8;
 }
 

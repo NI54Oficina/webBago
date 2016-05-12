@@ -841,9 +841,9 @@
 					
 					<ul id="list-menu"  class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
-						<li class="col-lg-1 col-md-2 col-sm-2 col-xs-3 infotec-240"><a  id="opcion1" href="javascript:void(0)">Trabajos técnicos</a></li>
-						<li class="col-lg-1 col-md-2 col-sm-2 col-xs-3 infotec-240"><a  id="opcion2" href="javascript:void(0)">Planes Sanitarios</a></li>
-						<li class="col-lg-1 col-md-2 col-sm-2 col-xs-3 infotec-240"><a id="opcion3" href="javascript:void(0)">Planillas<br />de trabajo</a></li>             
+						<li class="col-lg-1 col-md-2 col-sm-2 col-xs-3 infotec-240" ><a  id="opcion1" href="javascript:void(0)" hid="4"><div class="exteriorBtnSanitario">Trabajos técnicos</div></a></li>
+						<li class="col-lg-1 col-md-2 col-sm-2 col-xs-3 infotec-240"><a  id="opcion2" href="javascript:void(0)" hid="4"><div class="exteriorBtnSanitario">Planes Sanitarios</div></a></li>
+						<li class="col-lg-1 col-md-2 col-sm-2 col-xs-3 infotec-240"><a id="opcion3" href="javascript:void(0)" hid="4"><div class="exteriorBtnSanitario">Planillas<br />de trabajo</div></a></li>             
 						<script>
 						$(document).ready(function () {
 							
@@ -1355,7 +1355,7 @@
 		<img class="fadder" style="opacity:1;width: 100%;position:relative;top:2px;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/curva-home.png" alt="" />
 		
 		<!------------------------------------------------------------------ SECCION 5: REVISTA EL MOLINO ------------------------------------------------------------------>	
-		<section class="special col-lg-12 col-md-12 col-sm-12 col-xs-12 fadder" data-scrollax-parent="true" style="opacity:1;background: rgba(0, 0, 0, 0.62);width:100%;overflow-x:hidden;padding-bottom:30px;">
+		<section class="special col-lg-12 col-md-12 col-sm-12 col-xs-12 fadder" data-scrollax-parent="true" style="opacity:1;background: rgba(0, 0, 0, 0.62);width:100%;overflow-x:hidden;">
 
 			
 	
@@ -1471,8 +1471,8 @@
 								<?php } ?>
 								
 								
-									<li class="col-lg-3  col-md-3 col-sm-3 col-xs-6" style="border:none;">
-									<div id="btn-mas" class="col-lg-12 col-md-12 col-sm-3 col-xs-3 btn-mas-revistas"  style="cursor:pointer; padding-top: 59px;">
+									<li class="col-lg-3  col-md-3 col-sm-3 col-xs-6" style="border:none;text-align:center;">
+									<div id="btn-mas" class="col-lg-12 col-md-12 col-sm-3 col-xs-3 btn-mas-revistas"  style="cursor:pointer; padding-top: 59px;width:auto;">
 										<a href="<?php echo Yii::app()->paisChecker->getBaseUrl(true); ?>/revista">
 											<img id="img-btn-mas" src="<?php echo Yii::app()->request->baseUrl; ?>/img/mas-ediciones-01.png" style="    position: inherit;">
 											<p id="texto-btn-mas2"> Números anteriores</p>
@@ -1590,7 +1590,7 @@
 						
 						<!--<iframe class="" style="width:89%;height:50vh;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3276.321995531876!2d-58.47311858426047!3d-34.79784007530322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcd1838f6768bf%3A0x1fe233fc9fc7b0d0!2sBiogenesis+-+Bago!5e0!3m2!1ses!2sar!4v1454509545701" width="600" height="450" frameborder="0" style="border:0" allowfullscreen ></iframe>!-->
 						<?php if($_SESSION["short"]=="uy"){ ?>
-						<p>Francisco Acuña de Figueroa 2119 (detrás del Anexo del Palacio Legislativo), Montevideo, Uruguay</p>	
+						<p style="width:86%;display:inline-block;">Francisco Acuña de Figueroa 2119 (detrás del Anexo del Palacio Legislativo), Montevideo, Uruguay</p>	
 							
 						<iframe  style="width:89%;height:50vh;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1880.736399717866!2d-56.18992946565908!3d-34.89305606680838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f803b02150c53%3A0x9c68c7eafc49ee1a!2sFrancisco+Acu%C3%B1a+de+Figueroa%2C+Montevideo+11800%2C+Uruguay!5e0!3m2!1ses-419!2sar!4v1461616531446" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
 						<?php }else if($_SESSION["lng"]=="pt"){ ?>
@@ -1609,7 +1609,7 @@
 					<!-- ////////// INFORMACIÓN ////////////// -->        
 					<div id="infodcha" class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="display:inline-block;float:left;text-align:center;" hid="2">        
 						
-						<div id="container-envio" class="col-lg-12 col-md-12 col-xs-12" >
+						<div id="container-envio" class="col-lg-12 col-md-12 col-xs-12" style="height:50vh;" >
 							<div id="enviando" class="">
 								<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/enviando.gif"><br>
 								<div class="linea-blanca-contacto"></div>
@@ -1626,13 +1626,25 @@
 								<p>&#8226; <?php echo Textos::model()->GetText(482); ?> &#8226;</p>
 							</div>
 						</div>
-						<form id="form1" class="col-lg-12 col-md-12 col-xs-12" style="float:initial;display:inline-block;text-align:center;">
+						
+						
 							
+							<?php 
+							$model=  new CaptchaForm();
+							$form=$this->beginWidget('CActiveForm', array(
+								'id'=>'form1',
+								'enableClientValidation'=>true,
+								'clientOptions'=>array(
+									'validateOnSubmit'=>true,
+								),
+								"action"=>"/webBago/ar/web/contacto/",
+							)); ?>
+							<div id="containerInputs">
 							<!-- ******** NOMBRE ******** -->
 							<div class="col-lg-6  col-md-6  col-xs-12">
 								<div class="input-contacto">
 								<label for="exampleInputName2"><p style="text-transform: uppercase; margin: 0;"><?php echo Textos::model()->GetText(114); ?></p></label>
-									<input class="form-inline required" name="nombre" type="text" value="">
+									<input class="form-inline required" name="CaptchaForm[nombre]" type="text" value="">
 								</div>
 							</div>
 				
@@ -1641,7 +1653,7 @@
 							<div class="col-lg-6  col-md-6 col-xs-12">
 								<div class="input-contacto">
 									<label for="exampleInputName2"><p style="text-transform: uppercase; margin: 0;"><?php echo Textos::model()->GetText(115); ?></p></label>
-									<input class="form-inline" name="apellido" type="text" value="">
+									<input class="form-inline" name="CaptchaForm[apellido]" type="text" value="">
 								</div>
 							</div>
 						
@@ -1650,7 +1662,7 @@
 							<div class="col-lg-6  col-md-6 col-xs-12">
 								<div class="input-contacto">
 								<label for="exampleInputName2"><p style="text-transform: uppercase; margin: 0;"><?php echo Textos::model()->GetText(116); ?></p></label>
-									<input class="form-inline required" name="email" type="email" value="">
+									<input class="form-inline required" name="CaptchaForm[email]" type="email" value="">
 									</div>
 							</div>
 						
@@ -1659,7 +1671,7 @@
 							<div class="col-lg-6  col-md-6 col-xs-12">
 								<div class="input-contacto">
 								<label for="exampleInputName2"><p style="text-transform: uppercase; margin: 0;"><?php echo Textos::model()->GetText(117); ?></p></label>
-									<input class="form-inline" name="telefono" type="text" value="">
+									<input class="form-inline" name="CaptchaForm[telefono]" type="text" value="">
 									</div>
 							</div>
 					
@@ -1668,7 +1680,7 @@
 							<div class="col-lg-6  col-md-6 col-xs-12">
 								<div class="input-contacto">
 								<label for="exampleInputName2"><p style="text-transform: uppercase; margin: 0;"><?php echo Textos::model()->GetText(118); ?></p></label>
-									<input class="form-inline" name="empresa" type="text" value="">
+									<input class="form-inline" name="CaptchaForm[empresa]" type="text" value="">
 									</div>
 							</div>
 			
@@ -1677,7 +1689,7 @@
 							<div class="col-lg-6  col-md-6 col-xs-12">
 							<div class="input-contacto">
 								<label for="exampleInputName2"><p style="text-transform: uppercase; margin: 0;"><?php echo Textos::model()->GetText(119); ?></p></label>
-									<input class="form-inline" name="cargo" type="text" value="">
+									<input class="form-inline" name="CaptchaForm[cargo]" type="text" value="">
 									</div>
 							</div>
 			
@@ -1686,7 +1698,7 @@
 							<div class="col-lg-6  col-md-6 col-xs-12">
 								<div class="input-contacto">
 									<label for="exampleInputName2"><p style="text-transform: uppercase; margin: 0;"><?php echo Textos::model()->GetText(120); ?></p></label>
-									<input class="form-inline" name="direccion" type="text" value="">
+									<input class="form-inline" name="CaptchaForm[direccion]" type="text" value="">
 								</div>
 							</div>
 					
@@ -1695,7 +1707,7 @@
 							<div class="col-lg-6  col-md-6 col-xs-12">
 							<div class="input-contacto">
 									<label for="exampleInputName2"><p style="text-transform: uppercase; margin: 0;"><?php echo Textos::model()->GetText(121); ?></p></label>
-										<input class="form-inline" name="departamento" type="text" value="">
+										<input class="form-inline" name="CaptchaForm[departamento]" type="text" value="">
 										</div>
 							</div>
 			
@@ -1707,19 +1719,121 @@
 								<p style="text-transform: uppercase; margin: 0 auto;"><?php echo Textos::model()->GetText(122); ?>
 								</p>
 								</label> 
-									<textarea rows="3" id="textarea" name="mensaje" class="required"></textarea>
+									<textarea rows="3" id="textarea" name="CaptchaForm[mensaje]" class="required"></textarea>
 									</div>
 							</div>  <!--termina form textarea-->
-					
+							
+							
+							
+							</div>
 					
 							<!-- ******** BOTÓN ENVIAR ******** -->
-							<div class="col-lg-12 col-md-12 col-xs-12" > 
+							
+							<?php if(CCaptcha::checkRequirements()): ?>
+							<div class="row"  id="captchaContainer" style="display:none;">
+								
+								<label>Código de seguridad</label>
+								<div id="codeCaptcha">
+								<?php
+								$this->widget( 'CCaptcha', [
+									'buttonLabel'   => '<span class="glyphicon glyphicon-refresh"></span>',
+									'buttonOptions' => [
+										'class' => 'btn-refresh-captcha',
+										'style' => 'text-decoration: none; text-weight: bold;',
+										'title' => Yii::t( 'zr', 'Get new code' ),
+									]
+								] );
+								?>
+								<!--<a class="btn-refresh-captcha" style="text-decoration: none; text-weight: bold;" title="Get new code" id="yw0_button" href="/webBago/site/captcha?refresh=1"><span class="glyphicon glyphicon-refresh"></span></a>!-->
+								<?php 
+								// click refresh button on page load
+								/*Yii::app()->clientScript->registerScript( 'refresh-captcha', 
+								'$(document).ready(function(){$(".btn-refresh-captcha").click();});' ); */
+								?><br>
+								<?php echo $form->textField($model,'verifyCode',array("placeholder"=>"Ingrese el código","class"=>"form-inline","style"=>"width:100%;")); ?>
+								</div>
+								<?php //$model->validate(); ?>
+								<div id="CaptchaFormCode" class="error" style="display:none;">Código incorrecto.</div>
+								<?php if(true){ ?>
+								<script type="text/javascript">
+								/*<![CDATA[*/
+								jQuery(function($) {
+								jQuery('#yw0').after("<a class=\"btn-refresh-captcha\" style=\"text-decoration: none; text-weight: bold;\" title=\"Get new code\" id=\"yw0_button\" href=\"http://<?php echo $_SERVER['SERVER_NAME']; if(isset($_SESSION['webRoot'])){ echo '\/'.$_SESSION['webRoot'];}else{ ;} ?>web\/captcha?refresh=1\"><span class=\"glyphicon glyphicon-refresh\"><\/span><\/a>");
+								jQuery(document).on('click', '#yw0_button', function(){
+									$("#yw0").hide();
+									console.log("entra yw0 hide");
+									jQuery.ajax({
+										url: "http://<?php echo $_SERVER['SERVER_NAME']; if(isset($_SESSION['webRoot'])){ echo '\/'.$_SESSION['webRoot'];}else{ ;} ?>web\/captcha?refresh=1",
+										dataType: 'json',
+										cache: false,
+										success: function(data) {
+											jQuery('#yw0').attr('src', data['url']);
+											jQuery('body').data('captcha.hash', [data['hash1'], data['hash2']]);
+											console.log("entra yw0");
+											$("#yw0").show();
+										}
+									});
+									return false;
+								});
+
+								$(document).ready(function(){$(".btn-refresh-captcha").click();});
+								
+								/*jQuery('#login-form').yiiactiveform({'validateOnSubmit':true,'attributes':[{'id':'LoginForm_username','inputID':'LoginForm_username','errorID':'LoginForm_username_em_','model':'LoginForm','name':'username','enableAjaxValidation':false,'clientValidation':function(value, messages, attribute) {
+
+								if(jQuery.trim(value)=='') {
+									messages.push("Username cannot be blank.");
+								}
+
+								}},{'id':'LoginForm_password','inputID':'LoginForm_password','errorID':'LoginForm_password_em_','model':'LoginForm','name':'password','enableAjaxValidation':false,'clientValidation':function(value, messages, attribute) {
+
+								if(jQuery.trim(value)=='') {
+									messages.push("Password cannot be blank.");
+								}
+
+								}},{'id':'LoginForm_verifyCode','inputID':'LoginForm_verifyCode','errorID':'LoginForm_verifyCode_em_','model':'LoginForm','name':'verifyCode','enableAjaxValidation':false,'clientValidation':function(value, messages, attribute) {
+
+								var hash = $('body').data('captcha.hash');
+								if(hash == null){
+									hash = 1306;
+								}else{
+									hash = hash[1];
+								}
+								value = value.replace(/\s/g,'');
+								value = value.toLowerCase();
+								value = encodeURIComponent(value);
+								for(var i=value.length-1, h=0; i >= 0; --i){
+									h+=value.charCodeAt(i);
+								}
+								if(h != hash) {
+									messages.push("The verification code \"Verify Code\" is incorrect.");
+								}
+
+								}},{'id':'LoginForm_rememberMe','inputID':'LoginForm_rememberMe','errorID':'LoginForm_rememberMe_em_','model':'LoginForm','name':'rememberMe','enableAjaxValidation':false,'clientValidation':function(value, messages, attribute) {
+
+								if(jQuery.trim(value)!='' && value!="1" && value!="0") {
+									messages.push("Remember me next time must be either 1 or 0.");
+								}
+
+								}}],'errorCss':'error'});*/
+								});
+								/*]]>*/
+								</script>
+								<?php } ?>
+							</div>
+							<?php endif; ?>
+							
+								<div class="col-lg-12 col-md-12 col-xs-12" > 
 									<div class="input-contacto" style="text-align:right;">
-									<button id="enviar" name="ENVIAR" type="submit" class="pull-right"><?php echo Textos::model()->GetText(123); ?></button>
+									<button id="enviar"  type="submit" class="pull-right"><?php echo Textos::model()->GetText(123); ?></button>
 									</div>
-							</div>  <!--termina form btn enviar-->
+							</div>
+							
+							
+							<?php $this->endWidget(); ?>
+						
+						</div>  <!--termina form btn enviar-->
 	
-						</form> <!--termina info dcha-->
+						
 						<style>
 						
 						</style>
@@ -1727,22 +1841,15 @@
 						<script>
 						 $("#form1").validate({
 							submitHandler: function(form) {
-								
-							$.post( "http://<?php echo $_SERVER['SERVER_NAME']; ?>/br/web/contacto/", $( "#form1" ).serialize() ).done(function(data){
-								//console.log("exito!");
-								$("#enviando").fadeOut(100);
-								$("#enviado").fadeIn(100);
-								$("#errorEnvio").hide();
-							}).fail(function(){
-								$("#enviando").fadeOut(100);
-								$("#enviado").hide();
-								$("#errorEnvio").fadeIn();
-							});
-							$("#form1").fadeOut(500);
-							$("#container-envio").fadeIn(500);
-							$("#enviando").fadeIn(500);
-							$("#enviado").hide();
-							$("#errorEnvio").hide();
+								//$("#form1").fadeOut(500);
+							//SubmitFormContacto();
+							if($("#captchaContainer").is(":visible")){
+								$("#captchaContainer").hide();
+								SubmitFormContacto();
+							}else{
+								$("#containerInputs").hide();
+								$("#captchaContainer").show();
+							}
 							
 						  },
 							errorElement: 'div',
@@ -1775,6 +1882,37 @@
 							});
 
 						});
+						
+						function SubmitFormContacto(){
+							$.post( "http://<?php echo $_SERVER['SERVER_NAME']; if(isset($_SESSION['webRoot'])){ echo '/'.$_SESSION['webRoot'];}else{ '/';} ?><?php echo $_SESSION["short"] ?>/web/contacto/", $( "#form1" ).serialize() ).done(function(data){
+								if(data=="1"){
+									$("#enviando").fadeOut(100);
+									$("#enviado").fadeIn(100);
+									$("#errorEnvio").hide();
+								}else if(data=="code"){
+									$(".btn-refresh-captcha").click();
+									$("#form1").fadeIn(500);
+									$("#CaptchaFormCode").show();
+									$("#container-envio").fadeOut(500);
+									$("#captchaContainer").show();
+									$("#enviando").fadeOut(100);
+									$("#errorEnvio").hide();
+								}else{
+									$("#enviando").fadeOut(100);
+									$("#enviado").hide();
+									$("#errorEnvio").fadeIn();
+								}
+							}).fail(function(){
+								$("#enviando").fadeOut(100);
+								$("#enviado").hide();
+								$("#errorEnvio").fadeIn();
+							});
+							$("#form1").fadeOut(500);
+							$("#container-envio").fadeIn(500);
+							$("#enviando").fadeIn(500);
+							$("#enviado").hide();
+							$("#errorEnvio").hide();
+						}
 						</script>
 					</div> <!--termina info-->
 			

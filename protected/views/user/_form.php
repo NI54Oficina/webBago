@@ -34,6 +34,7 @@ if(isset($model->id)){
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'password'); ?>
+		<?php echo $model->password= "empty"; ?>
 		<?php echo $form->passwordField($model,'password',array('size'=>60,'maxlength'=>128)); ?>
 		<?php echo $form->error($model,'password'); ?>
 	</div>
@@ -46,17 +47,21 @@ if(isset($model->id)){
 	
 	<?php
 	
-	foreach ($auth->roles as $op){
+	foreach (UserRole::model()->findAll() as $op){
 		?>
 		<div class="form-group">
 			<?php 
-			if(isset($model->id)&&$auth->hasItemChild($model->username,$op->name)){
+			$criteria=new CDbCriteria;
+            $criteria->condition='userid=:id and itemname=:nombre';
+            $criteria->params=array(':id'=>(string)$model->id,':nombre'=>$op->nombre);
+            $Rol = Authassignment::model()->find($criteria);
+			if(isset($model->id)&&$Rol){
 				?>
-				<input type="checkbox" checked value="<?php echo $op->name; ?>"><label style="display:inline-block;"><?php echo $op->name; ?></label>
+				<input type="checkbox" checked value="<?php echo $op->nombre; ?>"><label style="display:inline-block;"><?php echo $op->nombre; ?></label>
 				<?php
 			}else{
 				?>
-				<input type="checkbox" value="<?php echo $op->name; ?>"><label style="display:inline-block;"><?php echo $op->name; ?></label>
+				<input type="checkbox" value="<?php echo $op->nombre; ?>"><label style="display:inline-block;"><?php echo $op->nombre; ?></label>
 				<?php
 			}
 			?>

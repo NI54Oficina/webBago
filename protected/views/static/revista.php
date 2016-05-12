@@ -33,7 +33,7 @@
 	
 		<?php
 					foreach($notas as $nota){
-						if($nota->numero==30||$nota->numero==29||$nota->numero==28){
+						if($nota->numero>=28){
 							$link= Yii::app()->request->baseUrl."/elmolino/".$nota->numero."/index.html";
 						}else{
 							$link= Yii::app()->request->baseUrl."/uploads/molino/pdf/revista-".$nota->numero.".pdf";

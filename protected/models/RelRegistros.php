@@ -27,7 +27,6 @@ class RelRegistros extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('idProducto, idPais', 'required'),
-			array('idProducto, idPais', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, idProducto, idPais', 'safe', 'on'=>'search'),
@@ -93,5 +92,17 @@ class RelRegistros extends CActiveRecord
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
+	}
+	
+	public function findRegistro($idProducto){
+		$registros= $this->model()->findAll();
+		foreach($registros as $r){
+			$ids= explode(",",$r->idProducto);
+			foreach($ids as $i){
+				if($idProducto==$i){
+					return $r->idPais;
+				}
+			}
+		}
 	}
 }

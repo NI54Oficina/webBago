@@ -78,7 +78,12 @@ $normalizado= $auxLink;
 $id= $data->id;
 
 $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"id DESC"));
-
+if(!isset($_SESSION["col"])){
+	$col=6;
+}else{
+	$col=$_SESSION["col"];
+	$_SESSION["col"]=null;
+}
 ?>
 <style>body{background-color:white;}</style>
 <div class="fadder" style="width:100%;">
@@ -106,7 +111,10 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 </p>
 
 <h2 class="titulo-vad-producto titulo-<?php echo $normalizado; ?>">
-
+	<?php 
+				$registros= RelRegistros::model()->findRegistro($data->id);
+				
+				?>
 	<img id="gota-producto"  src="<?php echo Yii::app()->request->baseUrl; ?>/img/gota-<?php echo $normalizado; ?>.png"  />
 	<?php echo Yii::app()->paisChecker->getSeccion($seccion->id);?>
 </h2>
@@ -129,16 +137,42 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 
  		<p id="barra-superior-<?php echo $normalizado; ?>" class="hidden-xs hidden-sm" style="text-align:center;width:15%;margin:auto;">
  		</p>
+		
+		
   		
   		<div id="barra-xs">
+			
 			
 			<a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//<?php echo $_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI']; ?>" class="col-lg-3 col-md-3 col-sm-6 col-xs-6 facebook" >
 				
 			</a>
 			
-			<!--<div id="mail" class="col-lg-3 col-md-3 col-sm-6 col-xs-6 mail" >
-			</div> !-->
+			<a href="<?php echo Yii::app()->request->baseUrl; ?>/print/id<?php echo $seccion->id; ?>" class="col-lg-3 col-md-3 col-sm-6 col-xs-6 facebook print" target="_blank" >
+				
+			</a>
+			
+			
 		</div>
+		
+		<p id="compartido" style="padding-top:100px;">Registrado en</p>
+
+
+ 		<p id="barra-superior-<?php echo $normalizado; ?>" class="hidden-xs hidden-sm" style="text-align:center;width:15%;margin:auto;margin-bottom:20px;">
+ 		</p>
+		
+			<div class="container-registro-paises-pc">
+			<?php 
+			$registros= explode(",",$registros);
+			foreach($registros as $r){
+				?>
+				<div class="fila-registro">
+				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/paises/<?php echo $r; ?>.png" />
+				<p class="nombre-pais" align="center" ><?php echo Pais::model()->findByPk($r)->nombre; ?></p>
+				</div>
+				<?php
+			}
+			?>
+			</div>
 		
 		<!--<img class="col-lg-8 col-md-8 col-sm-12 col-xs-12" style=" width: 50%;  margin-top: 4%;float:initial;" src="<?php echo Yii::app()->request->baseUrl; ?>/img/linea-compartir.png"/>
 		
@@ -215,25 +249,9 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 					?>
 					</div>
 
-		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 paises-registrados" style="display:none;" >
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 paises-registrados"  >
 
-			<div style=" width: 130px; ">
 			
-			<?php 
-				$registros= RelRegistros::model()->findAllByAttributes(array('idProducto'=>$data->id));
-				if($registros){
-				foreach($registros as $registro){
-				$nombrePais=Pais::model()->findByPk($registro->idPais)->nombre; 
-			?>
-				<div >
-				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/<?php echo $nombrePais; ?>.png" class="imagen-pais" align="left" />
-				<p class="nombre-pais" align="center;" ><?php echo $nombrePais; ?></p>
-              </div>
-			<?php
-				}
-			}
-			?>
-              </div>
               <!--<div >
               <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/argentina.png" class="imagen-pais" align="left" />
               <p class="nombre-pais" align="center;" >Argentina</p>
@@ -258,6 +276,17 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="contacto-mobile" style="padding-top:10px; z-index: 1">
 			
+			<!--<div class="container-registro-paises">
+			<?php 
+			
+			foreach($registros as $r){
+				?>
+				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/paises/<?php echo $r; ?>.png" />
+				<?php
+			}
+			?>
+			</div>!-->
+					
 			<a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//<?php echo $_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI']; ?>" class="facebook"  style="width:40px;height:40px;">
 				
 			</a>
@@ -280,7 +309,7 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 
 
 
-	<div  class=" col-lg-6 col-md-6 col-sm-12 col-xs-12 cuerpo-producto" style="overflow:hidden;">
+	<div  class=" col-lg-<?php echo $col; ?> col-md-<?php echo $col; ?> col-sm-12 col-xs-12 cuerpo-producto" style="overflow:hidden;">
 		 <div id="targets-inner">
 					<?php
 					$target= $data->target;
@@ -373,8 +402,27 @@ $imagen= Imagen::model()->find(array("condition"=>"producto_id = $id","order"=>"
 			<h4 class="h4-vad h4-aftosa">PRESENTACIÓN</h4>
 			<p class="p-vad">Frascos por 60 y 125 dosis de 2 mL.</p>!-->
 		</div>
-	</div>
+		
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="contacto-mobile" style="padding-top:10px; z-index: 1">
+			<p  style="text-align:center;">Registrado en</p>
 
+
+			<p id="barra-superior-<?php echo $normalizado; ?>" class="hidden-xs hidden-sm" style="text-align:center;width:15%;margin:auto;margin-bottom:20px;">
+			</p>
+			<div class="container-registro-paises">
+			<?php 
+			
+			foreach($registros as $r){
+				?>
+				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/paises/<?php echo $r; ?>.png" />
+				<?php
+			}
+			?>
+			</div>
+		</div>
+	</div>
+	
+	
 
 
 

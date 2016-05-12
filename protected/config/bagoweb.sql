@@ -1,20 +1,20 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
+-- version 3.5.1
 -- http://www.phpmyadmin.net
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 25-04-2016 a las 18:06:10
--- Versión del servidor: 10.1.9-MariaDB
--- Versión de PHP: 5.5.30
+-- Servidor: localhost
+-- Tiempo de generación: 12-05-2016 a las 20:53:58
+-- Versión del servidor: 5.5.24
+-- Versión de PHP: 5.4.45
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40101 SET NAMES utf8 */;
 
 --
 -- Base de datos: `bagoweb`
@@ -26,11 +26,12 @@ SET time_zone = "+00:00";
 -- Estructura de tabla para la tabla `authassignment`
 --
 
-CREATE TABLE `authassignment` (
+CREATE TABLE IF NOT EXISTS `authassignment` (
   `itemname` varchar(64) NOT NULL,
   `userid` varchar(64) NOT NULL,
   `bizrule` text,
-  `data` text
+  `data` text,
+  PRIMARY KEY (`itemname`,`userid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -44,7 +45,8 @@ INSERT INTO `authassignment` (`itemname`, `userid`, `bizrule`, `data`) VALUES
 ('admin', '6', NULL, 'N;'),
 ('admin', '7', NULL, 'N;'),
 ('admin', '8', NULL, 'N;'),
-('author', '9', NULL, 'N;');
+('author', '9', NULL, 'N;'),
+('Autor', '12', NULL, 'N;');
 
 -- --------------------------------------------------------
 
@@ -52,12 +54,13 @@ INSERT INTO `authassignment` (`itemname`, `userid`, `bizrule`, `data`) VALUES
 -- Estructura de tabla para la tabla `authitem`
 --
 
-CREATE TABLE `authitem` (
+CREATE TABLE IF NOT EXISTS `authitem` (
   `name` varchar(64) NOT NULL,
   `type` int(11) NOT NULL,
   `description` text,
   `bizrule` text,
-  `data` text
+  `data` text,
+  PRIMARY KEY (`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -76,6 +79,7 @@ INSERT INTO `authitem` (`name`, `type`, `description`, `bizrule`, `data`) VALUES
 ('adminSeccion', 0, 'Administras Secciones', NULL, 'N;'),
 ('asdas', 2, '', NULL, 'N;'),
 ('author', 2, '', NULL, 'N;'),
+('Autor', 2, '', NULL, 'N;'),
 ('createEstablecimiento', 0, 'Crear Establecimientos', NULL, 'N;'),
 ('createPost', 0, 'Crear Post', NULL, 'N;'),
 ('createProducto', 0, 'Crear Productos', NULL, 'N;'),
@@ -103,9 +107,11 @@ INSERT INTO `authitem` (`name`, `type`, `description`, `bizrule`, `data`) VALUES
 -- Estructura de tabla para la tabla `authitemchild`
 --
 
-CREATE TABLE `authitemchild` (
+CREATE TABLE IF NOT EXISTS `authitemchild` (
   `parent` varchar(64) NOT NULL,
-  `child` varchar(64) NOT NULL
+  `child` varchar(64) NOT NULL,
+  PRIMARY KEY (`parent`,`child`),
+  KEY `child` (`child`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -113,44 +119,34 @@ CREATE TABLE `authitemchild` (
 --
 
 INSERT INTO `authitemchild` (`parent`, `child`) VALUES
-('admin', 'adminAccess'),
-('admin', 'adminImagenes'),
-('admin', 'adminProducto'),
-('admin', 'adminSeccion'),
-('admin', 'createEstablecimiento'),
-('admin', 'createPost'),
-('admin', 'createProducto'),
-('admin', 'createRole'),
-('admin', 'createUser'),
-('admin', 'deletePost'),
-('admin', 'deleteProducto'),
-('admin', 'deleteUsers'),
-('admin', 'editPost'),
-('admin', 'editUsers'),
-('admin', 'updateEstablecimiento'),
-('admin', 'updateProducto'),
-('admin', 'vademecum'),
-('author', 'createPost'),
 ('poyo', 'adminAccess'),
 ('poyo', 'adminImagenes'),
 ('poyo', 'adminProducto'),
 ('poyo', 'adminSeccion'),
 ('poyo', 'createEstablecimiento'),
+('author', 'createPost'),
+('Autor', 'createPost'),
 ('poyo', 'createPost'),
+('poyoyo', 'createPost'),
 ('poyo', 'createProducto'),
 ('poyo', 'createRole'),
 ('poyo', 'createUser'),
+('poyoyo', 'createUser'),
+('admin', 'deletePost'),
+('Autor', 'deletePost'),
 ('poyo', 'deletePost'),
 ('poyo', 'deleteProducto'),
 ('poyo', 'deleteUsers'),
+('Autor', 'editPost'),
 ('poyo', 'editPost'),
 ('poyo', 'editUsers'),
+('poyoyo', 'editUsers'),
+('admin', 'fullAccess'),
+('asdas', 'fullAccess'),
+('poyo', 'fullAccess'),
 ('poyo', 'updateEstablecimiento'),
 ('poyo', 'updateProducto'),
-('poyo', 'vademecum'),
-('poyoyo', 'createPost'),
-('poyoyo', 'createUser'),
-('poyoyo', 'editUsers');
+('poyo', 'vademecum');
 
 -- --------------------------------------------------------
 
@@ -158,12 +154,13 @@ INSERT INTO `authitemchild` (`parent`, `child`) VALUES
 -- Estructura de tabla para la tabla `tbl_error`
 --
 
-CREATE TABLE `tbl_error` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_error` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `codigo` int(3) NOT NULL,
   `idoma` varchar(4) NOT NULL,
-  `texto` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `texto` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
 -- Volcado de datos para la tabla `tbl_error`
@@ -180,14 +177,15 @@ INSERT INTO `tbl_error` (`id`, `codigo`, `idoma`, `texto`) VALUES
 -- Estructura de tabla para la tabla `tbl_establecimiento`
 --
 
-CREATE TABLE `tbl_establecimiento` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_establecimiento` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(200) NOT NULL,
   `latitud` varchar(100) NOT NULL,
   `longitud` varchar(100) NOT NULL,
   `descripcion` text NOT NULL,
-  `pais` int(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `pais` int(10) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -195,10 +193,11 @@ CREATE TABLE `tbl_establecimiento` (
 -- Estructura de tabla para la tabla `tbl_imagen_ref`
 --
 
-CREATE TABLE `tbl_imagen_ref` (
-  `id` int(11) NOT NULL,
-  `producto_id` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+CREATE TABLE IF NOT EXISTS `tbl_imagen_ref` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `producto_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=635 ;
 
 --
 -- Volcado de datos para la tabla `tbl_imagen_ref`
@@ -525,9 +524,9 @@ INSERT INTO `tbl_imagen_ref` (`id`, `producto_id`) VALUES
 (350, 253),
 (444, 253),
 (351, 254),
-(445, 254),
+(445, 255),
 (352, 255),
-(446, 255),
+(446, 254),
 (353, 256),
 (447, 256),
 (354, 257),
@@ -780,7 +779,8 @@ INSERT INTO `tbl_imagen_ref` (`id`, `producto_id`) VALUES
 (625, 403),
 (626, 404),
 (632, 405),
-(633, 408);
+(633, 408),
+(634, 410);
 
 -- --------------------------------------------------------
 
@@ -788,11 +788,12 @@ INSERT INTO `tbl_imagen_ref` (`id`, `producto_id`) VALUES
 -- Estructura de tabla para la tabla `tbl_metatag`
 --
 
-CREATE TABLE `tbl_metatag` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_metatag` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(300) NOT NULL,
-  `code` text NOT NULL COMMENT 'colocar [variable] donde va la parte seteable de la tag'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `code` text NOT NULL COMMENT 'colocar [variable] donde va la parte seteable de la tag',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 --
 -- Volcado de datos para la tabla `tbl_metatag`
@@ -807,12 +808,13 @@ INSERT INTO `tbl_metatag` (`id`, `nombre`, `code`) VALUES
 -- Estructura de tabla para la tabla `tbl_metatag_page`
 --
 
-CREATE TABLE `tbl_metatag_page` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_metatag_page` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `idPage` int(11) NOT NULL,
   `idMetatag` int(11) NOT NULL,
-  `dat` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `dat` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 --
 -- Volcado de datos para la tabla `tbl_metatag_page`
@@ -827,10 +829,11 @@ INSERT INTO `tbl_metatag_page` (`id`, `idPage`, `idMetatag`, `dat`) VALUES
 -- Estructura de tabla para la tabla `tbl_miscelaneo`
 --
 
-CREATE TABLE `tbl_miscelaneo` (
+CREATE TABLE IF NOT EXISTS `tbl_miscelaneo` (
   `id` int(11) NOT NULL,
   `key` varchar(100) NOT NULL,
-  `value` text NOT NULL
+  `value` text NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -839,23 +842,24 @@ CREATE TABLE `tbl_miscelaneo` (
 -- Estructura de tabla para la tabla `tbl_notas`
 --
 
-CREATE TABLE `tbl_notas` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_notas` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `fecha` date NOT NULL,
   `titulo` varchar(300) NOT NULL,
   `bajada` text NOT NULL,
   `extra` text NOT NULL,
   `texto` text NOT NULL,
   `seccion` varchar(50) NOT NULL,
-  `pais` varchar(4) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `pais` varchar(4) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=128 ;
 
 --
 -- Volcado de datos para la tabla `tbl_notas`
 --
 
 INSERT INTO `tbl_notas` (`id`, `fecha`, `titulo`, `bajada`, `extra`, `texto`, `seccion`, `pais`) VALUES
-(1, '2016-02-04', 'Campaña Nacional Antirrábica', 'Biogénesis Bagó mediante su compromiso y responsabilidad del resguardo de la salud en todas sus dimensiones, cuidado de la ...', '', 'Biogénesis Bagó mediante su compromiso y responsabilidad del resguardo de la salud en todas sus dimensiones, cuidado de la salud animal y por ende el cuidado de las personas, desde hace más de 20 años participa en las campañas Nacionales de vacunación antirrábica \n<br />\n\nLa importancia de la rabia para la salud pública, tanto en Argentina como en el mundo, radica en la alta letalidad que presenta la enfermedad, aunque el número de casos sea relativamente bajo. <br />\nUn caso de rabia humana representa una debilidad en el sistema de salud, debido a las cuantiosas herramientas con que se cuenta para prevenir la enfermedad. Por ello, se deben intensificar las acciones de vigilancia en los ciclos aéreos y terrestres mediante una correcta identificación de los mismos. Así como también se debe aplicar una adecuada estrategia de inmunización en personas y, particularmente, en animales en riesgo, debido a que éstos son la principal fuente de infección para el hombre. <br />\nAunque, en los últimos tiempos, se ha logrado en Argentina una reducción importante en casos de rabia, su vigilancia y control sigue teniendo relevancia por la gravedad del evento. Es por eso que, se debe incentivar la investigación científica con el objeto de lograr una constante actualización de la normativa y su difusión. <br />\nEl Programa Nacional de Control de Enfermedades Zoonóticas, dependiente de la Subsecretaria de Prevención y Control de Riesgos del Ministerio de Salud de la Nación, es el organismo responsable de llevar adelante las mismas y por ello, Biogénesis Bagó apoya y acompaña con la donación de vacunas para la campaña en curso. ', 'prensa', 'es'),
+(1, '2016-02-04', 'Campaña Nacional Antirrábica', 'Biogénesis Bagó mediante su compromiso y responsabilidad del resguardo de la salud en todas sus dimensiones, cuidado de la ...', '', 'Biogénesis Bagó mediante su compromiso y responsabilidad del resguardo de la salud en todas sus dimensiones, cuidado de la salud animal y por ende el cuidado de las personas, desde hace más de 20 años participa en las campañas Nacionales de vacunación antirrábica \r\n<br />\r\n\r\nLa importancia de la rabia para la salud pública, tanto en Argentina como en el mundo, radica en la alta letalidad que presenta la enfermedad, aunque el número de casos sea relativamente bajo. <br />\r\nUn caso de rabia humana representa una debilidad en el sistema de salud, debido a las cuantiosas herramientas con que se cuenta para prevenir la enfermedad. Por ello, se deben intensificar las acciones de vigilancia en los ciclos aéreos y terrestres mediante una correcta identificación de los mismos. Así como también se debe aplicar una adecuada estrategia de inmunización en personas y, particularmente, en animales en riesgo, debido a que éstos son la principal fuente de infección para el hombre. <br />\r\nAunque, en los últimos tiempos, se ha logrado en Argentina una reducción importante en casos de rabia, su vigilancia y control sigue teniendo relevancia por la gravedad del evento. Es por eso que, se debe incentivar la investigación científica con el objeto de lograr una constante actualización de la normativa y su difusión. <br />\r\nEl Programa Nacional de Control de Enfermedades Zoonóticas, dependiente de la Subsecretaria de Prevención y Control de Riesgos del Ministerio de Salud de la Nación, es el organismo responsable de llevar adelante las mismas y por ello, Biogénesis Bagó apoya y acompaña con la donación de vacunas para la campaña en curso. ', 'prensa', 'es'),
 (2, '2016-02-01', 'Convocatoria al	Premio Biogénesis Bagó, Versión 2015 a la Innovación en la Producción Bovina', 'La Academia Nacional de Agronomía y Veterinaria junto a Biogénesis Bagó SA buscan reconocer ejemplos de esfuerzos ...', '', 'La Academia Nacional de Agronomía y Veterinaria junto a Biogénesis Bagó SA buscan reconocer ejemplos de esfuerzos profesionales, premiando al mejor trabajo de asesoramiento y adopción de tecnología para incrementar la eficiencia productiva en ganadería intensiva, extensiva y tambos que aborde aspectos sanitarios, reproductivos o de manejo con impacto en la producción bovina realizado en el país. <br />\n\nLa convocatoria es abierta a profesionales veterinarios o equipos de profesionales en el área agropecuaria que hayan desarrollado actividades de asesoramiento y de adopción de tecnología en los segmentos anteriormente mencionados y cuyo trabajo sea verificable y este adecuadamente documentado. <br />\nEl Premio a la innovación para una mayor eficiencia productiva consistirá en un Diploma y la suma de $ 40.000 pesos que serán entregados en el acto de presentación de dicho Premio en la sede de la ANAV, en la fecha que oportunamente fijarán los organizadores de la presente Convocatoria a su sólo criterio. <br />\nEl cierre de la convocatoria será el 12 de mayo de 2016 y la entrega del Premio se realizará en el mes de julio del año 2016. <br />\nLos Términos y Condiciones Generales de la convocatoria se pueden consultar en la página web de la Academia www.anav.org.ar	sección Novedades. \n', 'prensa', 'es'),
 (3, '2015-10-08', 'Biogénesis Bagó recibió un reconocimiento a la trayectoria y excelencia empresarial', 'El pasado 31 de Julio, en el marco de la 129° Exposición Rural de Palermo, Clarín Rural entregó el Premio Testimonios al ...', '', 'El pasado 31 de Julio, en el marco de la 129° Exposición Rural de Palermo, Clarín Rural entregó el Premio Testimonios al Desarrollo Empresarial a Guillermo Mattioli, Director General de Biogénesis Bagó, por haber convertido a la empresa en líder de la industria veterinaria y actor clave en el control de las principales enfermedades de los rodeos argentinos, en especial la Fiebre Aftosa. <br />\n\n“Agradezco el reconocimiento y lo comparto con toda la empresa, en especial con dos veterinarios, Alejandro Gil y Rodolfo Bellinzoni, con quienes hemos trabajado codo a codo para llevar a Biogénesis Bagó a ser un aliado estratégico del productor y de los asesores en el camino a alcanzar la máxima productividad de los rodeos, o sea la Frontera Productiva”, comentó el Ingeniero Mattioli, al agradecer el premio. <br />\n\nLos Premios Testimonios, son un clásico del Diario Clarín Rural, que reconocen la labor y trayectoria de personas y empresas estratégicas del sector agroindustrial argentino, que muestran la fortaleza y potencial que tiene el campo. Los mismos, son entregados por autoridades del Grupo Clarín, del diario y sus periodistas. <br />\n\nLos premiados fueron: \nJuan Elizalde (Desarrollo en Ganadería) \nAlfredo Guarino (Periodismo Agropecuario) <br />\nGuillermo Mattioli (Desarrollo Empresarial) <br />\nFrancisco Garcia Mansilla (Trayectoria en Agricultura) <br />\nCarlos de Dios (Desarrollo en Agricultura) <br />\nElvio Colombo (Trayectoria Empresarial) \nSusana Solá (Investigación en Agricultura) <br />\nRosgan (Innovación Ganadera) <br />\nCarlos Enrique Zeni (Trayectoria Empresarial) <br />\nMartin Bonadeo (Desarrollo en Maquinaria) <br />\nMiguel Ezcurra (Desarrollo en Tecnología) \n', 'prensa', 'es'),
 (4, '2015-10-08', 'Alcanzar la Frontera Productiva es posible', 'La Argentina, como país tradicionalmente productor de carne y leche de alta calidad percibida y demandada; y con un potencial ...', '', '<p>La Argentina, como pa&iacute;s tradicionalmente productor de carne y leche de alta calidad percibida y demandada; y con un potencial de producci&oacute;n elevado gracias a los recursos naturales (suelo, agua y clima) y la tecnolog&iacute;a (gen&eacute;tica, productos sanitarios, insumos, maquinaria, etc.) disponibles se enfrenta al desaf&iacute;o de eficientizar su producci&oacute;n y producir m&aacute;s con los mismos recursos (alcanzar la Frontera productiva) para satisfacer una demanda mundial de prote&iacute;na animal creciente.<br />\r\nRespaldo de los profesionales dispuestos a brindarle asesoramiento y la mejor tecnolog&iacute;a disponible y a muy bajo costo. Teniendo todo a su alcance:<br />\r\n&iquest;Por qu&eacute; no se alcanzan los m&aacute;ximos &iacute;ndices productivos de los rodeos?<br />\r\n&iquest;C&oacute;mo se puede estimular, desde las &aacute;reas de referencia, a que &eacute;sto suceda?<br />\r\nDesde Biog&eacute;nesis Bag&oacute;, creamos un espacio de reflexi&oacute;n y debate para que todos los que formamos la cadena productiva de carne y leche, busquemos las respuestas a estas dos preguntas, de forma sencilla y con planes de acci&oacute;n dirigidos a todos los productores que quieran producir m&aacute;s con los mismos recursos.<br />\r\n<strong>Algunos datos a tener en cuenta Oportunidades a nivel de la demanda mundial:</strong><br />\r\nLa producci&oacute;n mundial de carnes deber&aacute; aumentar un 70% hacia el 2050. Am&eacute;rica Latina concentra el rodeo productivo m&aacute;s grande del mundo.<br />\r\n<strong>Situaci&oacute;n actual de la producci&oacute;n ganadera nacional:</strong><br />\r\nS&oacute;lo el 12% hace tacto rectal<br />\r\nS&oacute;lo el 17% de los servicios son estacionados.<br />\r\nS&oacute;lo el 30% de los establecimientos tienen asesoramiento veterinario.<br />\r\nSe utiliza el 50% de los productos que se deber&iacute;an utilizar de un plan sanitario completo.<br />\r\nS&oacute;lo se utiliza entre el 25 y 30% de las dosis de vacunas reproductivas, a pesar que el 50% de las fallas reproductivas, que se pueden prevenir con el uso de vacunas de calidad, se deben a causas infecciosas (fuente: INTA).<br />\r\nCada a&ntilde;o en Argentina se pierden $18,4 millones por falta de inversi&oacute;n en sanidad (fuente: Caprove).<br />\r\nLa incidencia de la inversi&oacute;n en sanidad es solamente del 2 al 5% de los costos totales de la explotaci&oacute;n ganadera.<br />\r\nEl costo de un plan sanitario completo por vientre entorado es de $230 o el equivalente a 10 kg de ternero &ndash;incluyendo productos y asesoramiento veterinario&ndash;.<br />\r\n<strong>&Iacute;ndices productivos promedio:</strong> o Pre&ntilde;ez: 75% (es posible llegar a 95%)<br />\r\no Destete: 63% (es posible llegar a 90%)<br />\r\no Extracci&oacute;n: 30% (es posible llegar a 40%)<br />\r\nAlgunos beneficios de la implementaci&oacute;n de un plan sanitario con asesoramiento veterinario.<br />\r\nCada 100 vacas entoradas, invirtiendo 140kg de ternero en sanidad, se evita la p&eacute;rdida de 1800 kg de carne.<br />\r\n<strong>Relaci&oacute;n costo/beneficio:</strong> 1:13.<br />\r\nCon una inversi&oacute;n de 1 kg de carne por vaquillona pre&ntilde;ada (vacuna de diarrea neonatal) se evita la perdida de aproximadamente 8 a 10 kg de carne.<br />\r\nS&oacute;lo pasar del 63% al 73% de destete significan 2.8 millones m&aacute;s de terneros.<br />\r\n<strong>Resumiendo</strong><br />\r\nLa aplicaci&oacute;n de un plan sanitario con asesoramiento veterinario es la inversi&oacute;n m&aacute;s baja y con mayor impacto en los resultados, dentro de un planteo productivo.</p>\r\n', 'prensa', 'es'),
@@ -882,15 +886,15 @@ INSERT INTO `tbl_notas` (`id`, `fecha`, `titulo`, `bajada`, `extra`, `texto`, `s
 (24, '2014-07-23', 'Cómo prevenir el impacto de las zoonosis en las personas y en la actividad rural', 'Biogénesis Bagó acompañó en el marco de la 128° exposición Rural a la Fundación Mundo Sano que trabaja en la prevención, diagnóstico y tratamiento de diversas enfermedades desatendidas, entre ellas la enfermedad de Chagas, la hidatidosis y la leishmaniosis. \n', '', 'Las zoonosis constituyen un grupo de enfermedades comunes al hombre y a los animales: Pueden ser de transmisión directa -a través de algún fluido corporal como orina o saliva- o de transmisión mediada, a través de un insecto. \n<br> <br> Las zoonosis constituyen un grupo de enfermedades comunes al hombre y a los animales: Pueden ser de transmisión directa -a través de algún fluido corporal como orina o saliva- o de transmisión mediada, a través de un insecto. También pueden ser contraídas por consumo de alimentos de origen animal que no cuentan con los controles sanitarios correspondientes, o por consumo de frutas y verduras crudas mal lavadas. Las zoonosis pueden ser causadas por diferentes agentes, como parásitos, virus o bacterias.\n<br> \n<br>La brucelosis, la fiebre amarilla, la fiebre hemorrágica argentina, la gripe aviar, el hantavirus, la hidatidosis, la leishmaniasis visceral, la leptospirosis, la rabia, la sarna, el síndrome urémico hemolítico, la toxoplasmosis, la triquinosis y la tuberculosis bovina son algunas de las zoonosis que se encuentran en el país.\n<br> \n<br>Varias de las zoonosis se enmarcan dentro de las enfermedades desatendidas: un conjunto de enfermedades que afectan a las poblaciones más vulnerables, con bajos ingresos, en viviendas precarias, sin acceso a servicios básicos como agua potable o redes cloacales y con bajo nivel educativo. Se las conoce como generadoras de pobreza por su impacto negativo en la salud y por sus consecuencias significativas sobre la capacidad de trabajo de los afectados.\n<br> \n<br>Para la atención y promoción de la salud respecto de estas enfermedades, lo más importante es actuar preventivamente en tres niveles elementales: proteger la salud humana, proteger la salud animal (de los animales de producción, compañía y fauna silvestre beneficiosa) y cuidar el ambiente de residencia habitual o trabajo.\n<br> \n<br>Mundo Sano trabaja en varios programas de hidatidosis, una zoonosis que puede afectar gravemente al ser humano, y hasta causarle la muerte, presente en zonas rurales y en especial a quienes se dedican a la ganadería. Se trata de una enfermedad parasitaria provocada por el Echinococcus granulosus, un parásito que se aloja en el intestino delgado de los perros y produce quistes en órganos y tejidos del hombre, entre ellos hígado, pulmón y corazón. El ciclo de la enfermedad se inicia en el hábito de alimentar a los perros con vísceras crudas -o mal cocidas- provenientes de pequeños rumiantes o de cerdos faenados domésticamente. En la Argentina, donde entre 2006 y 2010 se reportaron 1.833 casos al Sistema Nacional de Vigilancia de la Salud, se estima que hay cerca de 4 millones de habitantes rurales en riesgo potencial de contraer la enfermedad.\n<br> \n<br>Como parte del programa de diagnóstico y prevención de la hidatidosis que se viene desarrollando en la provincia de Buenos Aires —una iniciativa conjunta de Mundo Sano, la Dirección de Zoonosis Rurales de la Provincia de Buenos Aires y el Servicio de Zoonosis del Hospital Muñiz de Buenos Aires—, se desarrollaron tareas en el área rural la ciudad de Azul y en la zona de Carmen de Patagones. También en el área rural de Pampa del Indio, Chaco, donde con el apoyo del hospital local Dante Tardelli se realizaron ecografías para la detección de quistes hidatídicos en la población.\n<br> \n<br>Sobre el impacto de las enfermedades desatendidas, la Dra. Silvia Gold, presidenta de Mundo Sano, señaló que “son enfermedades de alta prevalencia, que afectan a poblaciones pobres y lo que determina su condición de injustas fundamentalmente es que pueden ser evitadas. Estas enfermedades que comprenden una lista más o menos extensa según quien las defina afectan solo en América latina a aproximadamente el 40% de los más de 550 millones de habitantes de la región. El modelo público-privado que aplicamos en la investigación, prevención, diagnóstico y tratamiento de estas enfermedades busca paliar esta situación que perjudica a los sectores menos favorecidos”.\n<br> \n<br>La problemática fue tratada en el marco de la 128ª edición de la Exposición de Ganadería, Agricultura e Industria Internacional que se celebra en Palermo. Allí, el miércoles 23, la Fundación Mundo Sano y Biogénesis Bagó presentaron la conferencia “Enfermedades desatendidas: su impacto en la salud de las personas y la actividad rural”.\n<br> \n<br>Participaron de la charla Marcelo Abril, director de Programas y Proyectos de Mundo Sano, quien hizo una presentación de la Fundación, se refirió a las principales enfermedades zoonóticas y la experiencia de Mundo Sano e introdujo el concepto de “One Health”, un enfoque multidisciplinario de las enfermedades que toma en cuenta la salud humana, la salud animal y el medio ambiente; Esteban Turic, director de Innovación y Marketing Estratégico de Biogénesis Bagó, se refirió a los cambios que atravesaron las comunidades rurales, la evolución de la producción rural, los riesgos a los que están expuestos los microfundistas y el esfuerzo que hace Biogénesis Bagó para desarrollar soluciones para una parte de esos problemas, y Jorge Bolpe, de la División de Zoonosis Rurales del Ministerio de Salud de la provincia de Buenos Aires, reseñó las enfermedades zoonóticas presentes en la región, sus características, los modos de prevenirlas y los recaudos ambientales.\n<br>        ', 'prensa', 'es'),
 (25, '2014-07-18', '“Aftosan Night” de Biogénesis Bagó y Ciavet', 'El pasado miércoles 16 de Julio se llevó a cabo el evento denominado “Aftosan Night” organizado por Biogénesis Bagó y Ciavet en el marco de la “XXXIII Expo Feria Internacional de Ganadería, Industria, Agricultura, Comercio y Servicios y la LXIX Exposición Nacional de Ganadería” en el predio Mariano Roque Alonso. <br>', '', 'Contó con la asistencia de aproximadamente 90 participantes entre productores, asesores  y medios de prensa, que compartieron un grato momento en compañía del personal de Ciavet y Biogénesis Bagó.\n<br>El objetivo del evento fue mostrar la importancia de mantener el status sanitario de la región a través de los Planes Oficiales de vacunación contra la Fiebre Aftosa, que permitirá mercados más competitivos para el abastecimiento de una población mundial en constante crecimiento, la cual demandará más y mejores alimentos.	\n<br>', 'prensa', 'es'),
 (26, '2014-07-01', 'La Academia Nacional de Agronomía y Veterinaria (ANAV) y Biogénesis Bagó entregaron su premio.', 'La edición 2013 del Premio Biogénesis Bagó al mejor trabajo en adopción de tecnología para una mayor eficiencia productiva en ganadería. \n', '', 'La Academia Nacional de Agronomía y Veterinaria y Biogénesis Bagó entregaron hoy, en la sede de la academia, el Premio Biogénesis Bagó - edición 2013 al mejor trabajo, realizado en el país, sobre “Adopción de tecnología para una producción eficiente en ganadería intensiva y extensiva de carne y leche, que aborde aspectos sanitarios, reproductivos o de manejo”.\n<br>El trabajo ganador, elegido por el honorable jurado, integrado por los Dres. Eduardo Palma, Bernardo Carrillo, Jorge Errecalde y Ramón Noseda (en representación de la academia) y el Dr. Esteban Turic (en representación del laboratorio) fue para el proyecto "Nueva vacuna marcadora contra Herpes Virus Bovino 1. ", presentada por los Dres. Alejandra Romera, Ana M. Sadir, Mariana Puntel, Patricia Zamorano, Valeria Quatrocchi, Paula Del Médico y Javier Blanco Viera, todos ellos de INTA Castelar. \n<br>Además, y debido a la excelente calidad y cantidad de los trabajos presentados, el jurado definió –de manera excepcional– dos Premios Mención, que fueron otorgados a los Dres. Laura V. Madoz y Luis Fazzio por los trabajos: “Endometritis subclínica en vacas de tambo: diagnóstico, prevalencia e impacto sobre la eficiencia productiva” y “Consecuencias reproductivas de la hipocuprosis bovina: un avance hacia su diagnóstico y prevención en rodeos de Argentina”.\n<br>\n<br>El Dr. Carlos Scoppa en relación al premio expresó:… “El trabajo realizado por nuestros premiados son siempre modelo de argumentación intelectual, método, ilustración, coherencia, claridad y de trascendencia los resultados obtenidos. Ellos  están animados solamente por una vigorosa vocación y  permanente actitud de servicio para y con sus conciudadanos; lo que es en definitiva expresión de auténtico patriotismo”.\n<br>\n<br>El Premio ANAV- Biogénesis Bagó se realiza cada 2 años desde el año 2011 y busca promover el uso de tecnologías que permitan expandir la frontera de la productividad en ganadería. Objetivos que son más fáciles de lograr a través de un trabajo conjunto entre los ámbitos académicos, empresariales y del ejercicio de la profesión veterinaria generando sinergias entre el sector público y privado,  acciones fundamentales que siempre promueve la compañía.\n<br>La convocatoria estuvo abierta a profesionales veterinarios o equipos de profesionales en el área agropecuaria que hayan desarrollado actividades de adopción de tecnología en los segmentos anteriormente mencionados y cuyo impacto haya sido verificado y adecuadamente documentado. \n<br>El Premio a la innovación para una mayor eficiencia productiva, consistió en un Diploma de la ANAV y la suma de $ 20.000 pesos en efectivo al equipo ganador. Los dos Premios Mención  recibieron, además del diploma, la suma de $ 5.000 cada uno.\n<br>', 'prensa', 'es'),
-(27, '2014-04-22', 'Biogénesis Bagó presenta Revervac®, una nueva plataforma tecnológica basada en el concepto de Ingeniería Reversa. ', 'Tomando como base su misión y visión corporativa, que la convoca a liderar la evolución de la salud animal a través de la innovación, Biogénesis Bagó presenta Revervac®, una Plataforma Tecnológica basada en el concepto de Ingeniería Reversa, que tendrá un impacto directo en salud animal y a través de ella, en toda la cadena de alimentos. \n', '', 'El concepto de Ingeniería Reversa \n<br>La Ingeniería Reversa (IR) es el proceso que nos permite redescubrir los principios tecnológicos de un dispositivo, objeto o sistema mediante el análisis de su estructura, funcionamiento y operación. Consiste en el desarme o desmontaje de dispositivos electrónicos, mecánicos, software e incluso materiales biológicos o químicos, con el objetivo final de realizar una mejora o la creación de algo nuevo que lo supere en calidad y funcionalidad. \n<br>Este concepto nace durante la Segunda Guerra Mundial cuando los ejércitos incautaban aviones y armas de tropas enemigas para realizar un análisis exhaustivo de los mismos, conocer sus puntos fuertes y débiles y mejorar así los propios. \n<br>A través de los años, los campos de aplicación conceptuales se fueron expandiendo hasta alcanzar diferentes industrias, como automovilística, electrónica, computación y otras. \n<br>En el campo de la biología, fue el Profesor Rino Rappuoli, PhD en Ciencias Biológicas de la Universidad de Siena, Italia, quien tomó el concepto de Ingeniería Reversa y lo aplico al desarrollo de una vacuna contra el Meningococo grupo B, un patógeno con el cual no se había logrado ningún avance en cuatro décadas. A diferencia de otros meningococos, sus antígenos de superficie generan muy poca inmunidad por ser muy similares a los de las células de varios tejidos del cuerpo Información de Prensa \n<br>humano. El uso de la ingeniería reversa le permitió al profesor Rappuoli agrupar diferentes antígenos y fusionarlos, para entonces poder contar con vesículas de antígenos de mayor potencia y desarrollar así una nueva y eficaz vacuna contra esta enfermedad. \n<br>Revervac®: un nuevo enfoque racional, integral e innovador en el desarrollo de vacunas. \n<br>Revervac® es un cambio técnico evolutivo en la forma de producir ciertas vacunas para uso animal, aplicando el concepto de Ingeniería Reversa a la investigación y desarrollo de nuevas vacunas que permitan combatir enfermedades de difícil control, presentes en nuestros rodeos. \n<br>Este innovador enfoque consiste en revisar el método convencional para el desarrollo de biológicos, profundizando en el estudio del agente etiológico, su epidemiologia, diagnóstico, respuesta inmune, prácticas de manejo; y al mismo tiempo incorporando nuevas herramientas y disciplinas como genómica y proteómica. \n<br>La intensificación de los sistemas productivos es un fenómeno irreversible que no sólo genera una mayor circulación de agentes infecciosos sino también una tasa de mutación y adaptación de los mismos al nuevo entorno. Esto nos demanda mejorar los métodos de diagnóstico y profundizar el estudio de los agentes infecciosos emergentes mediante la incorporación de técnicas de biología molecular y nuevos métodos analíticos. \n<br>Revervac®, innovación para el desarrollo de vacunas más eficaces que permitirán mejorar la sanidad de nuestros rodeos. Información de Prensa \n<br>Revervac® Hemoglobinuria: la herramienta más segura para prevenir la Hemoglobinuria Bacilar \n<br>En el marco de la presentación de la Plataforma Revervac®, Biogénesis Bagó lanza Revervac® Hemoglobinuria, una nueva y eficaz herramienta para la prevención de la Hemoglobinuria Bacilar en bovinos, la cual fue diseñada por ingeniería reversa, la nueva plataforma de desarrollo que aplica tecnología de última generación. \n<br>La Hemoglobinuria Bacilar es una enfermedad infecciosa causada por una bacteria conocida como Clostridium haemolyticum o Clostridium novyi tipo D que afecta principalmente al ganado bovino. Este clostridio se encuentra presente en el suelo de determinadas regiones geográficas, como la precordillera patagónica, campos bajos del Litoral y en la Cuenca del Salado. \n<br>La población de riesgo de estas zonas se estima en 4,1 millones de cabezas y considerando que la morbilidad promedio es del 1% y su letalidad del 100%, las pérdidas económicas se estima podrían alcanzar los 18,5 millones de dólares por año. \n<br>La enfermedad tiene una patogenia compleja, la sola presencia del clostridio es condición necesaria pero no suficiente para su presentación. El daño hepático causado por las larvas migrantes del parásito Fasciola hepática continúa siendo el principal factor que predispone al cuadro clínico. Pero otros factores predisponentes como la compresión que ejerce el feto sobre el hígado materno en gestaciones avanzadas, la acidosis ruminal producto de alteraciones bruscas y/o errores en la dieta y la presencia de micotoxinas en los alimentos pueden lesionar el hígado y también desencadenar la enfermedad \n<br>Estos mecanismos de lesión hepática generan zonas de baja tensión de oxigeno que favorecen la germinación de esporos de este microorganismo anaerobio estricto. La bacteria se multiplica y libera su toxina necrotizante y hemolítica, provocando una necrosis en el parénquima hepático (“infarto”(“orina con sangre”)), signo patognomónico de esta enfermedad. La destrucción masiva de glóbulos rojos provoca además, una anemia severa, ictericia y hemoglobinuria , signos que caracterizan la enfermedad.Información de Prensa \n<br>El aumento de casos no resueltos en rodeos previamente inmunizados con vacunas convencionales nos impulsó a desarrollar Revervac® Hemoglobinuria. \n<br>El Clostridium haemolyticum es un anaerobio estricto de difícil aislamiento y cultivo in vitro. Biogénesis Bagó desarrolló nuevos métodos y medios de cultivo que permitieron obtener varios aislamientos en diferentes regiones. \n<br>Bajo el enfoque Revervac®, se estudiaron fenotípica y genotípicamente las cepas aisladas, logrando la identificación de los genes que codifican la producción de la toxina utilizando la técnica de PCR. Verificamos la virulencia y capacidad toxigénica de las cepas aisladas, comprobando el sinergismo del soma bacteriano y el toxoide para la generación de una respuesta inmune superior. \n<br>Dado que la inmunidad vacunal para el Clostridium haemolyticum es de corta duración, sugerimos incorporar Revervac® Hemoglobinuria en el Plan Sanitario de las regiones problema, una vacuna monovalente con alta potencia antigénica para el control de esta enfermedad. Se recomienda la aplicación de dos dosis en casos de primovacunación y de un refuerzo cada cuatro a seis meses según criterio del Médico Veterinario. \n<br>Revervac® Hemoglobinuria es sinónimo de evolución en la prevención de Hemoglobinuria Bacilar en su rodeo, con el respaldo y la tecnología de Biogénesis Bagó. \n<br> \n<br>', 'prensa', 'es'),
-(28, '2014-03-25', 'Biogénesis Bagó lanzó en Paraguay FLOK®, doramectina con MABS, un antiparasitario interno y externo con un sistema exclusivo de liberación. ', 'FLOK®, es una solución inyectable de doramectina formulada con MABS, un sistema de liberación único, diseñado y desarrollado para un mejor control de parásitos internos y externos del bovino y ovino.\n', '', 'El evento se llevó a cabo el pasado martes 25 de marzo en las oficinas comerciales de Ciavet en conjunto con los directivos de Ciavet,  Dres. Silvio Moro y Alfonso Massó y la presencia  de clientes y productores.\n<br>\n<br>El Dr. Guillermo Elordi, Director Comercial de Cono Sur, dio la bienvenida y presentó institucionalmente al laboratorio que ya lleva casi 30 años acompañando la cadena agroalimentaria del mercado paraguayo.\n<br>\n<br>"El lanzamiento de FLOK® responde al gran interés de Biogénesis Bagó por colaborar con la sanidad y la productividad de la región y atender las necesidades de los productores ganaderos. En línea con ese objetivo, destinamos gran parte de nuestros recursos humanos al área de Innovación, Investigación y Desarrollo, Control de Calidad y Servicio Técnico".\n<br>\n<br>Por su parte el Dr. Enrique Villar (Gerente Técnico Cono Sur) hizo la presentación del producto FLOK, destacando que con su exclusivo sistema Modificador de Absorción -  MABs - ; desarrollado y patentado  por Biogénesis Bagó;  brinda un efecto inmediato y duradero,  una  mayor eficiencia en el control de los parásitos gastrointestinales, ura, bicheras y un alto poder de volteo contra garrapatas;  asegurando animales más limpios en menor tiempo, “FLOK®, viene a dar una importante solución a la ganadería subtropical”.\n<br>', 'prensa', 'es');
+(27, '2014-04-22', 'Biogénesis Bagó presenta Revervac®, una nueva plataforma tecnológica basada en el concepto de Ingeniería Reversa. ', 'Tomando como base su misión y visión corporativa, que la convoca a liderar la evolución de la salud animal a través de la innovación, Biogénesis Bagó presenta Revervac®, una Plataforma Tecnológica basada en el concepto de Ingeniería Reversa, que tendrá un impacto directo en salud animal y a través de ella, en toda la cadena de alimentos. \n', '', 'El concepto de Ingeniería Reversa \n<br>La Ingeniería Reversa (IR) es el proceso que nos permite redescubrir los principios tecnológicos de un dispositivo, objeto o sistema mediante el análisis de su estructura, funcionamiento y operación. Consiste en el desarme o desmontaje de dispositivos electrónicos, mecánicos, software e incluso materiales biológicos o químicos, con el objetivo final de realizar una mejora o la creación de algo nuevo que lo supere en calidad y funcionalidad. \n<br>Este concepto nace durante la Segunda Guerra Mundial cuando los ejércitos incautaban aviones y armas de tropas enemigas para realizar un análisis exhaustivo de los mismos, conocer sus puntos fuertes y débiles y mejorar así los propios. \n<br>A través de los años, los campos de aplicación conceptuales se fueron expandiendo hasta alcanzar diferentes industrias, como automovilística, electrónica, computación y otras. \n<br>En el campo de la biología, fue el Profesor Rino Rappuoli, PhD en Ciencias Biológicas de la Universidad de Siena, Italia, quien tomó el concepto de Ingeniería Reversa y lo aplico al desarrollo de una vacuna contra el Meningococo grupo B, un patógeno con el cual no se había logrado ningún avance en cuatro décadas. A diferencia de otros meningococos, sus antígenos de superficie generan muy poca inmunidad por ser muy similares a los de las células de varios tejidos del cuerpo Información de Prensa \n<br>humano. El uso de la ingeniería reversa le permitió al profesor Rappuoli agrupar diferentes antígenos y fusionarlos, para entonces poder contar con vesículas de antígenos de mayor potencia y desarrollar así una nueva y eficaz vacuna contra esta enfermedad. \n<br>Revervac®: un nuevo enfoque racional, integral e innovador en el desarrollo de vacunas. \n<br>Revervac® es un cambio técnico evolutivo en la forma de producir ciertas vacunas para uso animal, aplicando el concepto de Ingeniería Reversa a la investigación y desarrollo de nuevas vacunas que permitan combatir enfermedades de difícil control, presentes en nuestros rodeos. \n<br>Este innovador enfoque consiste en revisar el método convencional para el desarrollo de biológicos, profundizando en el estudio del agente etiológico, su epidemiologia, diagnóstico, respuesta inmune, prácticas de manejo; y al mismo tiempo incorporando nuevas herramientas y disciplinas como genómica y proteómica. \n<br>La intensificación de los sistemas productivos es un fenómeno irreversible que no sólo genera una mayor circulación de agentes infecciosos sino también una tasa de mutación y adaptación de los mismos al nuevo entorno. Esto nos demanda mejorar los métodos de diagnóstico y profundizar el estudio de los agentes infecciosos emergentes mediante la incorporación de técnicas de biología molecular y nuevos métodos analíticos. \n<br>Revervac®, innovación para el desarrollo de vacunas más eficaces que permitirán mejorar la sanidad de nuestros rodeos. Información de Prensa \n<br>Revervac® Hemoglobinuria: la herramienta más segura para prevenir la Hemoglobinuria Bacilar \n<br>En el marco de la presentación de la Plataforma Revervac®, Biogénesis Bagó lanza Revervac® Hemoglobinuria, una nueva y eficaz herramienta para la prevención de la Hemoglobinuria Bacilar en bovinos, la cual fue diseñada por ingeniería reversa, la nueva plataforma de desarrollo que aplica tecnología de última generación. \n<br>La Hemoglobinuria Bacilar es una enfermedad infecciosa causada por una bacteria conocida como Clostridium haemolyticum o Clostridium novyi tipo D que afecta principalmente al ganado bovino. Este clostridio se encuentra presente en el suelo de determinadas regiones geográficas, como la precordillera patagónica, campos bajos del Litoral y en la Cuenca del Salado. \n<br>La población de riesgo de estas zonas se estima en 4,1 millones de cabezas y considerando que la morbilidad promedio es del 1% y su letalidad del 100%, las pérdidas económicas se estima podrían alcanzar los 18,5 millones de dólares por año. \n<br>La enfermedad tiene una patogenia compleja, la sola presencia del clostridio es condición necesaria pero no suficiente para su presentación. El daño hepático causado por las larvas migrantes del parásito Fasciola hepática continúa siendo el principal factor que predispone al cuadro clínico. Pero otros factores predisponentes como la compresión que ejerce el feto sobre el hígado materno en gestaciones avanzadas, la acidosis ruminal producto de alteraciones bruscas y/o errores en la dieta y la presencia de micotoxinas en los alimentos pueden lesionar el hígado y también desencadenar la enfermedad \n<br>Estos mecanismos de lesión hepática generan zonas de baja tensión de oxigeno que favorecen la germinación de esporos de este microorganismo anaerobio estricto. La bacteria se multiplica y libera su toxina necrotizante y hemolítica, provocando una necrosis en el parénquima hepático (“infarto”(“orina con sangre”)), signo patognomónico de esta enfermedad. La destrucción masiva de glóbulos rojos provoca además, una anemia severa, ictericia y hemoglobinuria , signos que caracterizan la enfermedad.Información de Prensa \n<br>El aumento de casos no resueltos en rodeos previamente inmunizados con vacunas convencionales nos impulsó a desarrollar Revervac® Hemoglobinuria. \n<br>El Clostridium haemolyticum es un anaerobio estricto de difícil aislamiento y cultivo in vitro. Biogénesis Bagó desarrolló nuevos métodos y medios de cultivo que permitieron obtener varios aislamientos en diferentes regiones. \n<br>Bajo el enfoque Revervac®, se estudiaron fenotípica y genotípicamente las cepas aisladas, logrando la identificación de los genes que codifican la producción de la toxina utilizando la técnica de PCR. Verificamos la virulencia y capacidad toxigénica de las cepas aisladas, comprobando el sinergismo del soma bacteriano y el toxoide para la generación de una respuesta inmune superior. \n<br>Dado que la inmunidad vacunal para el Clostridium haemolyticum es de corta duración, sugerimos incorporar Revervac® Hemoglobinuria en el Plan Sanitario de las regiones problema, una vacuna monovalente con alta potencia antigénica para el control de esta enfermedad. Se recomienda la aplicación de dos dosis en casos de primovacunación y de un refuerzo cada cuatro a seis meses según criterio del Médico Veterinario. \n<br>Revervac® Hemoglobinuria es sinónimo de evolución en la prevención de Hemoglobinuria Bacilar en su rodeo, con el respaldo y la tecnología de Biogénesis Bagó. \n<br> \n<br>', 'prensa', 'es');
 INSERT INTO `tbl_notas` (`id`, `fecha`, `titulo`, `bajada`, `extra`, `texto`, `seccion`, `pais`) VALUES
+(28, '2014-03-25', 'Biogénesis Bagó lanzó en Paraguay FLOK®, doramectina con MABS, un antiparasitario interno y externo con un sistema exclusivo de liberación. ', 'FLOK®, es una solución inyectable de doramectina formulada con MABS, un sistema de liberación único, diseñado y desarrollado para un mejor control de parásitos internos y externos del bovino y ovino.\n', '', 'El evento se llevó a cabo el pasado martes 25 de marzo en las oficinas comerciales de Ciavet en conjunto con los directivos de Ciavet,  Dres. Silvio Moro y Alfonso Massó y la presencia  de clientes y productores.\n<br>\n<br>El Dr. Guillermo Elordi, Director Comercial de Cono Sur, dio la bienvenida y presentó institucionalmente al laboratorio que ya lleva casi 30 años acompañando la cadena agroalimentaria del mercado paraguayo.\n<br>\n<br>"El lanzamiento de FLOK® responde al gran interés de Biogénesis Bagó por colaborar con la sanidad y la productividad de la región y atender las necesidades de los productores ganaderos. En línea con ese objetivo, destinamos gran parte de nuestros recursos humanos al área de Innovación, Investigación y Desarrollo, Control de Calidad y Servicio Técnico".\n<br>\n<br>Por su parte el Dr. Enrique Villar (Gerente Técnico Cono Sur) hizo la presentación del producto FLOK, destacando que con su exclusivo sistema Modificador de Absorción -  MABs - ; desarrollado y patentado  por Biogénesis Bagó;  brinda un efecto inmediato y duradero,  una  mayor eficiencia en el control de los parásitos gastrointestinales, ura, bicheras y un alto poder de volteo contra garrapatas;  asegurando animales más limpios en menor tiempo, “FLOK®, viene a dar una importante solución a la ganadería subtropical”.\n<br>', 'prensa', 'es'),
 (29, '2014-03-13', 'Regata Oceánica Buenos Aires Río de Janeiro \n', 'La Regata Buenos Aires – Rio de Janeiro es uno de los eventos náuticos más antiguos y tradicionales del continente y sin duda el de mayor importancia para veleros, no sólo por la cantidad de participantes sino también por su exigencia.\n', '', 'Manila Biogénesis Bagó, apostó nuevamente a liderar la categoría de tripulaciones en dobles en la  XXIV Regata Oceánica de 1123 millas náuticas (2222km) que une Buenos Aires con Río de Janeiro. El pasado 15 de febrero de 2014 fue la fecha de largada de la regata más importante del continente para veleros, organizado por el Yacht Club Argentino junto con el Iate Clube do Río de Janeiro, lugar donde el 28 de febrero se efectuó la entrega de premios, obteniendo el tercer puesto. \n<br>\n<br>La Regata Buenos Aires – Rio de Janeiro es uno de los eventos náuticos más antiguos y tradicionales del continente y sin duda el de mayor importancia para veleros, no sólo por la cantidad de participantes sino también por su exigencia.\n<br>\n<br>Actualmente se lleva a cabo cada tres años. Comenzó a disputarse en 1947 y es un clásico del ambiente náutico sudamericano con gran reconocimiento a nivel internacional, comparable con las místicas Fastnet (Inglaterra), Sydney-Hobart (Australia) o Middle Sea Race (Italia y Malta).\n<br>\n<br>\n<br>El desafío, la pasión y espíritu de trabajo en equipo se renuevan cada vez que una tripulación decide subirse a una aventura transatlántica, es así que bajo esos valores la tripulación de Manila Biogénesis Bagó ya está en carrera.\n<br>\n<br>La categoría en Dobles se comenzó a correr en el año 2002, implica a diferencia de las regatas clásicas en las que van tripulaciones de 7 a 15 tripulantes aproximadamente, en esta categoría solo van dos tripulantes a bordo, lo que afina los cálculos y hacen mayor el desafío de adopción de tácticas y estrategias con el mejor uso de la carta náutica para lograr el objetivo trazado.\n<br>En el año 2002 el Manila-Biogénesis Bagó, culminó al frente en la categoría de Tripulaciones en Dobles por tiempo corregido. En esa ocasión compitieron con 8 embarcaciones, de las cuales siete eran de origen Argentino y una Brasilera.\n<br>En 2005, el Manila-Biogénesis Bagó también llegó primero en la categoría dobles. En aquel momento, Carlos Cámpora, Capitán del equipo se mostraba realmente aliviado por haber finalizado la regata dentro del límite reglamentario.\n<br>Desde 2002, cualquier equipo que participe en la categoría de Tripulaciones en Dobles que la gane tres veces consecutivamente se queda en propiedad de la copa “VENDAVAL” y el Manila-Biogénesis Bagó la ha levantado en 2002 y 2005: “Ya la ganamos dos veces, y si en esta ocasión clasificamos primeros, nos la llevamos en propiedad”, comenta Carlos Cámpora.\n<br>Por su parte, Guillermo Mattioli, Director general de Biogénesis Bagó  expresó: “Hace años acompañamos la regata porque compartimos los valores de integridad, camaradería, pasión, respeto por el otro y por la naturaleza y el compromiso por alcanzar el objetivo, que motivan a los capitanes y sus equipos a lanzarse a este nuevo desafío y lo hacemos porque estos son los mismos valores que representan a nuestra compañía”.  Nos enorgullece poder participar de un evento de tal magnitud que une a todos los países vecinos en integración del espíritu deportivo.	', 'prensa', 'es'),
 (30, '2014-03-13', 'Campaña de Aftosa \n', 'Biogénesis Bagó, la empresa líder mundial en producción de la vacuna antiaftosa, acompañando al productor en esta nueva campaña \n', '', 'Biogénesis Bagó, la empresa de biotecnología especializada en el desarrollo, producción y comercialización de productos para la sanidad y productividad animal y una de las empresas líderes a nivel mundial en la producción de la vacuna antiaftosa, refuerza –en el inicio de la campaña 2014– su compromiso por contribuir a la erradicación de la fiebre aftosa en la región. \n<br>Gracias a altos estándares internacionales de calidad, alineados a los requerimientos de la Organización Mundial de Salud Animal (OIE),  tres de cada diez vacunas aplicadas en la región son producidas por Biogénesis Bagó (bajo las marcas Bioaftogen y Aftogen Óleo), lo que demuestra un producto de clase mundial y la capacidad de abastecer a los mercados más exigentes de la región y del mundo de vacuna antiaftosa multivalente.\n<br>Biogénesis Bagó y el respaldo de calidad de su vacuna antiaftosa:\n<br> 	*La vacuna antiaftosa de Biogénesis Bagó es la única vacuna de la región que posee licencia aprobada en todos los países que aplican la vacuna en Sudamérica.\n<br> 	*Biogénesis Bago es la planta que detenta la mayor antigüedad en la región con habilitación bajo Normas de Bioseguridad Nivel 4 OIE, operando en estas condiciones desde el año 1996. Ha sido reconocida como una de las mejores y más seguras a nivel global, recibiendo auditorías constantes de autoridades locales: SENASA; regionales: PANAFTOSA, Comisión Sudamericana de Bioseguridad, PAMA, autoridades sanitarias de varios países donde se comercializa la vacuna antiaftosa, entre ellos Brasil y Colombia y auditorías de parte de Estados Unidos, Canadá  y de la OIE.\n<br> 	*Biogénesis Bagó es, desde el año 2006, proveedora de antígenos para vacuna antiaftosa para el Banco Norteamericano de Vacunas de Fiebre Aftosa. Es la primera vez en la historia que una empresa localizada fuera del continente Europeo logra este estatus.\n<br> 	*En 2011, Biogénesis Bagó obtuvo el registro de su vacuna Bioaftogen en EEUU, siendo el primer registro de comercialización de vacuna aftosa en ese país ante una emergencia sanitaria.\n<br> 	*Biogénesis Bagó está certificada por el SENASA bajo normas de Buenas Prácticas de Manufactura desde el años 2006, así mismo ha logrado también la aprobación como elaborador por parte de la comisión de Buenas Prácticas de Manufactura del Brasil y de las autoridades de APHIS – USDA de EEUU, y la Canadian Food Inspection Service de Canadá.\n<br> 	*Biogénesis Bagó es la única empresa veterinaria del continente, que elabora Vacuna antiaftosa bajo normas, ISO 14.001; ISO 9001, Buenas Prácticas de Manufactura y Normas de Bioseguridad P 4 OIE; dando así los máximos estándares de: cuidado ambiental, gestión de sus procesos, calidad de producto y Bioseguridad, \n<br> 	*Biogénesis Bagó posee una performance impecable como proveedor de vacuna antiaftosa en el continente, siendo el mayor proveedor de toda la vacuna que se aplica en el continente en los últimos 5 años.\n<br> 	*La vacuna antiaftosa de Biogénesis Bagó posee los más altos atributos de calidad, potencia y seguridad, demostrados a lo largo del uso de la misma y la performance de la historia de los diferentes controles oficiales a los que es sometida. \n<br> 	*En el 2013, ha sido seleccionada para ser parte de un Joint Venture en China junto a la empresa local  “HILE Biotechnology”, destinado a elaborar y comercializar vacuna antiaftosa,  ha dado lugar a la creación de la  nueva empresa “Yangling JINHAI Biotechnology Co”, Transformándose así Biogénesis Bagó en la primer empresa extranjera, a nivel global, en proveer tecnología para producir vacuna antiaftosa en China.', 'prensa', 'es'),
 (31, '2013-11-16', 'FLOK®, Doramectina con MABS , \n', 'Comunicación en medios', '', 'El lanzamiento de FLOK®, fue acompañado con una campaña de comunicación en medios, gráficos y radiales, centrada en el concepto de <b>“tecnología a su disposición”.  </b>	  ', 'prensa', 'es'),
 (32, '2013-10-24', 'Biogénesis Bagó inaugura su filial en Bolivia \n', 'Biogénesis Bagó anuncia que desde el 1° de Mayo se encuentra operando en Bolivia con filial propia. \n', '', 'Santa Cruz de la Sierra, septiembre de 2013\n<br>Biogénesis Bagó anuncia que desde el 1° de Mayo se encuentra operando en Bolivia con filial propia.\n<br>“Si bien la empresa opera comercialmente en el país desde hace más de 25 años, a través de la filial buscamos acercarnos más al productor y asesor veterinario de Bolivia, conocer mejor sus necesidades en materia de sanidad y producción, intercambiar experiencias  a partir del conocimiento de las realidades de la región y brindarle el mejor servicio como la empresa lo  hace en los demás países” aseguró la MVZ Maritza Céspedes Gerente  Comercial de Biogénesis Bagó Bolivia.\n<br>Desde su nueva sede, ubicada estratégicamente en Santa Cruz de la Sierra, llegará en forma directa a toda Bolivia, con su amplio portfolio de productos: vacuna antiaftosa un producto de clase mundial, con tecnología y calidad ampliamente reconocidas en el mundo, que protege a uno de cada tres bovinos de la región y colabora con el control de la enfermedad en la mayoría de los países de la región donde se practica la vacunación;  biológicos destinados a prevenir las principales enfermedades infecciosas de los rodeos;  antiparasitarios internos y externos formulados con diferentes drogas que permiten realizar controles estratégicos y evitar resistencia; antibióticos desarrollados para el tratamiento de las principales enfermedades que afectan al ganado; vitaminas &amp; minerales que permiten lograr el máximo rendimiento de los animales revirtiendo carencias y potenciando la producción y reproductivos que permiten mejorar la eficiencia reproductiva de los rodeos.\n<br>Biogénesis Bagó es una empresa con presencia en toda la región americana, con más de 70 años de trayectoria, especializada en desarrollar, producir y comercializar productos para la salud animal.  Sus productos están elaborados bajo los más altos estándares de calidad internacional (GMP; ISO 9001 y 14000) siendo la única empresa del sector con este logro. Y respaldados por un servicio técnico post venta, clave para la correcta aplicación de las tecnologías, con el objetivo de poder producir de forma más eficiente con una correcta utilización de los recursos. \n<br>Su compromiso con la cadena agroalimentaria, le permite  trabajar con la convicción de poder aportar  las mejores soluciones para la salud animal,  compartir  su conocimiento y experiencia y  acompañar día a día a los productores y  veterinarios en el desafío de producir más y mejores alimentos.\n<br>Para mayor información contactarse con: \n<br>BIOGENESIS BAGO BOLIVIA\n<br>Teléfonos: 3419806 - 3453017\n<br>MVZ Maritza Céspedes  maritza.cespedes@biogenesisbago.com\n<br>\n<br>', 'prensa', 'es'),
 (33, '2013-10-24', 'Convocatoria al Premio Biogenesis Bago versión 2013 a la Inovación en la Producción Bovina \n', 'La Academia Nacional de Agronomía y Veterinaria, en adelante “ANAV” y el laboratorio Biogénesis Bagó SA, en adelante “Biogénesis Bagó”, buscan reconocer y premiar ejemplos de esfuerzos profesionales, premiando al mejor trabajo de adopción de tecnología para una mayor eficiencia productiva en ganadería intensiva, extensiva y tambos que aborde aspectos sanitarios, reproductivos o de manejo con impacto en la producción bovina realizado en el país. \n', '', 'La convocatoria es abierta a profesionales veterinarios o equipos de profesionales en el área agropecuaria que hayan desarrollado actividades de adopción de tecnología en los segmentos anteriormente mencionados y cuyo trabajo sea verificable y adecuadamente documentado.\n<br>El Premio a la innovación para una mayor eficiencia productiva consistirá en un Diploma y la suma de $ 20.000 pesos en efectivo que serán entregados en el acto de presentación de dicho Premio en la sede de la ANAV, en la fecha que oportunamente fijarán los organizadores de la presente Convocatoria a su sólo criterio.\n<br>El cierre de la convocatoria será el 31 de Marzo de 2014, antes de las 18 hs y la entrega del Premio se realizará en el mes de Junio del año 2014.\n<br>\n<br><b>Términos y Condiciones Generales para la convocatoria 2013</b>\n<br>\n<br>\n<br><b>Participantes</b>\n<br>Ser Médico Veterinario o Veterinario, o un equipo de trabajo integrado por al menos un Médico Veterinario o Veterinario de nacionalidad y residentes en Argentina, con actividad en ganadería bovina.\n<br>El trabajo\n<br>Los participantes deberán presentar un trabajo desarrollado en la Argentina que aborde aspectos sanitarios, reproductivos o de manejo con impacto en la producción y cuyo resultado presente una ventaja competitiva sobre las prácticas actuales en ganadería bovina y que además pueda ser empleado o utilizado por otros colegas del sector o especialidad. Los trabajos deberán ser presentados siguiendo las pautas y forma de presentación del concurso.\n<br>En el presente trabajo, no se podrán mencionar marcas comerciales de los productos utilizados.\n<br>Forma de presentación\n<br>Con el objetivo de estandarizar la presentación de los trabajos, estos deberán estar contenidos bajo el siguiente formato:\n<br>A. Título\n<br>B. B. Autor (pseudónimo)\n<br>C. Introducción\n<br>D. Objetivos (ventaja competitiva)\n<br>E. Materiales y métodos\n<br>F. Resultados\n<br>G. Conclusiones (del trabajo y sus alcances)\n<br>\n<br><b>Áreas de interés</b>\n<br>Serán considerados de interés todos aquellos trabajos relacionados a la adopción de tecnología para una mayor eficiencia productiva en ganadería intensiva, extensiva y tambos que aborden aspectos sanitarios, reproductivos o de manejo y que produjeron logros e impactos en la producción animal.\n<br>\n<br>\n<br><b>Cómo participar</b>\n<br>En un sobre cerrado, se deberán enviar por correo seis (6) copias del trabajo con pseudónimo como autor, y en un sobre aparte se deberá incluir el nombre y apellido del autor principal (pseudónimo) y los de los coautores, si los hubiera, indicando el número de DNI, dirección de correo electrónico, teléfono y dirección postal de contacto.\n<br>Dirección de envío\n<br>Los trabajos deberán ser enviados por correo a la siguiente dirección:\n<br>ACADEMIA NACIONAL DE AGRONOMIA Y VETERINARIA\n<br>“Premio Biogénesis Bagó 2013 a la Innovación en la Producción Bovina”\n<br>Avda. Alvear 1711 – 2º Piso (1014) – Buenos Aires – Argentina\n<br>Cierre de la convocatoria:\n<br>Sólo participarán de la presente Convocatoria los trabajos que sean recibidos en la dirección anteriormente mencionada antes de las 18 hs. del día 31 de Marzo de 2014.\n<br>\n<br>\n<br><b>Difusión</b>\n<br>El concurso será difundido a través de medios masivos de comunicación a nivel nacional, sitios web de la ANAV (www.anav.org.ar) y otros medios relacionados al área agropecuaria\n<br>\n<br><b>Premiación</b>\n<br>El premio de la presente Convocatoria consistirá de un Diploma y de $ 20.000 pesos en efectivo a repartir entre el o los autores del trabajo que resulte ganador, que serán entregados en acto público en la sede de la ANAV o en lugar a determinar por ésta, en la fecha que oportunamente fijarán los organizadores de la presente Convocatoria a su sólo criterio.\n<br>\n<br>\n<br><b>Jurado</b>\n<br>El Jurado se expedirá por simple mayoría y su dictamen lo presentará a la comisión de premios de la ANAV el cual lo pondrá a consideración del plenario para su aprobación, siendo la misma inapelable.\n<br>El Jurado estará compuesto del siguiente modo:\n<br><i><b>Por la ANAV:</b></i>\n<br>Dr. Eduardo L. Palma (Pte)\n<br>Dr. Bernardo J Carrillo\n<br>Dr. Jorge O. Errecalde\n<br>Dr. Ramón Noseda\n<br><b><i>Por Biogénesis Bagó:</i></b>\n<br>Dr. Esteban Turic\n<br>\n<br>\n<br><b>Ganadores</b>\n<br>El Jurado se reunirá una vez finalizada la fecha de cierre de la presentación de los trabajos y propondrá un orden de mérito. El Jurado presentará a consideración del plenario de la ANAV el orden de mérito de los trabajos seleccionados siendo el plenario quien decidirá el ganador, luego se procederá a la apertura de sobres para identificar el nombre del autor o los autores ganadores del Premio.\n<br>El ganador del premio se difundirá en el sitio web de la ANAV (www.anav.org.ar) y en medios masivos de comunicación.', 'prensa', 'es'),
-(34, '2013-10-24', 'Biogénesis Bagó anunció la instalación de una planta de vacunas Antiaftosa en la República Popular China \n', 'Autoridades de la empresa Biogénesis Bagó anunciaron hoy la firma de un acuerdo con HILE Biotechnology, para la instalación de una planta \nde vacunas Antiaftosa en la República Popular China. \n', '', 'El proyecto contará con una inversión inicial de 60 millones de dólares y se llevará a cabo en la ciudad de Yangling,provincia de Shaanxi.\n<br>\n<br>HILE Biotecnology Co es una empresa privada que elabora actualmente vacunas para aves y\n<br>cerdos de alta tecnología.\n<br>\n<br>Biogénesis Bagó aportará como socio su tecnología e inversión, para desarrollar un proyecto industrial en el marco de los más altos estándares internacionales de calidad.La asociación estará focalizada en la producción y comercialización de la vacuna Antiaftosa en ese país, para exportar a toda la región asiática y a futuro exportar desde esa planta a otros mercados de oriente.\n<br>\n<br>"Es un orgullo para Biogénesis Bagó, y un importante respaldo para la industria de nuestro país,haber logrado la autorización para comenzar a trabajar en un mercado tan exigente como es el\n<br>mercado chino", dijo Guillermo Mattioli, Director General de Biogénesis Bagó, quién aseguró además que " este acuerdo es, sin dudas, un reconocimiento a la trayectoria de nuestra empresa, a los trabajadores que la integran y a la calidad de vacunas que hemos logrado producir, pero sobre todo un premio a la forma de trabajar que tenemos, articulando siempre entre el sector público y el privado,\n<br>buscando potenciar siempre al máximo nuestras capacidades como país”.\n<br>Por su parte el Dr. Rodolfo Bellinzoni, Director de Operaciones comentó que "Biogénesis Bagó es la primera y única empresa privada de biotecnología del mundo que alcanza los estándares requeridos por el gobierno Chino para instalarse en ese país. Esto demuestra nuestro compromiso con la calidad con la que trabajamos a diario".\n<br>\n<br>El Ministro de Agricultura Ganadería y pesca de la Nación, el Sr. Norberto Yauhar comentó “Tenemos el enorme desafío de alimentar al creciente número de habitantes que poblarán el mundo y, en ese sentido, la Argentina tiene un enorme potencial por desarrollar en los tres ejes que aparecen como fundamentales: alimentación, investigación y desarrollo y energía”.\n<br>También destacó la importancia de la colaboración público-privada en este proyecto y el trabajo de la comunidad científica.\n<br>\n<br>Por último el Sr. Embajador de la República Popular China Yin Hengmin transmitió “Este proyecto es el resultado de un gran avance en las relaciones estratégicas entre dos mercados emergentes como China y Argentina. Seguramente, con el potencial del campo argentino y de sus industrias vinculadas ambos países podrán proyectar muchas más cosas juntos”.\n<br>\n<br>Biogénesis Bagó cuenta con años de liderazgo en la provisión de vacunas de alta calidad paraanimales destinados a la producción de carnes y leche, siendo seleccionada por su alta capacidad tecnológica y de innovación, elementos clave para desarrollar vacunas contra la enfermedad.\n<br>\n<br>Además, Biogénesis Bagó es uno de los mayores productores de vacuna Antiaftosa a nivel\n<br>mundial. Desde el año 2006 es la única proveedora de Latinoamérica adjudicataria de la licitación internacional del Banco de Antígenos y vacunas de Norteamérica, que asiste las necesidades de Estados Unidos, México y Canadá y es la única empresa del mundo autorizada a distribuir y comercializar su vacuna en caso de emergencia en los Estados Unidos y Canadá.', 'prensa', 'es'),
+(34, '2013-10-24', 'Biogénesis Bagó anunció la instalación de una planta de vacunas Antiaftosa en la República Popular China ', 'Autoridades de la empresa Biogénesis Bagó anunciaron hoy la firma de un acuerdo con HILE Biotechnology, para la instalación de una planta \r\nde vacunas Antiaftosa en la República Popular China. \r\n', '', '<p>El proyecto contar&aacute; con una inversi&oacute;n inicial de 60 millones de d&oacute;lares y se llevar&aacute; a cabo en la ciudad de Yangling,provincia de Shaanxi.<br />\r\nHILE Biotecnology Co es una empresa privada que elabora actualmente vacunas para aves y<br />\r\ncerdos de alta tecnolog&iacute;a.<br />\r\nBiog&eacute;nesis Bag&oacute; aportar&aacute; como socio su tecnolog&iacute;a e inversi&oacute;n, para desarrollar un proyecto industrial en el marco de los m&aacute;s altos est&aacute;ndares internacionales de calidad.La asociaci&oacute;n estar&aacute; focalizada en la producci&oacute;n y comercializaci&oacute;n de la vacuna Antiaftosa en ese pa&iacute;s, para exportar a toda la regi&oacute;n asi&aacute;tica y a futuro exportar desde esa planta a otros mercados de oriente.<br />\r\n&quot;Es un orgullo para Biog&eacute;nesis Bag&oacute;, y un importante respaldo para la industria de nuestro pa&iacute;s,haber logrado la autorizaci&oacute;n para comenzar a trabajar en un mercado tan exigente como es el&nbsp;mercado chino&quot;, dijo Guillermo Mattioli, Director General de Biog&eacute;nesis Bag&oacute;, qui&eacute;n asegur&oacute; adem&aacute;s que &quot; este acuerdo es, sin dudas, un reconocimiento a la trayectoria de nuestra empresa, a los trabajadores que la integran y a la calidad de vacunas que hemos logrado producir, pero sobre todo un premio a la forma de trabajar que tenemos, articulando siempre entre el sector p&uacute;blico y el privado,&nbsp;buscando potenciar siempre al m&aacute;ximo nuestras capacidades como pa&iacute;s&rdquo;.<br />\r\nPor su parte el Dr. Rodolfo Bellinzoni, Director de Operaciones coment&oacute; que &quot;Biog&eacute;nesis Bag&oacute; es la primera y &uacute;nica empresa privada de biotecnolog&iacute;a del mundo que alcanza los est&aacute;ndares requeridos por el gobierno Chino para instalarse en ese pa&iacute;s. Esto demuestra nuestro compromiso con la calidad con la que trabajamos a diario&quot;.<br />\r\nEl Ministro de Agricultura Ganader&iacute;a y pesca de la Naci&oacute;n, el Sr. Norberto Yauhar coment&oacute; &ldquo;Tenemos el enorme desaf&iacute;o de alimentar al creciente n&uacute;mero de habitantes que poblar&aacute;n el mundo y, en ese sentido, la Argentina tiene un enorme potencial por desarrollar en los tres ejes que aparecen como fundamentales: alimentaci&oacute;n, investigaci&oacute;n y desarrollo y energ&iacute;a&rdquo;.<br />\r\nTambi&eacute;n destac&oacute; la importancia de la colaboraci&oacute;n p&uacute;blico-privada en este proyecto y el trabajo de la comunidad cient&iacute;fica.<br />\r\nPor &uacute;ltimo el Sr. Embajador de la Rep&uacute;blica Popular China Yin Hengmin transmiti&oacute; &ldquo;Este proyecto es el resultado de un gran avance en las relaciones estrat&eacute;gicas entre dos mercados emergentes como China y Argentina. Seguramente, con el potencial del campo argentino y de sus industrias vinculadas ambos pa&iacute;ses podr&aacute;n proyectar muchas m&aacute;s cosas juntos&rdquo;.<br />\r\nBiog&eacute;nesis Bag&oacute; cuenta con a&ntilde;os de liderazgo en la provisi&oacute;n de vacunas de alta calidad paraanimales destinados a la producci&oacute;n de carnes y leche, siendo seleccionada por su alta capacidad tecnol&oacute;gica y de innovaci&oacute;n, elementos clave para desarrollar vacunas contra la enfermedad.<br />\r\nAdem&aacute;s, Biog&eacute;nesis Bag&oacute; es uno de los mayores productores de vacuna Antiaftosa a nivel&nbsp;mundial. Desde el a&ntilde;o 2006 es la &uacute;nica proveedora de Latinoam&eacute;rica adjudicataria de la licitaci&oacute;n internacional del Banco de Ant&iacute;genos y vacunas de Norteam&eacute;rica, que asiste las necesidades de Estados Unidos, M&eacute;xico y Canad&aacute; y es la &uacute;nica empresa del mundo autorizada a distribuir y comercializar su vacuna en caso de emergencia en los Estados Unidos y Canad&aacute;.</p>\r\n', 'prensa', 'es'),
 (35, '2013-10-08', 'Asegurá más preñeces y pariciones en tu rodeo. \n', 'Bioabortogen® H; la vacuna reproductiva más completa del mercado. \n', '', 'Campaña de comunicacion en medios graficos sobre <b>Bioabortogen® H</b>; la vacuna reproductiva más completa y específica del mercado; con cepa de Leptospira AKRFB aislada a campo por el equipo técnico de Biogénesis Bagó.', 'prensa', 'es'),
 (36, '2013-08-17', 'Doble acción en una sola aplicación \n', 'BAGOMECTINA® 3,15 LA AD3E', '', 'Aviso grafico <b>Bagomectina 3,15</b><b>®,</b> el antiparasitario interno y externo a base de Ivermectina que además incorpora Vitaminas A, D3 y E; indispensables para la ganancia de peso y el fortalecimiento del sistema inmune.', 'prensa', 'es'),
 (37, '2013-07-27', 'Categoría Peso Pesado \n', 'SUPLENUT®,suplemento mineral a base de Cobre y Zinc.', '', 'Campaña invernada y cria, Ganá peso en tu rodeo, aplicá SUPLENUT®, el suplemento mineral a base de Cobre y Zinc. \nYa sabés, con SUPLENUT®, tu rodeo gana kilos de rentabilidad. \nSubite al desafío, probá con SUPLENUT®.', 'prensa', 'es'),
@@ -902,9 +906,9 @@ INSERT INTO `tbl_notas` (`id`, `fecha`, `titulo`, `bajada`, `extra`, `texto`, `s
 (43, '2011-08-01', 'Obtención de la certificación ISO 14001:2004', 'Nuestro compromiso es hacer sustentable el lugar donde vivimos.', '', 'Biogénesis Bagó siempre desarrolló sus operaciones con un alto grado de compromiso ambiental, hace un tiempo la Dirección decidió que este compromiso se desarrolle por medio de un Sistema de Gestión Internacional Ambiental con el objetivo de incrementar la eco-eficiencia de sus procesos y adoptar niveles internacionales. Fue así que se implementó el Sistema de Gestión Ambiental basado en las Normas ISO 14000. \n<br>\n<br>Biogenésis Bagó ha obtenido la certificación ISO 14001:2004, a través de la entidad certificadora TÜV Rheinland Argentina S.A., por un período de certificación que será desde el 28-04-2011 al 27-04-2014. La entidad certificadora realizará auditorías anuales de seguimiento como suelen ser habituales. \n<br>\n<br>La Norma ISO 14001:2004 especifica los requisitos para un sistema de gestión ambiental, destinados a permitir que se desarrolle e implemente una política que tenga en cuenta los requisitos legales y otros requisitos que la organización suscriba, y la información relativa a los aspectos ambientales significativos. Se aplica a aquellos aspectos ambientales que la organización identifica que puede controlar y sobre aquellos sobre los que puede tener influencia. \n<br>\n<br>\n<br>ISO (Organización Internacional de Normalización) es una Federación mundial de organismos nacionales de normalización. Las Normas Internacionales sobre gestión ambiental tienen como finalidad proporcionar a las organizaciones los elementos de un sistema de gestión ambiental (SGA) eficaz que puedan ser integrados con otros requisitos de gestión, permitiendo desarrollar e implementar una política y unos objetivos que tengan en cuenta los requisitos legales y la información sobre los aspectos ambientales significativos. El éxito del sistema depende del compromiso de todos los niveles y funciones de la organización y especialmente de la alta dirección. \n<br>\n<br>La gestión ambiental abarca una serie completa de temas, incluidos aquellos con implicaciones estratégicas y competitivas. El demostrar que esta Norma Internacional se ha implementado con éxito significa que la Organización garantiza a las partes interesadas que cuenta con un sistema de gestión ambiental apropiado. \n<br>	', 'prensa', 'es'),
 (44, '2011-07-19', 'El impacto socio-económico de la ganadería en la región \n', 'BIOGENESIS - BAGO, la Sociedad Rural Argentina y La Rural Predio Ferial organizaron la jornada “Miradas 2011. Una Mirada Regional de la Producción Ganadera”.\n', '', 'Ante un auditorio de más de 400 personas, entre los que se encontraron autoridades nacionales e internacionales; productores; médicos veterinarios; empresarios; medios de comunicación; los productores ganaderos Ing. Fernando Fortuny (Vicepresidente de Las Lajitas S.A.-Argentina); Ing. Luis Saavedra (Propietario de Hacienda Nelorí- Bolivia); Ing. Luciano Vacari (Superintendente de ACRIMAT- Asociación de Criadores del Mato Grosso-Brasil); Ing. Carlos Pedretti (Gerente General de Ganadera Alborada-Paraguay) y el Ing. José Bonica (Presidente de la Asociación Rural de Uruguay) dieron un panorama de la producción ganadera en sus países y reflejaron el impacto que tiene el sector pecuario en la economía y en toda la sociedad a nivel nacional y regional. \n<br>\n<br>Los cinco productores coincidieron en el potencial que posee la región para consolidarse como principal productor de proteína animal para el mundo, destacando la necesidad de producir de manera sustentable; de incorporar tecnología; de eliminar las barreras sanitarias (erradicación de fiebre aftosa en todo el continente) y de desarrollar un compromiso social, destacando los beneficios que genera el sector para el conjunto de la sociedad, entre otros aspectos clave. \n<br>\n<br><i>"En el marco de la 125 edición de una exposición que es el principal espacio de encuentro del sector y de vinculación entre el campo y la ciudad, desde BIOGENESIS BAGO, una empresa regional, de más de 70 años de trayectoria en salud y productividad animal, y junto a la Sociedad Rural Argentina y La Rural Predio Ferial, concebimos, en el año 2007 este espacio denominado Miradas del Campo. Este año, motivados por el contexto actual en el que la región de América del Sur es la productora de carnes de calidad número uno del mundo y continúa consolidándose como tal, decidimos darle a esas Miradas un enfoque regional"</i>, comentó Guillermo Mattioli, Director de BIOGENESIS BAGO. \n<br>\n<br>Para iniciar la jornada, el Ingeniero Agrónomo José Bonica, Presidente de la Asociación Rural de Uruguay, administrador de empresas arroceras - ganaderas y consultor privado, expresó <i>"sentimos que la sociedad no valora lo que representa el sector". </i>Luego, presentó datos de la producción agropecuaria uruguaya, destacando que en los últimos 8 años, tuvo un crecimiento del 36%. A su vez habló del efecto difusión del sector sobre las economías del interior del país, haciendo referencia a que "si al campo le va bien, a la sociedad también". <i>"El sector agropecuario es el que presenta mayores efectos difusión sobre la economía en su conjunto en comparación con el resto de las actividades productivas". </i>Además, señaló que este efecto también se refleja en la generación de empleos directos e indirectos y que los multiplicadores del sector agropecuario, considerado en su etapa primaria, son algo superiores al de otros sectores de la economía. <i>"Es decir que por cada unidad demandada en el sector, se multiplica tres veces la producción en la economía". </i>\n<br>\n<br>Los casos de Paraguay y Bolivia \n<br>Luego, el Ing. Carlos Pedretti, Gerente General de Ganadera Alborada y Presidente de la Asociación Rural del Paraguay, compartió datos sobre la producción ganadera en Paraguay, un país con un stock vacuno de 12, 6 millones de cabezas, una participación del 12% en el PIB y con la posición número 9 como exportador mundial de carne. \n<br>\n<br>Como productor, describió su esquema productivo, haciendo hincapié en el modelo de integración agrícola- ganadera que implementa donde considera las características del ecosistema; se utilizan apropiadamente los recursos naturales y las mejores tecnologías disponibles y se realizan cultivos seleccionados bajo buenas prácticas, lo que da origen a una producción de granos y forrajes conservados de alta calidad de forma sustentable y eficiente. \n<br><i>"Los avances que estamos logrando en nuestra ganadería, fue obtenida en base a la aplicación de tecnologías adaptadas al ecosistema que caracteriza cada zona", </i>señaló. \n<br>\n<br>Luego, habló de su política de recursos humanos y de responsabilidad social. Ganadera Alborada emplea en forma directa a 170 funcionarios y cuenta con 30 contratistas que emplean a más de 100 personas para diversas tareas tercerizadas. Su integración con la comunidad se refleja mediante programas con líderes campesinos para promover el cultivo de maíz y impulsar el deporte. \n<br>\n<br>Por su parte, el Ing. Luis Saavedra, Propietario de Hacienda Nelorí, Presidente de la Federación de empresarios privados de Santa Cruz y de la Fundación de Educación IDEA, demostró el potencial ganadero de un país con enormes áreas de vocación pecuaria, con un stock de 6.5 millones de cabezas y una población de 10 millones de habitantes. <i>"La agricultura y ganadería son soporte de la economía boliviana"</i>, señaló. Luego planteó desafíos para la producción como erradicar la fiebre aftosa; lograr una productividad y competitividad -tarea conjunta de los sectores público y privado-; generar mercados externos y considerar la sostenibilidad ambiental. \n<br>\n<br>Uno de los ejes del éxito de su emprendimiento Hacienda Nelorí es su modelo de gestión estratégica que traspoló de otros negocios de los que proviene, que se basa en producir carnes de calidad a bajo costo, considerando aspectos como: definir misión y visión y una estrategia competitiva; transformarlas en objetivos globales y estratégicos; establecer responsabilidades; fijar los indicadores de desempeño; definir políticas y herramientas de gestión; revisar las acciones estratégicas; monitorear el entorno para anticiparse a los cambios. <i>"Siempre guiados por mantener a los empleados motivados, capacitados y comprometidos, con procesos fluidos y clientes satisfechos; estableciendo indicadores que permitan medir la productividad y eficiencia y teniendo una gerencia participativa". </i>\n<br>\n<br>Las experiencias de Brasil y Argentina \n<br>El Ing. Luciano Vacari, Superintendente de ACRIMAT, planteó la necesidad de armonizar la producción con el ambiente, afirmando <i>"hay que producir más con menos". </i>Inició su presentación realizando una reseña historia de la evolución de la ganadería brasilera, hasta convertirse en lo que es hoy; un actividad modelo para el mundo. En cuanto a Brasil, habló de crecimiento del stock vacuno que fue de un 25 % en los últimos 5 años (stock 2008: 200 millones de cabezas), y de un 3 % del área de pasturas. Agregó que esto se logró por la incorporación de tecnología a los sistemas productivos, respetando el medio ambiente. \n<br>\n<br>También el Ing. Vacari desafíos para la producción ganadera brasilera: el primero, la sustentabilidad. En este sentido, describió las áreas de reserva legal que existen hoy en Brasil, las cuales se deben respetar a la hora de producir. <i>"Un país que produce el volumen que produce no puede ser acusado de no cumplir con las pautas sustentables", </i>señaló. Otro desafío que planteó es el de mantener la renta para poder adquirir tecnología, mejorar la genética, recuperar pasturas y transformar estructuras. Por último, hizo referencia a un desafío para toda la región que es erradicar la fiebre aftosa, a través de medidas públicas de control y vigilancia y de herramientas como la vacunación. <i>"En Brasil, por la gran producción, tenemos barreras proteccionistas disfrazadas de sanitarias. Debemos solucionar esto para poder acceder a nuevos mercados", </i>sostuvo. \n<br>\n<br>El cierre de la jornada estuvo a cargo del productor argentino, Ing. Fernando Fortuny, Vicepresidente de Las Lajitas SA, una empresa agropecuaria familiar de más de 25 años; Presidente de la Sociedad Rural Salteña y Director de las Asociaciones de Braford y Brangus. El Ingeniero Fortuny se refirió la zona donde produce, el noroeste argentino, describiéndola como una región con un mercado que hoy cubre el 70% de sus necesidades con importaciones extra-regionales; con capacidades internas ociosas, que eroga recursos en desmedro de dinamizar economías regionales y necesita los puestos de trabajo de la cadena productiva y de servicios y con un esquema productivo agrícola que será más sustentable concretando el potencial ganadero de la región. \n<br>\n<br>A su vez, manifestó que existen nichos, socio ambiental y productivo -regional, así también capacidades (la agricultura, que posibilita el crecimiento y perfeccionamiento tecnológico en los sistemas, genera capacidad de inversión y ofrece estabilidad; los recursos humanos y la propuesta tecnológica) y que está la tecnología para desarrollar la actividad ganadera en el NOA. \n<br>\n<br>Luego se refirió al planteo productivo en su establecimiento, Las Lajitas S.A. destacando las prácticas de inversión, incorporación de tecnología y de integración con la comunidad. Por último, apeló a todo el sector: "los empresarios de la región tenemos una ineludible e impostergable responsabilidad social y ambiental, porque la sustentabilidad de la región tiene tres patas: social, ambiental y económica). Por todo esto, debemos trabajar mancomunadamente empresarios, entidades intermedias, instituciones académicas y de investigación, sumando a los gobiernos provinciales y nacional, para que entre todos construyamos una Argentina más federal, más justa y con un nivel de desarrollo armónico en lo social, en lo económico, en lo impositivo y en infraestructura", culminó Fortuny.', 'prensa', 'es'),
 (45, '2011-04-22', 'Ranking de Imágen “Mejor empresa en el rubro Agronegocios” \n', 'La Revista Apertura (especializada en economía y negocios), presenta todos los años en Marzo los resultados de su ranking de las 100 empresas con mejor imagen de nuestro país. \n', '', 'Lo presenta con un Ranking General (el ranking de las 100) y  un Ranking Sectorial (las mejores 10 de ese rubro). La encuesta la lleva a cabo una consultora especializada y para obtener los resultados, encuestan a 202 líderes de opinión (empresarios, consultores de empresas y periodistas especializados en negocios).\n<br>En la edición 2011 Biogénesis Bagó se ubica en el puesto 8° en  Ranking del Rubro Agronegocios,  entre los destacados también se encuentran: El Tejar (9°) y AGD (10°);  Los Grobo, Monsanto, Syngenta, Cargill, Biosidus, Nidera y Profértil.\n<br>El ranking se construye sobre las empresas con mejor imagen en general y por los siguientes atributos: Innovación y Creatividad; Inversión y Producción en el país; Ética y Transparencia en su negocio; Confiabilidad de sus Productos/Servicios; Cuidados de su RR y generación de Empleos, Responsabilidad Social Empresaria, Trayectoria y Permanencia en el País; Desarrollo de Estrategia de Largo Plazo; Solvencia Económica Financiera; Calidad del Management; Publicidad y Acciones de Comunicación.\n<br>\n<br>Para Biogénesis Bagó  es una  gran satisfacción que nos hayan destacado de ésta forma dentro de todas las empresas del rubro agropecuario del país.\n<br>\n<br>\n<br>Durante los últimos  5 años:\n<br>Primeros en elección, imagen de marca y calidad de productos (Encuesta a Productores Mora &amp; Araujo 2007)\n<br>Primeros en el ranking  "Las mejores marcas en Imagen del rubro veterinario" (Revista Chacra 2008). \n<br>Primeros en recordación, imagen de marca y calidad de productos (Encuesta a Explotaciones de Engorde a Corral Mora &amp; Araujo 2009).\n<br>Único laboratorio de Sanidad Animal  dentro de las 10 mejores empresas del rubro Agronegocios (Ranking de Imagen Revista Apertura años 2010 y 2011). \n<br>\n<br>\n<br>Para quienes trabajamos en Biogénesis Bagó, es un orgullo seguir trabajando como lo venimos haciendo y con ganas de seguir superándonos y seguir adelante.  Muchas gracias\n<br>', 'prensa', 'es'),
-(46, '2011-04-18', 'Biogénesis Bagó lanza al mercado Ceftiomax \n', 'Ceftiomax® (Clorihidrato de ceftiofur 5%). Un antibiótico de amplio espectro para bovinos y porcinos. Indicado para Enfermedades Respiratorias y tratamiento de Pietín en bovinos y las enfermedades respiratorias del Porcino.\n', '', 'Una nueva herramienta para los productores, ofreciendo un  producto seguro con tolerancia local excelente en Bovinos y Porcinos.\n<br>Ceftiomax®, está formulado en base a Clorhidrato de Ceftiofur en suspensión oleosa lista para usar. El Ceftiofur es una cefalosporina de última generación y es de la familia de los betaláctamicos, diferenciándose de las penicilinas comunes por una cinética superior que hace que disponga de un espectro más amplio, se metaboliza en menor tiempo y no deja residuos en los tejidos comestibles y leche para uso humano.\n<br>El Ceftiofur posee la vida media de eliminación en plasma más larga conocida entre las Cefalosporinas, que le otorga a esta presentación, lista para usar, una prolongada acción frente a los principales organismos Gram negativos y positivos de los bovinos y porcinos. Su rápida eliminación de la leche permite su uso en ganado lechero en producción con descarte cero en leche.\n<br>Sin espera previa a la faena para el consumo humano.\n<br>', 'prensa', 'es'),
-(47, '2011-04-15', 'Lanzamiento: Ceftiomax® \n', 'Biogénesis Bagó lanza al mercado Ceftiomax® (Clorihidrato de ceftiofur 5%). Un antibiótico de amplio espectro para bovinos y porcinos. Indicado para Enfermedades Respiratorias y tratamiento de Pietín en bovinos y las Enfermedades Respiratorias del Porcino. \nEstá indicado en las infecciones bacterianas más comunes causada por organismos Gram negativos y positivos. \n', '', 'Una nueva herramienta para los productores, ofreciendo un  producto seguro con tolerancia local excelente en Bovinos y Porcinos. \n<br>Ceftiomax®, está formulado en base a Clorhidrato de Ceftiofur en suspensión oleosa lista para usar. El Ceftiofur es una cefalosporina de última generación y es de la familia de los betaláctamicos, diferenciándose de las penicilinas comunes por una cinética superior que hace que disponga de un espectro más amplio, se metaboliza en menor tiempo y no deja residuos en los tejidos comestibles y leche para uso humano. \n<br>El Ceftiofur posee la vida media de eliminación en plasma más larga conocida entre las Cefalosporinas, que le otorga a esta presentación, lista para usar, una prolongada acción frente a los principales organismos Gram negativos y positivos de los bovinos y porcinos. Su rápida eliminación de la leche permite su uso en ganado lechero en producción con descarte cero en leche. \n<br>Sin espera previa a la faena para el consumo humano. \n<br> \n<br>Las pruebas de Bioequivalencia son la forma mas eficaz de comparar biodisponibilidades de preparados supuestamente similares. En un estudio realizado por el Dr. Errecalde J. y Mestorino N.  de la Facultad de Cs. Veterinarias de La Plata llegaron a la conclusión que existe Bioequivalencia entre Ceftiomax y una formulación de Ceftiofur suspensión (Grafico 1), no encontrando diferencias en los parámetros de bioequivalencia ni en los parámetros que  evalúan la permanencia de la molécula en el organismo y la eliminación de la misma. \n<br>Esto nos permite resaltar las cualidades de CEFTIOMAX:  \n<br>• Alta Eficacia \n<br>• Practicidad en el uso \n<br>• Baja toxicidad \n<br>• Carencia de tiempo de retirada \n<br> ', 'prensa', 'es');
+(46, '2011-04-18', 'Biogénesis Bagó lanza al mercado Ceftiomax \n', 'Ceftiomax® (Clorihidrato de ceftiofur 5%). Un antibiótico de amplio espectro para bovinos y porcinos. Indicado para Enfermedades Respiratorias y tratamiento de Pietín en bovinos y las enfermedades respiratorias del Porcino.\n', '', 'Una nueva herramienta para los productores, ofreciendo un  producto seguro con tolerancia local excelente en Bovinos y Porcinos.\n<br>Ceftiomax®, está formulado en base a Clorhidrato de Ceftiofur en suspensión oleosa lista para usar. El Ceftiofur es una cefalosporina de última generación y es de la familia de los betaláctamicos, diferenciándose de las penicilinas comunes por una cinética superior que hace que disponga de un espectro más amplio, se metaboliza en menor tiempo y no deja residuos en los tejidos comestibles y leche para uso humano.\n<br>El Ceftiofur posee la vida media de eliminación en plasma más larga conocida entre las Cefalosporinas, que le otorga a esta presentación, lista para usar, una prolongada acción frente a los principales organismos Gram negativos y positivos de los bovinos y porcinos. Su rápida eliminación de la leche permite su uso en ganado lechero en producción con descarte cero en leche.\n<br>Sin espera previa a la faena para el consumo humano.\n<br>', 'prensa', 'es');
 INSERT INTO `tbl_notas` (`id`, `fecha`, `titulo`, `bajada`, `extra`, `texto`, `seccion`, `pais`) VALUES
+(47, '2011-04-15', 'Lanzamiento: Ceftiomax® \n', 'Biogénesis Bagó lanza al mercado Ceftiomax® (Clorihidrato de ceftiofur 5%). Un antibiótico de amplio espectro para bovinos y porcinos. Indicado para Enfermedades Respiratorias y tratamiento de Pietín en bovinos y las Enfermedades Respiratorias del Porcino. \nEstá indicado en las infecciones bacterianas más comunes causada por organismos Gram negativos y positivos. \n', '', 'Una nueva herramienta para los productores, ofreciendo un  producto seguro con tolerancia local excelente en Bovinos y Porcinos. \n<br>Ceftiomax®, está formulado en base a Clorhidrato de Ceftiofur en suspensión oleosa lista para usar. El Ceftiofur es una cefalosporina de última generación y es de la familia de los betaláctamicos, diferenciándose de las penicilinas comunes por una cinética superior que hace que disponga de un espectro más amplio, se metaboliza en menor tiempo y no deja residuos en los tejidos comestibles y leche para uso humano. \n<br>El Ceftiofur posee la vida media de eliminación en plasma más larga conocida entre las Cefalosporinas, que le otorga a esta presentación, lista para usar, una prolongada acción frente a los principales organismos Gram negativos y positivos de los bovinos y porcinos. Su rápida eliminación de la leche permite su uso en ganado lechero en producción con descarte cero en leche. \n<br>Sin espera previa a la faena para el consumo humano. \n<br> \n<br>Las pruebas de Bioequivalencia son la forma mas eficaz de comparar biodisponibilidades de preparados supuestamente similares. En un estudio realizado por el Dr. Errecalde J. y Mestorino N.  de la Facultad de Cs. Veterinarias de La Plata llegaron a la conclusión que existe Bioequivalencia entre Ceftiomax y una formulación de Ceftiofur suspensión (Grafico 1), no encontrando diferencias en los parámetros de bioequivalencia ni en los parámetros que  evalúan la permanencia de la molécula en el organismo y la eliminación de la misma. \n<br>Esto nos permite resaltar las cualidades de CEFTIOMAX:  \n<br>• Alta Eficacia \n<br>• Practicidad en el uso \n<br>• Baja toxicidad \n<br>• Carencia de tiempo de retirada \n<br> ', 'prensa', 'es'),
 (48, '2010-12-10', 'Biogénesis Bagó anunció los ganadores del Concurso para Periodistas \n', 'Creamos este concurso con el objetivo de difundir conceptos clave del sector agropecuario y reflejar el rol económico y social de la actividad, destacando el papel de los distintos actores de la cadena y para premiar el importante rol de los periodistas en este proceso, comentó Paola Ferrari, Gerente de Marketing de Biogénesis Bagó.\n', '', '<b>El ganador de la 2º etapa del Concurso para Periodistas. </b>\n<br>\n<br>El ganador de la mejor nota periodística sobre el rol económico y social de la actividad pecuaria, dirigida a los sectores no pecuarios, redactada a partir de los conceptos investigados en el período previo del concurso, fue el periodista Fernando Bertello de LA NACION, Suplemento Campo. \n<br>\n<br>La nota fue elegida por un Jurado compuesto por el Ing. Agr. Marcelo Regúnaga de la Unidad de Agronegocios e Industria Alimenticia del Centro de Educación Empresaria de la Universidad de San Andrés; el Ing. Daniel Rearte del INTA; Rafael Llorente de CREA; el Ing. Agr. Alberto De Las Carreras de la Academia de Agronomía y Veterinaria; el Ing. Agr. Alejandro Lotti de la Subsecretaría de Ganadería y Carlos Curci González del Círculo Argentino de El Concurso “Viva la Ganadería, juntos por más terneros”, del que participaron más de 100 periodistas de todo el país, tuvo el objetivo de difundir conceptos clave del sector agropecuario y reflejar el rol económico y social de la actividad, destacando el papel de los distintos actores de la cadena. \n<br>\n<br><b>Nota Ganadora: </b>\n<br>La ganadería, el pulmón que hace respirar a todo un pueblo. \n<br>\n<br>En Rauch, una ciudad bonaerense de 14 mil habitantes, se refleja a escala local la importancia que tiene la actividad a nivel nacional Por Fernando Bertello \n<br>\n<br>En Rauch, una ciudad de 14.000 habitantes ubicada a 300 kilómetros al centro sur de Buenos Aires, la ganadería es el pulmón del pueblo. En Rauch hay olor y gusto a ganadería por todas partes. Es que alrededor de esta actividad se estructura su vida económica y social. Enclavado en la Cuenca del Salado, con sus 430 mil hectáreas Rauch es un partido criador por excelencia. \n<br>\n<br>Es un fuerte productor de terneros, el primer eslabón que recorre la cadena cárnica en el largo camino hasta el bife. \n<br>\n<br>Una serie de datos, por demás contundentes, permiten trazar un paralelismo, aunque a una escala más chica, con lo que ocurre a nivel nacional con el impacto de la ganadería. Es decir, se puede trazar una cierta comparación entre Rauch y la realidad pecuaria nacional. \n<br>\n<br>Según un trabajo realizado sobre las cadenas agroindustriales por Marcelo Regúnaga, Hugo Cetrángolo y Gustavo Mozeris, de la Unidad de Agronegocios e Industria Alimenticia del Centro de Educación Empresaria de la Universidad de San Andrés, la actividad pecuaria se caracteriza por su atomización y por una fuerte participación de pymes. De hecho, según datos a 2010 del Servicio Nacional de Sanidad y Calidad Agroalimentaria (Senasa), hay en el país 210 mil establecimientos con ganado bovino. \n<br>\n<br>En Rauch, de acuerdo a los últimos datos de vacunación de la campaña antiaftosa, provistos por la Sociedad Rural de esa ciudad, este año se contabilizan 998 establecimientos y 1226 productores. Son datos que reflejan una caída respecto de lo que ocurría en 2007 y que tendría su explicación en la crisis de los últimos años de la actividad. En rigor, en 2007 allí se contabilizaban 1031 establecimientos y 1321 productores. \n<br>\n<br>En esta ciudad también se puede observar una fuerte participación de las pymes en la actividad. A modo de ejemplo, entre otro datos, aquí hay 103 establecimientos que tienen entre 1 y 50 animales; 120 con un rango de 51 a 100; 191 con de 101 a 200 animales y 310 establecimientos que poseen entre 201 y 500 vacunos. Sobre los 1031 establecimiento que hay en total, sólo hay 101 que tienen más de 1000 animales en sus explotaciones. \n<br>\n<br>Como se ve, es una actividad con fuerte predominio de establecimientos de chicos a medianos. “Hoy el promedio de cabezas por productor es de 367; se trata de productores medianos”, dijo José Luis Etchanchú, ex presidente de la Sociedad Rural de Rauch. \n<br>\n<br>Rauch cuenta hoy con un rodeo total de 449.908 vacunos. Se trata de una cifra 16% menor al stock de 2007, cuando se contabilizaban, según los datos de vacunación de ese entonces, 522.926 cabezas. \n<br>\n<br>Mientras tanto, a nivel nacional el stock vacuno asciende a 48,9 millones de cabezas, según datos del Senasa. Esa cifra significa una merma del 15% del stock en los últimos dos años, ocasionada por la liquidación de hacienda por los bajos precios y la sequía. Con este número, el stock nacional volvió al nivel de 2001 y hoy hay casi una cabeza vacuna por habitante, cuando a mediados de los sesenta la relación era 2,2 cabezas por habitante. \n<br>\n<br>¿Cuántas personas sobre los 14 mil habitantes del pueblo de Rauch están vinculadas de manera directa o indirecta con la actividad ganadera? \n<br>Según el trabajo de Regúnaga, Cetrángolo y Mozeris, a nivel país la cadena pecuaria emplea a más de 364 mil personas en forma directa en las etapas primaria y de procesamientos de carnes, lácteos y curtidos de cueros. \n<br>\n<br>Además, contando la comercialización esa cifra trepa a los 763.000 puestos de trabajo. Pero el círculo no termina allí: según la investigación, sumando el rubro de provisión de insumos el empleo total asciende a un millón de puestos de trabajo. “Esto es el 6,4% del total de ocupados del país”, dice un comunicado de Biogénesis Bagó sobre los alcances del trabajo de esos especialistas. \n<br>\n<br>Para comparar con otra actividad, la industria automotriz a 2008 ocupaba 26 mil personas en forma directa en las terminales y 48 mil en las empresas autopartistas. Se trata, en total, de menos de la cuarta parte del empleo directo motorizado por las cadenas de carnes y lácteos sin contar el rubro curtiembres. Es un dato del Ministerio de Industria que aparece en el trabajo de investigación que difundió Biogénesis Bagó. \n<br>\n<br>En Rauch dicen que “la gran mayoría en forma directa o indirecta” de sus habitantes tiene una vinculación laboral con el campo. “La ganadería es la base principal del sostén de esta ciudad”, afirman desde la Rural local. \n<br>En efecto, sin fábricas industriales de gran calibre, allí estiman que el peso que la actividad tiene en la economía del pueblo ronda el 90%, “por ser una zona netamente ganadera”. \n<br>En esta ciudad hay 10 casas veterinarias, 6 feedlots declarados ante el \n<br>Senasa, 4 consignatarias que realizan remates en forma mensual y 8 firmas particulares que funcionan como representantes en esta actividad de otras empresas. \n<br>\n<br>Repercusión de prensa: \n<br>Arturo Romero, un veterinario que tras participar activamente como autoconvocado en el conflicto del campo con el Gobierno en 2008 saltó a la política local y fue electo concejal el año pasado, aportó más datos sobre la importancia de esta actividad en Rauch. \n<br>\n<br>Según dijo, además de las 10 casas veterinarias, son 27 los veterinarios que allí están desempeñando su actividad profesional. “Gente vinculada directa o indirectamente somos todos. Todos nosotros, médicos, abogados, almaceneros, peluqueros, carniceros, panaderos vivimos del campo y lo sabemos porque cuando el campo anda mal se reduce la actividad en más del 60%”, comentó. \n<br>\n<br>Para Romero, sin contar los empleos indirectos, al menos el 35% de la masa laboral está ligada a esta actividad. “Este distrito vive gracias al campo; no existe otra actividad que genere ingresos de divisas en forma genuinas que se quedan en nuestro partido”, afirmó. \n<br>\n<br>Por qué ganadería: \n<br>Más datos ayudan a comprender la importancia de la actividad en este pueblo que tiene un 80% de superficie ganadera y 20% exclusivamente agrícola. \n<br>\n<br>¿Qué significa esto? En materia de agricultura, las ventas de cereales y granos oleaginosos en Rauch significan a valores actuales un aporte de 166 millones de pesos a la economía local. \n<br>Por el contrario, según comentó Romero a partir de los datos de esa ciudad, la actividad ganadera representa una inyección de dinero más importante. Concretamente, las ventas anuales de hacienda totalizan a precios actuales 671,5 millones de pesos por año. \n<br>\n<br>Si se compara con el presupuesto municipal, que es de 35 millones de pesos, esa cifra de ventas ganaderas equivale a 19 veces el presupuesto municipal. \n<br>\n<br>Sólo para citar una categoría de hacienda, la venta de terneros, que asciende a unos 200 mil animales por año, mueve 240 millones de pesos. La soja, en tanto, aquí significa 77,2 millones de pesos. \n<br>\n<br>Para recordar con lo que ocurre a nivel nacional, según el trabajo de Regúnaga, Cetrángolo y Mozeris el sector pecuario (carnes, lácteos, fiambres y alimentos de origen) es el segundo en el valor de la producción, luego de la cadena de granos oleaginosos, con un monto de 14.800 millones de dólares a 2009. \n<br>\n<br>Por lo que se ve en Rauch, con sus ventas por 671,5 millones de pesos la ganadería ocupa el primer lugar del podio en este pueblo. \n<br>\n<br>Pero, además de la importancia por las ventas que genera en Rauch, la actividad aporta mucho en impuestos a la economía. Sólo por tasa rural, guías y señales contribuye con 8 millones de pesos por año.', 'prensa', 'es'),
 (49, '2010-12-03', 'Lanzamiento de Viba \n', 'Biogénesis Bagó, por un bicentenario productivo. Considerando la situación actual de la ganadería, y con el fin de contribuir a producir más terneros para el país, Biogénesis Bagó, una compañía de biotecnología de alcance nacional, regional e internacional con más de 70 años de trayectoria, presenta su planta para la producción de vacunas virales y bacterianas (ViBa) y lanza el slogan “Juntos por más terneros”, que se desarrolla en el marco de la campaña VIVA LA GANADERÍA, invocando a un bicentenario más productivo.\n', '', 'Ante un escenario de caída del stock vacuno (según la RIAN -Red de Información Agropecuaria Nacional, el total de cabezas de la actualidad es de 50.800 millones vs. 55.429 del 2009) y falta de vientres (en 2010 se registraron 21.100.00, en 2009 22.5 millones y en 2007 24 millones), la sanidad representa un factor clave para poder producir más terneros. \n<br>\n<br>“Hoy el desafío es aumentar la producción de terneros, con las vacas disponibles, o sea, ser más eficientes en los índices de destete. Esto se puede lograr trabajando juntos los veterinarios, productores e ingenieros agrónomos; aplicando tecnología en todos los órdenes. \n<br>\n<br>Nuestro nuevo slogan `Juntos por más terneros’, la campaña VIVA LA GANADERÍA y la inversión en esta nueva planta, son aportes concretos para seguir poniendo a disposición del médico veterinario y productor pecuario la tecnología sanitaria necesaria para lograr una mayor producción animal”. \n<br>\n<br>Según CAPROVE, Cámara Argentina de la Industria de Productos Veterinarios, a través de la sanidad, evitando pérdidas por enfermedades y manteniendo el mismo stock de madres, se puede lograr un incremento de la tasa de extracción de 4 puntos (del 25 al 29%) y aumentar 10 puntos el índice de destete (pasar del 60 actual – 2008- al 70 %), para producir los 3.000.000 de terneros más necesarios para cubrir la creciente demanda interna y externa de carne.\n<br>\n<br>En ese importante acto visitó la planta  La Presidente Cristina Fernández quien estuvo acompañada por directivos y autoridades gubernamentales, entre los que podemos destacar a los accionistas de Biogénesis-Bagó, Dr. Hugo Sigman y Señora; Dr. Juan Carlos Bagó y el Lic. Sebastian Bagó; el gobernador bonaerense, Daniel Scioli; el intendente de Escobar, Sandro Guzmán; el Ministro de Salud, Juan Manzur; el Ministro de Agricultura, Ganadería y Pesca, Julián Domínguez y el Ministro de Ciencia,  Tecnología e Innovación Productiva, Dr. José Lino Barañao.\n<br>\n<br>Con una inversión de 15.000.000 millones de dólares, la nueva planta cuenta con una superficie de 15.000 metros cuadrados, con la más alta tecnología y estándares de calidad internacionales, donde se puede manejar un volumen de producción de 100 millones de dosis multivalentes por año, para la prevención de enfermedades virales y bacterianas. “Esta planta nos permite aumentar la capacidad de producción, ofrecer más productos con valor agregado para mejorar la productividad animal, mantener el liderazgo en Argentina y consolidarnos en la región”, agregó el Dr. Alejandro Gil, Director General de Biogénesis Bagó.', 'prensa', 'es'),
 (50, '2010-12-01', 'Fundación Exportar \n', 'Biogénesis Bagó premiada por ser el mayor exportador veterinario.\n', '', 'Buenos Aires, diciembre de 2010. La compañía de biotecnología Biogénesis-Bagó fue premiada esta semana por Fundación Exportar por ser líder en la exportación de productos veterinarios argentinos hacia el mundo. \n<br><br>\nSe trata del mayor exportador del país en este rubro. En 2010, Argentina exportará productos veterinarios por un total de 99 millones de dólares, de los cuales 27,5 millones corresponden a Biogénesis-Bagó. \n<br><br>\nDesde hace más de 20 años, la compañía exporta productos veterinarios a países ganaderos de la región y el mundo como Brasil, México, Uruguay, Bolivia, Chile, Colombia, Costa Rica, Ecuador, Paraguay, Perú, Venezuela, Taiwán, Sudáfrica, los Países Árabes y Rusia, entre otros. Además, es proveedor del Banco Norteamericano de Antígeno y Vacunas contra la Fiebre Aftosa (NAFMDVB). “Este premio demuestra que las inversiones de largo plazo en el país con máxima tecnología tienen una proyección hacia los mercados del mundo”, aseguró Hugo Sigman, CEO del Grupo Insud y accionista de Biogénesis- Bagó junto a las familias Bagó y Gold. \n<br><br>\nEn la ceremonia, realizada el 21 de diciembre en el Palacio San Martín, estuvieron presentes el Ministro de Relaciones Exteriores, Comercio Internacional y Culto, Héctor Timerman, el Subsecretario de Comercio Internacional, Ariel Schale, el Secretario de Comercio Internacional, Luis María Kreckler, y el Presidente del Consejo de la Fundación Export.Ar, Miguel Acevedo, entre otras autoridades. Los Premios Exportar reconocen públicamente los esfuerzos y logros de las empresas argentinas  por la  inserción de sus productos en el mercado internacional incentivando, entre otros,  el crecimiento, la generación de empleo genuino y la diversificación de las exportaciones y mercados. \n', 'prensa', 'es'),
@@ -927,12 +931,12 @@ INSERT INTO `tbl_notas` (`id`, `fecha`, `titulo`, `bajada`, `extra`, `texto`, `s
 (67, '2009-10-02', 'Lanzamiento Desmopresina Biogénesis Bagó \n', 'El día 10 de septiembre se lanzó Desmopresina Biogénesis Bagó, una solución inyectable hemostática perioperatoria para el tratamiento del cáncer de mama en hembras caninas.\n', '', 'El día 10 de septiembre de 2009, con la presencia del Ministro de Ciencia, Tecnología e Innovación Productiva, Dr. José Lino Barañao, y de más de 250 profesionales veterinarios especializados en animales de compa, Biogénesis Bagó lanzó Desmopresina Biogénesis Bagó. Se trata de una solución inyectable hemostática perioperatoria para el tratamiento del cáncer de mama en hembras caninas que, aplicada antes y después de una mastectomía, reduce el riesgo de metástasis, prolongando la sobrevida del animal. Este nuevo producto es el resultado del trabajo conjunto de investigación y desarrollo de Biogénesis Bagó con la Universidad de Quilmes y la empresa Romikin.\n<br>\n<br>"Este lanzamiento representa nuestra apuesta al desarrollo del segmento de animales de compañía y refleja, a su vez, el trabajo de investigación que realizamos permanentemente con entidades científicas, académicas y privadas en pos de mejorar la sanidad animal y la calidad de vida de nuestras mascotas”, comentó Esteban Turic, Gerente Técnico de Planeamiento Estratégico de Biogénesis Bagó.\n<br>\n<br>La Desmopresina es un análogo sintético de la hormona antidiurética vasopresina. Ha sido empleada en animales con Diabetes Insipidus y en ciertos desórdenes sanguíneos, siendo un agente hemostático seguro y efectivo en cirugías de alto riesgo de sangrado. En numerosos ensayos realizados con Desmopresina Biogénesis Bagó en hembras caninas, con tumores mamarios, se han demostrado propiedades antitumorales significativas al ser aplicada por vía endovenosa como adyuvante perioperatorio durante la extirpación de la masa tumoral.', 'prensa', 'es'),
 (68, '2009-10-02', 'Gira Lanzamiento Arrasa Ovinos \n', '', '', 'La gira se realizó en las ciudades de Comodoro Rivadavia, Esquel, Río Gallegos y Trelew.', 'prensa', 'es'),
 (69, '2009-06-27', 'Biogénesis Bagó presente en la Conferencia Global sobre la Fiebre Aftosa \n', 'Del 21 al 26 de junio, Biogénesis Bagó estuvo presente en la Conferencia Global sobre la Fiebre Aftosa:', '', 'Hacia el control de la enfermedad a nivel mundial, la cual se llevo a cabo en el Hotel Resort Casino yacht y Golf Club Paraguayo de la ciudad de Asuncion de Paraguay. <br>\n<br>\nLa misma conto con la particiación de más de 500 personas entre representantes de la OIE/FAO, organizaciones internacionales socias, donantes mundiales clave, entidades gubernamentales y no gubernamentales.<br>\n<br>', 'prensa', 'es'),
-(70, '2009-05-14', 'Biogénesis Bagó concretó la primera exportación de antígenos \n', 'Biogénesis Bagó concretó la primera exportación de antígenos\nEl día 28 de abril de este año, Biogénesis Bagó realizó la primera exportación de gran escala de antígenos concentrados hacia el Banco Norteamericano de Anfígeno y Vacunas contra la Fiebre Aftosa (NAFMDVB) después de aprobar controles de seguridad, pureza y potencia frente al desafío con virus activo, realizados en EEUU.\n', '', 'Éste es el primer embarque solicitado  en la licitación de este banco.\n<br>\n<br>Estos antígenos concentrados quedarán en custodia en Plum Island, EEUU. En caso de existir un brote de aftosa en cualquiera de los países que conforman el Banco (EEUU, México o Canadá) serán remitidos a Biogénesis Bagó para la formulación de la vacuna , que deberá ser enviada en un plazo no mayor a las 72 horas.\n<br>\n<br>En Septiembre del año 2006,  Biogénesis Bagó  fue adjudicatario de la licitación Internacional, para proveer al Banco Norteamericano de Antígenos y Vacunas contra la Fiebre Aftosa NAFMDVB (North American Foot – and - Mouth Disease Vaccine Bank), de EEUU, México y Canadá.\n<br>\n<br>Este gran logro, resultado de años de trabajo  de científicos locales, pone  a la Argentina a la vanguardia de América Latina, además de significar un reconocimiento a las autoridades sanitarias, ya que el  SENASA tuvo un rol fundamental  al dar las garantías suficientes, para que un producto elaborado en la Argentina, pudiera ser utilizado en los países de Norteamérica. \n<br>\n<br>Biogénesis Bagó, refuerza una vez mas su compromiso para erradicar la Fiebre Aftosa, invirtiendo recursos en tecnología aplicada a este fin, empleando mano de obra local y trabajando con los mejores especialistas en la materia a nivel mundial, con el objetivo de poner a disposición de las autoridades sanitarias y ganaderos un producto de excelencia, reconocido por los centros de investigación y servicios oficiales de salud animal  mas exigentes del mundo.', 'prensa', 'es'),
+(70, '2009-05-14', 'Biogénesis Bagó concretó la primera exportación de antígenos \n', 'Biogénesis Bagó concretó la primera exportación de antígenos\nEl día 28 de abril de este año, Biogénesis Bagó realizó la primera exportación de gran escala de antígenos concentrados hacia el Banco Norteamericano de Anfígeno y Vacunas contra la Fiebre Aftosa (NAFMDVB) después de aprobar controles de seguridad, pureza y potencia frente al desafío con virus activo, realizados en EEUU.\n', '', 'Éste es el primer embarque solicitado  en la licitación de este banco.\n<br>\n<br>Estos antígenos concentrados quedarán en custodia en Plum Island, EEUU. En caso de existir un brote de aftosa en cualquiera de los países que conforman el Banco (EEUU, México o Canadá) serán remitidos a Biogénesis Bagó para la formulación de la vacuna , que deberá ser enviada en un plazo no mayor a las 72 horas.\n<br>\n<br>En Septiembre del año 2006,  Biogénesis Bagó  fue adjudicatario de la licitación Internacional, para proveer al Banco Norteamericano de Antígenos y Vacunas contra la Fiebre Aftosa NAFMDVB (North American Foot – and - Mouth Disease Vaccine Bank), de EEUU, México y Canadá.\n<br>\n<br>Este gran logro, resultado de años de trabajo  de científicos locales, pone  a la Argentina a la vanguardia de América Latina, además de significar un reconocimiento a las autoridades sanitarias, ya que el  SENASA tuvo un rol fundamental  al dar las garantías suficientes, para que un producto elaborado en la Argentina, pudiera ser utilizado en los países de Norteamérica. \n<br>\n<br>Biogénesis Bagó, refuerza una vez mas su compromiso para erradicar la Fiebre Aftosa, invirtiendo recursos en tecnología aplicada a este fin, empleando mano de obra local y trabajando con los mejores especialistas en la materia a nivel mundial, con el objetivo de poner a disposición de las autoridades sanitarias y ganaderos un producto de excelencia, reconocido por los centros de investigación y servicios oficiales de salud animal  mas exigentes del mundo.', 'prensa', 'es');
+INSERT INTO `tbl_notas` (`id`, `fecha`, `titulo`, `bajada`, `extra`, `texto`, `seccion`, `pais`) VALUES
 (71, '2008-12-10', 'Ultimo encuentro del Programa UniTe', 'Finalizó con gran éxito el primer año del Programa UniTe - Universidad y Tecnología.', '', 'Con la presencia de 60 alumnos de las facultades de veterinaria de ls UBA, La Plata, Esperanza, La Pampa, Centro de la Pcia. de Bs. As., Corrientes y Casilda, se llevó a cabo el último encuentro del Programa UniTe - Universidad y Tecnología. ´La etapa final se desarrolló en las instalaciones del Laboratorio Biogénesis Bagó, donde los alumnos contaron con charlas brindadas por profesionales y una visita guiada por toda la planta de este laboratorio.\n<br>\n<br>El programa contó con 4 etapas, la 1º y la 2º fue en las instalaciones de cada facultad, donde se presentó el temario de actividades y hubo diferentes charlas de profesionales del sector. La 3º etapa se desarrollo en el marco de la Exposición de Palermo 2008 con gran participación de los estudiantes.\n<br>\n<br>Ya esta previsto para el 2009, continuar con la 2º edición del programa.', 'prensa', 'es'),
 (72, '2008-10-21', 'Biogénesis Bagó presente en el 31º Congreso de Producción Animal', 'Organizado por AAPA (Asociación Argentina de Producción Animal), se llevó a cabo el 31º Congreso de Producción Animal - Potrero de los Funes.\n', '', 'El mismo tuvo lugar en el Hotel Internacional de dicha ciudad en la Pcia. de San Luis y contó con la presencia de 550 asistentes, superando apliamente su anterior edición. \n<br><br>\nBiogénesis Bagó estuvo presente con un stand donde veterinarios del laboratorio respondian a las dudas de los interesados en su amplia línea de productos.<br>', 'prensa', 'es'),
 (73, '2008-05-30', 'UniTe - Universidad y Tecnología \n', 'Finalizó con éxito la 1º Etapa del Programa UniTe para alumnos del ultimo año de la carrera de Cs. veterinarias.', '', 'Tras la última jornada llevada a cabo en la Facultad de Ciencias Veterinarias - Universidad Nordeste de la ciudad de Corrientes, finalizó con éxito la 1º etapa del programa UniTe - Universidad y Tecnología. \n<br><br>\nUniTe, programa que consiste en vincular alumnos de facultades de ciencias veterinarias, médicos veterinarios, productores ganaderos y Biogénesis Bagó, consta de tres etapas, donde en la primera, que se desarrolló en las facultades de ciencias veterinarias de Buenos Aires, La Plata, Tandil, Río Cuarto, Gral. Pico, Casilda, Esperanza y por último Corrientes, los estudiantes del último año de esta carrera participaron de una jornada - taller con participación de veterinarios de la actividad privada referentes de cada zona, un productor de la zona de influencia que cuente con un asesoramiento veterinario permanente y asesores técnicos de BIOGÉNESIS BAGÓ, se trataron temas como: La situacion actual y proyección futura de la ganadería de carne y leche; y Que esperamos los productores de nuestro asesor veterinario, etc.', 'prensa', 'es'),
-(74, '2008-05-30', 'Lanzamiento de Suplenut', 'Durante los meses de abril y mayo, en las ciudades de Mar del Plata y Santa Fe respectivamente, se llevó a cabo la presentación de un nuevo producto desarrollado por Biogénesis Bagó.', '', 'Suplenut, producto para revertir la carencia de cobre y zinc de cada rodeo.\n<br>\n<br>Con la participación como disertantes de Guillermo Mattiolli, MV egresado de Universidad de La Plata, director del Laboratorio de Butricion Mineral de Fisiología Reproductiva de la Facultad de Cs. Veterinarias (UNLP) y de Esteban Turic, MV y Jefe de Investigación y Desarrollo del Laboratorio Biogénesis Bagó.\n<br>\n<br>Ambas reuniones tuvieron gran convocatoria entre e los veterinarios de cada zona, quienes tuvieron un rol muy participativos en las mismas. Al finalizar la disertacion de los profesionales se formaron mesas redondas donde los veterinarios contestaban un cuestionario a modo de taller.          ', 'prensa', 'es');
-INSERT INTO `tbl_notas` (`id`, `fecha`, `titulo`, `bajada`, `extra`, `texto`, `seccion`, `pais`) VALUES
+(74, '2008-05-30', 'Lanzamiento de Suplenut', 'Durante los meses de abril y mayo, en las ciudades de Mar del Plata y Santa Fe respectivamente, se llevó a cabo la presentación de un nuevo producto desarrollado por Biogénesis Bagó.', '', 'Suplenut, producto para revertir la carencia de cobre y zinc de cada rodeo.\n<br>\n<br>Con la participación como disertantes de Guillermo Mattiolli, MV egresado de Universidad de La Plata, director del Laboratorio de Butricion Mineral de Fisiología Reproductiva de la Facultad de Cs. Veterinarias (UNLP) y de Esteban Turic, MV y Jefe de Investigación y Desarrollo del Laboratorio Biogénesis Bagó.\n<br>\n<br>Ambas reuniones tuvieron gran convocatoria entre e los veterinarios de cada zona, quienes tuvieron un rol muy participativos en las mismas. Al finalizar la disertacion de los profesionales se formaron mesas redondas donde los veterinarios contestaban un cuestionario a modo de taller.          ', 'prensa', 'es'),
 (75, '2008-01-09', 'Curso en Reproducción e Inseminación Artificial en Goyaike \n', 'Realizado por Biogénesis Bagó junto al Centro de Biotecnología de la Reproducción Goyaike.', '', 'Durante los meses de enero, febrero y marzo de 2008 Biogénesis Bagó junto al Centro de Biotecnología de la Reproducción Goyaike, ofrece a veterinarios y usuarios del dispositivo Cronipres de todo el país el Curso Práctico de Ultrasonografía Transrectal del Tracto Reproductivo Bovino y el Curso en Inseminación Artificial a Tiempo Fijo en la ciudad bonaerense de  Carmen de Areco.\n<br>\n<br>A través de módulos teóricos y prácticos, los cursos – de una duración de tres días consecutivos- buscan capacitar a cerca de 50 profesionales en el área reproductiva, en la correcta utilización del ecógrafo logrando conocer el sexado del feto, diagnósticos de preñez temprana y reconocimiento de estructuras ováricas, entre otras cosas.\n<br>\n<br>El curso es dictado en la Estancia San Joaquín y participan, por parte de Biogénesis Bagó, los médicos veterinarios Matias Nardello, Sebastián Crudeli, Carolina Werthein, Jesús Pesoa, Gustavo Lagioia, y Guillermo Cledou.', 'prensa', 'es'),
 (76, '2007-12-26', 'Sorteo Final de la Promoción de Bovifort y Bagomectina AD3E Forte', 'El día 14 de Diciembre se realizó el sorteo de la Promoción: Con Bovifort y Bagomectina AD3E Forte, la mejor fórmula te lleva a la Formula 1, por tres viajes a ver el Gran Premio de España de Formula 1 que se correrá en Barcelona el día 27 de abril de 2008.', '', 'El día 14 de Diciembre se realizó el sorteo de la Promoción: Con Bovifort y Bagomectina AD3E Forte, la mejor fórmula te lleva a la Formula 1, por tres viajes a ver el Gran Premio de España de Formula 1 que se correrá en Barcelona el día 27 de abril de 2008.\n<br>\n<br>Los cupones para el sorteo venían con los frascos de 500 ml de Bovifort y Bagomectina AD3E Forte, junto con una raspadita que otorgaba premios instantáneos que consistieron en Jarros térmicos, chombas de competición, relojes digitales, relojes pulsera, paraguas de competición, camisas Formula 1, sillas Outdoor Spinning y frascos x 50 ml de Bovifort y Bagomectina AD3E Forte.. \n<br>\n<br>Los ganadores de los viajes al GP de España son: Guillermo Tanco, Medico Veterinario de Coronel Suárez - Provincia de Buenos Aires y Ariel Aguirre, administrador de un establecimiento en Camarones - Provincia de Chubut, quien viajará con un acompañante.\n<br>\n<br>Bovifort y Bagomectina AD3E Forte son endectocidas de la línea de productos de Biogenesis Bagó. Los dos son productos de elección para grandes desafíos parasitarios como garrapatas, sarna, piojos parásitos internos de Bovinos y Ovinos y en el caso de la Bagomectina AD3E Forte, el agregado de vitaminas, optimiza la producción de carne, leche y lana. \n<br>\n<br>Bovifort y Bagomectina AD3E Forte son de Biogénesis Bagó, Para un Trabajo Bien Hecho.', 'prensa', 'es'),
 (77, '2007-11-08', 'Planta de Vacuna Antiaftosa', 'Biogénesis Bagó concretó importantes obras de ampliación y expansión tecnológica. \n', '', 'La empresa Biogénesis Bagó anunció la concreción de obras de actualización y expasión tecnológica en los sistemas de boseguridad y producción, en su planta elaboradora de vacuna antiaftosa.\n<br><br>\n La obra, que se terminó en un año, permitirá al laboratorio operar con la tecnología mas avanzada a nivel mundial en materia de Bioseguridad, constituyendo un aporte sustancial e indispensable para la seguridad y garantía sanitaria del país y la región. \n<br><br>\nLa planta ha sido tecnificada y actualizada en forma periódica, acorde la evolución y exigencias mundiales, tecnología de producción y tecnología para la bioseguridad. De hecho, en los años 2002, 2003 y 2004, se actualizaron las áreas de purificación y cuarentena, medios de cultivos y envases respectivamente. \n<br><br>\nLas actualizaciones realizadas. \nCon esta nueva actualización se instalo tecnología de punta en todos los sistemas de bioseguridad, instrumentación, tratamiento de efluentes, software, automatismos, tratamiento de aire, nuevo equipamiento y se construyó un nuevo laboratorio de control de calidad. \n<br><br>\nEn lo inherente a bioseguridad se destacan los nuevos sistemas de persianas neumáticas de origen alemán que dan hermeticidad absoluta e instantánea a los sistemas de aire ante cualquier falla. ', 'prensa', 'es'),
@@ -983,7 +987,9 @@ INSERT INTO `tbl_notas` (`id`, `fecha`, `titulo`, `bajada`, `extra`, `texto`, `s
 INSERT INTO `tbl_notas` (`id`, `fecha`, `titulo`, `bajada`, `extra`, `texto`, `seccion`, `pais`) VALUES
 (122, '2016-04-01', 'Las enfermedades respiratorias hay que prevenirlas', 'En nuestro país por las características de producción de carne   en esta época del año, se lleva adelante el destete de gran parte   de los terneros que nacieron en la primavera pasada.', '', '<h2>INTRODUCCIÓN</h2>\n\n<p>En nuestro país por las características de producción de carne \n\nen esta época del año, se lleva adelante el destete de gran parte \n\nde los terneros que nacieron en la primavera pasada. Toda esa \n\nproducción que alcanza una suma de 11 millones de terneros \n\naproximadamente a nivel país, ingresa a las Invernadas\n\npastoriles con o sin suplementación y una gran parte entra en el \n\nproceso de engorde a corral (Feed lot) con ciclos más cortos \n\nllegando antes al peso de faena.<br />\n\nPor la época del año, con una mayor predisposición a las lluvias, \n\nlas noches frías y los días con altas temperaturas provoca un \n\nestrés en los animales que favorece la aparición de algunas \n\nenfermedades características de la edad y la época del año. <br />\n\nSumado a esto, la interrupción madre-ternero, conocido como \n\nDestete incrementa las causas de aparición de Enfermedades \n\nEstacionales.<br /> </p>\n\n<h2>SÍNDROME RESPIRATORIO</h2>\n\n<p>Dentro de las enfermedades que afectan a los bovinos desde los \n\nprimeros meses de vida hasta los 2 años de edad, se encuentra \n\nel Síndrome Respiratorio (S.R) también llamada Enfermedad \n\nRespiratoria Bovina, que se presenta en animales que son \n\nsometidos a una situación de estrés, producidos por cambios de \n\nmanejo como ser el destete, encierre en corrales \n\n(hacinamiento), cambios climáticos, transporte, etc, provocando \n\nuna alta morbilidad y alta mortalidad. Esto se traduce en una \n\npérdida de animales y de kilos debido a que el cuadro persiste \n\npor varios días y los animales enfermos nunca llegan a \n\nrecuperarse totalmente. El pico de incidencia de enfermedades\n\nrespiratorias se presenta entre 1 y 3 semanas de la llegada de \n\nlos terneros a los campos de invernada o feedlot. La morbilidad \n\nvaría entre el 15 y el 45 % y la mortalidad entre el 1 y el 5%.\n\nEl Síndrome Respiratorio se caracteriza clínicamente por la \n\npresencia de disnea, tos, secreción nasal, depresión, anorexia, \n\nfiebre y una respuesta variable al tratamiento. Como signo inicial \n\ndel proceso se pueden producir algunas muertes repentinas \n\nobservándose a la necropsia lesiones en el tracto respiratorio.<br /> \n\nLa combinación de una infección viral, sobre todo por HerpesVirus\n\nBovino 1 (BHV1, virus de la IBR o Rinotraqueítis InfecciosaBovina),\n\nvirus de la Diarrea Vírica Bovina (DVB) o el virus de Parainfluenza 3\n\n(PI-3) (que barren con las defensas primarias y producen un estado\n\nde inmunosupresión), con factores estresantes como el transporte,\n\ndestete, fluctuaciones bruscas de temperatura ambiental, la mezcla\n\nde animales de diferente procedencia, etc. hacen que bacterias\n\ncomo la Pasteurella haemolitica (Mannheimia haemolytica), P.\n\nmultocida o el Haemophilus somnus (Histophilus somni) se\n\nincrementan en número y en virulencia e invadan áreas del tracto\n\nrespiratorioinferioryeliminantoxinascausandobronconeumonía.<br /> </p>\n\n<h2>LAS CATEGORÍAS MÁS EXPUESTAS SON</h2>\n<p>\n• Terneros al pie hasta novillitos y vaquillonas de 2 años y en \n\ntodas las regiones de nuestro país, constituyendo su prevención \n\ny control, una de los principales precauciones a tener en cuenta a la \n\nhora de realizar una ganadería intensiva.<br />\n\n• Terneros de Destete.<br />\n\n• Ingreso a Invernadas o Feedlot.<br />\n</p>\n<h2>AGENTES CAUSALES</h2>\n\n<p>El agente causal de neumonía más frecuente es Pasteurella haemolitica (Mannheimia haemolytica) siendo Pasteurella \n\nmultocida causa ocasional de esta enfermedad respiratoria. Estas bacterias son la causa final de la neumonía, y pudiendo \n\nlos virus tener un efecto sinérgico que estimule la patogenicidad de las bacterias. Cuando se expone al animal a la acción de \n\nlos virus y/o, a los cambios de manejo, se puede producir una colonización explosiva de las Pasteurellas en el tracto \n\nrespiratorio superior y utilizando factores de virulencia como las fimbrias y la cápsula descienden hasta el tracto inferior. Una \n\nvez colonizado el pulmón, es allí en donde produce lesión del tejido a través de endotoxinas (lipopolisacarido) y exotoxinas \n\n(leucotoxinas), llevando esto al edema pulmonar, necrosis, hipoxia y shock endotóxico seguido de muerte.\n\nEl Haemophilus somnus (Histophilus somni), es un patógeno que se aísla cada vez con más frecuencia de animales \n\nafectados por neumonías. Su capacidad de adherencia a los distintos tejidos, hace que pueda colonizar tanto el tracto \n\nrespiratorio superior, produciendo laringitis y traqueítis, como el tracto respiratorio inferior en donde bloquea los capilares \n\nalveolares e interrumpe el flujo sanguíneo, provocando la muerte celular. El virus de la IBR infecta la cavidad nasal y el tracto \n\nrespiratorio superior, provocando rinitis, laringitis y traqueítis. Existe una gran pérdida de cilios en la tráquea que causan \n\nefectos adversos sobre los mecanismos de defensa del tracto respiratorio. Probablemente se produzca una diseminación \n\ndel virus desde la cavidad nasal a los tejidos oculares a través del tejido lagrimal, causando conjuntivitis con edema de \n\npárpado y tumefacción de la conjuntiva, formación de numerosas placas sobre la conjuntiva, edema corneal periférico y una \n\nvascularización profunda; por lo tanto es común observar animales con sintomatología clínica ocular previamente a la \n\nenfermedad respiratoria. El BVDv tiene un rol particular en el S.R, provocando una inmunosupresión (alteración de linfocitos, \n\nmacrófagos y neutrófilos) que predispone a los animales en ese estado a ser mucho más vulnerables a las infecciones por \n\nlas bacterias detalladas. El virus de PI3, causa por lo general una neumonía viral subclínica, que sin complicaciones \n\nbacterianas secundarias tiene poca importancia; sin embargo puede observarse un cuadro caracterizado por tos, secreción \n\nnasal, fiebre y recuperación en pocos días. Causa una alteración de los mecanismos de defensas naturales del aparato \n\nrespiratorio: destrucción de cilios, alteración de las membranas mucosas respiratorias y afectan los procesos de inmunidad \n\nlocal a nivel alveolar. La infección de terneros por el Virus Sincicial Respiratorio Bovino (BRSV) causa rinitis, traqueítis, \n\nbronquitis y bronquiolitis proliferativa y exudativa. Los cambios que ocurren en el tejido pulmonar pueden afectar al \n\nmecanismo de eliminación pulmonar y predisponer a una infección bacteriana secundaria y a inflamación.<br />\n</p>\n<h2>IMPACTOECONÓMICO</h2>\n<p>\n• Pérdida de productividad (aprox. 10-20 kg al comparar ganancias de peso vivo de animales con S.R con respecto a animales\n\nsanos);<br />\n\n•Tratamientos(antibióticosdeúltimageneración);<br />\n\n•Pérdidadeanimalespormuertes;<br />\n\n•Manodeobra,tiempoasignadoalaatencióndeanimalesenfermos,etc.<br /></p>\n\n<h2>PREVENCIÓN Y CONTROL</h2>\n<p>\n• Reducir el grado de exposición de las categorías susceptibles a los factores predisponentes:<br />\n\n1. Evitar el hacinamiento y los cambios bruscos de manejo<br />\n\n2. Separar del rodeo a los animales que demuestren síntomas iniciales de enfermedad respiratoria.<br />\n\n3. Realizar el diagnóstico serológico y el envío de muestras de necropsia del/los animales muertos con síntomas \n\nrespiratorios<br />\n\n• Proporcionar resistencia no específica: máxima a través de un adecuado nivel nutricional, sanitario y manejo.<br />\n\n• Aumentar la resistencia específica de las categorías susceptibles: mediante un adecuado Programa de Inmunización, que \n\ncontemple la vacunación de los terneros al pie de la madre entre los 45 y 15 días previos al destete excepto en aquellos \n\nestablecimientos en los que existan antecedentes de enf. respiratorias en los terneros al pie de la madre, en cuyo caso se \n\ndeberá anticipar la vacunación a la época de aparición habitual o vacunar a las madres para que traspasen inmunidad por \n\nmedio del calostro.<br />\n\n• Si se inmunizan por primera vez en los campos de invernada o en el Feed-lot, los animales deben mantenerse apartados \n\nhasta completar su inmunización: aplicar la primer dosis de vacuna a los 2-3 días del arribo y la segunda dosis 20-25 días \n\ndespués, pudiendo juntar los lotes unos 10-15 días posteriores a la aplicación de la segunda dosis.En todos los casos se \n\nrecomienda administrar una dosis de refuerzo a los 6 meses de la primera inmunización.</p>', 'tecnica', 'es'),
 (123, '2016-04-02', 'Agonía y ... ¿Despertar de la sarna?', 'Cierto es que la enfermedad conocida como Sarna no es precisamente nueva. Las primeras referencias se remontan al 1200 A.C. en época de Moisés, y se cita en la Biblia, prohibiéndose expresamente la ofrenda de animales “roñosos” en alusión a sarnosos.', '', 'Cierto es que la enfermedad conocida como Sarna no\nes precisamente nueva. Las primeras referencias se\nremontan al 1200 A.C. en época de Moisés, y se cita\nen la Biblia, prohibiéndose expresamente la ofrenda\nde animales “roñosos” en alusión a sarnosos.<br />\nTambién\nes cierto que, en nuestro país, desde 1969-70 la\ncantidad de brotes fueron haciéndose más numerosos\ny frecuentes alcanzando durante la década del 80 su\nmáxima intensidad. Aunque que en los últimos años se ha observado una notable disminución, de la\npresentación atribuible al uso de mosquicidas en\nverano, y de la gravedad por cuestiones climáticas\n(inviernos secos y benignos). También es cierto que la situación en el presente año\nes diferente, y el aumento de casos invernales podría\nexplicarse por la combinación de los dos factores\ncitados anteriormente\nPara poder intentar alguna explicación a esta “casi\ndesaparición de la sarna”, al menos de la sarna\nbovina, debemos dejar claras algunas características\nsobresalientes del ácaro causal\n(Psoroptes bovis).<br />\nEn primer lugar se trata de un parásito obligado, lo\nque indica que pasa toda su vida sobre el animal lo\nconvierte en un blanco fácil (si las cosas se hacen\ncomo es debido) al momento d\ne la\na\nplic\na\nció\nn\nd\nel a\nn\ntis\ná\nr\nnic\no,\ncareciendo de importancia la sobrevivencia fuera del\nhuesped , y que no supera los 10-12 días, tiempo\nbastante inferior al tiempo de protección brindado por\ncualquier antisárnico. Por lo tanto las “fallas” de los antisárnicos son producidas en una abrumadora mayoría por deficiente manejo (animales que no reciben tratamiento, problemas de aplicación, desentendimiento de las características técnicas de los\nproductos, tiempo transcurrido desde la aplicación\nhasta la eficacia total, etc.)\nEn segundo lugar, se podrían considerar dos tipos de\nsarna. Una sarna clínica que se presenta en otoñoinvierno\ny principios de primavera, con el cuadro por\ntodos conocido que comienza con “picaduras” en la\ncruz y base de la cola y termina con caída de pelo que\ndejan en evidencia “lesiones húmedas” que eliminan \nun líquido ámbar que luego constituirá las costras.<br />\nPero también se produce otro tipo de sarna que no se ve, y que con frecuencia induce a pensar en una curación\nespontánea de la enfermedad. Se trata de la sarna de verano o “sarna latente”, donde se produce una\ndisminución del número de parásitos, PERO NO LA ELIMINACIÓN. En verano los ácaros se ubican en zonas\ncorporales protegidas de la radiación solar como son la parte interna de las orejas, los pliegues inguinales, o el\nespacio interdigital (entre las pezuñas), pero siempre sobre el animal.\nEN UNA SITUACIÓN INTERMEDIA A LAS DOS PLANTEADAS ANTERIORMENTE, SE HAOBSERVADO\nrecientemente lo que se podría definir como “un nuevo cuadro clínico de la sarna”, que se presenta con cierta\nfrecuencia en animales de encierre a corral. Lo destacable del cuadro clínico es que la intensidad y gravedad\nde las lesiones es llamativamente menor al cuadro de campo. En éste caso, se observan depilaciones de alguna\nforma similares a las de las piojeras, en el sentido que se observa prurito con depilaciones y enrojecimiento de la\npiel sin llegar a constituir una lesión “húmeda” típica de la sarna a campo. Donde la presencia de gruesas costras\nse reemplaza por una descamación blanquecina que en muchos casos se asocia a algún desbalance en la\ndieta. En definitiva, un cuadro complicado de diagnosticar/diferenciar desde la observación clínica de las\nlesiones, en el que es necesario proceder al raspaje de piel y la observación microscópica del agente causal. La\ncondición casi subclínica de ésta presentación se vería favorecida por el escaso tiempo que los animales\npermanecen en corrales de engorde y por la utilización sistemática de Ivermectina en ellos.<br />\nEsta particular forma de presentación se ve favorecida por el hacinamiento, que predispone al contagio de los\nectoparásitos obligados (sarna y piojeras). Sin embargo, todos los animales que ingresan a corral son\ndesparasitados de rutina con lactonas macrocíclicas, especialmente Ivermectina, (en distintas\nconcentraciones, 1% Bagomectina 1%, vehículos, Bovifort 1% con modificador de absorción y combinadas,\nBagomectina AD3E Forte y Bagomectina 3,15 AD3E), como preventivo de la sarna (y piojos chupadores).<br />\nPero también es cierto que “el movimiento de animales” en los corrales es constante, con incorporación\npermanente de animales, y allí estaría la clave de la supuesta falla de los tratamientos. Cierto es, que la eficacia\ntotal sobre Psoroptes bovis se alcanza alrededor de los 14 días postratamiento, lo que obligaría a mantener los\nanimales desparasitados con Ivermectina al ingreso al establecimiento aislados durante 2 semanas antes de\nmezclarlos con los ingresados anteriormente. De manera que, el no respetar esta condición significará la\ninfestación de los animales que entraron anteriormente y ya no tengan droga activa en su organismo como para\nevitar el contagio de aquellos. También hay otras alternativas en el control de la sarna en lo que se refiere a\ntratamientos a través de los baños por aspersión (Aspersin). La ventaja es lo económico que resulta en cuanto\na la dosis. El inconveniente de este método son las instalaciones que se deben tener para realizar un buen\ntratamiento y que requiere de un 2º tratamiento a los 10días del 1º para realizar un buen control del ciclo del\nparásito.<br />\n<h2>DE TAL MANERAQUE MANTENIENDO LA ANTERIOR PREMISA:</h2><br />\n<p>\nSolo un tratamiento con Ivermectina, ajustando la dosis al animal más pesado, es suficiente para controlar la\nsarna bovina.<br />\nLos ácaros fuera del animal (rascaderos) sobreviven por un tiempo (10-12 días) menor al del principio activo,\nno representando un riesgo de reinfección.<br />\nIneludiblemente, se debe desparasitar la totalidad del rodeo. Un solo animal que no reciba el tratamiento o sea\ninsuficientemente dosificado mantendrá la infección y contagiará al resto luego de un mes.<br />\nHoy más que nunca mantiene vigencia la frase: “La casi totalidad de las fallas de tratamientos antisárnicos son\ndebidas a problemas de manejo” (Dr. Jorge Nuñez,1987)</p>', 'tecnica', 'es'),
-(124, '2016-04-01', 'Gira de Trabajos en Chiapas', 'En el mes de abril 2016 el Gerente Técnico de Biogénesis Bagó de México, M en C Rubén Novelo...', '', 'En el mes de abril 2016 el Gerente Técnico de Biogénesis Bagó de México, M en C Rubén Novelo, realizó una gira de trabajo en la costa de Chiapas visitando mostradores, ganaderos e impartiendo charlas de capacitación en las que  hubo oportunidad de escuchar los comentarios hacia los productos por parte del personal de la Bodega Agropecuaria de Chiapas que es el distribuidor en el estado. Como balance final de la recorrida se comprobó que los productos Suplenut, Bago Pell  Bagomectina 3.15 LA AD3E y EPDB, entre otros, están contando con aceptación en el sector ganadero chiapaneco debido a los resultados entregados.', 'prensa', 'mx');
+(124, '2016-04-22', 'Gira de Trabajos en Chiapas', 'En el mes de abril 2016 el Gerente Técnico de Biogénesis Bagó de México, M en C Rubén Novelo...', '', 'En el mes de abril 2016 el Gerente Técnico de Biogénesis Bagó de México, M en C Rubén Novelo, realizó una gira de trabajo en la costa de Chiapas visitando mostradores, ganaderos e impartiendo charlas de capacitación en las que  hubo oportunidad de escuchar los comentarios hacia los productos por parte del personal de la Bodega Agropecuaria de Chiapas que es el distribuidor en el estado. Como balance final de la recorrida se comprobó que los productos Suplenut, Bago Pell  Bagomectina 3.15 LA AD3E y EPDB, entre otros, están contando con aceptación en el sector ganadero chiapaneco debido a los resultados entregados.', 'prensa', 'mx'),
+(125, '2016-04-28', 'VacChina 2016 – The 6th Annual Vaccine Development Summit. April 12-13, 2016 Shanghai, China', 'En el evento más importante sobre vacunas veterinarias que se realiza en China, Argentina estuvo representada por un experto internacional en Fiebre Aftosa.\r\n', '', '<style>.inner-text li{list-style-type:disc;}</style>\r\n<h3>En el evento más importante sobre vacunas veterinarias que se realiza en China, Argentina estuvo representada por un experto internacional en Fiebre Aftosa.</h3>\r\n\r\n<p>\r\nEl Doctor Rodolfo Bellinzoni, fue invitado a participar como disertante experto, para hablar sobre <strong>“Estrategias para el control y la erradicación global de la Fiebre Aftosa”</strong>  en VacChina el evento más importante sobre vacunas veterinarias que se realiza en el país asiático.<br>\r\n\r\nSu convocatoria no sorprende ya que el Dr Bellinzoni es el director de operaciones de Biogénesis Bagó y <strong>cuenta con más de 30 años de experiencia trabajando en Fiebre Aftosa</strong>, en todos los niveles; como investigador, desde el desarrollo y producción de vacunas y en la vinculación con organismos de control nacionales e internacionales. Además es <strong>Director del proyecto industrial más ambicioso</strong> que se esté desarrollando en este momento: <strong>la construcción de una planta en China que tendrá capacidad para producir 400 millones de dosis al año</strong>, utilizando la tecnología desarrollada por Biogénesis Bagó en Argentina.<br>\r\n\r\nSu disertación hizo un recorrido bien detallado de la enfermedad y sus consecuencias productivas y económicas, describió los diferentes status sanitarios aceptados y la condición de las diferentes regiones del mundo; las diferentes formas de control de emergencias,  <strong>la  importancia  de  las  campañas  de  vacunación  y  la  calidad  de vacunas.</strong><br>\r\n\r\nLuego de intensos 45 minutos de disertación hubo espacio para las preguntas, las cuales se centraron mayoritariamente en la calidad de vacunas y los métodos de control que el Dr Bellinzoni describió se realizan de rutina en la vacuna que Biogénesis Bagó elabora en Argentina para diferentes países del mundo. Esta preocupación de los asistentes  no sorprende ya que muchos países de Asia, Africa y Medio Oriente siguen conviviendo con brotes en forma permanente a pesar de llevar varios años realizando campañas de vacunación.<br>\r\n\r\nEntre las conclusiones del Dr Bellinzoni se puede destacar:<br></p>\r\n<ul>\r\n<li>Cuando las vacunas son de <strong>buena calidad, pueden controlar brotes</strong> y lograr la erradicación de la enfermedad.</li>\r\n<li>Las <strong>vacunas  actuales</strong>,  producidas  en  diferentes  partes  del  mundo,  usan diferentes tecnologías y muestran una <strong>gran variabilidad en términos de calidad.</strong></li>\r\n<li>En los últimos 25 años, América Latina y Europa han visto los <strong>beneficios de usar estrategias de vacunación.</strong></li>\r\n<li><strong>Nuevas   tecnologías</strong>  de  producción  y  purificación  de  antígenos  <strong>permiten optimizar la calidad</strong> de la vacuna y en consecuencia sus atributos.</li>\r\n<li>Las  nuevas  tecnologías  de  control  de  vacunas  permitirán  reducir  el  uso  de animales de experimentación, permitiendo entre otras cosas tener sistemas de\r\ncontrol más sencillos, menos costos y factibles de implementar en forma eficiente.</li>\r\n</ul>\r\n\r\n<p><strong>“Vacunación para vivir”</strong><br>\r\n\r\nEl Dr Bellinzoni cerro su presentación con este último concepto, <strong>“Vacunación para vivir”</strong>  que según él va ganando cada vez más aceptación! Y desplazando en muchos países el concepto de <strong>"stamping out only"</strong> que significa eliminación de animales en gran escala en rodeos afectados. El uso de vacunas minimizará el impacto de estos costos que impactan no solo a las producciones pecuarias si no que se extenderían más allá, afectando a toda la cadena productiva y actividades relacionadas del sector. <strong>El estatus de libre con vacunación está siendo cada vez más aceptado y es reconocido por los organismos internacionales de referencia;</strong> ya que están ampliamente  demostrados  lo  beneficios  de  la  vacunación  sobre  el  riesgo  de reaparición de la enfermedad. En un mundo con una demanda creciente de alimentos, <strong>no nos podemos seguir permitiendo sacrificar y descartar animales de producción habiendo vacunas</strong> que pueden conferir la protección necesaria para evitar esos eventos, concluyó el experto.\r\n</p>', 'prensa', 'es'),
+(127, '2016-05-20', 'Titulo Nota Prueba 2', 'bajada nota 2', 'extraaaa', '<p>texto de la nota</p>', 'tecnica', 'uy');
 
 -- --------------------------------------------------------
 
@@ -991,11 +997,12 @@ INSERT INTO `tbl_notas` (`id`, `fecha`, `titulo`, `bajada`, `extra`, `texto`, `s
 -- Estructura de tabla para la tabla `tbl_page`
 --
 
-CREATE TABLE `tbl_page` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_page` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `titulo` varchar(255) NOT NULL,
-  `url` varchar(300) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `url` varchar(300) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 --
 -- Volcado de datos para la tabla `tbl_page`
@@ -1010,15 +1017,16 @@ INSERT INTO `tbl_page` (`id`, `titulo`, `url`) VALUES
 -- Estructura de tabla para la tabla `tbl_pais`
 --
 
-CREATE TABLE `tbl_pais` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_pais` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(130) NOT NULL,
   `icon` int(11) NOT NULL,
   `url` varchar(100) NOT NULL,
   `short` varchar(2) NOT NULL,
   `lng` varchar(5) NOT NULL,
-  `catalogo` int(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `catalogo` int(1) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=25 ;
 
 --
 -- Volcado de datos para la tabla `tbl_pais`
@@ -1039,11 +1047,11 @@ INSERT INTO `tbl_pais` (`id`, `nombre`, `icon`, `url`, `short`, `lng`, `catalogo
 (14, 'Honduras', 0, 'Honduras', 'hn', 'es', 0),
 (15, 'Nicaragua', 0, 'Nicaragua', 'ni', 'es', 0),
 (16, 'Panamá', 0, 'Panamá', 'pa', 'es', 0),
-(17, 'Paraguay', 0, 'Paraguay', 'py', 'es', 0),
+(17, 'Paraguay', 0, 'Paraguay', 'py', 'es', 2),
 (18, 'Perú', 0, 'Perú', 'pe', 'es', 0),
 (19, 'República Dominicana', 0, 'República Dominicana', 'do', 'es', 0),
 (20, 'Uruguay', 0, 'Uruguay', 'uy', 'es', 0),
-(21, 'Venezuela', 0, 'Venezuela', 've', 'es', 0),
+(21, 'Venezuela', 0, 'Venezuela', 've', 'es', 2),
 (22, 'Canada', 0, '', 'ca', 'en', 0),
 (23, 'Colombia', 0, '', 'co', 'es', 0),
 (24, 'Chile', 0, '', 'cl', 'es', 0);
@@ -1054,11 +1062,12 @@ INSERT INTO `tbl_pais` (`id`, `nombre`, `icon`, `url`, `short`, `lng`, `catalogo
 -- Estructura de tabla para la tabla `tbl_permission`
 --
 
-CREATE TABLE `tbl_permission` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_permission` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `operation` varchar(150) NOT NULL,
-  `url` varchar(150) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `url` varchar(150) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=52 ;
 
 --
 -- Volcado de datos para la tabla `tbl_permission`
@@ -1070,14 +1079,14 @@ INSERT INTO `tbl_permission` (`id`, `operation`, `url`) VALUES
 (3, 'adminProducto', 'producto'),
 (4, 'adminSeccion', 'seccion'),
 (5, 'createEstablecimiento', 'establecimiento/create'),
-(6, 'createPost', 'pages/create'),
+(6, 'createPost', 'notas/'),
 (7, 'createProducto', 'producto/create'),
 (8, 'createRole', 'userRole/create'),
 (9, 'createUser', 'user/create'),
-(10, 'deletePost', 'pages/delete'),
+(10, 'deletePost', 'notas/delete'),
 (11, 'deleteProducto', 'producto/delete'),
 (12, 'deleteUsers', 'users/delete'),
-(13, 'editPost', 'pages/update'),
+(13, 'editPost', 'notas/update'),
 (14, 'editUsers', 'users/update'),
 (15, 'updateEstablecimiento', 'establecimiento/update'),
 (16, 'updateProducto', 'producto/update'),
@@ -1114,12 +1123,13 @@ INSERT INTO `tbl_permission` (`id`, `operation`, `url`) VALUES
 -- Estructura de tabla para la tabla `tbl_ppartes_regionalizacion`
 --
 
-CREATE TABLE `tbl_ppartes_regionalizacion` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_ppartes_regionalizacion` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `idParte` int(11) NOT NULL,
   `pais` int(11) NOT NULL,
-  `nombre` varchar(140) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `nombre` varchar(140) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=31 ;
 
 --
 -- Volcado de datos para la tabla `tbl_ppartes_regionalizacion`
@@ -1161,8 +1171,8 @@ INSERT INTO `tbl_ppartes_regionalizacion` (`id`, `idParte`, `pais`, `nombre`) VA
 -- Estructura de tabla para la tabla `tbl_producto`
 --
 
-CREATE TABLE `tbl_producto` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_producto` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(150) NOT NULL,
   `seccion` int(11) NOT NULL,
   `target` varchar(10) NOT NULL,
@@ -1173,8 +1183,11 @@ CREATE TABLE `tbl_producto` (
   `fullTags` text NOT NULL,
   `codeContent` int(1) NOT NULL,
   `pais` varchar(100) NOT NULL,
-  `user_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `user_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `id` (`id`),
+  KEY `seccion` (`seccion`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=411 ;
 
 --
 -- Volcado de datos para la tabla `tbl_producto`
@@ -1189,7 +1202,7 @@ INSERT INTO `tbl_producto` (`id`, `nombre`, `seccion`, `target`, `link`, `descri
 (6, 'TRIPLEpoligen®', 2, '0100000101', '', '', '2015-12-01 16:15:50', 'Vacuna, prevención, Mancha, Gangrena, Enterotoxemia, bovinos, ovinos, caprinos, TRIPLEpoligen, TRIPLE, poligen', 'Vacuna,prevención,Mancha,Gangrena,Enterotoxemia,bovinos,ovinos,caprinos,TRIPLEpoligen,TRIPLE,poligen,Biológicos,Argentina', 0, '1', 0),
 (7, 'BIOCLOSTRIGEN® J5', 2, '0100000101', '', '', '2015-12-01 16:15:58', 'Vacuna, prevención, mancha, gangrena gaseosa, Clostridium chauvoei, C. septicum, enterotoxemias, C. perfringens, bacterias, Gram negativas. bovinos, ovinos, caprinos, BIOCLOSTRIGEN, J5, BIOCLOSTRIGEN J5', 'Vacuna,prevención,mancha,gangrena gaseosa,Clostridium chauvoei,C. septicum,enterotoxemias,C. perfringens,bacterias,Gram negativas. bovinos,ovinos,caprinos,BIOCLOSTRIGEN,J5,BIOCLOSTRIGEN J5,Biológicos,Argentina', 0, '1', 0),
 (8, 'POLICLOSTRIGEN®', 2, '0000000101', '', '', '2015-12-01 16:16:39', 'Vacuna, prevención, bovinos, ovinos, Clostridios, mancha, gangrena gaseosa, enterotoxemia, hepatitis necrótica infecciosa, hemoglobinuria bacilar, muerte súbita. endotoxemia, bacterias, Gram negativas, POLICLOSTRIGEN,', 'Vacuna,prevención,bovinos,ovinos,Clostridios,mancha,gangrena gaseosa,enterotoxemia,hepatitis necrótica infecciosa,hemoglobinuria bacilar,muerte súbita. endotoxemia,bacterias,Gram negativas,POLICLOSTRIGEN,Biológicos,Argentina', 0, '1', 0),
-(9, 'BIOLEPTOGEN®', 2, '0010000001', '', '', '2015-12-01 16:16:56', 'Vacuna, prevención, leptospirosis, bovinos, porcinos, BIOLEPTOGEN', 'Vacuna,prevención,leptospirosis,bovinos,porcinos,BIOLEPTOGEN,Biológicos,', 0, '', 0),
+(9, 'BIOLEPTOGEN®', 2, '0010000001', '', '', '2015-12-01 16:16:56', 'Vacuna, prevención, leptospirosis, bovinos, porcinos, BIOLEPTOGEN', 'Vacuna,prevención,leptospirosis,bovinos,porcinos,BIOLEPTOGEN,Biológicos,', 0, '1', 0),
 (10, 'BIOABORTOGEN® H', 2, '0000000001', '', '', '2016-03-09 11:30:43', 'Vacuna, prevención, infertilidad, abortos, bovinos, microorganismos, BIOABORTOGEN H, BIOABORTOGEN', 'Vacuna,prevención,infertilidad,abortos,bovinos,microorganismos,BIOABORTOGEN H,BIOABORTOGEN,Biológicos,Argentina', 0, '1', 0),
 (11, 'ROTATEC J5®', 2, '0000000001', '', '', '2015-11-23 16:28:23', 'Vacuna, prevención, síndrome, diarrea, neonatal, ternero, Rotavirus, bovino, bacterias, Gram, negativas, endotoxemias, secundarias, mastitis,ROTATEC, J5,ROTATEC J5\r\n', 'Vacuna,prevención,síndrome,diarrea,neonatal,ternero,Rotavirus,bovino,bacterias,Gram,negativas,endotoxemias,secundarias,mastitis,ROTATEC,J5,ROTATEC J5,Biológicos,Argentina', 0, '1', 0),
 (12, 'BIO-CARBOGEN® 2', 2, '1110000101', '', '', '2015-11-23 16:28:19', 'Vacuna, prevención, Carbunclo Bacteridiano, bovinos, ovinos, porcinos, caprinos, equinos, BIO-CARBOGEN 2, CARBOGEN', 'Vacuna,prevención,Carbunclo Bacteridiano,bovinos,ovinos,porcinos,caprinos,equinos,BIO-CARBOGEN 2,CARBOGEN,Biológicos,Argentina', 0, '1', 0),
@@ -1252,27 +1265,27 @@ INSERT INTO `tbl_producto` (`id`, `nombre`, `seccion`, `target`, `link`, `descri
 (124, 'BIORAIVA®', 2, '0000000001', '', '', '2015-11-30 14:56:06', 'Vacina para prevenção da  raiva em bovinos.', 'Vacina para prevenção da  raiva em bovinos.,Biológicos,Brasil', 0, '2', 0),
 (125, 'CANTRIMOL', 6, '1110000101', '', '', '2015-11-30 14:56:21', 'Antibiótico  Injetável com Anti-inflamatório\r\nPara bovinos, equinos, ovinos, suínos e caprinos.', 'Antibiótico  Injetável com Anti-inflamatório\r\nPara bovinos,equinos,ovinos,suínos e caprinos.,Antibióticos,Brasil', 0, '2', 0),
 (126, 'CEFTIOMAX®', 6, '0010000001', '', '', '2015-11-30 14:56:37', 'Cloridrato de ceftiofur 53,5 mg/mL\r\nSuspensão  injetável, pronta para uso em bovinos e suínos.', 'Cloridrato de ceftiofur 53,5 mg/mL\r\nSuspensão  injetável,pronta para uso em bovinos e suínos.,Antibióticos,Brasil', 0, '2', 0),
-(127, 'MAXIBIOTIC', 6, '0000000001', '', '', '2015-12-03 08:47:19', 'Solução antimicrobiana  injetável para bovinos', 'Solução antimicrobiana  injetável para bovinos,Antibióticos,Brasil', 0, '-1', 0),
+(127, 'MAXIBIOTIC', 6, '0000000001', '', '', '2015-12-03 08:47:19', 'Solução antimicrobiana  injetável para bovinos', 'Solução antimicrobiana  injetável para bovinos,Antibióticos,Brasil', 0, '2', 0),
 (128, 'FLOROXIN®', 6, '0010000001', '', '', '2015-11-30 14:58:23', 'Florfenicol a 30%\r\nAntibiótico de amplo espectro para Bovinos e Suínos', 'Florfenicol a 30%\r\nAntibiótico de amplo espectro para Bovinos e Suínos,Antibióticos,Brasil', 0, '2', 0),
 (129, 'ACIENDEL® PLUS', 3, '1100000101', '', '', '2015-11-30 14:59:38', 'Antiparasitário externo pour-on, ACIENDEL, Bernicida, carrapaticida e mosquicida para bovinos, equinos, caprinos e ovinos', 'Antiparasitário externo pour-on,ACIENDEL,Bernicida,carrapaticida e mosquicida para bovinos,equinos,caprinos e ovinos,Antiparasitarios Externos,Brasil', 0, '2', 0),
-(130, 'FORBOX', 3, '0000000001', '', '', '2015-11-30 14:59:21', 'Antiparasitário externo pour-on, Carrapaticida para bovinos, Forbox', 'Antiparasitário externo pour-on,Carrapaticida para bovinos,Forbox,Antiparasitarios Externos,Brasil', 0, '-1', 0),
+(130, 'FORBOX', 3, '0000000001', '', '', '2015-11-30 14:59:21', 'Antiparasitário externo pour-on, Carrapaticida para bovinos, Forbox', 'Antiparasitário externo pour-on,Carrapaticida para bovinos,Forbox,Antiparasitarios Externos,Brasil', 0, '2', 0),
 (131, 'ASPERSIN®', 3, '0000000001', '', '', '2015-11-30 14:59:53', 'Aspersin, Antiparasitário externo para bovinos, Carrapaticida, sarnicida, bernicida, mosquicida,  inseticida', 'Aspersin,Antiparasitário externo para bovinos,Carrapaticida,sarnicida,bernicida,mosquicida,inseticida,Antiparasitarios Externos,Brasil', 0, '2', 0),
 (132, 'GALGOSANTEL® ORAL', 4, '0000000101', '', '', '2015-11-30 15:00:06', 'Closantel 7,5%, Ecto e endoparasiticida oral para bovinos e ovinos, Galgosantel', 'Closantel 7,5%,Ecto e endoparasiticida oral para bovinos e ovinos,Galgosantel,Antiparasitarios Internos,Brasil', 0, '2', 0),
 (133, 'BIOPERSOL® FORTE M.V.', 4, '0010000101', '', '', '2015-11-30 15:00:26', 'Fosfato de  levamisol, Anti-helmíntico de amplo espectro para bovinos, ovinos e suínos, BIOPERSOL', 'Fosfato de  levamisol,Anti-helmíntico de amplo espectro para bovinos,ovinos e suínos,BIOPERSOL,Antiparasitarios Internos,Brasil', 0, '2', 0),
 (134, 'IVERGEN®', 5, '0010000101', '', '', '2015-11-30 15:01:02', 'IVERGEN, Antiparasitário interno, externo, injetável, bovinos, ovinos, suínos.', 'IVERGEN,Antiparasitário interno,externo,injetável,bovinos,ovinos,suínos.,Endectocidas,Brasil', 0, '2', 0),
 (135, 'IVERGEN® GEL EQUINOS', 5, '1000000000', '', '', '2015-11-30 15:01:23', 'Ivermectina a 1%, Antiparasitário  interno e externo para equinos, IVERGEN® GEL EQUINOS', 'Ivermectina a 1%,Antiparasitário  interno e externo para equinos,IVERGEN® GEL EQUINOS,Endectocidas,Brasil', 0, '2', 0),
 (136, 'IVERGEN® PLUS AD3E', 5, '0000000001', '', '', '2015-11-30 15:01:35', 'IVERGEN® PLUS AD3E, Ivermectina a 1%, Antiparasitário, interno, externo, vitaminado, injetável, bovinos.', 'IVERGEN® PLUS AD3E,Ivermectina a 1%,Antiparasitário,interno,externo,vitaminado,injetável,bovinos.,Endectocidas,Brasil', 0, '2', 0),
-(137, 'FLOK®', 5, '0000000001', '', '', '2015-11-30 15:02:19', 'Flok, Antiparasitário, interno, externo, Solução injetável, bovinos', 'Flok,Antiparasitário,interno,externo,Solução injetável,bovinos,Endectocidas,Brasil', 0, '-1', 0),
-(138, 'FORTIUM', 5, '1000000000', '', '', '2015-11-30 15:02:39', 'Antiparasitário, interno, equinos, Fortium', 'Antiparasitário,interno,equinos,Fortium,Endectocidas,Brasil', 0, '-1', 0),
+(137, 'FLOK®', 5, '0000000001', '', '', '2015-11-30 15:02:19', 'Flok, Antiparasitário, interno, externo, Solução injetável, bovinos', 'Flok,Antiparasitário,interno,externo,Solução injetável,bovinos,Endectocidas,Brasil', 0, '2', 0),
+(138, 'FORTIUM', 5, '1000000000', '', '', '2015-11-30 15:02:39', 'Antiparasitário, interno, equinos, Fortium', 'Antiparasitário,interno,equinos,Fortium,Endectocidas,Brasil', 0, '2', 0),
 (139, 'IVERGEN® PLATINUM 3,15', 5, '0000000001', '', '', '2015-11-30 15:02:55', 'IVERGEN® PLATINUM 3,15, Ivermectina a 3,15 %, Antiparasitário, interno, externo, longa ação, Injetável, bovinos.', 'IVERGEN® PLATINUM 3,15,Ivermectina a 3,15 %,Antiparasitário,interno,externo,longa ação,Injetável,bovinos.,Endectocidas,Brasil', 0, '2', 0),
 (140, 'IVERGEN® PREMIUM L.A.', 5, '0010000101', '', '', '2015-11-30 15:03:05', 'IVERGEN® PREMIUM L.A., Ivermectina a 1,13%, Antiparasitário, interno, externo, injetável, bovinos, ovinos, suínos.', 'IVERGEN® PREMIUM L.A.,Ivermectina a 1,13%,Antiparasitário,interno,externo,injetável,bovinos,ovinos,suínos.,Endectocidas,Brasil', 0, '2', 0),
-(141, 'SUPLENUT®', 8, '0000000001', '', '', '2015-12-03 08:48:29', 'SUPLENUT, Suplemento mineral, cobre, zinco, Bovinos', 'SUPLENUT,Suplemento mineral,cobre,zinco,Bovinos,Vitamínicos y Minerales,Brasil', 0, '-1', 0),
+(141, 'SUPLENUT®', 8, '0000000001', '', '', '2015-12-03 08:48:29', 'SUPLENUT, Suplemento mineral, cobre, zinco, Bovinos', 'SUPLENUT,Suplemento mineral,cobre,zinco,Bovinos,Vitamínicos y Minerales,Brasil', 0, '2', 0),
 (142, 'BIOESTROGEN', 7, '1010000101', '', '', '2015-11-30 15:03:43', 'BIOESTROGEN, Benzoato de estradiol, Hormônio estrogênico, bovinos, equinos, ovinos, suínos', 'BIOESTROGEN,Benzoato de estradiol,Hormônio estrogênico,bovinos,equinos,ovinos,suínos,Reproductivos,Brasil', 0, '2', 0),
 (143, 'CRONIBEN®', 7, '0010000001', '', '', '2015-11-30 15:04:08', 'D-Cloprostenol, Agente, luteolítico, bovinos, suínos', 'D-Cloprostenol,Agente,luteolítico,bovinos,suínos,Reproductivos,Brasil', 0, '2', 0),
 (144, 'CRONIPRES® 3 USOS', 7, '0000000001', '', '', '2015-11-30 15:04:19', 'CRONIPRES, Dispositivo, intravaginal, progesterona natural, bovinos.', 'CRONIPRES,Dispositivo,intravaginal,progesterona natural,bovinos.,Reproductivos,Brasil', 0, '2', 0),
 (145, 'CRONIPRES® MONO DOSE M-24', 7, '0000000001', '', '', '2015-11-30 15:05:32', 'CRONIPRES® MONO DOSE M-24, Dispositivo, intravaginal, progesterona, uso único, Bovinos.', 'CRONIPRES® MONO DOSE M-24,Dispositivo,intravaginal,progesterona,uso único,Bovinos.,Reproductivos,Brasil', 0, '2', 0),
-(146, 'CRONI-CIP®', 7, '0000000001', '', '', '2015-11-30 15:04:51', 'Croni-cip®, manejo do ciclo estral, bovinos, hormonal, Estrogênio, Solução Injetável, bovinos', 'Croni-cip®,manejo do ciclo estral,bovinos,hormonal,Estrogênio,Solução Injetável,Reproductivos,Brasil', 0, '-1', 0),
-(147, 'GONAXAL®', 7, '0000000001', '', '', '2015-11-30 15:11:16', 'GONAXAL, Análogo  sintético  do  GnRH, tratamento  de  enfermidades  do  aparelho reprodutor, manejo reprodutivo de bovinos, Solução Injetável, bovinos', 'GONAXAL,Análogo  sintético  do  GnRH,tratamento  de  enfermidades  do  aparelho reprodutor,manejo reprodutivo de bovinos,Solução Injetável,bovinos,Reproductivos,Brasil', 0, '-1', 0),
+(146, 'CRONI-CIP®', 7, '0000000001', '', '', '2015-11-30 15:04:51', 'Croni-cip®, manejo do ciclo estral, bovinos, hormonal, Estrogênio, Solução Injetável, bovinos', 'Croni-cip®,manejo do ciclo estral,bovinos,hormonal,Estrogênio,Solução Injetável,Reproductivos,Brasil', 0, '2', 0),
+(147, 'GONAXAL®', 7, '0000000001', '', '', '2015-11-30 15:11:16', 'GONAXAL, Análogo  sintético  do  GnRH, tratamento  de  enfermidades  do  aparelho reprodutor, manejo reprodutivo de bovinos, Solução Injetável, bovinos', 'GONAXAL,Análogo  sintético  do  GnRH,tratamento  de  enfermidades  do  aparelho reprodutor,manejo reprodutivo de bovinos,Solução Injetável,bovinos,Reproductivos,Brasil', 0, '2', 0),
 (148, 'ECEGON  5000 UI', 7, '0000000001', '', '', '2015-11-30 14:57:09', 'ECEGON  5000 UI, Gonadotrofina Coriônica Equina, (eCG – PMSG), bovinos.', 'ECEGON  5000 UI,Gonadotrofina Coriônica Equina,(eCG – PMSG),bovinos.,Reproductivos,Brasil', 0, '2', 0),
 (150, 'Producto prueba', 3, '0011000000', 'Producto-prueba', '', '2016-03-02 09:23:51', 'prueba', 'prueba,Antiparasitarios Externos,', 0, '', 0),
 (152, 'RABIA PARESIANTE®', 2, '0000000001', '', '', '2016-03-03 11:17:30', 'rabia paresiante, bovinos, virus rábico, ', 'rabia paresiante,bovinos,virus rábico,Biológicos,México', 0, '6', 0),
@@ -1314,7 +1327,6 @@ INSERT INTO `tbl_producto` (`id`, `nombre`, `seccion`, `target`, `link`, `descri
 (193, 'ASPERSIN®', 3, '0000000101', 'ASPERSIN', '', '2016-03-02 13:09:06', 'aspersin, bovino, ovino, ácaros de la sarna bovina, melófagos, insectos hematófagos, moscas, tábanos, mosquitos, mosca de los cuernos', 'aspersin,bovino,ovino,ácaros de la sarna bovina,melófagos,insectos hematófagos,moscas,tábanos,mosquitos,mosca de los cuernos,Antiparasitarios Externos,Uruguay', 0, '7', 0),
 (194, 'GALGO-C 15®', 3, '0010000101', '', '', '2016-03-09 01:24:22', 'galgo c 15, bovino, ovino, porcino, garrapatas, piojos ', 'galgo c 15,bovino,ovino,porcino,garrapatas,piojos,Antiparasitarios Externos,Uruguay', 0, '7', 0),
 (195, 'ACIENDEL® PLUS', 3, '0100000101', 'ACIENDEL-PLUS', '', '2016-03-02 13:05:22', 'aciendel,bovino, ovino, caprinos, piojos chupadores, mosca de los cuernos, ', 'aciendel,bovino,ovino,caprinos,piojos chupadores,mosca de los cuernos,Antiparasitarios Externos,Uruguay', 0, '-1', 0),
-(196, 'ASPERSIN®', 3, '0000000101', 'ASPERSIN', '', '2016-03-02 12:56:13', 'aspersin, bovino, ovino', 'aspersin,bovino,ovino,Antiparasitarios Externos,Uruguay', 0, '-1', 0),
 (197, 'GALMETRIN® PLUS POMADA', 3, '1110000101', '', '', '2016-03-02 13:17:28', 'galmetrin plus pomada, bovino, ovino, equino, porcino, caprinos, pomada antimiásica', 'galmetrin plus pomada,bovino,ovino,equino,porcino,caprinos,pomada antimiásica,Antiparasitarios Externos,Uruguay', 0, '7', 0),
 (198, 'GALMETRIN® PLUS SOLUCIÓN', 3, '1110000101', 'GALMETRIN-PLUS-SOLUCIN', '', '2016-03-02 13:21:51', 'galmetrin plus solucion, bovino, equino, ovino, caprinos', 'galmetrin plus solucion,bovino,equino,ovino,caprinos,Antiparasitarios Externos,Uruguay', 0, '7', 0),
 (199, 'GARRATOX® BOVINOS', 3, '0000000001', '', '', '2016-03-09 01:28:25', 'garratox, bovino, Antisárnico, piojicida, insecticida,  mosquicida', 'garratox,bovino,Antisárnico,piojicida,insecticida,mosquicida,Antiparasitarios Externos,Uruguay', 0, '7', 0),
@@ -1333,10 +1345,10 @@ INSERT INTO `tbl_producto` (`id`, `nombre`, `seccion`, `target`, `link`, `descri
 (212, 'BIOESTROGEN®', 7, '1010011101', '', '', '2016-03-09 07:55:33', 'bioestrogen, bovino, ovino, equino, porcino, canino, felino, afecciones tocoginecológicas, partos distócicos, retenciones placentarias, abortos, metritis, piómetras, tratamiento de pseudopreñez,  tratamiento del anestro', 'bioestrogen,bovino,ovino,equino,porcino,canino,felino,afecciones tocoginecológicas,partos distócicos,retenciones placentarias,abortos,metritis,piómetras,tratamiento de pseudopreñez,tratamiento del anestro,Reproductivos,Uruguay', 0, '7', 0),
 (213, 'CAMISAS CRONIPRES® MONODOSIS', 7, '0000000001', '', '', '2016-03-09 01:39:32', 'camisas, cronipres monodosis, bovino, control del ciclo estral, inseminación artificial a tiempo fijo, inseminación artificial sistemática, acortamiento del período parto-concepción, acortamiento del ciclo estral de la estación reproductiva, transplantes de embriones, tratamientos reproductivos', 'camisas,cronipres monodosis,bovino,control del ciclo estral,inseminación artificial a tiempo fijo,inseminación artificial sistemática,acortamiento del período parto-concepción,acortamiento del ciclo estral de la estación reproductiva,transplantes de embriones,tratamientos reproductivos,Antibióticos,Uruguay', 0, '7', 0),
 (214, 'BIOGÓN® PLUS', 7, '1010011101', 'BIOGN-PLUS', '', '2016-03-03 09:44:39', 'biogon, plus, bovino, ovino, equino, porcino, felino, canino, Inducción de celos, sincronización de celos, induccion de ovulación, induccion de superovulación', 'biogon,plus,bovino,ovino,equino,porcino,felino,canino,Inducción de celos,sincronización de celos,induccion de ovulación,induccion de superovulación,Reproductivos,Uruguay', 0, '7', 0),
-(215, 'ENZAPROST DC', 7, '0010000001', 'ENZAPROST-DC', '', '2016-03-03 09:49:34', 'enzaprost dc, bovino, porcino, Sincronización de celos, inducción de celos, sincronización del ciclo estral, inducción al parto, desórdenes funcionales de los ovarios, celos silenciosos por anestro post-servicio, post-parto, ciclos irregulares, ciclos anovulatorios, cuerpo lúteo persistente, quistes lúteos, endometritis, piómetras. abortos terapéuticos ', 'enzaprost dc,bovino,porcino,Sincronización de celos,inducción de celos,sincronización del ciclo estral,inducción al parto,desórdenes funcionales de los ovarios,celos silenciosos por anestro post-servicio,post-parto,ciclos irregulares,ciclos anovulatorios,cuerpo lúteo persistente,quistes lúteos,endometritis,piómetras. abortos terapéuticos,Reproductivos,Uruguay', 0, '7', 0),
-(216, 'GONAXAL®', 7, '1000000001', 'GONAXAL', '', '2016-03-03 09:55:51', 'gonaxal, bovino, equino, trastornos reproductivos, inseminación Artificial, mejoramiento de los parámetros de concepción, aciclia, ovulación retardada, atresia folicular,  desarrollo folicular, consecuente ovulación, quistes ováricos, sincronización del celo, Celos prolongados, celos permanentes', 'gonaxal,bovino,equino,trastornos reproductivos,inseminación Artificial,mejoramiento de los parámetros de concepción,aciclia,ovulación retardada,atresia folicular,desarrollo folicular,consecuente ovulación,quistes ováricos,sincronización del celo,Celos prolongados,celos permanentes,Reproductivos,Uruguay', 0, '7', 0),
-(217, 'BAGÓ AD3E', 8, '1010000101', 'BAG-AD3E', '', '2016-03-03 09:59:21', 'ad3e, bovino, ovino, equino, porcino, raquitismo, osteomalacia, hipocalcemia, tratamientos antiinfecciosos, tratamiento antiparasitarios, fuente vitaminica', 'ad3e,bovino,ovino,equino,porcino,raquitismo,osteomalacia,hipocalcemia,tratamientos antiinfecciosos,tratamiento antiparasitarios,fuente vitaminica,Vitamínicos y Minerales,Uruguay', 0, '7', 0);
+(215, 'ENZAPROST DC', 7, '0010000001', 'ENZAPROST-DC', '', '2016-03-03 09:49:34', 'enzaprost dc, bovino, porcino, Sincronización de celos, inducción de celos, sincronización del ciclo estral, inducción al parto, desórdenes funcionales de los ovarios, celos silenciosos por anestro post-servicio, post-parto, ciclos irregulares, ciclos anovulatorios, cuerpo lúteo persistente, quistes lúteos, endometritis, piómetras. abortos terapéuticos ', 'enzaprost dc,bovino,porcino,Sincronización de celos,inducción de celos,sincronización del ciclo estral,inducción al parto,desórdenes funcionales de los ovarios,celos silenciosos por anestro post-servicio,post-parto,ciclos irregulares,ciclos anovulatorios,cuerpo lúteo persistente,quistes lúteos,endometritis,piómetras. abortos terapéuticos,Reproductivos,Uruguay', 0, '7', 0);
 INSERT INTO `tbl_producto` (`id`, `nombre`, `seccion`, `target`, `link`, `descripcion`, `fecha`, `tags`, `fullTags`, `codeContent`, `pais`, `user_id`) VALUES
+(216, 'GONAXAL®', 7, '1000000001', 'GONAXAL', '', '2016-03-03 09:55:51', 'gonaxal, bovino, equino, trastornos reproductivos, inseminación Artificial, mejoramiento de los parámetros de concepción, aciclia, ovulación retardada, atresia folicular,  desarrollo folicular, consecuente ovulación, quistes ováricos, sincronización del celo, Celos prolongados, celos permanentes', 'gonaxal,bovino,equino,trastornos reproductivos,inseminación Artificial,mejoramiento de los parámetros de concepción,aciclia,ovulación retardada,atresia folicular,desarrollo folicular,consecuente ovulación,quistes ováricos,sincronización del celo,Celos prolongados,celos permanentes,Reproductivos,Uruguay', 0, '7', 0),
+(217, 'BAGÓ AD3E', 8, '1010000101', 'BAG-AD3E', '', '2016-03-03 09:59:21', 'ad3e, bovino, ovino, equino, porcino, raquitismo, osteomalacia, hipocalcemia, tratamientos antiinfecciosos, tratamiento antiparasitarios, fuente vitaminica', 'ad3e,bovino,ovino,equino,porcino,raquitismo,osteomalacia,hipocalcemia,tratamientos antiinfecciosos,tratamiento antiparasitarios,fuente vitaminica,Vitamínicos y Minerales,Uruguay', 0, '7', 0),
 (218, 'ESTREPTOCARBOCAFTIAZOL®', 9, '1110011101', '', '', '2016-03-09 01:43:58', 'ESTREPTOCARBOCAFTIAZOL, bovino, ovino, equino, caprino, porcino, felino, canino, diarreas polimicrobianas, colibacilosis, enteritis, gastroenteritis, infecciones alimentarias', 'ESTREPTOCARBOCAFTIAZOL,bovino,ovino,equino,caprino,porcino,felino,canino,diarreas polimicrobianas,colibacilosis,enteritis,gastroenteritis,infecciones alimentarias,Farmacéuticos,Uruguay', 0, '7', 0),
 (219, 'BIOAFTOGEN', 1, '0000000001', '', '', '2016-03-03 12:37:44', 'bioaftogen, bovino, fiebre aftosa', 'bioaftogen,bovino,fiebre aftosa,Aftosa,Bolivia', 0, '5', 0),
 (220, 'BIOLEPTOGEN', 2, '0010000001', '', '', '2016-03-09 09:06:10', 'bioleptogen, bovino, porcino, leptospirosis', 'bioleptogen,bovino,porcino,leptospirosis,Biológicos,Bolivia', 0, '5', 0),
@@ -1390,7 +1402,7 @@ INSERT INTO `tbl_producto` (`id`, `nombre`, `seccion`, `target`, `link`, `descri
 (268, 'CRONIPRES TRES USOS', 7, '0000000001', '', '', '2016-03-09 11:16:30', 'CRONIPRES TRES USOS, Dispositivo intravaginal, regulación del ciclo estral, hembras, bovinas. silicona, inerte, progesterona (P4), sincronización, ciclo estral, bovinos, Inseminación Artiicial, IA, IAS, IATF,', 'CRONIPRES TRES USOS,Dispositivo intravaginal,regulación del ciclo estral,hembras,bovinas. silicona,inerte,progesterona (P4),sincronización,ciclo estral,bovinos,Inseminación Artiicial,IA,IAS,IATF,Reproductivos,Bolivia', 0, '5', 0),
 (269, 'ECEGON', 7, '1111011101', '', '', '2016-03-09 11:17:26', 'ECEGON, Gonadrotroina, Coriónica, Equina, eCG-PMSG, FSH/LH, potencia estable, caprino, ovino, bovino, felino, perras, conejas', 'ECEGON,Gonadrotroina,Coriónica,Equina,eCG-PMSG,FSH/LH,potencia estable,caprino,ovino,bovino,felino,perras,conejas,Reproductivos,Bolivia', 0, '5', 0),
 (270, 'GONAXAL', 7, '1000000001', '', '', '2016-03-09 07:48:02', 'solución inyectable, acetato de buserelina, 0,00042%, análogo sintético, GnRH hipotalámica, aparato reproductor, reproducción, hembras, bovinas, equinas, GONAXAL', 'solución inyectable,acetato de buserelina,0,00042%,análogo sintético,GnRH hipotalámica,aparato reproductor,reproducción,hembras,bovinas,equinas,GONAXAL,Reproductivos,Bolivia', 0, '5', 0),
-(271, 'ADAPTADOR  MIN', 8, '0000000001', 'ADAPTADOR-MIN', '', '2016-03-08 00:16:49', 'Suplemento, mineral, inyectable, bovinos, ADAPTADOR  MIN', 'Suplemento,mineral,inyectable,bovinos,ADAPTADOR  MIN,Vitamínicos y Minerales,', 0, '', 0),
+(271, 'ADAPTADOR  MIN', 8, '0000000001', 'ADAPTADOR-MIN', '', '2016-03-08 00:16:49', 'Suplemento, mineral, inyectable, bovinos, ADAPTADOR  MIN', 'Suplemento,mineral,inyectable,bovinos,ADAPTADOR  MIN,Vitamínicos y Minerales,', 0, '5', 0),
 (272, 'ADAPTADOR  VIT', 8, '0000000001', '', '', '2016-03-09 10:38:17', 'ADAPTADOR  VIT, Suplemento, Vitamínico, inyectable, bovinos.', 'ADAPTADOR  VIT,Suplemento,Vitamínico,inyectable,bovinos.,Vitamínicos y Minerales,Bolivia', 0, '5', 0),
 (273, 'BAGÓ AD3E', 8, '1010000101', '', '', '2016-03-09 17:35:31', 'BAGÓ AD3E, Complejo vitamínico, inyectable, bovinos, equinos, ovinos, porcinos, Calcio, Fósforo. ', 'BAGÓ AD3E,Complejo vitamínico,inyectable,bovinos,equinos,ovinos,porcinos,Calcio,Fósforo.,Vitamínicos y Minerales,Bolivia', 0, '5', 0),
 (274, 'POLICALCINA ', 8, '1010000101', '', '', '2016-03-09 17:34:29', 'POLICALCINA, Calcificante. Solución inyectable, bovinos, equinos, ovinos, porcinos, refuerzo energético,  cardiotónico.', 'POLICALCINA,Calcificante. Solución inyectable,bovinos,equinos,ovinos,porcinos,refuerzo energético,cardiotónico.,Vitamínicos y Minerales,Bolivia', 0, '5', 0),
@@ -1400,8 +1412,8 @@ INSERT INTO `tbl_producto` (`id`, `nombre`, `seccion`, `target`, `link`, `descri
 (278, 'ESTREPTOCARBOCAFTIAZOL ', 9, '1110011101', '', '', '2016-03-09 10:47:42', 'ESTREPTOCARBOCAFTIAZOL, Antidiarréico, antiséptico, carminativo, normalizador de flora intestinal, equinos, bovinos, ovinos, caprinos, porcinos, caninos, felinos. Suspensión para uso oral.', 'ESTREPTOCARBOCAFTIAZOL,Antidiarréico,antiséptico,carminativo,normalizador de flora intestinal,equinos,bovinos,ovinos,caprinos,porcinos,caninos,felinos. Suspensión para uso oral.,Farmacéuticos,Bolivia', 0, '5', 0),
 (279, 'BIOAFTOGEN®  ', 1, '0000000001', '', '', '2016-03-09 08:19:46', 'BIOAFTOGEN®, BIOAFTOGEN, Vacuna, inmunización, Fiebre, Aftosa.', 'BIOAFTOGEN®,BIOAFTOGEN,Vacuna,inmunización,Fiebre,Aftosa.,Aftosa,General', 0, '8', 0),
 (280, 'BIOQUERATOGEN® OLEO MAX', 2, '0000000001', '', '', '2016-03-09 10:48:34', 'Vacuna, queratoconjuntivitis infecciosa, bovina, Herpesvirus, bovino, Moraxella, bovis, Branhamella, ovis, BIOQUERATOGEN', 'Vacuna,queratoconjuntivitis infecciosa,bovina,Herpesvirus,bovino,Moraxella,bovis,Branhamella,ovis,BIOQUERATOGEN,Biológicos,Bolivia,General', 0, '5,8', 0),
-(281, 'BIOPOLIGEN® HS', 2, '0000000001', '', '', '2016-03-09 10:50:18', 'BIOPOLIGEN HS, vacuna, Síndrome Respiratorio, bovinos, enfermedades respiratorias, Fiebre del Transporte, Neumonía, reproductivos, neurológicos, entéricos, virus, bacterias', 'BIOPOLIGEN HS,vacuna,Síndrome Respiratorio,bovinos,enfermedades respiratorias,Fiebre del Transporte,Neumonía,reproductivos,neurológicos,entéricos,virus,bacterias,Biológicos,Bolivia,General', 0, '5,8', 0),
-(282, 'BIOPOLIGEN® AIR ', 2, '0000000001', '', '', '2016-03-09 10:51:26', 'BIOPOLIGEN AIR, Vacuna, síndrome respiratorio, bovinos, enfermedades respiratorias, Fiebre del transporte, Neumonía, reproductivos, nerviosos, entéricos, virus, bacterias ', 'BIOPOLIGEN AIR,Vacuna,síndrome respiratorio,bovinos,enfermedades respiratorias,Fiebre del transporte,Neumonía,reproductivos,nerviosos,entéricos,virus,bacterias,Biológicos,Bolivia,General', 0, '5,8', 0),
+(281, 'BIOPOLIGEN® HS', 2, '0000000001', '', '', '2016-03-09 10:50:18', 'BIOPOLIGEN HS, vacuna, Síndrome Respiratorio, bovinos, enfermedades respiratorias, Fiebre del Transporte, Neumonía, reproductivos, neurológicos, entéricos, virus, bacterias', 'BIOPOLIGEN HS,vacuna,Síndrome Respiratorio,bovinos,enfermedades respiratorias,Fiebre del Transporte,Neumonía,reproductivos,neurológicos,entéricos,virus,bacterias,Biológicos,Bolivia,General', 0, '8', 0),
+(282, 'BIOPOLIGEN® AIR ', 2, '0000000001', '', '', '2016-03-09 10:51:26', 'BIOPOLIGEN AIR, Vacuna, síndrome respiratorio, bovinos, enfermedades respiratorias, Fiebre del transporte, Neumonía, reproductivos, nerviosos, entéricos, virus, bacterias ', 'BIOPOLIGEN AIR,Vacuna,síndrome respiratorio,bovinos,enfermedades respiratorias,Fiebre del transporte,Neumonía,reproductivos,nerviosos,entéricos,virus,bacterias,Biológicos,Bolivia,General', 0, '8', 0),
 (283, 'REVERVAC® HEMOGLOBINURIA', 2, '0000000001', '', '', '2016-03-09 10:51:57', 'REVERVAC HEMOGLOBINURIA, Vacuna, Hemoglobinuria, Bacilar, bovinos', 'REVERVAC HEMOGLOBINURIA,Vacuna,Hemoglobinuria,Bacilar,bovinos,Biológicos,Bolivia,General', 0, '5,8', 0),
 (284, 'TRIPLEpoligen®', 2, '0100000101', '', '', '2016-03-09 10:52:41', 'TRIPLE poligen, Mancha, Gangrena, Enterotoxemia, bovinos, ovinos, caprinos', 'TRIPLE poligen,Mancha,Gangrena,Enterotoxemia,bovinos,ovinos,caprinos,Biológicos,Bolivia,General', 0, '5,8', 0),
 (285, 'BIOCLOSTRIGEN® J5 ', 2, '0100000101', '', '', '2016-03-09 10:53:39', 'BIOCLOSTRIGEN, J5, mancha, gangrena, gaseosa, Clostridium, chauvoei, C. septicum, enterotoxemias, perfringens, D, bacterias, Gram, bovinos, ovinos, caprinos,', 'BIOCLOSTRIGEN,J5,mancha,gangrena,gaseosa,Clostridium,chauvoei,C. septicum,enterotoxemias,perfringens,D,bacterias,Gram,bovinos,ovinos,caprinos,Biológicos,Bolivia,General', 0, '5,8', 0),
@@ -1453,7 +1465,7 @@ INSERT INTO `tbl_producto` (`id`, `nombre`, `seccion`, `target`, `link`, `descri
 (331, 'ECEGON®', 7, '1111011101', '', '', '2016-03-09 08:49:14', 'ECEGON®, ECEGON, Gonadrotroina, Coriónica, Equina, eCG-PMSG, FSH/LH ', 'ECEGON®,ECEGON,Gonadrotroina,Coriónica,Equina,eCG-PMSG,FSH/LH,Reproductivos,General', 0, '8', 0),
 (332, 'GONAXAL®', 7, '1000000001', '', '', '2016-03-09 08:49:33', 'GONAXAL®, GONAXAL, solución, inyectable, acetato de buserelina, GnRH, hipotalámica, aparato reproductor. reproducción, hembras, bovinas, equinas.', 'GONAXAL®,GONAXAL,solución,inyectable,acetato de buserelina,GnRH,hipotalámica,aparato reproductor. reproducción,hembras,bovinas,equinas.,Reproductivos,General', 0, '8', 0),
 (333, 'BAGÓ® AD3E', 8, '1010000101', '', '', '2016-03-09 08:50:10', 'Complejo vitamínico, inyectable, bovinos, equinos, ovinos, porcinos, metabolismo Calcio, Fósforo, BAGÓ® AD3E, BAGÓ, AD3E', 'Complejo vitamínico,inyectable,bovinos,equinos,ovinos,porcinos,metabolismo Calcio,Fósforo,BAGÓ® AD3E,BAGÓ,AD3E,Vitamínicos y Minerales,General', 0, '8', 0),
-(334, 'ADAPTADOR®  MIN', 8, '0000000001', '', '', '2016-03-09 08:50:33', 'ADAPTADOR®  MIN, ADAPTADOR, MIN, Suplemento, mineral, inyectable, bovinos.', 'ADAPTADOR®  MIN,ADAPTADOR,MIN,Suplemento,mineral,inyectable,bovinos.,Vitamínicos y Minerales,', 0, '', 0),
+(334, 'ADAPTADOR®  MIN', 8, '0000000001', '', '', '2016-03-09 08:50:33', 'ADAPTADOR®  MIN, ADAPTADOR, MIN, Suplemento, mineral, inyectable, bovinos.', 'ADAPTADOR®  MIN,ADAPTADOR,MIN,Suplemento,mineral,inyectable,bovinos.,Vitamínicos y Minerales,', 0, '8', 0),
 (335, 'ADAPTADOR®  VIT', 8, '0000000001', '', '', '2016-03-09 08:50:54', 'ADAPTADOR®  VIT, ADAPTADOR, VIT, ', 'ADAPTADOR®  VIT,ADAPTADOR,VIT,Vitamínicos y Minerales,General', 0, '8', 0),
 (336, 'POLICALCINA® ', 8, '1010000101', '', '', '2016-03-09 08:51:12', 'POLICALCINA®, POLICALCINA, Calcificante, Solución inyectable, bovinos, equinos, ovinos, porcinos, refuerzo, energético,cardiotónico.', 'POLICALCINA®,POLICALCINA,Calcificante,Solución inyectable,bovinos,equinos,ovinos,porcinos,refuerzo,energético,cardiotónico.,Vitamínicos y Minerales,General', 0, '8', 0),
 (337, 'SUPLENUT®', 8, '0000000001', '', '', '2016-03-09 08:51:35', 'SUPLENUT®, SUPLENUT, solución inyectable, Cobre, Cu, Zinc, Zn', 'SUPLENUT®,SUPLENUT,solución inyectable,Cobre,Cu,Zinc,Zn,Vitamínicos y Minerales,General', 0, '8', 0),
@@ -1463,7 +1475,7 @@ INSERT INTO `tbl_producto` (`id`, `nombre`, `seccion`, `target`, `link`, `descri
 (341, 'BIOX® ', 10, '1110011101', '', '', '2016-03-09 08:54:45', 'BIOX®, BIOX, desinfectante, biodegradable, amplio espectro, oxidante, supericies, instalaciones, equipos, Gram, Aerobias, anaerobias, esporas, hongo, mohos, levaduras, virus.', 'BIOX®,BIOX,desinfectante,biodegradable,amplio espectro,oxidante,supericies,instalaciones,equipos,Gram,Aerobias,anaerobias,esporas,hongo,mohos,levaduras,virus.,Salud Ambiental,General', 0, '8', 0),
 (342, 'BIOAFTOGEN® ', 1, '0000000001', '', '', '2016-03-09 09:45:20', 'Inactivated, vaccine, Foot-and-Mouth Disease, BIOAFTOGEN® ', 'Inactivated,vaccine,Foot-and-Mouth Disease,BIOAFTOGEN®,Aftosa,USA', 0, '9', 0),
 (343, 'BIOQUERATOGEN® OLEO MAX', 2, '0000000001', '', '', '2016-03-09 09:46:02', 'BIOQUERATOGEN® OLEO MAX, BIOQUERATOGEN, OLEO, MAX, ', 'BIOQUERATOGEN® OLEO MAX,BIOQUERATOGEN,OLEO,MAX,Biológicos,USA', 0, '9', 0),
-(344, 'BIOPOLIGEN® HS ', 2, '0000000001', 'BIOPOLIGEN-HS-', '', '2016-03-09 10:07:18', 'Vaccine, bovine respiratory syndrome, respiratory, disease, complex, shipping, fever, Pneumonia, reproductive, nervous,  BIOPOLIGEN® HS, BIOPOLIGEN, HS ', 'Vaccine,bovine respiratory syndrome,respiratory,disease,complex,shipping,fever,Pneumonia,reproductive,nervous,BIOPOLIGEN® HS,BIOPOLIGEN,HS,Biológicos,', 0, '', 0),
+(344, 'BIOPOLIGEN® HS ', 2, '0000000001', 'BIOPOLIGEN-HS-', '', '2016-03-09 10:07:18', 'Vaccine, bovine respiratory syndrome, respiratory, disease, complex, shipping, fever, Pneumonia, reproductive, nervous,  BIOPOLIGEN® HS, BIOPOLIGEN, HS ', 'Vaccine,bovine respiratory syndrome,respiratory,disease,complex,shipping,fever,Pneumonia,reproductive,nervous,BIOPOLIGEN® HS,BIOPOLIGEN,HS,Biológicos,', 0, '9', 0),
 (345, 'BIOPOLIGEN® AIR ', 2, '0000000001', 'BIOPOLIGEN-AIR-', '', '2016-03-09 10:25:11', 'BIOPOLIGEN® AIR, BIOPOLIGEN, AIR, Vaccine bovine respiratory syndrome, respiratory disease, complex, shipping, fever, Pneumonia, reproductive, nervous, enteric, virus, bacteria', 'BIOPOLIGEN® AIR,BIOPOLIGEN,AIR,Vaccine bovine respiratory syndrome,respiratory disease,complex,shipping,fever,Pneumonia,reproductive,nervous,enteric,virus,bacteria,Biológicos,USA', 0, '9', 0),
 (346, 'REVERVAC® HEMOGLOBINURIA', 2, '0000000001', 'REVERVAC-HEMOGLOBINURIA', '', '2016-03-09 10:28:07', 'REVERVAC® HEMOGLOBINURIA, REVERVAC, HEMOGLOBINURIA, Vaccine, Bovine, Bacillary, Hemoglobinuria.', 'REVERVAC® HEMOGLOBINURIA,REVERVAC,HEMOGLOBINURIA,Vaccine,Bovine,Bacillary,Hemoglobinuria.,Biológicos,USA', 0, '9', 0),
 (347, 'TRIPLEpoligen®', 2, '0100000101', 'TRIPLEpoligen', '', '2016-03-09 10:32:27', 'TRIPLEpoligen®, TRIPLEpoligen, TRIPLE poligen, Vaccine, Blackleg, Gangrene, Enterotoxemia, cattle, sheep, goats.', 'TRIPLEpoligen®,TRIPLEpoligen,TRIPLE poligen,Vaccine,Blackleg,Gangrene,Enterotoxemia,cattle,sheep,goats.,Biológicos,USA', 0, '9', 0),
@@ -1491,13 +1503,13 @@ INSERT INTO `tbl_producto` (`id`, `nombre`, `seccion`, `target`, `link`, `descri
 (369, 'CIPERSIN®', 3, '0000000101', 'CIPERSIN', '', '2016-03-09 12:10:41', 'CIPERSIN®,CIPERSIN,Tickicide for cattle; insecticide,melophaguicide,sheep,Emulsiiable liquid,', 'CIPERSIN®,CIPERSIN,Tickicide for cattle; insecticide,melophaguicide,sheep,Emulsiiable liquid,Antiparasitarios Externos,USA', 0, '9', 0),
 (370, 'GALMETRIN® PLUS POLVO', 3, '1110000101', 'GALMETRIN-PLUS-POLVO', '', '2016-03-09 12:12:57', 'External, larvicide,Anti-myiasis, powder,cattle, Sheep, swine, goats,GALMETRIN® PLUS POLVO,GALMETRIN,PLUS,POLVO', 'External,larvicide,Anti-myiasis,powder,cattle,Sheep,swine,goats,GALMETRIN® PLUS POLVO,GALMETRIN,PLUS,POLVO,Antiparasitarios Externos,USA', 0, '9', 0),
 (371, 'GALMETRIN® PLUS POMADA', 3, '1110000101', 'GALMETRIN-PLUS-POMADA', '', '2016-03-09 12:14:47', 'GALMETRIN® PLUS POMADA,GALMETRIN,PLUS,POMADA,External,larvicide,anti-myiasis,pomade,cattle,sheep, goats, horses, swine.', 'GALMETRIN® PLUS POMADA,GALMETRIN,PLUS,POMADA,External,larvicide,anti-myiasis,pomade,cattle,sheep,goats,horses,swine.,Antiparasitarios Externos,USA', 0, '9', 0),
-(372, 'GALMETRIN® PLUS SOLUCIÓN', 3, '1110000101', 'GALMETRIN-PLUS-SOLUCIN', '', '2016-03-09 12:16:42', 'GALMETRIN® PLUS SOLUCIÓN,GALMETRIN,PLUS,SOLUCIÓN,External,larvicide,anti-myiasis,solution,cattle, sheep, goats, horses ,swine.', 'GALMETRIN® PLUS SOLUCIÓN,GALMETRIN,PLUS,SOLUCIÓN,External,larvicide,anti-myiasis,solution,cattle,sheep,goats,horses,swine.,Antiparasitarios Externos,USA', 0, '9', 0),
+(372, 'GALMETRIN® PLUS SOLUCIÓN', 3, '1110000101', 'GALMETRIN-PLUS-SOLUCIN', '', '2016-03-09 12:16:42', 'GALMETRIN® PLUS SOLUCIÓN,GALMETRIN,PLUS,SOLUCIÓN,External,larvicide,anti-myiasis,solution,cattle, sheep, goats, horses ,swine.', 'GALMETRIN® PLUS SOLUCIÓN,GALMETRIN,PLUS,SOLUCIÓN,External,larvicide,anti-myiasis,solution,cattle,sheep,goats,horses,swine.,Antiparasitarios Externos,USA', 0, '9', 0);
+INSERT INTO `tbl_producto` (`id`, `nombre`, `seccion`, `target`, `link`, `descripcion`, `fecha`, `tags`, `fullTags`, `codeContent`, `pais`, `user_id`) VALUES
 (373, 'GALMETRIN® PLUS SPRAY', 3, '1110010101', 'GALMETRIN-PLUS-SPRAY', '', '2016-03-09 12:20:25', 'External,antiparasitic,spray,larvicide, repellant, contains,antibiotics,cattle, swine, sheep, goats,canines,GALMETRIN® PLUS SPRAY,GALMETRIN,PLUS,SPRAY', 'External,antiparasitic,spray,larvicide,repellant,contains,antibiotics,cattle,swine,sheep,goats,canines,GALMETRIN® PLUS SPRAY,GALMETRIN,PLUS,SPRAY,Antiparasitarios Externos,USA', 0, '9', 0),
 (374, 'GARRAMIX®', 3, '0000000001', 'GARRAMIX', '', '2016-03-09 12:22:50', 'GARRAMIX®, GARRAMIX,Ectoparasiticide,Tickicide, parasiticide, dip,cattle.', 'GARRAMIX®,GARRAMIX,Ectoparasiticide,Tickicide,parasiticide,dip,cattle.,Antiparasitarios Externos,USA', 0, '9', 0),
 (375, 'BAGOMECTINA®', 5, '0010000101', 'BAGOMECTINA', '', '2016-03-09 12:29:27', 'BAGOMECTINA®,BAGOMECTINA,Ecto, endo,parasiticide, cattle, sheep,swine, control gastrointestinal, lung parasites, mange, lice, ura, myiasis, 1%, Ivermectin,injectable,solution.', 'BAGOMECTINA®,BAGOMECTINA,Ecto,endo,parasiticide,cattle,sheep,swine,control gastrointestinal,lung parasites,mange,lice,ura,myiasis,1%,Ivermectin,injectable,solution.,Endectocidas,USA', 0, '9', 0),
 (376, 'BOVIFORT®', 5, '0010000101', 'BOVIFORT', '', '2016-03-09 12:33:25', 'BOVIFORT®,BOVIFORT,Ecto, endo, parasiticide,cattle, sheep, swine, Parasiticide', 'BOVIFORT®,BOVIFORT,Ecto,endo,parasiticide,cattle,sheep,swine,Parasiticide,Endectocidas,USA', 0, '9', 0),
-(377, 'BAGOMECTINA® AD3E FORTE', 5, '0000000101', 'BAGOMECTINA-AD3E-FORTE', '', '2016-03-09 12:40:44', 'Ecto,endoparasiticide,Tickicide,cattle,Parasiticide,sheep,Injectable,oil, emulsion,Ivermectin,1%,vitamins.', 'Ecto,endoparasiticide,Tickicide,cattle,Parasiticide,sheep,Injectable,oil,emulsion,Ivermectin,1%,vitamins.,Endectocidas,USA', 0, '9', 0);
-INSERT INTO `tbl_producto` (`id`, `nombre`, `seccion`, `target`, `link`, `descripcion`, `fecha`, `tags`, `fullTags`, `codeContent`, `pais`, `user_id`) VALUES
+(377, 'BAGOMECTINA® AD3E FORTE', 5, '0000000101', 'BAGOMECTINA-AD3E-FORTE', '', '2016-03-09 12:40:44', 'Ecto,endoparasiticide,Tickicide,cattle,Parasiticide,sheep,Injectable,oil, emulsion,Ivermectin,1%,vitamins.', 'Ecto,endoparasiticide,Tickicide,cattle,Parasiticide,sheep,Injectable,oil,emulsion,Ivermectin,1%,vitamins.,Endectocidas,USA', 0, '9', 0),
 (378, 'IVERGEN® PLATINUM 3,15 ', 5, '0000000001', 'IVERGEN-PLATINUM-315-', '', '2016-03-09 14:08:15', 'IVERGEN® PLATINUM 3.15 ,IVERGEN, PLATINUM, 3.15 ,Injectable, parasiticide, endectocide,ivermectin, cattle.', 'IVERGEN® PLATINUM 3.15,IVERGEN,PLATINUM,3.15,Injectable,parasiticide,endectocide,ivermectin,cattle.,Endectocidas,USA', 0, '9', 0),
 (379, 'BAGOMECTINA® 3,15 LA  AD3E', 5, '0000000101', 'BAGOMECTINA-315-LA-AD3E', '', '2016-03-09 14:12:35', 'BAGOMECTINA® 3.15 LA  AD3E, BAGOMECTINA, AD3E, Ecto , endoparasiticide,ivermectin, cattle ,sheep.', 'BAGOMECTINA® 3.15 LA  AD3E,BAGOMECTINA,AD3E,Ecto,endoparasiticide,ivermectin,cattle,sheep.,Endectocidas,USA', 0, '9', 0),
 (380, 'FLOK®', 5, '0000000101', 'FLOK', '', '2016-03-09 14:19:02', 'FLOK®,FLOK,External ,internal ,anti parasitic, ,treat gastrointestinal ,pulmonary, parasites, myiasis ,ticks ,cattle ,sheep. Inyectable, solution ,Doramectin ,1.1% ', 'FLOK®,FLOK,External,internal,anti parasitic,,treat gastrointestinal,pulmonary,parasites,myiasis,ticks,cattle,sheep. Inyectable,solution,Doramectin,1.1%,Endectocidas,USA', 0, '9', 0),
@@ -1536,12 +1548,15 @@ INSERT INTO `tbl_producto` (`id`, `nombre`, `seccion`, `target`, `link`, `descri
 -- Estructura de tabla para la tabla `tbl_producto_contenido`
 --
 
-CREATE TABLE `tbl_producto_contenido` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_producto_contenido` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `producto_id` int(11) NOT NULL,
   `parte` int(11) NOT NULL,
-  `text` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `text` text NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `producto_id` (`producto_id`),
+  KEY `parte` (`parte`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5537 ;
 
 --
 -- Volcado de datos para la tabla `tbl_producto_contenido`
@@ -3696,10 +3711,11 @@ INSERT INTO `tbl_producto_contenido` (`id`, `producto_id`, `parte`, `text`) VALU
 -- Estructura de tabla para la tabla `tbl_producto_partes`
 --
 
-CREATE TABLE `tbl_producto_partes` (
-  `id` int(11) NOT NULL,
-  `nombre` varchar(150) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE IF NOT EXISTS `tbl_producto_partes` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(150) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=20 ;
 
 --
 -- Volcado de datos para la tabla `tbl_producto_partes`
@@ -3732,7 +3748,7 @@ INSERT INTO `tbl_producto_partes` (`id`, `nombre`) VALUES
 -- Estructura de tabla para la tabla `tbl_registros`
 --
 
-CREATE TABLE `tbl_registros` (
+CREATE TABLE IF NOT EXISTS `tbl_registros` (
   `id` int(11) NOT NULL,
   `tipo` varchar(3) NOT NULL,
   `familia` varchar(150) NOT NULL,
@@ -4224,7 +4240,8 @@ INSERT INTO `tbl_registros` (`id`, `tipo`, `familia`, `senasa`, `pais`, `comerci
 (475, 'F', 'Antiparasitario', 'Stand Up (Solución inyectable)', 'Panamá', 'Stand Up'),
 (476, 'F', 'Vitamínico/Minerales', 'Suplenut (Solución inyectable)', 'Panamá', 'Suplenut'),
 (477, 'F', 'Antiparasitario', 'Aciendel (Solución pour-on)', 'Paraguay', 'Aciendel'),
-(478, 'F', 'Antiparasitario', 'Aciendel Plus (Solución pour-on)', 'Paraguay', 'Aciendel Plus'),
+(478, 'F', 'Antiparasitario', 'Aciendel Plus (Solución pour-on)', 'Paraguay', 'Aciendel Plus');
+INSERT INTO `tbl_registros` (`id`, `tipo`, `familia`, `senasa`, `pais`, `comercial`) VALUES
 (479, 'F', 'Vitamínico/Minerales', 'Adaptador Min (solución inyectable)', 'Paraguay', 'Adaptador Min '),
 (480, 'F', 'Vitamínico/Minerales', 'Adaptador Vit (solución inyectable)', 'Paraguay', 'Adaptador Vit '),
 (481, 'B', 'Biológico/Aftosa', 'Aftosan (Emulsión inyectable w/o)', 'Paraguay', 'Aftosan'),
@@ -4233,8 +4250,7 @@ INSERT INTO `tbl_registros` (`id`, `tipo`, `familia`, `senasa`, `pais`, `comerci
 (484, 'F', 'Vitamínico/Minerales', 'Bago AD3E (Solución inyectable)', 'Paraguay', 'Bagó AD3E'),
 (485, 'F', 'Varios', 'Bagodryl (Solución para administración tópica)', 'Paraguay', 'Bagodryl'),
 (486, 'F', 'Endectocida', 'Bagomectina (Solución inyectable)', 'Paraguay', 'Bagomectina'),
-(487, 'F', 'Endectocida', 'Bagomectina Equina (Gel para administración oral)', 'Paraguay', 'Bagomectina equina');
-INSERT INTO `tbl_registros` (`id`, `tipo`, `familia`, `senasa`, `pais`, `comercial`) VALUES
+(487, 'F', 'Endectocida', 'Bagomectina Equina (Gel para administración oral)', 'Paraguay', 'Bagomectina equina'),
 (488, 'F', 'Endectocida', 'Bagomectina LA AD3E (Solución inyectable)', 'Paraguay', 'Bagomectina LA AD3E'),
 (489, 'F', 'Endectocida', 'Bagomectina LA STAR (Exportación) (Solución inyectable)', 'Paraguay', 'Ivergen Platinum 3,15'),
 (490, 'F', 'Endectocida', 'Bagomectina Star L.A. AD3E Vitaminada (Exportación)(Solución inyectable)', 'Paraguay', 'BAGOMECTINA 3,15 LA AD3E'),
@@ -4423,11 +4439,12 @@ INSERT INTO `tbl_registros` (`id`, `tipo`, `familia`, `senasa`, `pais`, `comerci
 -- Estructura de tabla para la tabla `tbl_rel_registros`
 --
 
-CREATE TABLE `tbl_rel_registros` (
-  `id` int(10) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_rel_registros` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
   `idProducto` varchar(100) NOT NULL,
-  `idPais` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `idPais` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=109 ;
 
 --
 -- Volcado de datos para la tabla `tbl_rel_registros`
@@ -4515,14 +4532,15 @@ INSERT INTO `tbl_rel_registros` (`id`, `idProducto`, `idPais`) VALUES
 -- Estructura de tabla para la tabla `tbl_revista`
 --
 
-CREATE TABLE `tbl_revista` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_revista` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `numero` int(4) NOT NULL,
   `fecha` date NOT NULL,
   `titulo` varchar(300) NOT NULL,
   `bajada` text NOT NULL,
-  `lng` varchar(3) NOT NULL DEFAULT 'es'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `lng` varchar(3) NOT NULL DEFAULT 'es',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=18 ;
 
 --
 -- Volcado de datos para la tabla `tbl_revista`
@@ -4544,7 +4562,8 @@ INSERT INTO `tbl_revista` (`id`, `numero`, `fecha`, `titulo`, `bajada`, `lng`) V
 (13, 18, '2010-07-20', 'Terneros. La cría resentida', 'Luego de tres años de sequía, los productores buscan las alternativas para lograr más terneros y aumentar la oferta de ...', 'es'),
 (14, 17, '2010-04-15', 'Pensar en verde. Producción agropecuaria, sociedad y ambiente', 'Conceptos básicos para diseñar un desarrollo sustenteble. Porque lo que es malo para la producción también lo es para el ...', 'es'),
 (15, 16, '2009-12-27', 'Estrés calórico. Escapándole al rayo de sol ', 'Llegan las temperaturas altas y el tambo puede empezar a perder productividad. Aquí ofrecemos recomendaciones para mantener ...', 'es'),
-(16, 15, '2009-09-27', 'Ante el avance de la agricultura. Ganaderia por ambientes', 'Los productores de punta ya ponen en práctica este manejo que les permite diferenciar cargas y prever la producción ...', 'es');
+(16, 15, '2009-09-27', 'Ante el avance de la agricultura. Ganaderia por ambientes', 'Los productores de punta ya ponen en práctica este manejo que les permite diferenciar cargas y prever la producción ...', 'es'),
+(17, 31, '2016-04-26', 'Cambio de aire', 'Tras un giro político, Argentina se propone recomponer su stock ganadero, recuperar mercados y abrir nuevos destinos para la exportación de carne y leche. Los desafíos que presenta el nuevo escenario.', 'es');
 
 -- --------------------------------------------------------
 
@@ -4552,12 +4571,13 @@ INSERT INTO `tbl_revista` (`id`, `numero`, `fecha`, `titulo`, `bajada`, `lng`) V
 -- Estructura de tabla para la tabla `tbl_seccion`
 --
 
-CREATE TABLE `tbl_seccion` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_seccion` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(150) NOT NULL,
   `url` varchar(100) NOT NULL,
-  `icon` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `icon` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=15 ;
 
 --
 -- Volcado de datos para la tabla `tbl_seccion`
@@ -4585,12 +4605,13 @@ INSERT INTO `tbl_seccion` (`id`, `nombre`, `url`, `icon`) VALUES
 -- Estructura de tabla para la tabla `tbl_seccion_regionalizacion`
 --
 
-CREATE TABLE `tbl_seccion_regionalizacion` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_seccion_regionalizacion` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `idCategoria` int(11) NOT NULL,
   `pais` int(11) NOT NULL,
-  `nombre` varchar(140) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `nombre` varchar(140) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=48 ;
 
 --
 -- Volcado de datos para la tabla `tbl_seccion_regionalizacion`
@@ -4598,7 +4619,6 @@ CREATE TABLE `tbl_seccion_regionalizacion` (
 
 INSERT INTO `tbl_seccion_regionalizacion` (`id`, `idCategoria`, `pais`, `nombre`) VALUES
 (6, 2, 2, 'Biológicos'),
-(7, 1, 2, 'Aftosa'),
 (8, 3, 2, 'Antiparasitários externos'),
 (9, 4, 2, 'Antiparasitários internos'),
 (10, 5, 2, 'Endectocidas'),
@@ -4617,7 +4637,28 @@ INSERT INTO `tbl_seccion_regionalizacion` (`id`, `idCategoria`, `pais`, `nombre`
 (23, 9, 9, 'Pharmaceutical'),
 (24, 10, 9, 'Environmental Health'),
 (25, 11, 2, 'Nutrição'),
-(26, 10, 2, 'Saúde Ambiental');
+(26, 10, 2, 'Saúde Ambiental'),
+(27, 1, 1, 'Fiebre Aftosa'),
+(28, 1, 5, 'Fiebre Aftosa'),
+(29, 1, 6, 'Fiebre Aftosa'),
+(30, 1, 7, 'Fiebre Aftosa'),
+(31, 1, 8, 'Fiebre Aftosa'),
+(32, 1, 10, 'Fiebre Aftosa'),
+(33, 1, 11, 'Fiebre Aftosa'),
+(34, 1, 12, 'Fiebre Aftosa'),
+(35, 1, 13, 'Fiebre Aftosa'),
+(36, 1, 14, 'Fiebre Aftosa'),
+(37, 1, 15, 'Fiebre Aftosa'),
+(38, 1, 16, 'Fiebre Aftosa'),
+(39, 1, 17, 'Fiebre Aftosa'),
+(40, 1, 18, 'Fiebre Aftosa'),
+(41, 1, 19, 'Fiebre Aftosa'),
+(42, 1, 20, 'Fiebre Aftosa'),
+(43, 1, 21, 'Fiebre Aftosa'),
+(44, 1, 22, 'Fiebre Aftosa'),
+(45, 1, 23, 'Fiebre Aftosa'),
+(46, 1, 24, 'Fiebre Aftosa'),
+(47, 1, 2, 'Febre Aftosa');
 
 -- --------------------------------------------------------
 
@@ -4625,12 +4666,13 @@ INSERT INTO `tbl_seccion_regionalizacion` (`id`, `idCategoria`, `pais`, `nombre`
 -- Estructura de tabla para la tabla `tbl_tag`
 --
 
-CREATE TABLE `tbl_tag` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_tag` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(150) NOT NULL,
   `count` int(11) NOT NULL,
-  `user_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `user_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1019 ;
 
 --
 -- Volcado de datos para la tabla `tbl_tag`
@@ -5662,11 +5704,14 @@ INSERT INTO `tbl_tag` (`id`, `name`, `count`, `user_id`) VALUES
 -- Estructura de tabla para la tabla `tbl_tag_producto`
 --
 
-CREATE TABLE `tbl_tag_producto` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_tag_producto` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `tag_id` int(11) NOT NULL,
-  `producto_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `producto_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `tag_id` (`tag_id`),
+  KEY `producto_id` (`producto_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=102227 ;
 
 --
 -- Volcado de datos para la tabla `tbl_tag_producto`
@@ -11140,12 +11185,13 @@ INSERT INTO `tbl_tag_producto` (`id`, `tag_id`, `producto_id`) VALUES
 -- Estructura de tabla para la tabla `tbl_textos`
 --
 
-CREATE TABLE `tbl_textos` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_textos` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `es` text NOT NULL COMMENT 'español',
   `en` text NOT NULL COMMENT 'ingles',
-  `pt` text NOT NULL COMMENT 'portugues'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `pt` text NOT NULL COMMENT 'portugues',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=512 ;
 
 --
 -- Volcado de datos para la tabla `tbl_textos`
@@ -11350,13 +11396,13 @@ INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (195, 'Con relación a la producción de leche, se observó que las vacas no vacunadas (J5Vcont) presentaban una media de producción de leche inferior (p<0,05) que las vacas del grupo vacunado (J5V) en los primeros 100 días de lactancia (cuadro 5). En este periodo, la media de producción de las vacas no vacunadas (J5Vcont) fue de 21,26 kg de leche/vaca/día, mientras que las vacunadas (J5V) presentaron una media  de producción de 22,79 kg de leche/vaca/día, o sea, el grupo no vacunado produjo 1,53 kg de leche/vaca/día menos comparado con el grupo vacunado. Un estudio realizado por Wilson et al. (2008) describe que la vacunación con E. coli J5 está asociada a una menor reducción de la producción de leche después de la ocurrencia de casos clínicos de mastitis en vacas vacunadas comparadas con las control. Vacas vacunadas presentaron una producción diaria de leche de 7 a 16 kg mayor que vacas no vacunadas aproximadamente tres semanas después de la manifestación del caso clínico de mastitis, con inicio en los primeros 50 días de lactancia, y aproximadamente 2 kg más de leche durante toda la lactancia. Estos resultados concuerdan con los aquí expuestos, en los cuales la inmunización con E. coli J5 estuvo asociada a una  mayor producción de leche en los primeros tres meses de lactancia.', '', ''),
 (196, 'Los resultados aquí presentados, coincidentes con los resultados de Wilson et al. (2007, 2008), indican que la inmunización con E. coli J5 está relacionada con un retorno más rápido a la producción de leche después del caso clínico, una vez que se reduce la intensidad de los signos clínicos, permitiendo el restablecimiento de las funciones de producción de la glándula mamaria, con menores efectos perjudiciales en la producción de leche durante la lactancia.', '', ''),
 (197, 'Conclusiones', '', ''),
-(198, 'La vacunación con Escherichia coli J5 demostró ser eficaz en reducir la prevalencia de infecciones intramamarias en el post parto, así como en la ocurrencia e intensidad de los casos clínicos de mastitis causados por E. coli en los primeros 100 días de lactancia.', '', ''),
+(198, 'La vacunación con Escherichia coli J5 demostró ser eficaz en reducir la prevalencia de infecciones intramamarias en el post parto, así como en la ocurrencia e intensidad de los casos clínicos de mastitis causados por E. coli en los primeros 100 días de lactancia.', '', '');
+INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (199, 'El conteo de células somáticas (CCS) no fue alterado por la utilización de la vacuna conteniendo E. coli J5 y las vacas inmunizadas con E. coli J5 producen más leche en los primeros 100 días de lactancia. 	', '', ''),
 (200, 'REFERENCIAS', '', ''),
 (201, 'Bradley A.J. & Green M.J. 2000. A study of the incidence an significance of intramammary enterobacteriacel infections acquired during the dry period. J. Dairy Sci. 83:1957-1965.', '', ''),
 (202, 'Bradley A.J. & Green M.J. 2001. An investigation of the impact of intramammary antibiotic dry      cow therapy on clinical mastitis. J. Dairy Sci. 84:1632-1639.', '', ''),
-(203, 'Bradley A.J. & Green M.J. 2004. The importance of nonlacting period in the epidemiology of intramammary infection and strategies for prevention. Vet. Clin. Food. Anim. 20:547-568.', '', '');
-INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
+(203, 'Bradley A.J. & Green M.J. 2004. The importance of nonlacting period in the epidemiology of intramammary infection and strategies for prevention. Vet. Clin. Food. Anim. 20:547-568.', '', ''),
 (204, 'Brito M.A.V.P. & Brito J.R.F. 1999. Diagnostico microbiológico da mastite.', '', ''),
 (205, 'Embrapa Gado de Leite, Juiz de Fora, 55:26.', '', ''),
 (206, 'Burton J.L. & Erskine R.J. 2003. Immunity and mastitits some new ideas for an old disease. Vet. Clin. North Am. Food Anim. Pract. 19:1-45.', '', ''),
@@ -11508,12 +11554,12 @@ INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (352, 'Chemotécnica registra 1er producto veterinario: ectoparasiticidas a base de Arsenicales', 'Chemotécnica registers the first veterinary product: an arsenic-base ectoparasiticide\n\n', 'Chemotécnica Registra 1º produto Veterinário: Ectoparasiticidas a base de Arsenicais'),
 (353, 'Nace Chemotécnica Sintyal', 'Incorporation of Chemotécnica Sintyal', 'Nasce a Chemotécnica Sintyal'),
 (354, '1er registro de VACUNA ANTIAFTOSA en Argentina', '1st Registration of FMD vaccine in Argentina', '1º Registro de vacina antiaftosa na Argentina'),
-(355, 'Introduce la vacuna en la región, contribuyendo a <strong>erradicar la enfermedad </strong>y a exportar al mundo la producción pecuaria americana.', 'It introduces the vaccine in the region contributing to <strong> eradicate the disease </strong> and to export American livestock production all around the world', 'Introdução da vacina na região contribuindo para erradicar enfermidades e exportar para o mundo a produção pecuária americana'),
+(355, 'Introduce la vacuna en la región, contribuyendo a <strong>erradicar la enfermedad </strong>y a exportar al mundo la producción pecuaria americana.', 'It introduces the vaccine in the region contributing to <strong> eradicate the disease </strong> and to export American livestock production all around the world', 'Introdução da vacina na região contribuindo para erradicar enfermidades e exportar para o mundo a produção pecuária americana');
+INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (356, 'Lanzamiento Rotatec, la 1º vacuna para prevenir la diarrea viral bovina.', 'Launching of Rotatec, the first vaccine to prevent viral diarrhea in cattle', 'Lançamento Rotatec a 1º vacina para prevenir diarreia neonatal bovina'),
 (357, 'En la década del 80, junto a reconocidas entidades científicas de Latinoamérica, comienza a desarrollar las primeras vacunas específicas para las enfermedades que más afecta a la producción pecuaria', 'During the 80’s, together with well-known Latin American scientific entities, the first specific vaccines for diseases that affect livestock production were developed', 'Na década de 80, junto a reconhecidas entidades científicas da América Latina, começa a desenvolver as primeiras vacinas específicas para as doenças que mais afetam a produção pecuária'),
 (358, 'Lanza la 1º Ivermectina genérica, a nivel global', 'Launching of the first generic Ivermectin at global level', 'Lança, mundialmente, a 1ª ivermectina genérica'),
-(359, 'Nace Biogénesis Sintyal (Fusión chemotécnica Sintyal + Biogénesis)', 'Incorporation of Biogénesis Sintyal (merger of Chemotécnica Sintyal and Biogénesis)', 'Nasce a Biogénesis Sintyal (fusão Chemotécnica Sintyal + Biogénesis) ');
-INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
+(359, 'Nace Biogénesis Sintyal (Fusión chemotécnica Sintyal + Biogénesis)', 'Incorporation of Biogénesis Sintyal (merger of Chemotécnica Sintyal and Biogénesis)', 'Nasce a Biogénesis Sintyal (fusão Chemotécnica Sintyal + Biogénesis) '),
 (360, 'Certifica su planta de producción vacuna anti Aftosa bajo normas de <strong>Bioseguridad 4 OIE</strong>', 'Certification of its production plant FMD vaccine produced under <strong> Biosafety level 4 OIE </strong>', 'Certifica sua planta industrial de produção da vacina antiaftosa sob as normas de Biosegurança 4 OIE.'),
 (361, '1º exportación de la Vacuna Antiaftosa a Sudamérica y Taiwán', 'First export of FMD vaccine to South America and Taiwan', '1º exportação da vacina antiaftosa para Taiwan'),
 (362, 'Inaugura filial en Uruguay', 'Opening of Uruguay subsidiary', 'Inaugura sede no Uruguai'),
@@ -11645,7 +11691,7 @@ INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 (499, 'Premio Funprecit', 'Funprecit Award', 'Fumprecit'),
 (500, 'a la excelencia en desarrollos para la salud animal', 'to the excellence in Animal Health developments', '"Prêmio excelência no desenvolvimento de sanidade animal"'),
 (501, 'Nace', 'Creation of', 'Nasce'),
-(502, 'laboratorios Bagó', 'Bagó laboratories', 'Laboratorios Bagó'),
+(502, 'Laboratorios Bagó', 'Bagó laboratories', 'Laboratórios Bagó'),
 (503, '<span class="border-celeste">FI</span>LIALES Y REP. COMERCIALES ', '<span class="border-celeste">AF</span>FILIATES AND SALES REPS', '<span class="border-celeste">CO</span>NTROLADAS E REP. COMERCIAL'),
 (504, 'NAFMDVD\n', 'NAFMDVB \n', ''),
 (505, 'Casa Matriz Argentina', 'Headquarters Argentina', ''),
@@ -11661,12 +11707,13 @@ INSERT INTO `tbl_textos` (`id`, `es`, `en`, `pt`) VALUES
 -- Estructura de tabla para la tabla `tbl_user`
 --
 
-CREATE TABLE `tbl_user` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(128) NOT NULL,
   `password` varchar(128) NOT NULL,
-  `email` varchar(128) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `email` varchar(128) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=13 ;
 
 --
 -- Volcado de datos para la tabla `tbl_user`
@@ -11680,7 +11727,8 @@ INSERT INTO `tbl_user` (`id`, `username`, `password`, `email`) VALUES
 (8, 'prueba3', '$2y$13$kMsrjDVhanshfu5t/DP6jeakHfk4KSRr9j/qqdTwJQwzLHd6vzdUW', 'prueba3'),
 (9, 'autor', '$2y$13$wVnI2Moox5RsIHNiOyFgiOhC7AW1VJmiV619uT5rtRMZOVyYzqgK2', 'autor@autor.com'),
 (10, 'Fran', '$2y$13$Qp7iIgUn.Wb95ACKn2RKeu3FKYewMK5hw/i3ficypxAj907J5ua3W', 'fran@fran.com'),
-(11, 'Jose', '$2y$13$dqKOBrK8tgPJHyhh1ozxP.goBzEKsSrCVGsUF6K/SNLqJbOXzVTH.', 'fran@ni54.com');
+(11, 'Jose', '$2y$13$dqKOBrK8tgPJHyhh1ozxP.goBzEKsSrCVGsUF6K/SNLqJbOXzVTH.', 'fran@ni54.com'),
+(12, 'Escritor', '$2y$13$2CZU6wog4vzwRP.4jQRXc.rIiTeZDIt1y3ZcaoRMXpN4G9rM17UU.', 'writer@testni54.com');
 
 -- --------------------------------------------------------
 
@@ -11688,10 +11736,11 @@ INSERT INTO `tbl_user` (`id`, `username`, `password`, `email`) VALUES
 -- Estructura de tabla para la tabla `tbl_user_role`
 --
 
-CREATE TABLE `tbl_user_role` (
-  `id` int(11) NOT NULL,
-  `nombre` varchar(140) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE IF NOT EXISTS `tbl_user_role` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(140) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
 --
 -- Volcado de datos para la tabla `tbl_user_role`
@@ -11700,289 +11749,282 @@ CREATE TABLE `tbl_user_role` (
 INSERT INTO `tbl_user_role` (`id`, `nombre`) VALUES
 (1, 'poyo'),
 (2, 'asdas'),
-(4, 'admin');
+(4, 'admin'),
+(5, 'Autor');
+
+-- --------------------------------------------------------
 
 --
--- Índices para tablas volcadas
+-- Estructura de tabla para la tabla `tbl_veterinarias`
 --
 
---
--- Indices de la tabla `authassignment`
---
-ALTER TABLE `authassignment`
-  ADD PRIMARY KEY (`itemname`,`userid`);
+CREATE TABLE IF NOT EXISTS `tbl_veterinarias` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Pedida',
+  `cuenta` varchar(300) NOT NULL COMMENT 'Pedida',
+  `provincia` varchar(100) NOT NULL COMMENT 'Pedida',
+  `ciudad` varchar(150) NOT NULL COMMENT 'Pedida',
+  `direccion` varchar(300) NOT NULL COMMENT 'Pedida',
+  `altura` varchar(100) NOT NULL COMMENT 'Pedida',
+  `telefono` text NOT NULL COMMENT 'Pedida',
+  `tipo` varchar(100) NOT NULL,
+  `subtipo` varchar(150) NOT NULL,
+  `cond_comercial` varchar(10) NOT NULL,
+  `grupo` varchar(100) NOT NULL,
+  `estado` varchar(50) NOT NULL,
+  `ejecutivo` varchar(300) NOT NULL,
+  `dueno` varchar(300) NOT NULL,
+  `cuit` varchar(300) NOT NULL,
+  `id_cliente` int(10) NOT NULL,
+  `email` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=240 ;
 
 --
--- Indices de la tabla `authitem`
---
-ALTER TABLE `authitem`
-  ADD PRIMARY KEY (`name`);
-
---
--- Indices de la tabla `authitemchild`
---
-ALTER TABLE `authitemchild`
-  ADD PRIMARY KEY (`parent`,`child`),
-  ADD KEY `child` (`child`);
-
---
--- Indices de la tabla `tbl_error`
---
-ALTER TABLE `tbl_error`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `tbl_establecimiento`
---
-ALTER TABLE `tbl_establecimiento`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `tbl_imagen_ref`
---
-ALTER TABLE `tbl_imagen_ref`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `tbl_metatag`
---
-ALTER TABLE `tbl_metatag`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `tbl_metatag_page`
---
-ALTER TABLE `tbl_metatag_page`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `tbl_miscelaneo`
---
-ALTER TABLE `tbl_miscelaneo`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `tbl_notas`
---
-ALTER TABLE `tbl_notas`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `tbl_page`
---
-ALTER TABLE `tbl_page`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `tbl_pais`
---
-ALTER TABLE `tbl_pais`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `tbl_permission`
---
-ALTER TABLE `tbl_permission`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `tbl_ppartes_regionalizacion`
---
-ALTER TABLE `tbl_ppartes_regionalizacion`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `tbl_producto`
---
-ALTER TABLE `tbl_producto`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `id` (`id`),
-  ADD KEY `seccion` (`seccion`);
-
---
--- Indices de la tabla `tbl_producto_contenido`
---
-ALTER TABLE `tbl_producto_contenido`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `producto_id` (`producto_id`),
-  ADD KEY `parte` (`parte`);
-
---
--- Indices de la tabla `tbl_producto_partes`
---
-ALTER TABLE `tbl_producto_partes`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `tbl_rel_registros`
---
-ALTER TABLE `tbl_rel_registros`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `tbl_revista`
---
-ALTER TABLE `tbl_revista`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `tbl_seccion`
---
-ALTER TABLE `tbl_seccion`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `tbl_seccion_regionalizacion`
---
-ALTER TABLE `tbl_seccion_regionalizacion`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `tbl_tag`
---
-ALTER TABLE `tbl_tag`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `tbl_tag_producto`
---
-ALTER TABLE `tbl_tag_producto`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `tag_id` (`tag_id`),
-  ADD KEY `producto_id` (`producto_id`);
-
---
--- Indices de la tabla `tbl_textos`
---
-ALTER TABLE `tbl_textos`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `tbl_user`
---
-ALTER TABLE `tbl_user`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `tbl_user_role`
---
-ALTER TABLE `tbl_user_role`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT de las tablas volcadas
+-- Volcado de datos para la tabla `tbl_veterinarias`
 --
 
---
--- AUTO_INCREMENT de la tabla `tbl_error`
---
-ALTER TABLE `tbl_error`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
---
--- AUTO_INCREMENT de la tabla `tbl_establecimiento`
---
-ALTER TABLE `tbl_establecimiento`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT de la tabla `tbl_imagen_ref`
---
-ALTER TABLE `tbl_imagen_ref`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=634;
---
--- AUTO_INCREMENT de la tabla `tbl_metatag`
---
-ALTER TABLE `tbl_metatag`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
---
--- AUTO_INCREMENT de la tabla `tbl_metatag_page`
---
-ALTER TABLE `tbl_metatag_page`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
---
--- AUTO_INCREMENT de la tabla `tbl_notas`
---
-ALTER TABLE `tbl_notas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=125;
---
--- AUTO_INCREMENT de la tabla `tbl_page`
---
-ALTER TABLE `tbl_page`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
---
--- AUTO_INCREMENT de la tabla `tbl_pais`
---
-ALTER TABLE `tbl_pais`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
---
--- AUTO_INCREMENT de la tabla `tbl_permission`
---
-ALTER TABLE `tbl_permission`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
---
--- AUTO_INCREMENT de la tabla `tbl_ppartes_regionalizacion`
---
-ALTER TABLE `tbl_ppartes_regionalizacion`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
---
--- AUTO_INCREMENT de la tabla `tbl_producto`
---
-ALTER TABLE `tbl_producto`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=411;
---
--- AUTO_INCREMENT de la tabla `tbl_producto_contenido`
---
-ALTER TABLE `tbl_producto_contenido`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5537;
---
--- AUTO_INCREMENT de la tabla `tbl_producto_partes`
---
-ALTER TABLE `tbl_producto_partes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
---
--- AUTO_INCREMENT de la tabla `tbl_rel_registros`
---
-ALTER TABLE `tbl_rel_registros`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=109;
---
--- AUTO_INCREMENT de la tabla `tbl_revista`
---
-ALTER TABLE `tbl_revista`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
---
--- AUTO_INCREMENT de la tabla `tbl_seccion`
---
-ALTER TABLE `tbl_seccion`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
---
--- AUTO_INCREMENT de la tabla `tbl_seccion_regionalizacion`
---
-ALTER TABLE `tbl_seccion_regionalizacion`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
---
--- AUTO_INCREMENT de la tabla `tbl_tag`
---
-ALTER TABLE `tbl_tag`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1019;
---
--- AUTO_INCREMENT de la tabla `tbl_tag_producto`
---
-ALTER TABLE `tbl_tag_producto`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=102227;
---
--- AUTO_INCREMENT de la tabla `tbl_textos`
---
-ALTER TABLE `tbl_textos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=512;
---
--- AUTO_INCREMENT de la tabla `tbl_user`
---
-ALTER TABLE `tbl_user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
---
--- AUTO_INCREMENT de la tabla `tbl_user_role`
---
-ALTER TABLE `tbl_user_role`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+INSERT INTO `tbl_veterinarias` (`id`, `cuenta`, `provincia`, `ciudad`, `direccion`, `altura`, `telefono`, `tipo`, `subtipo`, `cond_comercial`, `grupo`, `estado`, `ejecutivo`, `dueno`, `cuit`, `id_cliente`, `email`) VALUES
+(1, 'AGRO ARGENTINA S.H.', 'SANTA FE', 'Avellaneda', 'Calle 102', '246', '03482-482895 // 240552 // 537774', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Andrea Gilardoni', 'Gilardoni, Andrea', '30-71240006-0', 41309, 'agroargentina@playcomla.com.ar'),
+(2, 'AGRO SAN JOSE S.A.', 'BUENOS AIRES', 'CORONEL DORREGO', 'SAN MARTIN', '402', '02921-454339', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Martin Mascarenhas', 'Mascarenhas, Martin', '30-70912380-3', 41029, 'estebanagrosanjosesa@eternet.cc;estebanagrosanjos; martin.mascarenhas@biogenesisbago.com'),
+(3, 'AGRO SEMILLERA VILLA NUEVA S.R.L.', 'CORDOBA', 'VILLA NUEVA', 'Ruta 4 - Km. 3', '', '0353-4910817', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Juan Abba', 'Abba, Juan', '30-63663347-6', 40526, 'asvn@arnetbiz.com.ar'),
+(4, 'AGROBIZ S.R.L.', 'CORRIENTES', 'Saladas', 'Calle trabajador Ferroviario S/Nº', '', '03782-421622    Celu: 03782-1551', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Andrea Gilardoni', 'Gilardoni, Andrea', '30-71451549-3', 41310, 'agrobiz@arnet.com.ar'),
+(5, 'AGROEMPRESA COLON S.A.', 'CORDOBA', 'SINSACATE', 'RUTA NAC. KM. 758,2', '', '03525 444103', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Juan Abba', 'Abba, Juan', '30-65853133-2', 40968, 'miguelmizzau@grupoagroempresa.com.ar'),
+(6, 'AGROEMPRESA SAN FRANCISCO S.A.', 'CORDOBA', 'CNEL. MOLDES', 'AVDA. 9 DE JULIO', '798', '03582-465089', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Luis Fabre', 'Fabre, Luis', '30-68395807-3', 41073, 'lucrecia@agroempresa.com.ar;veterinaria@agroempresa.com.ar;ruben.grivarello@agroempresa.com.ar'),
+(7, 'AGROPECUARIA ALMAFUERTE S.A.', 'ENTRE RIOS', 'PARANA', 'ALMAFUERTE', '69', '0343-4242171', 'CLIENTE', '', '30%', 'CLIENTES MAYORISTAS', 'ACTIVO', 'Joaquín Cabrera', 'Cabrera, Joaquín', '30-70863226-7', 40158, 'agropalmafuerte@arnetbiz.com.ar'),
+(8, 'AGROPECUARIA DEL PARANA S.A.', 'CORRIENTES', 'CORRIENTES', 'INDEPENDENCIA', '4575', '0379-4483281 / cel: 0379-15.4686', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Andrea Gilardoni', 'Gilardoni, Andrea', '30-70748985-1', 40142, 'apcorrientes.ventas@agropdelparana.com.ar; apposadas@arnetbiz.com.ar; administracion@agropdelparana.com.ar'),
+(9, 'AGROPECUARIA LA HUELLA S.A.', 'BUENOS AIRES', 'AZUL', 'AVDA. PIAZZA', '1510', '02281-427275//432590//CEL.-02281', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Emiliano Bellido', 'Bellido, Emiliano', '30-70845858-5', 40785, 'agroplahuella@speedy.com.ar; emiliano.bellido@biogenesisbago.com'),
+(10, 'AGROPECUARIA MERLO S.A.', 'BUENOS AIRES', 'PASO DEL REY', 'BARTOLOME MITRE', '1080', '0237-4627000', 'CLIENTE', '', '25%', 'DISTRIBUIDORES P.A.', 'ACTIVO', 'Guillermo Stutz', 'Stutz, Guillermo', '30-55475246-9', 40803, 'agropecuariamerlo@infovia.com.ar;'),
+(11, 'AGROSERVICIOS DEL NEA S.R.L.', 'MISIONES', 'POSADAS', 'RUTA 12 KM. 5,5 - MERCADO CENTRAL', '', '0376-4482048/ CEL: 0376-15-46436', 'CLIENTE', 'Clientes 20%', '20%', 'VETERINARIAS', 'ACTIVO', 'Andrea Gilardoni', 'Gilardoni, Andrea', '30-70887616-6', 41195, 'agroserviciosdelnea@arnet.com.ar; hilda.agroserviciosdelnea@gmail.com'),
+(12, 'AGROSINSACATE S.A.', 'CORDOBA', 'SINSACATE', 'RUTA 9 KM 757', '', '03525-425560', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Juan Abba', 'Abba, Juan', '30-70894346-7', 41080, 'Info@sincorargentina.com.ar; pamela@sincorargentina.com.ar; alejandro@sincorargentina.com.ar'),
+(13, 'AGROVET INTEGRAL S.R.L.', 'BUENOS AIRES', 'BOLIVAR', 'Belgrano', '153', '02314-420248', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Alfonso Garcia', 'Garcia, Alfonso', '30-65780819-5', 40603, 'agrovetintegral@speedy.com.ar'),
+(14, 'AGROVET VACA RETA DE ZENON A.', 'CORRIENTES', 'GOYA', 'ANGEL SOTO', '160', '03777-422224 /  /', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Joaquín Cabrera', 'Cabrera, Joaquín', '20-16746310-0', 40361, 'vaca_reta@yahoo.com.ar'),
+(15, 'AGROVETERINARIA SUNCHALES DE CHIABRANDO & AMEIGEIR', 'SANTA FE', 'SUNCHALES', 'ZEBALLOS', '401', '03493-420563 // CEL.: 03493-1566', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Juan Abba', 'Abba, Juan', '33-58883796-9', 41121, 'agrovet@suncha-net.com.ar'),
+(16, 'AGUER,  DR. JORGE M.  - "ALIVET"', 'CAPITAL', 'CAPITAL FEDERAL', 'BOLIVAR', '1471', '4362-3048 / 4361-6785 / 4362-331', 'CLIENTE', '', '30%', 'CLIENTES MAYORISTAS', 'ACTIVO', 'Gstutz Capital', 'Capital, Gstutz', '20-10356526-0', 40933, 'alivet@arnet.com.ar;alivet@speedy.com.ar'),
+(17, 'AGUER, DR. MARIO BERNARDO', 'BUENOS AIRES', 'ROJAS', '25 DE MAYO', '551', '02475-462970', 'CLIENTE', 'Clientes 20%', '20%', 'VETERINARIAS', 'ACTIVO', 'Guillermo Stutz', 'Stutz, Guillermo', '20-13814244-3', 40556, 'maguer@clyfer.com.ar;'),
+(18, 'ALCOBEDO JULIO ERNESTO - VETERINARIA ALCOBEDO', 'BUENOS AIRES', 'PEHUAJO', 'HIPOLITO IRIGOYEN', '773', '02396-473193 / CEL: 02396-15 624', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Alfonso Garcia', 'Garcia, Alfonso', '20-22972883-1', 41249, 'veterinaria_alcobedo@speedy.com.ar;  julio.alcobedo@speedy.com.ar'),
+(19, 'ALFARO EDGARDO LUIS', 'ENTRE RIOS', 'GUALEGUAYCHÚ', 'LISANDRO DE LA TORRE', '210', '03446-427116', 'CLIENTE', 'Clientes 20%', '20%', 'VETERINARIAS', 'ACTIVO', 'Joaquín Cabrera', 'Cabrera, Joaquín', '20-10667289-0', 41274, 'ealfaro8@gmail.com'),
+(20, 'ALLEKOTTE, ROMÁN - VETERINARIA CEIBAS', 'ENTRE RIOS', 'CEIBAS', 'RUTA 14, Km. 1', '', '03446-492023 // CEL.: 011-15-540', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Joaquín Cabrera', 'Cabrera, Joaquín', '20-20313727-4', 41267, 'veteciebas@gmail.com;paulakade@gmail.com'),
+(21, 'ALTA NUTRICION S.R.L.', 'TUCUMAN', 'YERBA BUENA', 'AV. ACONQUIJA', '935', '0810-555-2543 Celular: 0381-15-5', 'CLIENTE', '', '25%', 'DISTRIBUIDORES', 'ACTIVO', 'Luis Saravia', 'Saravia, Luis', '30-71236588-5', 41318, 'alif@arnet.com.ar'),
+(22, 'ALVAREZ CASTILLO SANTIAGO Y JOSE MARIA - VET. EL F', 'BUENOS AIRES', 'LAPRIDA', 'AV. SAN MARTIN', '629', '02285-420672/ 02284-15-473025', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Emiliano Bellido', 'Bellido, Emiliano', '30-70882698-3', 41232, 'alvarezcastillos@yahoo.com.ar'),
+(23, 'AMAKER ANA MARIA  - VETERINARIA PIETRONI', 'CORDOBA', 'BRINKMANN', 'Pitt Funes', '729', '03562-480241', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Juan Abba', 'Abba, Juan', '27-06157846-9', 40468, 'jpietroni@hotmail.com'),
+(24, 'AMEIJEIRAS, GUILLERMO JOSÉ', 'BUENOS AIRES', 'AMERICA', 'GRAL. RODRIGUEZ', '32', '02337-452038 // 02392-15441861', 'CLIENTE', 'Clientes 20%', '20%', 'VETERINARIAS', 'ACTIVO', 'Alfonso Garcia', 'Garcia, Alfonso', '20-10838513-9', 41212, 'gasca@jsnet.com.ar'),
+(25, 'AMICO S.A.', 'MENDOZA', 'GODOY CRUZ', 'PASCUAL HUIDOBRO', '1064', '0261-4521258 -5248910/11', 'CLIENTE', 'Clientes 20%', '20%', 'DISTRIBUIDORES', 'ACTIVO', 'Luis Fabre', 'Fabre, Luis', '30-70919013-6', 41239, 'amicocd@amicosa.com.ar'),
+(26, 'ANDRES, JULIÁN - VETERINARIA EL BAGUAL', 'BUENOS AIRES', 'ROBERTS', 'MORENO', '393', '02355-498148 /// 02355-15465601', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Alfonso Garcia', 'Garcia, Alfonso', '20-29197917-4', 41221, 'bagualvet@gmail.com'),
+(27, 'ANGEROSA HUGO EMILIO', 'ENTRE RIOS', 'GUALEGUAYCHU', 'ITUZAINGO', '1173', '03446-437548 /// 03446-15507275', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Joaquín Cabrera', 'Cabrera, Joaquín', '20-10199087-8', 41197, 'veterinariangerosa_@hotmail.com'),
+(28, 'ARAMBURU, J. L. y S. - VETERINARIA URUGUAY S.H.', 'BUENOS AIRES', '9 DE JULIO', 'SAN MARTIN', '1119', '02317-422252 // 4223062//Cel.023', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Alfonso Garcia', 'Garcia, Alfonso', '30-70735710-6', 40326, 'veterinariauruguay@speedy.com.ar; v-uruguay@speedy.com.ar'),
+(29, 'AREVALO, CLAUDIO GUSTAVO', 'BUENOS AIRES', 'LOBOS', 'FORTUNATO J. DIAZ', '1239', '02227-430777 // CEL. 02227-15615', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Guillermo Stutz', 'Stutz, Guillermo', '20-14877647-5', 40740, 'gustavoarevalo_9@hotmail.com;pampavete@yahoo.com.ar;'),
+(30, 'ARGACHA, HIRINSON - AGROVETERINARIA 9 DE JULIO', 'ENTRE RIOS', 'CONCEPCIÓN DEL URUGUAY', '9 DE JULIO', '1016', '03442-423827/427801', 'CLIENTE', 'Clientes 20%', '20%', 'VETERINARIAS', 'ACTIVO', 'Joaquín Cabrera', 'Cabrera, Joaquín', '20-05808556-2', 40143, 'agroveterinaria9dejulio@gmail.com;veterinaria9dejulio@gmail.com;veterinariaargacha@hotmail.com'),
+(31, 'ARIAS,JUAN MATIAS', 'BUENOS AIRES', 'BAIGORRITA', 'SAN MARTÍN', '87', '0236-15-4505408/ 4493103', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Alfonso Garcia', 'Garcia, Alfonso', '20-25150178-6', 41271, 'juanmatiasarias@yahoo.com.ar'),
+(32, 'ASAN, DR.  JOSE ANIBAL - DIST.AGROP. DON ISMAEL', 'SANTA FE', 'TOSTADO', '12 de Octubre', '1390', '03491-470490', 'CLIENTE', 'Clientes 20%', '20%', 'VETERINARIAS', 'ACTIVO', 'Andrea Gilardoni', 'Gilardoni, Andrea', '20-13145039-8', 40568, 'asanagropecuaria@tostado.com.ar'),
+(33, 'ATALAYA VETERINARIA S.H.', 'LA PAMPA', 'INT. ALVEAR', 'Av. Sarmiento', '1054', '02302-481176', 'CLIENTE', 'Clientes 20%', '20%', 'VETERINARIAS', 'ACTIVO', 'Alfonso Garcia', 'Garcia, Alfonso', '30-70909589-3', 40437, 'atalayavet@ginterlife.com.ar'),
+(34, 'BARIDON, MARCELO JULIAN - VETERINARIA COLON', 'ENTRE RIOS', 'VILLAGUAY', 'LEOPOLDO  HERRERA', '877', '03455-421437 / / CEL.: 15-646955', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Joaquín Cabrera', 'Cabrera, Joaquín', '20-18496020-7', 40984, 'baridonmarcelo@hotmail.com'),
+(35, 'BARREÑA GERARDO CESAR', 'BUENOS AIRES', 'SALAZAR', 'San Martín', '32', '02393-492343', 'CLIENTE', 'Clientes 20%', '20%', 'VETERINARIAS', 'ACTIVO', 'Alfonso Garcia', 'Garcia, Alfonso', '20-14595168-3', 40604, 'vetbarrena@monesnet.com.ar'),
+(36, 'BAZA, DR.LUIS D. - VET.EL RODEO', 'TUCUMAN', 'SAN M. DE TUCUMAN', 'SANTIAGO DEL ESTERO', '1380', '0381-4236283 / Cel 0381-15-46382', 'CLIENTE', 'Clientes 20%', '20%', 'VETERINARIAS', 'ACTIVO', 'Luis Saravia', 'Saravia, Luis', '20-11238045-1', 40647, 'luisdavidbaza@hotmail.com; adrianapetrabissi@yahoo.com.ar; distribuidorabaza@yahoo.com.ar'),
+(37, 'BELLO, JUAN ORLANDO', 'ENTRE RIOS', 'GUALEGUAY', 'SAN ANTONIO NORTE', '776', '03444-423097 /  /  03444-427394', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Joaquín Cabrera', 'Cabrera, Joaquín', '20-12896727-4', 40321, 'juanbello@arnet.com.ar'),
+(38, 'BELTRAMO, DIEGO ALFREDO', 'CORDOBA', 'SATURNINO MARÍA LASPIUR', 'CHACO', '163', '03533-491026', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Juan Abba', 'Abba, Juan', '20-22681649-7', 41074, 'dbeltramo@hotmail.com'),
+(39, 'BELTRAMONE J. C. - AGROVETERINARIA EL SOL', 'CORDOBA', 'SAN FRANCISCO', 'BVAR.  ROCA', '2875', '03564-429612 /  /', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Juan Abba', 'Abba, Juan', '20-08277626-6', 40362, 'ecbeltramone@gmail.com;agroveterinariaelsol@gmail.com'),
+(40, 'BENAY, CARLOS JOSÉ', 'ENTRE RIOS', 'SAN SALVADOR', 'AV. ENTRE RIOS', '345', '0345-154283335', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Joaquín Cabrera', 'Cabrera, Joaquín', '20-17072231-1', 40735, 'Veterinariabenay1@hotmail.com'),
+(41, 'BENIGNI,  e  INSAUGARAT  "CLINICA VET. EL RODEO"', 'BUENOS AIRES', 'SALADILLO', 'AVDA. MORENO', '3592', '02344-453270 ///CEL 02345-156507', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Emiliano Bellido', 'Bellido, Emiliano', '30-62937362-0', 40994, 'clinicavetelrodeo@hotmail.com'),
+(42, 'BERETERBIDE, DR. JORGE M.  - VETERINARIA RIVADAVIA', 'BUENOS AIRES', 'CARMEN DE ARECO', 'SAN MARTIN', '633', '02273-442554 // CEL.02325-15-658', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Guillermo Stutz', 'Stutz, Guillermo', '20-04923043-6', 40159, 'diegomb@carmendearecoonline.com.ar;'),
+(43, 'BERETERBIDE, LUIS M.M. - VETERINARIA SAN LUIS', 'BUENOS AIRES', 'MERCEDES', 'Calle 28', '562', '02324-426574', 'CLIENTE', 'Clientes 20%', '20%', 'VETERINARIAS', 'ACTIVO', 'Guillermo Stutz', 'Stutz, Guillermo', '20-04912379-6', 40654, 'vetsanluis1@hotmail.com;'),
+(44, 'BERTACCA RAUL ANDRES', 'SANTA CRUZ', 'RIO GALLEGOS', 'ALBERDI', '334', '02966-420716 / 428760', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Abel Arguelles', 'Arguelles, Abel', '20-11502782-5', 40939, 'bertaccasa@speedy.com.ar'),
+(45, 'BERTHE MARIANO SANTIAGO', 'BUENOS AIRES', 'ROBERTS', 'SAN MARTIN', '365', '02355-498064 // CEL.: 02355-1557', 'CLIENTE', 'Clientes 20%', '20%', 'VETERINARIAS', 'ACTIVO', 'Alfonso Garcia', 'Garcia, Alfonso', '20-20514565-7', 41270, 'vetroberts@yahoo.com.ar'),
+(46, 'BORDERES, DR. GERMAN', 'CORRIENTES', 'CURUZU CUATIA', 'GOBERNADOR GOMEZ', '767', '03774-423917// 422989//GB 423-27', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Joaquín Cabrera', 'Cabrera, Joaquín', '20-10485340-5', 40346, 'vetborderes@acoanet.com;curuzu@vetborderes.com.ar'),
+(47, 'BOTSCH ENRIQUE ANGEL, VETERINARIA EL PALENQUE', 'BUENOS AIRES', 'MONTE', 'ALEM', '400', '02271-442962 // CEL.:02226-15605', 'CLIENTE', 'Clientes 20%', '20%', 'VETERINARIAS', 'ACTIVO', 'Guillermo Stutz', 'Stutz, Guillermo', '20-16963664-9', 41265, 'vetbotsch@hotmail.com;'),
+(48, 'BOZZETTI, JUAN CARLOS "VET. CHACABUCO"', 'BUENOS AIRES', 'CHACABUCO', 'AVDA. GARAY', '159', '02352-450565 /  /', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Guillermo Stutz', 'Stutz, Guillermo', '20-13619850-6', 40952, 'carlosbozzetti@hotmail.com.ar;'),
+(49, 'BRESCIA y DE APELLANIZ  - VETERINARIA SAN AGUSTIN', 'BUENOS AIRES', 'RAUCH', '9 DE JULIO', '109', '02297-442025 /  /', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Emiliano Bellido', 'Bellido, Emiliano', '30-66725138-5', 40951, 'vetsanagustin@yahoo.com.ar; roberto.onreita@yahoo.com.ar; emiliano.bellido@biogenesisbago.com'),
+(50, 'BRUNI LUIS MARIA', 'BUENOS AIRES', 'BENITO JUAREZ', 'CONSTITUCION', '277', '02292-451579 / CEL: 02281-15-530', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Martin Mascarenhas', 'Mascarenhas, Martin', '20-10570946-4', 41185, 'luismbruni@hotmail.com; martin.mascarenhas@biogenesisbago.com'),
+(51, 'BUSTAMANTE, ALDO R.  - DISTRIBUIDORA EL CALDEN', 'BUENOS AIRES', 'PEHUAJO', 'HIPOLITO IRIGOYEN', '980', '02396-470259 /  /CEL. 02396-15-6', 'CLIENTE', 'Clientes 20%', '20%', 'DISTRIBUIDORES P.A.', 'ACTIVO', 'Alfonso Garcia', 'Garcia, Alfonso', '20-17919736-8', 40958, 'elcalden04@speedy.com.ar'),
+(52, 'BUSTAMANTE, GUSTAVO RAUL - VET.DON BRAULIO', 'JUJUY', 'SAN SALVADOR DE JUJUY', 'LA MADRID', '132', '0388-4234262  // celu 03886-8689', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Luis Saravia', 'Saravia, Luis', '20-13729036-8', 40148, 'vetdonbraulio@hotmail.com'),
+(53, 'BUSTAMANTE, SILVIA M. - DISTRIBUIDORA TARAZI', 'MENDOZA', 'GODOY CRUZ', 'PASO DE LOS ANDES', '203', '0261-4282488/4280959-CEL. 0261-1', 'CLIENTE', '', '25%', 'DISTRIBUIDORES', 'ACTIVO', 'Luis Fabre', 'Fabre, Luis', '27-06399512-1', 40160, 'distribuidora@tarazi.com.ar;ventas@tarazi.com.ar;eduardo@tarazi.com.ar'),
+(54, 'CABRERA RICARDO.O.VET EL RODEO', 'CHACO', 'RESISTENCIA', 'JUAN D. PERÓN', '717', '0362-4429304 / 4432077 /', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Andrea Gilardoni', 'Gilardoni, Andrea', '20-08438648-1', 40379, 'riocabrera@yahoo.com.ar'),
+(55, 'CAMINOS DISTRIBUCIONES S.R.L.', 'BUENOS AIRES', 'VILLA BALLESTER', 'YAPEYÚ', '4704', '4738-1973/4738-1113 /CELU MARIO', 'CLIENTE', '', '25%', 'DISTRIBUIDORES', 'ACTIVO', 'Guillermo Stutz', 'Stutz, Guillermo', '30-71161540-3', 41254, 'caminosdistribuciones@hotmail.com;'),
+(56, 'CAMPORA , DRA. EDELMA  M.', 'BUENOS AIRES', 'RAWSON', 'AV.VIEYTES S/N', '', '02352-491693', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Guillermo Stutz', 'Stutz, Guillermo', '23-11986534-4', 40973, 'edelma@gmail.com;'),
+(57, 'CAMPOSUR S.R.L.', 'CHUBUT', 'TRELEW', 'CHILE', '32', '0280-4436259 // CEL.: 15415705', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Abel Arguelles', 'Arguelles, Abel', '30-62335937-5', 40941, 'camposurtrelew@speedy.com.ar'),
+(58, 'CAÑAS CEREALES SRL', 'SANTA FE', 'VILLA CAÑAS', 'CALLE 58 Y AV. 49', '', '03462-452322 / 03462-15-579060', 'CLIENTE', 'Clientes 20%', '20%', 'VETERINARIAS', 'ACTIVO', 'Luis Fabre', 'Fabre, Luis', '30-67478666-9', 41248, 'ccereales@intertelsa.com.ar; laballay@criaplus.com.ar'),
+(59, 'CARBALLO, A. R. y MAZZOCCHI, V. J.S.H. - VETERINAR', 'BUENOS AIRES', 'MERCEDES', 'CALLE 2 entre 103 y 105', '', '02324-432911 // CEL.:02324-15583', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Guillermo Stutz', 'Stutz, Guillermo', '30-70934489-3', 41035, 'vtlamarca@yahoo.com.ar;'),
+(60, 'CARRERAS, D. N. -  VETERINARIA RÍO SECO', 'CORDOBA', 'VILLA DE MARIA DE RIO SECO', 'SARMIENTO esq.  RECONQUISTA', '', '03522-422194/ CEL.03525-15457036', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Juan Abba', 'Abba, Juan', '20-13676258-4', 40465, 'danielncarreras@gmail.com'),
+(61, 'CASTAGNINO, DR. O.M. - AGROVETERINARIA DEL OESTE', 'LA PAMPA', 'CATRILO', 'AV. VIALE', '539', '02954-491293 /  /', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Alfonso Garcia', 'Garcia, Alfonso', '20-10140986-5', 40334, 'agrovetoeste@gmail.com; omcastagnino@gmail.com;agrovetoeste2@gmail.com;'),
+(62, 'CASTIGLIONE MARIA LUISA - VETERINARIA EL RODEO', 'ENTRE RIOS', 'GUALEGUAYCHU', 'URQUIZA', '2092', '03446-426046 /CEL: 03446-15 6350', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Joaquín Cabrera', 'Cabrera, Joaquín', '27-27642521-3', 41253, 'lcastiglione@veterinariaelrodeo.com.ar'),
+(63, 'CENTRO GANADERO S.R.L.', 'SALTA', 'SALTA', 'AV. PARAGUAY', '2010', '0387-4234596 /// 0387-15.6842402', 'CLIENTE', '', '30%', 'CLIENTES MAYORISTAS', 'ACTIVO', 'Luis Saravia', 'Saravia, Luis', '30-70823215-3', 40145, 'centroganadero@arnetbiz.com.ar;cgsrlcompras@yahoo.com.ar'),
+(64, 'CESPEDES, NORBERTO JOSÉ', 'BUENOS AIRES', 'CASTELLI', '25 DE MAYO', '186', '02245-480221 // CEL.: 0241-15-44', 'CLIENTE', 'Clientes 20%', '20%', 'VETERINARIAS', 'ACTIVO', 'Emiliano Bellido', 'Bellido, Emiliano', '23-11209954-9', 40318, 'cespedes@cuecca.com.ar; martin.mascarenhas@biogenesisbago.com'),
+(65, 'CHIARAVALLE M. A. - VETERINARIA EL HORNERO', 'BUENOS AIRES', 'LUJAN', 'LAVALLE', '512', '02323-423733 // ( Martin)', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Guillermo Stutz', 'Stutz, Guillermo', '23-10200043-9', 40369, 'vethornero@speedy.com.ar;'),
+(66, 'CIMINARI, DR. O. - VETERINARIA VILLEGAS', 'BUENOS AIRES', 'TRENQUE LAUQUEN', 'BV.VILLEGAS', '793', '02392-431582 /  / 431578Agron', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Alfonso Garcia', 'Garcia, Alfonso', '20-08279224-5', 40633, 'ciminariveterinaria@cetl.com.ar'),
+(67, 'CIVIDINI, DR. DARDO D. "VET.CHARRUA"', 'CORDOBA', 'VILLA MARIA DE RIO SECO', 'VICENTE PEÑALOSA', '515', '03522-422176/  /', 'CLIENTE', 'Clientes 20%', '20%', 'VETERINARIAS', 'ACTIVO', 'Juan Abba', 'Abba, Juan', '27-13537648-0', 40945, 'charruasvet@arnet.com.ar'),
+(68, 'CLINICA VETERINARIA INTEGRAL S.R.L.', 'BUENOS AIRES', 'BOULOGNE', 'FONDO DE LA LEGUA', '751', '4766-6852', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Guillermo Stutz', 'Stutz, Guillermo', '30-59374488-0', 40167, 'ventas@vetintegral.com.ar;'),
+(69, 'COMERCIAL 6 DE AGOSTO S.A.', 'SANTA FE', 'RAFAELA', 'URQUIZA', '41', '03492-421000  CEL:03492-15-61099', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Juan Abba', 'Abba, Juan', '30-71403421-5', 41305, '6deagosto@arnetbiz.com.ar'),
+(70, 'COMERCIAL NOROESTE DE RONALD FERNANDEZ', 'CORDOBA', 'RIO CUARTO', 'AYACUCHO', '2050', '0358-4647723 / 4646223 //15.6018', 'CLIENTE', '', '30%', 'DISTRIBUIDORES', 'ACTIVO', 'Luis Fabre', 'Fabre, Luis', '24-11481866-2', 40338, 'adminis@comercialnoroeste.com.ar'),
+(71, 'COMETTO ELENA BEATRIZ - AGROVET. CORRIENTES', 'CORDOBA', 'POZO DEL MOLLE', 'Independencia', '159', '0353-4830100', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Juan Abba', 'Abba, Juan', '27-14443797-2', 40532, 'alejandra_cometto@hotmail.com'),
+(72, 'COOP.AGRARIA DE 3 ARROYOS LTDA', 'BUENOS AIRES', 'TRES ARROYOS', 'SAN  MARTIN', '1050', '2983-431338 / 39/40/41/42', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Martin Mascarenhas', 'Mascarenhas, Martin', '30-52611139-3', 40992, 'ferreteria@agraria.com.ar'),
+(73, 'COOP.AGRICOLA GAN.DE MORTEROS  LTDA.', 'CORDOBA', 'MORTEROS', 'AV. EL LIBERTADOR', '601', '03562-422412 / 422626 / 422127', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Juan Abba', 'Abba, Juan', '30-50812749-5', 40351, 'veterinaria@cagem.com.ar'),
+(74, 'COOP.AGROP.DE BOLIVAR LTDA.', 'BUENOS AIRES', 'BOLIVAR', 'Avda. General Paz', '374', '02314-420310/420311', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Alfonso Garcia', 'Garcia, Alfonso', '30-51145802-8', 40652, 'coopvete@speedy.com.ar'),
+(75, 'COOP.AGROP.GRAL.SAN MARTIN DE CNEL.SUAREZ', 'BUENOS AIRES', 'CNEL.SUAREZ', 'MITRE Y GARIBALDI', '1487', '02926-421015 /  /', 'CLIENTE', 'Clientes 20%', '20%', 'VETERINARIAS', 'ACTIVO', 'Alfonso Garcia', 'Garcia, Alfonso', '30-53295383-5', 40327, 'veterinaria@coopsan.com.ar'),
+(76, 'COOP.FED.AGR.GAN. DE DIAMANTE LTDA.', 'ENTRE RIOS', 'DIAMANTE', 'Pedro Serrano', '252', '0343-4981235', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Joaquín Cabrera', 'Cabrera, Joaquín', '30-52262405-1', 40433, 'carlosalarcon@cooperativadiamante.com.ar'),
+(77, 'COOP.GANAD.AGRICOLA y de CONSUMO PORTEÑA LTDA.', 'CORDOBA', 'PORTEÑA', 'SAN MARTIN', '602', '03564-450011//012', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Juan Abba', 'Abba, Juan', '30-50872851-0', 40258, 'atrossero@coopportena.com.ar; gisela756@hotmail.com; ocarignano@hotmail.com; coopganadera@dataco34.com.ar; veterinariacgacp@coop'),
+(78, 'COOP.PROV.VET.PAMPA HUMEDA LTD', 'CAPITAL', 'CAPITAL FEDERAL', 'GUEVARA', '1043', '4553-6089 /// 6086', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Guillermo Stutz', 'Stutz, Guillermo', '30-63197101-2', 40315, 'pampahumeda@fibertel.com.ar;'),
+(79, 'COOPERATIVA AGRICOLA GANADERA Y DE CONSUMO FREYRE', 'CORDOBA', 'FREYRE', 'BV. BELGRANO', '74', '03564-461771 - 461018 // 1541797', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Juan Abba', 'Abba, Juan', '30-50898219-0', 40295, 'maurocambicha@hotmail.com; carlosboscacci@yahoo.com.ar'),
+(80, 'COOPERATIVA LA GANADERA GRAL.RAMIREZ AGROP. DE CON', 'ENTRE RIOS', 'GRAL. RAMIREZ', 'BELGRANO', '229', '0343-4901084', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Joaquín Cabrera', 'Cabrera, Joaquín', '33-53332811-9', 40140, 'info@laganadera.net.ar;veterinaria@laganadera.net.ar'),
+(81, 'CORDOBA, EDUARDO CESAR  "ASINVET"', 'BUENOS AIRES', 'LA PLATA', '25', '1284', '0221-457.3853/ 4534261', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Guillermo Stutz', 'Stutz, Guillermo', '20-10218469-7', 40175, 'informacion@asinvet.com.ar; daniela@asinvet.com.ar;'),
+(82, 'CRIOGENICA S.R.L.', 'TUCUMAN', 'SAN MIGUEL DE TUCUMAN', 'DIEGO DE VILLARROEL', '256', '0381-4282437 // 15-4187915', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Luis Saravia', 'Saravia, Luis', '30-70852339-5', 41078, 'administracion_criogenica@arnetbiz.com.ar'),
+(83, 'CUESTA, DR. CARLOS - AGROVETERINARIA EL ÑANDU', 'ENTRE RIOS', 'CONCORDIA', 'URQUIZA', '907', '0345-4217831 / 4213670 /', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Joaquín Cabrera', 'Cabrera, Joaquín', '20-08039754-3', 40354, 'suc.ccuesta@gmail.com'),
+(84, 'CURUTCHET, JORGE O."VET.EL MERIDIANO"', 'BUENOS AIRES', 'PELLEGRINI', 'RIVADAVIA', '300', '02392-498180 /  /', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Alfonso Garcia', 'Garcia, Alfonso', '20-05067848-3', 40366, 'jcurutchet@infovia.com.ar;jcurutchet@soon.com.ar'),
+(85, 'CUSINI, F. y  HAILE, J. W., S de H. - VETERINARIA', 'BUENOS AIRES', 'VERONICA', '30', '1643', '02221-480.588///0221-15-428.1885', 'CLIENTE', 'Clientes 20%', '20%', 'VETERINARIAS', 'ACTIVO', 'Guillermo Stutz', 'Stutz, Guillermo', '30-69140024-3', 40172, 'lastahonas@veronicavirtual.com.ar;'),
+(86, 'DE EZCURRA M. y CERDAN W. J. S.H.- APEROS PILAR', 'BUENOS AIRES', 'PILAR', '11 DE SETIEMBRE', '985', '0230-4426420', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Guillermo Stutz', 'Stutz, Guillermo', '30-70978548-2', 41144, 'aperospilar@yahoo.com.ar;'),
+(87, 'DELYAR S.A.', 'CORDOBA', 'SAN FRANCISCO', 'BOULEVARD ROCA', '3103', '03564-437047/436226 - Cordoba 03', 'CLIENTE', '', '30%', 'DISTRIBUIDORES', 'ACTIVO', 'Juan Abba', 'Abba, Juan', '30-70812398-2', 40458, 'rre@delyar.com.ar; gcanello@delyar.com.ar; emagni@delyar.com.ar'),
+(88, 'DIAZ, JUAN ALBERTO  - VETERINARIA CUMELEN', 'BUENOS AIRES', 'SUIPACHA', 'PADRE BRADY', '214', '2324-481437', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Guillermo Stutz', 'Stutz, Guillermo', '20-22016925-2', 40325, 'vetcumelen@gmail.com.;'),
+(89, 'DROVET  S.A.', 'SANTA FE', 'ROSARIO', 'RICCHIERI', '155', '0341-4301036', 'CLIENTE', '', '30%', 'CLIENTES MAYORISTAS', 'ACTIVO', 'Luis Fabre', 'Fabre, Luis', '30-58698835-9', 40169, 'gerencia@drovet.com.ar;drovet@drovet.com.ar;fissa@arnet.com.ar'),
+(90, 'ECHAGUE, DR. DIEGO MIGUEL', 'BUENOS AIRES', 'LINCOLN', 'CASEROS', '162', '02355-431626 /// CEL.: 15-572429', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Alfonso Garcia', 'Garcia, Alfonso', '23-13211054-9', 40555, 'vetechague@fibertel.com.ar'),
+(91, 'EDUARDO RIEGLER HORACIO', 'BUENOS AIRES', 'GRAL. MADARIAGA', 'Martinez Guerrero', '1646', '02267-15-635716', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Emiliano Bellido', 'Bellido, Emiliano', '20-10586952-6', 40662, ''),
+(92, 'EKINOS - DISTRIBUIDORA SAN JAVIER S.R.L.', 'BUENOS AIRES', 'MARTINEZ', 'RIO DE JANEIRO', '1360', '011-4836-1806', 'CLIENTE', '', '25%', 'DISTRIBUIDORES P.A.', 'ACTIVO', 'Guillermo Stutz', 'Stutz, Guillermo', '30-66261449-8', 40609, 'leandro@ekinos.com.ar;'),
+(93, 'EL ARRIERO S.R.L', 'CORDOBA', 'LA CARLOTA', 'HIPOLITO YRIGOYEN', '675', '03584-421858 // CEL.: 0358-15-54', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Luis Fabre', 'Fabre, Luis', '30-70707349-3', 41088, 'elarrierolc@yahoo.com.ar;martinassoalice@hotmail.com'),
+(94, 'EL TORDO S.A.', 'CORDOBA', 'HUINCA RENANCÓ', 'COLON', '700', '02336-494600//CEL. 02302-1545702', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Luis Fabre', 'Fabre, Luis', '30-71150414-8', 41292, 'administracionandrea@agroveteltordo.com.ar; administracionnilda@agroveteltordo.com.ar'),
+(95, 'EL TORITO S.A.', 'SANTA FE', 'VERA', 'AMEGHINO 247 GNL 7798199280022', '', '03483-420238 / 420410/ 4327-0932', 'CLIENTE', '', '30%', 'DISTRIBUIDORES', 'ACTIVO', 'Gerencia Ventas Local', 'Ventas Local, Gerencia', '33-56290538-9', 40677, 'eltoritoba2@speedy.com.ar; eltorito.vera@gmail.com'),
+(96, 'ELENA MARCELO FABIAN - VETERINARIA EL ESTRIBO', 'CORDOBA', 'DEAN FUNES', 'INDEPENDENCIA', '63', '03521-420970', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Juan Abba', 'Abba, Juan', '20-18365932-5', 40653, 'vetelena2002@yahoo.com.ar'),
+(97, 'ENRIQUE M BAYA CASAL S.A.', 'BUENOS AIRES', 'BUENOS AIRES', '', '', '4547-8200', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Alfonso Garcia', 'Garcia, Alfonso', '30-60741325-4', 41231, 'bayacasalvet@speedy.com.ar; juan@ebayacasal.com.ar'),
+(98, 'ERBITTI,  MANUEL ANIBAL -AGROVET. ELTALERO', 'BUENOS AIRES', 'LAPRIDA', 'AVDA. SAN MARTÍN', '438', '02285-420611', 'CLIENTE', 'Clientes 20%', '20%', 'VETERINARIAS', 'ACTIVO', 'Emiliano Bellido', 'Bellido, Emiliano', '20-05351579-8', 40705, 'eltalero@laprida.net;mariaeltalero@laprida.net; emiliano.bellido@biogenesisbago.com'),
+(99, 'ERNESTO Y HORACIO SCHANG S.R.L.', 'BUENOS AIRES', 'TANDIL', '', '', '0249-4420537 // CEL. 0249 15 453', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Joaquín Cabrera', 'Cabrera, Joaquín', '30-60738431-9', 40638, 'ventastandil@agrovetschang.com.ar;agrovetschang@speedy.com.ar;admtandil@agrovetschang.com.ar,ventasbsas@agrovetschang.com.ar'),
+(100, 'ERRICO, RUBEN CARLOS - VETERINARIA LA RURAL', 'BUENOS AIRES', '25 DE MAYO', 'CALLE 9', '1023', '02345-465858 CEL.: 15-668756', 'CLIENTE', 'Clientes 20%', '20%', 'VETERINARIAS', 'ACTIVO', 'Emiliano Bellido', 'Bellido, Emiliano', '20-14736208-1', 41135, 'rerrico@speedy.com.ar; emiliano.bellido@biogenesisbago.com'),
+(101, 'ESPERANZA DISTRIBUCIONES S.R.L', 'SANTA FE', 'ESPERANZA', 'Bligadier Lopez', '25', '03496-422100 // 426815', 'CLIENTE', '', '30%', 'DISTRIBUIDORES', 'ACTIVO', 'Juan Abba', 'Abba, Juan', '30-61948480-7', 40627, 'cevet@arnetbiz.com.ar'),
+(102, 'ETCHEVERS, BERNARDO A. - AGROVET.SAN RAMON', 'BUENOS AIRES', 'CAÑUELAS', 'SAN MARTIN', '722', '02226-421953 /// CEL.: 02226-15-', 'CLIENTE', 'Clientes 20%', '20%', 'VETERINARIAS', 'ACTIVO', 'Guillermo Stutz', 'Stutz, Guillermo', '20-06154685-6', 40156, 'baetc@hotmail.com;'),
+(103, 'FAGE, MARCELO J. " VET. SAN IGNACIO"', 'BUENOS AIRES', 'HENDERSON', 'ALBERDI (esq. San Martin)', '305', '02314-452109 // Cel.02314-156253', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Alfonso Garcia', 'Garcia, Alfonso', '20-10257130-5', 40982, 'mfage@hcnet.com.ar'),
+(104, 'FARMVET S.A.', 'BUENOS AIRES', 'SAN ISIDRO', 'DIEGO CARMAN', '222', '4732-2909', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Guillermo Stutz', 'Stutz, Guillermo', '30-59941297-9', 40168, 'farmvet@arnet.com.ar;farmvet@arnetbiz.com.ar;'),
+(105, 'FERMIN OSCAR DEL PAPA S.A.', 'CHUBUT', 'COMODORO RIVADAVIA', '13 DE DICIEMBRE', '369', '0297-4473170', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Abel Arguelles', 'Arguelles, Abel', '30-70738076-0', 40906, 'ferminodelpapa@infovia.com.ar'),
+(106, 'FERMIN OSCAR DEL PAPA S.A. - (ISLA)', '', 'RIO GRANDE', 'BERTA WEBER', '79', '0297-4473170', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Abel Arguelles', 'Arguelles, Abel', '30-70738076-0', 41011, 'ferminodelpapa@speedy.com.ar'),
+(107, 'FERRER, LILIAN RAQUEL - C & N DISTRIBUCIONES', 'TUCUMAN', 'SAN MIGUEL DE TUCUMAN', 'ENTRE RIOS', '387', '0381-422-7364/421-4388', 'CLIENTE', 'Clientes 20%', '20%', 'VETERINARIAS', 'ACTIVO', 'Luis Saravia', 'Saravia, Luis', '27-13061077-9', 40317, 'cyndistribuciones@hotmail.com'),
+(108, 'FINELLI, JUAN CARLOS - PROD.VETERINARIOS', 'CORDOBA', 'RIO CUARTO', 'JOSE MANUEL ESTRADA', '1137', '0358- 4652743/ 4622914', 'CLIENTE', 'Clientes 20%', '20%', 'DISTRIBUIDORES P.A.', 'ACTIVO', 'Luis Fabre', 'Fabre, Luis', '20-06602846-2', 40543, 'jcfinelli@jcfinelli.com.ar'),
+(109, 'FOGONVET S.R.L.', 'BUENOS AIRES', 'BURZACO', 'EL VAPOR', '111', '4238-0719//0279', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Guillermo Stutz', 'Stutz, Guillermo', '30-70825147-6', 40161, 'cspirito@agroelfogon.com.ar;fogon@speedy.com.ar;'),
+(110, 'FONTANA, DRA. MARIA L.C. de  "Agropecuaria NORTE"', 'CHACO', 'GRAL. SAN MARTIN', 'AV ING MAÑANEZ', '674', '03725-421097 /  /', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Andrea Gilardoni', 'Gilardoni, Andrea', '27-18115993-1', 40359, 'agropecuaria_norte@yahoo.com.ar'),
+(111, 'GABUTTI FRANCISCO J. Y GABUTTI HECTOR M. S.H', 'SAN LUIS', 'VILLA MERCEDES', '25 DE MAYO', '642', '02657-429769 CEL: 02657-15524227', 'CLIENTE', '', '25%', 'VARIOS OTROS', 'ACTIVO', 'Luis Fabre', 'Fabre, Luis', '30-71106995-6', 41317, 'agroveterinariavetama@hotmail.com; fjgabutti@hotmail.com'),
+(112, 'GARAT JUAN PABLO - VETERINARIA 9 DE JULIO', 'ENTRE RIOS', 'CHAJARÍ', '9 DE JULIO Y CORDOBA', '', '03456-425061 / 03456-15-404296', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Joaquín Cabrera', 'Cabrera, Joaquín', '20-20971590-3', 41230, 'vet9dejulio@hotmail.com;'),
+(113, 'GARCIA,  DR. R. R. - AGRO-VETERINARIA "SAN MARTIN"', 'CORRIENTES', 'CURUZU CUATIA', 'BERÓN DE ASTRADA', '1555', '03774-423390 / 424540 /03777-423', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Joaquín Cabrera', 'Cabrera, Joaquín', '20-08364442-8', 40979, 'Gonzalo.garcia@agrovetsanmartin.com; Conrado.molina@agrovetsanmartin.com'),
+(114, 'GARCÍA,  MARIANA DEL CARMEN - VETERINARIA JAUKE', 'BUENOS AIRES', 'LAS FLORES', 'ALMIRANTE BROWN', '345', '02244-444844 //15-468525/15-4685', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Emiliano Bellido', 'Bellido, Emiliano', '27-28423332-3', 41219, 'jauke@hotmail.com; emiliano.bellido@biogenesisbago.com'),
+(115, 'GARCIA, DR. JORGE ALBERTO - AGROVET. JOVITA', 'CORDOBA', 'JOVITA', 'DIAGONAL ESQUIVEL HUERGO', '137', '03385-498405', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Luis Fabre', 'Fabre, Luis', '20-08401991-8', 40605, 'agrovetjovita@yahoo.com.ar'),
+(116, 'GARCIA, OMAR MANUEL - "VETERINARIA  RAFAELA"', 'SANTA FE', 'RAFAELA', 'FRANCISCO PERETTI', '795', '03492-422044 Cel: 03492-15-66760', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Juan Abba', 'Abba, Juan', '20-11784722-6', 40166, 'garciaezequiel@veterinariarafaela.com.ar, tassoniguillermo@veterinariarafaela.com.ar'),
+(117, 'GASPARI , DR. JOSE A. CLIÍNICA VETERINARIA', 'CHUBUT', 'RIO MAYO', 'Sarmiento', '748', '02903-420036//CEL.0297-156244100', 'CLIENTE', 'Clientes 20%', '20%', 'VETERINARIAS', 'ACTIVO', 'Abel Arguelles', 'Arguelles, Abel', '20-07796582-4', 40527, 'veterinariagaspari@hotmail.com; veterinariagaspari@hotmail.com'),
+(118, 'GASTELLU, ESTEBAN SEBASTIÁN', 'BUENOS AIRES', 'BARADERO', 'SAN MARTIN', '2025', '03329-480923 // CEL.:03329-15-52', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Guillermo Stutz', 'Stutz, Guillermo', '20-11996302-9', 41278, 'veterinariagastellu@yahoo.com.ar;vetgastellupecos@hotmail.com;vetgastellupecos@hotmail.com;'),
+(119, 'GATTI ESTEBAN MARIO', 'BUENOS AIRES', 'TRES LOMAS', 'SAN MARTIN', '77', '02394-420895  // CEL.: 02392-155', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Alfonso Garcia', 'Garcia, Alfonso', '20-23610695-1', 41115, 'estebantetegatti@yahoo.com.ar;veterinariagatti@inter3l.com.ar;gattiveterinaria@hotmail.com'),
+(120, 'GHIO, DR.  LUIS ALBERTO', 'BUENOS AIRES', 'AMÈRICA', 'VIAMONTE', '450', '02337-453023', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Alfonso Garcia', 'Garcia, Alfonso', '20-17374504-5', 40450, 'guio@jsnet.com.ar'),
+(121, 'GHISIGLIERI, DR. HECTOR A.  "VETERINARIA  RODEO"', 'CORDOBA', 'COLONIA CAROYA', 'UDINE', '168', '03525-466441 /  / CEL: 03525-156', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Juan Abba', 'Abba, Juan', '20-13408965-3', 40343, 'rodeoveterinaria@hotmail.com'),
+(122, 'GOMEZ VILLAN JUAN MANUEL - BIOMA DESARROLLOS AGROP', 'CORDOBA', 'SALDAN', 'LOTE 3 MANZANA 2 - Bº PRADO DE LA VILLA', '', '0351-4555256/ CEL 0351-156144848', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Juan Abba', 'Abba, Juan', '20-25610676-1', 41142, 'jmgomvi@hotmail.com'),
+(123, 'GONZALEZ, DR. FABIAN J. -  VETERINARIA NIAGARA', 'CORDOBA', 'CAÑADA DE LUQUE', 'Calle Pública', 'S/N', '03525-495018', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Juan Abba', 'Abba, Juan', '23-17971947-9', 40534, 'fabian-gonzalez-24@hotmail.com'),
+(124, 'GRASSI, OSCAR M. - VETERINARIA EL REGRESO', 'BUENOS AIRES', 'DUDIGNAC', 'AVDA. SARALEGUI', '297', '02317-492065//492209 // CEL.0234', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Alfonso Garcia', 'Garcia, Alfonso', '20-10931768-4', 40781, 'oscarngrassi@yahoo.com.ar'),
+(125, 'GRUPO AGROS FORMOSA S.A.', 'FORMOSA', 'FORMOSA', 'CORRIENTES', '795', '0370-4429990', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Andrea Gilardoni', 'Gilardoni, Andrea', '30-70767140-4', 40858, 'hcastro@agrosoluciones.com.ar'),
+(126, 'HEILAND EDUARDO ALBERTO  - LA NUEVA FUSTA', 'BUENOS AIRES', 'NECOCHEA', 'CALLE 50', '2966', '02262-435544 / 435544', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Emiliano Bellido', 'Bellido, Emiliano', '20-13601761-7', 40319, 'lanueva_fusta@speedy.com.ar; emiliano.bellido@biogenesisbago.com'),
+(127, 'HOJOBAR S.A.', 'CAPITAL', 'CAPITAL FEDERAL', '', '', '4942-5521//4942-5019//4308-0523-', 'CLIENTE', '', '30%', 'CLIENTES MAYORISTAS', 'ACTIVO', 'Gerencia Ventas Local', 'Ventas Local, Gerencia', '30-67596379-3', 40967, 'veterinaria@campoyasociados.com.ar; bartolo@campoyasociados.com.ar; josedecarabassa@campoyasociados.com.ar'),
+(128, 'HUGUENINE, EMILIO EDUARDO', 'SAN LUIS', 'SAN LUIS', 'BOLIVAR', '1234', '0266-4423646 / Cel: 2664707983', 'CLIENTE', '', '25%', 'BIOGENESIS BAGO', 'ACTIVO', 'Luis Fabre', 'Fabre, Luis', '20-23947734-9', 41298, 'emilioh@savsl.com.ar'),
+(129, 'INSUPEC S.A.', 'SANTA FE', 'RAFAELA', 'BV. LEHMANN', '601', '03492-422299 //RAUL EN EL 423.69', 'CLIENTE', '', '30%', 'CLIENTES MAYORISTAS', 'ACTIVO', 'Juan Abba', 'Abba, Juan', '30-68436795-8', 40944, 'msalamano@insupec.com; info@insupec.com'),
+(130, 'IRAZOQUI JUAN CARLOS', 'BUENOS AIRES', 'BALCARCE', 'AVDA. CENTENARIO', '1104', '02266-431712 // 15533007 J. Carl', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Emiliano Bellido', 'Bellido, Emiliano', '23-12709398-9', 40706, 'irazovet@infovia.com.ar; emiliano.bellido@biogenesisbago.com'),
+(131, 'ITURRALDE, C. A., ETCHEPARE, J. y OSCOZ,  F. S.H.', 'BUENOS AIRES', 'AYACUCHO', 'AVDA. DINDART', '1717', '02296-451374///CEL.02293-15.5848', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Emiliano Bellido', 'Bellido, Emiliano', '30-70844800-8', 40786, 'alejandra@granerochico.com.ar;julian@granerochico.com.ar; emiliano.bellido@biogenesisbago.com'),
+(132, 'JENARO ROUGER S.R.L.', 'BUENOS AIRES', 'BAHIA BLANCA', 'CASTELLI', '107', '0291-4565247 /CEL: 0291-15-64283', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Martin Mascarenhas', 'Mascarenhas, Martin', '30-66422664-9', 41252, 'jenarorouger@bvconline.com.ar'),
+(133, 'JUAN PABLO SIRINGO Y ASOC. S.R.L.', 'BUENOS AIRES', 'JUNIN', 'MALVINAS ARGENTINAS', '130', '0236-4362610 // 0236-4446419', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Alfonso Garcia', 'Garcia, Alfonso', '30-71231284-6', 41279, 'jpsiringo@hotmail.com; jpsiringo@provemix.com.ar; administracion@provemix.com.ar'),
+(134, 'KARDEX S.A', 'CORDOBA', 'VILLA MARIA', 'Ruta Nac. Nº 9 KM 554', '', '0353-4523819', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Juan Abba', 'Abba, Juan', '30-71186276-1', 41321, 'info@kardexsa.com.ar; veterinaria@kardexsa.com.ar'),
+(135, 'LA AGRICOLA REGIONAL COOPERATIVA LTDA', 'ENTRE RIOS', 'CRESPO', 'MORENO', '1404', '0343-4958000', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Joaquín Cabrera', 'Cabrera, Joaquín', '33-50404708-9', 41237, 'marianelar@laagricolaregional.com.ar; joaquinc@laagricolaregional.com.ar'),
+(136, 'LABARERE, MARIO E. "VET. BRANDSEN"', 'BUENOS AIRES', 'CNEL. BRANDSEN', 'FERRARI', '456', '02223-443203 / 442107 PART.', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Guillermo Stutz', 'Stutz, Guillermo', '20-08318841-4', 40381, 'mlabarere@blunet.com.ar;vetbrandsen@blunet.com.ar,vetlabarere@blunet.com.ar;'),
+(137, 'LADRON DE GUEVARA, JOAQUIN - RUCA CAHUEL', 'NEUQUEN', 'JUNIN DE LOS ANDES', 'J. M. DE ROSAS', '576', '02972-492671  //  CEL: 02972-15-', 'CLIENTE', '', '25%', 'BIOGENESIS BAGO', 'ACTIVO', 'Abel Arguelles', 'Arguelles, Abel', '20-25765871-7', 41299, 'Joaquindeguevara@yahoo.com.ar; abel.arguelles@biogenesisbago.com'),
+(138, 'LEPORI, DR. RUBEN OMAR  - VET.LA PROVINCIA', 'CORDOBA', 'HOLMBERG', 'Paul Harris', '720', '0358-4990680', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Luis Fabre', 'Fabre, Luis', '20-14624371-2', 40477, 'rubenlepori@arnet.com.ar'),
+(139, 'LEZCANO, DR.OSCAR IGNACIO', 'CORRIENTES', 'CONCEPCION', '8 de Diciembre', '672', '03782-497067 - CEL.: 03782-15-61', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Andrea Gilardoni', 'Gilardoni, Andrea', '20-12921710-4', 40661, 'silvinasass@gmail.com;'),
+(140, 'LIONE, DR.ROBERTO DANIEL', 'SANTA FE', 'CERES', 'Santa Fe y Azcuenaga', '', '03491-420338 veter.', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Juan Abba', 'Abba, Juan', '20-13274370-4', 40474, 'lioneroberto1@hotmail.com.ar'),
+(141, 'LOBOSCO MARCELO LUIS - VETERINARIA MOSCONI', 'BUENOS AIRES', 'AGUSTIN MOSCONI', 'PLANTA URBANA', 'S/N', '02345-491034 / 02345-15-421664', 'CLIENTE', 'Clientes 20%', '20%', 'VETERINARIAS', 'ACTIVO', 'Emiliano Bellido', 'Bellido, Emiliano', '20-13350955-1', 41161, 'drlobosco@hotmail.com'),
+(142, 'LOPEZ JOSE CARLOS  - VETERINARIA  ITATI', 'CORRIENTES', 'SAUCE', 'SARMIENTO', '676', '03774-480131', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Joaquín Cabrera', 'Cabrera, Joaquín', '23-11646241-9', 40693, 'joseclopez1@hotmail.com'),
+(143, 'MADALA,ABELARDO,JUAN J.,FERNANDO A.,SEBASTIÁN, S.H', 'CORDOBA', 'VILLA MARÍA', 'AVDA. PTE. PERÓN', '1240', '0353-4522210', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Juan Abba', 'Abba, Juan', '30-71136748-5', 41242, 'info@madalavet.com.ar'),
+(144, 'MAGIBE S.R.L. - MUNDO GANADERO', 'SANTGO.DEL ESTERO', 'LA BANDA', 'ESPAÑA', '1183', '0385-4272527 //', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Luis Saravia', 'Saravia, Luis', '30-71009375-6', 41196, 'mundoganadero@ hotmail.com.ar'),
+(145, 'MANFREDI, HORACIO LUIS', 'BUENOS AIRES', '25 DE MAYO', 'Calle 28', '865', '02345-462509 - CEL.: 02345-15668', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Emiliano Bellido', 'Bellido, Emiliano', '20-05249854-7', 40645, 'vetmanfredi@speedy.com.ar; emiliano.bellido@biogenesisbago.com'),
+(146, 'MARCELO ANTONIO MUÑOZ - VETERINARIA VILLA FRANCIA', 'BUENOS AIRES', 'CNEL. GRANADA', 'SAAVEDRA', '0', '02356 495097', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Alfonso Garcia', 'Garcia, Alfonso', '20-16321490-4', 41024, 'vetvillafrancia@ameghinonett.com.ar'),
+(147, 'MARCELO PEREZ - VET. "LA RINCONADA"', 'BUENOS AIRES', 'SAN PEDRO', 'HIPOLITO YRIGOYEN', '1490', '03329-598159', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Guillermo Stutz', 'Stutz, Guillermo', '20-13079492-1', 41316, 'mperez_elfortin@hotmail.com;'),
+(148, 'MARTINEZ,RODOLFO F. - VETERINARIA BOLIVAR', 'BUENOS AIRES', 'BOLIVAR', 'MITRE', '780', '02314-428528', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Alfonso Garcia', 'Garcia, Alfonso', '20-05258813-9', 41223, 'vetbolivar@hotmail.com'),
+(149, 'MATERIALES RURALES EL QUEBRACHO S. de H.', 'BUENOS AIRES', 'OLAVARRÍA', 'AVDA. PELLEGRINI', '2860', '02284-426740', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Emiliano Bellido', 'Bellido, Emiliano', '33-59885210-9', 40163, 'elquebrachosh@speedy.com.ar'),
+(150, 'MAYORAL DANIEL', 'BUENOS AIRES', 'AMERICA', 'SARMIENTO y MARCOS CACHAU', '', '02337452116 // CEL.: 02392-15-62', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Alfonso Garcia', 'Garcia, Alfonso', '20-12583481-8', 40340, 'dmayoral@jsnet.com.ar'),
+(151, 'MC DERMOTT ELBERT V.', 'BUENOS AIRES', 'Carmen de Areco', '16 de julio y Peñaloza', '255', '02273-440148   Cel  20325-15-688', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Guillermo Stutz', 'Stutz, Guillermo', '20-21713292-5', 41313, 'vetelrelincho@hotmail.com;'),
+(152, 'MEDICAMENTOS VETERINARIOS S.R.L. - LA AGUADA', 'BUENOS AIRES', 'BAHIA BLANCA', 'CASANOVA', '433', '0291-4519849 / 4561146', 'CLIENTE', '', '25%', 'DISTRIBUIDORES', 'ACTIVO', 'Martin Mascarenhas', 'Mascarenhas, Martin', '30-71032303-4', 41155, 'ventas@laaguadasrl.com; mlarraza@laaguadasrl.com; martin.mascarenhas@biogenesisbago.com'),
+(153, 'MIQUERI RICARDO RAMON - VETERINARIA LA FUSTA', 'CORRIENTES', 'MBURUCUYA', 'Moreno', '878', '03782-498099 //CEL.03782-1561154', 'CLIENTE', 'Clientes 20%', '20%', 'VETERINARIAS', 'ACTIVO', 'Andrea Gilardoni', 'Gilardoni, Andrea', '20-16281668-4', 40499, 'sofy_2603@hotmail.com; lafusta_88@hotmail.com'),
+(154, 'MOHR, MIRIAM FERNANDA  - AGROVETERINARIA CENTRAL', 'BUENOS AIRES', 'BOLIVAR', 'AVDA. GRAL. PAZ', '102', '02314-426261 // 02134-15.617605', 'CLIENTE', 'Clientes 20%', '20%', 'VETERINARIAS', 'ACTIVO', 'Alfonso Garcia', 'Garcia, Alfonso', '27-21832960-3', 40774, 'agroveterinariacentral@fibertel.com.ar'),
+(155, 'MOLINA, ORLANDO JORGE - AGROVET. LITORAL', 'ENTRE RIOS', 'FEDERAL', 'BELGRANO Y URQUIZA', '', '03454-421283 /  / 03454-15656409', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Joaquín Cabrera', 'Cabrera, Joaquín', '20-10573139-7', 40320, 'agrovetlitoral_molina@yahoo.com.ar'),
+(156, 'MORENA,HORACIO-VET.SANTA ELINA', 'BUENOS AIRES', 'SALADILLO', 'Cabral Esq.Sarmiento', '', '02344-433647 // CEL.: 02345-15-5', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Emiliano Bellido', 'Bellido, Emiliano', '23-10355871-9', 40494, 'horacioalbertomorena@gmail.com; vetsantaelina@gmail.com; emiliano.bellido@biogenesisbago.com'),
+(157, 'MUNDET, SERGIO ANIBAL - AGROVETERINARIA PATAGONICA', 'CHUBUT', 'SARMIENTO', 'URUGUAY', '240', '0297-4898370 ///Cel. 0297-156248', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Abel Arguelles', 'Arguelles, Abel', '20-16722004-6', 40928, 'smundet@coopsar.com.ar'),
+(158, 'NADINI , HORACIO DOMINGO - DEPOSITO RURAL', 'CHUBUT', 'COMODORO RIVADAVIA', 'CASILLA DE CORREO', '341', '02974- 485218/ 482500/ 448383074', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Abel Arguelles', 'Arguelles, Abel', '20-07321233-3', 40330, 'nadinihoraciod@infovia.com.ar;administracion@depositorural.com.ar;gerencia@depositorural.com.ar;ventas@depositorural.com.ar'),
+(159, 'NATALINI, DR. MAURICIO G. "VETERINARIA PAMPA"', 'BUENOS AIRES', 'VILLA RAMALLO', 'AV. SAN MARTIN', '257', '03407-489303 //// CEL 03461-1553', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Guillermo Stutz', 'Stutz, Guillermo', '20-16864908-9', 40953, 'vet-pampa@hotmail.com;'),
+(160, 'NESTOR ANIBAL GALARRAGA S.R.L.', 'BUENOS AIRES', 'MAIPU', 'MADERO', '782', '02268-421738', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Emiliano Bellido', 'Bellido, Emiliano', '30-62307725-6', 41257, 'mr_barberena@yahoo.com.ar; emiliano.bellido@biogenesisbago.com; belen@evlogistica.com'),
+(161, 'NEVETAR S.R.L.', 'CAPITAL', 'CAPITAL FEDERAL', 'MALVINAS 1600 GNL 7798217880005', '', '0223-478.8752//CEL.:0223-15.5831', 'CLIENTE', '', '30%', 'DISTRIBUIDORES', 'ACTIVO', 'Andrea Gilardoni', 'Gilardoni, Andrea', '30-71021841-9', 41192, 'agiles@elindiovet.com.ar, javierhugomorales@hotmail.com, acorrado@elindiovet.com.ar, acorrado@speedy.com.ar'),
+(162, 'NIPEA SIMPLE ASOCIACION - DE LEMOS JUAN CLAUDIO Y', 'BUENOS AIRES', 'Daireaux', 'Acceso Jorge Omar Carle', '2579', '02316-453704', 'CLIENTE', 'GRUPO CLIENTES EXCL.AFTOSA', '25%', 'VETERINARIAS', 'ACTIVO', 'Administrator', ', Sin Vendedor', '30-71501410-2', 41325, 'nipea-veterinaria@dxred.com.ar; nipea-sanidad@dxred.com.ar'),
+(163, 'NOSETTI, LUCIANO - CONSULVET-SERV.VETERINARIOS', 'BUENOS AIRES', 'SALLIQUELO', 'UNZUE', '380', '02394-481510/ 480547 casa/02392-', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Alfonso Garcia', 'Garcia, Alfonso', '20-25582684-1', 40767, 'lnosetti@hotmail.com;consul-vet@hotmail.com'),
+(164, 'NUÑEZ PEÑALOZA, DR. EDUARDO J.', 'BUENOS AIRES', 'BALCARCE', 'AV. KELLY', '798', '02266-423037', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Emiliano Bellido', 'Bellido, Emiliano', '20-16602760-9', 40949, 'nunezeduardo@speedy.com.ar; emiliano.bellido@biogenesisbago.com'),
+(165, 'ORG.VETERINARIA PAMPA SUR SRL.', 'LA PAMPA', 'SANTA ROSA', 'AV. CIRCUNVALACION SANTIAGO MARZO ESTE', '2136', '02954- 454414', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Alfonso Garcia', 'Garcia, Alfonso', '30-63989041-0', 40672, 'orgvetpampasur@speedy.com.ar'),
+(166, 'ORLANDO, MARCELO', 'SAN LUIS', 'VILLA MERCEDES', '9 DE JULIO', '545', '02657-423105 / 15-506178', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Luis Fabre', 'Fabre, Luis', '20-11985893-4', 40331, 'm_orlando56@hotmail.com'),
+(167, 'OROZCO, MARÍA L. - DISTRIBUIDORA VET. DORREGO', 'BUENOS AIRES', 'BAHIA BLANCA', 'Misiones', '871', '0291-4541529 ( Dep)  // CEL.: 02', 'CLIENTE', 'Clientes 20%', '20%', 'VETERINARIAS', 'ACTIVO', 'Martin Mascarenhas', 'Mascarenhas, Martin', '27-04650552-8', 41051, 'dorrego@bvconline.com.ar'),
+(168, 'OVIEDO JOSE ANGEL - AGROPECUARIA CORDILLERANA', 'BUENOS AIRES', 'CASTELLI', '', '', '02245-15-421753/ 02245-422389', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Abel Arguelles', 'Arguelles, Abel', '23-20382140-9', 41207, 'lucasrua@speedy.com.ar'),
+(169, 'OVIEDO Y URANGA S. R. L . - VETERINARIA  SAN NARCI', 'BUENOS AIRES', 'CASTELLI', 'FALUCHO', '125', '02245-480640 // 481107', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Emiliano Bellido', 'Bellido, Emiliano', '30-66008723-7', 40377, 'santiagouranga@cuecca.com.ar; emiliano.bellido@biogenesisbago.com'),
+(170, 'PAMPA S.R.L.', 'SANTA FE', 'VENADO TUERTO', 'MARCOS CIANI', '1875', '03462-420176/436936/463205/46320', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Luis Fabre', 'Fabre, Luis', '30-63701038-3', 40897, 'fabian.arias@pampasrl.com.ar'),
+(171, 'PAZ RURAL S.A.', 'BUENOS AIRES', 'BAHÍA BLANCA', 'ALEM', '2435', '02914086010/6020', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Martin Mascarenhas', 'Mascarenhas, Martin', '30-70902220-9', 40715, 'laruralveterinaria@gmail.com; martin.mascarenhas@biogenesisbago.com'),
+(172, 'PECHIN  DISTRIBUCIONES', 'LA PAMPA', 'GENERAL PICO', 'CALLE 26', '453', '2302-436300 /  / 424751 part.', 'CLIENTE', '', '30%', 'DISTRIBUIDORES', 'ACTIVO', 'Alfonso Garcia', 'Garcia, Alfonso', '30-70745153-6', 40352, 'pechindistribuciones@speedy.com.ar'),
+(173, 'PEREZ, CARLOS RAÚL', 'JUJUY', 'SAN SALVADOR DE JUJUY', 'PARROCO MARSHEK', '1140', '0388-154304009', 'CLIENTE', 'Clientes 20%', '20%', 'VETERINARIAS', 'ACTIVO', 'Luis Saravia', 'Saravia, Luis', '20-11094811-6', 41280, 'veterinariahumpa@hotmail.com'),
+(174, 'PETRONE, RUBEN D. -VETERINARIA BAYAUCA', 'BUENOS AIRES', 'BAYAUCA', 'ALMAFUERTE', '58', '02355-15-646388', 'CLIENTE', 'Clientes 20%', '20%', 'VETERINARIAS', 'ACTIVO', 'Alfonso Garcia', 'Garcia, Alfonso', '20-05001431-3', 40607, 'coopbayauca@uolsinectis.com.ar'),
+(175, 'PRELAT HECTOR ORLANDO DAVID - VETERINARIA EL PUEST', 'ENTRE RIOS', 'CONCORDIA', 'AV. SAN LORENZO (0)', '1405', '0345-4272159 //cel: 0345-1540578', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Joaquín Cabrera', 'Cabrera, Joaquín', '20-20765653-5', 41193, 'hectorprelat@arnetbiz.com.ar;vetelpuesto@hotmail.'),
+(176, 'PRO SER S.A.', 'BUENOS AIRES', 'CAPITAN SARMIENTO', 'AVDA. LEANDRO N. ALEM', '1698', '02478-482373', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Guillermo Stutz', 'Stutz, Guillermo', '30-66352738-6', 40151, 'proser@redsarmiento.com.ar;'),
+(177, 'PRODUCAMPO S.R.L.', 'ENTRE RIOS', 'VILLAGUAY', 'LEOPOLDO HERRERA Y BVARD. SAVIO', '', '03455-423665', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Joaquín Cabrera', 'Cabrera, Joaquín', '30-70986230-4', 41122, 'producamposrl@yahoo.com.ar'),
+(178, 'PRODUCTORES TAMBEROS UNIDOS RUTA 8 SOC. COOP. LTDA', 'BUENOS AIRES', 'SAN ANTONIO DE ARECO', 'CASILLA DE CORREO 164', '', '02326-451021', 'CLIENTE', '', '25%', 'MIXING', 'ACTIVO', 'Abel Arguelles', 'Arguelles, Abel', '30-53354147-6', 41170, 'jgole@puroscl.com.ar');
+INSERT INTO `tbl_veterinarias` (`id`, `cuenta`, `provincia`, `ciudad`, `direccion`, `altura`, `telefono`, `tipo`, `subtipo`, `cond_comercial`, `grupo`, `estado`, `ejecutivo`, `dueno`, `cuit`, `id_cliente`, `email`) VALUES
+(179, 'PROVEEDURIA CENTRAL AGROPECUARIA S.A.', 'BUENOS AIRES', 'TANDIL', 'AVDA. AVELLANEDA', '1548', '0249-4424776 // 4428860', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Martin Mascarenhas', 'Mascarenhas, Martin', '30-58823295-2', 40999, 'proveeduriacentralagropecuaria@gmail.com; martin.mascarenhas@biogenesisbago.com'),
+(180, 'RIVANERA, FRANCISCO', 'NEUQUEN', 'SAN MARTIN DE LOS ANDES', 'Elordi', '365', '02944-15303799/02972-424041/4422', 'CLIENTE', 'Clientes 20%', '20%', 'VETERINARIAS', 'ACTIVO', 'Abel Arguelles', 'Arguelles, Abel', '20-23087074-9', 41067, 'huemulvet@smandes.com.ar'),
+(181, 'ROBERTS KARIN - VETERINARIA ALVEAR', 'CHUBUT', 'ESQUEL', 'AV. ALVEAR', '1681', '02945-452572', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Abel Arguelles', 'Arguelles, Abel', '27-21518050-1', 41205, 'veterinariaalvear@gmail.com'),
+(182, 'RODRIGUEZ, DR.  C.E. - VETERINARIA LOS TALAS', 'BUENOS AIRES', 'CHASCOMUS', 'AVDA. LASTRA', '5', '02241-422187 / // CEL 02241-15-4', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Guillermo Stutz', 'Stutz, Guillermo', '20-11501678-5', 40198, 'jose12_rodriguez@hotmail.com;'),
+(183, 'ROSARIO INSUMOS AGROPECUARIOS S..A.', 'SANTA FE', 'ROSARIO', 'AVDA. PTE. PERÓN', '3699', '0341-4319198 /// CEL.: 0341-1569', 'CLIENTE', '', '30%', 'CLIENTES MAYORISTAS', 'ACTIVO', 'Luis Fabre', 'Fabre, Luis', '30-62230973-0', 40316, 'rosarioinsumosagropecuarios@gmail.com; dmighetto@hotmail.com'),
+(184, 'RUEDA FERNANDO ANTONIO', 'BUENOS AIRES', 'DARREGUEIRA', '25 DE MAYO', '35', '02924-421312/420791 part.//Cel.0', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Alfonso Garcia', 'Garcia, Alfonso', '20-11418649-0', 40580, 'vetrueda@darregueira.com.ar'),
+(185, 'RUFFINATTI, HORACIO ARIEL', 'BUENOS AIRES', 'TRES LOMAS', 'SAN MARTIN', '222', '02394-430033 /  /', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Alfonso Garcia', 'Garcia, Alfonso', '20-14343788-5', 40371, 'veterinariaruffinatti@rya3lomas.com.ar'),
+(186, 'RYAN PABLO ANDRES - VETERINARIA SAN ANDRES', 'CORDOBA', 'SANTA EUFEMIA', 'Avda. Perón', '325', '03584-491208', 'CLIENTE', 'Clientes 20%', '20%', 'VETERINARIAS', 'ACTIVO', 'Luis Fabre', 'Fabre, Luis', '23-17926846-9', 40459, 'pabloandresryan@gmail.com'),
+(187, 'S.I.VET. S.H.', 'LA PAMPA', 'GENERAL PICO', 'Calle 9 (Oeste)', '834', '02302-421974 - 426927 // 0800 22', 'CLIENTE', '', '30%', 'DISTRIBUIDORES', 'ACTIVO', 'Alfonso Garcia', 'Garcia, Alfonso', '30-69485611-6', 40510, 'sivetshventas@hotmail.com.ar'),
+(188, 'SALABERRY, H. D. HIJO -  VET. EL RELINCHO', 'ENTRE RIOS', 'LOS CHARRUAS', 'Moreno', '651', '0345-4907060//CEL.0345-156256410', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Joaquín Cabrera', 'Cabrera, Joaquín', '20-13575234-8', 40588, 'hectorsalaberry@loscharruas.com.ar'),
+(189, 'SAMA S.R.L.', 'SANTA CRUZ', 'RIO GALLEGOS', 'SARMIENTO', '268', '02966-432135//CEL.: 02966-413527', 'CLIENTE', 'Clientes 20%', '20%', 'VETERINARIAS', 'ACTIVO', 'Abel Arguelles', 'Arguelles, Abel', '33-70772298-9', 40916, 'sama.jim@gmail.com'),
+(190, 'SANCHEZ AGRONEGOCIOS S.A.', 'SAN LUIS', 'VILLA MERCEDES', 'RUTA 148 KM 754,500', '', '02657-425480', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Luis Fabre', 'Fabre, Luis', '30-70899735-4', 41182, 'villamercedes@sanchezagronegocios.com.ar'),
+(191, 'SANCTI SPIRITU S.A.', 'BUENOS AIRES', 'BOLIVAR', 'SAN MARTIN', '855', '02314-420243 // 02314-15612616', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Alfonso Garcia', 'Garcia, Alfonso', '30-71065171-6', 41184, 'veterinaria@bedatouyasociados.com.ar'),
+(192, 'SARA,  ALICIA LEDA', 'CORDOBA', 'SAN FRANCISCO', 'Bv.  9  DE JULIO', '728', '03564-425928 /// Cel:03564-15520', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Juan Abba', 'Abba, Juan', '27-12219671-8', 40353, 'veterinariasara@arnetbiz.com.ar'),
+(193, 'SCHLUEB,ADRIANA - VETERINARIA JENNER', 'BUENOS AIRES', 'CARLOS TEJEDOR', 'GARRE', '242', '02357-420066 / 420086 /', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Alfonso Garcia', 'Garcia, Alfonso', '27-11418539-1', 40365, 'jenner@ctejedor.com.ar'),
+(194, 'SCIARRETTA, C. M.,  VETERINARIA SAGUAYPE', 'LA PAMPA', 'EDUARDO CASTEX', 'DIAGONAL 9 DE JULIO', '1292', '02334-442385', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Alfonso Garcia', 'Garcia, Alfonso', '20-12699028-7', 40535, 'matisciarretta@hotmail.com'),
+(195, 'SCOTTA,COSTAMAGNA, y REVELLI. - VET.SAN GUILLERMO', 'SANTA FE', 'SAN GUILLERMO', 'AVDA. SAN MARTÍN S/N.', '', '03562-466195', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Juan Abba', 'Abba, Juan', '33-67426283-9', 41092, 'vetsanguillermo@hotmail.com;scotrevcos@sanguillermo.com.ar'),
+(196, 'SERAGRO SH DE PABLO G. CARIOLA Y DANIEL F. R. CARI', 'BUENOS AIRES', 'BENITO JUAREZ', 'AV. ACTIS CAPORALE', '554', '02292-453636 / CEL: 02281-15-659', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Martin Mascarenhas', 'Mascarenhas, Martin', '30-64417875-3', 41227, 'seragrovet@hotmail.com; martin.mascarenhas@biogenesisbago.com'),
+(197, 'SKOLAK, JUAN CARLOS - EL BAGUAL', 'BUENOS AIRES', 'BAHIA BLANCA', 'MONTEVIDEO', '566', '0291-4550915 ////  0291-15-64681', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Martin Mascarenhas', 'Mascarenhas, Martin', '20-10800469-0', 40174, 'elbagual@speedy.com.ar'),
+(198, 'SOCIEDAD RURAL QUEBRACHALES TINTINA', 'SANTGO.DEL ESTERO', 'SANTIAGO DEL ESTERO', 'SARMIENTO Y FRAY H. ESQUIU', '', '03846-421026 / 03846-15676004', 'CLIENTE', 'GRUPO CLIENTES EXCL.AFTOSA', '25%', 'AFTOSA, FUND/OTROS', 'ACTIVO', 'Ventas Aftosa', 'Aftosa, Ventas', '30-70923644-6', 41137, ''),
+(199, 'SPIAZZI RUMELIO BAUTISTA', 'ENTRE RIOS', 'URDINARRAIN', 'DR. VIRGINIO SILVA', '364', '03446-480067//CEL.: 03446-155952', 'CLIENTE', 'Clientes 20%', '20%', 'VETERINARIAS', 'ACTIVO', 'Joaquín Cabrera', 'Cabrera, Joaquín', '20-05871226-5', 41289, 'clia@urdi.com.ar'),
+(200, 'STRIFEZZA, ANALIA S. - VETERINARIA JUNCAL', 'SANTA FE', 'JUNCAL', 'ROCA', '161', '02473-492250 // 02477-15.660684', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Guillermo Stutz', 'Stutz, Guillermo', '27-14031819-7', 40149, 'veterinariajuncal@yahoo.com.ar;'),
+(201, 'SUAREZ DIEGO CARLOS - VETERINARIA LA MANADA', 'BUENOS AIRES', 'PELLEGRINI', 'QUINTANA', '94', '02392-15-616799', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Alfonso Garcia', 'Garcia, Alfonso', '20-21979704-5', 41226, 'maria_cecilia69@hotmail.com, veterinarialamanada@hotmail.com'),
+(202, 'SUCESION DE ABEYA ALBERTO ALFONSO - CLINICA VET. E', 'SALTA', 'METAN', 'Alem', '190', '03876- 420723 / Cel: 03876-15-66', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Luis Saravia', 'Saravia, Luis', '20-08317737-4', 40689, 'vet-elbagual@arnet.com.ar'),
+(203, 'SVERUGA , DR.JORGE O. "VET. LA TROPA"', 'BUENOS AIRES', 'HUANGUELEN', 'CALLE 26', '1036', '02933-432908 //  432157 PART.//0', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Alfonso Garcia', 'Garcia, Alfonso', '20-10928209-0', 40349, 'vetlatropa@hotmail.com'),
+(204, 'TAMAGNO, WALTER DANIEL - VETERINARIA LA MARCA', 'BUENOS AIRES', 'DOLORES', 'LAMADRID', '183', '02245-446611', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Emiliano Bellido', 'Bellido, Emiliano', '20-12004737-0', 40832, 'veterinaria_la_marca@hotmail.com; emiliano.bellido@biogenesisbago.com'),
+(205, 'TANCO, DR. GUILLERMO TIMOTEO', 'BUENOS AIRES', 'CNEL. SUAREZ', 'NEUQUEN', '1280', '02923-15642304/ 02926-424653 /', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Alfonso Garcia', 'Garcia, Alfonso', '20-12057323-4', 40948, 'guillermotanco@gmail.com'),
+(206, 'TECNOVET S.R.L.', 'SANTA FE', 'VENADO TUERTO', 'AV. SANTA FE', '2794', '03462-438039 ////15-504800', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Luis Fabre', 'Fabre, Luis', '30-70809229-7', 40176, 'venadotuerto@tecnovet.net;marcelo.n@tecnovet.net;mercaderiatecnovet@powervt.com.ar;marielaalgarbe@tecnovet.net'),
+(207, 'TODO CAMPO S.R.L.', 'CORDOBA', 'VILLA DEL TOTORAL', 'RUTA NACIONAL N* 9 - KM. 784', '', '03524-470289 /  /', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Juan Abba', 'Abba, Juan', '30-68758336-8', 40347, 'todocampo@cooptotoral.com'),
+(208, 'TRIVISONNO, EDUARDO RUBÉN', 'CORDOBA', 'ALEJO LEDESMA', 'DR. ERASMO ELISEIRI', '574', '03468-490639 // CEL.: 03468-1541', 'CLIENTE', 'Clientes 20%', '20%', 'VETERINARIAS', 'ACTIVO', 'Luis Fabre', 'Fabre, Luis', '23-12866347-9', 41283, 'etrivi@intersatisp.com.ar'),
+(209, 'TROSSERO, JORGE LUIS', 'SANTGO.DEL ESTERO', 'COLONIA ALPINA', 'ZONA URBANA COLONIA ALPINA', '', '03562-466761/ CEL: 03491-15-4064', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Juan Abba', 'Abba, Juan', '20-12494592-6', 40514, 'jorge.trossero@cotana.com.ar;trosserojl@interceres.com.ar'),
+(210, 'TRT S.A.', 'SANTA FE', 'SANTA FE', '', '', '0342-455.7214//4924', 'CLIENTE', '', '30%', 'DISTRIBUIDORES', 'ACTIVO', 'Gerencia Ventas Local', 'Ventas Local, Gerencia', '30-71211113-1', 41300, 'proveedores@trtsa.com.ar; damian.puccini@trtsa.com.ar; andres.puccini@trtsa.com.ar'),
+(211, 'UNION AGRICOLA DE AVELLANEDA COOP. LTDA.', 'SANTA FE', 'AVELLANEDA', 'AVDA. SAN MARTIN', '744', '03482 - 481002 (int. 183) /// 03', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Andrea Gilardoni', 'Gilardoni, Andrea', '30-50191240-5', 40165, 'mventurini@uaa.com.ar;mspesot@uaa.com.ar;agrovet@uaa.com.ar'),
+(212, 'VARAS, DR.JORGE RUBEN - VET.TARQUINO', 'CORDOBA', 'VILLA HUIDOBRO', 'AV.ESPINOSA', '53', '02336-481066 // CEL.: 02302 - 15', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Luis Fabre', 'Fabre, Luis', '20-12055415-9', 40363, 'tarquino@coopvh.com.ar'),
+(213, 'VASQUETTO, C.  Y MARINELLI, L.E., S.H.', 'CORDOBA', 'RIO CUARTO', 'ALVEAR', '1700', '0358-4636444', 'CLIENTE', 'Clientes 20%', '20%', 'VETERINARIAS', 'ACTIVO', 'Luis Fabre', 'Fabre, Luis', '30-68395012-9', 40032, 'alimentos@vasquetto.com.ar;ventas@vasquetto.com.ar'),
+(214, 'VERLIK, DR. JUAN JOSÉ - AGROVETERINARIA BOVITEC', 'CHACO', 'RESISTENCIA', '', '', '03725-494208// 494070-Fsa. 03717', 'CLIENTE', '', '30%', 'CLIENTES MAYORISTAS', 'ACTIVO', 'Andrea Gilardoni', 'Gilardoni, Andrea', '23-22764360-9', 40448, 'jjverlik@hotmail.com;bovitec_central@hotmail.com'),
+(215, 'VETACORD COMERCIAL  S.A.', 'CORDOBA', 'Bº San Vicente-Córdoba Capital', 'ESTADOS UNIDOS', '2796', '0351-4551384 / 4551125 /', 'CLIENTE', '', '30%', 'DISTRIBUIDORES', 'ACTIVO', 'Juan Abba', 'Abba, Juan', '30-57366027-3', 40350, 'info@vetacord.com.ar;jlewis@vetacord.com.ar'),
+(216, 'VETERINARIA ARGENTINA S.R.L.', 'CORRIENTES', 'GDOR. VIRASORO', 'AVDA. LAVALLE', '3002', '03756-481413 //  CEL.: 03756-156', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Andrea Gilardoni', 'Gilardoni, Andrea', '30-71192814-2', 41282, 'administracion@veteargentina.arnetbiz.com.ar; veteargentina@hotmail.com'),
+(217, 'VETERINARIA AVENIDA-DR.MASSOLO', 'BUENOS AIRES', 'CORONEL VIDAL', 'Beltrami', '202', '02265-432354', 'CLIENTE', 'Clientes 20%', '20%', 'VETERINARIAS', 'ACTIVO', 'Emiliano Bellido', 'Bellido, Emiliano', '20-05061487-6', 40694, 'rimass@infovia.com.ar; emiliano.bellido@biogenesisbago.com'),
+(218, 'VETERINARIA BELGRANO DE CASTELO MARIO Y DIAZ CESAR', 'BUENOS AIRES', 'GRAL. BELGRANO', 'RIVADAVIA', '217', '02243-452026 /02241-15-542520', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Guillermo Stutz', 'Stutz, Guillermo', '30-70761808-2', 41160, 'veterinariabelgrano@speedy.com.ar;'),
+(219, 'VETERINARIA CECCOTTI  S.H.', 'SANTA FE', 'TOSTADO', 'SAN MARTIN', '1800', '3491-470071', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Andrea Gilardoni', 'Gilardoni, Andrea', '33-70997983-9', 41095, 'vetceccottish@tostado.com.ar'),
+(220, 'VETERINARIA CENTRO S.R.L.', 'BUENOS AIRES', 'AYACUCHO', 'H. IRIGOYEN', '604', '02296-452719', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Emiliano Bellido', 'Bellido, Emiliano', '30-60607957-1', 40679, 'veterinariacentro@yahoo.com.ar; emiliano.bellido@biogenesisbago.com'),
+(221, 'VETERINARIA CORIGLIANI S.A.', 'SANTA FE', 'VILLA TRINIDAD', 'SAN MARTIN', '501', '03491-491070 // CEL.: 03491-1558', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Juan Abba', 'Abba, Juan', '33-71225806-9', 41281, 'vetcorsa@vtcc.com.ar'),
+(222, 'VETERINARIA EL CENCERRO S.R.L.', 'BUENOS AIRES', 'LUJAN', 'CARLOS PELLEGRINI', '1261', '02323-423607', 'CLIENTE', '', '20%', 'BIOGENESIS BAGO', 'ACTIVO', 'Guillermo Stutz', 'Stutz, Guillermo', '30-55946739-8', 40300, 'elcencerroctacte@yahoo.com.ar;contaduriavet@yahoo.com.ar;'),
+(223, 'VETERINARIA EL FORTIN', 'BUENOS AIRES', 'SAN PEDRO', 'SALTA', '663', '03329-425047', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Guillermo Stutz', 'Stutz, Guillermo', '20-10361911-5', 41297, 'edmundoalcorta@gmail.com;vetelfortin2@redsp.com.ar'),
+(224, 'VETERINARIA EL RODEO', 'BUENOS AIRES', 'ARBOLEDAS', 'PABLO MARIN CASA Nº9', '', 'Celular: 02314-15-471721', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Juan Cruz Muriel', 'Zona Sur', '20-27533794-4', 41320, 'elvioavinceta@yahoo.com.ar'),
+(225, 'VETERINARIA HERNANDEZ S.R.L.', 'ENTRE RIOS', 'SAN JOSÉ DE FELICIANO', 'BELGRANO', '176', '03458-420553', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Joaquín Cabrera', 'Cabrera, Joaquín', '30-67084001-4', 40997, 'vethernandez@vethernandez.com.ar;'),
+(226, 'VETERINARIA LA CESIRA S.A.', 'CORDOBA', 'RÍO CUARTO', 'AV. SABATTINI', '2469', '0358-4655695//4636356', 'CLIENTE', '', '30%', 'CLIENTES MAYORISTAS', 'ACTIVO', 'Luis Fabre', 'Fabre, Luis', '30-70874709-9', 40146, 'veterinariarc@lacesira.net; romina.baudino@gmail.com'),
+(227, 'VETERINARIA LA PAMPA S.R.L.', 'NEUQUEN', 'NEUQUEN', 'LA PAMPA', '345', '0299-447-6847 // CEL.: 0299-15-4', 'CLIENTE', 'Clientes 20%', '20%', 'VETERINARIAS', 'ACTIVO', 'Abel Arguelles', 'Arguelles, Abel', '30-70924012-5', 41013, 'talidiaz@yahoo.com.ar'),
+(228, 'VETERINARIA NORTE S. de HECHO', 'BUENOS AIRES', 'AMEGHINO', 'AVDA. SAN MARTIN', '140', '03388-471585 // CEL.:03388-15-67', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Alfonso Garcia', 'Garcia, Alfonso', '30-63459234-9', 40335, 'vetnorte@arnetbiz.com.ar'),
+(229, 'VETERINARIA PERGAMINO S.R.L.', 'BUENOS AIRES', 'PERGAMINO', 'H. YRIGOYEN', '125', '02477-423203 /  /', 'CLIENTE', '', '30%', 'VETERINARIAS', 'ACTIVO', 'Guillermo Stutz', 'Stutz, Guillermo', '33-52862469-9', 40370, 'jvet10@gmail.com;jvetpedidos@gmail.com;'),
+(230, 'VETERINARIAS ASOCIADAS S.A.', 'CORDOBA', 'LABOULAYE', 'JULIO A. ROCA', '24', '03385-428037 // 427220', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Luis Fabre', 'Fabre, Luis', '30-70799439-4', 40310, 'ventas@vetasociadas.com'),
+(231, 'VIALE, NESTOR FABIAN', 'CORDOBA', 'GRAL. LEVALLE', 'DR. BRUNO', '402', '03385-480713 // 03385-15405899', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Luis Fabre', 'Fabre, Luis', '20-21407887-3', 41236, 'nfviale@yahoo.com.ar'),
+(232, 'VICENTE ALEJANDRO', 'BUENOS AIRES', 'SALAZAR', 'PELLEGRINI', '326', '02393-492173', 'CLIENTE', 'GRUPO CLIENTES EXCL.AFTOSA', '25%', 'VETERINARIAS', 'ACTIVO', 'Administrator', ', Sin Vendedor', '20-30275331-9', 41323, 'elorejano@monesnet.com.ar'),
+(233, 'VIDOSA, JOSE M. y SERVETTO, FCO.  SOC.de HECHO', 'CORDOBA', 'ONCATIVO', 'AVDA. PTE. PERÓN', '262', '03572-466579  ///  0372-15.53755', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Juan Abba', 'Abba, Juan', '30-70339972-6', 40144, 'fservett@oncativo.net.ar; compras@vsoncativo.com.ar'),
+(234, 'VILLA Y MORENO S.A.', 'CAPITAL', 'CAPITAL FEDERAL', 'Castro Barros', '974/6', '4957-0661/4957-6666', 'CLIENTE', '', '30%', 'CLIENTES MAYORISTAS', 'ACTIVO', 'Gstutz Capital', 'Capital, Gstutz', '30-54439801-2', 40684, 'info@villaymoreno.com.ar;adrianvilla@villaymoreno.com.ar; marketing@villaymoreno.com.ar'),
+(235, 'VON SALDERN, BODO B.G. "NAHUEL MAPÚ"', 'BUENOS AIRES', 'DE LA GARMA', 'AV.VICTOR H. BARRERA', '137', '02983-494001 /// CEL.: 02983-15-', 'CLIENTE', 'Clientes 20%', '20%', 'VETERINARIAS', 'ACTIVO', 'Martin Mascarenhas', 'Mascarenhas, Martin', '20-93880419-3', 41273, 'nahuelmapu@dlgred.com.ar; martin.mascarenhas@biogenesisbago.com'),
+(236, 'WRIGHT,  FERNANDEZ URSINI S.A.', 'BUENOS AIRES', 'SAN ISIDRO', 'JORGE NEWBERY', '2762', '4723-7274', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Guillermo Stutz', 'Stutz, Guillermo', '30-68841089-0', 40987, 'urso@wfuinsumos.com; tgarciapinto@wfuinsumos.com ;'),
+(237, 'ZUBIRI DR. LUIS MARÍA', 'BUENOS AIRES', 'LOBERÍA', '25 DE MAYO', '180', '02261-442897 // CEL.:02262-15480', 'CLIENTE', 'Clientes 20%', '20%', 'VETERINARIAS', 'ACTIVO', 'Emiliano Bellido', 'Bellido, Emiliano', '20-29350963-9', 41263, 'popizubiri@hotmail.com'),
+(238, 'ZUNINO, JORGE ALBERTO', 'BUENOS AIRES', 'SUIPACHA', 'SARMIENTO', '319', '0232-4480358 // CEL.: 02324-1550', 'CLIENTE', '', '25%', 'VETERINARIAS', 'ACTIVO', 'Guillermo Stutz', 'Stutz, Guillermo', '20-08573235-9', 41288, 'veterinariaelbagual@coesanet.com.ar;'),
+(239, '1', '1', '1', '1', '1', '1', '', '1', '1', '1', '1', '1', '1', '1', 1, '1');
+
 --
 -- Restricciones para tablas volcadas
 --

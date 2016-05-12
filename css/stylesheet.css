@@ -66,6 +66,10 @@ a{
 	border:none;
 }
 
+*:focus{
+	outline: none;
+}
+
 input:focus{
 	border:2px solid #337AB7;
 	box-shadow:none; 
@@ -2557,8 +2561,9 @@ footer{
 	text-align:center;
 	display:inline-block;
 	margin:0;
-	width:100%;
+	width:98%;
 	margin-top:15px;
+	/*max-width:500px;*/
     /*margin-left: 10px;*/
     
 }
@@ -2626,6 +2631,8 @@ footer{
 	font-family:'arialregular';
 	
 	border-right:solid thin #fff;
+	padding-left:5%;
+	padding-right:5%;
 }
 
 
@@ -5480,6 +5487,7 @@ figure.snip1156:hover .salud-ambiental{
 	
 	.desc-rev{
 		width: 100%;
+		opacity:0;
 	}
 	
 	.curva-rrhh{
@@ -6462,10 +6470,10 @@ and (max-device-width: 2100px) {
  /****  NUEVAS CONFIGURACIONES Y ALINEACIONES DE DISEÑO  *******/
 
 .nombre-pais {
-	margin-bottom:10px!important; 
+	margin-bottom:10px; 
 	text-align: left; 
-	width:auto !important;
-	margin-top: 2% !important;
+	
+	margin-top: 2%;
     padding-left: 35px;
 }
 
@@ -6773,7 +6781,10 @@ and (max-device-width: 2100px) {
 		background:transparent;
 	}
 	
-	
+	#back-rrhh #display-rrhh{
+		padding-top:10px;
+	}
+	.textarea-contacto{ max-width: 500px;}
 }
 
 @media only screen 
@@ -6867,6 +6878,13 @@ and (max-device-width: 2100px) {
 		display:none;
 	}
 	
+	#img-mapa{
+		display:none;
+	}
+	#mapa-total{
+		border:none;
+	}
+	.textarea-contacto{ max-width: 500px;}
 }
 
 
@@ -6956,8 +6974,8 @@ and (max-device-width: 2100px) {
 	.img-fundaciones-6{float: left;width:100%; margin:0% auto 0% auto;  } 
     .img-fundaciones-7{float: initial;width:60%; margin:0% auto 0% auto;  }  
 	.imagenes-fundaciones{ height: 150px; }
-
-	
+	#mapa-total{border:none;}
+	.textarea-contacto{ max-width: 500px;}
 }
 
 
@@ -7554,7 +7572,7 @@ figure.snip1156 .d-a-2 h2{
   and (orientation: portrait) 
   {
 
-  	#referencias { margin-left: 6%; }
+  	#referencias { margin-left: 0; }
   	#btnmenu {
 		display: inline-block;
 		margin-top: -5%;
@@ -7622,7 +7640,7 @@ figure.snip1156 .d-a-2 h2{
 	}
 	
 	#slider1 {
-		min-height: 30vh;
+		min-height: 10vh;
 		overflow: hidden;
 		position: relative;
 		padding: 0 13px 10px;
@@ -7634,7 +7652,7 @@ figure.snip1156 .d-a-2 h2{
 		float: left;
 		margin: 10px 20px 0 0;
 		padding: 0px;
-		height: 190px;
+		height: 150px;
 		border: 1px solid #359FBD;
 		/*width: 285px;*/
 		max-width: 67vw;
@@ -7673,7 +7691,7 @@ figure.snip1156 .d-a-2 h2{
   {
   	#texto-btn-mas2{ 
 		text-align: center;
-		position: absolute;
+		
 		margin-left: -5px;
 		padding-top: 10px;
 		font-family: 'arialregular';
@@ -7887,7 +7905,7 @@ h5{
     text-align: center;
     font-size: 17px;
     margin-bottom: 0%;
-}
+	}
 	#infodcha div.error {
 		color: #ffcf5c;
 		position: absolute;
@@ -7960,7 +7978,6 @@ h5{
 	#barra-xs {margin-top: 2% !important;}
 	#botonera-buscar {}
 	.buscador {width:80%;}
-	.textarea-contacto{ max-width: 500px;}
 }
 
 /*PAGINA PRODUCTOS PASADO A CLASES E ID*/
@@ -8015,7 +8032,7 @@ h5{
 
 @media screen and (max-width: 800px) {
 
-	#registrado ,#compartido, #barra-media, #barra-paises, #barra-superior, #barra-xs, #targets-inner img, .mail, #barra-vademecum, .vademecum-producto {display: none;}
+	#registrado ,#compartido, #barra-media, #barra-paises, #barra-superior, #barra-xs, #targets-inner img, .mail, #barra-vademecum, .vademecum-producto ,.container-registro-paises-pc{display: none;}
 	#volver-producto {float: left; text-align: left; margin-top: -10% !important;}
 	.titulo-vad-producto {text-align: right; font-size: 17px; margin-bottom: 0%;}
 	
@@ -8408,11 +8425,22 @@ h5{
 
 	
 
-	#list-menu li a {
-		width: 77px;
-	}
+	
 
-}
+
+
+.exteriorBtnSanitario{
+		width: 77px;
+		display:inline-block;
+	}
+	
+	
+	#list-menu li a {
+		width:90%;
+		padding:4px 0;
+		background:rgba(255, 255, 255, 0.3);
+		text-align:center;
+	}
   
   
 .laevolucion{
@@ -8528,14 +8556,7 @@ h5{
 
 	
 	#list-menu li a {
-		background: rgba(255, 255, 255, 0.3);
-		color: #2988AF;
-		padding: 3px;
-		display: inline-block;
-		font-family: 'arialregular';
-		text-align: center;
-		transition: all 0.4s ease;
-		width: 56px;
+		
 		line-height: 16px;
 		font-size: 11px;
 	}
@@ -11129,7 +11150,7 @@ and (orientation: landscape){
 #banco-mobile{background-color: rgba(131,130,134, .2);}
 #distribuidoras-mobile{background-color: rgba(255,164,22, .5);}
 #banco-china {background-color: rgba(131,130,134, .5);}
-#banco-y-filiales {background: -webkit-linear-gradient(left, rgba(131,130,134, .2), rgba(131,130,134, .2) 50%, rgba(96,167,195, .5) 50%, rgba(96,167,195, .5));}
+#banco-y-filiales {background: -webkit-linear-gradient(left, rgba(131,130,134, .8), rgba(131,130,134, .8) 50%, rgba(96,167,195, .5) 50%, rgba(96,167,195, .5));}
 
 
 #ul-filiales-paises li{
@@ -11148,7 +11169,7 @@ and (orientation: landscape){
 {
 
 	#referencias { 
-		margin-left: 6%;
+		margin-left: 0%;
 	}
 
 }	
@@ -11244,7 +11265,7 @@ and (orientation: landscape){
   
 	.btn-mas-revistas {
 		transition: all 0.6s ease;
-		margin-left: 82px!important;
+		
 	}
 }
 
@@ -11258,4 +11279,74 @@ and (orientation: landscape){
 		margin-left: 82px!important;
 	}
 
+}
+
+.viewport #btn-mas{
+	display:inline-block;
+	float:initial;
+}
+
+#btnmenu{
+	position:absolute;
+	right:15px;
+	bottom:10px;
+}
+.container-registro-paises-pc{
+	width:70%;
+	margin-left:15%;
+	margin-right:0%;
+}
+.container-registro-paises-pc .fila-registro{
+	border-bottom:solid #cccccc 1px;
+}
+.container-registro-paises-pc img{
+	max-width: 10vw;
+	width:20px;
+	position:absolute;
+	left:15%;
+	display:inline-block;
+	padding:8px 0;
+}
+.container-registro-paises-pc .nombre-pais{
+	width:70%;
+	margin:0;
+	padding:0;
+	display:inline-block;
+	text-align:center;
+	padding:5px 0;
+}
+.container-registro-paises{
+	width:100%;
+	
+	text-align:center;
+}
+.container-registro-paises img{
+	height:30px;
+	margin-top:10px;
+	padding:2%;
+}
+
+#form1{
+	float:initial;display:inline-block;text-align:center;
+}
+
+#form1 #captchaContainer label{
+	padding-top:100px;
+	text-align:center;
+}
+
+#codeCaptcha{
+	width:auto;
+	display:inline-block;
+}
+#codeCaptcha input{
+	margin-top:15px;
+}
+#codeCaptcha .btn-refresh-captcha{
+	position:absolute;
+	top:120px;
+	margin-left:10px;
+}
+#codeCaptcha .btn-refresh-captcha .glyphicon{
+	color:white;
 }

@@ -44,7 +44,11 @@ return array(
         ),
 		
 		'paisChecker' => array(
-            'class' => 'ext.components.PaisChecker',
+            'class' => 'application.components.PaisChecker',
+        ),
+		
+		'permissionChecker' => array(
+            'class' => 'application.components.PermissionChecker',
         ),
 		
 		'urlManager'=>array(
@@ -52,15 +56,32 @@ return array(
 			'class'=>'ext.DbUrlManager.EDbUrlManager',
 			'connectionID'=>'db',
 			'rules'=>array(
+			
+				"<pais>/admin"=>"site/admin",
+				"admin"=>"site/login",
 				
+				"ar/testAjax"=>array("web/testAjax"),
 				"paises"=>array("web/get/data/paises"	),
 				"contacto"=>array("web/contacto"),
-			
-				'<pais>/<controller:\w+>/<id:\d+>'=>'<controller>/view',
+				
+				"<pais>/home"=>"web/get/data/home/",
+				"<pais>/<data>"=>array(
+					"web/get/"
+				),
+
+				'<controller:\w+>/<action:\w+>/id/<id>'=>'<controller>/<action>/id/<id>',
+				
+				
 				'<pais>/<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
 				
-				"gii/<data1>/<data2>"=>array("gii/<data1>/<data2>"),
 				
+				'<pais>/<controller:\w+>/<id:\d+>'=>'<controller>/view',
+				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
+				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
+				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
+				
+				"gii/<data1>/<data2>"=>array("gii/<data1>/<data2>"),
+				'<pais>/<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				
 				
 				'producto/<producto:[\w\/.-]+>'=>array(
@@ -103,10 +124,12 @@ return array(
 				
 				"<pais>/vademecum/<id>"=>array("web/get/data/vademecum/id/<id>"),
 				"<pais>/productos/<id>"=>array("web/get/data/productos/id/<id>"),
+				"<pais>/print/<id>"=>array("web/get/data/print/id/<id>"),
 				"<pais>/vista/<id>"=>array("web/get/data/vista/id/<id>"),
 				"<pais>/gii/default/login"=>array("gii/default/login"),
 				
 				'<pais>/<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
+				
 				
 				'admin/'=>array(
 				  'site/admin',

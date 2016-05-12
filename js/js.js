@@ -145,12 +145,19 @@ $(function(){
             return false;
         });
 		
+		
+		$( ".formCreate select" ).change(function() {
+			console.log($(this).val());
+			$(this).attr("value",$(this).val());
+		});
+			
   
     });
 	jQuery(window).load(function () {
 		CheckDevice();
 		Header();
 		SameHeight();
+		CenterToParent();
 		ResizeViewportElements();
 		if(!isHome){
 			
@@ -652,3 +659,15 @@ function checkVisible( elm, evalType ) {
 	if (evalType === "above") return ((y < (vpH + st)));
 }
 
+function CenterToParent(){
+	$(".center-to-parent").each(function(){
+		$(this).css("margin-top",0);
+		$(this).css("margin-bottom",0);
+		$(this).css("padding-bottom",0);
+		$(this).css("padding-top",0);
+		var parent= $(this).parent();
+		console.log($(this).outerHeight());
+		var paddingTop= ($(parent).innerHeight()/2)-($(this).outerHeight()/2);
+		$(this).css("margin-top",paddingTop+"px");
+	});
+}

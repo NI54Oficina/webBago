@@ -67,11 +67,7 @@ class PaisController extends Controller
 	 */
 	public function actionCreate()
 	{
-		if(!Yii::app()->user->checkAccess('adminAccess')){
-			$this->layout="admin";
-			$this->render("//site/error",array('error'=>"No tiene permisos para acceder a la siguiente sección.","code"=>"","message"=>"No tiene permisos para acceder a la siguiente sección.",));
-			exit();
-		}
+		
 		$model=new Pais;
 
 		// Uncomment the following line if AJAX validation is needed
@@ -101,11 +97,7 @@ class PaisController extends Controller
 	 */
 	public function actionUpdate($id)
 	{
-		if(!Yii::app()->user->checkAccess('adminAccess')){
-			$this->layout="admin";
-			$this->render("//site/error",array('error'=>"No tiene permisos para acceder a la siguiente sección.","code"=>"","message"=>"No tiene permisos para acceder a la siguiente sección.",));
-			exit();
-		}
+		
 		$model=$this->loadModel($id);
 		$auxImagen= $model->icon;
 
@@ -140,11 +132,7 @@ class PaisController extends Controller
 	 */
 	public function actionDelete($id)
 	{
-		if(!Yii::app()->user->checkAccess('adminAccess')){
-			$this->layout="admin";
-			$this->render("//site/error",array('error'=>"No tiene permisos para acceder a la siguiente sección.","code"=>"","message"=>"No tiene permisos para acceder a la siguiente sección.",));
-			exit();
-		}
+		
 		$this->loadModel($id)->delete();
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
@@ -157,11 +145,7 @@ class PaisController extends Controller
 	 */
 	public function actionIndex()
 	{
-		if(!Yii::app()->user->checkAccess('adminAccess')){
-			$this->layout="admin";
-			$this->render("//site/error",array('error'=>"No tiene permisos para acceder a la siguiente sección.","code"=>"","message"=>"No tiene permisos para acceder a la siguiente sección.",));
-			exit();
-		}
+		
 		$dataProvider=new CActiveDataProvider('Pais');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
@@ -204,11 +188,7 @@ class PaisController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		if(!Yii::app()->user->checkAccess('adminAccess')){
-			$this->layout="admin";
-			$this->render("//site/error",array('error'=>"No tiene permisos para acceder a la siguiente sección.","code"=>"","message"=>"No tiene permisos para acceder a la siguiente sección.",));
-			exit();
-		}
+		
 		$model = Pais::model()->findAll();
 		$this->render('admin',array(
 			'model'=>$model,

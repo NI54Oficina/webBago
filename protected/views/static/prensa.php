@@ -30,12 +30,25 @@
 		
 	<div class="tabla-aftosa col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align: left;    margin: 0; margin-bottom: 20%;">
 
-		<div  class="tr  col-lg-12 col-md-12 col-sm-12 col-xs-12 inner-text container-prensa" style="text-shadow:none;padding-top:0;">		
-
+		<div  class="tr  col-lg-12 col-md-12 col-sm-12 col-xs-12 inner-text container-prensa" style="text-shadow:none;padding-top:0;">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<a href="http://www.anav.org.ar/" target="_blank">
+				<img src="<?php echo Yii::app()->request->baseUrl; ?>/uploads/08-04.png" style="max-width:100%;display:inline-block;margin-bottom:20px;-webkit-box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.5);
+-moz-box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.5);
+box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.5);">
+				</a>
+				</div>
 				<?php 
 				$year= date("Y");
 				while($year>2000){ 
-					$notas =Notas::model()->findAllByAttributes(array('seccion'=>"prensa","pais"=>$_SESSION['lng']),"YEAR(fecha)=".$year."");
+					//$notas =Notas::model()->findAllByAttributes();
+					//array('seccion'=>"prensa","pais"=>$_SESSION['lng']),"YEAR(fecha)=".$year.""
+					$Criteria = new CDbCriteria();
+					$lng= $_SESSION['lng'];
+					$short= $_SESSION['short'];
+					$Criteria->condition = "seccion = 'prensa' and (pais = '$lng' || pais='$short') and YEAR(fecha) =".$year;
+					$Criteria->order= "fecha DESC";
+					$notas = Notas::model()->findAll($Criteria);
 					if(count($notas)>0){
 				?>
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 animateCollapse" style="margin-top:0;">

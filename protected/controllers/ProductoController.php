@@ -83,11 +83,7 @@ class ProductoController extends Controller
 	 */
 	public function actionCreate()
 	{
-		if(!Yii::app()->user->checkAccess('createProducto')){
-			$this->layout="adminProductos";
-			$this->render("//site/error",array('error'=>"No tiene permisos para acceder a la siguiente sección.","code"=>"","message"=>"No tiene permisos para acceder a la siguiente sección.",));
-			exit();
-		}
+		
 		$this->layout="create";
 		$model=new Producto;
 

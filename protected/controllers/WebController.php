@@ -8,6 +8,17 @@ class WebController extends Controller
 	 */
 	public $layout='//layouts/admin';
 	
+	public function actions()
+	{
+		return array(
+			// captcha action renders the CAPTCHA image displayed on the contact page
+			'captcha'=>array(
+                'class'=>'CaptchaExtendedAction',
+                // if needed, modify settings
+                'mode'=>CaptchaExtendedAction::MODE_WORDS,
+            ),
+		);
+	}
 
 	/**
 	 * @return array action filters
@@ -18,6 +29,7 @@ class WebController extends Controller
 			'accessControl', // perform access control for CRUD operations
 			'postOnly + delete', // we only allow deletion via POST request
 			'postOnly + contacto', // we only allow deletion via POST requesty
+			'postOnly + testAjax', // we only allow deletion via POST requesty
 		);
 	}
 
@@ -30,7 +42,7 @@ class WebController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view',"get","contacto"),
+				'actions'=>array('index','view',"get","contacto","testAjax","captcha"),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -80,6 +92,23 @@ class WebController extends Controller
 			if($auxSeccion!=null){
 				$model=$auxSeccion;
 			}
+		}else if($data=="print"){
+			
+			$id= substr($id,2);
+			
+			$auxSeccion =Producto::model()->findByAttributes(array('id'=>$id));;
+			if($auxSeccion->pais!=$_SESSION["pais"]){
+				$auxPais=Pais::model()->findByPk($_SESSION["pais"]);
+				if($auxPais->catalogo==1||($auxPais->catalogo==0&&$auxSeccion->pais!=8)){
+					header("Location: http://".$_SERVER['SERVER_NAME']."/".$_SESSION["webRoot"].$_SESSION["short"]."/");
+					exit();
+				}
+			}
+			if($auxSeccion!=null){
+				$model=$auxSeccion;
+			}
+			
+			
 		}else{
 			$model=$id;
 		}
@@ -99,7 +128,13 @@ class WebController extends Controller
 		}else{
 			$metas=1;
 		}
-		
+		if($data=="print"){
+			$this->renderPartial("//static/layout",$metas);
+			$this->renderPartial("//static/header-print",$model);
+			$this->renderPartial("//static/productos",$model);
+			$this->renderPartial("//static/footer");
+			exit();
+		}
 		if($data!="home"&&$data!="paises"){
 			//			Metatags::model()->findByAttributes(array('id'=>$id));
 			
@@ -122,22 +157,62 @@ class WebController extends Controller
 			echo "<br><br>";
 		}*/
 		
-		Yii::import('application.extensions.phpmailer.JPhpMailer');
-		$mail = new JPhpMailer;
-		$mail->SetFrom('test@testni54.com', "Contacto de ". $_POST["nombre"]." ".$_POST["apellido"]);
-		$mail->AddReplyTo($_POST["email"], $_POST["nombre"]." ".$_POST["apellido"]);
-		$mail->Subject = 'Contacto desde la web de Biogenesis Bago';
-		$mail->AltBody = 'Para ver este mensaje, utilice un cliente web con capacidad de renderear html.';
-		$mensaje="";
-		foreach($_POST as $key=>$value){
-			$mensaje.="<strong>".$key.":</strong> ".$value."<br>";
+		$model=new CaptchaForm;
+		if(isset($_POST['CaptchaForm']))
+		{
+			
+			//echo "entra form";
+			$model->attributes=$_POST['CaptchaForm'];
+			if($model->validate()=="1")	
+			{
+				if($_SERVER['SERVER_NAME']=="localhost"){
+					echo "1";
+					exit();
+				}
+			
+					Yii::import('application.extensions.phpmailer.JPhpMailer');
+				$mail = new JPhpMailer;
+				$mailFrom="noresponder@".$_SERVER['SERVER_NAME'].".com";
+				if($_SERVER['SERVER_NAME']=="web-bago.testni54"){
+					$mail->SMTPAuth = true;
+					$mail->Username     = "noresponder@web-bago.testni54.com";
+					$mail->Password     = "stalker03936";
+					$mailFrom="noresponder@web-bago.testni54.com";
+				}
+				
+				
+				
+				$mail->SetFrom($mailFrom, "Contacto de ". $model["nombre"]." ".$model["apellido"]);
+				$mail->AddReplyTo($model["email"], $model["nombre"]." ".$model["apellido"]);
+				$mail->Subject = 'Contacto desde la web de Biogenesis Bago';
+				$mail->AltBody = 'Para ver este mensaje, utilice un cliente web con capacidad de renderear html.';
+				$mensaje="";
+				foreach($model as $key=>$value){
+					if($key=="verifyCode"){
+						continue;
+					}
+					$mensaje.="<strong>".$key.":</strong> ".$value."<br>";
+				}
+				$mail->MsgHTML($mensaje);
+				//if($_SESSION["lng"]=="pt"){
+					//$mail->AddAddress('infobr@biogenesisbago.com', 'Contacto Web Biogenesis Bago');
+				//}else{
+					$mail->AddAddress('fran@ni54.com', 'Fran');
+				//}
+				$mail->Send();
+				echo "1";
+			}else{
+				echo "code";
+			}
 		}
-		$mail->MsgHTML($mensaje);
-		$mail->AddAddress('fran@ni54.com', 'Fran');
-		$mail->Send();
-		echo "enviado";
-
 		
+	}
+	
+	public function actionTestajax(){
+		$metas= MetatagPage::model()->findAllByAttributes(array('idPage'=>"1",));
+		$model=null;
+		$data=1;
+		$this->renderPartial("//static/paises",$model);
 	}
 	
 	protected function beforeAction($event)
